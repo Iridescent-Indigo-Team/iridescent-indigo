@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mkxpz'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mkxpz"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "0.1.0"
+        archivesBaseName = "mkxp-z-$versionName"
+        // Native ABIs are produced by build.sh (see ../build.sh) and placed
+        // under src/main/jniLibs/. Everything present there is packaged.
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            jniDebuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            // Native libraries produced by build.sh (Meson) land here.
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+}
+
+dependencies {
+    // Scalable dp units used by the on-screen gamepad layout.
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+}
+
+// Build the native mkxp-z shared library (and its dependencies) with Meson
+// before packaging. build.sh is idempotent and skips ABIs that are already
+// built, so incremental Android Studio builds stay fast.
+def buildNative = tasks.register('buildNative', Exec) {
+    workingDir rootProject.projectDir
+    commandLine 'bash', 'build.sh'
+}
+
+tasks.named('preBuild') {
+    dependsOn buildNative
+}

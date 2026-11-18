@@ -1,0 +1,59 @@
+
+embedded_shaders = [
+    'common.h',
+    'transSimple.frag',
+    'trans.frag',
+    'hue.frag',
+    'sprite.frag',
+    'plane.frag',
+    'gray.frag',
+    'bitmapBlit.frag',
+    'flatColor.frag',
+    'simple.frag',
+    'simpleColor.frag',
+    'simpleAlpha.frag',
+    'simpleAlphaUni.frag',
+    'tilemap.frag',
+    'flashMap.frag',
+    'bicubic.frag',
+    'lanczos3.frag',
+    'minimal.vert',
+    'simple.vert',
+    'simpleColor.vert',
+    'sprite.vert',
+    'tilemap.vert',
+    'tilemapvx.vert',
+    'blur.frag',
+    'blurH.vert',
+    'blurV.vert',
+    'simpleMatrix.vert',
+    'kglInvert.frag',
+    'kglCompressAlpha.frag',
+    'kglSubtract.frag',
+    'kglShadowH.frag',
+    'kglShadowV.frag',
+]
+
+# xBRZ shader is GPLv3.
+if get_option('enable-https') == true
+    embedded_shaders += 'xbrz.frag'
+endif
+
+embedded_shaders_f = files(embedded_shaders)
+
+count = 0
+foreach file : embedded_shaders_f
+    # Pin the xxd symbol name so it doesn't depend on the build directory
+    # depth (xxd derives it from the input path, which varies).
+    symbol = '___shader_' + embedded_shaders[count].underscorify()
+    global_sources += custom_target(embedded_shaders[count],
+        input: file,
+        output: '@0@.xxd'.format(embedded_shaders[count]),
+        command: [
+            xxd_include, symbol, '@INPUT@'
+        ],
+        capture: true,
+        depend_files: embedded_shaders_f[count]
+        )
+    count += 1
+endforeach

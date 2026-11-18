@@ -1,0 +1,28 @@
+# Meson build directories
+/build-*/
+
+# Gradle / Android Studio
+.gradle/
+/local.properties
+/app/build/
+/app/src/main/jniLibs/
+
+# Downloaded and cross-compiled dependencies (android/deps/)
+deps/build-*/
+deps/SDL2/
+deps/SDL2_image/
+deps/SDL2_ttf/
+deps/SDL2_sound/
+deps/libogg/
+deps/libvorbis/
+deps/libtheora/
+deps/libiconv/
+deps/uchardet/
+deps/pixman/
+deps/physfs/
+deps/openal/
+deps/openssl/
+deps/ruby/
+deps/freetype/
+deps/libpng/
+deps/downloads/
