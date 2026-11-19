@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DARMANITAN",
+  "form": 1,
+  "real_form_name": "Zen Mode",
+  "types": ["FIRE", "PSYCHIC"],
+  "base_stats": {
+    "hp": 105,
+    "attack": 30,
+    "defense": 105,
+    "speed": 55,
+    "special_attack": 140,
+    "special_defense": 105
+  },
+  "base_exp": 189,
+  "evs": [
+    {"stat": "SPECIAL_ATTACK", "amount": 2}
+  ],
+  "color": "Blue",
+  "real_pokedex_entry": "When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit."
+}

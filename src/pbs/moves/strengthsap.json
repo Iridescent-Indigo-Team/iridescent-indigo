@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STRENGTHSAP",
+  "real_name": "Strength Sap",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByTargetAttackLowerTargetAttack1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user restores its HP by the target's Attack stat amount. Then lowers the target's Attack stat."
+}

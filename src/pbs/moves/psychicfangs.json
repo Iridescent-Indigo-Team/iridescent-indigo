@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYCHICFANGS",
+  "real_name": "Psychic Fangs",
+  "type": "PSYCHIC",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RemoveScreens",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "real_description": "The user bites the target using psychic capabilities. This can also destroy Light Screen and Reflect."
+}

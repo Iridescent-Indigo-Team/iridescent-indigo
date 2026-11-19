@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ARMTHRUST",
+  "real_name": "Arm Thrust",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 15,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user looses a flurry of open-palmed arm thrusts that hit two to five times in a row."
+}

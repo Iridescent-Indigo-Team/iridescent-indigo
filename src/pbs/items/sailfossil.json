@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SAILFOSSIL",
+  "real_name": "Sail Fossil",
+  "real_name_plural": "Sail Fossils",
+  "pocket": 1,
+  "price": 7000,
+  "flags": ["Fossil", "Fling_100"],
+  "real_description": "A fossil from a prehistoric Pokémon that once lived on the land. It looks like the impression from a skin sail."
+}

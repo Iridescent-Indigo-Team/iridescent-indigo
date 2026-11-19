@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ENDURE",
+  "real_name": "Endure",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "UserEnduresFaintingThisTurn",
+  "real_description": "The user endures any attack with at least 1 HP. Its chance of failing rises if it is used in succession."
+}

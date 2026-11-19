@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGICROOM",
+  "real_name": "Magic Room",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartNegateHeldItems",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user creates a bizarre area in which Pokémon's held items lose their effects for five turns."
+}

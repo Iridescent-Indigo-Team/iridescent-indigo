@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLYINGPRESS",
+  "real_name": "Flying Press",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "Other",
+  "function_code": "EffectivenessIncludesFlyingType",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "TramplesMinimize"],
+  "real_description": "The user dives down onto the target from the sky. This move is Fighting and Flying type simultaneously."
+}

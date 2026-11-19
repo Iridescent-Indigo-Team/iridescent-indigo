@@ -1,0 +1,36 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "MAGIKARP",
+  "real_name": "Magikarp",
+  "types": ["WATER"],
+  "base_stats": {"hp": 20, "attack": 10, "defense": 55, "speed": 80, "special_attack": 15, "special_defense": 20},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Slow",
+  "base_exp": 40,
+  "evs": [
+    {"stat": "SPEED", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SWIFTSWIM"],
+  "hidden_abilities": ["RATTLED"],
+  "moves": [
+    {"level": 1, "move": "SPLASH"},
+    {"level": 15, "move": "TACKLE"},
+    {"level": 25, "move": "FLAIL"}
+  ],
+  "tutor_moves": ["BOUNCE", "HYDROPUMP"],
+  "egg_groups": ["Water2", "Dragon"],
+  "hatch_steps": 1280,
+  "height": 0.9,
+  "weight": 10.0,
+  "color": "Red",
+  "shape": "Finned",
+  "habitat": "WatersEdge",
+  "real_category": "Fish",
+  "real_pokedex_entry": "Its swimming muscles are weak, so it is easily washed away by currents. In places where water pools, you can see many Magikarp deposited there by the flow.",
+  "generation": 1,
+  "evolutions": [
+    {"species": "GYARADOS", "method": "Level", "parameter": 20}
+  ]
+}

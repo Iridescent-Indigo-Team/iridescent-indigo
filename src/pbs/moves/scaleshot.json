@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SCALESHOT",
+  "real_name": "Scale Shot",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 90,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimesRaiseUserSpd1LowerUserDef1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Attacks by shooting scales two to five times in a row. Boosts the user's Speed but lowers its Defense."
+}

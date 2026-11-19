@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 20,
+  "real_name": "Cedolan City",
+  "town_map_position": {"region": 0, "x": 13, "y": 10}
+}

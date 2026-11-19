@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SWEETHEART",
+  "real_name": "Sweet Heart",
+  "real_name_plural": "Sweet Hearts",
+  "pocket": 2,
+  "price": 3000,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Very sweet chocolate. It restores the HP of one Pokémon by only 20 points."
+}

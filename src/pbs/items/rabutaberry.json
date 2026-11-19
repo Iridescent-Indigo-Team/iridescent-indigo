@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RABUTABERRY",
+  "real_name": "Rabuta Berry",
+  "real_name_plural": "Rabuta Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GHOST_90"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BEASTBALL",
+  "real_name": "Beast Ball",
+  "real_name_plural": "Beast Balls",
+  "pocket": 3,
+  "price": 1000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A special Poké Ball designed to catch Ultra Beasts. It has a low success rate for catching others."
+}

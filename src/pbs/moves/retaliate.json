@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RETALIATE",
+  "real_name": "Retaliate",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfAllyFaintedLastTurn",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Gets revenge for a fainted ally. If an ally fainted in the last turn, this attack's damage increases."
+}

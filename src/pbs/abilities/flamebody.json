@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLAMEBODY",
+  "real_name": "Flame Body",
+  "real_description": "Contact with the Pokémon may burn the attacker.",
+  "flags": ["FasterEggHatching"]
+}

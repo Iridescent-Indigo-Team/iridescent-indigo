@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VACUUMWAVE",
+  "real_name": "Vacuum Wave",
+  "type": "FIGHTING",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first."
+}

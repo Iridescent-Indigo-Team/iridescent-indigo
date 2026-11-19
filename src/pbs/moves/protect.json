@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PROTECT",
+  "real_name": "Protect",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUser",
+  "real_description": "It enables the user to evade all attacks. Its chance of failing rises if it is used in succession."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SAFEGUARD",
+  "real_name": "Safeguard",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 25,
+  "target": "UserSide",
+  "function_code": "StartUserSideImmunityToInflictedStatus",
+  "real_description": "The user creates a protective field that prevents status problems for five turns."
+}

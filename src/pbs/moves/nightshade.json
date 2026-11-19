@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NIGHTSHADE",
+  "real_name": "Night Shade",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FixedDamageUserLevel",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user makes the foe see a frightening mirage. It inflicts damage matching the user's level."
+}

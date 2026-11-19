@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SCEPTILE",
+  "form": 1,
+  "real_form_name": "Mega Sceptile",
+  "mega_stone": "SCEPTILITE",
+  "types": ["GRASS", "DRAGON"],
+  "base_stats": {
+    "hp": 70,
+    "attack": 110,
+    "defense": 75,
+    "speed": 145,
+    "special_attack": 145,
+    "special_defense": 85
+  },
+  "base_exp": 315,
+  "abilities": ["LIGHTNINGROD"],
+  "hidden_abilities": ["LIGHTNINGROD"],
+  "height": 1.9,
+  "weight": 55.2,
+  "generation": 6
+}

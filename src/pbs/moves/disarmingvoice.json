@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DISARMINGVOICE",
+  "real_name": "Disarming Voice",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "Letting out a charming cry, the user does emotional damage to foes. This attack never misses."
+}

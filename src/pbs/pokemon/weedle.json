@@ -1,0 +1,36 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "WEEDLE",
+  "real_name": "Weedle",
+  "types": ["BUG", "POISON"],
+  "base_stats": {"hp": 40, "attack": 35, "defense": 30, "speed": 50, "special_attack": 20, "special_defense": 20},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 39,
+  "evs": [
+    {"stat": "SPEED", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SHIELDDUST"],
+  "hidden_abilities": ["RUNAWAY"],
+  "moves": [
+    {"level": 1, "move": "POISONSTING"},
+    {"level": 1, "move": "STRINGSHOT"},
+    {"level": 9, "move": "BUGBITE"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 3.2,
+  "color": "Brown",
+  "shape": "Insectoid",
+  "habitat": "Forest",
+  "real_category": "Hairy Bug",
+  "real_pokedex_entry": "A Weedle has an extremely acute sense of smell. It distinguishes its favorite kinds of leaves from those it dislikes by sniffing with its big red proboscis (nose).",
+  "generation": 1,
+  "evolutions": [
+    {"species": "KAKUNA", "method": "Level", "parameter": 7}
+  ]
+}

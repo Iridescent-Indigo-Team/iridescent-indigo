@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SIGNALBEAM",
+  "real_name": "Signal Beam",
+  "type": "BUG",
+  "category": "Special",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user attacks with a sinister beam of light. It may also confuse the target."
+}

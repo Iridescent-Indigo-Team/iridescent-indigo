@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FRISK",
+  "real_name": "Frisk",
+  "real_description": "The Pokémon can check a foe's held item."
+}

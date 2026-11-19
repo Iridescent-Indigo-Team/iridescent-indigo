@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EMBER",
+  "real_name": "Ember",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The target is attacked with small flames. It may also leave the target with a burn."
+}

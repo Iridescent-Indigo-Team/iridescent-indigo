@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "OVALSTONE",
+  "real_name": "Oval Stone",
+  "real_name_plural": "Oval Stones",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "A peculiar stone that makes certain species of Pokémon evolve. It is shaped like an egg."
+}

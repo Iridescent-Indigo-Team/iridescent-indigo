@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GEARGRIND",
+  "real_name": "Gear Grind",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by throwing two steel gears at its target."
+}

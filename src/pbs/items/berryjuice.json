@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BERRYJUICE",
+  "real_name": "Berry Juice",
+  "real_name_plural": "Berry Juices",
+  "real_portion_name": "cup of Berry Juice",
+  "real_portion_name_plural": "cups of Berry Juice",
+  "pocket": 2,
+  "price": 100,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A 100% pure juice made of Berries. It restores the HP of one Pokémon by just 20 points."
+}

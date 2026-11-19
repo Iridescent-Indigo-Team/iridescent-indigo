@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DAMPROCK",
+  "real_name": "Damp Rock",
+  "real_name_plural": "Damp Rocks",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_60"],
+  "real_description": "A Pokémon held item that extends the duration of the move Rain Dance used by the holder."
+}

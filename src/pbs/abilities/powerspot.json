@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "POWERSPOT",
+  "real_name": "Power Spot",
+  "real_description": "Just being next to the Pokémon powers up moves."
+}

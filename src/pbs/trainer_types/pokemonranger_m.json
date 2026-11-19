@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "POKEMONRANGER_M",
+  "real_name": "Pokémon Ranger",
+  "gender": "Male",
+  "base_money": 60
+}

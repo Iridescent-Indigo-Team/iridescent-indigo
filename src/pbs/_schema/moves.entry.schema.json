@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "moves.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {
+      "type": "string",
+      "pattern": "^(?![0-9])\\w+$",
+      "description": "An id: letters, digits and underscores, not starting with a digit."
+    },
+    "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "type": {"type": "string", "description": "A Type id from types.txt."},
+    "category": {
+      "type": "string",
+      "enum": ["Physical", "Special", "Status"],
+      "description": "PBS key: Category"
+    },
+    "power": {"type": "integer", "minimum": 0, "description": "PBS key: Power"},
+    "accuracy": {"type": "integer", "minimum": 0, "description": "PBS key: Accuracy"},
+    "total_pp": {"type": "integer", "minimum": 0, "description": "PBS key: TotalPP"},
+    "target": {
+      "type": "string",
+      "enum": [
+        "None",
+        "User",
+        "NearAlly",
+        "UserOrNearAlly",
+        "AllAllies",
+        "UserAndAllies",
+        "NearFoe",
+        "RandomNearFoe",
+        "AllNearFoes",
+        "Foe",
+        "AllFoes",
+        "NearOther",
+        "AllNearOthers",
+        "Other",
+        "AllBattlers",
+        "UserSide",
+        "FoeSide",
+        "BothSides"
+      ],
+      "description": "PBS key: Target"
+    },
+    "priority": {"type": "integer", "description": "PBS key: Priority"},
+    "function_code": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    },
+    "effect_chance": {"type": "integer", "minimum": 0, "description": "PBS key: EffectChance"},
+    "real_description": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

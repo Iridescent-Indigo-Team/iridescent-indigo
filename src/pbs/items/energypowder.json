@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ENERGYPOWDER",
+  "real_name": "Energy Powder",
+  "real_name_plural": "Energy Powders",
+  "real_portion_name": "dose of Energy Powder",
+  "real_portion_name_plural": "doses of Energy Powder",
+  "pocket": 2,
+  "price": 500,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A very bitter medicinal powder. It can be used to restore 60 HP to a single Pokémon."
+}

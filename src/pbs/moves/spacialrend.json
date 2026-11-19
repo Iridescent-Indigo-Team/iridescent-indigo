@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPACIALREND",
+  "real_name": "Spacial Rend",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 95,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user tears the target along with the space around it. Critical hits land more easily."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WIMPOUT",
+  "real_name": "Wimp Out",
+  "real_description": "Cowardly switches out if its HP becomes half or less."
+}

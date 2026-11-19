@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WICKEDBLOW",
+  "real_name": "Wicked Blow",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AlwaysCriticalHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Strikes with a fierce blow through mastery of the Dark style. Always results in a critical hit."
+}

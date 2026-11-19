@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DEFEATIST",
+  "real_name": "Defeatist",
+  "real_description": "Lowers stats when HP becomes half or less."
+}

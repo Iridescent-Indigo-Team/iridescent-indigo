@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WRINGOUT",
+  "real_name": "Wring Out",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user powerfully wrings the foe. The more HP the foe has, the greater this attack's power."
+}

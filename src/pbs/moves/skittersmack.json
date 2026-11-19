@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKITTERSMACK",
+  "real_name": "Skitter Smack",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpAtk1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user skitters behind the target to attack. This also lowers the target's Sp. Atk stat."
+}

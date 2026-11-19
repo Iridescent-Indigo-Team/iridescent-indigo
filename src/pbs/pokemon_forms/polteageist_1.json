@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "POLTEAGEIST",
+  "form": 1,
+  "real_form_name": "Antique Form",
+  "real_pokedex_entry": "Trainers Polteageist trusts will be allowed to experience its distinctive flavor and aroma firsthand by sampling just a tiny bit of its tea."
+}

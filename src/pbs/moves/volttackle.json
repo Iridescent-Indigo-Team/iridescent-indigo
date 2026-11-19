@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VOLTTACKLE",
+  "real_name": "Volt Tackle",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RecoilThirdOfDamageDealtParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user electrifies itself, then charges at the foe. It causes considerable damage to the user as well."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM67",
+  "real_name": "TM67",
+  "real_name_plural": "TM67s",
+  "pocket": 4,
+  "price": 1000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "RECYCLE",
+  "real_description": "The user recycles a held item that has been used in battle so it can be used again."
+}

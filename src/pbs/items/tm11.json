@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM11",
+  "real_name": "TM11",
+  "real_name_plural": "TM11s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SUNNYDAY",
+  "real_description": "The user intensifies the sun for five turns, powering up Fire-type moves and weakening Water-type moves."
+}

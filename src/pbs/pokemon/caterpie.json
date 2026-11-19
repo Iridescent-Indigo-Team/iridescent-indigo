@@ -1,0 +1,36 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "CATERPIE",
+  "real_name": "Caterpie",
+  "types": ["BUG"],
+  "base_stats": {"hp": 45, "attack": 30, "defense": 35, "speed": 45, "special_attack": 20, "special_defense": 20},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 39,
+  "evs": [
+    {"stat": "HP", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SHIELDDUST"],
+  "hidden_abilities": ["RUNAWAY"],
+  "moves": [
+    {"level": 1, "move": "TACKLE"},
+    {"level": 1, "move": "STRINGSHOT"},
+    {"level": 9, "move": "BUGBITE"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 2.9,
+  "color": "Green",
+  "shape": "Insectoid",
+  "habitat": "Forest",
+  "real_category": "Worm",
+  "real_pokedex_entry": "Its voracious appetite compels it to devour leaves bigger than itself without hesitation. It releases a terribly strong odor from its antennae.",
+  "generation": 1,
+  "evolutions": [
+    {"species": "METAPOD", "method": "Level", "parameter": 7}
+  ]
+}

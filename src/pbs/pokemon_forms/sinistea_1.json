@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SINISTEA",
+  "form": 1,
+  "real_form_name": "Antique Form",
+  "real_pokedex_entry": "The swirl pattern in this Pokémon's body is its weakness. If it gets stirred, the swirl loses its shape, and Sinistea gets dizzy.",
+  "evolutions": [
+    {"species": "POLTEAGEIST", "method": "Item", "parameter": "CHIPPEDPOT"}
+  ]
+}

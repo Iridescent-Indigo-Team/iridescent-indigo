@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 69,
+  "real_name": "Route 8",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 13, "y": 13},
+  "dive_map_id": 70,
+  "battle_background": "field"
+}

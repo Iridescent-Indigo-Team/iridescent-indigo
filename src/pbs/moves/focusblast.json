@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FOCUSBLAST",
+  "real_name": "Focus Blast",
+  "type": "FIGHTING",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 70,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpDef1",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 10,
+  "real_description": "The user heightens its mental focus and unleashes its power. It may also lower the target's Sp. Def."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM94",
+  "real_name": "TM94",
+  "real_name_plural": "TM94s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 40,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "FLY",
+  "real_description": "The user flies up into the sky and then strikes its target on the next turn."
+}

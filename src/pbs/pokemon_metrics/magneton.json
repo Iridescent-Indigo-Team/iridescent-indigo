@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "MAGNETON",
+  "back_sprite": {"x": -3, "y": 0},
+  "front_sprite": {"x": 0, "y": -2},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

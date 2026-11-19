@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRIPCLAW",
+  "real_name": "Grip Claw",
+  "real_name_plural": "Grip Claws",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_90"],
+  "real_description": "A Pokémon held item that extends the duration of multiturn attacks like Bind and Wrap."
+}

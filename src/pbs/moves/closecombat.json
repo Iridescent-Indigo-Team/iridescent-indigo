@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CLOSECOMBAT",
+  "real_name": "Close Combat",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserDefSpDef1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user fights the foe up close without guarding itself. It also cuts the user's Defense and Sp. Def."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WOODHAMMER",
+  "real_name": "Wood Hammer",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RecoilThirdOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user slams its rugged body into the target to attack. The user also sustains serious damage."
+}

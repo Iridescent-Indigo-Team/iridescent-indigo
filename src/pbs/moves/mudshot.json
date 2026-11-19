@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MUDSHOT",
+  "real_name": "Mud Shot",
+  "type": "GROUND",
+  "category": "Special",
+  "power": 55,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user attacks by hurling a blob of mud at the target. It also reduces the target's Speed."
+}

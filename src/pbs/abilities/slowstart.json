@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SLOWSTART",
+  "real_name": "Slow Start",
+  "real_description": "Temporarily halves Attack and Speed."
+}

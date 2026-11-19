@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WATERCOMPACTION",
+  "real_name": "Water Compaction",
+  "real_description": "Sharply ups Defense when hit by a Water-type move."
+}

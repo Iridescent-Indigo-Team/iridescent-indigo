@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EGGBOMB",
+  "real_name": "Egg Bomb",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 75,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "A large egg is hurled at the target with maximum force to inflict damage."
+}

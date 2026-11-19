@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TANGLEDFEET",
+  "real_name": "Tangled Feet",
+  "real_description": "Raises evasion if the Pokémon is confused."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWERWHIP",
+  "real_name": "Power Whip",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user violently whirls its vines or tentacles to harshly lash the target."
+}

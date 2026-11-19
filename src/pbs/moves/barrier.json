@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BARRIER",
+  "real_name": "Barrier",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserDefense2",
+  "real_description": "The user throws up a sturdy wall that sharply raises its Defense stat."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGICALLEAF",
+  "real_name": "Magical Leaf",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user scatters curious leaves that chase the target. This attack will not miss."
+}

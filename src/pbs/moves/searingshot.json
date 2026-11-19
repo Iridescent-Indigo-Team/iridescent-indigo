@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SEARINGSHOT",
+  "real_name": "Searing Shot",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearOthers",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 30,
+  "real_description": "An inferno of scarlet flames torches everything around the user. It may leave the foe with a burn."
+}

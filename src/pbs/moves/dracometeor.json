@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRACOMETEOR",
+  "real_name": "Draco Meteor",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 130,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserSpAtk2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Comets are summoned down from the sky. The attack's recoil harshly reduces the user's Sp. Atk stat."
+}

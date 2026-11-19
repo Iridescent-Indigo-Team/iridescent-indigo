@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYSHOCK",
+  "real_name": "Psyshock",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UseTargetDefenseInsteadOfTargetSpDef",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user materializes an odd psychic wave to attack the target. This attack does physical damage."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGNETRISE",
+  "real_name": "Magnet Rise",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "StartUserAirborne",
+  "real_description": "The user levitates using electrically generated magnetism for five turns."
+}

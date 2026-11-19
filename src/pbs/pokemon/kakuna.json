@@ -1,0 +1,33 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "KAKUNA",
+  "real_name": "Kakuna",
+  "types": ["BUG", "POISON"],
+  "base_stats": {"hp": 45, "attack": 25, "defense": 50, "speed": 35, "special_attack": 25, "special_defense": 25},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 72,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 2}
+  ],
+  "catch_rate": 120,
+  "happiness": 50,
+  "abilities": ["SHEDSKIN"],
+  "moves": [
+    {"level": 0, "move": "HARDEN"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "IRONDEFENSE", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.6,
+  "weight": 10.0,
+  "color": "Yellow",
+  "shape": "Serpentine",
+  "habitat": "Forest",
+  "real_category": "Cocoon",
+  "real_pokedex_entry": "It remains virtually immobile while it clings to a tree. However, on the inside, it busily prepares for evolution. This is evident from how hot its shell becomes.",
+  "generation": 1,
+  "evolutions": [
+    {"species": "BEEDRILL", "method": "Level", "parameter": 10}
+  ]
+}

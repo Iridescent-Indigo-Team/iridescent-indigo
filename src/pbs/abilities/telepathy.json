@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TELEPATHY",
+  "real_name": "Telepathy",
+  "real_description": "Anticipates an ally's attack and dodges it."
+}

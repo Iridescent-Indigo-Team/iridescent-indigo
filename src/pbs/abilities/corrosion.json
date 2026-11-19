@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CORROSION",
+  "real_name": "Corrosion",
+  "real_description": "It can poison Steel- and Poison-type targets."
+}

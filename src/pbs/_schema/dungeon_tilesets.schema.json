@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dungeon_tilesets.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {"type": "integer", "minimum": 0},
+                "autotile": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {"type": "integer", "minimum": 0},
+                      "type": {
+                        "type": "string",
+                        "pattern": "^(?![0-9])\\w+$",
+                        "description": "An id: letters, digits and underscores, not starting with a digit."
+                      }
+                    },
+                    "required": ["id", "type"],
+                    "additionalProperties": false
+                  },
+                  "description": "PBS key: Autotile"
+                },
+                "tile": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {"type": "integer", "minimum": 0},
+                      "type": {
+                        "type": "string",
+                        "pattern": "^(?![0-9])\\w+$",
+                        "description": "An id: letters, digits and underscores, not starting with a digit."
+                      }
+                    },
+                    "required": ["id", "type"],
+                    "additionalProperties": false
+                  },
+                  "description": "PBS key: Tile"
+                },
+                "snap_to_large_grid": {"type": "boolean", "description": "PBS key: SnapToLargeGrid"},
+                "large_void_tiles": {"type": "boolean", "description": "PBS key: LargeVoidTiles"},
+                "large_wall_tiles": {"type": "boolean", "description": "PBS key: LargeWallTiles"},
+                "large_floor_tiles": {"type": "boolean", "description": "PBS key: LargeFloorTiles"},
+                "double_walls": {"type": "boolean", "description": "PBS key: DoubleWalls"},
+                "floor_patch_under_walls": {"type": "boolean", "description": "PBS key: FloorPatchUnderWalls"},
+                "thin_north_wall_offset": {"type": "integer", "description": "PBS key: ThinNorthWallOffset"},
+                "flags": {
+                  "type": "array",
+                  "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                  "description": "PBS key: Flags"
+                }
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

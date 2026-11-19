@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HOLDHANDS",
+  "real_name": "Hold Hands",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 40,
+  "target": "NearAlly",
+  "function_code": "DoesNothingFailsIfNoAlly",
+  "real_description": "The user and an ally hold hands. This makes them very happy."
+}

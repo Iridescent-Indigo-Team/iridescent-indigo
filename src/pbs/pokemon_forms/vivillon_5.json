@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "VIVILLON",
+  "form": 5,
+  "real_form_name": "Icy Snow Pattern"
+}

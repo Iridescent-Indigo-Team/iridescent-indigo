@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DYNAMAXCANNON",
+  "real_name": "Dynamax Cannon",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CannotMetronome"],
+  "real_description": "The user unleashes a strong beam from its core."
+}

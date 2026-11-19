@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICSILVER",
+  "real_name": "Relic Silver",
+  "real_name_plural": "Relic Silvers",
+  "real_portion_name": "Relic Silver coin",
+  "real_portion_name_plural": "Relic Silver coins",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A silver coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PAYBACK",
+  "real_name": "Payback",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetActed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "If the user moves after the target, this attack's power will be doubled."
+}

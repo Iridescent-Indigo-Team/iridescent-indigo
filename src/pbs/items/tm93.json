@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM93",
+  "real_name": "TM93",
+  "real_name_plural": "TM93s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_50"],
+  "move": "CUT",
+  "real_description": "The target is cut with a scythe or claw."
+}

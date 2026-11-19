@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LOWSWEEP",
+  "real_name": "Low Sweep",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user attacks the target's legs swiftly, reducing the target's Speed stat."
+}

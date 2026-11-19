@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TOXICSPIKES",
+  "real_name": "Toxic Spikes",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "FoeSide",
+  "function_code": "AddToxicSpikesToFoeSide",
+  "real_description": "The user lays a trap of poison spikes at the foe's feet. They poison foes that switch into battle."
+}

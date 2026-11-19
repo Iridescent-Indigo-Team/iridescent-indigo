@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "UNOWN",
+  "form": 27,
+  "real_form_name": "!",
+  "generation": 3
+}

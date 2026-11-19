@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STEELGEM",
+  "real_name": "Steel Gem",
+  "real_name_plural": "Steel Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of steel. When held, it strengthens the power of a Steel-type move only once."
+}

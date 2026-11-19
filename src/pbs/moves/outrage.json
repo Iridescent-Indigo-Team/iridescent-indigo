@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OUTRAGE",
+  "real_name": "Outrage",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "RandomNearFoe",
+  "function_code": "MultiTurnAttackConfuseUserAtEnd",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user rampages and attacks for two to three turns. It then becomes confused, however."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 73,
+  "real_name": "Faraday Island",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 22, "y": 16},
+  "battle_background": "field",
+  "flags": ["DistortionWorld"]
+}

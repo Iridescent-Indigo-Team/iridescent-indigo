@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "INFESTATION",
+  "real_name": "Infestation",
+  "type": "BUG",
+  "category": "Special",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is infested and unable to flee for four to five turns."
+}

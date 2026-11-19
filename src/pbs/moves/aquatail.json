@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AQUATAIL",
+  "real_name": "Aqua Tail",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by swinging its tail as if it were a vicious wave in a raging storm."
+}

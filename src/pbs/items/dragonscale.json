@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DRAGONSCALE",
+  "real_name": "Dragon Scale",
+  "real_name_plural": "Dragon Scales",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_30"],
+  "real_description": "A thick and tough scale. Dragon-type Pokémon may be holding this item when caught."
+}

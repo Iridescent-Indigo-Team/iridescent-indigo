@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HEALER",
+  "real_name": "Healer",
+  "real_description": "May heal an ally's status conditions."
+}

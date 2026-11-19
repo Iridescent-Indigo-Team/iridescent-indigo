@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GLARE",
+  "real_name": "Glare",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user intimidates the target with the pattern on its belly to cause paralysis."
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "encounters.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "map": {"type": "integer", "minimum": 0, "description": "Map ID."},
+    "version": {"type": "integer", "minimum": 0},
+    "types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Land",
+              "LandDay",
+              "LandNight",
+              "LandMorning",
+              "LandAfternoon",
+              "LandEvening",
+              "PokeRadar",
+              "Cave",
+              "CaveDay",
+              "CaveNight",
+              "CaveMorning",
+              "CaveAfternoon",
+              "CaveEvening",
+              "Water",
+              "WaterDay",
+              "WaterNight",
+              "WaterMorning",
+              "WaterAfternoon",
+              "WaterEvening",
+              "OldRod",
+              "GoodRod",
+              "SuperRod",
+              "RockSmash",
+              "HeadbuttLow",
+              "HeadbuttHigh",
+              "BugContest"
+            ]
+          },
+          "step_chance": {"type": "integer", "minimum": 0},
+          "slots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chance": {"type": "integer", "minimum": 1},
+                "species": {"type": "string", "description": "A species id from pokemon.txt."},
+                "min_level": {"type": "integer", "minimum": 1},
+                "max_level": {"type": "integer", "minimum": 1}
+              },
+              "required": ["chance", "species", "min_level"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["type", "slots"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["map", "types"],
+  "additionalProperties": false
+}

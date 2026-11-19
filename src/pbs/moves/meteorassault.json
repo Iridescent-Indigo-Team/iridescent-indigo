@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "METEORASSAULT",
+  "real_name": "Meteor Assault",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks wildly with its thick leek. The user can't move on the next turn."
+}

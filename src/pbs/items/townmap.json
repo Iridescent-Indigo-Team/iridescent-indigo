@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TOWNMAP",
+  "real_name": "Town Map",
+  "real_name_plural": "Town Maps",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A very convenient map that can be viewed anytime. It even shows your present location."
+}

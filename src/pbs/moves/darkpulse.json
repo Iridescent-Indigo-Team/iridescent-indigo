@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DARKPULSE",
+  "real_name": "Dark Pulse",
+  "type": "DARK",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "Other",
+  "function_code": "FlinchTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Pulse"],
+  "effect_chance": 20,
+  "real_description": "The user releases a horrible aura imbued with dark thoughts. It may also make the target flinch."
+}

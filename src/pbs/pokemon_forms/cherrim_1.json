@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CHERRIM",
+  "form": 1,
+  "real_form_name": "Sunshine Form",
+  "color": "Pink",
+  "real_pokedex_entry": "After absorbing plenty of sunlight, Cherrim takes this form. It's full of energy while it's like this, and its liveliness will go on until sundown."
+}

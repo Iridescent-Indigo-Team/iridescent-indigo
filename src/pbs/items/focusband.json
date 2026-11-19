@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FOCUSBAND",
+  "real_name": "Focus Band",
+  "real_name_plural": "Focus Bands",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 48,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. The holder may endure a potential KO attack, leaving it with just 1 HP."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRUMPCARD",
+  "real_name": "Trump Card",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithLessPP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The fewer PP this move has, the greater its attack power."
+}

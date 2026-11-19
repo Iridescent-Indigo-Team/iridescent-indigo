@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SYNCHRONIZE",
+  "real_name": "Synchronize",
+  "real_description": "Passes a burn, poison, or paralysis to the foe."
+}

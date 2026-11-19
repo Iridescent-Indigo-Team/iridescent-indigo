@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VENOMDRENCH",
+  "real_name": "Venom Drench",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearFoes",
+  "function_code": "LowerPoisonedTargetAtkSpAtkSpd1",
+  "flags": ["CanProtect"],
+  "real_description": "Foes are drenched in an odd liquid that lowers the Attack, Sp. Atk, and Speed of poisoned Pokémon."
+}

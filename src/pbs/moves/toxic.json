@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TOXIC",
+  "real_name": "Toxic",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "BadPoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A move that leaves the target badly poisoned. Its poison damage worsens every turn."
+}

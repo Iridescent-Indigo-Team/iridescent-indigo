@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STONEEDGE",
+  "real_name": "Stone Edge",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user stabs the foe with sharpened stones from below. It has a high critical-hit ratio."
+}

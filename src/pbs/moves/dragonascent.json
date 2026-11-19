@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONASCENT",
+  "real_name": "Dragon Ascent",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserDefSpDef1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user soars upward and drops at high speeds. Its Defense and Sp. Def stats are lowered."
+}

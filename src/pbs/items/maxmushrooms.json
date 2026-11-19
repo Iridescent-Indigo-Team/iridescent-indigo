@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAXMUSHROOMS",
+  "real_name": "Max Mushrooms",
+  "real_name_plural": "Max Mushrooms",
+  "real_portion_name": "cluster of Max Mushrooms",
+  "real_portion_name_plural": "clusters of Max Mushrooms",
+  "pocket": 7,
+  "price": 8000,
+  "battle_use": "OnBattler",
+  "flags": ["Fling_30"],
+  "real_description": "Mushrooms that boost all stats of a Pokémon during battle."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TORMENT",
+  "real_name": "Torment",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "DisableTargetUsingSameMoveConsecutively",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user torments and enrages the foe, making it incapable of using the same move twice in a row."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHARGEBEAM",
+  "real_name": "Charge Beam",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 70,
+  "real_description": "The user fires a concentrated bundle of electricity. It may also raise the user's Sp. Atk stat."
+}

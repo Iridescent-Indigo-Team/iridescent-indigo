@@ -1,0 +1,37 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "KYUREM",
+  "form": 4,
+  "pokedex_form": 2,
+  "base_stats": {
+    "hp": 125,
+    "attack": 170,
+    "defense": 100,
+    "speed": 95,
+    "special_attack": 120,
+    "special_defense": 90
+  },
+  "base_exp": 350,
+  "evs": [
+    {"stat": "ATTACK", "amount": 3}
+  ],
+  "abilities": ["TERAVOLT"],
+  "moves": [
+    {"level": 1, "move": "ICYWIND"},
+    {"level": 1, "move": "DRAGONRAGE"},
+    {"level": 8, "move": "IMPRISON"},
+    {"level": 15, "move": "ANCIENTPOWER"},
+    {"level": 22, "move": "ICEBEAM"},
+    {"level": 29, "move": "DRAGONBREATH"},
+    {"level": 36, "move": "SLASH"},
+    {"level": 43, "move": "FUSIONBOLT"},
+    {"level": 50, "move": "FREEZESHOCK"},
+    {"level": 57, "move": "DRAGONPULSE"},
+    {"level": 64, "move": "NOBLEROAR"},
+    {"level": 71, "move": "ENDEAVOR"},
+    {"level": 78, "move": "BLIZZARD"},
+    {"level": 85, "move": "OUTRAGE"},
+    {"level": 92, "move": "HYPERVOICE"}
+  ],
+  "height": 3.3
+}

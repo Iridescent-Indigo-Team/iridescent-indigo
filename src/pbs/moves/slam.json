@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SLAM",
+  "real_name": "Slam",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 75,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is slammed with a long tail, vines, etc., to inflict damage."
+}

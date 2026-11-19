@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROTOTILLER",
+  "real_name": "Rototiller",
+  "type": "GROUND",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "AllBattlers",
+  "function_code": "RaiseGroundedGrassBattlersAtkSpAtk1",
+  "real_description": "The user tills the soil to encourage plant growth. This raises the Attack and Sp. Atk of Grass types."
+}

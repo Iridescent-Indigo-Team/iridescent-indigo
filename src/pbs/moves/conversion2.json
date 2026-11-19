@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONVERSION2",
+  "real_name": "Conversion 2",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "SetUserTypesToResistLastAttack",
+  "real_description": "The user changes its type to make itself resistant to the type of the attack the opponent used last."
+}

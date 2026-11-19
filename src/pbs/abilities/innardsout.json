@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "INNARDSOUT",
+  "real_name": "Innards Out",
+  "real_description": "Damages an attacker that lands the finishing hit."
+}

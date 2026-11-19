@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pokemon_forms.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "species": {"type": "string", "description": "A Species id from pokemon.txt."},
+    "form": {"type": "integer", "minimum": 1},
+    "real_form_name": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    },
+    "pokedex_form": {"type": "integer", "minimum": 0, "description": "PBS key: PokedexForm"},
+    "mega_stone": {"type": "string", "description": "A Item id from items.txt."},
+    "mega_move": {"type": "string", "description": "A Move id from moves.txt."},
+    "unmega_form": {"type": "integer", "minimum": 0, "description": "PBS key: UnmegaForm"},
+    "mega_message": {"type": "integer", "minimum": 0, "description": "PBS key: MegaMessage"},
+    "types": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Type id from types.txt."},
+      "description": "PBS key: Types"
+    },
+    "base_stats": {
+      "type": "object",
+      "properties": {
+        "hp": {"type": "integer", "minimum": 1},
+        "attack": {"type": "integer", "minimum": 1},
+        "defense": {"type": "integer", "minimum": 1},
+        "speed": {"type": "integer", "minimum": 1},
+        "special_attack": {"type": "integer", "minimum": 1},
+        "special_defense": {"type": "integer", "minimum": 1}
+      },
+      "required": ["hp", "attack", "defense", "speed", "special_attack", "special_defense"],
+      "additionalProperties": false,
+      "description": "PBS key: BaseStats"
+    },
+    "base_exp": {"type": "integer", "minimum": 1, "description": "PBS key: BaseExp"},
+    "evs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stat": {
+            "type": "string",
+            "enum": [
+              "HP",
+              "ATTACK",
+              "DEFENSE",
+              "SPECIAL_ATTACK",
+              "SPECIAL_DEFENSE",
+              "SPEED",
+              "ACCURACY",
+              "EVASION"
+            ]
+          },
+          "amount": {"type": "integer", "minimum": 1}
+        },
+        "required": ["stat", "amount"],
+        "additionalProperties": false
+      },
+      "description": "PBS key: EVs"
+    },
+    "catch_rate": {"type": "integer", "minimum": 0, "description": "PBS key: CatchRate"},
+    "happiness": {"type": "integer", "minimum": 0, "description": "PBS key: Happiness"},
+    "abilities": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Ability id from abilities.txt."},
+      "description": "PBS key: Abilities"
+    },
+    "hidden_abilities": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Ability id from abilities.txt."},
+      "description": "PBS key: HiddenAbilities"
+    },
+    "moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {"type": "integer", "minimum": 0},
+          "move": {"type": "string", "description": "A Move id from moves.txt."}
+        },
+        "required": ["level", "move"],
+        "additionalProperties": false
+      },
+      "description": "PBS key: Moves"
+    },
+    "tutor_moves": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Move id from moves.txt."},
+      "description": "PBS key: TutorMoves"
+    },
+    "egg_moves": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Move id from moves.txt."},
+      "description": "PBS key: EggMoves"
+    },
+    "egg_groups": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Undiscovered",
+          "Monster",
+          "Water1",
+          "Bug",
+          "Flying",
+          "Field",
+          "Fairy",
+          "Grass",
+          "Humanlike",
+          "Water3",
+          "Mineral",
+          "Amorphous",
+          "Water2",
+          "Ditto",
+          "Dragon"
+        ]
+      },
+      "description": "PBS key: EggGroups"
+    },
+    "hatch_steps": {"type": "integer", "minimum": 1, "description": "PBS key: HatchSteps"},
+    "offspring": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Species id from pokemon.txt."},
+      "description": "PBS key: Offspring"
+    },
+    "height": {"type": "number", "description": "PBS key: Height"},
+    "weight": {"type": "number", "description": "PBS key: Weight"},
+    "color": {
+      "type": "string",
+      "enum": ["Red", "Blue", "Yellow", "Green", "Black", "Brown", "Purple", "Gray", "White", "Pink"],
+      "description": "PBS key: Color"
+    },
+    "shape": {
+      "type": "string",
+      "enum": [
+        "Head",
+        "Serpentine",
+        "Finned",
+        "HeadArms",
+        "HeadBase",
+        "BipedalTail",
+        "HeadLegs",
+        "Quadruped",
+        "Winged",
+        "Multiped",
+        "MultiBody",
+        "Bipedal",
+        "MultiWinged",
+        "Insectoid"
+      ],
+      "description": "PBS key: Shape"
+    },
+    "habitat": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Grassland",
+        "Forest",
+        "WatersEdge",
+        "Sea",
+        "Cave",
+        "Mountain",
+        "RoughTerrain",
+        "Urban",
+        "Rare"
+      ],
+      "description": "PBS key: Habitat"
+    },
+    "real_category": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "real_pokedex_entry": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    },
+    "generation": {"type": "integer", "description": "PBS key: Generation"},
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    },
+    "wild_item_common": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Item id from items.txt."},
+      "description": "PBS key: WildItemCommon"
+    },
+    "wild_item_uncommon": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Item id from items.txt."},
+      "description": "PBS key: WildItemUncommon"
+    },
+    "wild_item_rare": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Item id from items.txt."},
+      "description": "PBS key: WildItemRare"
+    },
+    "evolutions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "species": {"type": "string", "description": "A Species id from pokemon.txt."},
+          "method": {
+            "type": "string",
+            "enum": [
+              "None",
+              "Level",
+              "LevelMale",
+              "LevelFemale",
+              "LevelDay",
+              "LevelNight",
+              "LevelMorning",
+              "LevelAfternoon",
+              "LevelEvening",
+              "LevelNoWeather",
+              "LevelSun",
+              "LevelRain",
+              "LevelSnow",
+              "LevelSandstorm",
+              "LevelCycling",
+              "LevelSurfing",
+              "LevelDiving",
+              "LevelDarkness",
+              "LevelDarkInParty",
+              "AttackGreater",
+              "AtkDefEqual",
+              "DefenseGreater",
+              "Silcoon",
+              "Cascoon",
+              "Ninjask",
+              "Shedinja",
+              "Happiness",
+              "HappinessMale",
+              "HappinessFemale",
+              "HappinessDay",
+              "HappinessNight",
+              "HappinessMove",
+              "HappinessMoveType",
+              "HappinessHoldItem",
+              "MaxHappiness",
+              "Beauty",
+              "HoldItem",
+              "HoldItemMale",
+              "HoldItemFemale",
+              "DayHoldItem",
+              "NightHoldItem",
+              "HoldItemHappiness",
+              "HasMove",
+              "HasMoveType",
+              "HasInParty",
+              "Location",
+              "LocationFlag",
+              "Region",
+              "Item",
+              "ItemMale",
+              "ItemFemale",
+              "ItemDay",
+              "ItemNight",
+              "ItemHappiness",
+              "Trade",
+              "TradeMale",
+              "TradeFemale",
+              "TradeDay",
+              "TradeNight",
+              "TradeItem",
+              "TradeSpecies",
+              "BattleDealCriticalHit",
+              "Event",
+              "EventAfterDamageTaken"
+            ]
+          },
+          "parameter": {"type": "string", "pattern": "^[^#]*$", "description": "Text."}
+        },
+        "required": ["species", "method"],
+        "additionalProperties": false
+      },
+      "description": "PBS key: Evolution"
+    }
+  },
+  "required": ["species", "form"],
+  "additionalProperties": false
+}

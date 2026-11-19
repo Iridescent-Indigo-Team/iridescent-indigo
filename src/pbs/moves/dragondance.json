@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONDANCE",
+  "real_name": "Dragon Dance",
+  "type": "DRAGON",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserAtkSpd1",
+  "flags": ["Dance"],
+  "real_description": "The user vigorously performs a mystic, powerful dance that boosts its Attack and Speed stats."
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SABLEYE",
+  "form": 1,
+  "real_form_name": "Mega Sableye",
+  "mega_stone": "SABLENITE",
+  "base_stats": {
+    "hp": 50,
+    "attack": 85,
+    "defense": 125,
+    "speed": 20,
+    "special_attack": 85,
+    "special_defense": 115
+  },
+  "base_exp": 168,
+  "abilities": ["MAGICBOUNCE"],
+  "hidden_abilities": ["MAGICBOUNCE"],
+  "weight": 161.0,
+  "real_pokedex_entry": "Supporting a giant heavy jewel, it can't change direction very nimbly and is vulnerable to attack from behind.",
+  "generation": 6
+}

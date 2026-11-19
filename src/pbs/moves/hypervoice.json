@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPERVOICE",
+  "real_name": "Hyper Voice",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user lets loose a horribly echoing shout with the power to inflict damage."
+}

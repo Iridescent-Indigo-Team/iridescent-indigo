@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "phone.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[^#]*$",
+                  "description": "Text (the rest of the line, written as is)."
+                },
+                "intro": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: Intro"
+                },
+                "intro_morning": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: IntroMorning"
+                },
+                "intro_afternoon": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: IntroAfternoon"
+                },
+                "intro_evening": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: IntroEvening"
+                },
+                "body": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: Body"
+                },
+                "body1": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: Body1"
+                },
+                "body2": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: Body2"
+                },
+                "battle_request": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: BattleRequest"
+                },
+                "battle_remind": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: BattleRemind"
+                },
+                "end": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[^#]*$",
+                    "description": "Text (the rest of the line, written as is)."
+                  },
+                  "description": "PBS key: End"
+                }
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

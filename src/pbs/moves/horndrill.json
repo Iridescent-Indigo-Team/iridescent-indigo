@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HORNDRILL",
+  "real_name": "Horn Drill",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 30,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "OHKO",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user stabs the foe with a horn that rotates like a drill. If it hits, the target faints instantly."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MEGALAUNCHER",
+  "real_name": "Mega Launcher",
+  "real_description": "Powers up aura and pulse moves."
+}

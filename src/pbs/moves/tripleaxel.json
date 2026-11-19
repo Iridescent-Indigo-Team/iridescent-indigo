@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRIPLEAXEL",
+  "real_name": "Triple Axel",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 20,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitThreeTimesPowersUpWithEachHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A consecutive three-kick attack that becomes more powerful with each successful hit."
+}

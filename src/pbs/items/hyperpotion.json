@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERPOTION",
+  "real_name": "Hyper Potion",
+  "real_name_plural": "Hyper Potions",
+  "pocket": 2,
+  "price": 1500,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine for treating wounds. It can be used to restore 120 HP to a single Pokémon."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "JOLLYMINT",
+  "real_name": "Jolly Mint",
+  "real_name_plural": "Jolly Mints",
+  "real_portion_name": "sprig of Jolly Mint",
+  "real_portion_name_plural": "sprigs of Jolly Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Atk will grow more slowly."
+}

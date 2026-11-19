@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SERENEGRACE",
+  "real_name": "Serene Grace",
+  "real_description": "Boosts the likelihood of added effects appearing."
+}

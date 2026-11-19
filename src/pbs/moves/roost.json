@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROOST",
+  "real_name": "Roost",
+  "type": "FLYING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserHalfOfTotalHPLoseFlyingTypeThisTurn",
+  "real_description": "The user lands and rests its body. It restores the user's HP by up to half of its max HP."
+}

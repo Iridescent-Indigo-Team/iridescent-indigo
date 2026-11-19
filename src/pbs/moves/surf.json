@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SURF",
+  "real_name": "Surf",
+  "type": "WATER",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearOthers",
+  "function_code": "DoublePowerIfTargetUnderwater",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "It swamps the area around the user with a giant wave. It can also be used for crossing water."
+}

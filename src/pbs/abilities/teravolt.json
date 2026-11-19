@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TERAVOLT",
+  "real_name": "Teravolt",
+  "real_description": "Moves can be used regardless of Abilities."
+}

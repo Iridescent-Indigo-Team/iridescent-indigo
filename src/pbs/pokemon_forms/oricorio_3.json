@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ORICORIO",
+  "form": 3,
+  "real_form_name": "Sensu Style",
+  "types": ["GHOST", "FLYING"],
+  "color": "Purple",
+  "real_pokedex_entry": "It summons the dead with its dreamy dancing. From their malice, it draws power with which to curse its enemies."
+}

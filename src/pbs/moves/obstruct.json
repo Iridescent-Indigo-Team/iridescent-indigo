@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OBSTRUCT",
+  "real_name": "Obstruct",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUserFromDamagingMovesObstruct",
+  "real_description": "The user protects itself from all attacks. Direct contact lowers the attacker's Defense."
+}

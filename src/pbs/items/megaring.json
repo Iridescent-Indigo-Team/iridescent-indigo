@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MEGARING",
+  "real_name": "Mega Ring",
+  "real_name_plural": "Mega Rings",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem", "MegaRing"],
+  "real_description": "This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve."
+}

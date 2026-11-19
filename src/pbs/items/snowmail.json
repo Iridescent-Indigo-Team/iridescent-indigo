@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SNOWMAIL",
+  "real_name": "Snow Mail",
+  "real_name_plural": "Snow Mail",
+  "real_portion_name": "piece of Snow Mail",
+  "real_portion_name_plural": "pieces of Snow Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a chilly, snow-covered world. Let a Pokémon hold it for delivery."
+}

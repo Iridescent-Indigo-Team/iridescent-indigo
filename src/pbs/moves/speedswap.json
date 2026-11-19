@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPEEDSWAP",
+  "real_name": "Speed Swap",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapBaseSpeed",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user exchanges Speed stats with the target."
+}

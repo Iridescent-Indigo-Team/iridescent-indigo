@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STARPIECE",
+  "real_name": "Star Piece",
+  "real_name_plural": "Star Pieces",
+  "pocket": 1,
+  "price": 12000,
+  "flags": ["Fling_30"],
+  "real_description": "A shard of a pretty gem that sparkles in a red color. It can be sold at a high price to shops."
+}

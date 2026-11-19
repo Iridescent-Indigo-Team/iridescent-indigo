@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHELLTRAP",
+  "real_name": "Shell Trap",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "priority": -3,
+  "function_code": "UsedAfterUserTakesPhysicalDamage",
+  "flags": ["CanProtect"],
+  "real_description": "The user sets a shell trap. If it is hit by a physical move, the trap explodes and hurt the attacker."
+}

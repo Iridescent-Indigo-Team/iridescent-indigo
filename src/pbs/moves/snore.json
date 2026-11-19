@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SNORE",
+  "real_name": "Snore",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTargetFailsIfUserNotAsleep",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "effect_chance": 30,
+  "real_description": "An attack that can be used only if the user is asleep. The harsh noise may also make the target flinch."
+}

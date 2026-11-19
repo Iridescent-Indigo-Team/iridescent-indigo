@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MINIOR",
+  "form": 9,
+  "real_form_name": "Yellow Core",
+  "base_stats": {
+    "hp": 60,
+    "attack": 100,
+    "defense": 60,
+    "speed": 120,
+    "special_attack": 100,
+    "special_defense": 60
+  },
+  "base_exp": 175,
+  "evs": [
+    {"stat": "ATTACK", "amount": 1},
+    {"stat": "SPECIAL_ATTACK", "amount": 1}
+  ],
+  "weight": 0.3,
+  "color": "Yellow",
+  "real_pokedex_entry": "If its core stays exposed, it will soon die off. It's possible that it may survive if it's put into a Poké Ball quickly enough.",
+  "flags": ["InheritFormFromMother"]
+}

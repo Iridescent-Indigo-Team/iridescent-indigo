@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "YOUNGSTER",
+  "name": "Ben",
+  "real_lose_text": "Aww, I lost.",
+  "pokemon": [
+    {"species": "RATTATA", "level": 11},
+    {"species": "EKANS", "level": 11}
+  ]
+}

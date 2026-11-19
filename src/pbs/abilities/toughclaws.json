@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TOUGHCLAWS",
+  "real_name": "Tough Claws",
+  "real_description": "Powers up moves that make direct contact."
+}

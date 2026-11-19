@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BLIZZARD",
+  "real_name": "Blizzard",
+  "type": "ICE",
+  "category": "Special",
+  "power": 110,
+  "accuracy": 70,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "FreezeTargetAlwaysHitsInHail",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "A howling blizzard is summoned to strike the opposing team. It may also freeze them solid."
+}

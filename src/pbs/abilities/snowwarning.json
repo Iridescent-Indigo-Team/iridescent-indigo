@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SNOWWARNING",
+  "real_name": "Snow Warning",
+  "real_description": "The Pokémon summons a hailstorm in battle."
+}

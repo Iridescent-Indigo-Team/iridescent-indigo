@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM31",
+  "real_name": "TM31",
+  "real_name_plural": "TM31s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 40,
+  "field_use": "TR",
+  "flags": ["Fling_75"],
+  "move": "BRICKBREAK",
+  "real_description": "The user attacks with a swift chop. It can also break barriers, such as Light Screen and Reflect."
+}

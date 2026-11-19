@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM64",
+  "real_name": "TM64",
+  "real_name_plural": "TM64s",
+  "pocket": 4,
+  "price": 7500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_250"],
+  "move": "EXPLOSION",
+  "real_description": "The user attacks everything around it by causing a tremendous explosion. The user faints upon using this move."
+}

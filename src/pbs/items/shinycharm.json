@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHINYCHARM",
+  "real_name": "Shiny Charm",
+  "real_name_plural": "Shiny Charms",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A shiny charm said to increase the chance of finding a Shiny Pokémon."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RECOVER",
+  "real_name": "Recover",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserHalfOfTotalHP",
+  "real_description": "Restoring its own cells, the user restores its own HP by half of its max HP."
+}

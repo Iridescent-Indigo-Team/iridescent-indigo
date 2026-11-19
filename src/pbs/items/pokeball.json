@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POKEBALL",
+  "real_name": "Poké Ball",
+  "real_name_plural": "Poké Balls",
+  "pocket": 3,
+  "price": 200,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system."
+}

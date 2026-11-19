@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PHANTOMFORCE",
+  "real_name": "Phantom Force",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackInvulnerableRemoveProtections",
+  "flags": ["Contact", "CanMirrorMove"],
+  "real_description": "The user vanishes somewhere, then strikes on the next turn. Hits through protections."
+}

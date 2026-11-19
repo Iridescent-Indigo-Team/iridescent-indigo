@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STAKEOUT",
+  "real_name": "Stakeout",
+  "real_description": "Deals doubles damage to a target's replacement."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PYROBALL",
+  "real_name": "Pyro Ball",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "ThawsUser", "Bomb", "CannotMetronome"],
+  "effect_chance": 10,
+  "real_description": "Attacks by igniting a small stone and launching it as a fiery ball. May also burn the target."
+}

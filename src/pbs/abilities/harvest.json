@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HARVEST",
+  "real_name": "Harvest",
+  "real_description": "May create another Berry after one is used."
+}

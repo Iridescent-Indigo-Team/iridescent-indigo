@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DIANCIE",
+  "form": 1,
+  "real_form_name": "Mega Diancie",
+  "mega_stone": "DIANCITE",
+  "base_stats": {
+    "hp": 50,
+    "attack": 160,
+    "defense": 110,
+    "speed": 110,
+    "special_attack": 160,
+    "special_defense": 110
+  },
+  "base_exp": 350,
+  "abilities": ["MAGICBOUNCE"],
+  "hidden_abilities": ["MAGICBOUNCE"],
+  "height": 1.1,
+  "weight": 27.8
+}

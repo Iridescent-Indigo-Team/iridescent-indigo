@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRIATTACK",
+  "real_name": "Tri Attack",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ParalyzeBurnOrFreezeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user strikes with a simultaneous three-beam attack. May also paralyze, burn, or freeze the target."
+}

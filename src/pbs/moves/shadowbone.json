@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWBONE",
+  "real_name": "Shadow Bone",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user beats the target with a bone containing a spirit. May lower the target's Defense stat."
+}

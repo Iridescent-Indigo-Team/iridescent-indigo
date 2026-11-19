@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AMNESIA",
+  "real_name": "Amnesia",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpDef2",
+  "real_description": "The user temporarily empties its mind to forget its concerns. It sharply raises the user's Sp. Def stat."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAZORLEAF",
+  "real_name": "Razor Leaf",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 55,
+  "accuracy": 95,
+  "total_pp": 25,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "Sharp-edged leaves are launched to slash at the opposing team. Critical hits land more easily."
+}

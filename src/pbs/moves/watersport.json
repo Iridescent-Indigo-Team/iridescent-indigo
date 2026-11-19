@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERSPORT",
+  "real_name": "Water Sport",
+  "type": "WATER",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "BothSides",
+  "function_code": "StartWeakenFireMoves",
+  "real_description": "The user soaks itself with water. The move weakens Fire-type moves while the user is in the battle."
+}

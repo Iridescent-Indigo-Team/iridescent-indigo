@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WRAP",
+  "real_name": "Wrap",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 15,
+  "accuracy": 90,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A long body or vines are used to wrap and squeeze the target for four to five turns."
+}

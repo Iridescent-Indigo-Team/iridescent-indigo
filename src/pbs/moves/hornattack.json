@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HORNATTACK",
+  "real_name": "Horn Attack",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is jabbed with a sharply pointed horn to inflict damage."
+}

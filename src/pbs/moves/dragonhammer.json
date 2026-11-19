@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONHAMMER",
+  "real_name": "Dragon Hammer",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user uses its body like a hammer to attack the target and inflict damage."
+}

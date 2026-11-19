@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BATTLEARMOR",
+  "real_name": "Battle Armor",
+  "real_description": "The Pokémon is protected against critical hits."
+}

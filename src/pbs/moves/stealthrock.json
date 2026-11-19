@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STEALTHROCK",
+  "real_name": "Stealth Rock",
+  "type": "ROCK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "FoeSide",
+  "function_code": "AddStealthRocksToFoeSide",
+  "real_description": "The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WORKUP",
+  "real_name": "Work Up",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "User",
+  "function_code": "RaiseUserAtkSpAtk1",
+  "real_description": "The user is roused, and its Attack and Sp. Atk stats increase."
+}

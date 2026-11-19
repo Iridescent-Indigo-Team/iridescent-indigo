@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 2,
+  "real_name": "Lappet Town",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 13, "y": 12},
+  "battle_background": "field"
+}

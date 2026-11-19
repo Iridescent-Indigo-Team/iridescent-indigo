@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "JUMPKICK",
+  "real_name": "Jump Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "CrashDamageIfFailsUnusableInGravity",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user jumps up high, then strikes with a kick. If the kick misses, the user hurts itself."
+}

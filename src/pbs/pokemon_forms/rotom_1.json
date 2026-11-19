@@ -1,0 +1,17 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ROTOM",
+  "form": 1,
+  "real_form_name": "Heat Rotom",
+  "types": ["ELECTRIC", "FIRE"],
+  "base_stats": {
+    "hp": 50,
+    "attack": 65,
+    "defense": 107,
+    "speed": 86,
+    "special_attack": 105,
+    "special_defense": 107
+  },
+  "base_exp": 182,
+  "real_pokedex_entry": "This Rotom has possessed a convection microwave oven that uses a special motor. It also has a flair for manipulating flames."
+}

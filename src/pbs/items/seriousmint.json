@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SERIOUSMINT",
+  "real_name": "Serious Mint",
+  "real_name_plural": "Serious Mints",
+  "real_portion_name": "sprig of Serious Mint",
+  "real_portion_name_plural": "sprigs of Serious Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, all of its stats will grow at an equal rate."
+}

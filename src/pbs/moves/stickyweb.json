@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STICKYWEB",
+  "real_name": "Sticky Web",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "FoeSide",
+  "function_code": "AddStickyWebToFoeSide",
+  "real_description": "Weaves a sticky net around the opposing team, which lowers their Speed stats upon switching in."
+}

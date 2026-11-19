@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BLUEFLARE",
+  "real_name": "Blue Flare",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 130,
+  "accuracy": 85,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user attacks by engulfing the foe in a beautiful, yet intense, blue flame. It may also burn the foe."
+}

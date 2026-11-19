@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CRUNCH",
+  "real_name": "Crunch",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 20,
+  "real_description": "The user crunches up the target with sharp fangs. It may also lower the target's Defense stat."
+}

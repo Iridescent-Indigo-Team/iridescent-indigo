@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PURPLENECTAR",
+  "real_name": "Purple Nectar",
+  "real_name_plural": "Purple Nectars",
+  "real_portion_name": "jar of Purple Nectar",
+  "real_portion_name_plural": "jars of Purple Nectar",
+  "pocket": 1,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "A flower nectar obtained at Poni Meadow. It changes the form of certain species of Pokémon."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OMINOUSWIND",
+  "real_name": "Ominous Wind",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RaiseUserMainStats1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user blasts the target with a gust of repulsive wind. It may also raise all the user's stats at once."
+}

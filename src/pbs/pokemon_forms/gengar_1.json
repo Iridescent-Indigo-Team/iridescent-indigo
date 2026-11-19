@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GENGAR",
+  "form": 1,
+  "real_form_name": "Mega Gengar",
+  "mega_stone": "GENGARITE",
+  "base_stats": {
+    "hp": 60,
+    "attack": 65,
+    "defense": 80,
+    "speed": 130,
+    "special_attack": 170,
+    "special_defense": 95
+  },
+  "base_exp": 300,
+  "abilities": ["SHADOWTAG"],
+  "hidden_abilities": ["SHADOWTAG"],
+  "height": 1.4,
+  "real_pokedex_entry": "The energy of Mega Evolution awakened it. It sinks into another dimension, where it keeps a patient watch for its chance to attack.",
+  "generation": 6
+}

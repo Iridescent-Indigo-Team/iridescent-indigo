@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CLAMP",
+  "real_name": "Clamp",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 35,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is clamped and squeezed by the user's very thick and sturdy shell for four to five turns."
+}

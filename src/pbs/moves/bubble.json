@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BUBBLE",
+  "real_name": "Bubble",
+  "type": "WATER",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "A spray of countless bubbles is jetted at the opposing team. It may also lower the targets' Speed stats."
+}

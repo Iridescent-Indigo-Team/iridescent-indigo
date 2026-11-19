@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FILTER",
+  "real_name": "Filter",
+  "real_description": "Reduces damage from super-effective attacks."
+}

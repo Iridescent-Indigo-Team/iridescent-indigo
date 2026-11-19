@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "KASIBBERRY",
+  "real_name": "Kasib Berry",
+  "real_name_plural": "Kasib Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GHOST_80"],
+  "real_description": "Weakens a supereffective Ghost-type attack against the holding Pokémon."
+}

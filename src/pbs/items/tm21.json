@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM21",
+  "real_name": "TM21",
+  "real_name_plural": "TM21s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "DAZZLINGGLEAM",
+  "real_description": "The user damages opposing Pokémon by emitting a powerful flash."
+}

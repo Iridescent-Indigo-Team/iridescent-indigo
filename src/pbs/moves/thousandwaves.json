@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THOUSANDWAVES",
+  "real_name": "Thousand Waves",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "TrapTargetInBattleMainEffect",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks with a wave that crawls along the ground. Those it hits can't flee from battle."
+}

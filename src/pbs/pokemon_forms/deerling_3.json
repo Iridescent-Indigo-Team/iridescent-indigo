@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DEERLING",
+  "form": 3,
+  "real_form_name": "Winter Form",
+  "color": "Brown"
+}

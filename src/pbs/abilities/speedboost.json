@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SPEEDBOOST",
+  "real_name": "Speed Boost",
+  "real_description": "Its Speed stat is gradually boosted."
+}

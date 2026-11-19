@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "split: PBS files whose entries each get their own JSON file in",
+    "src/pbs/<name>/, with the order kept in src/pbs/<name>/_index.json.",
+    "Every other PBS file becomes a single src/pbs/<name>.json."
+  ],
+  "split": [
+    "abilities",
+    "encounters",
+    "items",
+    "map_metadata",
+    "moves",
+    "pokemon",
+    "pokemon_forms",
+    "pokemon_metrics",
+    "shadow_pokemon",
+    "trainer_types",
+    "trainers"
+  ]
+}

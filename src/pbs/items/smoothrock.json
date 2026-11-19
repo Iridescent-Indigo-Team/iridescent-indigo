@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SMOOTHROCK",
+  "real_name": "Smooth Rock",
+  "real_name_plural": "Smooth Rocks",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_10"],
+  "real_description": "A Pokémon held item that extends the duration of the move Sandstorm used by the holder."
+}

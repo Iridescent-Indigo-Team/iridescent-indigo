@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GALVANIZE",
+  "real_name": "Galvanize",
+  "real_description": "Normal-type moves become Electric-type and powered."
+}

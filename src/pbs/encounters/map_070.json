@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/encounters.entry.schema.json",
+  "map": 70,
+  "types": [
+    {
+      "type": "Land",
+      "step_chance": 21,
+      "slots": [
+        {"chance": 20, "species": "CHINCHOU", "min_level": 17, "max_level": 21},
+        {"chance": 20, "species": "CLAMPERL", "min_level": 18, "max_level": 20},
+        {"chance": 20, "species": "SHELLDER", "min_level": 18, "max_level": 20},
+        {"chance": 10, "species": "CLAMPERL", "min_level": 18, "max_level": 19},
+        {"chance": 10, "species": "CORSOLA", "min_level": 17, "max_level": 20},
+        {"chance": 10, "species": "RELICANTH", "min_level": 16, "max_level": 19},
+        {"chance": 10, "species": "SHELLDER", "min_level": 18, "max_level": 19}
+      ]
+    }
+  ]
+}

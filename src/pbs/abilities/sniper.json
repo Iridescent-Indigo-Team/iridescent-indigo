@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SNIPER",
+  "real_name": "Sniper",
+  "real_description": "Powers up moves if they become critical hits."
+}

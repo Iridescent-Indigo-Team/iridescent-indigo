@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "QUICKBALL",
+  "real_name": "Quick Ball",
+  "real_name_plural": "Quick Balls",
+  "pocket": 3,
+  "price": 1000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A somewhat different Poké Ball that provides a better catch rate if used at the start of a wild encounter."
+}

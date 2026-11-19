@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CHEEKPOUCH",
+  "real_name": "Cheek Pouch",
+  "real_description": "Restores HP as well when the Pokémon eats a Berry."
+}

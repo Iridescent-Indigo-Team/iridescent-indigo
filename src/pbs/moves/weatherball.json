@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WEATHERBALL",
+  "real_name": "Weather Ball",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeAndPowerDependOnWeather",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "An attack move that varies in power and type depending on the weather."
+}

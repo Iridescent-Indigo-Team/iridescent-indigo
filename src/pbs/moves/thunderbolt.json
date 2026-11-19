@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDERBOLT",
+  "real_name": "Thunderbolt",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "A strong electric blast is loosed at the target. It may also leave the target with paralysis."
+}

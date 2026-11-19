@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUNSTEELSTRIKE",
+  "real_name": "Sunsteel Strike",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "IgnoreTargetAbility",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user slams into the target with the force of a meteor. Can't be stopped by the target's Ability."
+}

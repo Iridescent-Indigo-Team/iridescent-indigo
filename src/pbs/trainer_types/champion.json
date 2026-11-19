@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "CHAMPION",
+  "real_name": "Champion",
+  "gender": "Male",
+  "base_money": 100,
+  "battle_bgm": "Battle Champion",
+  "victory_bgm": "Battle victory leader"
+}

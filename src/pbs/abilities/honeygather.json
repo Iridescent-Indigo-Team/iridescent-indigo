@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HONEYGATHER",
+  "real_name": "Honey Gather",
+  "real_description": "The Pokémon may gather Honey from somewhere."
+}

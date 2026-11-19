@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CRABHAMMER",
+  "real_name": "Crabhammer",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The target is hammered with a large pincer. Critical hits land more easily."
+}

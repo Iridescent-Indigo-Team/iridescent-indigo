@@ -1,0 +1,18 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GRENINJA",
+  "form": 2,
+  "real_form_name": "Ash-Greninja",
+  "base_stats": {
+    "hp": 72,
+    "attack": 145,
+    "defense": 67,
+    "speed": 132,
+    "special_attack": 153,
+    "special_defense": 71
+  },
+  "base_exp": 320,
+  "abilities": ["BATTLEBOND"],
+  "hidden_abilities": ["BATTLEBOND"],
+  "generation": 7
+}

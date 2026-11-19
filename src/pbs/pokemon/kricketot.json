@@ -1,0 +1,37 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "KRICKETOT",
+  "real_name": "Kricketot",
+  "types": ["BUG"],
+  "base_stats": {"hp": 37, "attack": 25, "defense": 41, "speed": 25, "special_attack": 25, "special_defense": 41},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Parabolic",
+  "base_exp": 39,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SHEDSKIN"],
+  "hidden_abilities": ["RUNAWAY"],
+  "moves": [
+    {"level": 1, "move": "GROWL"},
+    {"level": 1, "move": "POUND"},
+    {"level": 6, "move": "STRUGGLEBUG"},
+    {"level": 16, "move": "BUGBITE"}
+  ],
+  "tutor_moves": ["BUGBITE", "ENDEAVOR", "MUDSLAP", "SNORE", "STRINGSHOT", "STRUGGLEBUG", "UPROAR"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 2.2,
+  "color": "Red",
+  "shape": "Bipedal",
+  "real_category": "Cricket",
+  "real_pokedex_entry": "It shakes its head back to front, causing its antennae to hit each other and sound like a xylophone.",
+  "generation": 4,
+  "wild_item_uncommon": ["METRONOME"],
+  "evolutions": [
+    {"species": "KRICKETUNE", "method": "Level", "parameter": 10}
+  ]
+}

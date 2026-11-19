@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "OBLIVIOUS",
+  "real_name": "Oblivious",
+  "real_description": "Prevents it from becoming infatuated."
+}

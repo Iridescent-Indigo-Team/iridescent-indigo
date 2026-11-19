@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SLUDGEBOMB",
+  "real_name": "Sludge Bomb",
+  "type": "POISON",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 30,
+  "real_description": "Unsanitary sludge is hurled at the target. It may also poison the target."
+}

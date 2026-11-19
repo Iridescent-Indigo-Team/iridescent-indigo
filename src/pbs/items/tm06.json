@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM06",
+  "real_name": "TM06",
+  "real_name_plural": "TM06s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "TOXIC",
+  "real_description": "A move that leaves the target badly poisoned. Its poison damage worsens every turn."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PRIMORDIALSEA",
+  "real_name": "Primordial Sea",
+  "real_description": "Changes the weather to nullify Fire-type moves."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "UNBURDEN",
+  "real_name": "Unburden",
+  "real_description": "Raises Speed if a held item is used."
+}

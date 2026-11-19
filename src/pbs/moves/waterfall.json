@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERFALL",
+  "real_name": "Waterfall",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user charges at the target and may make it flinch. It can also be used to climb a waterfall."
+}

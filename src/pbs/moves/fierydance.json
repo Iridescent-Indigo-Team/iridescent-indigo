@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIERYDANCE",
+  "real_name": "Fiery Dance",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove", "Dance"],
+  "effect_chance": 50,
+  "real_description": "Cloaked in flames, the user dances and flaps its wings. It may also raise the user's Sp. Atk stat."
+}

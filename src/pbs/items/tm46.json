@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM46",
+  "real_name": "TM46",
+  "real_name_plural": "TM46s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "THIEF",
+  "real_description": "The user attacks and steals the target's held item simultaneously."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIRESPIN",
+  "real_name": "Fire Spin",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 35,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target becomes trapped within a fierce vortex of fire that rages for four to five turns."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FURYSWIPES",
+  "real_name": "Fury Swipes",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 18,
+  "accuracy": 80,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is raked with sharp claws or scythes for two to five times in quick succession."
+}

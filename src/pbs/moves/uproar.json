@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "UPROAR",
+  "real_name": "Uproar",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "RandomNearFoe",
+  "function_code": "MultiTurnAttackPreventSleeping",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user attacks in an uproar for three turns. Over that time, no one can fall asleep."
+}

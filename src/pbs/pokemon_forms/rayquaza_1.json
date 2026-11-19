@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "RAYQUAZA",
+  "form": 1,
+  "real_form_name": "Mega Rayquaza",
+  "mega_move": "DRAGONASCENT",
+  "mega_message": 1,
+  "base_stats": {
+    "hp": 105,
+    "attack": 180,
+    "defense": 100,
+    "speed": 115,
+    "special_attack": 180,
+    "special_defense": 100
+  },
+  "base_exp": 390,
+  "abilities": ["DELTASTREAM"],
+  "hidden_abilities": ["DELTASTREAM"],
+  "height": 10.8,
+  "weight": 392.0,
+  "generation": 6
+}

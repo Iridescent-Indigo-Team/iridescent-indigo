@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GIGAIMPACT",
+  "real_name": "Giga Impact",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 150,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user charges at the target using every bit of its power. The user must rest on the next turn."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "TEAMROCKET_F",
+  "name": "Grunt",
+  "version": 1,
+  "real_lose_text": "You're too good for me!",
+  "pokemon": [
+    {"species": "BURMY", "level": 19},
+    {"species": "WINGULL", "level": 19},
+    {"species": "ELECTABUZZ", "level": 20, "shadowness": true}
+  ]
+}

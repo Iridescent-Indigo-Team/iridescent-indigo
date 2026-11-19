@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GARCHOMP",
+  "form": 1,
+  "real_form_name": "Mega Garchomp",
+  "mega_stone": "GARCHOMPITE",
+  "base_stats": {
+    "hp": 108,
+    "attack": 170,
+    "defense": 115,
+    "speed": 92,
+    "special_attack": 120,
+    "special_defense": 95
+  },
+  "base_exp": 350,
+  "abilities": ["SANDFORCE"],
+  "hidden_abilities": ["SANDFORCE"],
+  "real_pokedex_entry": "Its vaunted wings become scythes, sending it mad with rage. It swings its scythes wildly and slices the ground to pieces.",
+  "generation": 6
+}

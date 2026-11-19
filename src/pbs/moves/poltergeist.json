@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POLTERGEIST",
+  "real_name": "Poltergeist",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 110,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "FailsIfTargetHasNoItem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Attacks the target by controlling its item. The move fails if the target doesn't have an item."
+}

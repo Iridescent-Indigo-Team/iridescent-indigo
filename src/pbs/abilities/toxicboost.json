@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TOXICBOOST",
+  "real_name": "Toxic Boost",
+  "real_description": "Powers up physical attacks when poisoned."
+}

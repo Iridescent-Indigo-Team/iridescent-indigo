@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PHOTONGEYSER",
+  "real_name": "Photon Geyser",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "CategoryDependsOnHigherDamageIgnoreTargetAbility",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks with a pillar of light. This move the higher of the user's Attack or Sp. Atk stat."
+}

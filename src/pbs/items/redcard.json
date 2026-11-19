@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REDCARD",
+  "real_name": "Red Card",
+  "real_name_plural": "Red Cards",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 20,
+  "flags": ["Fling_10"],
+  "real_description": "A card with a mysterious power. When the holder is struck by a foe, the attacker is removed from battle."
+}

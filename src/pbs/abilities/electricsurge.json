@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ELECTRICSURGE",
+  "real_name": "Electric Surge",
+  "real_description": "Turns the ground into Electric Terrain."
+}

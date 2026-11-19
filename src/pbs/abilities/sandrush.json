@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SANDRUSH",
+  "real_name": "Sand Rush",
+  "real_description": "Boosts the Pokémon's Speed in a sandstorm."
+}

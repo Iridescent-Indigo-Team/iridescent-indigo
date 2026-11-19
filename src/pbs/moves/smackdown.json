@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SMACKDOWN",
+  "real_name": "Smack Down",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitsTargetInSkyGroundsTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user throws a stone or projectile to attack. A flying Pokémon will fall to the ground when hit."
+}

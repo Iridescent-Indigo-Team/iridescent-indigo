@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM49",
+  "real_name": "TM49",
+  "real_name_plural": "TM49s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "SCALD",
+  "real_description": "The user shoots boiling hot water at its target. This may also leave the target with a burn."
+}

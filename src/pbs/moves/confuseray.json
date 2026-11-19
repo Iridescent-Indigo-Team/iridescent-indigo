@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONFUSERAY",
+  "real_name": "Confuse Ray",
+  "type": "GHOST",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target is exposed to a sinister ray that triggers confusion."
+}

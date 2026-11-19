@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CROSSPOISON",
+  "real_name": "Cross Poison",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "effect_chance": 10,
+  "real_description": "A slashing attack with a poisonous blade that may also poison the foe. Critical hits land more easily."
+}

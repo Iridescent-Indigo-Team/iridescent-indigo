@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REAPERCLOTH",
+  "real_name": "Reaper Cloth",
+  "real_name_plural": "Reaper Cloths",
+  "real_portion_name": "scrap of Reaper Cloth",
+  "real_portion_name_plural": "scraps of Reaper Cloth",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_10"],
+  "real_description": "A cloth imbued with horrifyingly strong spiritual energy. It is loved by a certain Pokémon."
+}

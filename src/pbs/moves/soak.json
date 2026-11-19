@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SOAK",
+  "real_name": "Soak",
+  "type": "WATER",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "SetTargetTypesToWater",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user shoots a torrent of water at the target and changes the target's type to Water."
+}

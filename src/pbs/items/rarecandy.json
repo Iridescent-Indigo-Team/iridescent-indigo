@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RARECANDY",
+  "real_name": "Rare Candy",
+  "real_name_plural": "Rare Candies",
+  "pocket": 2,
+  "price": 10000,
+  "bp_price": 20,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A candy that is packed with energy. It raises the level of a single Pokémon by one."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POISONTAIL",
+  "real_name": "Poison Tail",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "effect_chance": 10,
+  "real_description": "The user hits the target with its tail. It may also poison the target. Critical hits land more easily."
+}

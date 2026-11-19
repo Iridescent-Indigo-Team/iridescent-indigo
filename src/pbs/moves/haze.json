@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HAZE",
+  "real_name": "Haze",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "BothSides",
+  "function_code": "ResetAllBattlersStatStages",
+  "real_description": "The user creates a haze that eliminates every stat change among all the Pokémon engaged in battle."
+}

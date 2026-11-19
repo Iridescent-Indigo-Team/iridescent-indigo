@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LIECHIBERRY",
+  "real_name": "Liechi Berry",
+  "real_name_plural": "Liechi Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GRASS_100"],
+  "real_description": "If held by a Pokémon, it raises its Attack stat in a pinch."
+}

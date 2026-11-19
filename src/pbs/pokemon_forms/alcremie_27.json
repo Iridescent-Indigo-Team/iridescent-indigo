@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ALCREMIE",
+  "form": 27,
+  "pokedex_form": 21
+}

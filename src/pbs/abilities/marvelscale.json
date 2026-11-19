@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MARVELSCALE",
+  "real_name": "Marvel Scale",
+  "real_description": "Ups Defense if there is a status problem."
+}

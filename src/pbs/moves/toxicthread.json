@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TOXICTHREAD",
+  "real_name": "Toxic Thread",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PoisonTargetLowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user shoots poisonous threads to poison the target and lower the target's Speed stat."
+}

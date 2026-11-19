@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CRAMORANT",
+  "form": 1,
+  "real_form_name": "Gulping Form",
+  "real_pokedex_entry": "Cramorant's gluttony led it to try to swallow an Arrokuda whole, which in turn led to Cramorant getting an Arrokuda stuck in its throat."
+}

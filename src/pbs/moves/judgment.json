@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "JUDGMENT",
+  "real_name": "Judgment",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeDependsOnUserPlate",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user releases countless shots of light. Its type varies with the kind of Plate the user is holding."
+}

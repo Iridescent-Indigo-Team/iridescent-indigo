@@ -1,0 +1,18 @@
+{
+  "$schema": "../_schema/encounters.entry.schema.json",
+  "map": 66,
+  "types": [
+    {
+      "type": "Land",
+      "step_chance": 21,
+      "slots": [
+        {"chance": 20, "species": "ABRA", "min_level": 12, "max_level": 15},
+        {"chance": 20, "species": "DODUO", "min_level": 13, "max_level": 15},
+        {"chance": 20, "species": "NIDORANfE", "min_level": 15, "max_level": 16},
+        {"chance": 20, "species": "NIDORANmA", "min_level": 15, "max_level": 16},
+        {"chance": 10, "species": "HOPPIP", "min_level": 13, "max_level": 17},
+        {"chance": 10, "species": "TANGELA", "min_level": 14, "max_level": 16}
+      ]
+    }
+  ]
+}

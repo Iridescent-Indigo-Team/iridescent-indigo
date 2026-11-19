@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POWERBRACER",
+  "real_name": "Power Bracer",
+  "real_name_plural": "Power Bracers",
+  "pocket": 1,
+  "price": 3000,
+  "bp_price": 10,
+  "flags": ["Fling_70"],
+  "real_description": "A Pokémon held item that promotes Attack gain on leveling, but reduces the Speed stat."
+}

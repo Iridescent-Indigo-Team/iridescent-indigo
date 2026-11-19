@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GARDEVOIR",
+  "form": 1,
+  "real_form_name": "Mega Gardevoir",
+  "mega_stone": "GARDEVOIRITE",
+  "base_stats": {
+    "hp": 68,
+    "attack": 85,
+    "defense": 65,
+    "speed": 100,
+    "special_attack": 165,
+    "special_defense": 135
+  },
+  "base_exp": 309,
+  "abilities": ["PIXILATE"],
+  "hidden_abilities": ["PIXILATE"],
+  "generation": 6
+}

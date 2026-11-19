@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "POKEMONTRAINER_Leaf",
+  "real_name": "Pokémon Trainer",
+  "gender": "Female",
+  "base_money": 60
+}

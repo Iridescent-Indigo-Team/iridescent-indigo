@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MULTISCALE",
+  "real_name": "Multiscale",
+  "real_description": "Reduces damage when HP is full."
+}

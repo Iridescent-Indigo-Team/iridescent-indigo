@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HONECLAWS",
+  "real_name": "Hone Claws",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "function_code": "RaiseUserAtkAcc1",
+  "real_description": "The user sharpens its claws to boost its Attack stat and accuracy."
+}

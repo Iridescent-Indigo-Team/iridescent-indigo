@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dungeon_parameters.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "area": {
+                  "type": "string",
+                  "pattern": "^(?![0-9])\\w+$",
+                  "description": "An id: letters, digits and underscores, not starting with a digit."
+                },
+                "version": {"type": "integer", "minimum": 1},
+                "dungeon_size": {
+                  "type": "object",
+                  "properties": {
+                    "width": {"type": "integer", "minimum": 1},
+                    "height": {"type": "integer", "minimum": 1}
+                  },
+                  "required": ["width", "height"],
+                  "additionalProperties": false,
+                  "description": "PBS key: DungeonSize"
+                },
+                "cell_size": {
+                  "type": "object",
+                  "properties": {
+                    "width": {"type": "integer", "minimum": 1},
+                    "height": {"type": "integer", "minimum": 1}
+                  },
+                  "required": ["width", "height"],
+                  "additionalProperties": false,
+                  "description": "PBS key: CellSize"
+                },
+                "min_room_size": {
+                  "type": "object",
+                  "properties": {
+                    "width": {"type": "integer", "minimum": 1},
+                    "height": {"type": "integer", "minimum": 1}
+                  },
+                  "required": ["width", "height"],
+                  "additionalProperties": false,
+                  "description": "PBS key: MinRoomSize"
+                },
+                "max_room_size": {
+                  "type": "object",
+                  "properties": {
+                    "width": {"type": "integer", "minimum": 1},
+                    "height": {"type": "integer", "minimum": 1}
+                  },
+                  "required": ["width", "height"],
+                  "additionalProperties": false,
+                  "description": "PBS key: MaxRoomSize"
+                },
+                "corridor_width": {"type": "integer", "minimum": 1, "description": "PBS key: CorridorWidth"},
+                "random_corridor_shift": {"type": "boolean", "description": "PBS key: ShiftCorridors"},
+                "node_layout": {
+                  "type": "string",
+                  "pattern": "^(?![0-9])\\w+$",
+                  "description": "An id: letters, digits and underscores, not starting with a digit."
+                },
+                "room_layout": {
+                  "type": "string",
+                  "pattern": "^(?![0-9])\\w+$",
+                  "description": "An id: letters, digits and underscores, not starting with a digit."
+                },
+                "room_chance": {"type": "integer", "minimum": 1, "description": "PBS key: RoomChance"},
+                "extra_connections_count": {"type": "integer", "minimum": 0, "description": "PBS key: ExtraConnections"},
+                "floor_patches": {
+                  "type": "object",
+                  "properties": {
+                    "radius": {"type": "integer", "minimum": 1},
+                    "chance": {"type": "integer", "minimum": 1},
+                    "smooth_rate": {"type": "integer", "minimum": 0}
+                  },
+                  "required": ["radius", "chance", "smooth_rate"],
+                  "additionalProperties": false,
+                  "description": "PBS key: FloorPatches"
+                },
+                "floor_decorations": {
+                  "type": "object",
+                  "properties": {
+                    "density": {"type": "integer", "minimum": 0},
+                    "large_density": {"type": "integer", "minimum": 0}
+                  },
+                  "required": ["density", "large_density"],
+                  "additionalProperties": false,
+                  "description": "PBS key: FloorDecorations"
+                },
+                "void_decorations": {
+                  "type": "object",
+                  "properties": {
+                    "density": {"type": "integer", "minimum": 0},
+                    "large_density": {"type": "integer", "minimum": 0}
+                  },
+                  "required": ["density", "large_density"],
+                  "additionalProperties": false,
+                  "description": "PBS key: VoidDecorations"
+                },
+                "rng_seed": {"type": "integer", "minimum": 0, "description": "PBS key: RNGSeed"},
+                "flags": {
+                  "type": "array",
+                  "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                  "description": "PBS key: Flags"
+                }
+              },
+              "required": ["area"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

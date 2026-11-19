@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONENERGY",
+  "real_name": "Dragon Energy",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "PowerHigherWithUserHP",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Converts life-force into power to attack. The lower the user's HP, the lower the move's power."
+}

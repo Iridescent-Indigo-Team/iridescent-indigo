@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLEKICK",
+  "real_name": "Double Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 30,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is quickly kicked twice in succession using both feet."
+}

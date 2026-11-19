@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "OCCABERRY",
+  "real_name": "Occa Berry",
+  "real_name_plural": "Occa Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FIRE_80"],
+  "real_description": "Weakens a supereffective Fire-type attack against the holding Pokémon."
+}

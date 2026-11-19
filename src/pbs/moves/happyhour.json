@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HAPPYHOUR",
+  "real_name": "Happy Hour",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "UserSide",
+  "function_code": "DoubleMoneyGainedFromBattle",
+  "real_description": "Using Happy Hour doubles the amount of prize money received after battle."
+}

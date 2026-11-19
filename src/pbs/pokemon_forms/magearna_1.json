@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MAGEARNA",
+  "form": 1,
+  "real_form_name": "Original Color",
+  "color": "Red",
+  "real_pokedex_entry": "This gorgeous Magearna looks as it did at the time of its invention. Its luxurious decoration pleased the king's daughter."
+}

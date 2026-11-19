@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CRUSHGRIP",
+  "real_name": "Crush Grip",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is crushed with great force. The attack is more powerful the more HP the target has left."
+}

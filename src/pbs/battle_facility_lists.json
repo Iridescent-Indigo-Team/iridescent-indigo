@@ -1,0 +1,40 @@
+{
+  "$schema": "_schema/battle_facility_lists.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "default": true,
+          "trainers": "battle_tower_trainers.txt",
+          "pokemon": "battle_tower_pokemon.txt"
+        },
+        {
+          "default": false,
+          "trainers": "cup_poke_trainers.txt",
+          "pokemon": "cup_poke_pkmn.txt",
+          "challenges": ["pokecupsingle", "pokecupdouble"]
+        },
+        {
+          "default": false,
+          "trainers": "cup_little_trainers.txt",
+          "pokemon": "cup_little_pkmn.txt",
+          "challenges": ["littlecupsingle", "littlecupdouble"]
+        },
+        {
+          "default": false,
+          "trainers": "cup_pika_trainers.txt",
+          "pokemon": "cup_pika_pkmn.txt",
+          "challenges": ["pikacupsingle", "pikacupdouble"]
+        },
+        {
+          "default": false,
+          "trainers": "cup_fancy_trainers_single.txt",
+          "pokemon": "cup_fancy_pkmn_single.txt",
+          "challenges": ["fancycupsingle", "fancycupdouble"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MAGICBOUNCE",
+  "real_name": "Magic Bounce",
+  "real_description": "Reflects status-changing moves."
+}

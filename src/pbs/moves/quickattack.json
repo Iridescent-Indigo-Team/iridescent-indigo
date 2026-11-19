@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "QUICKATTACK",
+  "real_name": "Quick Attack",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user lunges at the target at a speed that makes it almost invisible. It is sure to strike first."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RUNAWAY",
+  "real_name": "Run Away",
+  "real_description": "Enables a sure getaway from wild Pokémon."
+}

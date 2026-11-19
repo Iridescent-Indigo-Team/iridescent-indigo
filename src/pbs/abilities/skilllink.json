@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SKILLLINK",
+  "real_name": "Skill Link",
+  "real_description": "Increases the frequency of multi-strike moves."
+}

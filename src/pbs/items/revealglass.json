@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REVEALGLASS",
+  "real_name": "Reveal Glass",
+  "real_name_plural": "Reveal Glasses",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A glass that reveals the truth. It is a mysterious glass that returns a Pokémon back to its original shape."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EXPLOSION",
+  "real_name": "Explosion",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 250,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearOthers",
+  "function_code": "UserFaintsExplosive",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user explodes to inflict damage on those around it. The user faints upon using this move."
+}

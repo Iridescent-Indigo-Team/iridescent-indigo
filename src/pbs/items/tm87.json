@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM87",
+  "real_name": "TM87",
+  "real_name_plural": "TM87s",
+  "pocket": 4,
+  "price": 1500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SWAGGER",
+  "real_description": "The user enrages and confuses the target. However, this also sharply raises the target's Attack stat."
+}

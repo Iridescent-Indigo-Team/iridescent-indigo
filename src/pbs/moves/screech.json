@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SCREECH",
+  "real_name": "Screech",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 85,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense2",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "An earsplitting screech harshly reduces the target's Defense stat."
+}

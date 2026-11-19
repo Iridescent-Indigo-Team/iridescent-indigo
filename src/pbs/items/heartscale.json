@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEARTSCALE",
+  "real_name": "Heart Scale",
+  "real_name_plural": "Heart Scales",
+  "pocket": 1,
+  "price": 100,
+  "flags": ["Fling_30"],
+  "real_description": "A pretty, heart-shaped scale that is extremely rare. It glows faintly in the colors of the rainbow."
+}

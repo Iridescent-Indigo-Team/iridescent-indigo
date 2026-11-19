@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM30",
+  "real_name": "TM30",
+  "real_name_plural": "TM30s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 64,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "SHADOWBALL",
+  "real_description": "The user hurls a shadowy blob at the target. This may also lower the target's Sp. Def stat."
+}

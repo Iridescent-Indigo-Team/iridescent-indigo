@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRICKORTREAT",
+  "real_name": "Trick-or-Treat",
+  "type": "GHOST",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "AddGhostTypeToTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user takes the target trick-or-treating. This adds Ghost type to the target's type."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RINDOBERRY",
+  "real_name": "Rindo Berry",
+  "real_name_plural": "Rindo Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GRASS_80"],
+  "real_description": "Weakens a supereffective Grass-type attack against the holding Pokémon."
+}

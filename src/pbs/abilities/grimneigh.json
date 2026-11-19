@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GRIMNEIGH",
+  "real_name": "Grim Neigh",
+  "real_description": "When knocking out a target, raises Sp. Atk."
+}

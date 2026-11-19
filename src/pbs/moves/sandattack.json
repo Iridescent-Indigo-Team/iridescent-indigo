@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SANDATTACK",
+  "real_name": "Sand Attack",
+  "type": "GROUND",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Sand is hurled in the target's face, reducing its accuracy."
+}

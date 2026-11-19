@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ITEMFINDER",
+  "real_name": "Itemfinder",
+  "real_name_plural": "Itemfinders",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A device used for finding items. If there is a hidden item nearby when it is used, it emits a signal."
+}

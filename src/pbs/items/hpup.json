@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HPUP",
+  "real_name": "HP Up",
+  "real_name_plural": "HP Ups",
+  "real_portion_name": "bottle of HP Up",
+  "real_portion_name_plural": "bottles of HP Up",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A nutritious drink for Pokémon. It raises the base HP of a single Pokémon."
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ORICORIO",
+  "form": 2,
+  "real_form_name": "Pa'u Style",
+  "types": ["PSYCHIC", "FLYING"],
+  "color": "Pink",
+  "real_pokedex_entry": "This Oricorio relaxes by swaying gently. This increases its psychic energy, which it then fires at its enemies."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SODAPOP",
+  "real_name": "Soda Pop",
+  "real_name_plural": "Soda Pops",
+  "real_portion_name": "bottle of Soda Pop",
+  "real_portion_name_plural": "bottles of Soda Pop",
+  "pocket": 2,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A highly carbonated soda drink. It can be used to restore 50 HP to a single Pokémon."
+}

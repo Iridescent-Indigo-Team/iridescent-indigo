@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SWAMPERT",
+  "form": 1,
+  "real_form_name": "Mega Swampert",
+  "mega_stone": "SWAMPERTITE",
+  "base_stats": {
+    "hp": 100,
+    "attack": 150,
+    "defense": 110,
+    "speed": 70,
+    "special_attack": 95,
+    "special_defense": 110
+  },
+  "base_exp": 318,
+  "abilities": ["SWIFTSWIM"],
+  "hidden_abilities": ["SWIFTSWIM"],
+  "height": 1.9,
+  "weight": 102.0,
+  "generation": 6
+}

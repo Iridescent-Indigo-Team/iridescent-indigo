@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CORROSIVEGAS",
+  "real_name": "Corrosive Gas",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "AllNearOthers",
+  "function_code": "CorrodeTargetItem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user surrounds everything around it with highly acidic gas and melts away items they hold."
+}

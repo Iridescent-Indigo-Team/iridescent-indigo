@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM24",
+  "real_name": "TM24",
+  "real_name_plural": "TM24s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "THUNDERBOLT",
+  "real_description": "A strong electric blast crashes down on the target. This may also leave the target with paralysis."
+}

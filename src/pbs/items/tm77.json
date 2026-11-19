@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM77",
+  "real_name": "TM77",
+  "real_name_plural": "TM77s",
+  "pocket": 4,
+  "price": 1500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "PSYCHUP",
+  "real_description": "The user hypnotizes itself into copying any stat change made by the target."
+}

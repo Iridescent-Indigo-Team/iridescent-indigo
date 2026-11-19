@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWSNEAK",
+  "real_name": "Shadow Sneak",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user extends its shadow and attacks the target from behind. This move always goes first."
+}

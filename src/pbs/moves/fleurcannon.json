@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLEURCANNON",
+  "real_name": "Fleur Cannon",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 130,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserSpAtk2",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user unleashes a strong beam. The attack's recoil harshly lowers the user's Sp. Atk stat."
+}

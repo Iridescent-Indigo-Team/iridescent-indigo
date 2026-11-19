@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICICLECRASH",
+  "real_name": "Icicle Crash",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user attacks by harshly dropping an icicle onto the foe. It may also make the target flinch."
+}

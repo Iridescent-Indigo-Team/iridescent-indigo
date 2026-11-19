@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GENIUSFEATHER",
+  "real_name": "Genius Feather",
+  "real_name_plural": "Genius Feathers",
+  "pocket": 2,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_20"],
+  "real_description": "An item for use on a Pokémon. It slightly increases the base Sp. Atk stat of a single Pokémon."
+}

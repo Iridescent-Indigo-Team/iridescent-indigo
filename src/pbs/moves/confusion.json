@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONFUSION",
+  "real_name": "Confusion",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The target is hit by a weak telekinetic force. It may also leave the target confused."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SOLARBEAM",
+  "real_name": "Solar Beam",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackOneTurnInSun",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A two-turn attack. The user gathers light, then blasts a bundled beam on the second turn."
+}

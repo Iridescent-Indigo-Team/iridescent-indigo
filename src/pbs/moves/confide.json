@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONFIDE",
+  "real_name": "Confide",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpAtk1",
+  "flags": ["CanMirrorMove", "Sound"],
+  "real_description": "The user tells the target a secret. The target loses focus and its Sp. Atk stat is lowered."
+}

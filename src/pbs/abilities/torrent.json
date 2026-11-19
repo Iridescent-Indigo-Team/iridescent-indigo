@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TORRENT",
+  "real_name": "Torrent",
+  "real_description": "Powers up Water-type moves in a pinch."
+}

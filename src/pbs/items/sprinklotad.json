@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SPRINKLOTAD",
+  "real_name": "Sprinklotad",
+  "real_name_plural": "Sprinklotads",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A watering can shaped like a Lotad. It helps promote the healthy growth of any Berries planted in soft soil."
+}

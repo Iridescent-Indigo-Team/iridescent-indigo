@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLUESHARD",
+  "real_name": "Blue Shard",
+  "real_name_plural": "Blue Shards",
+  "pocket": 1,
+  "price": 1000,
+  "flags": ["Fling_30"],
+  "real_description": "A small blue shard. It appears to be from some sort of implement made long ago."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COUNTER",
+  "real_name": "Counter",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "None",
+  "priority": -5,
+  "function_code": "CounterPhysicalDamage",
+  "flags": ["Contact", "CanProtect"],
+  "real_description": "A retaliation move that counters any physical attack, inflicting double the damage taken."
+}

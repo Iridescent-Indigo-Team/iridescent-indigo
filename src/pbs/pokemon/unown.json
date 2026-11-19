@@ -1,0 +1,32 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "UNOWN",
+  "real_name": "Unown",
+  "real_form_name": "A",
+  "types": ["PSYCHIC"],
+  "base_stats": {"hp": 48, "attack": 72, "defense": 48, "speed": 48, "special_attack": 72, "special_defense": 48},
+  "gender_ratio": "Genderless",
+  "growth_rate": "Medium",
+  "base_exp": 118,
+  "evs": [
+    {"stat": "ATTACK", "amount": 1},
+    {"stat": "SPECIAL_ATTACK", "amount": 1}
+  ],
+  "catch_rate": 225,
+  "happiness": 50,
+  "abilities": ["LEVITATE"],
+  "moves": [
+    {"level": 1, "move": "HIDDENPOWER"}
+  ],
+  "tutor_moves": ["HIDDENPOWER"],
+  "egg_groups": ["Undiscovered"],
+  "hatch_steps": 10240,
+  "height": 0.5,
+  "weight": 5.0,
+  "color": "Black",
+  "shape": "Head",
+  "habitat": "Rare",
+  "real_category": "Symbol",
+  "real_pokedex_entry": "This Pokémon is shaped like ancient text characters. Although research is ongoing, it is a mystery as to which came first, the ancient writings or the various Unown.",
+  "generation": 2
+}

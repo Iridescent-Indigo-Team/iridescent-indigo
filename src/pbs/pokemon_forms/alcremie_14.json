@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ALCREMIE",
+  "form": 14,
+  "real_form_name": "Matcha Cream",
+  "color": "Green",
+  "real_pokedex_entry": "The cells that compose its cream fluctuated suddenly during evolution, giving the cream an aromatic flavor."
+}

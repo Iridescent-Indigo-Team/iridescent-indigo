@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGICCOAT",
+  "real_name": "Magic Coat",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "priority": 4,
+  "function_code": "BounceBackProblemCausingStatusMoves",
+  "real_description": "A barrier reflects back to the target moves like Leech Seed and moves that damage status."
+}

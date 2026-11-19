@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MISTYEXPLOSION",
+  "real_name": "Misty Explosion",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearOthers",
+  "function_code": "UserFaintsPowersUpInMistyTerrainExplosive",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks everything around and faints upon using this move. Power increases on Misty Terrain."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FURFROU",
+  "form": 8,
+  "real_form_name": "Kabuki Trim"
+}

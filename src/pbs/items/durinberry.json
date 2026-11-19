@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DURINBERRY",
+  "real_name": "Durin Berry",
+  "real_name_plural": "Durin Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_WATER_100"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

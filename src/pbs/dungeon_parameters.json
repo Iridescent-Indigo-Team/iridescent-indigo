@@ -1,0 +1,42 @@
+{
+  "$schema": "_schema/dungeon_parameters.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "area": "cave",
+          "dungeon_size": {"width": 5, "height": 4},
+          "cell_size": {"width": 10, "height": 10},
+          "min_room_size": {"width": 5, "height": 5},
+          "max_room_size": {"width": 9, "height": 9},
+          "corridor_width": 2,
+          "random_corridor_shift": true,
+          "node_layout": "full",
+          "room_layout": "full",
+          "room_chance": 70,
+          "extra_connections_count": 2,
+          "floor_patches": {"radius": 2, "chance": 50, "smooth_rate": 25},
+          "floor_decorations": {"density": 50, "large_density": 200},
+          "void_decorations": {"density": 50, "large_density": 200}
+        },
+        {
+          "area": "forest",
+          "dungeon_size": {"width": 5, "height": 4},
+          "cell_size": {"width": 10, "height": 10},
+          "min_room_size": {"width": 4, "height": 4},
+          "max_room_size": {"width": 8, "height": 8},
+          "corridor_width": 2,
+          "node_layout": "full",
+          "room_layout": "full",
+          "room_chance": 70,
+          "extra_connections_count": 2,
+          "floor_patches": {"radius": 3, "chance": 75, "smooth_rate": 25},
+          "floor_decorations": {"density": 50, "large_density": 200},
+          "void_decorations": {"density": 50, "large_density": 200}
+        }
+      ]
+    }
+  ]
+}

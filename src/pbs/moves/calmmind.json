@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CALMMIND",
+  "real_name": "Calm Mind",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpAtkSpDef1",
+  "real_description": "The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats."
+}

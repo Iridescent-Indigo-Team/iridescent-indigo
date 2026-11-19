@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RIVALRY",
+  "real_name": "Rivalry",
+  "real_description": "Deals more damage to a foe of the same gender."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERSPOUT",
+  "real_name": "Water Spout",
+  "type": "WATER",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "PowerHigherWithUserHP",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user spouts water to damage the foe. The lower the user's HP, the less powerful it becomes."
+}

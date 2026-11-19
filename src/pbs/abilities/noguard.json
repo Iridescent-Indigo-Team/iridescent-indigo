@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "NOGUARD",
+  "real_name": "No Guard",
+  "real_description": "Ensures attacks by or against the Pokémon land."
+}

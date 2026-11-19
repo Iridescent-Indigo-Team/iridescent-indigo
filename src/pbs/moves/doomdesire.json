@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOOMDESIRE",
+  "real_name": "Doom Desire",
+  "type": "STEEL",
+  "category": "Special",
+  "power": 140,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackTwoTurnsLater",
+  "real_description": "Two turns after this move is used, the user blasts the target with a concentrated bundle of light."
+}

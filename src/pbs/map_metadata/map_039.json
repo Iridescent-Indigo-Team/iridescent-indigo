@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 39,
+  "real_name": "Route 4",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 11, "y": 6},
+  "battle_background": "field",
+  "town_map_size": {"width": 2, "squares": "11"}
+}

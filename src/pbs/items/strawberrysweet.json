@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STRAWBERRYSWEET",
+  "real_name": "Strawberry Sweet",
+  "real_name_plural": "Strawberry Sweets",
+  "pocket": 1,
+  "price": 500,
+  "bp_price": 5,
+  "flags": ["Fling_10"],
+  "real_description": "A strawberry-shaped sweet. When a Milcery holds this, it will spin around happily."
+}

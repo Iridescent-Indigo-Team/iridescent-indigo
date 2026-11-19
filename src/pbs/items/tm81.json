@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM81",
+  "real_name": "TM81",
+  "real_name_plural": "TM81s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 64,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "XSCISSOR",
+  "real_description": "The user slashes at the target by crossing its scythes or claws as if they were a pair of scissors."
+}

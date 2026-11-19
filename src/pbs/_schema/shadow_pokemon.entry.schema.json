@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shadow_pokemon.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "species": {"type": "string", "description": "A Species id from pokemon.txt."},
+    "form": {"type": "integer", "minimum": 1},
+    "gauge_size": {"type": "integer", "minimum": 1, "description": "PBS key: GaugeSize"},
+    "moves": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Move id from moves.txt."},
+      "description": "PBS key: Moves"
+    },
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    }
+  },
+  "required": ["species"],
+  "additionalProperties": false
+}

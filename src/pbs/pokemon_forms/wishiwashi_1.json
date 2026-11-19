@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "WISHIWASHI",
+  "form": 1,
+  "real_form_name": "School Form",
+  "base_stats": {
+    "hp": 45,
+    "attack": 140,
+    "defense": 130,
+    "speed": 30,
+    "special_attack": 140,
+    "special_defense": 135
+  },
+  "base_exp": 217,
+  "height": 8.2,
+  "weight": 78.6,
+  "shape": "MultiBody",
+  "real_pokedex_entry": "Weak Wishiwashi school together to concentrate their power. Their united force makes them the demon of the sea, feared near and far."
+}

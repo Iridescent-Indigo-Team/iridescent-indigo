@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FEATHERDANCE",
+  "real_name": "Feather Dance",
+  "type": "FLYING",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetAttack2",
+  "flags": ["CanProtect", "CanMirrorMove", "Dance"],
+  "real_description": "The user covers the target's body with a mass of down that harshly lowers its Attack stat."
+}

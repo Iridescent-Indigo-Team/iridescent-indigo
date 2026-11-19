@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPOTLIGHT",
+  "real_name": "Spotlight",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "priority": 3,
+  "function_code": "RedirectAllMovesToTarget",
+  "flags": ["CanProtect"],
+  "real_description": "The user shines a spotlight on the target so that only it will be attacked during the turn."
+}

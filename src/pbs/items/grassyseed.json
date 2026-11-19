@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRASSYSEED",
+  "real_name": "Grassy Seed",
+  "real_name_plural": "Grassy Seeds",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It boosts Defense on Grassy Terrain. It can only be used once."
+}

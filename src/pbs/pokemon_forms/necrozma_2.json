@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "NECROZMA",
+  "form": 2,
+  "real_form_name": "Dawn Wings",
+  "types": ["PSYCHIC", "GHOST"],
+  "base_stats": {
+    "hp": 97,
+    "attack": 113,
+    "defense": 109,
+    "speed": 77,
+    "special_attack": 157,
+    "special_defense": 127
+  },
+  "base_exp": 340,
+  "evs": [
+    {"stat": "SPECIAL_ATTACK", "amount": 3}
+  ],
+  "height": 4.2,
+  "weight": 350.0,
+  "color": "Blue",
+  "real_pokedex_entry": "Lunala no longer has a will of its own. Now under the control of Necrozma, it continuously expels all of its energy."
+}

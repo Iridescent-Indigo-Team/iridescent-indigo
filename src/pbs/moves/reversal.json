@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REVERSAL",
+  "real_name": "Reversal",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "PowerLowerWithUserHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "An all-out attack that becomes more powerful the less HP the user has."
+}

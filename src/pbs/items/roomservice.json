@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ROOMSERVICE",
+  "real_name": "Room Service",
+  "real_name_plural": "Room Services",
+  "real_portion_name": "voucher for Room Service",
+  "real_portion_name_plural": "vouchers for Room Service",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_100"],
+  "real_description": "An item to be held by a Pokémon. Lowers Speed when Trick Room takes effect."
+}

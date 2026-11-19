@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ALAKAZAM",
+  "form": 1,
+  "real_form_name": "Mega Alakazam",
+  "mega_stone": "ALAKAZITE",
+  "base_stats": {
+    "hp": 55,
+    "attack": 50,
+    "defense": 65,
+    "speed": 150,
+    "special_attack": 175,
+    "special_defense": 105
+  },
+  "base_exp": 300,
+  "abilities": ["TRACE"],
+  "hidden_abilities": ["TRACE"],
+  "height": 1.2,
+  "real_pokedex_entry": "Having traded away its muscles, Alakazam's true power has been unleashed. With its psychic powers, it can foresee all things.",
+  "generation": 6
+}

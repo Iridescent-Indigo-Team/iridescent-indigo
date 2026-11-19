@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERPLEDGE",
+  "real_name": "Water Pledge",
+  "type": "WATER",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "WaterPledge",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A column of water strikes the target. When combined with its fire equivalent, it makes a rainbow."
+}

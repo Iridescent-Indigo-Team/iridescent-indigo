@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 47,
+  "real_name": "Route 7",
+  "outdoor_map": true,
+  "announce_location": true,
+  "weather": {"weather": "Rain", "chance": 0},
+  "town_map_position": {"region": 0, "x": 15, "y": 10},
+  "battle_background": "rocky",
+  "town_map_size": {"width": 2, "squares": "11"},
+  "battle_environment": "Rock"
+}

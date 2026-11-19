@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKSMASH",
+  "real_name": "Rock Smash",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 50,
+  "real_description": "The user attacks with a punch that can shatter a rock. It may also lower the foe's Defense stat."
+}

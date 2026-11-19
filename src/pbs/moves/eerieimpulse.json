@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EERIEIMPULSE",
+  "real_name": "Eerie Impulse",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpAtk2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user's body generates an eerie impulse. Harshly lowers the target's Sp. Atk stat."
+}

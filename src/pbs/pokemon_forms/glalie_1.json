@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GLALIE",
+  "form": 1,
+  "real_form_name": "Mega Glalie",
+  "mega_stone": "GLALITITE",
+  "base_stats": {
+    "hp": 80,
+    "attack": 120,
+    "defense": 80,
+    "speed": 100,
+    "special_attack": 120,
+    "special_defense": 80
+  },
+  "base_exp": 203,
+  "abilities": ["REFRIGERATE"],
+  "hidden_abilities": ["REFRIGERATE"],
+  "height": 2.1,
+  "weight": 350.2,
+  "real_pokedex_entry": "It envelops prey in its mouth, freezing them instantly. But its jaw is dislocated, so it's unable to eat them.",
+  "generation": 6
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COMETPUNCH",
+  "real_name": "Comet Punch",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 18,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The target is hit with a flurry of punches that strike two to five times in a row."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COTTONGUARD",
+  "real_name": "Cotton Guard",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserDefense3",
+  "real_description": "The user protects itself by wrapping its body in soft cotton, drastically raising its Defense stat."
+}

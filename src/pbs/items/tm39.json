@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM39",
+  "real_name": "TM39",
+  "real_name_plural": "TM39s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "ROCKTOMB",
+  "real_description": "Boulders are hurled at the target. This also lowers the target's Speed stat by preventing its movement."
+}

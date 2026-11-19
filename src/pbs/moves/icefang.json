@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICEFANG",
+  "real_name": "Ice Fang",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FreezeFlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 101,
+  "real_description": "The user bites with cold-infused fangs. It may also make the target flinch or leave it frozen."
+}

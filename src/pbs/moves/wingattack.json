@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WINGATTACK",
+  "real_name": "Wing Attack",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 35,
+  "target": "Other",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is struck with large, imposing wings spread wide to inflict damage."
+}

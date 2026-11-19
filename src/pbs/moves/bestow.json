@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BESTOW",
+  "real_name": "Bestow",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TargetTakesUserItem",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user passes its held item to the target when the target isn't holding an item."
+}

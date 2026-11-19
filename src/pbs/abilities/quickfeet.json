@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "QUICKFEET",
+  "real_name": "Quick Feet",
+  "real_description": "Boosts Speed if there is a status problem."
+}

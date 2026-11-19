@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM51",
+  "real_name": "TM51",
+  "real_name_plural": "TM51s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "ROOST",
+  "real_description": "The user lands and rests its body. This move restores the user's HP by up to half of its max HP."
+}

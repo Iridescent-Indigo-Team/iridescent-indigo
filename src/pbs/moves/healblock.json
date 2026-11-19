@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEALBLOCK",
+  "real_name": "Heal Block",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearFoes",
+  "function_code": "DisableTargetHealingMoves",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "For five turns, the foe is prevented from using any moves, Abilities, or held items that recover HP."
+}

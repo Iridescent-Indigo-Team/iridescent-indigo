@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FURYCUTTER",
+  "real_name": "Fury Cutter",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 95,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithConsecutiveUse",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is slashed with scythes or claws. Its power increases if it hits in succession."
+}

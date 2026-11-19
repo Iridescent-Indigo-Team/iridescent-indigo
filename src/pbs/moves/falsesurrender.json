@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FALSESURRENDER",
+  "real_name": "False Surrender",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user pretends to bow its head, but then it stabs the target with its disheveled hair. Never misses."
+}

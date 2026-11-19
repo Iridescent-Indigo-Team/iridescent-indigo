@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "APICOTBERRY",
+  "real_name": "Apicot Berry",
+  "real_name_plural": "Apicot Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GROUND_100"],
+  "real_description": "If held by a Pokémon, it raises its Sp. Def stat in a pinch."
+}

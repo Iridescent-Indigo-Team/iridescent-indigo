@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKYUPPERCUT",
+  "real_name": "Sky Uppercut",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitsTargetInSky",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The user attacks the target with an uppercut thrown skyward with force."
+}

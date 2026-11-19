@@ -1,0 +1,33 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "BLIPBUG",
+  "real_name": "Blipbug",
+  "types": ["BUG"],
+  "base_stats": {"hp": 25, "attack": 20, "defense": 20, "speed": 45, "special_attack": 25, "special_defense": 45},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 36,
+  "evs": [
+    {"stat": "SPECIAL_DEFENSE", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SWARM", "COMPOUNDEYES"],
+  "hidden_abilities": ["TELEPATHY"],
+  "moves": [
+    {"level": 1, "move": "STRUGGLEBUG"}
+  ],
+  "egg_moves": ["INFESTATION", "RECOVER", "STICKYWEB", "SUPERSONIC"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.4,
+  "weight": 8.0,
+  "color": "Blue",
+  "shape": "Insectoid",
+  "real_category": "Larva",
+  "real_pokedex_entry": "Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings.",
+  "generation": 8,
+  "evolutions": [
+    {"species": "DOTTLER", "method": "Level", "parameter": 10}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPITE",
+  "real_name": "Spite",
+  "type": "GHOST",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerPPOfTargetLastMoveBy4",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user unleashes its grudge on the move last used by the target by cutting 4 PP from it."
+}

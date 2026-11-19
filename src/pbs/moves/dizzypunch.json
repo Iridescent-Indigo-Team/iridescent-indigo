@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DIZZYPUNCH",
+  "real_name": "Dizzy Punch",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 20,
+  "real_description": "The target is hit with rhythmically launched punches that may also leave it confused."
+}

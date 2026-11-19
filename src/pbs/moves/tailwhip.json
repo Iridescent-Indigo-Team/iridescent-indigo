@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TAILWHIP",
+  "real_name": "Tail Whip",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user wags its tail cutely, making opposing Pokémon less wary and lowering their Defense stat."
+}

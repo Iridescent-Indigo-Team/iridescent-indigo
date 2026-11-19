@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NATURESMADNESS",
+  "real_name": "Nature's Madness",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FixedDamageHalfTargetHP",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user hits the target with the force of nature. It halves the target's HP."
+}

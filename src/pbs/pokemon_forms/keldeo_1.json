@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "KELDEO",
+  "form": 1,
+  "real_form_name": "Resolute Form",
+  "real_pokedex_entry": "The power that lay hidden in its body now covers its horn, turning it into a sword that can slice through anything."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LIBERO",
+  "real_name": "Libero",
+  "real_description": "It changes type to that of the move it's about to use."
+}

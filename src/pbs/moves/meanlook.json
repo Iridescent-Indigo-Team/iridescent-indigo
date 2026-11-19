@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MEANLOOK",
+  "real_name": "Mean Look",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TrapTargetInBattle",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user pins the target with a dark, arresting look. The target becomes unable to flee."
+}

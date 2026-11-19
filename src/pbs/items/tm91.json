@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM91",
+  "real_name": "TM91",
+  "real_name_plural": "TM91s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "FLASHCANNON",
+  "real_description": "The user gathers all its light energy and releases it all at once. This may also lower the target's Sp. Def stat."
+}

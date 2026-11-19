@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FOCUSENERGY",
+  "real_name": "Focus Energy",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "User",
+  "function_code": "RaiseUserCriticalHitRate2",
+  "real_description": "The user takes a deep breath and focuses so that critical hits land more easily."
+}

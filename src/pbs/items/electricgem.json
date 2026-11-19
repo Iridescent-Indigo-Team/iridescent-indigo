@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ELECTRICGEM",
+  "real_name": "Electric Gem",
+  "real_name_plural": "Electric Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of electricity. When held, it strengthens the power of an Electric-type move only once."
+}

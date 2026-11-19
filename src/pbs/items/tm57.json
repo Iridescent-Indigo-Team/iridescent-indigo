@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM57",
+  "real_name": "TM57",
+  "real_name_plural": "TM57s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_50"],
+  "move": "CHARGEBEAM",
+  "real_description": "The user attacks the target with an electric charge. The user may use any remaining charge to raise its Sp. Atk."
+}

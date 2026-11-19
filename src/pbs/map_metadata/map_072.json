@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 72,
+  "real_name": "Berth Island",
+  "outdoor_map": true,
+  "announce_location": true,
+  "weather": {"weather": "Storm", "chance": 50},
+  "town_map_position": {"region": 0, "x": 18, "y": 17},
+  "battle_background": "field",
+  "flags": ["DistortionWorld"]
+}

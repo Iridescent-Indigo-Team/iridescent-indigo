@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trainer_types.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {
+      "type": "string",
+      "pattern": "^(?![0-9])\\w+$",
+      "description": "An id: letters, digits and underscores, not starting with a digit."
+    },
+    "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Male",
+        "male",
+        "M",
+        "m",
+        "0",
+        "Female",
+        "female",
+        "F",
+        "f",
+        "1",
+        "Unknown",
+        "unknown",
+        "Other",
+        "other",
+        "Mixed",
+        "mixed",
+        "X",
+        "x",
+        "2"
+      ],
+      "description": "PBS key: Gender"
+    },
+    "base_money": {"type": "integer", "minimum": 0, "description": "PBS key: BaseMoney"},
+    "skill_level": {"type": "integer", "minimum": 0, "description": "PBS key: SkillLevel"},
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    },
+    "intro_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "battle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "victory_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."}
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

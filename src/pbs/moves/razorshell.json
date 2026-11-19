@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAZORSHELL",
+  "real_name": "Razor Shell",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 50,
+  "real_description": "The user cuts the foe with sharp shells. It may also lower the target's Defense stat."
+}

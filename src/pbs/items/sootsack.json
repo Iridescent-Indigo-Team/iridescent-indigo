@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SOOTSACK",
+  "real_name": "Soot Sack",
+  "real_name_plural": "Soot Sacks",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A sack used to gather and hold volcanic ash."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLIPTURN",
+  "real_name": "Flip Turn",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "SwitchOutUserDamagingMove",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting."
+}

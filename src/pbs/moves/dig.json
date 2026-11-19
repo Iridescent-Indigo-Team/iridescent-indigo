@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DIG",
+  "real_name": "Dig",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackInvulnerableUnderground",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user burrows, then attacks on the second turn. It can also be used to exit dungeons."
+}

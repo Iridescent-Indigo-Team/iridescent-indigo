@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MOONGEISTBEAM",
+  "real_name": "Moongeist Beam",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "IgnoreTargetAbility",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user emits a sinister ray. This move can be used on the target regardless of its Abilities."
+}

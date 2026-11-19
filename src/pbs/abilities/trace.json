@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TRACE",
+  "real_name": "Trace",
+  "real_description": "The Pokémon copies a foe's Ability."
+}

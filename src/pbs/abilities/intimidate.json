@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "INTIMIDATE",
+  "real_name": "Intimidate",
+  "real_description": "Lowers the foe's Attack stat."
+}

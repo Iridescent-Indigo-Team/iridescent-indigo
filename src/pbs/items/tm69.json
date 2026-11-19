@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM69",
+  "real_name": "TM69",
+  "real_name_plural": "TM69s",
+  "pocket": 4,
+  "price": 1500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "ROCKPOLISH",
+  "real_description": "The user polishes its body to reduce drag. This sharply raises the Speed stat."
+}

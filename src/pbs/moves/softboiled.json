@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SOFTBOILED",
+  "real_name": "Soft-Boiled",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserHalfOfTotalHP",
+  "real_description": "The user restores its own HP by up to half of its maximum HP. May also be used in the field to heal HP."
+}

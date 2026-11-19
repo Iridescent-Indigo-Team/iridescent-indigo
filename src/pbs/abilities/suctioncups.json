@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SUCTIONCUPS",
+  "real_name": "Suction Cups",
+  "real_description": "Negates all moves that force switching out."
+}

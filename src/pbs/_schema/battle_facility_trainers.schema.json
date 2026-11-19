@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Battle facility trainers file",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {"type": "string", "description": "A trainer type id from trainer_types.txt."},
+                "name": {"type": "string"},
+                "begin_speech": {"type": "string"},
+                "end_speech_win": {"type": "string"},
+                "end_speech_lose": {"type": "string"},
+                "pokemon_nos": {
+                  "type": "array",
+                  "items": {"type": "integer", "minimum": 0},
+                  "description": "Line numbers (from 0) in the list's Pokémon file."
+                }
+              },
+              "required": ["type", "name"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

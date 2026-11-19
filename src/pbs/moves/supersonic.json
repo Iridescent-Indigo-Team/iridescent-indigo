@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUPERSONIC",
+  "real_name": "Supersonic",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 55,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user generates odd sound waves from its body. It may confuse the target."
+}

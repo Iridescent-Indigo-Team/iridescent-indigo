@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRUMBEATING",
+  "real_name": "Drum Beating",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "The user plays its drum, controlling roots to attack. This also lowers the target's Speed stat."
+}

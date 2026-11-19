@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGMASTORM",
+  "real_name": "Magma Storm",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 75,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target becomes trapped within a maelstrom of fire that rages for four to five turns."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PINAPBERRY",
+  "real_name": "Pinap Berry",
+  "real_name_plural": "Pinap Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GRASS_90"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

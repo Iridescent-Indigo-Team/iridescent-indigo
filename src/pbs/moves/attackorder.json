@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ATTACKORDER",
+  "real_name": "Attack Order",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user calls out its underlings to pummel the target. Critical hits land more easily."
+}

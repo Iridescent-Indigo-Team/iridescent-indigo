@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SCHOOLING",
+  "real_name": "Schooling",
+  "real_description": "Forms a powerful school while it has a lot of HP."
+}

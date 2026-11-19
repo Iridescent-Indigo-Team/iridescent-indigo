@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RECYCLE",
+  "real_name": "Recycle",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RestoreUserConsumedItem",
+  "real_description": "The user recycles a held item that has been used in battle so it can be used again."
+}

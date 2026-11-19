@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 65,
+  "real_name": "Battle Frontier",
+  "town_map_position": {"region": 0, "x": 17, "y": 10},
+  "flags": ["DisableBoxLink"]
+}

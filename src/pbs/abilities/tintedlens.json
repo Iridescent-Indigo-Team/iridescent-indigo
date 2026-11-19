@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TINTEDLENS",
+  "real_name": "Tinted Lens",
+  "real_description": "Powers up \"not very effective\" moves."
+}

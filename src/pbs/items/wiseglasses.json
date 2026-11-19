@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WISEGLASSES",
+  "real_name": "Wise Glasses",
+  "real_name_plural": "Wise Glasses",
+  "real_portion_name": "pair of Wise Glasses",
+  "real_portion_name_plural": "pairs of Wise Glasses",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 48,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It is a thick pair of glasses that slightly boosts the power of special moves."
+}

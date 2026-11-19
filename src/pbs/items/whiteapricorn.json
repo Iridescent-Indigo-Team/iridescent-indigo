@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WHITEAPRICORN",
+  "real_name": "White Apricorn",
+  "real_name_plural": "White Apricorns",
+  "pocket": 1,
+  "price": 200,
+  "flags": ["Apricorn"],
+  "real_description": "A white Apricorn. It doesn't smell like anything."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ICYROCK",
+  "real_name": "Icy Rock",
+  "real_name_plural": "Icy Rocks",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_40"],
+  "real_description": "A Pokémon held item that extends the duration of the move Hail used by the holder."
+}

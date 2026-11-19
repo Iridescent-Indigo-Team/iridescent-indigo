@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CASTFORM",
+  "form": 2,
+  "real_form_name": "Rainy Form",
+  "types": ["WATER"],
+  "color": "Blue",
+  "real_pokedex_entry": "This is the form Castform takes when soaked with rain. When its body is compressed, water will seep out as if from a sponge."
+}

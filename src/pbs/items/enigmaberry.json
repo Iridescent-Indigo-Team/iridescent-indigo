@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ENIGMABERRY",
+  "real_name": "Enigma Berry",
+  "real_name_plural": "Enigma Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_BUG_100"],
+  "real_description": "If held by a Pokémon, it restores its HP if it is hit by any supereffective attack."
+}

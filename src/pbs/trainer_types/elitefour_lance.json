@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "ELITEFOUR_Lance",
+  "real_name": "Elite Four",
+  "gender": "Male",
+  "base_money": 100,
+  "battle_bgm": "Battle Elite",
+  "victory_bgm": "Battle victory leader"
+}

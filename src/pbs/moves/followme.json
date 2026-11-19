@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FOLLOWME",
+  "real_name": "Follow Me",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "priority": 2,
+  "function_code": "RedirectAllMovesToUser",
+  "real_description": "The user draws attention to itself, making all targets take aim only at the user."
+}

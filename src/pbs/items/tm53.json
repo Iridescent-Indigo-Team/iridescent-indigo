@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM53",
+  "real_name": "TM53",
+  "real_name_plural": "TM53s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 64,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "ENERGYBALL",
+  "real_description": "The user draws power from nature and fires it at the target. This may also lower the target's Sp. Def stat."
+}

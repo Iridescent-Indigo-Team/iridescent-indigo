@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ROCKRUFF",
+  "form": 2,
+  "abilities": ["OWNTEMPO"],
+  "hidden_abilities": ["OWNTEMPO"],
+  "flags": ["InheritFormFromMother"],
+  "evolutions": [
+    {"species": "LYCANROC", "method": "LevelEvening", "parameter": 25}
+  ]
+}

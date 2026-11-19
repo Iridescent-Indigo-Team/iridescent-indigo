@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHIPPEDPOT",
+  "real_name": "Chipped Pot",
+  "real_name_plural": "Chipped Pots",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 19000,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_80"],
+  "real_description": "A peculiar chipped teapot that can make a certain species of Pokémon evolve. It makes delicious tea."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BABYDOLLEYES",
+  "real_name": "Baby-Doll Eyes",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "LowerTargetAttack1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user stares with its baby-doll eyes, which lowers the target's Attack stat. Always goes first."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BEASTBOOST",
+  "real_name": "Beast Boost",
+  "real_description": "Boosts its best stat each time it deals a KO."
+}

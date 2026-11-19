@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLOWERVEIL",
+  "real_name": "Flower Veil",
+  "real_description": "Protects Grass-type allies from stat/status effects."
+}

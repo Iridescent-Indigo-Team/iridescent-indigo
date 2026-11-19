@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CAPTIVATE",
+  "real_name": "Captivate",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetSpAtk2IfCanAttract",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "If it is the opposite gender of the user, the target is charmed into harshly lowering its Sp. Atk stat."
+}

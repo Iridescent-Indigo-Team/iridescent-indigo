@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "IRONBALL",
+  "real_name": "Iron Ball",
+  "real_name_plural": "Iron Balls",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 10,
+  "flags": ["Fling_130"],
+  "real_description": "A Pokémon held item that cuts Speed. It makes Flying-type and levitating holders susceptible to Ground moves."
+}

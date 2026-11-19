@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "POWERCONSTRUCT",
+  "real_name": "Power Construct",
+  "real_description": "Changes with other Cells if HP becomes half or less."
+}

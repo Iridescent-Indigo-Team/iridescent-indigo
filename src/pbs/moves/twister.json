@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TWISTER",
+  "real_name": "Twister",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearFoes",
+  "function_code": "FlinchTargetDoublePowerIfTargetInSky",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user whips up a vicious tornado to tear at the opposing team. It may also make targets flinch."
+}

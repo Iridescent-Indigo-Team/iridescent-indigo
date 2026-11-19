@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DAZZLING",
+  "real_name": "Dazzling",
+  "real_description": "Makes foes unable to use priority attacks."
+}

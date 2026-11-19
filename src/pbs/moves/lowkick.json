@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LOWKICK",
+  "real_name": "Low Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetWeight",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A powerful low kick that makes the foe fall over. It inflicts greater damage on heavier foes."
+}

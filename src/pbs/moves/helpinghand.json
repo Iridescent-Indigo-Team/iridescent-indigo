@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HELPINGHAND",
+  "real_name": "Helping Hand",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearAlly",
+  "priority": 5,
+  "function_code": "PowerUpAllyMove",
+  "real_description": "The user assists an ally by boosting the power of its attack."
+}

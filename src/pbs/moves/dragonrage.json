@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONRAGE",
+  "real_name": "Dragon Rage",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FixedDamage40",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "This attack hits the target with a shock wave of pure rage. This attack always inflicts 40 HP damage."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FEINT",
+  "real_name": "Feint",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 30,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "priority": 2,
+  "function_code": "RemoveProtections",
+  "flags": ["CanMirrorMove"],
+  "real_description": "An attack that hits a target using Protect or Detect. It also lifts the effects of those moves."
+}

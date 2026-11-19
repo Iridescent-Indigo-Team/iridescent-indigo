@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "CATERPIE",
+  "back_sprite": {"x": -5, "y": 0},
+  "front_sprite": {"x": -3, "y": 23},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

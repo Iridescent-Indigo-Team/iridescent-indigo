@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DIREHIT2",
+  "real_name": "Dire Hit 2",
+  "real_name_plural": "Dire Hit 2s",
+  "pocket": 7,
+  "price": 0,
+  "battle_use": "OnBattler",
+  "flags": ["Fling_30"],
+  "real_description": "It sharply raises the critical-hit ratio. It wears off if the Pokémon is withdrawn."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ELECTRIFY",
+  "real_name": "Electrify",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "TargetMovesBecomeElectric",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "If the target uses a move after being electrified, that move becomes Electric-type."
+}

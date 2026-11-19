@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "JOLTEON",
+  "back_sprite": {"x": -4, "y": 0},
+  "front_sprite": {"x": -2, "y": 19},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

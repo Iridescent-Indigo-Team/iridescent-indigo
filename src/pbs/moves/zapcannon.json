@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ZAPCANNON",
+  "real_name": "Zap Cannon",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 50,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 100,
+  "real_description": "The user fires an electric blast like a cannon to inflict damage and cause paralysis."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM90",
+  "real_name": "TM90",
+  "real_name_plural": "TM90s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SUBSTITUTE",
+  "real_description": "The user creates a substitute for itself using some of its HP. The substitute serves as a decoy."
+}

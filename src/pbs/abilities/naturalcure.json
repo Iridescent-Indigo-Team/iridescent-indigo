@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "NATURALCURE",
+  "real_name": "Natural Cure",
+  "real_description": "All status problems heal when it switches out."
+}

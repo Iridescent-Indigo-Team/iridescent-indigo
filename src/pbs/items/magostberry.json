@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAGOSTBERRY",
+  "real_name": "Magost Berry",
+  "real_name_plural": "Magost Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_ROCK_90"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

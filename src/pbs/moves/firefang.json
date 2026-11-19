@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIREFANG",
+  "real_name": "Fire Fang",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BurnFlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 101,
+  "real_description": "The user bites with flame-cloaked fangs. It may also make the target flinch or leave it burned."
+}

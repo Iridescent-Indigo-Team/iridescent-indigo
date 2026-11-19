@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RATTLED",
+  "real_name": "Rattled",
+  "real_description": "Some move types scare it and boost its Speed."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BONERUSH",
+  "real_name": "Bone Rush",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user strikes the target with a hard bone two to five times in a row."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM98",
+  "real_name": "TM98",
+  "real_name_plural": "TM98s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 40,
+  "field_use": "TR",
+  "flags": ["Fling_40"],
+  "move": "ROCKSMASH",
+  "real_description": "The user attacks with a punch that may lower the target's Defense stat."
+}

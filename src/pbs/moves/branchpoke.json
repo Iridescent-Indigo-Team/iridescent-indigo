@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BRANCHPOKE",
+  "real_name": "Branch Poke",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks the target by poking it with a sharply pointed branch."
+}

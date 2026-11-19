@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SURGESURFER",
+  "real_name": "Surge Surfer",
+  "real_description": "Doubles Speed on Electric Terrain."
+}

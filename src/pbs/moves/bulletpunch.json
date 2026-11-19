@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BULLETPUNCH",
+  "real_name": "Bullet Punch",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The user strikes the target with tough punches as fast as bullets. This move always goes first."
+}

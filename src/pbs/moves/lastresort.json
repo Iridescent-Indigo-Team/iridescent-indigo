@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LASTRESORT",
+  "real_name": "Last Resort",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 140,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "FailsIfUserHasUnusedMove",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "This move can be used only after the user has used all the other moves it knows in the battle."
+}

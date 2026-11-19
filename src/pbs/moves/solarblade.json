@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SOLARBLADE",
+  "real_name": "Solar Blade",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 125,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackOneTurnInSun",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user gathers light energy into a blade, attacking the target on the next turn."
+}

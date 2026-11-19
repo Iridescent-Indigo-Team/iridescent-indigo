@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DISGUISE",
+  "real_name": "Disguise",
+  "real_description": "Its shroud protects it from an attack just once."
+}

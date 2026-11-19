@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHARGE",
+  "real_name": "Charge",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpDef1PowerUpElectricMove",
+  "real_description": "The user boosts the power of the Electric move it uses next. It also raises the user's Sp. Def stat."
+}

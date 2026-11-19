@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHOCKDRIVE",
+  "real_name": "Shock Drive",
+  "real_name_plural": "Shock Drives",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_70"],
+  "real_description": "A cassette to be held by Genesect. It changes Techno Blast to an Electric-type move."
+}

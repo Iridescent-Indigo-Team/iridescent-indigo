@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GOURGEIST",
+  "form": 1,
+  "real_form_name": "Average Size",
+  "base_stats": {"hp": 65, "attack": 90, "defense": 122, "speed": 84, "special_attack": 58, "special_defense": 75},
+  "hidden_abilities": ["INSOMNIA"],
+  "height": 0.9,
+  "weight": 12.5,
+  "real_pokedex_entry": "Eerie cries emanate from its body in the dead of night. The sounds are said to be the wails of spirits who are suffering in the afterlife."
+}

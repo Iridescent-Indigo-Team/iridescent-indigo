@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLAMEBURST",
+  "real_name": "Flame Burst",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "DamageTargetAlly",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks the foe with a bursting flame. It also damages Pokémon next to the target."
+}

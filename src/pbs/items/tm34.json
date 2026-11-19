@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM34",
+  "real_name": "TM34",
+  "real_name_plural": "TM34s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "SHOCKWAVE",
+  "real_description": "The user strikes the target with a quick jolt of electricity. This attack never misses."
+}

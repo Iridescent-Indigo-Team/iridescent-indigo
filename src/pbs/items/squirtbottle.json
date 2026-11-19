@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SQUIRTBOTTLE",
+  "real_name": "Squirt Bottle",
+  "real_name_plural": "Squirt Bottles",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A watering can shaped like a Squirtle. It helps promote healthy growth of Berries planted in soft soil."
+}

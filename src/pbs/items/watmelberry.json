@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WATMELBERRY",
+  "real_name": "Watmel Berry",
+  "real_name_plural": "Watmel Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FIRE_100"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

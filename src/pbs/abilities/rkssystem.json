@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RKSSYSTEM",
+  "real_name": "RKS System",
+  "real_description": "Its type matches the memory disc it holds."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWERUPPUNCH",
+  "real_name": "Power-Up Punch",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "RaiseUserAttack1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 100,
+  "real_description": "Striking opponents repeatedly makes the user's fists harder, raising the user's Attack stat."
+}

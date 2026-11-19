@@ -1,0 +1,17 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ROTOM",
+  "form": 5,
+  "real_form_name": "Mow Rotom",
+  "types": ["ELECTRIC", "GRASS"],
+  "base_stats": {
+    "hp": 50,
+    "attack": 65,
+    "defense": 107,
+    "speed": 86,
+    "special_attack": 105,
+    "special_defense": 107
+  },
+  "base_exp": 182,
+  "real_pokedex_entry": "This is Rotom after it's seized control of a lawn mower that has a special motor. As it mows down grass, it scatters the clippings everywhere."
+}

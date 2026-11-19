@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STEELROLLER",
+  "real_name": "Steel Roller",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 130,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RemoveTerrain",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks while destroying the terrain. This move fails when the ground isn't a terrain."
+}

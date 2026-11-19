@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LAVAPLUME",
+  "real_name": "Lava Plume",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearOthers",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "An inferno of scarlet flames torches everything around the user. It may leave targets with a burn."
+}

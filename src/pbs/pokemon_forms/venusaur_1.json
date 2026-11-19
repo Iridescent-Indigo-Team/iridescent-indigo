@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "VENUSAUR",
+  "form": 1,
+  "real_form_name": "Mega Venusaur",
+  "mega_stone": "VENUSAURITE",
+  "base_stats": {
+    "hp": 80,
+    "attack": 100,
+    "defense": 123,
+    "speed": 80,
+    "special_attack": 122,
+    "special_defense": 120
+  },
+  "base_exp": 313,
+  "abilities": ["THICKFAT"],
+  "hidden_abilities": ["THICKFAT"],
+  "height": 2.4,
+  "weight": 155.5,
+  "real_pokedex_entry": "In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.",
+  "generation": 6
+}

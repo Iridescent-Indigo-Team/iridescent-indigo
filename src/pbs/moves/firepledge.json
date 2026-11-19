@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIREPLEDGE",
+  "real_name": "Fire Pledge",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FirePledge",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A column of fire hits opposing Pokémon. When used with its Grass equivalent, it makes a sea of fire."
+}

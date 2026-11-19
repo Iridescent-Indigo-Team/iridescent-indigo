@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PETALDANCE",
+  "real_name": "Petal Dance",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "RandomNearFoe",
+  "function_code": "MultiTurnAttackConfuseUserAtEnd",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Dance"],
+  "real_description": "The user attacks by scattering petals for two to three turns. The user then becomes confused."
+}

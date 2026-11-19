@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRILLRUN",
+  "real_name": "Drill Run",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user crashes into its target while rotating its body like a drill. Critical hits land more easily."
+}

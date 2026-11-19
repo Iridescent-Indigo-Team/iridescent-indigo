@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RELICSONG",
+  "real_name": "Relic Song",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "SleepTargetChangeUserMeloettaForm",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound", "CannotMetronome"],
+  "effect_chance": 10,
+  "real_description": "An ancient song appeals to the hearts of those listening. It may also induce sleep."
+}

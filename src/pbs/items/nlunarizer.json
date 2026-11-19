@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "NLUNARIZER",
+  "real_name": "N-Lunarizer",
+  "real_name_plural": "N-Lunarizers",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A machine to fuse Necrozma, which needs light, and Lunala."
+}

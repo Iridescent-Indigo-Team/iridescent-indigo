@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ASONEGRIMNEIGH",
+  "real_name": "As One",
+  "real_description": "Combines Unnerve and Grim Neigh Abilities."
+}

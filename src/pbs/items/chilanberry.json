@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHILANBERRY",
+  "real_name": "Chilan Berry",
+  "real_name_plural": "Chilan Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_NORMAL_80"],
+  "real_description": "Weakens a Normal-type attack against the Pokémon holding this berry."
+}

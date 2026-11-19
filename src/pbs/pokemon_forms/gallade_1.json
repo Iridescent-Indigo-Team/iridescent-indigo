@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GALLADE",
+  "form": 1,
+  "real_form_name": "Mega Gallade",
+  "mega_stone": "GALLADITE",
+  "base_stats": {
+    "hp": 68,
+    "attack": 165,
+    "defense": 95,
+    "speed": 110,
+    "special_attack": 65,
+    "special_defense": 115
+  },
+  "base_exp": 309,
+  "abilities": ["INNERFOCUS"],
+  "hidden_abilities": ["INNERFOCUS"],
+  "weight": 56.4,
+  "generation": 6
+}

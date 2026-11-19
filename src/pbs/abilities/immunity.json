@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "IMMUNITY",
+  "real_name": "Immunity",
+  "real_description": "Prevents the Pokémon from getting poisoned."
+}

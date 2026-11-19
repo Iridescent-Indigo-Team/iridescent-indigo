@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RAZORCLAW",
+  "real_name": "Razor Claw",
+  "real_name_plural": "Razor Claws",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2500,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "An item to be held by a Pokémon. It is a sharply hooked claw that ups the holder's critical-hit ratio."
+}

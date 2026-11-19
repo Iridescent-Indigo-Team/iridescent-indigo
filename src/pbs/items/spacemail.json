@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SPACEMAIL",
+  "real_name": "Space Mail",
+  "real_name_plural": "Space Mail",
+  "real_portion_name": "piece of Space Mail",
+  "real_portion_name_plural": "pieces of Space Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print depicting the huge expanse of space. Let a Pokémon hold it for delivery."
+}

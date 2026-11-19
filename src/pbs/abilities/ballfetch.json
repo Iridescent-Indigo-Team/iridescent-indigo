@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BALLFETCH",
+  "real_name": "Ball Fetch",
+  "real_description": "Retrieves the first thrown Poké Ball if it failed."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LEAFGUARD",
+  "real_name": "Leaf Guard",
+  "real_description": "Prevents problems with status in sunny weather."
+}

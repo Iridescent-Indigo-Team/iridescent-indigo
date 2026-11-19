@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NOBLEROAR",
+  "real_name": "Noble Roar",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "LowerTargetAtkSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "Letting out a noble roar, the user intimidates the target and lowers its Attack and Sp. Atk."
+}

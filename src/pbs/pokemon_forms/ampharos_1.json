@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "AMPHAROS",
+  "form": 1,
+  "real_form_name": "Mega Ampharos",
+  "mega_stone": "AMPHAROSITE",
+  "types": ["ELECTRIC", "DRAGON"],
+  "base_stats": {
+    "hp": 90,
+    "attack": 95,
+    "defense": 105,
+    "speed": 45,
+    "special_attack": 165,
+    "special_defense": 110
+  },
+  "base_exp": 305,
+  "abilities": ["MOLDBREAKER"],
+  "hidden_abilities": ["MOLDBREAKER"],
+  "real_pokedex_entry": "Massive amounts of energy intensely stimulated Ampharos's cells, apparently awakening its long-sleeping dragon's blood.",
+  "generation": 6
+}

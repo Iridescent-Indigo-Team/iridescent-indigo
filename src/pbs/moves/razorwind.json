@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAZORWIND",
+  "real_name": "Razor Wind",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "TwoTurnAttack",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "A two-turn attack. Blades of wind hit the foe on the second turn. Critical hits land more easily."
+}

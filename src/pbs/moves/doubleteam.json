@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLETEAM",
+  "real_name": "Double Team",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "function_code": "RaiseUserEvasion1",
+  "real_description": "By moving rapidly, the user makes illusory copies of itself to raise its evasiveness."
+}

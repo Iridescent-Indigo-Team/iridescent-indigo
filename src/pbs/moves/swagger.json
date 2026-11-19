@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWAGGER",
+  "real_name": "Swagger",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RaiseTargetAttack2ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user enrages and confuses the target. However, it also sharply raises the target's Attack stat."
+}

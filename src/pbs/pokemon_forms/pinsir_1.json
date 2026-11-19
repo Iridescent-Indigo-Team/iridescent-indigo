@@ -1,0 +1,24 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PINSIR",
+  "form": 1,
+  "real_form_name": "Mega Pinsir",
+  "mega_stone": "PINSIRITE",
+  "types": ["BUG", "FLYING"],
+  "base_stats": {
+    "hp": 65,
+    "attack": 155,
+    "defense": 120,
+    "speed": 105,
+    "special_attack": 65,
+    "special_defense": 90
+  },
+  "base_exp": 210,
+  "abilities": ["AERILATE"],
+  "hidden_abilities": ["AERILATE"],
+  "height": 1.7,
+  "weight": 59.0,
+  "shape": "MultiWinged",
+  "real_pokedex_entry": "It zips around at blistering speeds, looking for an opening to skewer its opponent on its giant pincers.",
+  "generation": 6
+}

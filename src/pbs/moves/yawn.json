@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "YAWN",
+  "real_name": "Yawn",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "SleepTargetNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user lets loose a huge yawn that lulls the target into falling asleep on the next turn."
+}

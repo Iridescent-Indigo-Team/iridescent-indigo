@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWERGEM",
+  "real_name": "Power Gem",
+  "type": "ROCK",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with a ray of light that sparkles as if it were made of gemstones."
+}

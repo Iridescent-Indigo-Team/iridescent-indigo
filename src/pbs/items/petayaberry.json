@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PETAYABERRY",
+  "real_name": "Petaya Berry",
+  "real_name_plural": "Petaya Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_POISON_100"],
+  "real_description": "If held by a Pokémon, it raises its Sp. Atk stat in a pinch."
+}

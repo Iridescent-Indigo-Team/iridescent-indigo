@@ -1,0 +1,56 @@
+{
+  "_comment": [
+    "Hand-written names for PBS values that hold several values (tuples).",
+    "tuples: names for each value of a multi-value schema type, looked up as",
+    "  \"<pbs base filename>.<PBS key>\" first, then \"<PBS key>\". A section name",
+    "  with several values (e.g. [PIKACHU,1]) is spread into the entry's keys.",
+    "  The converter refuses to run if a multi-value field has no names here, so",
+    "  new engine or plugin fields can't slip through unnamed.",
+    "aliases: old PBS keys the compiler renames before compiling, per file.",
+    "references: single-text fields whose values must be ids defined in another",
+    "  PBS file, checked by the validator (\"<file>.<PBS key>\": GameData class)."
+  ],
+  "tuples": {
+    "BaseStats": ["hp", "attack", "defense", "speed", "special_attack", "special_defense"],
+    "EVs": ["stat", "amount"],
+    "Moves": ["level", "move"],
+    "Evolutions": ["species", "method", "parameter"],
+    "Evolution": ["species", "method", "parameter"],
+    "pokemon_forms.SectionName": ["species", "form"],
+    "pokemon_metrics.SectionName": ["species", "form"],
+    "BackSprite": ["x", "y"],
+    "FrontSprite": ["x", "y"],
+    "shadow_pokemon.SectionName": ["species", "form"],
+    "Yield": ["min", "max"],
+    "Point": ["x", "y", "name", "point_name", "fly_map", "fly_x", "fly_y", "switch"],
+    "trainers.SectionName": ["trainer_type", "name", "version"],
+    "trainers.Pokemon": ["species", "level"],
+    "IV": ["hp", "attack", "defense", "speed", "special_attack", "special_defense"],
+    "EV": ["hp", "attack", "defense", "speed", "special_attack", "special_defense"],
+    "Home": ["map_id", "x", "y", "direction"],
+    "HealingSpot": ["map_id", "x", "y"],
+    "Weather": ["weather", "chance"],
+    "MapPosition": ["region", "x", "y"],
+    "MapSize": ["width", "squares"],
+    "Autotile": ["id", "type"],
+    "Tile": ["id", "type"],
+    "dungeon_parameters.SectionName": ["area", "version"],
+    "DungeonSize": ["width", "height"],
+    "CellSize": ["width", "height"],
+    "MinRoomSize": ["width", "height"],
+    "MaxRoomSize": ["width", "height"],
+    "FloorPatches": ["radius", "chance", "smooth_rate"],
+    "FloorDecorations": ["density", "large_density"],
+    "VoidDecorations": ["density", "large_density"]
+  },
+  "aliases": {
+    "moves": {"BaseDamage": "Power"},
+    "trainer_types": {"VictoryME": "VictoryBGM"}
+  },
+  "references": {
+    "types.Weaknesses": "Type",
+    "types.Resistances": "Type",
+    "types.Immunities": "Type",
+    "pokemon.Offspring": "Species"
+  }
+}

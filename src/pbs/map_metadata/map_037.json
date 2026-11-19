@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 37,
+  "real_name": "Ingido Plateau",
+  "town_map_position": {"region": 0, "x": 13, "y": 6},
+  "battle_background": "elite1",
+  "flags": ["DisableBoxLink"]
+}

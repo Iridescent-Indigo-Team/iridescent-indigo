@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VINEWHIP",
+  "real_name": "Vine Whip",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 45,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is struck with slender, whiplike vines to inflict damage."
+}

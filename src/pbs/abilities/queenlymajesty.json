@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "QUEENLYMAJESTY",
+  "real_name": "Queenly Majesty",
+  "real_description": "Makes foes unable to use priority attacks."
+}

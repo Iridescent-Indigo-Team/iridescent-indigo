@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DEEPSEASCALE",
+  "real_name": "Deep Sea Scale",
+  "real_name_plural": "Deep Sea Scales",
+  "pocket": 1,
+  "price": 2000,
+  "bp_price": 5,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by Clamperl. A scale that shines a faint pink, it raises the Sp. Def stat."
+}

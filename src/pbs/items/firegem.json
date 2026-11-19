@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FIREGEM",
+  "real_name": "Fire Gem",
+  "real_name_plural": "Fire Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of fire. When held, it strengthens the power of a Fire-type move only once."
+}

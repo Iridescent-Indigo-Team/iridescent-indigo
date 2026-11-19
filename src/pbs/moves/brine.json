@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BRINE",
+  "real_name": "Brine",
+  "type": "WATER",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetHPLessThanHalf",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "If the target's HP is down to about half, this attack will hit with double the power."
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "THUNDURUS",
+  "form": 1,
+  "real_form_name": "Therian Forme",
+  "base_stats": {
+    "hp": 79,
+    "attack": 105,
+    "defense": 70,
+    "speed": 101,
+    "special_attack": 145,
+    "special_defense": 80
+  },
+  "evs": [
+    {"stat": "SPECIAL_ATTACK", "amount": 3}
+  ],
+  "abilities": ["VOLTABSORB"],
+  "hidden_abilities": ["VOLTABSORB"],
+  "height": 3.0,
+  "shape": "BipedalTail"
+}

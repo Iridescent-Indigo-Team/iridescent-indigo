@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POKEFLUTE",
+  "real_name": "Poké Flute",
+  "real_name_plural": "Poké Flutes",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "battle_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A flute that is said to instantly awaken any Pokémon. It has a lovely tone."
+}

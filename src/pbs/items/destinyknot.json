@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DESTINYKNOT",
+  "real_name": "Destiny Knot",
+  "real_name_plural": "Destiny Knots",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 10,
+  "flags": ["Fling_10"],
+  "real_description": "A long, thin, bright-red string to be held by a Pokémon. If the holder becomes infatuated, so does the foe."
+}

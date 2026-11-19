@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CASTELIACONE",
+  "real_name": "Casteliacone",
+  "real_name_plural": "Casteliacones",
+  "pocket": 2,
+  "price": 350,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Castelia City's specialty, soft-serve ice cream. It heals all the status problems of a single Pokémon."
+}

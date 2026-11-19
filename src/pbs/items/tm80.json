@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM80",
+  "real_name": "TM80",
+  "real_name_plural": "TM80s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_75"],
+  "move": "ROCKSLIDE",
+  "real_description": "Large boulders are hurled at opposing Pokémon to inflict damage. This may also make them flinch."
+}

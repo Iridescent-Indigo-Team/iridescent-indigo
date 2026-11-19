@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "METALPOWDER",
+  "real_name": "Metal Powder",
+  "real_name_plural": "Metal Powders",
+  "real_portion_name": "bag of Metal Powder",
+  "real_portion_name_plural": "bags of Metal Powder",
+  "pocket": 1,
+  "price": 1000,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by Ditto. Extremely fine yet hard, this odd powder boosts the Defense stat."
+}

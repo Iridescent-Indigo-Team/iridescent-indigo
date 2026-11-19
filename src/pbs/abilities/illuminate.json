@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ILLUMINATE",
+  "real_name": "Illuminate",
+  "real_description": "Raises the likelihood of meeting wild Pokémon."
+}

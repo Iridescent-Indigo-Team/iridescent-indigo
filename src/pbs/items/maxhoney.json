@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAXHONEY",
+  "real_name": "Max Honey",
+  "real_name_plural": "Max Honeys",
+  "real_portion_name": "comb of Max Honey",
+  "real_portion_name_plural": "combs of Max Honey",
+  "pocket": 2,
+  "price": 8000,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Honey that Dynamax Vespiquen produces. It has the same effect as a Max Revive."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PUNISHMENT",
+  "real_name": "Punishment",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetPositiveStatStages",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "This attack's power increases the more the target has powered up with stat changes."
+}

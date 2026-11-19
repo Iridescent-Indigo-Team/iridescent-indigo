@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AURAWHEEL",
+  "real_name": "Aura Wheel",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 110,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeDependsOnUserMorpekoFormRaiseUserSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "Morpeko attacks and raises its Speed with energy stored in its cheeks. Type changes with the user's form."
+}

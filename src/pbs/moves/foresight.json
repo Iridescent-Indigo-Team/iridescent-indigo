@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FORESIGHT",
+  "real_name": "Foresight",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "StartNegateTargetEvasionStatStageAndGhostImmunity",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Enables the user to hit a Ghost type with any kind of move. It also enables the user to hit an evasive foe."
+}

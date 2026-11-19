@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "HERACROSS",
+  "form": 1,
+  "real_form_name": "Mega Heracross",
+  "mega_stone": "HERACRONITE",
+  "base_stats": {
+    "hp": 80,
+    "attack": 185,
+    "defense": 115,
+    "speed": 75,
+    "special_attack": 40,
+    "special_defense": 105
+  },
+  "base_exp": 210,
+  "abilities": ["SKILLLINK"],
+  "hidden_abilities": ["SKILLLINK"],
+  "height": 1.7,
+  "weight": 62.5,
+  "real_pokedex_entry": "A tremendous influx of energy builds it up, but when Mega Evolution ends, Heracross is bothered by terrible soreness in its muscles.",
+  "generation": 6
+}

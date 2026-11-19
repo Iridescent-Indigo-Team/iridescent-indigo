@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "REGENERATOR",
+  "real_name": "Regenerator",
+  "real_description": "Restores a little HP when withdrawn from battle."
+}

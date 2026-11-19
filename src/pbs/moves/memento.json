@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MEMENTO",
+  "real_name": "Memento",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserFaintsLowerTargetAtkSpAtk2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user faints when using this move. In return, it harshly lowers the target's Attack and Sp. Atk."
+}

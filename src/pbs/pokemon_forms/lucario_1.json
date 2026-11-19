@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "LUCARIO",
+  "form": 1,
+  "real_form_name": "Mega Lucario",
+  "mega_stone": "LUCARIONITE",
+  "base_stats": {
+    "hp": 70,
+    "attack": 145,
+    "defense": 88,
+    "speed": 112,
+    "special_attack": 140,
+    "special_defense": 70
+  },
+  "base_exp": 219,
+  "abilities": ["ADAPTABILITY"],
+  "hidden_abilities": ["ADAPTABILITY"],
+  "height": 1.3,
+  "weight": 57.5,
+  "real_pokedex_entry": "It readies itself to face its enemies by focusing its mental energies. Its fighting style can be summed up in a single word: heartless.",
+  "generation": 6
+}

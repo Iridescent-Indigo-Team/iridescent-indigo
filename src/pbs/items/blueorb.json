@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLUEORB",
+  "real_name": "Blue Orb",
+  "real_name_plural": "Blue Orbs",
+  "pocket": 1,
+  "price": 10000,
+  "sell_price": 0,
+  "bp_price": 50,
+  "real_description": "A shiny blue orb that is said to have a legend tied to it. It's known to be connected with the Hoenn region."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPERBEAM",
+  "real_name": "Hyper Beam",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The foe is attacked with a powerful beam. The user must rest on the next turn to regain its energy."
+}

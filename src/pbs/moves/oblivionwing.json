@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OBLIVIONWING",
+  "real_name": "Oblivion Wing",
+  "type": "FLYING",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "Other",
+  "function_code": "HealUserByThreeQuartersOfDamageDone",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user absorbs its target's HP. The user's HP is restored by over half of the damage dealt."
+}

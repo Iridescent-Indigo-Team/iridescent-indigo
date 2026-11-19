@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 50,
+  "real_name": "Route 7",
+  "can_bicycle": true,
+  "town_map_position": {"region": 0, "x": 16, "y": 10},
+  "dark_map": true,
+  "battle_background": "cave3",
+  "battle_environment": "Cave",
+  "flags": ["Magnetic", "DistortionWorld"]
+}

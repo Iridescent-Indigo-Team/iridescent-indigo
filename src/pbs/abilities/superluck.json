@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SUPERLUCK",
+  "real_name": "Super Luck",
+  "real_description": "Heightens the critical-hit ratios of moves."
+}

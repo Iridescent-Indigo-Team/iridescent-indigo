@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEARTMAIL",
+  "real_name": "Heart Mail",
+  "real_name_plural": "Heart Mail",
+  "real_portion_name": "piece of Heart Mail",
+  "real_portion_name_plural": "pieces of Heart Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of giant heart patterns. Let a Pokémon hold it for delivery."
+}

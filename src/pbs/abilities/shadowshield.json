@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SHADOWSHIELD",
+  "real_name": "Shadow Shield",
+  "real_description": "Resists damage while its HP is full."
+}

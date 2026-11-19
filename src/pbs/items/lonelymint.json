@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LONELYMINT",
+  "real_name": "Lonely Mint",
+  "real_name_plural": "Lonely Mints",
+  "real_portion_name": "sprig of Lonely Mint",
+  "real_portion_name_plural": "sprigs of Lonely Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Attack will grow more easily, but its Defense will grow more slowly."
+}

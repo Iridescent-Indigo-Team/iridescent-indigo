@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PERISHSONG",
+  "real_name": "Perish Song",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "AllBattlers",
+  "function_code": "StartPerishCountsForAllBattlers",
+  "flags": ["Sound"],
+  "real_description": "Any Pokémon that hears this song faints in three turns, unless it switches out of battle."
+}

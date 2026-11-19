@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROLEPLAY",
+  "real_name": "Role Play",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "SetUserAbilityToTargetAbility",
+  "real_description": "The user mimics the target completely, copying the target's natural Ability."
+}

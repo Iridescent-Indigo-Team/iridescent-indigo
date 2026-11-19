@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LEAFAGE",
+  "real_name": "Leafage",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by pelting the target with leaves."
+}

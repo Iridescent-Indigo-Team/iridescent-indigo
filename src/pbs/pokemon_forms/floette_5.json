@@ -1,0 +1,38 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FLOETTE",
+  "form": 5,
+  "real_form_name": "Eternal Flower",
+  "base_stats": {
+    "hp": 74,
+    "attack": 65,
+    "defense": 67,
+    "speed": 92,
+    "special_attack": 125,
+    "special_defense": 128
+  },
+  "base_exp": 243,
+  "moves": [
+    {"level": 1, "move": "TACKLE"},
+    {"level": 1, "move": "VINEWHIP"},
+    {"level": 1, "move": "FAIRYWIND"},
+    {"level": 6, "move": "FAIRYWIND"},
+    {"level": 10, "move": "LUCKYCHANT"},
+    {"level": 15, "move": "RAZORLEAF"},
+    {"level": 20, "move": "WISH"},
+    {"level": 25, "move": "MAGICALLEAF"},
+    {"level": 27, "move": "GRASSYTERRAIN"},
+    {"level": 33, "move": "PETALBLIZZARD"},
+    {"level": 38, "move": "AROMATHERAPY"},
+    {"level": 43, "move": "MISTYTERRAIN"},
+    {"level": 46, "move": "MOONBLAST"},
+    {"level": 50, "move": "LIGHTOFRUIN"},
+    {"level": 51, "move": "PETALDANCE"},
+    {"level": 58, "move": "SOLARBEAM"}
+  ],
+  "egg_groups": ["Undiscovered"],
+  "real_pokedex_entry": "The flower it's holding can no longer be found blooming anywhere. It's also thought to contain terrifying power.",
+  "evolutions": [
+    {"species": "FLORGES", "method": "None"}
+  ]
+}

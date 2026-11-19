@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FULLHEAL",
+  "real_name": "Full Heal",
+  "real_name_plural": "Full Heals",
+  "pocket": 2,
+  "price": 400,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine. It heals all the status problems of a single Pokémon."
+}

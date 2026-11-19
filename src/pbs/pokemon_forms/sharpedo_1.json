@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SHARPEDO",
+  "form": 1,
+  "real_form_name": "Mega Sharpedo",
+  "mega_stone": "SHARPEDONITE",
+  "base_stats": {
+    "hp": 70,
+    "attack": 140,
+    "defense": 70,
+    "speed": 105,
+    "special_attack": 110,
+    "special_defense": 65
+  },
+  "base_exp": 196,
+  "abilities": ["STRONGJAW"],
+  "hidden_abilities": ["STRONGJAW"],
+  "height": 2.5,
+  "weight": 130.3,
+  "real_pokedex_entry": "The yellow patterns it bears are old scars. The energy from Mega Evolution runs through them, causing it sharp pain and suffering.",
+  "generation": 6
+}

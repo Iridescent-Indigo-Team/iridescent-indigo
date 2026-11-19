@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "COOLCOUPLE",
+  "name": "Alice & Bob",
+  "real_lose_text": "Our teamwork failed!",
+  "pokemon": [
+    {"species": "TURTWIG", "level": 19},
+    {"species": "CHIMCHAR", "level": 19}
+  ]
+}

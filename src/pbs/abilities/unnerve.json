@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "UNNERVE",
+  "real_name": "Unnerve",
+  "real_description": "Makes the foe nervous and unable to eat Berries."
+}

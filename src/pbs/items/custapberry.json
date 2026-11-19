@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CUSTAPBERRY",
+  "real_name": "Custap Berry",
+  "real_name_plural": "Custap Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GHOST_100"],
+  "real_description": "If held by a Pokémon, it gets to move first just once in a pinch."
+}

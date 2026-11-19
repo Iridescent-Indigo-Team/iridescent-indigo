@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SANDSPIT",
+  "real_name": "Sand Spit",
+  "real_description": "Creates a sandstorm when hit by an attack."
+}

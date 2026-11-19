@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DARKVOID",
+  "real_name": "Dark Void",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 50,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "SleepTargetIfUserDarkrai",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Opposing Pokémon are dragged into a world of total darkness that makes them sleep."
+}

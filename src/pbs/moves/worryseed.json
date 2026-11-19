@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WORRYSEED",
+  "real_name": "Worry Seed",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "SetTargetAbilityToInsomnia",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A seed that causes worry is planted on the foe. It prevents sleep by making its Ability Insomnia."
+}

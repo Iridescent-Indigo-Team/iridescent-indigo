@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MACHPUNCH",
+  "real_name": "Mach Punch",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The user throws a punch at blinding speed. It is certain to strike first."
+}

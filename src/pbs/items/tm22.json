@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM22",
+  "real_name": "TM22",
+  "real_name_plural": "TM22s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_120"],
+  "move": "SOLARBEAM",
+  "real_description": "In this two-turn attack, the user gathers light, then blasts a bundled beam on the next turn."
+}

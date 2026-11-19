@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ORICORIO",
+  "form": 1,
+  "real_form_name": "Pom-Pom Style",
+  "types": ["ELECTRIC", "FLYING"],
+  "color": "Yellow",
+  "real_pokedex_entry": "It creates an electric charge by rubbing its feathers together. It dances over to its enemies and delivers shocking electrical punches."
+}

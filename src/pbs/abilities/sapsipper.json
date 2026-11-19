@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SAPSIPPER",
+  "real_name": "Sap Sipper",
+  "real_description": "Boosts Attack when hit by a Grass-type move."
+}

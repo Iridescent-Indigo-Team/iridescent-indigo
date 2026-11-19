@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MUDBOMB",
+  "real_name": "Mud Bomb",
+  "type": "GROUND",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 30,
+  "real_description": "The user launches a hard-packed mud ball to attack. It may also lower the target's accuracy."
+}

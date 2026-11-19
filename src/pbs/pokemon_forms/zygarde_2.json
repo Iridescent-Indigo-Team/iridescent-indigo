@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ZYGARDE",
+  "form": 2,
+  "real_form_name": "Complete Forme",
+  "base_stats": {
+    "hp": 216,
+    "attack": 100,
+    "defense": 121,
+    "speed": 85,
+    "special_attack": 91,
+    "special_defense": 95
+  },
+  "base_exp": 354,
+  "abilities": ["POWERCONSTRUCT"],
+  "hidden_abilities": ["POWERCONSTRUCT"],
+  "height": 4.5,
+  "weight": 610.0,
+  "color": "Black",
+  "shape": "BipedalTail",
+  "real_pokedex_entry": "This is Zygarde's perfected form. From the orifice on its chest, it radiates high-powered energy that eliminates everything.",
+  "generation": 7
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUBSTITUTE",
+  "real_name": "Substitute",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserMakeSubstitute",
+  "real_description": "The user makes a copy of itself using some of its HP. The copy serves as the user's decoy."
+}

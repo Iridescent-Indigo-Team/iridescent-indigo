@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BOLTSTRIKE",
+  "real_name": "Bolt Strike",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 130,
+  "accuracy": 85,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user charges at its foe, surrounding itself with lightning. It may also leave the target paralyzed."
+}

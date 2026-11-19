@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ROCKHEAD",
+  "real_name": "Rock Head",
+  "real_description": "Protects the Pokémon from recoil damage."
+}

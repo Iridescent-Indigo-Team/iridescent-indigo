@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAXETHER",
+  "real_name": "Max Ether",
+  "real_name_plural": "Max Ethers",
+  "pocket": 2,
+  "price": 2000,
+  "field_use": "OnPokemon",
+  "battle_use": "OnMove",
+  "flags": ["Fling_30"],
+  "real_description": "It fully restores the PP of a single selected move that has been learned by the target Pokémon."
+}

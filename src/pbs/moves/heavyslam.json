@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEAVYSLAM",
+  "real_name": "Heavy Slam",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithUserHeavierThanTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "TramplesMinimize"],
+  "real_description": "The user slams into the foe with its heavy body. The heavier the user, the greater the damage."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WHIRLWIND",
+  "real_name": "Whirlwind",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "priority": -6,
+  "function_code": "SwitchOutTargetStatusMove",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The foe is blown away, to be replaced by another Pokémon in its party. In the wild, the battle ends."
+}

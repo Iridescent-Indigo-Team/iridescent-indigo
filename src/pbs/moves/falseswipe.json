@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FALSESWIPE",
+  "real_name": "False Swipe",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "CannotMakeTargetFaint",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."
+}

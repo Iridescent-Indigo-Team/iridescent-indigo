@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BEAKBLAST",
+  "real_name": "Beak Blast",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "priority": -3,
+  "function_code": "BurnAttackerBeforeUserActs",
+  "flags": ["CanProtect", "Bomb"],
+  "real_description": "The user heats up its beak before attacking. Making contact in this time results in a burn."
+}

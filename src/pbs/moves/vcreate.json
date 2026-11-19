@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VCREATE",
+  "real_name": "V-create",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 180,
+  "accuracy": 95,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserDefSpDefSpd1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "With a fiery forehead, the user hurls itself at the foe. It lowers the user's Defense, Sp. Def, and Speed."
+}

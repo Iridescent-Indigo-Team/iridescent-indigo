@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PARABOLICCHARGE",
+  "real_name": "Parabolic Charge",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearOthers",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks everything around it. The user's HP is restored by half the damage dealt."
+}

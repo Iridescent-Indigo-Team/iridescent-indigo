@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STORMDRAIN",
+  "real_name": "Storm Drain",
+  "real_description": "Draws in all Water-type moves to up Sp. Attack."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DIVE",
+  "real_name": "Dive",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackInvulnerableUnderwater",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Diving on the first turn, the user rises and hits on the next turn. It can be used to dive in the ocean."
+}

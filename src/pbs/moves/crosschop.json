@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CROSSCHOP",
+  "real_name": "Cross Chop",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user delivers a double chop with its forearms crossed. Critical hits land more easily."
+}

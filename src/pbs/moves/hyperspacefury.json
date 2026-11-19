@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPERSPACEFURY",
+  "real_name": "Hyperspace Fury",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "HoopaRemoveProtectionsBypassSubstituteLowerUserDef1",
+  "flags": ["CanMirrorMove", "CannotMetronome"],
+  "real_description": "Unleashes a barrage of multi-arm attacks, skipping protections. The user's Defense stat falls."
+}

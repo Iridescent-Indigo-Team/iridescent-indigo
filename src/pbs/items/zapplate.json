@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ZAPPLATE",
+  "real_name": "Zap Plate",
+  "real_name_plural": "Zap Plates",
+  "pocket": 1,
+  "price": 10000,
+  "sell_price": 500,
+  "flags": ["Fling_90"],
+  "real_description": "An item to be held by a Pokémon. It is a stone tablet that boosts the power of Electric-type moves."
+}

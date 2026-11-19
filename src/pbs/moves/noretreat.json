@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NORETREAT",
+  "real_name": "No Retreat",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "User",
+  "function_code": "RaiseUserMainStats1TrapUserInBattle",
+  "real_description": "This move raises all the user's stats but prevents the user from switching out or fleeing."
+}

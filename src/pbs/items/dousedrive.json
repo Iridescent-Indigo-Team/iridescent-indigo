@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DOUSEDRIVE",
+  "real_name": "Douse Drive",
+  "real_name_plural": "Douse Drives",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_70"],
+  "real_description": "A cassette to be held by Genesect. It changes Techno Blast to a Water-type move."
+}

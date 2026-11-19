@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DUALCHOP",
+  "real_name": "Dual Chop",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row."
+}

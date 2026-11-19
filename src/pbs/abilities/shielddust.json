@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SHIELDDUST",
+  "real_name": "Shield Dust",
+  "real_description": "Blocks the added effects of attacks taken."
+}

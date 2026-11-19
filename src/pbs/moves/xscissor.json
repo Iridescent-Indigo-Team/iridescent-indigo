@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "XSCISSOR",
+  "real_name": "X-Scissor",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user slashes at the foe by crossing its scythes or claws as if they were a pair of scissors."
+}

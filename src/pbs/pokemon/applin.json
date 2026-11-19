@@ -1,0 +1,36 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "APPLIN",
+  "real_name": "Applin",
+  "types": ["GRASS", "DRAGON"],
+  "base_stats": {"hp": 40, "attack": 40, "defense": 80, "speed": 20, "special_attack": 40, "special_defense": 40},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Erratic",
+  "base_exp": 52,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["RIPEN", "GLUTTONY"],
+  "hidden_abilities": ["BULLETPROOF"],
+  "moves": [
+    {"level": 1, "move": "WITHDRAW"},
+    {"level": 1, "move": "ASTONISH"}
+  ],
+  "tutor_moves": ["ATTRACT", "DRACOMETEOR", "GRASSYGLIDE"],
+  "egg_moves": ["DEFENSECURL", "RECYCLE", "ROLLOUT", "SUCKERPUNCH"],
+  "egg_groups": ["Grass", "Dragon"],
+  "hatch_steps": 5120,
+  "height": 0.2,
+  "weight": 0.5,
+  "color": "Green",
+  "shape": "Serpentine",
+  "real_category": "Apple Core",
+  "real_pokedex_entry": "It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it's just an apple and nothing more.",
+  "generation": 8,
+  "evolutions": [
+    {"species": "FLAPPLE", "method": "Item", "parameter": "TARTAPPLE"},
+    {"species": "APPLETUN", "method": "Item", "parameter": "SWEETAPPLE"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BINDINGBAND",
+  "real_name": "Binding Band",
+  "real_name_plural": "Binding Bands",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 15,
+  "flags": ["Fling_30"],
+  "real_description": "A band that increases the power of binding moves when held."
+}

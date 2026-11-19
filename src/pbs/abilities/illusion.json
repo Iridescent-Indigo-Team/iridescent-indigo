@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ILLUSION",
+  "real_name": "Illusion",
+  "real_description": "Comes out disguised as the Pokémon in back."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRASSPLEDGE",
+  "real_name": "Grass Pledge",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "GrassPledge",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A column of grass hits the foes. When used with its water equivalent, it creates a vast swamp."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONBREATH",
+  "real_name": "Dragon Breath",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user exhales a mighty gust that inflicts damage. It may also leave the target with paralysis."
+}

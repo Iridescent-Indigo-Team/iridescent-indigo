@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STAMINA",
+  "real_name": "Stamina",
+  "real_description": "Boosts Defense when hit by an attack."
+}

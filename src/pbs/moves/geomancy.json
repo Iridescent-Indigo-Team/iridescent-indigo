@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GEOMANCY",
+  "real_name": "Geomancy",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "TwoTurnAttackRaiseUserSpAtkSpDefSpd2",
+  "real_description": "The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn."
+}

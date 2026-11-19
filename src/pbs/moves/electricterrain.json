@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ELECTRICTERRAIN",
+  "real_name": "Electric Terrain",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartElectricTerrain",
+  "real_description": "The user electrifies the ground for five turns. Pokémon on the ground no longer fall asleep."
+}

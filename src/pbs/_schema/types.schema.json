@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "types.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^(?![0-9])\\w+$",
+                  "description": "An id: letters, digits and underscores, not starting with a digit."
+                },
+                "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "icon_position": {"type": "integer", "minimum": 0, "description": "PBS key: IconPosition"},
+                "special_type": {"type": "boolean", "description": "PBS key: IsSpecialType"},
+                "pseudo_type": {"type": "boolean", "description": "PBS key: IsPseudoType"},
+                "weaknesses": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^(?![0-9])\\w+$",
+                    "description": "An id: letters, digits and underscores, not starting with a digit."
+                  },
+                  "description": "PBS key: Weaknesses"
+                },
+                "resistances": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^(?![0-9])\\w+$",
+                    "description": "An id: letters, digits and underscores, not starting with a digit."
+                  },
+                  "description": "PBS key: Resistances"
+                },
+                "immunities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^(?![0-9])\\w+$",
+                    "description": "An id: letters, digits and underscores, not starting with a digit."
+                  },
+                  "description": "PBS key: Immunities"
+                },
+                "flags": {
+                  "type": "array",
+                  "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                  "description": "PBS key: Flags"
+                }
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 21,
+  "real_name": "Route 2",
+  "outdoor_map": true,
+  "announce_location": true,
+  "weather": {"weather": "Rain", "chance": 100},
+  "town_map_position": {"region": 0, "x": 14, "y": 8},
+  "battle_background": "field",
+  "town_map_size": {"width": 1, "squares": "11"}
+}

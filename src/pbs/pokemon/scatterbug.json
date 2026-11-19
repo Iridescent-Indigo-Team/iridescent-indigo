@@ -1,0 +1,37 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "SCATTERBUG",
+  "real_name": "Scatterbug",
+  "types": ["BUG"],
+  "base_stats": {"hp": 38, "attack": 35, "defense": 40, "speed": 35, "special_attack": 27, "special_defense": 25},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 40,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SHIELDDUST", "COMPOUNDEYES"],
+  "hidden_abilities": ["FRIENDGUARD"],
+  "moves": [
+    {"level": 1, "move": "TACKLE"},
+    {"level": 1, "move": "STRINGSHOT"},
+    {"level": 6, "move": "STUNSPORE"},
+    {"level": 15, "move": "BUGBITE"}
+  ],
+  "tutor_moves": ["BUGBITE"],
+  "egg_moves": ["POISONPOWDER", "RAGEPOWDER", "STUNSPORE"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 2.5,
+  "color": "Black",
+  "shape": "Insectoid",
+  "real_category": "Scatterdust",
+  "real_pokedex_entry": "When under attack from bird Pokémon, it spews a poisonous black powder that causes paralysis on contact.",
+  "generation": 6,
+  "evolutions": [
+    {"species": "SPEWPA", "method": "Level", "parameter": 9}
+  ]
+}

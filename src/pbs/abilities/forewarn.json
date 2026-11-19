@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FOREWARN",
+  "real_name": "Forewarn",
+  "real_description": "Determines what moves a foe has."
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PIDGEOT",
+  "form": 1,
+  "real_form_name": "Mega Pidgeot",
+  "mega_stone": "PIDGEOTITE",
+  "base_stats": {
+    "hp": 83,
+    "attack": 80,
+    "defense": 80,
+    "speed": 121,
+    "special_attack": 135,
+    "special_defense": 80
+  },
+  "base_exp": 290,
+  "abilities": ["NOGUARD"],
+  "hidden_abilities": ["NOGUARD"],
+  "height": 2.2,
+  "weight": 50.5,
+  "real_pokedex_entry": "With its muscular strength now greatly increased, it can fly continuously for two weeks without resting.",
+  "generation": 6
+}

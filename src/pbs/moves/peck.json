@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PECK",
+  "real_name": "Peck",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 35,
+  "accuracy": 100,
+  "total_pp": 35,
+  "target": "Other",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is jabbed with a sharply pointed beak or horn."
+}

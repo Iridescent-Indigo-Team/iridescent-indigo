@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PROPELLERTAIL",
+  "real_name": "Propeller Tail",
+  "real_description": "This Pokémon's moves cannot be redirected."
+}

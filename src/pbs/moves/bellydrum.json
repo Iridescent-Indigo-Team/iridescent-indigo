@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BELLYDRUM",
+  "real_name": "Belly Drum",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "MaxUserAttackLoseHalfOfTotalHP",
+  "real_description": "The user maximizes its Attack stat in exchange for HP equal to half its max HP."
+}

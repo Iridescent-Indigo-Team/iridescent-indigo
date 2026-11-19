@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SMOG",
+  "real_name": "Smog",
+  "type": "POISON",
+  "category": "Special",
+  "power": 30,
+  "accuracy": 70,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 40,
+  "real_description": "The target is attacked with a discharge of filthy gases. It may also poison the target."
+}

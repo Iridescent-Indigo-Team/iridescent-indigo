@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PARALYZEHEAL",
+  "real_name": "Paralyze Heal",
+  "real_name_plural": "Paralyze Heals",
+  "pocket": 2,
+  "price": 200,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine. It eliminates paralysis from a single Pokémon."
+}

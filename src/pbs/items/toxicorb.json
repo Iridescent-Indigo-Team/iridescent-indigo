@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TOXICORB",
+  "real_name": "Toxic Orb",
+  "real_name_plural": "Toxic Orbs",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 16,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. It is a bizarre orb that badly poisons the holder in battle."
+}

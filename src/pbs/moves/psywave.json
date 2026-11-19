@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYWAVE",
+  "real_name": "Psywave",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FixedDamageUserLevelRandom",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target is attacked with an odd psychic wave. The attack varies in intensity."
+}

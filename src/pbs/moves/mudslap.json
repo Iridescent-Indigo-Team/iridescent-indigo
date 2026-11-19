@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MUDSLAP",
+  "real_name": "Mud-Slap",
+  "type": "GROUND",
+  "category": "Special",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user hurls mud in the target's face to inflict damage and lower its accuracy."
+}

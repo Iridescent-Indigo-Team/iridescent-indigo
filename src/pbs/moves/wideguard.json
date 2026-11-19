@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WIDEGUARD",
+  "real_name": "Wide Guard",
+  "type": "ROCK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "UserSide",
+  "priority": 3,
+  "function_code": "ProtectUserSideFromMultiTargetDamagingMoves",
+  "real_description": "The user and its allies are protected from wide-ranging attacks for a turn. May fail if used in succession."
+}

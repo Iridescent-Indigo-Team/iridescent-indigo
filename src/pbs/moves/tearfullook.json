@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TEARFULLOOK",
+  "real_name": "Tearful Look",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAtkSpAtk1",
+  "flags": ["CanMirrorMove"],
+  "real_description": "Gets teary eyed to make the target lose its will to fight. Lowers the target's Attack and Sp. Atk."
+}

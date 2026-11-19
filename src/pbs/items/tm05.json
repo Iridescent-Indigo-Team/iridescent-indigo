@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM05",
+  "real_name": "TM05",
+  "real_name_plural": "TM05s",
+  "pocket": 4,
+  "price": 1000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "ROAR",
+  "real_description": "The target is scared off, and a different Pokémon is dragged out. In the wild, this ends the battle."
+}

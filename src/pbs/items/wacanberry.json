@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WACANBERRY",
+  "real_name": "Wacan Berry",
+  "real_name_plural": "Wacan Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_ELECTRIC_80"],
+  "real_description": "Weakens a supereffective Electric-type attack against the holding Pokémon."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPIRITBREAK",
+  "real_name": "Spirit Break",
+  "type": "FAIRY",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpAtk1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "The user attacks the target with immense force. This also lowers the target's Sp. Atk stat."
+}

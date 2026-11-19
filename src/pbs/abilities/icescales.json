@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ICESCALES",
+  "real_name": "Ice Scales",
+  "real_description": "Halves the damage taken from special moves."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SEISMICTOSS",
+  "real_name": "Seismic Toss",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "FixedDamageUserLevel",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is thrown using the power of gravity. It inflicts damage equal to the user's level."
+}

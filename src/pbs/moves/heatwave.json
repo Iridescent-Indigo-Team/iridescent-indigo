@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEATWAVE",
+  "real_name": "Heat Wave",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 95,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user attacks by exhaling hot breath on the opposing team. It may also leave targets with a burn."
+}

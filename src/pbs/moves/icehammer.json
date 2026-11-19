@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICEHAMMER",
+  "real_name": "Ice Hammer",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerUserSpeed1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The user swings and hits with its strong, heavy fist. It lowers the user's Speed, however."
+}

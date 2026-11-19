@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PLUS",
+  "real_name": "Plus",
+  "real_description": "Ups Sp. Atk if another Pokémon has Plus or Minus."
+}

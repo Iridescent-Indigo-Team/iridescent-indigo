@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "OWNTEMPO",
+  "real_name": "Own Tempo",
+  "real_description": "Prevents the Pokémon from becoming confused."
+}

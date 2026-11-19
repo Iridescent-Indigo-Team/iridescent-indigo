@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ENTRAINMENT",
+  "real_name": "Entrainment",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SetTargetAbilityToUserAbility",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user dances to compel the target to mimic it, making the target's Ability the same as the user's."
+}

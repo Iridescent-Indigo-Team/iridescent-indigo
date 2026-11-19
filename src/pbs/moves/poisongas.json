@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POISONGAS",
+  "real_name": "Poison Gas",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 90,
+  "total_pp": 40,
+  "target": "AllNearFoes",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A cloud of poison gas is sprayed in the face of opposing Pokémon. It may poison those hit."
+}

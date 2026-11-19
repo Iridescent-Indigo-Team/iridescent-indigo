@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICCOPPER",
+  "real_name": "Relic Copper",
+  "real_name_plural": "Relic Coppers",
+  "real_portion_name": "Relic Copper coin",
+  "real_portion_name_plural": "Relic Copper coins",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A copper coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

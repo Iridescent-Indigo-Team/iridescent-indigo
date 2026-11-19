@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "KLUTZ",
+  "real_name": "Klutz",
+  "real_description": "The Pokémon can't use any held items."
+}

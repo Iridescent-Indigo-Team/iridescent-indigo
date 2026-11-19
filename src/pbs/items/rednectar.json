@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REDNECTAR",
+  "real_name": "Red Nectar",
+  "real_name_plural": "Red Nectars",
+  "real_portion_name": "jar of Red Nectar",
+  "real_portion_name_plural": "jars of Red Nectar",
+  "pocket": 1,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "A flower nectar obtained at Ula'ula Meadow. It changes the form of certain species of Pokémon."
+}

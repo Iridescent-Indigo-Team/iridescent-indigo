@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DECORATE",
+  "real_name": "Decorate",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RaiseTargetAtkSpAtk2",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user sharply raises the target's Attack and Sp. Atk stats by decorating the target."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SONICBOOM",
+  "real_name": "Sonic Boom",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 90,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "FixedDamage20",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target is hit with a destructive shock wave that always inflicts 20 HP damage."
+}

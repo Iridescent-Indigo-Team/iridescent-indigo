@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "HIKER",
+  "name": "Ford",
+  "real_lose_text": "You're too good for me!",
+  "pokemon": [
+    {"species": "MACHOP", "level": 19}
+  ]
+}

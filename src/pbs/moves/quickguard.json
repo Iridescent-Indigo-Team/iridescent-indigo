@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "QUICKGUARD",
+  "real_name": "Quick Guard",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "UserSide",
+  "priority": 3,
+  "function_code": "ProtectUserSideFromPriorityMoves",
+  "real_description": "The user protects itself and its allies from priority moves. If may fail if used in succession."
+}

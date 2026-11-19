@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BERSERK",
+  "real_name": "Berserk",
+  "real_description": "Ups Sp. Atk if a hit makes its HP half or less."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "METALBURST",
+  "real_name": "Metal Burst",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "None",
+  "function_code": "CounterDamagePlusHalf",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user retaliates with much greater power against the target that last inflicted damage on it."
+}

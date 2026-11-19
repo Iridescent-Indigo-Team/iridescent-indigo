@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WILDCHARGE",
+  "real_name": "Wild Charge",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RecoilQuarterOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user shrouds itself in electricity and smashes into its foe. It also damages the user a little."
+}

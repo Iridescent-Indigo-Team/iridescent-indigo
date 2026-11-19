@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SCARYFACE",
+  "real_name": "Scary Face",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user frightens the target with a scary face to harshly reduce its Speed stat."
+}

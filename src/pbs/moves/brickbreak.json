@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BRICKBREAK",
+  "real_name": "Brick Break",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RemoveScreens",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with a swift chop. It can also break any barrier such as Light Screen and Reflect."
+}

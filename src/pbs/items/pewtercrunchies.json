@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PEWTERCRUNCHIES",
+  "real_name": "Pewter Crunchies",
+  "real_name_plural": "Pewter Crunchies",
+  "real_portion_name": "bag of Pewter Crunchies",
+  "real_portion_name_plural": "bags of Pewter Crunchies",
+  "pocket": 2,
+  "price": 250,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Pewter City's famous crunchy snack. They can be used to heal all status conditions of a single Pokémon."
+}

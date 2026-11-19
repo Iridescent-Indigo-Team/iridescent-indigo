@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POLLENPUFF",
+  "real_name": "Pollen Puff",
+  "type": "BUG",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HealAllyOrDamageFoe",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "Fires an exploding pollen puff at enemies, or a HP-restoring one at allies."
+}

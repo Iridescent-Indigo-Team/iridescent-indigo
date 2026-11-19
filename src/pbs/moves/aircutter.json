@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AIRCUTTER",
+  "real_name": "Air Cutter",
+  "type": "FLYING",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 95,
+  "total_pp": 25,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user launches razor-like wind to slash the opposing team. Critical hits land more easily."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "EVIOLITE",
+  "real_name": "Eviolite",
+  "real_name_plural": "Eviolites",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 25,
+  "flags": ["Fling_40"],
+  "real_description": "A mysterious evolutionary lump. When held, it raises the Defense and Sp. Def if the holder can still evolve."
+}

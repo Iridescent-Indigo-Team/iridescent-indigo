@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CLOVERSWEET",
+  "real_name": "Clover Sweet",
+  "real_name_plural": "Clover Sweets",
+  "pocket": 1,
+  "price": 500,
+  "bp_price": 5,
+  "flags": ["Fling_10"],
+  "real_description": "A clover-shaped sweet. When a Milcery holds this, it spins around happily."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ICEFACE",
+  "real_name": "Ice Face",
+  "real_description": "Blocks a physical hit, but the ice head breaks."
+}

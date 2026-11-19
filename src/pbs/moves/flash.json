@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLASH",
+  "real_name": "Flash",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user flashes a light that cuts the target's accuracy. It can also be used to illuminate caves."
+}

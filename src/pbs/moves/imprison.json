@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "IMPRISON",
+  "real_name": "Imprison",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "DisableTargetMovesKnownByUser",
+  "real_description": "If the foe knows any move also known by the user, the foe is prevented from using it."
+}

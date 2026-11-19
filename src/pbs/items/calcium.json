@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CALCIUM",
+  "real_name": "Calcium",
+  "real_name_plural": "Calciums",
+  "real_portion_name": "bottle of Calcium",
+  "real_portion_name_plural": "bottles of Calcium",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A nutritious drink for Pokémon. It raises the base Sp. Atk (Special Attack) stat of a single Pokémon."
+}

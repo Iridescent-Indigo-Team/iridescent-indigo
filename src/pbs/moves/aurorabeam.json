@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AURORABEAM",
+  "real_name": "Aurora Beam",
+  "type": "ICE",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAttack1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The target is hit with a rainbow-colored beam. This may also lower the target's Attack stat."
+}

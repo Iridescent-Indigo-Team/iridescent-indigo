@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "COMPOUNDEYES",
+  "real_name": "Compound Eyes",
+  "real_description": "The Pokémon's accuracy is boosted."
+}

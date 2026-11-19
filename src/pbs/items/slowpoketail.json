@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SLOWPOKETAIL",
+  "real_name": "Slowpoke Tail",
+  "real_name_plural": "Slowpoke Tails",
+  "pocket": 1,
+  "price": 10000,
+  "real_description": "A very tasty tail of something. It can be sold at a high price to shops."
+}

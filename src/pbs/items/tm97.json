@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM97",
+  "real_name": "TM97",
+  "real_name_plural": "TM97s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "DEFOG",
+  "real_description": "A strong wind blows away the target's barriers, such as Reflect, and lowers their evasiveness."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "UNSEENFIST",
+  "real_name": "Unseen Fist",
+  "real_description": "The Pokémon's contact moves ignore protections."
+}

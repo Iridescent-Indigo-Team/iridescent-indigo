@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERSHURIKEN",
+  "real_name": "Water Shuriken",
+  "type": "WATER",
+  "category": "Special",
+  "power": 15,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "HitTwoToFiveTimesOrThreeForAshGreninja",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user hits the target with throwing stars 2-5 times in a row. This move always goes first."
+}

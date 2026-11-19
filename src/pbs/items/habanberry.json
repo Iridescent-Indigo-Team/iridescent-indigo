@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HABANBERRY",
+  "real_name": "Haban Berry",
+  "real_name_plural": "Haban Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_DRAGON_80"],
+  "real_description": "Weakens a supereffective Dragon-type attack against the holding Pokémon."
+}

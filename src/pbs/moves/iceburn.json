@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICEBURN",
+  "real_name": "Ice Burn",
+  "type": "ICE",
+  "category": "Special",
+  "power": 140,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackBurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 30,
+  "real_description": "On the second turn, an ultracold, freezing wind surrounds the foe. This may leave it with a burn."
+}

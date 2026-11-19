@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM01",
+  "real_name": "TM01",
+  "real_name_plural": "TM01s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_150"],
+  "move": "FOCUSPUNCH",
+  "real_description": "The user focuses its mind before launching a punch. This move fails if the user is hit before it is used."
+}

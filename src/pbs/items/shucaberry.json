@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHUCABERRY",
+  "real_name": "Shuca Berry",
+  "real_name_plural": "Shuca Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_GROUND_80"],
+  "real_description": "Weakens a supereffective Ground-type attack against the holding Pokémon."
+}

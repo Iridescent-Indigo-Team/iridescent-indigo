@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BATTLEBOND",
+  "real_name": "Battle Bond",
+  "real_description": "Defeating a foe lets it become Ash-Greninja."
+}

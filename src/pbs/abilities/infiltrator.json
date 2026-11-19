@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "INFILTRATOR",
+  "real_name": "Infiltrator",
+  "real_description": "Passes through the foe's barrier and strikes."
+}

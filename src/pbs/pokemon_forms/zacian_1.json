@@ -1,0 +1,18 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ZACIAN",
+  "form": 1,
+  "real_form_name": "Crowned Sword",
+  "types": ["FAIRY", "STEEL"],
+  "base_stats": {
+    "hp": 92,
+    "attack": 170,
+    "defense": 115,
+    "speed": 148,
+    "special_attack": 80,
+    "special_defense": 115
+  },
+  "base_exp": 360,
+  "weight": 355.0,
+  "real_pokedex_entry": "Able to cut down anything with a single strike, it became known as the Fairy King's Sword, and it inspired awe in friend and foe alike."
+}

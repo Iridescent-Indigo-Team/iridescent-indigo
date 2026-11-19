@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ROCKINCENSE",
+  "real_name": "Rock Incense",
+  "real_name_plural": "Rock Incenses",
+  "real_portion_name": "jar of Rock Incense",
+  "real_portion_name_plural": "jars of Rock Incense",
+  "pocket": 1,
+  "price": 2000,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. This exotic-smelling incense boosts the power of Rock-type moves."
+}

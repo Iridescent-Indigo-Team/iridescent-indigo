@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "IRONHEAD",
+  "real_name": "Iron Head",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The foe slams the target with its steel-hard head. It may also make the target flinch."
+}

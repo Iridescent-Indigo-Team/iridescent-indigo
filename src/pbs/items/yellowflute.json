@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "YELLOWFLUTE",
+  "real_name": "Yellow Flute",
+  "real_name_plural": "Yellow Flutes",
+  "pocket": 7,
+  "price": 20,
+  "battle_use": "OnBattler",
+  "flags": ["Fling_30"],
+  "consumable": false,
+  "real_description": "A yellow flute made from blown glass. Its melody snaps a single Pokémon out of confusion."
+}

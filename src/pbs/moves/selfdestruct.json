@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SELFDESTRUCT",
+  "real_name": "Self-Destruct",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 200,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearOthers",
+  "function_code": "UserFaintsExplosive",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user blows up to inflict damage on all Pokémon in battle. The user faints upon using this move."
+}

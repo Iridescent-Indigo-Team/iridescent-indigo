@@ -1,0 +1,43 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "LEADER_Brock",
+  "name": "Brock",
+  "items": ["FULLRESTORE", "FULLRESTORE"],
+  "real_lose_text": "Very good.",
+  "pokemon": [
+    {
+      "species": "GEODUDE",
+      "level": 12,
+      "moves": ["DEFENSECURL", "HEADSMASH", "ROCKPOLISH", "ROCKTHROW"],
+      "ability_index": 0,
+      "gender": "male",
+      "iv": {
+        "hp": 20,
+        "attack": 20,
+        "defense": 20,
+        "speed": 20,
+        "special_attack": 20,
+        "special_defense": 20
+      }
+    },
+    {
+      "species": "ONIX",
+      "level": 14,
+      "real_name": "Rocky",
+      "moves": ["HEADSMASH", "ROCKTHROW", "RAGE", "ROCKTOMB"],
+      "ability_index": 0,
+      "item": "SITRUSBERRY",
+      "gender": "male",
+      "iv": {
+        "hp": 20,
+        "attack": 20,
+        "defense": 20,
+        "speed": 20,
+        "special_attack": 20,
+        "special_defense": 20
+      },
+      "shininess": true,
+      "poke_ball": "HEAVYBALL"
+    }
+  ]
+}

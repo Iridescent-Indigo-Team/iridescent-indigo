@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BUBBLEBEAM",
+  "real_name": "Bubble Beam",
+  "type": "WATER",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "A spray of bubbles is forcefully ejected at the target. It may also lower its Speed stat."
+}

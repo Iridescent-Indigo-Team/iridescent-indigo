@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDERCAGE",
+  "real_name": "Thunder Cage",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user traps the target in a cage of sparking electricity for four to five turns."
+}

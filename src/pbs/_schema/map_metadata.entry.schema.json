@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "map_metadata.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {"type": "integer", "minimum": 0},
+    "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "outdoor_map": {"type": "boolean", "description": "PBS key: Outdoor"},
+    "announce_location": {"type": "boolean", "description": "PBS key: ShowArea"},
+    "can_bicycle": {"type": "boolean", "description": "PBS key: Bicycle"},
+    "always_bicycle": {"type": "boolean", "description": "PBS key: BicycleAlways"},
+    "teleport_destination": {
+      "type": "object",
+      "properties": {
+        "map_id": {"type": "integer", "minimum": 1},
+        "x": {"type": "integer", "minimum": 0},
+        "y": {"type": "integer", "minimum": 0}
+      },
+      "required": ["map_id", "x", "y"],
+      "additionalProperties": false,
+      "description": "PBS key: HealingSpot"
+    },
+    "weather": {
+      "type": "object",
+      "properties": {
+        "weather": {
+          "type": "string",
+          "enum": ["None", "Rain", "Storm", "Snow", "Blizzard", "Sandstorm", "HeavyRain", "Sun", "Fog"]
+        },
+        "chance": {"type": "integer", "minimum": 0}
+      },
+      "required": ["weather", "chance"],
+      "additionalProperties": false,
+      "description": "PBS key: Weather"
+    },
+    "town_map_position": {
+      "type": "object",
+      "properties": {
+        "region": {"type": "integer", "minimum": 0},
+        "x": {"type": "integer", "minimum": 0},
+        "y": {"type": "integer", "minimum": 0}
+      },
+      "required": ["region", "x", "y"],
+      "additionalProperties": false,
+      "description": "PBS key: MapPosition"
+    },
+    "dive_map_id": {"type": "integer", "minimum": 1, "description": "PBS key: DiveMap"},
+    "dark_map": {"type": "boolean", "description": "PBS key: DarkMap"},
+    "safari_map": {"type": "boolean", "description": "PBS key: SafariMap"},
+    "snap_edges": {"type": "boolean", "description": "PBS key: SnapEdges"},
+    "still_reflections": {"type": "boolean", "description": "PBS key: StillReflections"},
+    "random_dungeon": {"type": "boolean", "description": "PBS key: Dungeon"},
+    "battle_background": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "wild_battle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "trainer_battle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "wild_victory_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "trainer_victory_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "wild_capture_me": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "town_map_size": {
+      "type": "object",
+      "properties": {
+        "width": {"type": "integer", "minimum": 0},
+        "squares": {"type": "string", "pattern": "^[^#]*$", "description": "Text."}
+      },
+      "required": ["width", "squares"],
+      "additionalProperties": false,
+      "description": "PBS key: MapSize"
+    },
+    "battle_environment": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Grass",
+        "TallGrass",
+        "MovingWater",
+        "StillWater",
+        "Puddle",
+        "Underwater",
+        "Cave",
+        "Rock",
+        "Sand",
+        "Forest",
+        "ForestGrass",
+        "Snow",
+        "Ice",
+        "Volcano",
+        "Graveyard",
+        "Sky",
+        "Space",
+        "UltraSpace"
+      ],
+      "description": "PBS key: Environment"
+    },
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

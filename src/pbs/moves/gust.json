@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GUST",
+  "real_name": "Gust",
+  "type": "FLYING",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 35,
+  "target": "Other",
+  "function_code": "DoublePowerIfTargetInSky",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A gust of wind is whipped up by wings and launched at the target to inflict damage."
+}

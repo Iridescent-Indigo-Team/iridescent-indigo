@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIRACLEEYE",
+  "real_name": "Miracle Eye",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "StartNegateTargetEvasionStatStageAndDarkImmunity",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Enables the user to hit a Dark type with any type of move. It also enables the user to hit an evasive foe."
+}

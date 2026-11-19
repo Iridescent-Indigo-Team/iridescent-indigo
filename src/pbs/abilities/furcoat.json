@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FURCOAT",
+  "real_name": "Fur Coat",
+  "real_description": "Halves the damage from physical moves."
+}

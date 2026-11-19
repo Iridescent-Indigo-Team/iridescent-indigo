@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PARENTALBOND",
+  "real_name": "Parental Bond",
+  "real_description": "Parent and child each attacks."
+}

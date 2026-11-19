@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "EXPCANDYS",
+  "real_name": "Exp. Candy S",
+  "real_name_plural": "Exp. Candy Ss",
+  "pocket": 2,
+  "price": 240,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A candy packed with energy. When consumed, it will grant a Pokémon a small amount of Exp. Points."
+}

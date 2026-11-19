@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM73",
+  "real_name": "TM73",
+  "real_name_plural": "TM73s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "THUNDERWAVE",
+  "real_description": "The user launches a weak jolt of electricity that paralyzes the target."
+}

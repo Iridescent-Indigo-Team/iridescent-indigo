@@ -1,0 +1,42 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "WYNAUT",
+  "real_name": "Wynaut",
+  "types": ["PSYCHIC"],
+  "base_stats": {"hp": 95, "attack": 23, "defense": 48, "speed": 23, "special_attack": 23, "special_defense": 48},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 52,
+  "evs": [
+    {"stat": "HP", "amount": 1}
+  ],
+  "catch_rate": 125,
+  "happiness": 50,
+  "abilities": ["SHADOWTAG"],
+  "hidden_abilities": ["TELEPATHY"],
+  "moves": [
+    {"level": 1, "move": "COUNTER"},
+    {"level": 1, "move": "MIRRORCOAT"},
+    {"level": 1, "move": "SAFEGUARD"},
+    {"level": 1, "move": "DESTINYBOND"},
+    {"level": 1, "move": "SPLASH"},
+    {"level": 1, "move": "CHARM"},
+    {"level": 1, "move": "ENCORE"},
+    {"level": 1, "move": "AMNESIA"}
+  ],
+  "tutor_moves": ["AMNESIA", "CHARM", "ENCORE", "SAFEGUARD"],
+  "egg_groups": ["Undiscovered"],
+  "hatch_steps": 5120,
+  "incense": "LAXINCENSE",
+  "height": 0.6,
+  "weight": 14.0,
+  "color": "Blue",
+  "shape": "BipedalTail",
+  "habitat": "Cave",
+  "real_category": "Bright",
+  "real_pokedex_entry": "A Wynaut loves to eat sweet fruits. It cleverly picks fruits using its earlike arms. They gather in fruit gardens, drawn by the fragrance.",
+  "generation": 3,
+  "evolutions": [
+    {"species": "WOBBUFFET", "method": "Level", "parameter": 15}
+  ]
+}

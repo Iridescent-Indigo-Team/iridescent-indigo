@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BOLDMINT",
+  "real_name": "Bold Mint",
+  "real_name_plural": "Bold Mints",
+  "real_portion_name": "sprig of Bold Mint",
+  "real_portion_name_plural": "sprigs of Bold Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Defense will grow more easily, but its Attack will grow more slowly."
+}

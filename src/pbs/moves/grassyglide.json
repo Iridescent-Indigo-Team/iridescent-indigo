@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRASSYGLIDE",
+  "real_name": "Grassy Glide",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HigherPriorityInGrassyTerrain",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Gliding on the ground, the user attacks the target. This move always goes first on Grassy Terrain."
+}

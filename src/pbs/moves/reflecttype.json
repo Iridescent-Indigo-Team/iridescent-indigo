@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REFLECTTYPE",
+  "real_name": "Reflect Type",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SetUserTypesToTargetTypes",
+  "flags": ["CanProtect"],
+  "real_description": "The user reflects the target's type, making it the same type as the target."
+}

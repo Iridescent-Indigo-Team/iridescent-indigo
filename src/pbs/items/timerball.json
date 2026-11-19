@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TIMERBALL",
+  "real_name": "Timer Ball",
+  "real_name_plural": "Timer Balls",
+  "pocket": 3,
+  "price": 1000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A somewhat different Ball that becomes progressively better the more turns there are in a battle."
+}

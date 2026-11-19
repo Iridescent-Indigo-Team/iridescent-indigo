@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TURBOBLAZE",
+  "real_name": "Turboblaze",
+  "real_description": "Moves can be used regardless of Abilities."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ANGERPOINT",
+  "real_name": "Anger Point",
+  "real_description": "Maxes Attack after taking a critical hit."
+}

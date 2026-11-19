@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "items.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {
+      "type": "string",
+      "pattern": "^(?![0-9])\\w+$",
+      "description": "An id: letters, digits and underscores, not starting with a digit."
+    },
+    "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "real_name_plural": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "real_portion_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "real_portion_name_plural": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "pocket": {"type": "integer", "minimum": 1, "description": "PBS key: Pocket"},
+    "price": {"type": "integer", "minimum": 0, "description": "PBS key: Price"},
+    "sell_price": {"type": "integer", "minimum": 0, "description": "PBS key: SellPrice"},
+    "bp_price": {"type": "integer", "minimum": 0, "description": "PBS key: BPPrice"},
+    "field_use": {
+      "type": "string",
+      "enum": ["OnPokemon", "Direct", "TM", "HM", "TR"],
+      "description": "PBS key: FieldUse"
+    },
+    "battle_use": {
+      "type": "string",
+      "enum": ["OnPokemon", "OnMove", "OnBattler", "OnFoe", "Direct"],
+      "description": "PBS key: BattleUse"
+    },
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    },
+    "consumable": {"type": "boolean", "description": "PBS key: Consumable"},
+    "show_quantity": {"type": "boolean", "description": "PBS key: ShowQuantity"},
+    "move": {"type": "string", "description": "A Move id from moves.txt."},
+    "real_description": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

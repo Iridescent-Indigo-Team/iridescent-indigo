@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STUFFCHEEKS",
+  "real_name": "Stuff Cheeks",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserConsumeBerryRaiseDefense2",
+  "real_description": "The user eats its held Berry, then sharply raises its Defense stat."
+}

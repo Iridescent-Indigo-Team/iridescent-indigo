@@ -1,0 +1,33 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "METAPOD",
+  "real_name": "Metapod",
+  "types": ["BUG"],
+  "base_stats": {"hp": 50, "attack": 20, "defense": 55, "speed": 30, "special_attack": 25, "special_defense": 25},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 72,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 2}
+  ],
+  "catch_rate": 120,
+  "happiness": 50,
+  "abilities": ["SHEDSKIN"],
+  "moves": [
+    {"level": 0, "move": "HARDEN"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "IRONDEFENSE", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.7,
+  "weight": 9.9,
+  "color": "Green",
+  "shape": "Serpentine",
+  "habitat": "Forest",
+  "real_category": "Cocoon",
+  "real_pokedex_entry": "Its shell is as hard as an iron slab. A Metapod does not move very much because it is preparing its soft innards for evolution inside the shell.",
+  "generation": 1,
+  "evolutions": [
+    {"species": "BUTTERFREE", "method": "Level", "parameter": 10}
+  ]
+}

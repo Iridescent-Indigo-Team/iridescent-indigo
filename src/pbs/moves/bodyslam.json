@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BODYSLAM",
+  "real_name": "Body Slam",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "TramplesMinimize"],
+  "effect_chance": 30,
+  "real_description": "The user drops onto the target with its full body weight. It may leave the target with paralysis."
+}

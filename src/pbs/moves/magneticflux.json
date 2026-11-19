@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGNETICFLUX",
+  "real_name": "Magnetic Flux",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "UserAndAllies",
+  "function_code": "RaisePlusMinusUserAndAlliesDefSpDef1",
+  "real_description": "Manipulates magnetic fields to raise the Defense and Sp. Def stats of allies with Plus or Minus Abilities."
+}

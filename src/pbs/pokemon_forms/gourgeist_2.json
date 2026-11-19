@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GOURGEIST",
+  "form": 2,
+  "real_form_name": "Large Size",
+  "base_stats": {"hp": 75, "attack": 95, "defense": 122, "speed": 69, "special_attack": 58, "special_defense": 75},
+  "height": 1.1,
+  "weight": 14.0,
+  "real_pokedex_entry": "Large Gourgeist put on the guise of adults, taking the hands of children to lead them to the afterlife."
+}

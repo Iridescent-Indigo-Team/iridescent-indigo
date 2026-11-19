@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIRRORMOVE",
+  "real_name": "Mirror Move",
+  "type": "FLYING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "UseLastMoveUsedByTarget",
+  "real_description": "The user counters the target by mimicking the target's last move."
+}

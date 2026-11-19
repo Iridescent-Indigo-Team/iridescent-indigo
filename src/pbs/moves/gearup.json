@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GEARUP",
+  "real_name": "Gear Up",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "UserAndAllies",
+  "function_code": "RaisePlusMinusUserAndAlliesAtkSpAtk1",
+  "real_description": "The user engages its gears to raise the Attack and Sp. Atk of allies with the Plus or Minus Ability."
+}

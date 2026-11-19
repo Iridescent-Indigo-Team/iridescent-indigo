@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM88",
+  "real_name": "TM88",
+  "real_name_plural": "TM88s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "PLUCK",
+  "real_description": "The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect."
+}

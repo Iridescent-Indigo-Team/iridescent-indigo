@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIST",
+  "real_name": "Mist",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "UserSide",
+  "function_code": "StartUserSideImmunityToStatStageLowering",
+  "real_description": "The user cloaks its body with a white mist that prevents any of its stats from being cut for five turns."
+}

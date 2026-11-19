@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SILVERWIND",
+  "real_name": "Silver Wind",
+  "type": "BUG",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RaiseUserMainStats1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The foe is attacked with powdery scales blown by wind. It may also raise all the user's stats."
+}

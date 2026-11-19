@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BUGGEM",
+  "real_name": "Bug Gem",
+  "real_name_plural": "Bug Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an insect-like essence. When held, it strengthens the power of a Bug-type move only once."
+}

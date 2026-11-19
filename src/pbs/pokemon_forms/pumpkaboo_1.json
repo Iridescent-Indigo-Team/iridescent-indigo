@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PUMPKABOO",
+  "form": 1,
+  "real_form_name": "Average Size",
+  "base_stats": {"hp": 49, "attack": 66, "defense": 70, "speed": 51, "special_attack": 44, "special_defense": 55},
+  "hidden_abilities": ["INSOMNIA"],
+  "height": 0.4,
+  "weight": 5.0,
+  "real_pokedex_entry": "Spirits that wander this world are placed into Pumpkaboo's body. They're then moved on to the afterlife."
+}

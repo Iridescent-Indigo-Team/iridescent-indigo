@@ -1,0 +1,40 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "WURMPLE",
+  "real_name": "Wurmple",
+  "types": ["BUG"],
+  "base_stats": {"hp": 45, "attack": 45, "defense": 35, "speed": 20, "special_attack": 20, "special_defense": 30},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 56,
+  "evs": [
+    {"stat": "HP", "amount": 1}
+  ],
+  "catch_rate": 255,
+  "happiness": 50,
+  "abilities": ["SHIELDDUST"],
+  "hidden_abilities": ["RUNAWAY"],
+  "moves": [
+    {"level": 1, "move": "TACKLE"},
+    {"level": 1, "move": "STRINGSHOT"},
+    {"level": 5, "move": "POISONSTING"},
+    {"level": 15, "move": "BUGBITE"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "SNORE", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 3.6,
+  "color": "Red",
+  "shape": "Insectoid",
+  "habitat": "Forest",
+  "real_category": "Worm",
+  "real_pokedex_entry": "It sticks to tree branches and eats leaves. The thread it spits from its mouth becomes gooey when it touches air and slows the movement of its foes.",
+  "generation": 3,
+  "wild_item_common": ["PECHABERRY"],
+  "wild_item_uncommon": ["BRIGHTPOWDER"],
+  "evolutions": [
+    {"species": "SILCOON", "method": "Silcoon", "parameter": 7},
+    {"species": "CASCOON", "method": "Cascoon", "parameter": 7}
+  ]
+}

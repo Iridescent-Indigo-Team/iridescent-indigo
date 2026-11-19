@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "EJECTPACK",
+  "real_name": "Eject Pack",
+  "real_name_plural": "Eject Packs",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 20,
+  "flags": ["Fling_50"],
+  "real_description": "An item to be held by a Pokémon. When the holder's stats are lowered, it will be switched out of battle."
+}

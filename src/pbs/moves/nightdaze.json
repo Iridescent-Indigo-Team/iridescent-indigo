@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NIGHTDAZE",
+  "real_name": "Night Daze",
+  "type": "DARK",
+  "category": "Special",
+  "power": 85,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 40,
+  "real_description": "The user lets loose a pitch-black shock wave at its target. It may also lower the target's accuracy."
+}

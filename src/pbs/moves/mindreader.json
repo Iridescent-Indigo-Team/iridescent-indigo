@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MINDREADER",
+  "real_name": "Mind Reader",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "EnsureNextMoveAlwaysHits",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user senses the foe's movements with its mind to ensure its next attack does not miss the foe."
+}

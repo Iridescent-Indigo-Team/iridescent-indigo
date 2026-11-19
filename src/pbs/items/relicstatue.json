@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICSTATUE",
+  "real_name": "Relic Statue",
+  "real_name_plural": "Relic Statues",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A stone figure made in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

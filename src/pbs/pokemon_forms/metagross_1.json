@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "METAGROSS",
+  "form": 1,
+  "real_form_name": "Mega Metagross",
+  "mega_stone": "METAGROSSITE",
+  "base_stats": {
+    "hp": 95,
+    "attack": 145,
+    "defense": 130,
+    "speed": 120,
+    "special_attack": 120,
+    "special_defense": 90
+  },
+  "base_exp": 350,
+  "abilities": ["TOUGHCLAWS"],
+  "hidden_abilities": ["TOUGHCLAWS"],
+  "height": 2.5,
+  "weight": 942.9,
+  "real_pokedex_entry": "Its intellect surpasses its previous level, resulting in battles so cruel, they'll make you want to cover your eyes.",
+  "generation": 6
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM86",
+  "real_name": "TM86",
+  "real_name_plural": "TM86s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "GRASSKNOT",
+  "real_description": "The user snares the target with grass and trips it. The heavier the target, the strong the move is."
+}

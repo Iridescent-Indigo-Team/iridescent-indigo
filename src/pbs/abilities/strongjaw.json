@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STRONGJAW",
+  "real_name": "Strong Jaw",
+  "real_description": "Boosts the power of biting moves."
+}

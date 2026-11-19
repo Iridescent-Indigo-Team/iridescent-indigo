@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ROTOMCATALOG",
+  "real_name": "Rotom Catalog",
+  "real_name_plural": "Rotom Catalogs",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A catalog of devices that Rotom like. Use the catalog to have Rotom hop in and out of the devices listed within."
+}

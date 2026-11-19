@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM55",
+  "real_name": "TM55",
+  "real_name_plural": "TM55s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_65"],
+  "move": "BRINE",
+  "real_description": "If the target's HP is half or less, this attack will hit with double the power."
+}

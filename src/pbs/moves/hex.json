@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEX",
+  "real_name": "Hex",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetStatusProblem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "This relentless attack does massive damage to a target affected by status problems."
+}

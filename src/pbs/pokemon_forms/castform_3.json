@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CASTFORM",
+  "form": 3,
+  "real_form_name": "Snowy Form",
+  "types": ["ICE"],
+  "color": "White",
+  "real_pokedex_entry": "This is the form Castform takes when covered in snow. Its body becomes an ice-like material, with a temperature near -5 degrees Celsius."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/encounters.entry.schema.json",
+  "map": 39,
+  "types": [
+    {
+      "type": "Land",
+      "step_chance": 21,
+      "slots": [
+        {"chance": 50, "species": "SHELLOS_1", "min_level": 12, "max_level": 15},
+        {"chance": 40, "species": "GRIMER", "min_level": 13, "max_level": 15},
+        {"chance": 10, "species": "MURKROW", "min_level": 12, "max_level": 14}
+      ]
+    }
+  ]
+}

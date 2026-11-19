@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OCTOLOCK",
+  "real_name": "Octolock",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TrapTargetInBattleLowerTargetDefSpDef1EachTurn",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Locks the target in and prevents it from fleeing. Also lowers the target's Defense and Sp. Def each turn."
+}

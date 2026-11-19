@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM47",
+  "real_name": "TM47",
+  "real_name_plural": "TM47s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_70"],
+  "move": "STEELWING",
+  "real_description": "The target is hit with wings of steel. This may also raise the user's Defense stat."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM01",
+  "real_name": "HM01",
+  "real_name_plural": "HM01s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "CUT",
+  "real_description": "The target is cut with a scythe or claw. This can also be used to cut down thin trees."
+}

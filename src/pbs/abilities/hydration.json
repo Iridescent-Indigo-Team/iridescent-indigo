@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HYDRATION",
+  "real_name": "Hydration",
+  "real_description": "Heals status problems if it is raining."
+}

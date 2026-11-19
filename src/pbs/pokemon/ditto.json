@@ -1,0 +1,32 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "DITTO",
+  "real_name": "Ditto",
+  "types": ["NORMAL"],
+  "base_stats": {"hp": 48, "attack": 48, "defense": 48, "speed": 48, "special_attack": 48, "special_defense": 48},
+  "gender_ratio": "Genderless",
+  "growth_rate": "Medium",
+  "base_exp": 101,
+  "evs": [
+    {"stat": "HP", "amount": 1}
+  ],
+  "catch_rate": 35,
+  "happiness": 50,
+  "abilities": ["LIMBER"],
+  "hidden_abilities": ["IMPOSTER"],
+  "moves": [
+    {"level": 1, "move": "TRANSFORM"}
+  ],
+  "egg_groups": ["Ditto"],
+  "hatch_steps": 5120,
+  "height": 0.3,
+  "weight": 4.0,
+  "color": "Purple",
+  "shape": "Head",
+  "habitat": "Urban",
+  "real_category": "Transform",
+  "real_pokedex_entry": "A Ditto rearranges its cell structure to transform itself. However, if it tries to change based on its memory, it will get details wrong.",
+  "generation": 1,
+  "wild_item_common": ["QUICKPOWDER"],
+  "wild_item_uncommon": ["METALPOWDER"]
+}

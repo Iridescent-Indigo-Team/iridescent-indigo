@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HORNLEECH",
+  "real_name": "Horn Leech",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user drains the foe's energy with its horns. The user's HP is restored by half the damage inflicted."
+}

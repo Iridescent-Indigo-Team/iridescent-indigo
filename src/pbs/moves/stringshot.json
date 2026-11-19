@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STRINGSHOT",
+  "real_name": "String Shot",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 95,
+  "total_pp": 40,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetSpeed2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The foe is bound with silk blown from the user's mouth. This silk reduces the target's Speed."
+}

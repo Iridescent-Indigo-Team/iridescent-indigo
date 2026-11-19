@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWITCHEROO",
+  "real_name": "Switcheroo",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapItems",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user trades held items with the target faster than the eye can follow."
+}

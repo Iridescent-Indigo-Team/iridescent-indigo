@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STOCKPILE",
+  "real_name": "Stockpile",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "UserAddStockpileRaiseDefSpDef1",
+  "real_description": "The user charges up power and raises both its Defense and Sp. Def. The move can be used three times."
+}

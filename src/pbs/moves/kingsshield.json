@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "KINGSSHIELD",
+  "real_name": "King's Shield",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUserFromDamagingMovesKingsShield",
+  "real_description": "Protects itself from damage. It also harshly lowers the Attack of attackers that make contact."
+}

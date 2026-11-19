@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIREBLAST",
+  "real_name": "Fire Blast",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 110,
+  "accuracy": 85,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The foe is attacked with an intense blast of all-consuming fire. It may also leave the target with a burn."
+}

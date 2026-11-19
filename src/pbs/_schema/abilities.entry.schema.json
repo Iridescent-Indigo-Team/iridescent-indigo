@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "abilities.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {
+      "type": "string",
+      "pattern": "^(?![0-9])\\w+$",
+      "description": "An id: letters, digits and underscores, not starting with a digit."
+    },
+    "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "real_description": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    },
+    "flags": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+      "description": "PBS key: Flags"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

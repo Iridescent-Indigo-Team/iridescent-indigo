@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM83",
+  "real_name": "TM83",
+  "real_name_plural": "TM83s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "BULLDOZE",
+  "real_description": "The user strikes everything around it by stomping down on the ground. This lowers the Speed of those hit."
+}

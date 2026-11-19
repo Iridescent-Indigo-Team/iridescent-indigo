@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MEGAHORN",
+  "real_name": "Megahorn",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Using its tough and impressive horn, the user rams into the target with no letup."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWDER",
+  "real_name": "Powder",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "TargetNextFireMoveDamagesTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Powder"],
+  "real_description": "The target is covered in a powder that explodes and damages it if it uses a Fire-type move."
+}

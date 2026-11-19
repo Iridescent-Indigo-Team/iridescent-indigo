@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "STEELIX",
+  "form": 1,
+  "real_form_name": "Mega Steelix",
+  "mega_stone": "STEELIXITE",
+  "base_stats": {
+    "hp": 75,
+    "attack": 125,
+    "defense": 230,
+    "speed": 30,
+    "special_attack": 55,
+    "special_defense": 95
+  },
+  "base_exp": 214,
+  "abilities": ["SANDFORCE"],
+  "hidden_abilities": ["SANDFORCE"],
+  "height": 10.5,
+  "weight": 740.0,
+  "generation": 6
+}

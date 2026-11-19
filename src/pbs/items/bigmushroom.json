@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BIGMUSHROOM",
+  "real_name": "Big Mushroom",
+  "real_name_plural": "Big Mushrooms",
+  "pocket": 1,
+  "price": 5000,
+  "flags": ["Fling_30"],
+  "real_description": "A large and rare mushroom. It is sought after by collectors."
+}

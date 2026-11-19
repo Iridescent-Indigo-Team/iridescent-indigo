@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLAZIKENITE",
+  "real_name": "Blazikenite",
+  "real_name_plural": "Blazikenites",
+  "pocket": 1,
+  "price": 0,
+  "bp_price": 50,
+  "flags": ["MegaStone", "Fling_80"],
+  "real_description": "One of a variety of mysterious Mega Stones. Have Blaziken hold it, and it will be able to Mega Evolve."
+}

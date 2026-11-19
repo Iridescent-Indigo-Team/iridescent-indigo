@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TARTAPPLE",
+  "real_name": "Tart Apple",
+  "real_name_plural": "Tart Apples",
+  "pocket": 1,
+  "price": 2200,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally tart."
+}

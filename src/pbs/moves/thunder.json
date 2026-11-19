@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDER",
+  "real_name": "Thunder",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 110,
+  "accuracy": 70,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ParalyzeTargetAlwaysHitsInRainHitsTargetInSky",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "A wicked thunderbolt is dropped on the foe to inflict damage. It may also leave the target paralyzed."
+}

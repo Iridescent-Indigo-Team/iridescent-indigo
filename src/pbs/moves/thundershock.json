@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDERSHOCK",
+  "real_name": "Thunder Shock",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "A jolt of electricity is hurled at the foe to inflict damage. It may also leave the target with paralysis."
+}

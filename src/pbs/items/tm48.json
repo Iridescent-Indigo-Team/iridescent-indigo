@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM48",
+  "real_name": "TM48",
+  "real_name_plural": "TM48s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SKILLSWAP",
+  "real_description": "The user employs its psychic power to exchange Abilities with the target."
+}

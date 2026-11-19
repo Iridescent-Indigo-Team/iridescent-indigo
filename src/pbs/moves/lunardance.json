@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LUNARDANCE",
+  "real_name": "Lunar Dance",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserFaintsHealAndCureReplacementRestorePP",
+  "flags": ["Dance"],
+  "real_description": "The user faints. In return, the Pokémon taking its place will have its status and HP fully restored."
+}

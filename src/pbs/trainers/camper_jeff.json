@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "CAMPER",
+  "name": "Jeff",
+  "real_lose_text": "A very good battle, indeed!",
+  "pokemon": [
+    {"species": "SPEAROW", "level": 16},
+    {"species": "SENTRET", "level": 16}
+  ]
+}

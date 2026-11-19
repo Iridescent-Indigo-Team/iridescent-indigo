@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CURIOUSMEDICINE",
+  "real_name": "Curious Medicine",
+  "real_description": "Removes all allies' stat changes on joining battle."
+}

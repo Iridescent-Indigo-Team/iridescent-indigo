@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDERWAVE",
+  "real_name": "Thunder Wave",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 90,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "ParalyzeTargetIfNotTypeImmune",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A weak electric charge is launched at the target. It causes paralysis if it hits."
+}

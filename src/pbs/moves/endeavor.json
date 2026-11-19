@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ENDEAVOR",
+  "real_name": "Endeavor",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerTargetHPToUserHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "An attack move that cuts down the target's HP to equal the user's HP."
+}

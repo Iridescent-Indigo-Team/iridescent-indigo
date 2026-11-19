@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEALPOWDER",
+  "real_name": "Heal Powder",
+  "real_name_plural": "Heal Powders",
+  "real_portion_name": "dose of Heal Powder",
+  "real_portion_name_plural": "doses of Heal Powder",
+  "pocket": 2,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A very bitter medicine powder. It heals all the status problems of a single Pokémon."
+}

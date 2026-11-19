@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DNASPLICERSUSED",
+  "real_name": "DNA Splicers",
+  "real_name_plural": "DNA Splicers",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A splicer that separates Kyurem and a certain Pokémon when they have been fused."
+}

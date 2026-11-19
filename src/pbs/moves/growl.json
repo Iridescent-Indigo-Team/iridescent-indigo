@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GROWL",
+  "real_name": "Growl",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetAttack1",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user growls in an endearing way, making the foe less wary. The foe's Attack stat is lowered."
+}

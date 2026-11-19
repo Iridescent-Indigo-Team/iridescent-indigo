@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WISH",
+  "real_name": "Wish",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserPositionNextTurn",
+  "real_description": "One turn after this move is used, the target's HP is restored by half the user's maximum HP."
+}

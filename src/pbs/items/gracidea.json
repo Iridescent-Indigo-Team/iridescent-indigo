@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRACIDEA",
+  "real_name": "Gracidea",
+  "real_name_plural": "Gracideas",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A flower sometimes bundled in bouquets to convey gratitude on special occasions like birthdays."
+}

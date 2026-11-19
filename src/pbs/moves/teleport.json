@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TELEPORT",
+  "real_name": "Teleport",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "priority": -6,
+  "function_code": "SwitchOutUserStatusMove",
+  "real_description": "The user switches place with a party Pokémon. Also warps to the last Pokémon Center visited."
+}

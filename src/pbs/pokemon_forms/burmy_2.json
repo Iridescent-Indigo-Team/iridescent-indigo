@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BURMY",
+  "form": 2,
+  "real_form_name": "Trash Cloak",
+  "color": "Red"
+}
