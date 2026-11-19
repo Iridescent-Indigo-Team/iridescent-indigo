@@ -33,6 +33,8 @@ make mkxp
 
 1. `install_assets.sh` copies the graphics, audio, PBS files and map data of the
    Essentials release in `lib/pokemon-essentials` into `src/assets/`.
+   Game data (PBS) is edited as JSON in `src/pbs/`, which is already in the
+   repository (see [PBS_JSON.md](PBS_JSON.md)).
 2. `make mkxp` builds the mkxp-z engine into `build/engine/`. You can skip this
    if you already have mkxp-z (see [game.sh](#gamesh)).
 3. `./game.sh` builds `build/` and starts the game in debug mode. The first
@@ -77,7 +79,7 @@ See `lib/mkxp-z/android/README.md`.
 | `src/assets/graphics/` | `build/Graphics/` | **halved** (see [Graphics pipeline](#graphics-pipeline)) |
 | `src/assets/audio/` | `build/Audio/` | copied |
 | `src/assets/fonts/` | `build/Fonts/` | copied |
-| `src/assets/pbs/` | `build/PBS/` | copied (newer files in `build/` are kept) |
+| `src/pbs/` (JSON) | `build/PBS/` | validated and exported as PBS files (see [PBS_JSON.md](PBS_JSON.md)); until `src/pbs/` exists, `src/assets/pbs/` is copied instead |
 | `src/assets/data/` | `build/Data/` | pixel values **halved** (`halve_data.rb`) |
 | `src/assets/plugins/` | `build/Plugins/` | copied |
 
@@ -102,9 +104,11 @@ To add a script, drop a file with the right number prefix into `src/data/`.
 
 ### Editing PBS files with the debug editors
 
-The in-game debug editors write to `build/PBS/`. `make` never overwrites a
-file there that is newer than its source. Run `make pull-pbs` to copy your
-edits back into `src/assets/pbs/` before committing.
+The in-game debug editors write to `build/PBS/`. Run `make pull-pbs` to import
+their changes into the JSON in `src/pbs/` before committing. `make` never
+overwrites a PBS file in `build/PBS/` that changed since it was exported; it
+stops and asks you to run `make pull-pbs` first (or `make pbs FORCE=1` to
+throw those changes away). See [PBS_JSON.md](PBS_JSON.md).
 
 ## Make targets
 
@@ -120,7 +124,12 @@ edits back into `src/assets/pbs/` before committing.
 | `make android` | Package `build/` as `dist/pokessentials-android.zip` (+ `.obb`) |
 | `make apk` | Build the mkxp-z Android app into `dist/` |
 | `make install-assets` / `make uninstall-assets` | See [Asset tools](#asset-tools) |
-| `make pull-pbs` | Copy PBS files changed by the debug editors back to `src/assets/pbs/` |
+| `make import-pbs` | Import `src/assets/pbs/*.txt` into the JSON in `src/pbs/` |
+| `make pbs` | Validate `src/pbs/` and export it to `build/PBS/` (`FORCE=1` overwrites debug-editor changes) |
+| `make pull-pbs` | Import PBS files changed by the debug editors (`build/PBS/`) into `src/pbs/` |
+| `make validate-pbs` | Check the JSON in `src/pbs/` |
+| `make pbs-schema` | Dump the PBS schemas from the engine into `tools/importer/pbs/engine_schema.json` |
+| `make test-pbs` | Run the PBS ⇄ JSON converter's tests |
 | `make clean-data` | Remove compiled data (`build/Data/*.dat`) |
 | `make clean` | Remove `build/`, keeping the built engine |
 | `make distclean` | Remove `build/` and `dist/` |
@@ -129,7 +138,7 @@ edits back into `src/assets/pbs/` before committing.
 ## game.sh
 
 ```bash
-./game.sh [--release] [--no-build] [--live] [--compile] [-- engine arguments]
+./game.sh [--release] [--no-build] [--live] [--compile] [--dump-schema FILE] [-- engine arguments]
 ```
 
 | Option | Description |
@@ -139,6 +148,7 @@ edits back into `src/assets/pbs/` before committing.
 | `--no-build` | Skip `make build` |
 | `--live` | Load scripts from `src/data/` instead of `build/Scripts/`, so script edits need no rebuild |
 | `--compile` | Compile PBS data and exit (headless via `xvfb-run` if there is no display) |
+| `--dump-schema FILE` | Write the PBS schemas of all GameData classes to `FILE` as JSON and exit (headless like `--compile`) |
 
 The engine is the first one found of:
 

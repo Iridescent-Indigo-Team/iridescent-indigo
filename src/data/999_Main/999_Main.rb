@@ -48,9 +48,28 @@ def pbCompileOnlyAndExit
   end
 end
 
+# Writes the PBS schemas of all GameData classes to a JSON file and quits. Used
+# by `make pbs-schema` (./game.sh --dump-schema) for the PBS <-> JSON converter
+# in tools/importer/pbs.
+def pbDumpSchemaAndExit(path)
+  begin
+    PluginManager.runPlugins
+    Compiler.dump_pbs_schema(path)
+    File.open(".dump_ok", "wb") { |f| f.write("ok") }
+    Kernel.exit!(0)
+  rescue Exception => e
+    raise if e.is_a?(SystemExit)
+    $stdout.puts("Dumping the PBS schema failed: #{e.class}: #{e.message}")
+    $stdout.puts(e.backtrace.join("\n")) if e.backtrace
+    $stdout.flush
+    Kernel.exit!(1)
+  end
+end
+
 def mainFunctionDebug
   begin
     MessageTypes.load_default_messages if FileTest.exist?("Data/messages_core.dat")
+    pbDumpSchemaAndExit(ENV["POKESSENTIALS_DUMP_SCHEMA"]) if !nil_or_empty?(ENV["POKESSENTIALS_DUMP_SCHEMA"])
     pbCompileOnlyAndExit if ENV["POKESSENTIALS_COMPILE_ONLY"] == "1"
     if $DEBUG && !FileTest.exist?("Game.rgssad") && Settings::PROMPT_TO_COMPILE
       pbSetResizeFactor(2)   # Needed to make the message look good (3x)

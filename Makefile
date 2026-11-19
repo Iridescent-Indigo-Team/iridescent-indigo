@@ -9,7 +9,9 @@
 #   src/assets/graphics  -> build/Graphics/  (halved to 256x192 scale)
 #   src/assets/audio     -> build/Audio/
 #   src/assets/fonts     -> build/Fonts/
-#   src/assets/pbs       -> build/PBS/
+#   src/pbs/ (JSON)      -> build/PBS/       (exported by tools/importer/pbs;
+#                                             src/assets/pbs is copied
+#                                             instead until src/pbs exists)
 #   src/assets/data      -> build/Data/      (pixel values halved)
 #   src/assets/plugins   -> build/Plugins/
 #
@@ -28,9 +30,14 @@ ANDROID_PACKAGE ?= com.mkxpz
 GAME_NAME ?= pokessentials
 
 SYNC      := $(PYTHON) -I $(SCRIPTS)/sync_dir.py
+PBS_JSON  := $(PYTHON) -I tools/importer/pbs/pbs_json.py
+PBS_SRC   := $(SRC)/pbs
+PBS_SCHEMA := tools/importer/pbs/engine_schema.json
+FORCE     ?= 0
 
 .PHONY: all build scripts graphics audio fonts pbs data plugins config \
-        run debug release live compile pull-pbs \
+        run debug release live compile pull-pbs import-pbs validate-pbs \
+        pbs-schema test-pbs \
         mkxp desktop android apk \
         install-assets uninstall-assets clean clean-data distclean help
 
@@ -57,17 +64,39 @@ audio:
 fonts:
 	@$(SYNC) --delete $(ASSETS)/fonts $(BUILD)/Fonts
 
-# PBS files are copied with --update so edits made by the in-game debug
-# editors (which write to build/PBS) are not overwritten. Use `make pull-pbs`
-# to copy those edits back into src/assets/pbs.
-## pbs: copy src/assets/pbs to build/PBS (keeps newer files in build/)
+# The JSON in src/pbs is the source of the PBS files: `make pbs` validates it
+# and writes build/PBS/*.txt. The in-game debug editors write to build/PBS;
+# `make pull-pbs` imports their changes back into src/pbs. An export never
+# overwrites a PBS file changed since the last export (pull it first, or use
+# FORCE=1). Until src/pbs exists, src/assets/pbs is copied as before.
+## pbs: export the JSON in src/pbs to build/PBS (validates it first)
 pbs:
-	@$(SYNC) --update $(ASSETS)/pbs $(BUILD)/PBS
+	@if [ -d $(PBS_SRC) ]; then \
+		$(PBS_JSON) --src $(PBS_SRC) export $(BUILD)/PBS $(if $(filter 1,$(FORCE)),--force); \
+	else \
+		$(SYNC) --update $(ASSETS)/pbs $(BUILD)/PBS; \
+	fi
 
-## pull-pbs: copy PBS files changed by the debug editors back to src/assets/pbs
+## import-pbs: import src/assets/pbs (top-level files only) into the JSON in src/pbs
+import-pbs:
+	@$(PBS_JSON) --src $(PBS_SRC) import $(ASSETS)/pbs
+
+## pull-pbs: import PBS files changed by the debug editors (build/PBS) into src/pbs
 pull-pbs:
-	@$(SYNC) --update --only '*.txt' $(BUILD)/PBS $(ASSETS)/pbs
-	@echo "Copied newer PBS files from $(BUILD)/PBS to $(ASSETS)/pbs."
+	@$(PBS_JSON) --src $(PBS_SRC) import $(BUILD)/PBS
+
+## validate-pbs: check the JSON in src/pbs
+validate-pbs:
+	@$(PBS_JSON) --src $(PBS_SRC) validate
+
+## pbs-schema: dump the PBS schemas from the engine into tools/importer/pbs
+pbs-schema: scripts config
+	@./game.sh --no-build --dump-schema $(PBS_SCHEMA)
+	@if [ -d $(PBS_SRC) ]; then $(PBS_JSON) --src $(PBS_SRC) schema; fi
+
+## test-pbs: run the PBS <-> JSON converter's tests
+test-pbs:
+	@$(PYTHON) -I -m unittest discover -s tools/importer/pbs/tests -t tools/importer/pbs
 
 ## data: copy src/assets/data to build/Data, halving pixel values
 data:

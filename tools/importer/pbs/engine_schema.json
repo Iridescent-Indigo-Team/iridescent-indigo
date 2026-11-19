@@ -1,0 +1,2033 @@
+{
+  "format": 1,
+  "essentials_version": "21.1",
+  "pbs_files": {
+    "Ability": "abilities",
+    "BattleFacility": "battle_facility_lists",
+    "BerryPlant": "berry_plants",
+    "Connection": "map_connections",
+    "DungeonParameters": "dungeon_parameters",
+    "DungeonTileset": "dungeon_tilesets",
+    "Encounter": "encounters",
+    "Item": "items",
+    "MapMetadata": "map_metadata",
+    "Metadata": "metadata",
+    "Move": "moves",
+    "PhoneMessage": "phone",
+    "RegionalDex": "regional_dexes",
+    "Ribbon": "ribbons",
+    "ShadowPokemon": "shadow_pokemon",
+    "Species": "pokemon",
+    "Species1": "pokemon_forms",
+    "SpeciesMetrics": "pokemon_metrics",
+    "TownMap": "town_map",
+    "Trainer": "trainers",
+    "TrainerType": "trainer_types",
+    "Type": "types"
+  },
+  "classes": {
+    "Ability": {
+      "pbs_base_filename": "abilities",
+      "data_filename": "abilities.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Description",
+          "property": "real_description",
+          "type": "q"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "BerryPlant": {
+      "pbs_base_filename": "berry_plants",
+      "data_filename": "berry_plants.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "HoursPerStage",
+          "property": "hours_per_stage",
+          "type": "v"
+        },
+        {
+          "key": "DryingPerHour",
+          "property": "drying_per_hour",
+          "type": "u"
+        },
+        {
+          "key": "Yield",
+          "property": "yield",
+          "type": "uv"
+        }
+      ]
+    },
+    "DungeonParameters": {
+      "pbs_base_filename": "dungeon_parameters",
+      "data_filename": "dungeon_parameters.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "mV"
+        },
+        {
+          "key": "DungeonSize",
+          "property": "dungeon_size",
+          "type": "vv"
+        },
+        {
+          "key": "CellSize",
+          "property": "cell_size",
+          "type": "vv"
+        },
+        {
+          "key": "MinRoomSize",
+          "property": "min_room_size",
+          "type": "vv"
+        },
+        {
+          "key": "MaxRoomSize",
+          "property": "max_room_size",
+          "type": "vv"
+        },
+        {
+          "key": "CorridorWidth",
+          "property": "corridor_width",
+          "type": "v"
+        },
+        {
+          "key": "ShiftCorridors",
+          "property": "random_corridor_shift",
+          "type": "b"
+        },
+        {
+          "key": "NodeLayout",
+          "property": "node_layout",
+          "type": "m"
+        },
+        {
+          "key": "RoomLayout",
+          "property": "room_layout",
+          "type": "m"
+        },
+        {
+          "key": "RoomChance",
+          "property": "room_chance",
+          "type": "v"
+        },
+        {
+          "key": "ExtraConnections",
+          "property": "extra_connections_count",
+          "type": "u"
+        },
+        {
+          "key": "FloorPatches",
+          "property": "floor_patches",
+          "type": "vvu"
+        },
+        {
+          "key": "FloorDecorations",
+          "property": "floor_decorations",
+          "type": "uu"
+        },
+        {
+          "key": "VoidDecorations",
+          "property": "void_decorations",
+          "type": "uu"
+        },
+        {
+          "key": "RNGSeed",
+          "property": "rng_seed",
+          "type": "u"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "DungeonTileset": {
+      "pbs_base_filename": "dungeon_tilesets",
+      "data_filename": "dungeon_tilesets.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "u"
+        },
+        {
+          "key": "Autotile",
+          "property": "autotile",
+          "type": "^um"
+        },
+        {
+          "key": "Tile",
+          "property": "tile",
+          "type": "^um"
+        },
+        {
+          "key": "SnapToLargeGrid",
+          "property": "snap_to_large_grid",
+          "type": "b"
+        },
+        {
+          "key": "LargeVoidTiles",
+          "property": "large_void_tiles",
+          "type": "b"
+        },
+        {
+          "key": "LargeWallTiles",
+          "property": "large_wall_tiles",
+          "type": "b"
+        },
+        {
+          "key": "LargeFloorTiles",
+          "property": "large_floor_tiles",
+          "type": "b"
+        },
+        {
+          "key": "DoubleWalls",
+          "property": "double_walls",
+          "type": "b"
+        },
+        {
+          "key": "FloorPatchUnderWalls",
+          "property": "floor_patch_under_walls",
+          "type": "b"
+        },
+        {
+          "key": "ThinNorthWallOffset",
+          "property": "thin_north_wall_offset",
+          "type": "i"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "Encounter": {
+      "pbs_base_filename": "encounters",
+      "data_filename": "encounters.dat",
+      "optional": false,
+      "schema": null
+    },
+    "Item": {
+      "pbs_base_filename": "items",
+      "data_filename": "items.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "NamePlural",
+          "property": "real_name_plural",
+          "type": "s"
+        },
+        {
+          "key": "PortionName",
+          "property": "real_portion_name",
+          "type": "s"
+        },
+        {
+          "key": "PortionNamePlural",
+          "property": "real_portion_name_plural",
+          "type": "s"
+        },
+        {
+          "key": "Pocket",
+          "property": "pocket",
+          "type": "v"
+        },
+        {
+          "key": "Price",
+          "property": "price",
+          "type": "u"
+        },
+        {
+          "key": "SellPrice",
+          "property": "sell_price",
+          "type": "u"
+        },
+        {
+          "key": "BPPrice",
+          "property": "bp_price",
+          "type": "u"
+        },
+        {
+          "key": "FieldUse",
+          "property": "field_use",
+          "type": "e",
+          "enums": [
+            {
+              "hash": {
+                "OnPokemon": 1,
+                "Direct": 2,
+                "TM": 3,
+                "HM": 4,
+                "TR": 5
+              }
+            }
+          ]
+        },
+        {
+          "key": "BattleUse",
+          "property": "battle_use",
+          "type": "e",
+          "enums": [
+            {
+              "hash": {
+                "OnPokemon": 1,
+                "OnMove": 2,
+                "OnBattler": 3,
+                "OnFoe": 4,
+                "Direct": 5
+              }
+            }
+          ]
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        },
+        {
+          "key": "Consumable",
+          "property": "consumable",
+          "type": "b"
+        },
+        {
+          "key": "ShowQuantity",
+          "property": "show_quantity",
+          "type": "b"
+        },
+        {
+          "key": "Move",
+          "property": "move",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "Description",
+          "property": "real_description",
+          "type": "q"
+        }
+      ]
+    },
+    "MapMetadata": {
+      "pbs_base_filename": "map_metadata",
+      "data_filename": "map_metadata.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "u"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Outdoor",
+          "property": "outdoor_map",
+          "type": "b"
+        },
+        {
+          "key": "ShowArea",
+          "property": "announce_location",
+          "type": "b"
+        },
+        {
+          "key": "Bicycle",
+          "property": "can_bicycle",
+          "type": "b"
+        },
+        {
+          "key": "BicycleAlways",
+          "property": "always_bicycle",
+          "type": "b"
+        },
+        {
+          "key": "HealingSpot",
+          "property": "teleport_destination",
+          "type": "vuu"
+        },
+        {
+          "key": "Weather",
+          "property": "weather",
+          "type": "eu",
+          "enums": [
+            {
+              "gamedata": "Weather"
+            }
+          ]
+        },
+        {
+          "key": "MapPosition",
+          "property": "town_map_position",
+          "type": "uuu"
+        },
+        {
+          "key": "DiveMap",
+          "property": "dive_map_id",
+          "type": "v"
+        },
+        {
+          "key": "DarkMap",
+          "property": "dark_map",
+          "type": "b"
+        },
+        {
+          "key": "SafariMap",
+          "property": "safari_map",
+          "type": "b"
+        },
+        {
+          "key": "SnapEdges",
+          "property": "snap_edges",
+          "type": "b"
+        },
+        {
+          "key": "StillReflections",
+          "property": "still_reflections",
+          "type": "b"
+        },
+        {
+          "key": "Dungeon",
+          "property": "random_dungeon",
+          "type": "b"
+        },
+        {
+          "key": "BattleBack",
+          "property": "battle_background",
+          "type": "s"
+        },
+        {
+          "key": "WildBattleBGM",
+          "property": "wild_battle_BGM",
+          "type": "s"
+        },
+        {
+          "key": "TrainerBattleBGM",
+          "property": "trainer_battle_BGM",
+          "type": "s"
+        },
+        {
+          "key": "WildVictoryBGM",
+          "property": "wild_victory_BGM",
+          "type": "s"
+        },
+        {
+          "key": "TrainerVictoryBGM",
+          "property": "trainer_victory_BGM",
+          "type": "s"
+        },
+        {
+          "key": "WildCaptureME",
+          "property": "wild_capture_ME",
+          "type": "s"
+        },
+        {
+          "key": "MapSize",
+          "property": "town_map_size",
+          "type": "us"
+        },
+        {
+          "key": "Environment",
+          "property": "battle_environment",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Environment"
+            }
+          ]
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "Metadata": {
+      "pbs_base_filename": "metadata",
+      "data_filename": "metadata.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "u"
+        },
+        {
+          "key": "StartMoney",
+          "property": "start_money",
+          "type": "u"
+        },
+        {
+          "key": "StartItemStorage",
+          "property": "start_item_storage",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "Home",
+          "property": "home",
+          "type": "vuuu"
+        },
+        {
+          "key": "StorageCreator",
+          "property": "real_storage_creator",
+          "type": "s"
+        },
+        {
+          "key": "WildBattleBGM",
+          "property": "wild_battle_BGM",
+          "type": "s"
+        },
+        {
+          "key": "TrainerBattleBGM",
+          "property": "trainer_battle_BGM",
+          "type": "s"
+        },
+        {
+          "key": "WildVictoryBGM",
+          "property": "wild_victory_BGM",
+          "type": "s"
+        },
+        {
+          "key": "TrainerVictoryBGM",
+          "property": "trainer_victory_BGM",
+          "type": "s"
+        },
+        {
+          "key": "WildCaptureME",
+          "property": "wild_capture_ME",
+          "type": "s"
+        },
+        {
+          "key": "SurfBGM",
+          "property": "surf_BGM",
+          "type": "s"
+        },
+        {
+          "key": "BicycleBGM",
+          "property": "bicycle_BGM",
+          "type": "s"
+        }
+      ]
+    },
+    "Move": {
+      "pbs_base_filename": "moves",
+      "data_filename": "moves.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Type",
+          "property": "type",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Type"
+            }
+          ]
+        },
+        {
+          "key": "Category",
+          "property": "category",
+          "type": "e",
+          "enums": [
+            {
+              "array": ["Physical", "Special", "Status"]
+            }
+          ]
+        },
+        {
+          "key": "Power",
+          "property": "power",
+          "type": "u"
+        },
+        {
+          "key": "Accuracy",
+          "property": "accuracy",
+          "type": "u"
+        },
+        {
+          "key": "TotalPP",
+          "property": "total_pp",
+          "type": "u"
+        },
+        {
+          "key": "Target",
+          "property": "target",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Target"
+            }
+          ]
+        },
+        {
+          "key": "Priority",
+          "property": "priority",
+          "type": "i"
+        },
+        {
+          "key": "FunctionCode",
+          "property": "function_code",
+          "type": "s"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        },
+        {
+          "key": "EffectChance",
+          "property": "effect_chance",
+          "type": "u"
+        },
+        {
+          "key": "Description",
+          "property": "real_description",
+          "type": "q"
+        }
+      ]
+    },
+    "PhoneMessage": {
+      "pbs_base_filename": "phone",
+      "data_filename": "phone.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "q"
+        },
+        {
+          "key": "Intro",
+          "property": "intro",
+          "type": "^q"
+        },
+        {
+          "key": "IntroMorning",
+          "property": "intro_morning",
+          "type": "^q"
+        },
+        {
+          "key": "IntroAfternoon",
+          "property": "intro_afternoon",
+          "type": "^q"
+        },
+        {
+          "key": "IntroEvening",
+          "property": "intro_evening",
+          "type": "^q"
+        },
+        {
+          "key": "Body",
+          "property": "body",
+          "type": "^q"
+        },
+        {
+          "key": "Body1",
+          "property": "body1",
+          "type": "^q"
+        },
+        {
+          "key": "Body2",
+          "property": "body2",
+          "type": "^q"
+        },
+        {
+          "key": "BattleRequest",
+          "property": "battle_request",
+          "type": "^q"
+        },
+        {
+          "key": "BattleRemind",
+          "property": "battle_remind",
+          "type": "^q"
+        },
+        {
+          "key": "End",
+          "property": "end",
+          "type": "^q"
+        }
+      ]
+    },
+    "Ribbon": {
+      "pbs_base_filename": "ribbons",
+      "data_filename": "ribbons.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "IconPosition",
+          "property": "icon_position",
+          "type": "u"
+        },
+        {
+          "key": "Description",
+          "property": "real_description",
+          "type": "q"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "ShadowPokemon": {
+      "pbs_base_filename": "shadow_pokemon",
+      "data_filename": "shadow_pokemon.dat",
+      "optional": true,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "eV",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        },
+        {
+          "key": "GaugeSize",
+          "property": "gauge_size",
+          "type": "v"
+        },
+        {
+          "key": "Moves",
+          "property": "moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "Species": {
+      "pbs_base_filename": ["pokemon", "pokemon_forms"],
+      "data_filename": "species.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "FormName",
+          "property": "real_form_name",
+          "type": "q"
+        },
+        {
+          "key": "Types",
+          "property": "types",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Type"
+            }
+          ]
+        },
+        {
+          "key": "BaseStats",
+          "property": "base_stats",
+          "type": "vvvvvv"
+        },
+        {
+          "key": "GenderRatio",
+          "property": "gender_ratio",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "GenderRatio"
+            }
+          ]
+        },
+        {
+          "key": "GrowthRate",
+          "property": "growth_rate",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "GrowthRate"
+            }
+          ]
+        },
+        {
+          "key": "BaseExp",
+          "property": "base_exp",
+          "type": "v"
+        },
+        {
+          "key": "EVs",
+          "property": "evs",
+          "type": "*ev",
+          "enums": [
+            {
+              "gamedata": "Stat"
+            }
+          ]
+        },
+        {
+          "key": "CatchRate",
+          "property": "catch_rate",
+          "type": "u"
+        },
+        {
+          "key": "Happiness",
+          "property": "happiness",
+          "type": "u"
+        },
+        {
+          "key": "Abilities",
+          "property": "abilities",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Ability"
+            }
+          ]
+        },
+        {
+          "key": "HiddenAbilities",
+          "property": "hidden_abilities",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Ability"
+            }
+          ]
+        },
+        {
+          "key": "Moves",
+          "property": "moves",
+          "type": "*ue",
+          "enums": [
+            null,
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "TutorMoves",
+          "property": "tutor_moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "EggMoves",
+          "property": "egg_moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "EggGroups",
+          "property": "egg_groups",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "EggGroup"
+            }
+          ]
+        },
+        {
+          "key": "HatchSteps",
+          "property": "hatch_steps",
+          "type": "v"
+        },
+        {
+          "key": "Incense",
+          "property": "incense",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "Offspring",
+          "property": "offspring",
+          "type": "*s"
+        },
+        {
+          "key": "Height",
+          "property": "height",
+          "type": "f"
+        },
+        {
+          "key": "Weight",
+          "property": "weight",
+          "type": "f"
+        },
+        {
+          "key": "Color",
+          "property": "color",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "BodyColor"
+            }
+          ]
+        },
+        {
+          "key": "Shape",
+          "property": "shape",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "BodyShape"
+            }
+          ]
+        },
+        {
+          "key": "Habitat",
+          "property": "habitat",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Habitat"
+            }
+          ]
+        },
+        {
+          "key": "Category",
+          "property": "real_category",
+          "type": "s"
+        },
+        {
+          "key": "Pokedex",
+          "property": "real_pokedex_entry",
+          "type": "q"
+        },
+        {
+          "key": "Generation",
+          "property": "generation",
+          "type": "i"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        },
+        {
+          "key": "WildItemCommon",
+          "property": "wild_item_common",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "WildItemUncommon",
+          "property": "wild_item_uncommon",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "WildItemRare",
+          "property": "wild_item_rare",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "Evolutions",
+          "property": "evolutions",
+          "type": "*ses",
+          "enums": [
+            null,
+            {
+              "gamedata": "Evolution"
+            }
+          ]
+        },
+        {
+          "key": "Evolution",
+          "property": "evolutions",
+          "type": "^seS",
+          "enums": [
+            null,
+            {
+              "gamedata": "Evolution"
+            }
+          ]
+        }
+      ],
+      "form_schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "ev",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        },
+        {
+          "key": "FormName",
+          "property": "real_form_name",
+          "type": "q"
+        },
+        {
+          "key": "PokedexForm",
+          "property": "pokedex_form",
+          "type": "u"
+        },
+        {
+          "key": "MegaStone",
+          "property": "mega_stone",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "MegaMove",
+          "property": "mega_move",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "UnmegaForm",
+          "property": "unmega_form",
+          "type": "u"
+        },
+        {
+          "key": "MegaMessage",
+          "property": "mega_message",
+          "type": "u"
+        },
+        {
+          "key": "Types",
+          "property": "types",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Type"
+            }
+          ]
+        },
+        {
+          "key": "BaseStats",
+          "property": "base_stats",
+          "type": "vvvvvv"
+        },
+        {
+          "key": "BaseExp",
+          "property": "base_exp",
+          "type": "v"
+        },
+        {
+          "key": "EVs",
+          "property": "evs",
+          "type": "*ev",
+          "enums": [
+            {
+              "gamedata": "Stat"
+            }
+          ]
+        },
+        {
+          "key": "CatchRate",
+          "property": "catch_rate",
+          "type": "u"
+        },
+        {
+          "key": "Happiness",
+          "property": "happiness",
+          "type": "u"
+        },
+        {
+          "key": "Abilities",
+          "property": "abilities",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Ability"
+            }
+          ]
+        },
+        {
+          "key": "HiddenAbilities",
+          "property": "hidden_abilities",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Ability"
+            }
+          ]
+        },
+        {
+          "key": "Moves",
+          "property": "moves",
+          "type": "*ue",
+          "enums": [
+            null,
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "TutorMoves",
+          "property": "tutor_moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "EggMoves",
+          "property": "egg_moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "EggGroups",
+          "property": "egg_groups",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "EggGroup"
+            }
+          ]
+        },
+        {
+          "key": "HatchSteps",
+          "property": "hatch_steps",
+          "type": "v"
+        },
+        {
+          "key": "Offspring",
+          "property": "offspring",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        },
+        {
+          "key": "Height",
+          "property": "height",
+          "type": "f"
+        },
+        {
+          "key": "Weight",
+          "property": "weight",
+          "type": "f"
+        },
+        {
+          "key": "Color",
+          "property": "color",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "BodyColor"
+            }
+          ]
+        },
+        {
+          "key": "Shape",
+          "property": "shape",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "BodyShape"
+            }
+          ]
+        },
+        {
+          "key": "Habitat",
+          "property": "habitat",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Habitat"
+            }
+          ]
+        },
+        {
+          "key": "Category",
+          "property": "real_category",
+          "type": "s"
+        },
+        {
+          "key": "Pokedex",
+          "property": "real_pokedex_entry",
+          "type": "q"
+        },
+        {
+          "key": "Generation",
+          "property": "generation",
+          "type": "i"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        },
+        {
+          "key": "WildItemCommon",
+          "property": "wild_item_common",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "WildItemUncommon",
+          "property": "wild_item_uncommon",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "WildItemRare",
+          "property": "wild_item_rare",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "Evolutions",
+          "property": "evolutions",
+          "type": "*ees",
+          "enums": [
+            {
+              "gamedata": "Species"
+            },
+            {
+              "gamedata": "Evolution"
+            }
+          ]
+        },
+        {
+          "key": "Evolution",
+          "property": "evolutions",
+          "type": "^eeS",
+          "enums": [
+            {
+              "gamedata": "Species"
+            },
+            {
+              "gamedata": "Evolution"
+            }
+          ]
+        }
+      ]
+    },
+    "SpeciesMetrics": {
+      "pbs_base_filename": "pokemon_metrics",
+      "data_filename": "species_metrics.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "eV",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        },
+        {
+          "key": "BackSprite",
+          "property": "back_sprite",
+          "type": "ii"
+        },
+        {
+          "key": "FrontSprite",
+          "property": "front_sprite",
+          "type": "ii"
+        },
+        {
+          "key": "FrontSpriteAltitude",
+          "property": "front_sprite_altitude",
+          "type": "i"
+        },
+        {
+          "key": "ShadowX",
+          "property": "shadow_x",
+          "type": "i"
+        },
+        {
+          "key": "ShadowSize",
+          "property": "shadow_size",
+          "type": "u"
+        }
+      ]
+    },
+    "TownMap": {
+      "pbs_base_filename": "town_map",
+      "data_filename": "town_map.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "u"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Filename",
+          "property": "filename",
+          "type": "s"
+        },
+        {
+          "key": "Point",
+          "property": "point",
+          "type": "^uusSUUUU"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "Trainer": {
+      "pbs_base_filename": "trainers",
+      "data_filename": "trainers.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "esU",
+          "enums": [
+            {
+              "gamedata": "TrainerType"
+            }
+          ]
+        },
+        {
+          "key": "Items",
+          "property": "items",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "LoseText",
+          "property": "real_lose_text",
+          "type": "q"
+        },
+        {
+          "key": "Pokemon",
+          "property": "pokemon",
+          "type": "ev",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        }
+      ],
+      "sub_schema": [
+        {
+          "key": "Form",
+          "property": "form",
+          "type": "u"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Moves",
+          "property": "moves",
+          "type": "*e",
+          "enums": [
+            {
+              "gamedata": "Move"
+            }
+          ]
+        },
+        {
+          "key": "Ability",
+          "property": "ability",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Ability"
+            }
+          ]
+        },
+        {
+          "key": "AbilityIndex",
+          "property": "ability_index",
+          "type": "u"
+        },
+        {
+          "key": "Item",
+          "property": "item",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        },
+        {
+          "key": "Gender",
+          "property": "gender",
+          "type": "e",
+          "enums": [
+            {
+              "hash": {
+                "M": 0,
+                "m": 0,
+                "Male": 0,
+                "male": 0,
+                "0": 0,
+                "F": 1,
+                "f": 1,
+                "Female": 1,
+                "female": 1,
+                "1": 1
+              }
+            }
+          ]
+        },
+        {
+          "key": "Nature",
+          "property": "nature",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Nature"
+            }
+          ]
+        },
+        {
+          "key": "IV",
+          "property": "iv",
+          "type": "uUUUUU"
+        },
+        {
+          "key": "EV",
+          "property": "ev",
+          "type": "uUUUUU"
+        },
+        {
+          "key": "Happiness",
+          "property": "happiness",
+          "type": "u"
+        },
+        {
+          "key": "Shiny",
+          "property": "shininess",
+          "type": "b"
+        },
+        {
+          "key": "SuperShiny",
+          "property": "super_shininess",
+          "type": "b"
+        },
+        {
+          "key": "Shadow",
+          "property": "shadowness",
+          "type": "b"
+        },
+        {
+          "key": "Ball",
+          "property": "poke_ball",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Item"
+            }
+          ]
+        }
+      ]
+    },
+    "TrainerType": {
+      "pbs_base_filename": "trainer_types",
+      "data_filename": "trainer_types.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "Gender",
+          "property": "gender",
+          "type": "e",
+          "enums": [
+            {
+              "hash": {
+                "Male": 0,
+                "male": 0,
+                "M": 0,
+                "m": 0,
+                "0": 0,
+                "Female": 1,
+                "female": 1,
+                "F": 1,
+                "f": 1,
+                "1": 1,
+                "Unknown": 2,
+                "unknown": 2,
+                "Other": 2,
+                "other": 2,
+                "Mixed": 2,
+                "mixed": 2,
+                "X": 2,
+                "x": 2,
+                "2": 2
+              }
+            }
+          ]
+        },
+        {
+          "key": "BaseMoney",
+          "property": "base_money",
+          "type": "u"
+        },
+        {
+          "key": "SkillLevel",
+          "property": "skill_level",
+          "type": "u"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        },
+        {
+          "key": "IntroBGM",
+          "property": "intro_BGM",
+          "type": "s"
+        },
+        {
+          "key": "BattleBGM",
+          "property": "battle_BGM",
+          "type": "s"
+        },
+        {
+          "key": "VictoryBGM",
+          "property": "victory_BGM",
+          "type": "s"
+        }
+      ]
+    },
+    "Type": {
+      "pbs_base_filename": "types",
+      "data_filename": "types.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "m"
+        },
+        {
+          "key": "Name",
+          "property": "real_name",
+          "type": "s"
+        },
+        {
+          "key": "IconPosition",
+          "property": "icon_position",
+          "type": "u"
+        },
+        {
+          "key": "IsSpecialType",
+          "property": "special_type",
+          "type": "b"
+        },
+        {
+          "key": "IsPseudoType",
+          "property": "pseudo_type",
+          "type": "b"
+        },
+        {
+          "key": "Weaknesses",
+          "property": "weaknesses",
+          "type": "*m"
+        },
+        {
+          "key": "Resistances",
+          "property": "resistances",
+          "type": "*m"
+        },
+        {
+          "key": "Immunities",
+          "property": "immunities",
+          "type": "*m"
+        },
+        {
+          "key": "Flags",
+          "property": "flags",
+          "type": "*s"
+        }
+      ]
+    },
+    "PlayerMetadata": {
+      "pbs_base_filename": "metadata",
+      "data_filename": "player_metadata.dat",
+      "optional": false,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "u"
+        },
+        {
+          "key": "TrainerType",
+          "property": "trainer_type",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "TrainerType"
+            }
+          ]
+        },
+        {
+          "key": "WalkCharset",
+          "property": "walk_charset",
+          "type": "s"
+        },
+        {
+          "key": "RunCharset",
+          "property": "run_charset",
+          "type": "s"
+        },
+        {
+          "key": "CycleCharset",
+          "property": "cycle_charset",
+          "type": "s"
+        },
+        {
+          "key": "SurfCharset",
+          "property": "surf_charset",
+          "type": "s"
+        },
+        {
+          "key": "DiveCharset",
+          "property": "dive_charset",
+          "type": "s"
+        },
+        {
+          "key": "FishCharset",
+          "property": "fish_charset",
+          "type": "s"
+        },
+        {
+          "key": "SurfFishCharset",
+          "property": "surf_fish_charset",
+          "type": "s"
+        },
+        {
+          "key": "Home",
+          "property": "home",
+          "type": "vuuu"
+        }
+      ]
+    }
+  },
+  "enums": {
+    "Ability": {
+      "source": "pbs"
+    },
+    "BodyColor": {
+      "source": "hardcoded",
+      "values": ["Red", "Blue", "Yellow", "Green", "Black", "Brown", "Purple", "Gray", "White", "Pink"]
+    },
+    "BodyShape": {
+      "source": "hardcoded",
+      "values": ["Head", "Serpentine", "Finned", "HeadArms", "HeadBase", "BipedalTail", "HeadLegs", "Quadruped", "Winged", "Multiped", "MultiBody", "Bipedal", "MultiWinged", "Insectoid"]
+    },
+    "EggGroup": {
+      "source": "hardcoded",
+      "values": ["Undiscovered", "Monster", "Water1", "Bug", "Flying", "Field", "Fairy", "Grass", "Humanlike", "Water3", "Mineral", "Amorphous", "Water2", "Ditto", "Dragon"]
+    },
+    "Environment": {
+      "source": "hardcoded",
+      "values": ["None", "Grass", "TallGrass", "MovingWater", "StillWater", "Puddle", "Underwater", "Cave", "Rock", "Sand", "Forest", "ForestGrass", "Snow", "Ice", "Volcano", "Graveyard", "Sky", "Space", "UltraSpace"]
+    },
+    "Evolution": {
+      "source": "hardcoded",
+      "values": ["None", "Level", "LevelMale", "LevelFemale", "LevelDay", "LevelNight", "LevelMorning", "LevelAfternoon", "LevelEvening", "LevelNoWeather", "LevelSun", "LevelRain", "LevelSnow", "LevelSandstorm", "LevelCycling", "LevelSurfing", "LevelDiving", "LevelDarkness", "LevelDarkInParty", "AttackGreater", "AtkDefEqual", "DefenseGreater", "Silcoon", "Cascoon", "Ninjask", "Shedinja", "Happiness", "HappinessMale", "HappinessFemale", "HappinessDay", "HappinessNight", "HappinessMove", "HappinessMoveType", "HappinessHoldItem", "MaxHappiness", "Beauty", "HoldItem", "HoldItemMale", "HoldItemFemale", "DayHoldItem", "NightHoldItem", "HoldItemHappiness", "HasMove", "HasMoveType", "HasInParty", "Location", "LocationFlag", "Region", "Item", "ItemMale", "ItemFemale", "ItemDay", "ItemNight", "ItemHappiness", "Trade", "TradeMale", "TradeFemale", "TradeDay", "TradeNight", "TradeItem", "TradeSpecies", "BattleDealCriticalHit", "Event", "EventAfterDamageTaken"]
+    },
+    "GenderRatio": {
+      "source": "hardcoded",
+      "values": ["AlwaysMale", "AlwaysFemale", "Genderless", "FemaleOneEighth", "Female25Percent", "Female50Percent", "Female75Percent", "FemaleSevenEighths"]
+    },
+    "GrowthRate": {
+      "source": "hardcoded",
+      "values": ["Medium", "Erratic", "Fluctuating", "Parabolic", "Fast", "Slow"]
+    },
+    "Habitat": {
+      "source": "hardcoded",
+      "values": ["None", "Grassland", "Forest", "WatersEdge", "Sea", "Cave", "Mountain", "RoughTerrain", "Urban", "Rare"]
+    },
+    "Item": {
+      "source": "pbs"
+    },
+    "Move": {
+      "source": "pbs"
+    },
+    "Nature": {
+      "source": "hardcoded",
+      "values": ["HARDY", "LONELY", "BRAVE", "ADAMANT", "NAUGHTY", "BOLD", "DOCILE", "RELAXED", "IMPISH", "LAX", "TIMID", "HASTY", "SERIOUS", "JOLLY", "NAIVE", "MODEST", "MILD", "QUIET", "BASHFUL", "RASH", "CALM", "GENTLE", "SASSY", "CAREFUL", "QUIRKY"]
+    },
+    "Species": {
+      "source": "pbs"
+    },
+    "Stat": {
+      "source": "hardcoded",
+      "values": ["HP", "ATTACK", "DEFENSE", "SPECIAL_ATTACK", "SPECIAL_DEFENSE", "SPEED", "ACCURACY", "EVASION"]
+    },
+    "Target": {
+      "source": "hardcoded",
+      "values": ["None", "User", "NearAlly", "UserOrNearAlly", "AllAllies", "UserAndAllies", "NearFoe", "RandomNearFoe", "AllNearFoes", "Foe", "AllFoes", "NearOther", "AllNearOthers", "Other", "AllBattlers", "UserSide", "FoeSide", "BothSides"]
+    },
+    "TrainerType": {
+      "source": "pbs"
+    },
+    "Type": {
+      "source": "pbs"
+    },
+    "Weather": {
+      "source": "hardcoded",
+      "values": ["None", "Rain", "Storm", "Snow", "Blizzard", "Sandstorm", "HeavyRain", "Sun", "Fog"]
+    }
+  },
+  "extra": {
+    "evolution_parameters": {
+      "None": null,
+      "Level": "Integer",
+      "LevelMale": "Integer",
+      "LevelFemale": "Integer",
+      "LevelDay": "Integer",
+      "LevelNight": "Integer",
+      "LevelMorning": "Integer",
+      "LevelAfternoon": "Integer",
+      "LevelEvening": "Integer",
+      "LevelNoWeather": "Integer",
+      "LevelSun": "Integer",
+      "LevelRain": "Integer",
+      "LevelSnow": "Integer",
+      "LevelSandstorm": "Integer",
+      "LevelCycling": "Integer",
+      "LevelSurfing": "Integer",
+      "LevelDiving": "Integer",
+      "LevelDarkness": "Integer",
+      "LevelDarkInParty": "Integer",
+      "AttackGreater": "Integer",
+      "AtkDefEqual": "Integer",
+      "DefenseGreater": "Integer",
+      "Silcoon": "Integer",
+      "Cascoon": "Integer",
+      "Ninjask": "Integer",
+      "Shedinja": "Integer",
+      "Happiness": null,
+      "HappinessMale": null,
+      "HappinessFemale": null,
+      "HappinessDay": null,
+      "HappinessNight": null,
+      "HappinessMove": "Move",
+      "HappinessMoveType": "Type",
+      "HappinessHoldItem": "Item",
+      "MaxHappiness": null,
+      "Beauty": "Integer",
+      "HoldItem": "Item",
+      "HoldItemMale": "Item",
+      "HoldItemFemale": "Item",
+      "DayHoldItem": "Item",
+      "NightHoldItem": "Item",
+      "HoldItemHappiness": "Item",
+      "HasMove": "Move",
+      "HasMoveType": "Type",
+      "HasInParty": "Species",
+      "Location": "Integer",
+      "LocationFlag": "String",
+      "Region": "Integer",
+      "Item": "Item",
+      "ItemMale": "Item",
+      "ItemFemale": "Item",
+      "ItemDay": "Item",
+      "ItemNight": "Item",
+      "ItemHappiness": "Item",
+      "Trade": null,
+      "TradeMale": null,
+      "TradeFemale": null,
+      "TradeDay": null,
+      "TradeNight": null,
+      "TradeItem": "Item",
+      "TradeSpecies": "Species",
+      "BattleDealCriticalHit": "Integer",
+      "Event": "Integer",
+      "EventAfterDamageTaken": "Integer"
+    },
+    "encounter_types": {
+      "Land": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "LandDay": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "LandNight": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "LandMorning": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "LandAfternoon": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "LandEvening": {
+        "type": "land",
+        "trigger_chance": 21
+      },
+      "PokeRadar": {
+        "type": "land",
+        "trigger_chance": 20
+      },
+      "Cave": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "CaveDay": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "CaveNight": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "CaveMorning": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "CaveAfternoon": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "CaveEvening": {
+        "type": "cave",
+        "trigger_chance": 5
+      },
+      "Water": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "WaterDay": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "WaterNight": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "WaterMorning": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "WaterAfternoon": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "WaterEvening": {
+        "type": "water",
+        "trigger_chance": 2
+      },
+      "OldRod": {
+        "type": "fishing",
+        "trigger_chance": 0
+      },
+      "GoodRod": {
+        "type": "fishing",
+        "trigger_chance": 0
+      },
+      "SuperRod": {
+        "type": "fishing",
+        "trigger_chance": 0
+      },
+      "RockSmash": {
+        "type": "none",
+        "trigger_chance": 50
+      },
+      "HeadbuttLow": {
+        "type": "none",
+        "trigger_chance": 0
+      },
+      "HeadbuttHigh": {
+        "type": "none",
+        "trigger_chance": 0
+      },
+      "BugContest": {
+        "type": "contest",
+        "trigger_chance": 21
+      }
+    },
+    "main_stats": [
+      {
+        "id": "HP",
+        "pbs_order": 0
+      },
+      {
+        "id": "ATTACK",
+        "pbs_order": 1
+      },
+      {
+        "id": "DEFENSE",
+        "pbs_order": 2
+      },
+      {
+        "id": "SPECIAL_ATTACK",
+        "pbs_order": 4
+      },
+      {
+        "id": "SPECIAL_DEFENSE",
+        "pbs_order": 5
+      },
+      {
+        "id": "SPEED",
+        "pbs_order": 3
+      }
+    ],
+    "max_level": 100
+  }
+}
