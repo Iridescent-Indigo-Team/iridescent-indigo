@@ -19,7 +19,8 @@
 # Set SKIP_DEPS=1 to skip step 1 when the dependencies are already built.
 # Dependencies are cloned shallowly (--depth 1) and the dependency build is
 # retried DEPS_RETRIES times (default 3) to ride out dropped connections;
-# re-running continues where a failed run stopped.
+# re-running continues where a failed run stopped. FluidSynth is fetched
+# without its ~570 MB test-data submodule.
 #===============================================================================
 set -euo pipefail
 
@@ -51,6 +52,31 @@ for stray in "$ROOT/downloads" "$ROOT/build-$ARCH"; do
   [[ -e "$stray" ]] && echo "Note: ${stray#"$ROOT/"}/ is left over from an older build and can be deleted."
 done
 
+# FluidSynth is cloned by the dependency Makefile with --recurse-submodules,
+# which also downloads its ~570 MB test-data submodule (test/manual) that the
+# build never needs. Fetch it here with only the submodule it does need (gcem);
+# the Makefile then sees FluidSynth is already downloaded and skips its clone.
+prefetch_fluidsynth() {
+  local dir="$MKXPZ_SRC/linux/downloads/$ARCH/fluidsynth"
+  local tag
+  tag="$(grep -o 'FluidSynth/fluidsynth -b [^ ]*' "$MKXPZ_SRC/linux/Makefile" | awk '{print $3}')"
+  [[ -n "$tag" ]] || return 0   # Makefile changed; let it clone FluidSynth itself
+  # A clone interrupted before checkout leaves a folder git can't clone into.
+  if [[ -d "$dir" && ! -f "$dir/CMakeLists.txt" ]]; then
+    rm -rf "$dir"
+  fi
+  if [[ ! -f "$dir/CMakeLists.txt" ]]; then
+    echo "Downloading FluidSynth $tag (without its 570 MB test data)..."
+    mkdir -p "$(dirname "$dir")"
+    git -c advice.detachedHead=false clone -q --depth 1 -b "$tag" \
+      https://github.com/FluidSynth/fluidsynth "$dir" || return 1
+  fi
+  if [[ -z "$(ls -A "$dir/gcem" 2>/dev/null)" ]]; then
+    echo "Downloading FluidSynth's gcem submodule..."
+    git -C "$dir" submodule update -q --init --depth 1 gcem || return 1
+  fi
+}
+
 # Step 1: dependencies.
 if [[ "${SKIP_DEPS:-0}" != 1 ]]; then
   echo "Building mkxp-z dependencies (lib/mkxp-z/linux)..."
@@ -70,7 +96,10 @@ if [[ "${SKIP_DEPS:-0}" != 1 ]]; then
   # The dependency Makefile builds its paths from $PWD, so run it from its own
   # folder (make -C would leave PWD pointing at the caller's folder). CLONE
   # makes every git clone shallow: much smaller downloads, same sources.
-  until (cd "$DEPS_DIR" && make PWD="$DEPS_DIR" CLONE="git clone -q --depth 1" \
+  # Downloads print nothing while they run, so large ones can take a while.
+  echo "Downloads are quiet while they run; large ones can take several minutes."
+  until prefetch_fluidsynth &&
+        (cd "$DEPS_DIR" && make PWD="$DEPS_DIR" CLONE="git clone -q --depth 1" \
            RUBY_FLAGS="--with-baseruby=$BASERUBY" everything); do
     if (( attempt >= RETRIES )); then
       die "building the dependencies failed $attempt times. If the errors above mention" \
