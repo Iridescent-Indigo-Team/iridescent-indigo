@@ -12,8 +12,9 @@
 # reuse lib/mkxp-z/linux/build-<arch>. Step 2 builds mkxp-z with meson.
 #
 # Requirements: gcc/g++, make, cmake, meson, ninja, pkg-config, git, autoconf,
-# automake, libtool, bison, nasm, plus the X11/OpenGL/ALSA/PulseAudio
-# development headers. See docs/BUILDING.md for the package list.
+# automake, libtool, bison, nasm, ruby (an installed Ruby is needed to build
+# mkxp-z's own Ruby 3.1), plus the X11/OpenGL/ALSA/PulseAudio development
+# headers. See docs/BUILDING.md for the package list.
 #
 # Set SKIP_DEPS=1 to skip step 1 when the dependencies are already built.
 #===============================================================================
@@ -30,15 +31,37 @@ die() { echo "build_engine: $*" >&2; exit 1; }
 
 [[ "$(uname -s)" = Linux ]] || die "only Linux builds are automated; see lib/mkxp-z/README.md for other platforms and set MKXPZ to the result."
 missing=()
-for tool in gcc g++ make cmake meson ninja pkg-config git autoconf automake libtoolize bison; do
+for tool in gcc g++ make cmake meson ninja pkg-config git autoconf automake libtoolize bison ruby; do
   command -v "$tool" >/dev/null 2>&1 || missing+=("$tool")
 done
-[[ ${#missing[@]} -eq 0 ]] || die "missing build tools: ${missing[*]} (see docs/BUILDING.md)"
+if [[ ${#missing[@]} -gt 0 ]]; then
+  msg="missing build tools: ${missing[*]} (see docs/BUILDING.md)"
+  [[ " ${missing[*]} " == *" ruby "* ]] &&
+    msg+=$'\n'"  An installed Ruby is required: building mkxp-z's Ruby 3.1 from source needs a host Ruby (e.g. sudo apt install ruby)."
+  die "$msg"
+fi
+BASERUBY="$(command -v ruby)"
+
+# Earlier versions of this script ran the dependency build from the wrong
+# folder, leaving these behind at the repository root. They are not used.
+for stray in "$ROOT/downloads" "$ROOT/build-$ARCH"; do
+  [[ -e "$stray" ]] && echo "Note: ${stray#"$ROOT/"}/ is left over from an older build and can be deleted."
+done
 
 # Step 1: dependencies.
 if [[ "${SKIP_DEPS:-0}" != 1 ]]; then
   echo "Building mkxp-z dependencies (lib/mkxp-z/linux)..."
-  make -C "$MKXPZ_SRC/linux" everything
+  DEPS_DIR="$MKXPZ_SRC/linux"
+  RUBY_SRC="$DEPS_DIR/downloads/$ARCH/ruby"
+  # A Ruby source tree configured without a host Ruby fails with "executable
+  # host ruby is required"; remove its Makefile so it is configured again.
+  if [[ ! -e "$DEPS_DIR/build-$ARCH/lib/libruby.so.3.1" && -f "$RUBY_SRC/Makefile" ]] &&
+     ! grep -q -- "--with-baseruby" "$RUBY_SRC/config.status" 2>/dev/null; then
+    rm -f "$RUBY_SRC/Makefile"
+  fi
+  # The dependency Makefile builds its paths from $PWD, so run it from its own
+  # folder (make -C would leave PWD pointing at the caller's folder).
+  (cd "$DEPS_DIR" && make PWD="$DEPS_DIR" RUBY_FLAGS="--with-baseruby=$BASERUBY" everything)
 fi
 
 # Step 2: mkxp-z itself, against the dependencies built above.

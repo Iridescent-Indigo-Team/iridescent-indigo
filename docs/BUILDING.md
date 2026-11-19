@@ -51,10 +51,12 @@ make mkxp
 **Building mkxp-z for Linux (`make mkxp`)**
 
 gcc/g++, cmake, meson, ninja, pkg-config, git, autoconf, automake, libtool,
-bison, nasm and the X11/OpenGL/audio development headers. On Debian/Ubuntu:
+bison, nasm, **Ruby** (an installed Ruby is needed to build mkxp-z's own Ruby
+3.1 from source) and the X11/OpenGL/audio development headers. On
+Debian/Ubuntu:
 
 ```bash
-sudo apt install build-essential cmake meson ninja-build pkg-config git autoconf automake libtool bison nasm libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libasound2-dev libpulse-dev libpixman-1-dev libuchardet-dev libdbus-1-dev zlib1g-dev libbz2-dev libffi-dev libyaml-dev
+sudo apt install ruby build-essential cmake meson ninja-build pkg-config git autoconf automake libtool bison nasm libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libasound2-dev libpulse-dev libpixman-1-dev libuchardet-dev libdbus-1-dev zlib1g-dev libbz2-dev libffi-dev libyaml-dev
 ```
 
 **Android (`make apk`)**: Android NDK r25+ (`ANDROID_NDK_HOME`), the Android
@@ -297,6 +299,14 @@ shows what would change without writing anything.
   `-dev` packages (pixman, uchardet, dbus, iconv come with most distros), build
   the remaining targets with `make -C lib/mkxp-z/linux <target>`, and run
   `SKIP_DEPS=1 make mkxp`.
+- **`make mkxp` fails with "executable host ruby is required"**: building
+  Ruby 3.1 from source needs an installed Ruby. Install one (`ruby -v` should
+  work in the same terminal), then run `make mkxp` again. `build_engine.sh`
+  passes it to Ruby's build with `--with-baseruby` and re-configures a Ruby
+  tree that was configured without one.
+- **`downloads/` or `build-x86_64/` at the repository root**: left over from
+  an earlier version of `build_engine.sh` that ran the dependency build in the
+  wrong folder. Delete them; the dependencies now build in `lib/mkxp-z/linux/`.
 - **No sound / "Could not detect an available audio device"**: on machines
   without audio, set `ALSOFT_DRIVERS=null` (done automatically for
   `--compile`).
