@@ -610,6 +610,15 @@ class Translation
     return text
   end
 
+  # The current language's grammar data (MessageTypes::LOCALE_DATA), compiled
+  # from the translation CSVs, or nil for English.
+  def locale_data
+    delayed_load_message_files
+    return nil if !@game_messages
+    ret = @game_messages[MessageTypes::LOCALE_DATA]
+    return (ret.is_a?(Hash)) ? ret : nil
+  end
+
   def getFromMapHash(map_id, text)
     delayed_load_message_files
     key = Translation.stringToKey(text)
@@ -707,6 +716,9 @@ module MessageTypes
   ITEM_PORTION_NAMES           = 28
   ITEM_PORTION_NAME_PLURALS    = 29
   POKEMON_NICKNAMES            = 30
+  # Not text: the grammar data of the language (see 003_Intl_Grammar.rb),
+  # written by tools/importer/locales.
+  LOCALE_DATA                  = 99
   @@messages = Translation.new
 
   def self.load_default_messages
@@ -756,6 +768,10 @@ module MessageTypes
   def self.getFromMapHash(type, key)
     return @@messages.getFromMapHash(type, key)
   end
+
+  def self.locale_data
+    return @@messages.locale_data
+  end
 end
 
 #===============================================================================
@@ -770,18 +786,15 @@ def pbGetMessageFromHash(type, id)
 end
 
 # Replaces first argument with a localized version and formats the other
-# parameters by replacing {1}, {2}, etc. with those placeholders.
+# parameters by replacing {1}, {2}, etc. with those placeholders. Grammar
+# tokens such as {1|def} are handled too (see 003_Intl_Grammar.rb).
 def _INTL(*arg)
   begin
     string = MessageTypes.getFromHash(MessageTypes::SCRIPT_TEXTS, arg[0])
   rescue
     string = arg[0]
   end
-  string = string.clone
-  (1...arg.length).each do |i|
-    string.gsub!(/\{#{i}\}/, arg[i].to_s)
-  end
-  return string
+  return pbIntlFormat(string.clone, arg)
 end
 
 # Replaces first argument with a localized version and formats the other
@@ -793,9 +806,10 @@ def _ISPRINTF(*arg)
   rescue
     string = arg[0]
   end
-  string = string.clone
+  string = LocaleGrammar.format(string.clone, arg)
   (1...arg.length).each do |i|
     string.gsub!(/\{#{i}\:([^\}]+?)\}/) { |m| next sprintf("%" + $1, arg[i]) }
+    string.gsub!(/\{#{i}\}/) { arg[i].to_s }
   end
   return string
 end
@@ -806,18 +820,15 @@ end
 
 def _MAPINTL(mapid, *arg)
   string = MessageTypes.getFromMapHash(mapid, arg[0])
-  string = string.clone
-  (1...arg.length).each do |i|
-    string.gsub!(/\{#{i}\}/, arg[i].to_s)
-  end
-  return string
+  return pbIntlFormat(string.clone, arg)
 end
 
 def _MAPISPRINTF(mapid, *arg)
   string = MessageTypes.getFromMapHash(mapid, arg[0])
-  string = string.clone
+  string = LocaleGrammar.format(string.clone, arg)
   (1...arg.length).each do |i|
     string.gsub!(/\{#{i}\:([^\}]+?)\}/) { |m| next sprintf("%" + $1, arg[i]) }
+    string.gsub!(/\{#{i}\}/) { arg[i].to_s }
   end
   return string
 end

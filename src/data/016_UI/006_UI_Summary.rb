@@ -440,6 +440,11 @@ class PokemonSummary_Scene
       textpos.push([@pokemon.owner.name, 218, 91, :center, ownerbase, ownershadow])
       textpos.push([sprintf("%05d", @pokemon.owner.public_id), 218, 107, :center,
                     Color.new(64, 64, 64), Color.new(176, 176, 176)])
+      # Show the language tag of Pokémon from a game in another language
+      if @pokemon.language != $player.language && !@pokemon.language_tag.empty?
+        textpos.push([@pokemon.language_tag, 254, 107, :right,
+                      Color.new(64, 64, 64), Color.new(176, 176, 176)])
+      end
     end
     # Write Exp text OR heart gauge message (if a Shadow Pokémon)
     if @pokemon.shadowPokemon?

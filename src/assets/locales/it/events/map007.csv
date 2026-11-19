@@ -1,0 +1,5 @@
+﻿key,context,english,translation,status,notes
+ev005.p1.c000,"Map 7 (Cedolan City), event 5, page 1: Show Text",\w[signskin]Cedolan Gym,,,
+ev006.p1.c000,"Map 7 (Cedolan City), event 6, page 1: Show Text",\w[signskin]Move Maniac Meeting Room,,,
+ev010.p1.c009,"Map 7 (Cedolan City), event 10, page 1: Show Text",\w[signskin]Pokémon Institute,,,
+ev010.p1.c010,"Map 7 (Cedolan City), event 10, page 1: Show Text","\w[signskin]""Building Tomorrow Out Of Yesterday""",,,

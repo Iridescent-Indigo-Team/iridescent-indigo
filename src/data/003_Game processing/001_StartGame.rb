@@ -27,10 +27,15 @@ module Game
     end
     # Set resize factor
     pbSetResizeFactor([$PokemonSystem.screensize, 4].min)
-    # Set language (and choose language if there is no save file)
+    # Set language (and choose language if there is no save file). The language
+    # belongs to the save file: it is chosen again only when starting a new game
+    # (see PokemonLoadScreen).
     if !Settings::LANGUAGES.empty?
-      $PokemonSystem.language = pbChooseLanguage if save_data.empty? && Settings::LANGUAGES.length >= 2
-      MessageTypes.load_message_files(Settings::LANGUAGES[$PokemonSystem.language][1])
+      if save_data.empty? && Settings::LANGUAGES.length >= 2
+        $PokemonSystem.language = pbChooseLanguage
+      else
+        pbLoadLanguage($PokemonSystem.language)
+      end
     end
   end
 

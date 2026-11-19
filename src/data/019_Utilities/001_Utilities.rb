@@ -46,8 +46,12 @@ def pbEachCombination(array, num)
   end
 end
 
-# Returns a language ID
+# Returns the language ID stored in Pokémon and trainers (see
+# Pokemon::Owner#language): the one of the language the player chose (third
+# value of its Settings::LANGUAGES entry), or else one from the system locale.
 def pbGetLanguage
+  lang = pbCurrentLanguage
+  return lang[2] if lang && lang[2].is_a?(Integer)
   case System.user_language[0..1]
   when "ja" then return 1   # Japanese
   when "en" then return 2   # English
@@ -600,12 +604,74 @@ def pbLoadRpgxpScene(scene)
   Graphics.transition
 end
 
-def pbChooseLanguage
-  commands = []
-  Settings::LANGUAGES.each do |lang|
-    commands.push(lang[0])
+#===============================================================================
+# Game language. It is chosen when a new game starts and then never changes:
+# it is saved with the game ($PokemonSystem.language, an index into
+# Settings::LANGUAGES).
+#===============================================================================
+# The Settings::LANGUAGES entry of the current language, or nil.
+def pbCurrentLanguage
+  return nil if Settings::LANGUAGES.empty?
+  index = ($PokemonSystem) ? $PokemonSystem.language : 0
+  return Settings::LANGUAGES[index] || Settings::LANGUAGES[0]
+end
+
+# The code of the current language ("en", "de"...).
+def pbCurrentLanguageCode
+  lang = pbCurrentLanguage
+  return (lang) ? lang[1] : "en"
+end
+
+# Switches the game's text and graphics to the language at this index of
+# Settings::LANGUAGES.
+def pbLoadLanguage(index)
+  return if Settings::LANGUAGES.empty?
+  index = 0 if !Settings::LANGUAGES[index]
+  $PokemonSystem.language = index if $PokemonSystem
+  MessageTypes.load_message_files(Settings::LANGUAGES[index][1])
+  LocalizedGraphics.load(Settings::LANGUAGES[index][1])
+end
+
+# The Settings::LANGUAGES index that best matches the system's language, to
+# put the cursor on in the language picker.
+def pbSystemLanguageIndex
+  locale = System.user_language.to_s.tr("-", "_")
+  lang = locale[0, 2].downcase
+  region = locale[3..].to_s.upcase
+  codes = Settings::LANGUAGES.map { |l| l[1].to_s.downcase }
+  if lang == "es" && !region.empty? && region != "ES" && codes.include?("es_419")
+    return codes.index("es_419")
   end
-  return pbShowCommands(nil, commands)
+  return codes.index(locale.downcase) || codes.index(lang) || 0
+end
+
+# Asks the player to choose a language, showing each one in its own language,
+# and asks them to confirm it in the chosen language. The choice can't be
+# cancelled. Loads the chosen language and returns its index.
+def pbChooseLanguage
+  return 0 if Settings::LANGUAGES.length < 2
+  commands = Settings::LANGUAGES.map { |lang| lang[0] }
+  index = pbSystemLanguageIndex
+  loop do
+    cmdwindow = Window_CommandPokemonEx.new(commands)
+    cmdwindow.z = 99999
+    cmdwindow.resizeToFit(commands)
+    cmdwindow.x = (Graphics.width - cmdwindow.width) / 2
+    cmdwindow.y = (Graphics.height - cmdwindow.height) / 2
+    cmdwindow.index = index
+    loop do
+      Graphics.update
+      Input.update
+      cmdwindow.update
+      break if Input.trigger?(Input::USE)
+    end
+    index = cmdwindow.index
+    cmdwindow.dispose
+    pbPlayDecisionSE
+    pbLoadLanguage(index)
+    break if pbConfirmMessage(_INTL("{1}: is this the language you want to play in?", commands[index]))
+  end
+  return index
 end
 
 def pbScreenCapture

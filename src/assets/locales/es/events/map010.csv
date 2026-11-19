@@ -1,0 +1,11 @@
+﻿key,context,english,translation,status,notes
+ev002.p1.c000,"Map 10 (Cedolan Gym), event 2, page 1: Show Text",\bThis is an example of a Pokémon Gym.,,,
+ev002.p1.c001,"Map 10 (Cedolan Gym), event 2, page 1: Show Text","\bThe only differences are that the trainers become inactive when the Leader is defeated, and the Leader gives you a Gym Badge and TM as a reward.",,,
+ev003.p1.c002,"Map 10 (Cedolan Gym), event 3, page 1: Show Text","\bYou've made it this far, but can you beat me?",,,
+ev003.p1.c004,"Map 10 (Cedolan Gym), event 3, page 1: Show Text",\me[Badge get]\bYou've earned the Boulder Badge. \wtnp[110],,,
+ev003.p1.c008,"Map 10 (Cedolan Gym), event 3, page 1: Show Text","\bHere, have this TM too.",,,
+ev003.p1.c010,"Map 10 (Cedolan Gym), event 3, page 1: Show Text",\bYou may find the Pokémon on Route 1 are a little tougher now.,,,
+ev003.p2.c000,"Map 10 (Cedolan Gym), event 3, page 2: Show Text","\bI often work in the caves on Route 7, digging up fossils.",,,
+ev003.p2.c002,"Map 10 (Cedolan Gym), event 3, page 2: Show Text",\bThere's a man in the Pokémon Institute who can revive fossils into living Pokémon.,,,
+ev004.p1.c002,"Map 10 (Cedolan Gym), event 4, page 1: Show Text",\bBattle me now!,,,
+ev004.p2.c000,"Map 10 (Cedolan Gym), event 4, page 2: Show Text; Same text: ev004.p3.c000",\bYou're pretty hot. But not as hot as Brock!,,,

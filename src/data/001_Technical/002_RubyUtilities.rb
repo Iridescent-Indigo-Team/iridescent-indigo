@@ -61,8 +61,11 @@ end
 #===============================================================================
 class Numeric
   # Turns a number into a string formatted like 12,345,678.
+  # Adds thousands separators: 1,234,567 (or 1.234.567 etc. depending on the
+  # current language; see LocaleGrammar).
   def to_s_formatted
-    return self.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\1,').reverse
+    separator = (defined?(LocaleGrammar)) ? LocaleGrammar.data["thousands"] || "," : ","
+    return self.to_s.reverse.gsub(/(\d{3})(?=\d)/) { $1 + separator.reverse }.reverse
   end
 
   def to_word

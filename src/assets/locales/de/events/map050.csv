@@ -1,0 +1,9 @@
+﻿key,context,english,translation,status,notes
+ev003.p1.c000,"Map 50 (Rock Cave B1F), event 3, page 1: Show Text","When pushing a boulder down a hole, make sure it doesn't appear in the same place as the player does when they drop down.",,,
+ev004.p1.c000,"Map 50 (Rock Cave B1F), event 4, page 1: Show Text",\bHello! I'm the Ruin Maniac!,,,
+ev004.p1.c001,"Map 50 (Rock Cave B1F), event 4, page 1: Show Text",\bDo you want to dig for buried treasure?,,,
+ev004.p1.c002.choice1,"Map 50 (Rock Cave B1F), event 4, page 1: Show Choices option",Yes,,,
+ev004.p1.c002.choice2,"Map 50 (Rock Cave B1F), event 4, page 1: Show Choices option",No,,,
+ev004.p1.c004,"Map 50 (Rock Cave B1F), event 4, page 1: Show Text",\bGrand! Let's dig into this wall.,,,
+ev004.p1.c022,"Map 50 (Rock Cave B1F), event 4, page 1: Show Text",\bNo? Alright then.,,,
+ev004.p1.c025,"Map 50 (Rock Cave B1F), event 4, page 1: Show Text","\bWhen using this mining minigame, it is recommended that you limit how often the player can play it, to prevent them gaining lots of items for free.",,,

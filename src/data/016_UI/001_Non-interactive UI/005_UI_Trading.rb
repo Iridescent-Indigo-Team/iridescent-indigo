@@ -214,20 +214,23 @@ end
 #===============================================================================
 #
 #===============================================================================
-def pbStartTrade(pokemonIndex, newpoke, nickname, trainerName, trainerGender = 0)
+# language is the language ID of the received Pokémon's original trainer (see
+# Pokemon::Owner#language), e.g. 5 for a German Pokémon; nil means the game's
+# language.
+def pbStartTrade(pokemonIndex, newpoke, nickname, trainerName, trainerGender = 0, language = nil)
   $stats.trade_count += 1
   myPokemon = $player.party[pokemonIndex]
   yourPokemon = nil
   resetmoves = true
   if newpoke.is_a?(Pokemon)
-    newpoke.owner = Pokemon::Owner.new_foreign(trainerName, trainerGender)
+    newpoke.owner = Pokemon::Owner.new_foreign(trainerName, trainerGender, language)
     yourPokemon = newpoke
     resetmoves = false
   else
     species_data = GameData::Species.try_get(newpoke)
     raise _INTL("Species {1} does not exist.", newpoke) if !species_data
     yourPokemon = Pokemon.new(species_data.id, myPokemon.level)
-    yourPokemon.owner = Pokemon::Owner.new_foreign(trainerName, trainerGender)
+    yourPokemon.owner = Pokemon::Owner.new_foreign(trainerName, trainerGender, language)
   end
   yourPokemon.name          = nickname
   yourPokemon.obtain_method = 2   # traded
