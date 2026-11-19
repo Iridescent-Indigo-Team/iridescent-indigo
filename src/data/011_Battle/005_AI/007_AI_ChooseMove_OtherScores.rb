@@ -378,14 +378,14 @@ Battle::AI::Handlers::GeneralMoveAgainstTargetScore.add(:trigger_target_ability_
            (Battle::AbilityEffects::AfterMoveUseFromTarget[target.ability] &&
            (!user.has_active_ability?(:SHEERFORCE) || move.move.addlEffect == 0))
           old_score = score
-          score += 8
+          score -= 8
           PBDebug.log_score_change(score - old_score, "can trigger the target's ability")
         end
       end
       if target.battler.isSpecies?(:CRAMORANT) && target.ability == :GULPMISSILE &&
          target.battler.form > 0 && !target.effects[PBEffects::Transform]
         old_score = score
-        score += 8
+        score -= 8
         PBDebug.log_score_change(score - old_score, "can trigger the target's ability")
       end
       if target.item_active?
@@ -393,7 +393,7 @@ Battle::AI::Handlers::GeneralMoveAgainstTargetScore.add(:trigger_target_ability_
            (Battle::ItemEffects::AfterMoveUseFromTarget[target.item] &&
            (!user.has_active_ability?(:SHEERFORCE) || move.move.addlEffect == 0))
           old_score = score
-          score += 8
+          score -= 8
           PBDebug.log_score_change(score - old_score, "can trigger the target's item")
         end
       end
