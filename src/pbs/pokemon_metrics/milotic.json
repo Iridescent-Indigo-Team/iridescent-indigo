@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MILOTIC",
-  "back_sprite": {"x": -3, "y": 0},
-  "front_sprite": {"x": 1, "y": 8},
+  "back_sprite": {"x": 0, "y": 28},
+  "front_sprite": {"x": 10, "y": 14},
   "shadow_x": 0,
   "shadow_size": 3
 }

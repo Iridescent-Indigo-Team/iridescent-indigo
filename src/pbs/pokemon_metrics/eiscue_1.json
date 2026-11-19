@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "EISCUE",
+  "form": 1,
+  "back_sprite": {"x": 0, "y": 24},
+  "front_sprite": {"x": 0, "y": 10},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

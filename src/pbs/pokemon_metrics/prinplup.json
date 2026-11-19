@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "PRINPLUP",
-  "back_sprite": {"x": 2, "y": 0},
-  "front_sprite": {"x": 0, "y": 13},
+  "back_sprite": {"x": 0, "y": 39},
+  "front_sprite": {"x": 4, "y": 24},
   "shadow_x": 0,
-  "shadow_size": 2
+  "shadow_size": 1
 }

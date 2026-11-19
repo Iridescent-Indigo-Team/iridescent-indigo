@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "NIDORANmA",
-  "back_sprite": {"x": -1, "y": 0},
-  "front_sprite": {"x": -2, "y": 21},
+  "back_sprite": {"x": 0, "y": 35},
+  "front_sprite": {"x": 3, "y": 36},
   "shadow_x": 0,
   "shadow_size": 1
 }

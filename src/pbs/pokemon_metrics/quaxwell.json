@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "QUAXWELL",
-  "back_sprite": {"x": 0, "y": 35},
+  "back_sprite": {"x": 0, "y": 23},
   "front_sprite": {"x": 1, "y": 21},
   "shadow_x": 0,
   "shadow_size": 1

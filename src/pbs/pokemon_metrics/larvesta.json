@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "LARVESTA",
-  "back_sprite": {"x": 0, "y": 0},
-  "front_sprite": {"x": -2, "y": 29},
+  "back_sprite": {"x": 0, "y": 33},
+  "front_sprite": {"x": 0, "y": 30},
   "shadow_x": 0,
   "shadow_size": 2
 }

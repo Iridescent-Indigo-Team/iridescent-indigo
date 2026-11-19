@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "RAGINGBOLT",
-  "back_sprite": {"x": 0, "y": 55},
+  "back_sprite": {"x": 0, "y": 37},
   "front_sprite": {"x": -5, "y": 10},
   "shadow_x": 0,
   "shadow_size": 3

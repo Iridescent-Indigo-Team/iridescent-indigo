@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "OVERQWIL",
-  "back_sprite": {"x": 0, "y": 47},
+  "back_sprite": {"x": 0, "y": 31},
   "front_sprite": {"x": 2, "y": 6},
   "shadow_x": 2,
   "shadow_size": 3

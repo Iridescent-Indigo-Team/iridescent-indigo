@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "GARDEVOIR",
+  "form": 1,
+  "back_sprite": {"x": 1, "y": 28},
+  "front_sprite": {"x": -1, "y": 15},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

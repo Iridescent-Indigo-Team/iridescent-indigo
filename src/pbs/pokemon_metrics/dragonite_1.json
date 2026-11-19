@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "DRAGONITE",
   "form": 1,
-  "back_sprite": {"x": -14, "y": 48},
+  "back_sprite": {"x": -9, "y": 32},
   "front_sprite": {"x": -6, "y": 2},
   "shadow_x": 0,
   "shadow_size": 2

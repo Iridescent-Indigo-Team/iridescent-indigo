@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "OINKOLOGNE",
   "form": 1,
-  "back_sprite": {"x": 6, "y": 58},
+  "back_sprite": {"x": 4, "y": 39},
   "front_sprite": {"x": -8, "y": 24},
   "shadow_x": 0,
   "shadow_size": 2

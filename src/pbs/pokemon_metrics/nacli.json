@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "NACLI",
-  "back_sprite": {"x": 0, "y": 60},
+  "back_sprite": {"x": 0, "y": 40},
   "front_sprite": {"x": 0, "y": 36},
   "shadow_x": 0,
   "shadow_size": 1

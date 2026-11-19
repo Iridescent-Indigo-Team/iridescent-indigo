@@ -15,4 +15,4 @@ class PokemonPokedexInfo_Scene
       @sprites["formback"].y = 128
     end
   end
-end
+end

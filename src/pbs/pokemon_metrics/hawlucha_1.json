@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "HAWLUCHA",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 48},
+  "back_sprite": {"x": 0, "y": 32},
   "front_sprite": {"x": -4, "y": 20},
   "shadow_x": 0,
   "shadow_size": 2

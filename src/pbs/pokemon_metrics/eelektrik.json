@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "EELEKTRIK",
-  "back_sprite": {"x": 0, "y": 0},
-  "front_sprite": {"x": 0, "y": 18},
+  "back_sprite": {"x": 0, "y": 27},
+  "front_sprite": {"x": -2, "y": 20},
   "shadow_x": 0,
   "shadow_size": 2
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "HYDRAPPLE",
-  "back_sprite": {"x": 0, "y": 50},
+  "back_sprite": {"x": 0, "y": 33},
   "front_sprite": {"x": 2, "y": 12},
   "shadow_x": 0,
   "shadow_size": 3

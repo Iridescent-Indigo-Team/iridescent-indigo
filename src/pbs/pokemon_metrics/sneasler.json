@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SNEASLER",
-  "back_sprite": {"x": 0, "y": 54},
+  "back_sprite": {"x": 0, "y": 36},
   "front_sprite": {"x": 0, "y": 21},
   "shadow_x": 2,
   "shadow_size": 2

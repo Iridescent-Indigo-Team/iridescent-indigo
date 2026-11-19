@@ -21,6 +21,10 @@ transparency at bottom-centre, which matches how Essentials anchors battlers
 (ox = width / 2, oy = height). A frame that would still be bigger than 96x96
 must lose only transparent margin, otherwise the build fails.
 
+Frames of 288x288 are 3x upscales of 96x96 art (the Generation 9 Pack's back
+sprites), so they are divided by 3 instead of 2. Their BackSprite metrics in
+PBS were scaled by 2/3 to match (see docs/BUILDING.md).
+
 Files that are not PNGs are copied unchanged. Work is incremental: a file is
 only processed again when its source is newer than its output (or --force).
 """
@@ -71,14 +75,25 @@ def blank_transparent(img):
     return black
 
 
-def is_clean_2x(img):
-    """True if halving then doubling with nearest-neighbour gives img back."""
+def is_clean_2x(img, factor=2):
+    """True if shrinking by factor then enlarging with nearest-neighbour gives img back."""
     w, h = img.size
-    if w % 2 or h % 2:
+    if w % factor or h % factor:
         return False
     rgba = blank_transparent(img)
-    small = rgba.resize((w // 2, h // 2), Image.NEAREST)
+    small = rgba.resize((w // factor, h // factor), Image.NEAREST)
     return small.resize((w, h), Image.NEAREST).tobytes() == rgba.tobytes()
+
+
+def battle_scale(img):
+    """The factor a battle sprite is shrunk by: 3 for 288px frames, otherwise 2."""
+    return 3 if img.size[1] == BATTLE_FRAME * 3 else 2
+
+
+def third(img):
+    """Shrink a 3x frame to a third with nearest-neighbour."""
+    w, h = img.size
+    return img.resize((w // 3, h // 3), Image.NEAREST)
 
 
 def pad_to_even(img):
@@ -127,10 +142,11 @@ def make_battle_sprite(img, rel):
         raise ValueError("%s: %dx%d is not a strip of square frames" % (rel, w, h))
     count = w // h
     rgba = img.convert("RGBA")
+    shrink = third if battle_scale(img) == 3 else halve
     out = Image.new("RGBA", (BATTLE_FRAME * count, BATTLE_FRAME), (0, 0, 0, 0))
     for i in range(count):
         frame = rgba.crop((i * h, 0, (i + 1) * h, h))
-        out.paste(fit_frame(halve(frame), rel), (i * BATTLE_FRAME, 0))
+        out.paste(fit_frame(shrink(frame), rel), (i * BATTLE_FRAME, 0))
     return out
 
 
@@ -155,7 +171,8 @@ def process(job):
     try:
         with Image.open(src) as img:
             img.load()
-            clean = is_clean_2x(img)
+            factor = battle_scale(img) if is_battle_sprite(rel) else 2
+            clean = is_clean_2x(img, factor)
             size = img.size
             if is_battle_sprite(rel):
                 out = make_battle_sprite(img, rel)
@@ -165,7 +182,7 @@ def process(job):
     except Exception as e:  # report every failure, keep going
         return (rel, "error", str(e))
     if not clean:
-        return (rel, "lossy", "%dx%d is not a clean 2x upscale" % size)
+        return (rel, "lossy", "%dx%d is not a clean %dx upscale" % (size + (factor,)))
     return (rel, "ok", "")
 
 

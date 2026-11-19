@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CETITAN",
-  "back_sprite": {"x": -6, "y": 59},
+  "back_sprite": {"x": -4, "y": 39},
   "front_sprite": {"x": 2, "y": 23},
   "shadow_x": 0,
   "shadow_size": 2

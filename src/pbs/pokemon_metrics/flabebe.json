@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "FLABEBE",
+  "back_sprite": {"x": 1, "y": 32},
+  "front_sprite": {"x": -4, "y": 20},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TYROGUE",
-  "back_sprite": {"x": 4, "y": 0},
-  "front_sprite": {"x": -1, "y": 19},
+  "back_sprite": {"x": 0, "y": 32},
+  "front_sprite": {"x": -3, "y": 29},
   "shadow_x": 0,
   "shadow_size": 1
 }
