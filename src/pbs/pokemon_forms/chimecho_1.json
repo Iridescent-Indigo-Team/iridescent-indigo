@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CHIMECHO",
+  "form": 1,
+  "real_form_name": "Mega Chimecho",
+  "mega_stone": "CHIMECHITE",
+  "types": ["PSYCHIC", "STEEL"],
+  "base_stats": {
+    "hp": 75,
+    "attack": 50,
+    "defense": 110,
+    "speed": 65,
+    "special_attack": 135,
+    "special_defense": 120
+  },
+  "base_exp": 209,
+  "abilities": ["LEVITATE"],
+  "hidden_abilities": ["LEVITATE"],
+  "height": 1.2,
+  "weight": 8.0,
+  "real_pokedex_entry": "It vibrates its entire body to attack in all directions using sound waves. Any who hear the vibrations get so confused, they forget who they are.",
+  "generation": 9
+}

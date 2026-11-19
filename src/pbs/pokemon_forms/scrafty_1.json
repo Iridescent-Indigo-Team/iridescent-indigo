@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SCRAFTY",
+  "form": 1,
+  "real_form_name": "Mega Scrafty",
+  "mega_stone": "SCRAFTINITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 130,
+    "defense": 135,
+    "speed": 68,
+    "special_attack": 55,
+    "special_defense": 135
+  },
+  "base_exp": 221,
+  "abilities": ["INTIMIDATE"],
+  "hidden_abilities": ["INTIMIDATE"],
+  "weight": 31.0,
+  "real_pokedex_entry": "Mega Evolution has caused Scrafty's shed skin to turn white, growing tough and supple. Of course, this Pokémon is still as feisty as ever.",
+  "generation": 9
+}

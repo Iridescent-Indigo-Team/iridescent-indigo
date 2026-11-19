@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PUNCHINGGLOVE",
+  "real_name": "Punching Glove",
+  "real_name_plural": "Punching Gloves",
+  "pocket": 1,
+  "price": 15000,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. It boosts the holder's punching moves and prevents direct contact."
+}

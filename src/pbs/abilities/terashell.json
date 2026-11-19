@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TERASHELL",
+  "real_name": "Tera Shell",
+  "real_description": "Resists all types when HP is full."
+}

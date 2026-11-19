@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FRESHSTARTMOCHI",
+  "real_name": "Fresh-Start Mochi",
+  "real_name_plural": "Fresh-Start Mochi",
+  "pocket": 2,
+  "price": 250,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_20"],
+  "real_description": "A mochi cake with Berries kneaded into its dough. It causes a Pokémon to lose all its base points."
+}

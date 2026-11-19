@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WINGBALL",
+  "real_name": "Wing Ball",
+  "real_name_plural": "Wing Balls",
+  "pocket": 3,
+  "price": 1000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "An improvement on the original Feather Ball design. It has a higher success rate than the Feather Ball."
+}

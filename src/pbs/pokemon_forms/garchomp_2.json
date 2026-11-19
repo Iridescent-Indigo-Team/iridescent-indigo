@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GARCHOMP",
+  "form": 2,
+  "real_form_name": "Mega Garchomp Z",
+  "mega_stone": "GARCHOMPITEZ",
+  "types": ["DRAGON"],
+  "base_stats": {
+    "hp": 108,
+    "attack": 130,
+    "defense": 85,
+    "speed": 151,
+    "special_attack": 141,
+    "special_defense": 85
+  },
+  "base_exp": 350,
+  "abilities": ["LEVITATE"],
+  "hidden_abilities": ["LEVITATE"],
+  "weight": 99.0,
+  "real_pokedex_entry": "Garchomp has gained a new Mega-Evolved form. It flies around foes at Mach speed and cuts them to shreds with its sinister wing claws.",
+  "generation": 9
+}

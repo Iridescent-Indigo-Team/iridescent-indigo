@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NIHILLIGHT",
+  "real_name": "Nihil Light",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 200,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "IgnoreTargetDefSpDefEvaStatStagesHitFairyType",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A powerful light that defies nature, striking Fairy types and ignoring target stat changes."
+}

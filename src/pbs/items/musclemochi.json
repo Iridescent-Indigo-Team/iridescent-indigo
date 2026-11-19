@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MUSCLEMOCHI",
+  "real_name": "Muscle Mochi",
+  "real_name_plural": "Muscle Mochi",
+  "pocket": 2,
+  "price": 250,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_20"],
+  "real_description": "A mochi cake with Berries kneaded into its dough. It increases base points for a Pokémon's Attack stat."
+}

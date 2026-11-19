@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DELPHOX",
+  "form": 1,
+  "real_form_name": "Mega Delphox",
+  "mega_stone": "DELPHOXITE",
+  "base_stats": {
+    "hp": 75,
+    "attack": 69,
+    "defense": 72,
+    "speed": 134,
+    "special_attack": 159,
+    "special_defense": 125
+  },
+  "base_exp": 317,
+  "abilities": ["LEVITATE"],
+  "hidden_abilities": ["LEVITATE"],
+  "real_pokedex_entry": "It wields flaming branches to dazzle its opponents before incinerating them with a huge fireball.",
+  "generation": 9
+}

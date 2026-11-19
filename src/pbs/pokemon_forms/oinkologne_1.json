@@ -1,0 +1,27 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OINKOLOGNE",
+  "form": 1,
+  "real_form_name": "Female",
+  "base_stats": {"hp": 115, "attack": 90, "defense": 70, "speed": 65, "special_attack": 59, "special_defense": 90},
+  "abilities": ["AROMAVEIL", "GLUTTONY"],
+  "moves": [
+    {"level": 1, "move": "TAILWHIP"},
+    {"level": 1, "move": "TACKLE"},
+    {"level": 3, "move": "DISARMINGVOICE"},
+    {"level": 6, "move": "ECHOEDVOICE"},
+    {"level": 9, "move": "MUDSHOT"},
+    {"level": 12, "move": "COVET"},
+    {"level": 15, "move": "DIG"},
+    {"level": 17, "move": "HEADBUTT"},
+    {"level": 23, "move": "YAWN"},
+    {"level": 28, "move": "TAKEDOWN"},
+    {"level": 30, "move": "WORKUP"},
+    {"level": 34, "move": "UPROAR"},
+    {"level": 39, "move": "DOUBLEEDGE"},
+    {"level": 45, "move": "EARTHPOWER"},
+    {"level": 51, "move": "BELCH"}
+  ],
+  "color": "Brown",
+  "real_pokedex_entry": "This is a meticulous Pokémon that likes to keep things tidy. It shrouds itself in a floral aroma that soothes the Pokémon around it."
+}

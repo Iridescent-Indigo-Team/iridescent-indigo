@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPICYEXTRACT",
+  "real_name": "Spicy Extract",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RaiseTargetAtkLowerTargetDef2",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Emits a spicy extract which raises the target’s Attack and lowers Defense by two stages each."
+}

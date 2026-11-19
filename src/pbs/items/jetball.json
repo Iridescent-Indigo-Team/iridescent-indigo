@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "JETBALL",
+  "real_name": "Jet Ball",
+  "real_name_plural": "Jet Balls",
+  "pocket": 3,
+  "price": 1500,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "The ultimate iteration of the Feather Ball. It has an even higher success rate than the Wing Ball does."
+}

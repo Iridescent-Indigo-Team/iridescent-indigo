@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WINDPOWER",
+  "real_name": "Wind Power",
+  "real_description": "The Pokémon becomes charged from taking wind damage."
+}

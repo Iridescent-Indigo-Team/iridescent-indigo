@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERYACHEBERRY",
+  "real_name": "Hyper Yache Berry",
+  "real_name_plural": "Hyper Yache Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. It goes well in cream."
+}

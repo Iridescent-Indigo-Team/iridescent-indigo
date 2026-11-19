@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "HEATRAN",
+  "form": 1,
+  "real_form_name": "Mega Heatran",
+  "mega_stone": "HEATRANITE",
+  "base_stats": {
+    "hp": 91,
+    "attack": 120,
+    "defense": 106,
+    "speed": 67,
+    "special_attack": 175,
+    "special_defense": 141
+  },
+  "base_exp": 350,
+  "height": 2.8,
+  "weight": 570.0,
+  "real_pokedex_entry": "It's said that if it goes all out, it can heat its body up to temperatures over 1.8 million degrees Fahrenheit. This heat keeps enemies at bay.",
+  "generation": 9
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TINYBAMBOOSHOOT",
+  "real_name": "Tiny Bamboo Shoot",
+  "real_name_plural": "Tiny Bamboo Shoots",
+  "pocket": 1,
+  "price": 1500,
+  "flags": ["Fling_30"],
+  "real_description": "A small and rare bamboo shoot. It's quite popular with a certain class of gourmands."
+}

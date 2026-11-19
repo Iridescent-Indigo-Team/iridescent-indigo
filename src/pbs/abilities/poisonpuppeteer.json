@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "POISONPUPPETEER",
+  "real_name": "Poison Puppeteer",
+  "real_description": "Moves that inflict poison also cause confusion."
+}

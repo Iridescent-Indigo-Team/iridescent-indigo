@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PURIFYINGSALT",
+  "real_name": "Purifying Salt",
+  "real_description": "Gains protection from status effects and Ghost-type moves."
+}

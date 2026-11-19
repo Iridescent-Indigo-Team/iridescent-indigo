@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GOODASGOLD",
+  "real_name": "Good as Gold",
+  "real_description": "The Pokémon becomes immune to status moves."
+}

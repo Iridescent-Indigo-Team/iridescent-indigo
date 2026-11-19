@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TERAPAGOS",
+  "form": 2,
+  "real_form_name": "Stellar Form",
+  "base_stats": {
+    "hp": 160,
+    "attack": 105,
+    "defense": 110,
+    "speed": 85,
+    "special_attack": 130,
+    "special_defense": 110
+  },
+  "evs": [
+    {"stat": "HP", "amount": 3}
+  ],
+  "abilities": ["TERAFORMZERO"],
+  "height": 1.7,
+  "weight": 77.0,
+  "shape": "Head",
+  "real_pokedex_entry": "In this form, Terapagos resembles the world as the ancients saw it, and its Terastal energy is abnormally amplified.",
+  "flags": ["Legendary", "TeraType_STELLAR"]
+}

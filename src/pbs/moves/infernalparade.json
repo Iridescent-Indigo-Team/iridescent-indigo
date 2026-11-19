@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "INFERNALPARADE",
+  "real_name": "Infernal Parade",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetStatusProblemBurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "Hurls fireballs which may cause burns. Power is doubled if the target has a status condition."
+}

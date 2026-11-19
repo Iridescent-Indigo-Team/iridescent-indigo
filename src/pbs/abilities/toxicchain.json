@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TOXICCHAIN",
+  "real_name": "Toxic Chain",
+  "real_description": "May badly poison targets when the user attacks."
+}

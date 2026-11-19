@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SKARMORY",
+  "form": 1,
+  "real_form_name": "Mega Skarmory",
+  "mega_stone": "SKARMORITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 140,
+    "defense": 110,
+    "speed": 110,
+    "special_attack": 40,
+    "special_defense": 100
+  },
+  "base_exp": 213,
+  "abilities": ["STALWART"],
+  "hidden_abilities": ["STALWART"],
+  "weight": 40.4,
+  "real_pokedex_entry": "It flies faster than the speed of sound. After whipping up shock waves to send enemies flying, it finishes them off with its talons.",
+  "generation": 9
+}

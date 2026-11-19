@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EMBODYASPECT_3",
+  "real_name": "Embody Aspect",
+  "real_description": "The user's shining mask raises its Defense stat."
+}

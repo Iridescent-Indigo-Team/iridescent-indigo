@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POPULATIONBOMB",
+  "real_name": "Population Bomb",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 20,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTenTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome", "Slicing"],
+  "real_description": "The user’s fellows gather in droves to perform a combo attack that hits one to ten times in a row."
+}

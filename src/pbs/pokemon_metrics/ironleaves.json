@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "IRONLEAVES",
+  "back_sprite": {"x": -4, "y": 48},
+  "front_sprite": {"x": -5, "y": 16},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

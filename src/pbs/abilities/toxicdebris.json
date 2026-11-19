@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TOXICDEBRIS",
+  "real_name": "Toxic Debris",
+  "real_description": "Scatters poison spikes when hit by physical moves."
+}

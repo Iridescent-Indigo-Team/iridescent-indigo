@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEALTHMOCHI",
+  "real_name": "Health Mochi",
+  "real_name_plural": "Health Mochi",
+  "pocket": 2,
+  "price": 250,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_20"],
+  "real_description": "A mochi cake with Berries kneaded into its dough. It increases base points for a Pokémon's HP stat."
+}

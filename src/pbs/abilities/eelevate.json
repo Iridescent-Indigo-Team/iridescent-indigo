@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EELEVATE",
+  "real_name": "Eelevate",
+  "real_description": "Immune to Ground-type moves. Boosts best stat when it deals a KO."
+}

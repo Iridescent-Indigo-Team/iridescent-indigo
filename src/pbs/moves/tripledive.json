@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRIPLEDIVE",
+  "real_name": "Triple Dive",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 30,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitThreeTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user performs a perfectly timed triple dive, hitting the target three times in a row."
+}

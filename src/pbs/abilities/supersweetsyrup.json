@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SUPERSWEETSYRUP",
+  "real_name": "Supersweet Syrup",
+  "real_description": "Lowers the foe's evasion once per battle."
+}

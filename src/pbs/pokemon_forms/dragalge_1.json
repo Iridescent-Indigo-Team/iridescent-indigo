@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DRAGALGE",
+  "form": 1,
+  "real_form_name": "Mega Dragalge",
+  "mega_stone": "DRAGALGITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 85,
+    "defense": 105,
+    "speed": 44,
+    "special_attack": 132,
+    "special_defense": 163
+  },
+  "base_exp": 223,
+  "abilities": ["REGENERATOR"],
+  "hidden_abilities": ["REGENERATOR"],
+  "height": 2.1,
+  "weight": 100.3,
+  "real_pokedex_entry": "It spits a liquid that causes the regenerative power of cells to run wild. The liquid is deadly poison to everything other than itself.",
+  "generation": 9
+}

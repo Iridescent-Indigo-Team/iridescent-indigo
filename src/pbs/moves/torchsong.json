@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TORCHSONG",
+  "real_name": "Torch Song",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpAtk1",
+  "flags": ["Sound", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user blows out raging flames as if singing a song. This also boosts the user’s Sp. Atk stat."
+}

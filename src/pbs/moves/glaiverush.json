@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GLAIVERUSH",
+  "real_name": "Glaive Rush",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "UserVulnerableUntilNextAction",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user becomes highly vulnerable to attacks until its next turn after using this move."
+}

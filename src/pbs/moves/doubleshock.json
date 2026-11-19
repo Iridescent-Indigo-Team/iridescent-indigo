@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLESHOCK",
+  "real_name": "Double Shock",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "UserLosesElectricType",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks by discharging all of its electricity. The user will no longer be Electric type."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AQUASTEP",
+  "real_name": "Aqua Step",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpeed1",
+  "flags": ["Dance", "Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user attacks the target using light and fluid dance steps. This also boosts the user’s Speed stat."
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "TINKATUFF",
+  "back_sprite": {"x": -8, "y": 47},
+  "front_sprite": {"x": 3, "y": 30},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

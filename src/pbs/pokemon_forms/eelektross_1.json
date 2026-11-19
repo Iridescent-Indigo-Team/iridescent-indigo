@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "EELEKTROSS",
+  "form": 1,
+  "real_form_name": "Mega Eelektross",
+  "mega_stone": "EELEKTROSSITE",
+  "base_stats": {
+    "hp": 85,
+    "attack": 145,
+    "defense": 80,
+    "speed": 80,
+    "special_attack": 135,
+    "special_defense": 90
+  },
+  "base_exp": 308,
+  "abilities": ["EELEVATE"],
+  "hidden_abilities": ["EELEVATE"],
+  "height": 3.0,
+  "weight": 180.0,
+  "real_pokedex_entry": "It now generates 10 times the electricity it did before Mega Evolving. It discharges this electricity from its false Eelektrik, which are made of mucus.",
+  "generation": 9
+}

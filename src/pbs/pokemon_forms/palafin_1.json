@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PALAFIN",
+  "form": 1,
+  "real_form_name": "Hero Form",
+  "base_stats": {
+    "hp": 100,
+    "attack": 160,
+    "defense": 97,
+    "speed": 100,
+    "special_attack": 106,
+    "special_defense": 87
+  },
+  "base_exp": 228,
+  "height": 1.8,
+  "weight": 97.4,
+  "real_category": "Hero",
+  "real_pokedex_entry": "This Pokémon's ancient genes have awakened. It is now so extraordinarily strong that it can easily lift a cruise ship with one fin."
+}

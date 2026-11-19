@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "EMBOAR",
+  "form": 1,
+  "real_form_name": "Mega Emboar",
+  "mega_stone": "EMBOARITE",
+  "base_stats": {
+    "hp": 110,
+    "attack": 148,
+    "defense": 75,
+    "speed": 75,
+    "special_attack": 110,
+    "special_defense": 110
+  },
+  "base_exp": 314,
+  "abilities": ["MOLDBREAKER"],
+  "hidden_abilities": ["MOLDBREAKER"],
+  "height": 1.8,
+  "weight": 180.3,
+  "real_pokedex_entry": "Brandishing a blazing flame shaped like a serpentine spear, it rushes in to rescue its imperiled allies.",
+  "generation": 9
+}

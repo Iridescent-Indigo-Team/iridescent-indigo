@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "METEORITE",
+  "real_name": "Meteorite",
+  "real_name_plural": "Meteorites",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "A rock that fell to earth from space. It allows a certain species of Pokémon to change forms."
+}

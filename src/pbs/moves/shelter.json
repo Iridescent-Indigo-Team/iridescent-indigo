@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHELTER",
+  "real_name": "Shelter",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserDefense2",
+  "real_description": "The user makes its skin as hard as an iron shield, sharply boosting its Defense stat."
+}

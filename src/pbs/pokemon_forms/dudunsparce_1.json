@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DUDUNSPARCE",
+  "form": 1,
+  "real_form_name": "Three-Segment Form",
+  "height": 4.5,
+  "weight": 47.4,
+  "real_pokedex_entry": "The gentle Dudunsparce will put Pokémon that wander into its nest onto its back and carry them to the entrance."
+}

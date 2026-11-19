@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REVIVALBLESSING",
+  "real_name": "Revival Blessing",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 1,
+  "target": "User",
+  "function_code": "RevivePokemonHalfHP",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user revives a party Pokémon that has fainted and restores half their max HP."
+}

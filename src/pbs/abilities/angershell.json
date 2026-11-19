@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ANGERSHELL",
+  "real_name": "Anger Shell",
+  "real_description": "Gets a powerful boost if a hit makes its HP half or less."
+}

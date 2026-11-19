@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TERASTARSTORM",
+  "real_name": "Tera Starstorm",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TerapagosCategoryDependsOnHigherDamage",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "When used by Terapagos in its Stellar Form, this move damages all opposing Pokémon."
+}

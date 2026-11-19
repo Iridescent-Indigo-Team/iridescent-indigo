@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ABSOL",
+  "form": 2,
+  "real_form_name": "Mega Absol Z",
+  "mega_stone": "ABSOLITEZ",
+  "types": ["DARK", "GHOST"],
+  "base_stats": {
+    "hp": 65,
+    "attack": 154,
+    "defense": 60,
+    "speed": 151,
+    "special_attack": 75,
+    "special_defense": 60
+  },
+  "base_exp": 198,
+  "abilities": ["SHARPNESS"],
+  "hidden_abilities": ["SHARPNESS"],
+  "weight": 49.0,
+  "real_pokedex_entry": "Using fur that it has made into sharp, clawlike shapes, it cuts down foes with a single blow. This is an act of kindness to keep them from suffering.",
+  "generation": 9
+}

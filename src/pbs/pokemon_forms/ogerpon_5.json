@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 5,
+  "real_form_name": "Wellspring Mask",
+  "pokedex_form": 1,
+  "types": ["GRASS", "WATER"],
+  "abilities": ["WATERABSORB"],
+  "color": "Blue",
+  "flags": ["Legendary", "TeraType_WATER"]
+}

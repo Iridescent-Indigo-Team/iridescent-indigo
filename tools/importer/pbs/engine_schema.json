@@ -879,7 +879,7 @@
         {
           "key": "Moves",
           "property": "moves",
-          "type": "*ue",
+          "type": "*ie",
           "enums": [
             null,
             {
@@ -1164,7 +1164,7 @@
         {
           "key": "Moves",
           "property": "moves",
-          "type": "*ue",
+          "type": "*ie",
           "enums": [
             null,
             {
@@ -1783,7 +1783,7 @@
     },
     "Evolution": {
       "source": "hardcoded",
-      "values": ["None", "Level", "LevelMale", "LevelFemale", "LevelDay", "LevelNight", "LevelMorning", "LevelAfternoon", "LevelEvening", "LevelNoWeather", "LevelSun", "LevelRain", "LevelSnow", "LevelSandstorm", "LevelCycling", "LevelSurfing", "LevelDiving", "LevelDarkness", "LevelDarkInParty", "AttackGreater", "AtkDefEqual", "DefenseGreater", "Silcoon", "Cascoon", "Ninjask", "Shedinja", "Happiness", "HappinessMale", "HappinessFemale", "HappinessDay", "HappinessNight", "HappinessMove", "HappinessMoveType", "HappinessHoldItem", "MaxHappiness", "Beauty", "HoldItem", "HoldItemMale", "HoldItemFemale", "DayHoldItem", "NightHoldItem", "HoldItemHappiness", "HasMove", "HasMoveType", "HasInParty", "Location", "LocationFlag", "Region", "Item", "ItemMale", "ItemFemale", "ItemDay", "ItemNight", "ItemHappiness", "Trade", "TradeMale", "TradeFemale", "TradeDay", "TradeNight", "TradeItem", "TradeSpecies", "BattleDealCriticalHit", "Event", "EventAfterDamageTaken"]
+      "values": ["None", "Level", "LevelMale", "LevelFemale", "LevelDay", "LevelNight", "LevelMorning", "LevelAfternoon", "LevelEvening", "LevelNoWeather", "LevelSun", "LevelRain", "LevelSnow", "LevelSandstorm", "LevelCycling", "LevelSurfing", "LevelDiving", "LevelDarkness", "LevelDarkInParty", "AttackGreater", "AtkDefEqual", "DefenseGreater", "Silcoon", "Cascoon", "Ninjask", "Shedinja", "Happiness", "HappinessMale", "HappinessFemale", "HappinessDay", "HappinessNight", "HappinessMove", "HappinessMoveType", "HappinessHoldItem", "MaxHappiness", "Beauty", "HoldItem", "HoldItemMale", "HoldItemFemale", "DayHoldItem", "NightHoldItem", "HoldItemHappiness", "HasMove", "HasMoveType", "HasInParty", "Location", "LocationFlag", "Region", "Item", "ItemMale", "ItemFemale", "ItemDay", "ItemNight", "ItemHappiness", "Trade", "TradeMale", "TradeFemale", "TradeDay", "TradeNight", "TradeItem", "TradeSpecies", "BattleDealCriticalHit", "Event", "EventAfterDamageTaken", "CollectItems", "LevelWithPartner", "LevelUseMoveCount", "LevelDefeatItsKindWithItem", "LevelRecoilDamage", "LevelWalk"]
     },
     "GenderRatio": {
       "source": "hardcoded",
@@ -1894,7 +1894,13 @@
       "TradeSpecies": "Species",
       "BattleDealCriticalHit": "Integer",
       "Event": "Integer",
-      "EventAfterDamageTaken": "Integer"
+      "EventAfterDamageTaken": "Integer",
+      "CollectItems": "Item",
+      "LevelWithPartner": "Integer",
+      "LevelUseMoveCount": "Move",
+      "LevelDefeatItsKindWithItem": "Item",
+      "LevelRecoilDamage": "Integer",
+      "LevelWalk": "Integer"
     },
     "encounter_types": {
       "Land": {

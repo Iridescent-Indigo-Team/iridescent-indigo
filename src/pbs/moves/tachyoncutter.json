@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TACHYONCUTTER",
+  "real_name": "Tachyon Cutter",
+  "type": "STEEL",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["CanProtect", "CanMirrorMove", "Slicing"],
+  "real_description": "The user attacks by launching particle blades at the target twice in a row. This attack never misses."
+}

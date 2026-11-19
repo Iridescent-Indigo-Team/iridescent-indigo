@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIGHTYCLEAVE",
+  "real_name": "Mighty Cleave",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 95,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanMirrorMove", "Slicing"],
+  "real_description": "The user cleaves the target. This move hits even if the target protects itself."
+}

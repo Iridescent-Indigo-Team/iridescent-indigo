@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERASPEARBERRY",
+  "real_name": "Hyper Aspear Berry",
+  "real_name_plural": "Hyper Aspear Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. Its sour bite makes it perfect for stewing into a confiture."
+}

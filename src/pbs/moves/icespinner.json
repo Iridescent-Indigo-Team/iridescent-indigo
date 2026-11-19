@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICESPINNER",
+  "real_name": "Ice Spinner",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RemoveTerrainIceSpinner",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user spins into the target with feet covered in thin ice. This also destroys the terrain."
+}

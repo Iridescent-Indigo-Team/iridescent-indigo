@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BIGBAMBOOSHOOT",
+  "real_name": "Big Bamboo Shoot",
+  "real_name_plural": "Big Bamboo Shoots",
+  "pocket": 1,
+  "price": 6000,
+  "flags": ["Fling_30"],
+  "real_description": "A large and rare bamboo shoot. It's extremely popular with a certain class of gourmands."
+}

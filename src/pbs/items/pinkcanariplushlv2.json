@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PINKCANARIPLUSHLV2",
+  "real_name": "Pink Canari Plush",
+  "real_name_plural": "Pink Canari Plushies",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Canari plush holding a pink charm. It increases the number of Mega Shards you get."
+}

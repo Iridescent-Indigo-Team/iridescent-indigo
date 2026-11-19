@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MEGANIUM",
+  "form": 1,
+  "real_form_name": "Mega Meganium",
+  "mega_stone": "MEGANIUMITE",
+  "types": ["GRASS", "FAIRY"],
+  "base_stats": {
+    "hp": 80,
+    "attack": 92,
+    "defense": 115,
+    "speed": 80,
+    "special_attack": 143,
+    "special_defense": 115
+  },
+  "base_exp": 313,
+  "abilities": ["MEGASOL"],
+  "hidden_abilities": ["MEGASOL"],
+  "height": 2.4,
+  "weight": 201.0,
+  "real_pokedex_entry": "This Pokémon can fire a tremendously powerful Solar Beam from its four flowers. Another name for this is Mega Sol Cannon.",
+  "generation": 9
+}

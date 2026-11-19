@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SQUAWKABILLY",
+  "form": 3,
+  "real_form_name": "White Plumage",
+  "hidden_abilities": ["SHEERFORCE"],
+  "color": "White",
+  "real_pokedex_entry": "Though these Squawkabilly are the fewest in number, they have no trouble living in towns since they blend in with the white buildings."
+}

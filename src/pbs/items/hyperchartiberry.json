@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERCHARTIBERRY",
+  "real_name": "Hyper Charti Berry",
+  "real_name_plural": "Hyper Charti Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. It goes well in chocolate."
+}

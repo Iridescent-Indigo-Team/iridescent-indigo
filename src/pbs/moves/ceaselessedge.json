@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CEASELESSEDGE",
+  "real_name": "Ceaseless Edge",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SplintersTargetGen8AddSpikesGen9",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Slicing"],
+  "effect_chance": 100,
+  "real_description": "The user slashes the opponent with its shell blade. May leave spikes around the target."
+}

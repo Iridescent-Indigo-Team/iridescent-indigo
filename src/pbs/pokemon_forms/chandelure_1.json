@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CHANDELURE",
+  "form": 1,
+  "real_form_name": "Mega Chandelure",
+  "mega_stone": "CHANDELURITE",
+  "base_stats": {
+    "hp": 60,
+    "attack": 75,
+    "defense": 110,
+    "speed": 90,
+    "special_attack": 175,
+    "special_defense": 110
+  },
+  "base_exp": 310,
+  "abilities": ["INFILTRATOR"],
+  "hidden_abilities": ["INFILTRATOR"],
+  "height": 2.5,
+  "weight": 69.6,
+  "real_pokedex_entry": "One of its eyes is a window linking our world with the afterlife. This Pokémon draws in hatred and converts it into power.",
+  "generation": 9
+}

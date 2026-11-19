@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HARDPRESS",
+  "real_name": "Hard Press",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetHP100PowerRange",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is crushed with great force. The attack is more powerful the more HP the target has left."
+}

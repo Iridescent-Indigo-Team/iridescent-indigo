@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BOOSTERENERGY",
+  "real_name": "Booster Energy",
+  "real_name_plural": "Booster Energies",
+  "real_portion_name": "capsule of Booster Energy",
+  "real_portion_name_plural": "capsules of Booster Energy",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by Pokémon with certain Abilities. It boosts the strength of the Pokémon."
+}

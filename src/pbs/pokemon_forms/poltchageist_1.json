@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "POLTCHAGEIST",
+  "form": 1,
+  "real_form_name": "Artisan Form",
+  "real_pokedex_entry": "It sprinkles some of its powdery body onto food and drains the life-force from those who so much as lick it.",
+  "evolutions": [
+    {"species": "SINISTCHA", "method": "Item", "parameter": "MASTERPIECETEACUP"}
+  ]
+}

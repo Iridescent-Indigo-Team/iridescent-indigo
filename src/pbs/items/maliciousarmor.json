@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MALICIOUSARMOR",
+  "real_name": "Malicious Armor",
+  "real_name_plural": "Malicious Armors",
+  "real_portion_name": "set of Malicious Armor",
+  "real_portion_name_plural": "sets of Malicious Armor",
+  "pocket": 1,
+  "price": 3000,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar set of armor that can make a certain Pokémon evolve. Malicious will lurks within it."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAGEFIST",
+  "real_name": "Rage Fist",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "IncreasePowerEachTimeHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome", "Punching"],
+  "real_description": "The user converts its rage into energy to attack. The move’s power increases every time the user is hit."
+}

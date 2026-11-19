@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SPICYSPRAY",
+  "real_name": "Spicy Spray",
+  "real_description": "Burns the attacker when hit by a damaging move."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DIRECLAW",
+  "real_name": "Dire Claw",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "PoisonParalyzeOrSleepTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 50,
+  "real_description": "The user may critically hit with its ruinous claws. May also leave the target poisoned, paralyzed, or asleep."
+}

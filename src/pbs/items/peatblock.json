@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PEATBLOCK",
+  "real_name": "Peat Block",
+  "real_name_plural": "Peat Blocks",
+  "pocket": 1,
+  "price": 2100,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30", "EvolutionStone"],
+  "real_description": "A block of muddy material that is for fuel. It’s loved by a certain Pokémon."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FILLETAWAY",
+  "real_name": "Fillet Away",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserAtkSpAtkSpeed2LoseHalfOfTotalHP",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user sharply boosts its Attack, Sp. Atk, and Speed stats by using its own HP."
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FROSLASS",
+  "form": 1,
+  "real_form_name": "Mega Froslass",
+  "mega_stone": "FROSLASSITE",
+  "base_stats": {
+    "hp": 70,
+    "attack": 80,
+    "defense": 70,
+    "speed": 120,
+    "special_attack": 140,
+    "special_defense": 100
+  },
+  "base_exp": 218,
+  "abilities": ["SNOWWARNING"],
+  "hidden_abilities": ["SNOWWARNING"],
+  "height": 2.6,
+  "weight": 29.6,
+  "real_pokedex_entry": "This Pokémon can use eerie cold air imbued with ghost energy to freeze even insubstantial things, such as flames or the wind.",
+  "generation": 9
+}

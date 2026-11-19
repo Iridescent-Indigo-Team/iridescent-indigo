@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "EPICENOIRE",
+  "real_name": "Épice Noire",
+  "real_name_plural": "Épice Noires",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A mysterious, highly prized spice of the Rust Syndicate that elevates any dish to dreamlike perfection."
+}

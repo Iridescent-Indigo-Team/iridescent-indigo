@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWERSHIFT",
+  "real_name": "Power Shift",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserSwapBaseAtkDef",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user swaps its Attack and Defense stats."
+}

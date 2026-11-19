@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYDROSTEAM",
+  "real_name": "Hydro Steam",
+  "type": "WATER",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "IncreasePowerInSunWeather",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user blasts the target with boiling-hot water whose power is boosted in harsh sunlight."
+}

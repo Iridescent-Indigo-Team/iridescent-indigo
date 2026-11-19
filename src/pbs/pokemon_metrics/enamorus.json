@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "ENAMORUS",
+  "back_sprite": {"x": 0, "y": 42},
+  "front_sprite": {"x": 1, "y": 7},
+  "shadow_x": 2,
+  "shadow_size": 3
+}

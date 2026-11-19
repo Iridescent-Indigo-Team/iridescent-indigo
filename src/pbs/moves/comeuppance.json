@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COMEUPPANCE",
+  "real_name": "Comeuppance",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "None",
+  "function_code": "CounterDamagePlusHalf",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user retaliates with much greater force against the opponent that last inflicted damage on it."
+}

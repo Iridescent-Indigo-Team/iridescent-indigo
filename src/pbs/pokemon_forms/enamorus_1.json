@@ -1,0 +1,18 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ENAMORUS",
+  "form": 1,
+  "real_form_name": "Therian Form",
+  "base_stats": {
+    "hp": 74,
+    "attack": 115,
+    "defense": 110,
+    "speed": 46,
+    "special_attack": 135,
+    "special_defense": 100
+  },
+  "abilities": ["OVERCOAT"],
+  "hidden_abilities": ["OVERCOAT"],
+  "shape": "Quadruped",
+  "real_pokedex_entry": "A different guise from its feminine humanoid form. From the clouds, it descends upon those who treat any form of life with disrespect and punishes them."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PROTOSYNTHESIS",
+  "real_name": "Protosynthesis",
+  "real_description": "Boosts its best stat in harsh sunlight."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SEEDSOWER",
+  "real_name": "Seed Sower",
+  "real_description": "Turns the ground into Grassy Terrain upon taking damage."
+}

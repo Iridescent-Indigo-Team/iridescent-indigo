@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ARBOLIVAOIL",
+  "real_name": "Arboliva Oil",
+  "real_name_plural": "Arboliva Oils",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "Oil from Paldea's Arboliva, said to taste heavenly. How Corbeau obtained it remains a mystery."
+}

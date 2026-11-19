@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHILLYRECEPTION",
+  "real_name": "Chilly Reception",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "SwitchOutUserStartHailWeather",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user tells a chillingly bad joke and switches out. This summons a snowstorm lasting five turns."
+}

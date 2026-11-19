@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FAIRYFEATHER",
+  "real_name": "Fairy Feather",
+  "real_name_plural": "Fairy Feathers",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 750,
+  "flags": ["Fling_20"],
+  "real_description": "An item to be held by a Pokémon. It boosts the power of the holder's Fairy-type moves."
+}

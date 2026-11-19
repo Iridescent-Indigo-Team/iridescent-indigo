@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WINDRIDER",
+  "real_name": "Wind Rider",
+  "real_description": "Boosts Attack in Tailwind or when attacked by wind moves."
+}

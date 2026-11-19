@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "STARAPTOR",
+  "form": 1,
+  "real_form_name": "Mega Staraptor",
+  "mega_stone": "STARAPTITE",
+  "types": ["FIGHTING", "FLYING"],
+  "base_stats": {
+    "hp": 85,
+    "attack": 140,
+    "defense": 100,
+    "speed": 110,
+    "special_attack": 60,
+    "special_defense": 90
+  },
+  "base_exp": 293,
+  "abilities": ["CONTRARY"],
+  "hidden_abilities": ["CONTRARY"],
+  "height": 1.9,
+  "weight": 50.0,
+  "real_pokedex_entry": "Mega Staraptor is a top-class flier. It can easily soar through the sky while gripping a Steelix that weighs more than 880 lbs.",
+  "generation": 9
+}

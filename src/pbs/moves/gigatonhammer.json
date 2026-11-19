@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GIGATONHAMMER",
+  "real_name": "Gigaton Hammer",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 160,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "CantSelectConsecutiveTurns",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with its huge hammer. This move can’t be used twice in a row."
+}

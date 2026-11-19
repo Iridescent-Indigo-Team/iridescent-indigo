@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SWORDOFRUIN",
+  "real_name": "Sword of Ruin",
+  "real_description": "Lowers the Defense of all Pokémon except the user."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NOXIOUSTORQUE",
+  "real_name": "Noxious Torque",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "StarmobilePoisonTarget",
+  "flags": ["CanProtect", "CannotMetronome"],
+  "effect_chance": 30,
+  "real_description": "This move is only used by a Starmobile. It may poison the target."
+}

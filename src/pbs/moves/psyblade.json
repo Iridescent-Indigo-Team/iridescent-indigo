@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYBLADE",
+  "real_name": "Psyblade",
+  "type": "PSYCHIC",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "IncreasePowerInElectricTerrain",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Slicing"],
+  "real_description": "The user rends the target with an ethereal blade whose power is boosted on Electric Terrain."
+}

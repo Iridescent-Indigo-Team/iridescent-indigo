@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TATSUGIRI",
+  "form": 1,
+  "real_form_name": "Droopy Form",
+  "color": "Pink",
+  "real_pokedex_entry": "This species’ differing colors and patterns are apparently the result of Tatsugiri changing itself to suit the preferences of the prey it lures in."
+}

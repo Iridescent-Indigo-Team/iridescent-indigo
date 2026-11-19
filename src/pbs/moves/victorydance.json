@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VICTORYDANCE",
+  "real_name": "Victory Dance",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserAtkDefSpd1",
+  "flags": ["Dance"],
+  "real_description": "The user performs an intense dance to usher in victory, raising its Attack, Defense, and Speed."
+}

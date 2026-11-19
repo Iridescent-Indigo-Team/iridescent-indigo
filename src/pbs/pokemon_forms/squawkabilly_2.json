@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SQUAWKABILLY",
+  "form": 2,
+  "real_form_name": "Yellow Plumage",
+  "hidden_abilities": ["SHEERFORCE"],
+  "color": "Yellow",
+  "real_pokedex_entry": "The yellow Squawkabilly are especially fierce. They've even been known to drive other bird Pokémon out of town."
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SCOVILLAIN",
+  "form": 1,
+  "real_form_name": "Mega Scovillain",
+  "mega_stone": "SCOVILLAINITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 138,
+    "defense": 85,
+    "speed": 75,
+    "special_attack": 138,
+    "special_defense": 85
+  },
+  "base_exp": 220,
+  "abilities": ["SPICYSPRAY"],
+  "hidden_abilities": ["SPICYSPRAY"],
+  "height": 1.2,
+  "weight": 22.0,
+  "real_pokedex_entry": "Mega Evolution has dialed up this Pokémon's spiciness. It swings its \"necktie\" around to wallop its foes."
+}

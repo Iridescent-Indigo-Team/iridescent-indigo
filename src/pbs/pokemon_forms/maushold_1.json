@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MAUSHOLD",
+  "form": 1,
+  "real_form_name": "Family of Three",
+  "weight": 2.3,
+  "real_pokedex_entry": "The little one just appeared one day. They all live together like a family, but the relationship between the three is still unclear."
+}

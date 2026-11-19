@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LINKINGCORD",
+  "real_name": "Linking Cord",
+  "real_name_plural": "Linking Cords",
+  "pocket": 1,
+  "price": 2100,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30", "EvolutionStone"],
+  "real_description": "A string exuding a mysterious energy of connection. It’s loved by certain Pokémon."
+}

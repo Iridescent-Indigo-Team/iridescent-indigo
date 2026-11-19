@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "LUCARIO",
+  "form": 2,
+  "real_form_name": "Mega Lucario Z",
+  "mega_stone": "LUCARIONITEZ",
+  "base_stats": {
+    "hp": 70,
+    "attack": 100,
+    "defense": 70,
+    "speed": 151,
+    "special_attack": 164,
+    "special_defense": 70
+  },
+  "base_exp": 219,
+  "abilities": ["AURAGUARD"],
+  "hidden_abilities": ["AURAGUARD"],
+  "height": 1.3,
+  "weight": 49.4,
+  "real_pokedex_entry": "By completely cloaking itself in its aura, Mega Lucario Z can parry all manner of attacks, battling as if it were gracefully dancing.",
+  "generation": 9
+}

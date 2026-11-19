@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERPECHABERRY",
+  "real_name": "Hyper Pecha Berry",
+  "real_name_plural": "Hyper Pecha Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. Its sweet flavor makes it a great ingredient for meringue."
+}

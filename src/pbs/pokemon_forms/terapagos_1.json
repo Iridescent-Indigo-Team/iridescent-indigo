@@ -1,0 +1,24 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TERAPAGOS",
+  "form": 1,
+  "real_form_name": "Terastal Form",
+  "base_stats": {
+    "hp": 95,
+    "attack": 95,
+    "defense": 110,
+    "speed": 85,
+    "special_attack": 105,
+    "special_defense": 110
+  },
+  "evs": [
+    {"stat": "DEFENSE", "amount": 2},
+    {"stat": "SPECIAL_DEFENSE", "amount": 2}
+  ],
+  "abilities": ["TERASHELL"],
+  "height": 0.3,
+  "weight": 16.0,
+  "shape": "Head",
+  "real_pokedex_entry": "The shell is made of crystallized Terastal energy. When struck by a move, this shell absorbs the move’s energy and transfers it to Terapagos.",
+  "flags": ["Legendary", "TeraType_STELLAR"]
+}

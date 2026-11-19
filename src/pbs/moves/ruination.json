@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RUINATION",
+  "real_name": "Ruination",
+  "type": "DARK",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FixedDamageHalfTargetHP",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user summons a ruinous disaster. This cuts the target’s HP in half."
+}

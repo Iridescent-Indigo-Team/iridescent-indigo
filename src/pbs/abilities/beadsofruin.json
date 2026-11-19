@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BEADSOFRUIN",
+  "real_name": "Beads of Ruin",
+  "real_description": "Lowers the Sp. Def of all Pokémon except the user."
+}

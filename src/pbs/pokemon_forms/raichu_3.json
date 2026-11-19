@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "RAICHU",
+  "form": 3,
+  "real_form_name": "Mega Raichu Y",
+  "mega_stone": "RAICHUNITEY",
+  "base_stats": {
+    "hp": 60,
+    "attack": 100,
+    "defense": 55,
+    "speed": 130,
+    "special_attack": 160,
+    "special_defense": 80
+  },
+  "base_exp": 293,
+  "abilities": ["NOGUARD"],
+  "hidden_abilities": ["NOGUARD"],
+  "height": 1.0,
+  "weight": 26.0,
+  "real_pokedex_entry": "It fires bolts of electricity from the tip of its tail and from the spiky tufts of fur growing out of its temples. This electricity forms the letter Y.",
+  "generation": 9
+}

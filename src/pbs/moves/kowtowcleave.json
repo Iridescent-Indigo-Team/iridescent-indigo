@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "KOWTOWCLEAVE",
+  "real_name": "Kowtow Cleave",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Slicing", "Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user kowtows to make the target lower its guard, then slashes. This attack never misses."
+}

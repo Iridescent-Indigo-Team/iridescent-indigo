@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYCHICNOISE",
+  "real_name": "Psychic Noise",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DisableTargetHealingMoves2Turns",
+  "flags": ["Sound", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "Attacks the target with unpleasant sound waves. Prevents the target from healing for two turns."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HISUIANGREATBALL",
+  "real_name": "Great Ball",
+  "real_name_plural": "Great Balls",
+  "pocket": 3,
+  "price": 900,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A mysterious ball that provides a higher success catch rate than a standard Poké Ball."
+}

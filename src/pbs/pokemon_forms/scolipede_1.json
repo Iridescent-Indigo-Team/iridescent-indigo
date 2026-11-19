@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SCOLIPEDE",
+  "form": 1,
+  "real_form_name": "Mega Scolipede",
+  "mega_stone": "SCOLIPITE",
+  "base_stats": {
+    "hp": 60,
+    "attack": 140,
+    "defense": 149,
+    "speed": 62,
+    "special_attack": 75,
+    "special_defense": 99
+  },
+  "base_exp": 293,
+  "abilities": ["SHELLARMOR"],
+  "hidden_abilities": ["SHELLARMOR"],
+  "height": 3.2,
+  "weight": 230.5,
+  "real_pokedex_entry": "Its deadly venom gives off a faint glow. The venom affects Scolipede's mind, honing its viciousness.",
+  "generation": 9
+}

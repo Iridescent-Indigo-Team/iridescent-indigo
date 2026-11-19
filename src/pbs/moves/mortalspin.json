@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MORTALSPIN",
+  "real_name": "Mortal Spin",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 30,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearFoes",
+  "function_code": "RemoveUserBindingAndEntryHazardsPoisonTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "Performs a spin that eliminates certain traps and hazards. This also poisons opposing Pokémon."
+}

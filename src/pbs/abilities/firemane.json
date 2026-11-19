@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FIREMANE",
+  "real_name": "Fire Mane",
+  "real_description": "Powers up Fire-type moves."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRISEOUSCORE",
+  "real_name": "Griseous Core",
+  "real_name_plural": "Griseous Cores",
+  "pocket": 1,
+  "price": 20000,
+  "sell_price": 0,
+  "flags": ["Fling_60"],
+  "real_description": "When held by Giratina, this large, glowing gem wells with power and allows the Pokémon to change form."
+}

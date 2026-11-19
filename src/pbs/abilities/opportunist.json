@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "OPPORTUNIST",
+  "real_name": "Opportunist",
+  "real_description": "Copies an opponent's stat boost during a turn."
+}

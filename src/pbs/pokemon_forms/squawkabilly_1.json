@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SQUAWKABILLY",
+  "form": 1,
+  "real_form_name": "Blue Plumage",
+  "color": "Blue",
+  "real_pokedex_entry": "Blue-feathered Squawkabilly view their green- feathered counterparts as rivals, since the latter make up the largest, most powerful groups."
+}

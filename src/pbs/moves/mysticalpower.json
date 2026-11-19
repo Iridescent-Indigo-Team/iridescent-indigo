@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MYSTICALPOWER",
+  "real_name": "Mystical Power",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user attacks by emitting a mysterious power. This also boosts the user’s Sp. Atk stat."
+}

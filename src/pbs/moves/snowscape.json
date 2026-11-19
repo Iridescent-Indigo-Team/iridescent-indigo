@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SNOWSCAPE",
+  "real_name": "Snowscape",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartHailWeather",
+  "flags": ["CannotMetronome"],
+  "real_description": "Summons a five-turn snowstorm that boosts the Defense of Ice-type Pokémon."
+}

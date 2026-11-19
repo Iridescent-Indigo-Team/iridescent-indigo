@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEADLONGRUSH",
+  "real_name": "Headlong Rush",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserDefSpDef1",
+  "flags": ["Contact", "Punching", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user rams into the target in a full-body tackle. This lowers the user’s Defense and Sp. Def stats."
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FERALIGATR",
+  "form": 1,
+  "real_form_name": "Mega Feraligatr",
+  "mega_stone": "FERALIGITE",
+  "types": ["WATER", "DRAGON"],
+  "base_stats": {
+    "hp": 85,
+    "attack": 160,
+    "defense": 125,
+    "speed": 78,
+    "special_attack": 89,
+    "special_defense": 93
+  },
+  "base_exp": 315,
+  "abilities": ["DRAGONIZE"],
+  "hidden_abilities": ["DRAGONIZE"],
+  "weight": 108.8,
+  "real_category": "Double Jaw",
+  "real_pokedex_entry": "With its arms and hoodlike fin, this Pokémon forms a gigantic set of jaws with a bite 10 times as powerful as Mega Feraligatr's actual jaws.",
+  "generation": 9
+}

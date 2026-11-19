@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DRAMPA",
+  "form": 1,
+  "real_form_name": "Mega Drampa",
+  "mega_stone": "DRAMPANITE",
+  "base_stats": {
+    "hp": 78,
+    "attack": 85,
+    "defense": 110,
+    "speed": 36,
+    "special_attack": 160,
+    "special_defense": 116
+  },
+  "base_exp": 220,
+  "abilities": ["BERSERK"],
+  "hidden_abilities": ["BERSERK"],
+  "weight": 240.5,
+  "real_category": "Imposing",
+  "real_pokedex_entry": "Drampa's cells have been invigorated, allowing it to regain its youth. It manipulates the atmosphere to summon storms.",
+  "generation": 9
+}

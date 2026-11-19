@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHLOROBLAST",
+  "real_name": "Chloroblast",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 95,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RecoilHalfOfTotalHP",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user."
+}

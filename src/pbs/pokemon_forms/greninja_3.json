@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GRENINJA",
+  "form": 3,
+  "real_form_name": "Mega Greninja",
+  "mega_stone": "GRENINJITE",
+  "base_stats": {
+    "hp": 72,
+    "attack": 125,
+    "defense": 77,
+    "speed": 142,
+    "special_attack": 133,
+    "special_defense": 81
+  },
+  "base_exp": 315,
+  "abilities": ["PROTEAN"],
+  "hidden_abilities": ["PROTEAN"],
+  "real_pokedex_entry": "This Pokémon spins a giant shuriken at high speed to make it float, then clings to it upside down to catch opponents unawares.",
+  "generation": 9
+}

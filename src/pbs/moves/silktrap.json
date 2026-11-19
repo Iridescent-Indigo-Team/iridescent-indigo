@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SILKTRAP",
+  "real_name": "Silk Trap",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUserFromDamagingMovesSilkTrap",
+  "flags": ["CannotMetronome"],
+  "real_description": "User spins a silken trap to protect itself. Lowers the Speed of any that make direct contact."
+}

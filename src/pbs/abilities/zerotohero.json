@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ZEROTOHERO",
+  "real_name": "Zero to Hero",
+  "real_description": "Transforms into its Hero Form when it switches out."
+}

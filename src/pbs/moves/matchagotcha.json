@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MATCHAGOTCHA",
+  "real_name": "Matcha Gotcha",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "AllNearFoes",
+  "function_code": "HealUserByHalfOfDamageDoneBurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "ThawsUser"],
+  "effect_chance": 20,
+  "real_description": "Blasts opponents with hot tea. Heals the user by half the damage dealt and may also burn targets."
+}
