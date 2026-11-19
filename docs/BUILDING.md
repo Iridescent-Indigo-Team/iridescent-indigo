@@ -311,6 +311,12 @@ shows what would change without writing anything.
   shallowly (`--depth 1`) and the dependency build is retried automatically
   (`DEPS_RETRIES`, default 3). If it still fails, run `make mkxp` again; it
   continues where it stopped.
+- **`make mkxp` sits for a long time after a "detached HEAD" message**:
+  dependency downloads print nothing while they run. Older versions also
+  downloaded FluidSynth's ~570 MB test data, which the build never uses;
+  `build_engine.sh` now fetches FluidSynth without it. If an older run is
+  stuck there, press Ctrl-C and run `make mkxp` again; it repairs a partly
+  downloaded FluidSynth folder and continues.
 - **`downloads/` or `build-x86_64/` at the repository root**: left over from
   an earlier version of `build_engine.sh` that ran the dependency build in the
   wrong folder. Delete them; the dependencies now build in `lib/mkxp-z/linux/`.
