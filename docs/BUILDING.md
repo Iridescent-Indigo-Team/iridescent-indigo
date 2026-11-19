@@ -40,6 +40,8 @@ make mkxp
 
 ## Requirements
 
+Git LFS is not needed: all assets come with a normal `git clone`.
+
 **Building the game folder**
 
 - GNU make, bash
@@ -304,6 +306,11 @@ shows what would change without writing anything.
   work in the same terminal), then run `make mkxp` again. `build_engine.sh`
   passes it to Ruby's build with `--with-baseruby` and re-configures a Ruby
   tree that was configured without one.
+- **`make mkxp` fails with "RPC failed", "Connection reset by peer" or
+  "early EOF"**: a download was interrupted. Dependencies are cloned
+  shallowly (`--depth 1`) and the dependency build is retried automatically
+  (`DEPS_RETRIES`, default 3). If it still fails, run `make mkxp` again; it
+  continues where it stopped.
 - **`downloads/` or `build-x86_64/` at the repository root**: left over from
   an earlier version of `build_engine.sh` that ran the dependency build in the
   wrong folder. Delete them; the dependencies now build in `lib/mkxp-z/linux/`.

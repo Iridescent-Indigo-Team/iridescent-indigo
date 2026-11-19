@@ -17,6 +17,9 @@
 # headers. See docs/BUILDING.md for the package list.
 #
 # Set SKIP_DEPS=1 to skip step 1 when the dependencies are already built.
+# Dependencies are cloned shallowly (--depth 1) and the dependency build is
+# retried DEPS_RETRIES times (default 3) to ride out dropped connections;
+# re-running continues where a failed run stopped.
 #===============================================================================
 set -euo pipefail
 
@@ -59,9 +62,25 @@ if [[ "${SKIP_DEPS:-0}" != 1 ]]; then
      ! grep -q -- "--with-baseruby" "$RUBY_SRC/config.status" 2>/dev/null; then
     rm -f "$RUBY_SRC/Makefile"
   fi
+  # Abort stalled downloads quickly so they can be retried.
+  export GIT_HTTP_LOW_SPEED_LIMIT="${GIT_HTTP_LOW_SPEED_LIMIT:-1000}"
+  export GIT_HTTP_LOW_SPEED_TIME="${GIT_HTTP_LOW_SPEED_TIME:-60}"
+  RETRIES="${DEPS_RETRIES:-3}"
+  attempt=1
   # The dependency Makefile builds its paths from $PWD, so run it from its own
-  # folder (make -C would leave PWD pointing at the caller's folder).
-  (cd "$DEPS_DIR" && make PWD="$DEPS_DIR" RUBY_FLAGS="--with-baseruby=$BASERUBY" everything)
+  # folder (make -C would leave PWD pointing at the caller's folder). CLONE
+  # makes every git clone shallow: much smaller downloads, same sources.
+  until (cd "$DEPS_DIR" && make PWD="$DEPS_DIR" CLONE="git clone -q --depth 1" \
+           RUBY_FLAGS="--with-baseruby=$BASERUBY" everything); do
+    if (( attempt >= RETRIES )); then
+      die "building the dependencies failed $attempt times. If the errors above mention" \
+          "\"RPC failed\", \"connection reset\" or \"early EOF\", it is a network problem:" \
+          "run 'make mkxp' again and it will continue where it stopped."
+    fi
+    attempt=$((attempt + 1))
+    echo "Dependency build failed; retrying in 5 seconds (attempt $attempt of $RETRIES)..." >&2
+    sleep 5
+  done
 fi
 
 # Step 2: mkxp-z itself, against the dependencies built above.
