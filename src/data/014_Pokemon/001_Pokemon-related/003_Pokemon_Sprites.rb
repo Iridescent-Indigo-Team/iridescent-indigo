@@ -191,8 +191,8 @@ class PokemonIconSprite < Sprite
     self.src_rect.x = self.src_rect.width * @current_frame
     # Update "jumping" animation (used in party screen)
     if @selected
-      @adjusted_x = 4
-      @adjusted_y = (@current_frame >= @frames_count / 2) ? -2 : 6
+      @adjusted_x = 2
+      @adjusted_y = (@current_frame >= @frames_count / 2) ? -1 : 3
     else
       @adjusted_x = 0
       @adjusted_y = 0

@@ -17,7 +17,7 @@ def pbListScreen(title, lister)
   list.viewport = viewport
   list.z        = 2
   title = Window_UnformattedTextPokemon.newWithSize(
-    title, Graphics.width / 2, 0, Graphics.width / 2, 64, viewport
+    title, Graphics.width / 2, 0, Graphics.width / 2, 32, viewport
   )
   title.z = 2
   lister.setViewport(viewport)
@@ -65,7 +65,7 @@ def pbListScreenBlock(title, lister)
   list.viewport = viewport
   list.z        = 2
   title = Window_UnformattedTextPokemon.newWithSize(
-    title, Graphics.width / 2, 0, Graphics.width / 2, 64, viewport
+    title, Graphics.width / 2, 0, Graphics.width / 2, 32, viewport
   )
   title.z = 2
   lister.setViewport(viewport)
@@ -119,7 +119,7 @@ class GraphicsLister
     @sprite = IconSprite.new(0, 0)
     @sprite.bitmap = nil
     @sprite.x      = Graphics.width * 3 / 4
-    @sprite.y      = ((Graphics.height - 64) / 2) + 64
+    @sprite.y      = ((Graphics.height - 32) / 2) + 32
     @sprite.z      = 2
     @folder = folder
     @selection = selection
@@ -295,7 +295,7 @@ class MapLister
     @sprite = Sprite.new
     @sprite.bitmap = nil
     @sprite.x      = Graphics.width * 3 / 4
-    @sprite.y      = ((Graphics.height - 64) / 2) + 64
+    @sprite.y      = ((Graphics.height - 32) / 2) + 32
     @sprite.z      = -2
     @commands = []
     @maps = pbMapTree
@@ -462,7 +462,7 @@ end
 #===============================================================================
 class TrainerTypeLister
   def initialize(selection = 0, includeNew = false)
-    @sprite = IconSprite.new(Graphics.width * 3 / 4, ((Graphics.height - 64) / 2) + 64)
+    @sprite = IconSprite.new(Graphics.width * 3 / 4, ((Graphics.height - 32) / 2) + 32)
     @sprite.z = 2
     @selection = selection
     @commands = []
@@ -537,10 +537,10 @@ end
 #===============================================================================
 class TrainerBattleLister
   def initialize(selection, includeNew)
-    @sprite = IconSprite.new(Graphics.width * 3 / 4, (Graphics.height / 2) + 32)
+    @sprite = IconSprite.new(Graphics.width * 3 / 4, (Graphics.height / 2) + 16)
     @sprite.z = 2
     @pkmnList = Window_UnformattedTextPokemon.newWithSize(
-      "", Graphics.width / 2, Graphics.height - 64, Graphics.width / 2, 64
+      "", Graphics.width / 2, Graphics.height - 32, Graphics.width / 2, 32
     )
     @pkmnList.z = 3
     @selection = selection

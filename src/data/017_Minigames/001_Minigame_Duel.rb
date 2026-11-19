@@ -19,8 +19,8 @@ class DuelWindow < Window_AdvancedTextPokemon
     @name     = name
     @is_enemy = is_enemy
     super()
-    self.width  = 160
-    self.height = 96
+    self.width  = 80
+    self.height = 48
     duel_refresh
   end
 
@@ -59,9 +59,9 @@ class PokemonDuel
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99999
     @sprites = {}
-    @sprites["player"] = IconSprite.new(-160, 96, @viewport)
+    @sprites["player"] = IconSprite.new(-80, 48, @viewport)
     @sprites["player"].setBitmap(GameData::TrainerType.player_front_sprite_filename($player.trainer_type))
-    @sprites["opponent"] = IconSprite.new(Graphics.width + 32, 96, @viewport)
+    @sprites["opponent"] = IconSprite.new(Graphics.width + 16, 48, @viewport)
     @sprites["opponent"].setBitmap(GameData::TrainerType.front_sprite_filename(opponent.trainer_type))
     @sprites["playerwindow"] = DuelWindow.new($player.name, false)
     @sprites["playerwindow"].x        = -@sprites["playerwindow"].width
@@ -77,9 +77,9 @@ class PokemonDuel
       @sprites["opponentwindow"].x = lerp(Graphics.width, Graphics.width - 160, 0.4, delta_t)
     end
     @sprites["player"].x = 0
-    @sprites["playerwindow"].x = 160 - @sprites["playerwindow"].width
-    @sprites["opponent"].x = Graphics.width - 128
-    @sprites["opponentwindow"].x = Graphics.width - 160
+    @sprites["playerwindow"].x = 80 - @sprites["playerwindow"].width
+    @sprites["opponent"].x = Graphics.width - 64
+    @sprites["opponentwindow"].x = Graphics.width - 80
     @oldmovespeed = $game_player.move_speed
     @oldeventspeed = event.move_speed
     pbMoveRoute($game_player,

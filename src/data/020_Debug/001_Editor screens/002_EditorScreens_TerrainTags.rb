@@ -20,7 +20,7 @@ class PokemonTilesetScene
     @sprites = {}
     @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
       _INTL("Tileset Editor\nA/S: SCROLL\nZ: MENU"),
-      TILESET_WIDTH, 0, Graphics.width - TILESET_WIDTH, 128, @viewport
+      TILESET_WIDTH, 0, Graphics.width - TILESET_WIDTH, 64, @viewport
     )
     @sprites["background"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     @sprites["tileset"] = BitmapSprite.new(TILESET_WIDTH, Graphics.height, @viewport)
@@ -97,7 +97,7 @@ class PokemonTilesetScene
         tile_id = tile_ID_from_coordinates(xx, @top_y + yy)
         terr = @tileset.terrain_tags[tile_id]
         next if terr == 0
-        textpos.push([terr.to_s, (xx * TILE_SIZE) + (TILE_SIZE / 2), (yy * TILE_SIZE) + 6,
+        textpos.push([terr.to_s, (xx * TILE_SIZE) + (TILE_SIZE / 2), (yy * TILE_SIZE) + 3,
                       :center, TEXT_COLOR, TEXT_SHADOW_COLOR, :outline])
       end
     end
@@ -114,14 +114,14 @@ class PokemonTilesetScene
     cursor_width = TILE_SIZE
     cursor_height = TILE_SIZE
     bitmap = @sprites["overlay"].bitmap
-    bitmap.fill_rect(cursor_x - 2,                cursor_y - 2,                 cursor_width + 4, 8,  CURSOR_OUTLINE_COLOR)
-    bitmap.fill_rect(cursor_x - 2,                cursor_y - 2,                 8, cursor_height + 4, CURSOR_OUTLINE_COLOR)
-    bitmap.fill_rect(cursor_x - 2,                cursor_y + cursor_height - 6, cursor_width + 4, 8,  CURSOR_OUTLINE_COLOR)
-    bitmap.fill_rect(cursor_x + cursor_width - 6, cursor_y - 2,                 8, cursor_height + 4, CURSOR_OUTLINE_COLOR)
-    bitmap.fill_rect(cursor_x,                    cursor_y,                     cursor_width, 4,      CURSOR_COLOR)
-    bitmap.fill_rect(cursor_x,                    cursor_y,                     4, cursor_height,     CURSOR_COLOR)
-    bitmap.fill_rect(cursor_x,                    cursor_y + cursor_height - 4, cursor_width, 4,      CURSOR_COLOR)
-    bitmap.fill_rect(cursor_x + cursor_width - 4, cursor_y,                     4, cursor_height,     CURSOR_COLOR)
+    bitmap.fill_rect(cursor_x - 1,                cursor_y - 1,                 cursor_width + 2, 4,  CURSOR_OUTLINE_COLOR)
+    bitmap.fill_rect(cursor_x - 1,                cursor_y - 1,                 4, cursor_height + 2, CURSOR_OUTLINE_COLOR)
+    bitmap.fill_rect(cursor_x - 1,                cursor_y + cursor_height - 3, cursor_width + 2, 4,  CURSOR_OUTLINE_COLOR)
+    bitmap.fill_rect(cursor_x + cursor_width - 3, cursor_y - 1,                 4, cursor_height + 2, CURSOR_OUTLINE_COLOR)
+    bitmap.fill_rect(cursor_x,                    cursor_y,                     cursor_width, 2,      CURSOR_COLOR)
+    bitmap.fill_rect(cursor_x,                    cursor_y,                     2, cursor_height,     CURSOR_COLOR)
+    bitmap.fill_rect(cursor_x,                    cursor_y + cursor_height - 2, cursor_width, 2,      CURSOR_COLOR)
+    bitmap.fill_rect(cursor_x + cursor_width - 2, cursor_y,                     2, cursor_height,     CURSOR_COLOR)
   end
 
   def draw_tile_details
@@ -134,10 +134,10 @@ class PokemonTilesetScene
     @sprites["background"].bitmap.fill_rect(tile_x, tile_y, TILE_SIZE * tile_size, TILE_SIZE * tile_size, TILE_BACKGROUND)
     @tilehelper.bltSmallTile(overlay, tile_x, tile_y, TILE_SIZE * tile_size, TILE_SIZE * tile_size, tile_id)
     # Draw box around tile image
-    overlay.fill_rect(tile_x - 1,                       tile_y - 1,                       (TILE_SIZE * tile_size) + 2, 1, Color.white)
-    overlay.fill_rect(tile_x - 1,                       tile_y - 1,                       1, (TILE_SIZE * tile_size) + 2, Color.white)
-    overlay.fill_rect(tile_x - 1,                       tile_y + (TILE_SIZE * tile_size), (TILE_SIZE * tile_size) + 2, 1, Color.white)
-    overlay.fill_rect(tile_x + (TILE_SIZE * tile_size), tile_y - 1,                       1, (TILE_SIZE * tile_size) + 2, Color.white)
+    overlay.fill_rect(tile_x - 1,                       tile_y - 1,                       (TILE_SIZE * tile_size) + 1, 1, Color.white)
+    overlay.fill_rect(tile_x - 1,                       tile_y - 1,                       1, (TILE_SIZE * tile_size) + 1, Color.white)
+    overlay.fill_rect(tile_x - 1,                       tile_y + (TILE_SIZE * tile_size), (TILE_SIZE * tile_size) + 1, 1, Color.white)
+    overlay.fill_rect(tile_x + (TILE_SIZE * tile_size), tile_y - 1,                       1, (TILE_SIZE * tile_size) + 1, Color.white)
     # Write terrain tag info about selected tile
     terrain_tag = @tileset.terrain_tags[tile_id] || 0
     if GameData::TerrainTag.exists?(terrain_tag)
@@ -146,9 +146,9 @@ class PokemonTilesetScene
       terrain_tag_name = terrain_tag.to_s
     end
     textpos = [
-      [_INTL("Terrain Tag:"), Graphics.width * 3 / 4, tile_y + (TILE_SIZE * tile_size) + 22,
+      [_INTL("Terrain Tag:"), Graphics.width * 3 / 4, tile_y + (TILE_SIZE * tile_size) + 11,
        :center, Color.new(248, 248, 248), Color.new(40, 40, 40)],
-      [terrain_tag_name, Graphics.width * 3 / 4, tile_y + (TILE_SIZE * tile_size) + 54,
+      [terrain_tag_name, Graphics.width * 3 / 4, tile_y + (TILE_SIZE * tile_size) + 27,
        :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]
     ]
     # Draw all text

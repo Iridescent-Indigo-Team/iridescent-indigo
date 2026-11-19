@@ -77,10 +77,13 @@ cd "$BUILD"
 if [[ $COMPILE -eq 1 ]]; then
   export POKESSENTIALS_COMPILE_ONLY=1
   rm -f "$BUILD/.compile_ok"
+  # Never wait forever: a message box can't be answered in a headless run.
+  TIMEOUT=()
+  command -v timeout >/dev/null 2>&1 && TIMEOUT=(timeout "${COMPILE_TIMEOUT:-900}")
   if [[ -z "${DISPLAY:-}${WAYLAND_DISPLAY:-}" ]] && command -v xvfb-run >/dev/null 2>&1; then
-    xvfb-run -a -s "-screen 0 1024x768x24" "$ENGINE" "${ARGS[@]}"
+    ${TIMEOUT[@]+"${TIMEOUT[@]}"} xvfb-run -a -s "-screen 0 1024x768x24" "$ENGINE" "${ARGS[@]}" || true
   else
-    "$ENGINE" "${ARGS[@]}"
+    ${TIMEOUT[@]+"${TIMEOUT[@]}"} "$ENGINE" "${ARGS[@]}" || true
   fi
   [[ -f "$BUILD/.compile_ok" ]] || die "compiling the game data failed (see the output above)."
   rm -f "$BUILD/.compile_ok"

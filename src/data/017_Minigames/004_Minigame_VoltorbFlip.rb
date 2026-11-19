@@ -188,12 +188,12 @@ class VoltorbFlip
     # Display numbers (all zeroes, as no values have been calculated yet)
     NUM_ROWS.times { |i| pbUpdateRowNumbers(0, 0, i) }
     NUM_COLUMNS.times { |i| pbUpdateColumnNumbers(0, 0, i) }
-    pbDrawShadowText(@sprites["text"].bitmap, 8, 22, 118, 26,
+    pbDrawShadowText(@sprites["text"].bitmap, 4, 11, 59, 13,
                      _INTL("Your coins"), Color.new(60, 60, 60), Color.new(150, 190, 170), 1)
-    pbDrawShadowText(@sprites["text"].bitmap, 8, 88, 118, 26,
+    pbDrawShadowText(@sprites["text"].bitmap, 4, 44, 59, 13,
                      _INTL("Prize coins"), Color.new(60, 60, 60), Color.new(150, 190, 170), 1)
     # Draw current level
-    pbDrawShadowText(@sprites["level"].bitmap, 8, 154, 118, 28,
+    pbDrawShadowText(@sprites["level"].bitmap, 4, 77, 59, 14,
                      _INTL("Level {1}", @level.to_s), Color.new(60, 60, 60), Color.new(150, 190, 170), 1)
     # Displays total and current coins
     pbUpdateCoins
@@ -283,8 +283,8 @@ class VoltorbFlip
     @sprites["mark"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     @sprites["memo"] = Sprite.new(@viewport)
     @sprites["memo"].bitmap = RPG::Cache.load_bitmap(GRAPHICS_DIRECTORY, _INTL("memo"))
-    @sprites["memo"].x = 10
-    @sprites["memo"].y = 244
+    @sprites["memo"].x = 5
+    @sprites["memo"].y = 122
     @sprites["memo"].visible = false
     @sprites["numbers"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     @sprites["totalCoins"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
@@ -321,16 +321,16 @@ class VoltorbFlip
       pbPlayCursorSE
       if @index[1] > 0
         @index[1] -= 1
-        @sprites["cursor"].y -= 64
+        @sprites["cursor"].y -= 32
       else
         @index[1] = 4
-        @sprites["cursor"].y = 256
+        @sprites["cursor"].y = 128
       end
     elsif Input.trigger?(Input::DOWN)
       pbPlayCursorSE
       if @index[1] < 4
         @index[1] += 1
-        @sprites["cursor"].y += 64
+        @sprites["cursor"].y += 32
       else
         @index[1] = 0
         @sprites["cursor"].y = 0
@@ -339,16 +339,16 @@ class VoltorbFlip
       pbPlayCursorSE
       if @index[0] > 0
         @index[0] -= 1
-        @sprites["cursor"].x -= 64
+        @sprites["cursor"].x -= 32
       else
         @index[0] = 4
-        @sprites["cursor"].x = 256
+        @sprites["cursor"].x = 128
       end
     elsif Input.trigger?(Input::RIGHT)
       pbPlayCursorSE
       if @index[0] < 4
         @index[0] += 1
-        @sprites["cursor"].x += 64
+        @sprites["cursor"].x += 32
       else
         @index[0] = 0
         @sprites["cursor"].x = 0
@@ -416,7 +416,7 @@ class VoltorbFlip
               end
               # Update level text
               @sprites["level"].bitmap.clear
-              pbDrawShadowText(@sprites["level"].bitmap, 8, 154, 118, 28, "Level " + @level.to_s,
+              pbDrawShadowText(@sprites["level"].bitmap, 4, 77, 59, 14, "Level " + @level.to_s,
                                Color.new(60, 60, 60), Color.new(150, 190, 170), 1)
               @points = 0
               pbUpdateCoins
@@ -463,7 +463,7 @@ class VoltorbFlip
         pbMessage("\\se[Voltorb Flip gain coins]" + _INTL("{1} received {2} Coins!", $player.name, @points.to_s_formatted))
         # Update level text
         @sprites["level"].bitmap.clear
-        pbDrawShadowText(@sprites["level"].bitmap, 8, 154, 118, 28, _INTL("Level {1}", @level.to_s),
+        pbDrawShadowText(@sprites["level"].bitmap, 4, 77, 59, 14, _INTL("Level {1}", @level.to_s),
                          Color.new(60, 60, 60), Color.new(150, 190, 170), 1)
         old_coins = $player.coins
         $player.coins += @points

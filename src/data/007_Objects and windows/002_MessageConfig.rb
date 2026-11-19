@@ -11,14 +11,16 @@ module MessageConfig
   FEMALE_TEXT_MAIN_COLOR   = Color.new(224, 8, 8)   # Used by message tag "\r"
   FEMALE_TEXT_SHADOW_COLOR = Color.new(208, 208, 200)
   FONT_NAME                = "Power Green"
-  FONT_SIZE                = 27
-  FONT_Y_OFFSET            = 8
+  # The Power fonts are pixel fonts; these are the sizes at which they draw
+  # crisp 1x pixels at the 256x192 resolution.
+  FONT_SIZE                = 12
+  FONT_Y_OFFSET            = 4
   SMALL_FONT_NAME          = "Power Green Small"
-  SMALL_FONT_SIZE          = 21
-  SMALL_FONT_Y_OFFSET      = 8
+  SMALL_FONT_SIZE          = 9
+  SMALL_FONT_Y_OFFSET      = 4
   NARROW_FONT_NAME         = "Power Green Narrow"
-  NARROW_FONT_SIZE         = 27
-  NARROW_FONT_Y_OFFSET     = 8
+  NARROW_FONT_SIZE         = 12
+  NARROW_FONT_Y_OFFSET     = 4
   # 0 = Pause cursor is displayed at end of text
   # 1 = Pause cursor is displayed at bottom right
   # 2 = Pause cursor is displayed at lower middle side
@@ -188,7 +190,7 @@ end
 def pbBottomLeftLines(window, lines, width = nil)
   window.x = 0
   window.width = width || Graphics.width
-  window.height = (window.borderY rescue 32) + (lines * 32)
+  window.height = (window.borderY rescue 16) + (lines * 16)
   window.y = Graphics.height - window.height
 end
 
@@ -239,7 +241,7 @@ end
 
 # internal function
 def pbRepositionMessageWindow(msgwindow, linecount = 2)
-  msgwindow.height = (32 * linecount) + msgwindow.borderY
+  msgwindow.height = (16 * linecount) + msgwindow.borderY
   msgwindow.y = (Graphics.height) - (msgwindow.height)
   if $game_system
     case $game_system.message_position
@@ -260,8 +262,8 @@ def pbUpdateMsgWindowPos(msgwindow, event, eventChanged = false)
     if eventChanged
       msgwindow.resizeToFit2(msgwindow.text, Graphics.width * 2 / 3, msgwindow.height)
     end
-    msgwindow.y = event.screen_y - 48 - msgwindow.height
-    msgwindow.y = event.screen_y + 24 if msgwindow.y < 0
+    msgwindow.y = event.screen_y - 24 - msgwindow.height
+    msgwindow.y = event.screen_y + 12 if msgwindow.y < 0
     msgwindow.x = event.screen_x - (msgwindow.width / 2)
     msgwindow.x = 0 if msgwindow.x < 0
     if msgwindow.x > Graphics.width - msgwindow.width
@@ -315,12 +317,12 @@ end
 
 def isDarkWindowskin(windowskin)
   return true if !windowskin || windowskin.disposed?
-  if windowskin.width == 192 && windowskin.height == 128
-    return isDarkBackground(windowskin, Rect.new(0, 0, 128, 128))
-  elsif windowskin.width == 128 && windowskin.height == 128
+  if windowskin.width == 96 && windowskin.height == 64
     return isDarkBackground(windowskin, Rect.new(0, 0, 64, 64))
-  elsif windowskin.width == 96 && windowskin.height == 48
-    return isDarkBackground(windowskin, Rect.new(32, 16, 16, 16))
+  elsif windowskin.width == 64 && windowskin.height == 64
+    return isDarkBackground(windowskin, Rect.new(0, 0, 32, 32))
+  elsif windowskin.width == 48 && windowskin.height == 24
+    return isDarkBackground(windowskin, Rect.new(16, 8, 8, 8))
   else
     clr = windowskin.get_pixel(windowskin.width / 2, windowskin.height / 2)
     return ((clr.red * 0.299) + (clr.green * 0.587) + (clr.blue * 0.114)) < 160
@@ -332,7 +334,7 @@ end
 #===============================================================================
 def getSkinColor(windowskin, color, isDarkSkin)
   if !windowskin || windowskin.disposed? ||
-     windowskin.width != 128 || windowskin.height != 128
+     windowskin.width != 64 || windowskin.height != 64
     # Base color, shadow color (these are reversed on dark windowskins)
     # Values in arrays are RGB numbers
     textcolors = [
@@ -366,8 +368,8 @@ def getSkinColor(windowskin, color, isDarkSkin)
     return shadowc3tag(textcolors[2 * (color - 1)], textcolors[(2 * (color - 1)) + 1])
   else   # VX windowskin
     color = 0 if color >= 32
-    x = 64 + ((color % 8) * 8)
-    y = 96 + ((color / 8) * 8)
+    x = 32 + ((color % 8) * 4)
+    y = 48 + ((color / 8) * 4)
     pixel = windowskin.get_pixel(x, y)
     return shadowc3tag(pixel, pixel.get_contrast_color)
   end
@@ -375,14 +377,14 @@ end
 
 def getDefaultTextColors(windowskin)
   if !windowskin || windowskin.disposed? ||
-     windowskin.width != 128 || windowskin.height != 128
+     windowskin.width != 64 || windowskin.height != 64
     if isDarkWindowskin(windowskin)
       return [MessageConfig::LIGHT_TEXT_MAIN_COLOR, MessageConfig::LIGHT_TEXT_SHADOW_COLOR]   # White
     else
       return [MessageConfig::DARK_TEXT_MAIN_COLOR, MessageConfig::DARK_TEXT_SHADOW_COLOR]   # Dark gray
     end
   else   # VX windowskin
-    color = windowskin.get_pixel(64, 96)
+    color = windowskin.get_pixel(32, 48)
     shadow = nil
     isDark = (color.red + color.green + color.blue) / 3 < 128
     if isDark

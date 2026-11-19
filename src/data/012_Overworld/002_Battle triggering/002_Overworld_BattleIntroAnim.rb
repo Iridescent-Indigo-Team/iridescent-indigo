@@ -297,9 +297,9 @@ SpecialBattleIntroAnimations.register("alternate_vs_trainer_animation", 50,   # 
       player_graphic = sprintf("vsTrainer_%s", player_tr_type.to_s) rescue nil
     end
     # Set up viewports
-    viewplayer = Viewport.new(0, Graphics.height / 3, Graphics.width / 2, 128)
+    viewplayer = Viewport.new(0, Graphics.height / 3, Graphics.width / 2, 64)
     viewplayer.z = viewport.z
-    viewopp = Viewport.new(Graphics.width / 2, Graphics.height / 3, Graphics.width / 2, 128)
+    viewopp = Viewport.new(Graphics.width / 2, Graphics.height / 3, Graphics.width / 2, 64)
     viewopp.z = viewport.z
     viewvs = Viewport.new(0, 0, Graphics.width, Graphics.height)
     viewvs.z = viewport.z
@@ -371,9 +371,9 @@ SpecialBattleIntroAnimations.register("alternate_vs_trainer_animation", 50,   # 
     trainer.tone = Tone.new(0, 0, 0)
     trainername = foe[0].name
     textpos = [
-      [$player.name, Graphics.width / 4, (Graphics.height / 1.5) + 16, :center,
+      [$player.name, Graphics.width / 4, (Graphics.height / 1.5) + 8, :center,
        Color.new(248, 248, 248), Color.new(72, 72, 72)],
-      [trainername, (Graphics.width / 4) + (Graphics.width / 2), (Graphics.height / 1.5) + 16, :center,
+      [trainername, (Graphics.width / 4) + (Graphics.width / 2), (Graphics.height / 1.5) + 8, :center,
        Color.new(248, 248, 248), Color.new(72, 72, 72)]
     ]
     pbDrawTextPositions(overlay.bitmap, textpos)

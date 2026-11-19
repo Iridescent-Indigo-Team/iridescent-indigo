@@ -29,8 +29,8 @@ class Game_Map
   attr_reader   :display_y                # display y-coordinate * 128
   attr_accessor :need_refresh             # refresh request flag
 
-  TILE_WIDTH  = 32
-  TILE_HEIGHT = 32
+  TILE_WIDTH  = 16
+  TILE_HEIGHT = 16
   X_SUBPIXELS = 4
   Y_SUBPIXELS = 4
   REAL_RES_X  = TILE_WIDTH * X_SUBPIXELS
@@ -446,13 +446,14 @@ class Game_Map
     end
     # If scrolling
     if (@scroll_distance_x || 0) != 0
-      duration = @scroll_distance_x.abs * TILE_WIDTH.to_f / (10 * (2**@scroll_speed))
+      # Scroll speeds are defined for 32px tiles; keep the timing the same.
+      duration = @scroll_distance_x.abs * 32.0 / (10 * (2**@scroll_speed))
       scroll_offset = lerp(0, @scroll_distance_x, duration, @scroll_timer_start, uptime_now)
       self.display_x = @scroll_start_x + (scroll_offset * REAL_RES_X)
       @scroll_distance_x = 0 if scroll_offset == @scroll_distance_x
     end
     if (@scroll_distance_y || 0) != 0
-      duration = @scroll_distance_y.abs * TILE_HEIGHT.to_f / (10 * (2**@scroll_speed))
+      duration = @scroll_distance_y.abs * 32.0 / (10 * (2**@scroll_speed))
       scroll_offset = lerp(0, @scroll_distance_y, duration, @scroll_timer_start, uptime_now)
       self.display_y = @scroll_start_y + (scroll_offset * REAL_RES_Y)
       @scroll_distance_y = 0 if scroll_offset == @scroll_distance_y

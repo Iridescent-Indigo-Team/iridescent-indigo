@@ -175,8 +175,8 @@ module Transitions
   #
   #=============================================================================
   class BreakingGlass < Transition_Base
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6
+    NUM_SPRITES_X = 4
+    NUM_SPRITES_Y = 3
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -216,8 +216,8 @@ module Transitions
   #
   #=============================================================================
   class ShrinkingPieces < Transition_Base
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6
+    NUM_SPRITES_X = 4
+    NUM_SPRITES_Y = 3
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -251,8 +251,8 @@ module Transitions
   #
   #=============================================================================
   class SplashTransition < Transition_Base
-    NUM_SPRITES_X = 16
-    NUM_SPRITES_Y = 12
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6
     SPEED         = 40
 
     def initialize_sprites
@@ -322,7 +322,7 @@ module Transitions
   #
   #=============================================================================
   class RandomStripeTransition < Transition_Base
-    STRIPE_WIDTH = 2
+    STRIPE_WIDTH = 1
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -458,8 +458,8 @@ module Transitions
   class SnakeSquares < Transition_Base
     DURATION      = 1.25
     TIME_TO_ZOOM  = 0.2   # In seconds
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6   # Must be an even number
+    NUM_SPRITES_X = 4
+    NUM_SPRITES_Y = 3   # Must be an even number
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
 
     def initialize_bitmaps
@@ -526,8 +526,8 @@ module Transitions
   class DiagonalBubble < Transition_Base
     DURATION      = 1.25
     TIME_TO_ZOOM  = 0.2   # In seconds
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6
+    NUM_SPRITES_X = 4
+    NUM_SPRITES_Y = 3
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
 
     def initialize_bitmaps
@@ -610,7 +610,7 @@ module Transitions
     def initialize_sprites
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
-      rect = Rect.new(0, 0, Graphics.width, 2)
+      rect = Rect.new(0, 0, Graphics.width, 1)
       (Graphics.height / 2).times do |i|
         @sprites[i] = new_sprite(0, i * 2, @overworld_bitmap)
         @sprites[i].z = 2
@@ -843,10 +843,10 @@ module Transitions
   #=============================================================================
   class ThreeBallDown < Transition_Base
     DURATION      = 2.0
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6
+    NUM_SPRITES_X = 4
+    NUM_SPRITES_Y = 3
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
-    BALL_START_Y_OFFSETS = [400, 0, 100]
+    BALL_START_Y_OFFSETS = [200, 0, 50]
 
     def initialize_bitmaps
       @black_bitmap = RPG::Cache.transition("black_square")
@@ -1022,11 +1022,11 @@ module Transitions
     def initialize_sprites
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
-      rect = Rect.new(0, 0, Graphics.width, 4)
+      rect = Rect.new(0, 0, Graphics.width, 2)
       (Graphics.height / 4).times do |i|
         @sprites[i] = new_sprite(0, i * 4, @overworld_bitmap)
         @sprites[i].z = 2
-        rect.y = i * 4
+        rect.y = i * 2
         @sprites[i].src_rect = rect
       end
       # Ball sprites
@@ -1103,11 +1103,11 @@ module Transitions
     def initialize_sprites
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
-      rect = Rect.new(0, 0, Graphics.width, 4)
+      rect = Rect.new(0, 0, Graphics.width, 2)
       (Graphics.height / 4).times do |i|
         @sprites[i] = new_sprite(0, i * 4, @overworld_bitmap)
         @sprites[i].z = 2
-        rect.y = i * 4
+        rect.y = i * 2
         @sprites[i].src_rect = rect
       end
       # Ball sprite
@@ -1243,11 +1243,11 @@ module Transitions
   #=============================================================================
   class VSTrainer < Transition_Base
     DURATION           = 4.0
-    BAR_Y              = 80
+    BAR_Y              = 40
     BAR_SCROLL_SPEED   = 1800
     BAR_MASK           = [8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7]
-    FOE_SPRITE_X_LIMIT = 384   # Slides to here before jumping to final position
-    FOE_SPRITE_X       = 428   # Final position of foe sprite
+    FOE_SPRITE_X_LIMIT = 192   # Slides to here before jumping to final position
+    FOE_SPRITE_X       = 214   # Final position of foe sprite
 
     def initialize_bitmaps
       @bar_bitmap   = RPG::Cache.transition("hgss_vsBar_#{$game_temp.transition_animation_data[0]}")
@@ -1278,7 +1278,7 @@ module Transitions
       @bar_mask_sprite = new_sprite(0, 0, @overworld_bitmap.clone)
       @bar_mask_sprite.z = 3
       # VS logo
-      @vs_x = 144
+      @vs_x = 72
       @vs_y = @sprites[0].y + (@sprites[0].height / 2)
       @vs_main_sprite = new_sprite(@vs_x, @vs_y, @vs_1_bitmap, @vs_1_bitmap.width / 2, @vs_1_bitmap.height / 2)
       @vs_main_sprite.z       = 4
@@ -1305,7 +1305,7 @@ module Transitions
       @text_sprite.visible = false
       pbSetSystemFont(@text_sprite.bitmap)
       pbDrawTextPositions(@text_sprite.bitmap,
-                          [[$game_temp.transition_animation_data[1], 244, 86, :left,
+                          [[$game_temp.transition_animation_data[1], 122, 43, :left,
                             Color.new(248, 248, 248), Color.new(72, 80, 80)]])
       # Foreground black
       @black_sprite = new_sprite(0, 0, @black_bitmap)
@@ -1420,8 +1420,8 @@ module Transitions
         start_x = Graphics.width * (1 - (timer / @bar_appear_end))
         color = Color.new(0, 0, 0, 0)   # Transparent
         (@sprites[0].height / 2).times do |i|
-          x = start_x - (BAR_MASK[i % BAR_MASK.length] * 4)
-          @bar_mask_sprite.bitmap.fill_rect(x, BAR_Y + (i * 2), @bar_mask_sprite.width - x, 2, color)
+          x = start_x - (BAR_MASK[i % BAR_MASK.length] * 2)
+          @bar_mask_sprite.bitmap.fill_rect(x, BAR_Y + (i * 2), @bar_mask_sprite.width - x, 1, color)
         end
       end
     end
@@ -1436,14 +1436,14 @@ module Transitions
   #=============================================================================
   class VSEliteFour < Transition_Base
     DURATION           = 3.5
-    BAR_X_INDENT       = 48
-    BAR_Y_INDENT       = 64   # = height of trainer sprite / 2
+    BAR_X_INDENT       = 24
+    BAR_Y_INDENT       = 32   # = height of trainer sprite / 2
     BAR_OVERSHOOT      = 20
-    TRAINER_X_OFFSET   = 160
-    TRAINER_Y_OFFSET   = 8
-    BAR_HEIGHT         = 192   # = Graphics.height / 2
-    FOE_SPRITE_X_LIMIT = 384   # Slides to here before jumping to final position
-    FOE_SPRITE_X       = 428   # Final position of foe sprite
+    TRAINER_X_OFFSET   = 80
+    TRAINER_Y_OFFSET   = 4
+    BAR_HEIGHT         = 96   # = Graphics.height / 2
+    FOE_SPRITE_X_LIMIT = 192   # Slides to here before jumping to final position
+    FOE_SPRITE_X       = 214   # Final position of foe sprite
 
     def initialize_bitmaps
       @bar_bitmap    = RPG::Cache.transition("vsE4Bar_#{$game_temp.transition_animation_data[0]}")
@@ -1502,7 +1502,7 @@ module Transitions
       @text_sprite.z = 8
       pbSetSystemFont(@text_sprite.bitmap)
       pbDrawTextPositions(@text_sprite.bitmap,
-                          [[$game_temp.transition_animation_data[1], 160, 86, :left,
+                          [[$game_temp.transition_animation_data[1], 80, 43, :left,
                             Color.new(248, 248, 248), Color.new(72, 80, 80)]])
       # VS logo
       @vs_main_sprite = new_sprite(Graphics.width / 2, Graphics.height / 2, @vs_1_bitmap,
@@ -1768,7 +1768,7 @@ module Transitions
   class VSRocketAdmin < Transition_Base
     DURATION            = 3.1
     STROBE_SCROLL_SPEED = 1440
-    FOE_SPRITE_Y        = 318
+    FOE_SPRITE_Y        = 159
 
     def initialize_bitmaps
       @strobes_bitmap = RPG::Cache.transition("rocket_strobes")
@@ -1809,7 +1809,7 @@ module Transitions
       @text_sprite.visible = false
       pbSetSystemFont(@text_sprite.bitmap)
       pbDrawTextPositions(@text_sprite.bitmap,
-                          [[$game_temp.transition_animation_data[1], 272, 8, :left,
+                          [[$game_temp.transition_animation_data[1], 136, 4, :left,
                             Color.new(248, 248, 248), Color.new(72, 80, 80)]])
       # Foreground black
       @black_sprite = new_sprite(0, 0, @black_bitmap)

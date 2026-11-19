@@ -106,7 +106,7 @@ class SpriteWindow < Window
     @pauseopacity = 0
     @skinformat = 0
     @skinrect = Rect.new(0, 0, 0, 0)
-    @trim = [16, 16, 16, 16]
+    @trim = [8, 8, 8, 8]
     privRefresh(true)
   end
 
@@ -324,15 +324,15 @@ class SpriteWindow < Window
   end
 
   def loadSkinFile(_file)
-    if (self.windowskin.width == 80 || self.windowskin.width == 96) &&
-       self.windowskin.height == 48
+    if (self.windowskin.width == 40 || self.windowskin.width == 48) &&
+       self.windowskin.height == 24
       # Body = X, Y, width, height of body rectangle within windowskin
-      @skinrect.set(32, 16, 16, 16)
+      @skinrect.set(16, 8, 8, 8)
       # Trim = X, Y, width, height of trim rectangle within windowskin
-      @trim = [32, 16, 16, 16]
-    elsif self.windowskin.width == 80 && self.windowskin.height == 80
-      @skinrect.set(32, 32, 16, 16)
-      @trim = [32, 16, 16, 48]
+      @trim = [16, 8, 8, 8]
+    elsif self.windowskin.width == 40 && self.windowskin.height == 40
+      @skinrect.set(16, 16, 8, 8)
+      @trim = [16, 8, 8, 24]
     end
   end
 
@@ -345,20 +345,20 @@ class SpriteWindow < Window
       if @_windowskin && !@_windowskin.disposed?
         if @_windowskin.width != oldSkinWidth || @_windowskin.height != oldSkinHeight
           # Update skinrect and trim if windowskin's dimensions have changed
-          @skinrect.set((@_windowskin.width - 16) / 2, (@_windowskin.height - 16) / 2, 16, 16)
+          @skinrect.set((@_windowskin.width - 8) / 2, (@_windowskin.height - 8) / 2, 8, 8)
           @trim = [@skinrect.x, @skinrect.y, @skinrect.x, @skinrect.y]
         end
       else
-        @skinrect.set(16, 16, 16, 16)
-        @trim = [16, 16, 16, 16]
+        @skinrect.set(8, 8, 8, 8)
+        @trim = [8, 8, 8, 8]
       end
     else
-      if value.is_a?(Bitmap) && !value.disposed? && value.width == 128
+      if value.is_a?(Bitmap) && !value.disposed? && value.width == 64
         @rpgvx = true
       else
         @rpgvx = false
       end
-      @trim = [16, 16, 16, 16]
+      @trim = [8, 8, 8, 8]
     end
     privRefresh(true)
   end
@@ -376,19 +376,19 @@ class SpriteWindow < Window
   end
 
   def borderX
-    return 32 if !@trim || skinformat == 0
+    return 16 if !@trim || skinformat == 0
     if @_windowskin && !@_windowskin.disposed?
       return @trim[0] + (@_windowskin.width - @trim[2] - @trim[0])
     end
-    return 32
+    return 16
   end
 
   def borderY
-    return 32 if !@trim || skinformat == 0
+    return 16 if !@trim || skinformat == 0
     if @_windowskin && !@_windowskin.disposed?
       return @trim[1] + (@_windowskin.height - @trim[3] - @trim[1])
     end
-    return 32
+    return 16
   end
 
   def leftEdge; self.startX; end
@@ -544,46 +544,46 @@ class SpriteWindow < Window
       @sprites["pause"].z = @z + 2
     end
     if @skinformat == 0
-      startX = 16
-      startY = 16
-      endX = 16
-      endY = 16
-      trimStartX = 16
-      trimStartY = 16
-      trimWidth = 32
-      trimHeight = 32
+      startX = 8
+      startY = 8
+      endX = 8
+      endY = 8
+      trimStartX = 8
+      trimStartY = 8
+      trimWidth = 16
+      trimHeight = 16
       if @rpgvx
+        trimX = 32
+        trimY = 0
+        backRect = Rect.new(0, 0, 32, 32)
+        blindsRect = Rect.new(0, 32, 32, 32)
+      else
         trimX = 64
         trimY = 0
         backRect = Rect.new(0, 0, 64, 64)
-        blindsRect = Rect.new(0, 64, 64, 64)
-      else
-        trimX = 128
-        trimY = 0
-        backRect = Rect.new(0, 0, 128, 128)
         blindsRect = nil
       end
       if @_windowskin && !@_windowskin.disposed?
-        @sprites["corner0"].src_rect.set(trimX, trimY + 0, 16, 16)
-        @sprites["corner1"].src_rect.set(trimX + 48, trimY + 0, 16, 16)
-        @sprites["corner2"].src_rect.set(trimX, trimY + 48, 16, 16)
-        @sprites["corner3"].src_rect.set(trimX + 48, trimY + 48, 16, 16)
-        @sprites["scroll0"].src_rect.set(trimX + 24, trimY + 16, 16, 8) # up
-        @sprites["scroll3"].src_rect.set(trimX + 24, trimY + 40, 16, 8) # down
-        @sprites["scroll1"].src_rect.set(trimX + 16, trimY + 24, 8, 16) # left
-        @sprites["scroll2"].src_rect.set(trimX + 40, trimY + 24, 8, 16) # right
+        @sprites["corner0"].src_rect.set(trimX, trimY + 0, 8, 8)
+        @sprites["corner1"].src_rect.set(trimX + 24, trimY + 0, 8, 8)
+        @sprites["corner2"].src_rect.set(trimX, trimY + 24, 8, 8)
+        @sprites["corner3"].src_rect.set(trimX + 24, trimY + 24, 8, 8)
+        @sprites["scroll0"].src_rect.set(trimX + 12, trimY + 8, 8, 4) # up
+        @sprites["scroll3"].src_rect.set(trimX + 12, trimY + 20, 8, 4) # down
+        @sprites["scroll1"].src_rect.set(trimX + 8, trimY + 12, 4, 8) # left
+        @sprites["scroll2"].src_rect.set(trimX + 20, trimY + 12, 4, 8) # right
         cursorX = trimX
-        cursorY = trimY + 64
-        sideRects = [Rect.new(trimX + 16, trimY + 0, 32, 16),
-                     Rect.new(trimX, trimY + 16, 16, 32),
-                     Rect.new(trimX + 48, trimY + 16, 16, 32),
-                     Rect.new(trimX + 16, trimY + 48, 32, 16)]
-        pauseRects = [trimX + 32, trimY + 64,
-                      trimX + 48, trimY + 64,
-                      trimX + 32, trimY + 80,
-                      trimX + 48, trimY + 80]
-        pauseWidth = 16
-        pauseHeight = 16
+        cursorY = trimY + 32
+        sideRects = [Rect.new(trimX + 8, trimY + 0, 16, 8),
+                     Rect.new(trimX, trimY + 8, 8, 16),
+                     Rect.new(trimX + 24, trimY + 8, 8, 16),
+                     Rect.new(trimX + 8, trimY + 24, 16, 8)]
+        pauseRects = [trimX + 16, trimY + 32,
+                      trimX + 24, trimY + 32,
+                      trimX + 16, trimY + 40,
+                      trimX + 24, trimY + 40]
+        pauseWidth = 8
+        pauseHeight = 8
         @sprites["pause"].src_rect.set(
           pauseRects[@pauseframe * 2],
           pauseRects[(@pauseframe * 2) + 1],
@@ -654,20 +654,20 @@ class SpriteWindow < Window
       @sprites["side2"].y = @y + startY
       @sprites["side3"].x = @x + startX
       @sprites["side3"].y = @y + @height - endY
-      @sprites["scroll0"].x = @x + (@width / 2) - 8
-      @sprites["scroll0"].y = @y + 8
-      @sprites["scroll1"].x = @x + 8
-      @sprites["scroll1"].y = @y + (@height / 2) - 8
-      @sprites["scroll2"].x = @x + @width - 16
-      @sprites["scroll2"].y = @y + (@height / 2) - 8
-      @sprites["scroll3"].x = @x + (@width / 2) - 8
-      @sprites["scroll3"].y = @y + @height - 16
+      @sprites["scroll0"].x = @x + (@width / 2) - 4
+      @sprites["scroll0"].y = @y + 4
+      @sprites["scroll1"].x = @x + 4
+      @sprites["scroll1"].y = @y + (@height / 2) - 4
+      @sprites["scroll2"].x = @x + @width - 8
+      @sprites["scroll2"].y = @y + (@height / 2) - 4
+      @sprites["scroll3"].x = @x + (@width / 2) - 4
+      @sprites["scroll3"].y = @y + @height - 8
       @sprites["cursor"].x = @x + startX + @cursor_rect.x
       @sprites["cursor"].y = @y + startY + @cursor_rect.y
       if (@compat & CompatBits::EXPAND_BACK) > 0 && @skinformat == 0
         # Compatibility mode: Expand background
-        @sprites["back"].x = @x + 2
-        @sprites["back"].y = @y + 2
+        @sprites["back"].x = @x + 1
+        @sprites["back"].y = @y + 1
       else
         @sprites["back"].x = @x + startX
         @sprites["back"].y = @y + startY
@@ -682,20 +682,20 @@ class SpriteWindow < Window
         if width > 0 && height > 0
           cursorrects = [
             # sides
-            Rect.new(cursorX + 2, cursorY + 0, 28, 2),
-            Rect.new(cursorX + 0, cursorY + 2, 2, 28),
-            Rect.new(cursorX + 30, cursorY + 2, 2, 28),
-            Rect.new(cursorX + 2, cursorY + 30, 28, 2),
+            Rect.new(cursorX + 1, cursorY + 0, 14, 1),
+            Rect.new(cursorX + 0, cursorY + 1, 1, 14),
+            Rect.new(cursorX + 15, cursorY + 1, 1, 14),
+            Rect.new(cursorX + 1, cursorY + 15, 14, 1),
             # corners
-            Rect.new(cursorX + 0, cursorY + 0, 2, 2),
-            Rect.new(cursorX + 30, cursorY + 0, 2, 2),
-            Rect.new(cursorX + 0, cursorY + 30, 2, 2),
-            Rect.new(cursorX + 30, cursorY + 30, 2, 2),
+            Rect.new(cursorX + 0, cursorY + 0, 1, 1),
+            Rect.new(cursorX + 15, cursorY + 0, 1, 1),
+            Rect.new(cursorX + 0, cursorY + 15, 1, 1),
+            Rect.new(cursorX + 15, cursorY + 15, 1, 1),
             # back
-            Rect.new(cursorX + 2, cursorY + 2, 28, 28)
+            Rect.new(cursorX + 1, cursorY + 1, 14, 14)
           ]
-          margin = 2
-          fullmargin = 4
+          margin = 1
+          fullmargin = 2
           @cursorbitmap = ensureBitmap(@cursorbitmap, width, height)
           @cursorbitmap.clear
           @sprites["cursor"].bitmap = @cursorbitmap
@@ -751,8 +751,8 @@ class SpriteWindow < Window
       end
       if (@compat & CompatBits::EXPAND_BACK) > 0 && @skinformat == 0
         # Compatibility mode: Expand background
-        backwidth = @width - 4
-        backheight = @height - 4
+        backwidth = @width - 2
+        backheight = @height - 2
       else
         backwidth = @width - borderX
         backheight = @height - borderY
@@ -813,7 +813,7 @@ end
 #
 #===============================================================================
 class SpriteWindow_Base < SpriteWindow
-  TEXT_PADDING = 4   # In pixels
+  TEXT_PADDING = 2   # In pixels
 
   def initialize(x, y, width, height)
     super()
@@ -833,8 +833,8 @@ class SpriteWindow_Base < SpriteWindow
   end
 
   def __setWindowskin(skin)
-    if skin && ((skin.width == 192 && skin.height == 128) ||   # RPGXP Windowskin
-       (skin.width == 128 && skin.height == 128))              # RPGVX Windowskin
+    if skin && ((skin.width == 96 && skin.height == 64) ||   # RPGXP Windowskin (half size)
+       (skin.width == 64 && skin.height == 64))              # RPGVX Windowskin (half size)
       self.skinformat = 0
     else
       self.skinformat = 1

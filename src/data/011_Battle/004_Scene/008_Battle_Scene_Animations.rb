@@ -82,7 +82,7 @@ end
 # Makes a side's party bar and balls appear
 #===============================================================================
 class Battle::Scene::Animation::LineupAppear < Battle::Scene::Animation
-  BAR_DISPLAY_WIDTH = 248
+  BAR_DISPLAY_WIDTH = 124
 
   def initialize(sprites, viewport, side, party, partyStarts, fullAnim)
     @side        = side
@@ -98,12 +98,12 @@ class Battle::Scene::Animation::LineupAppear < Battle::Scene::Animation
     case @side
     when 0   # Player's lineup
       barX  = Graphics.width - BAR_DISPLAY_WIDTH
-      barY  = Graphics.height - 142
+      barY  = Graphics.height - 71
       ballX = barX + 44
       ballY = barY - 30
     when 1   # Opposing lineup
       barX  = BAR_DISPLAY_WIDTH
-      barY  = 114
+      barY  = 57
       ballX = barX - 44 - 30   # 30 is width of ball icon
       ballY = barY - 30
       barX -= bar.bitmap.width

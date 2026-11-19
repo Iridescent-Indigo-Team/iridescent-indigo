@@ -65,8 +65,8 @@ class Battle::Scene::SafariDataBox < Sprite
     @selected    = 0
     @battle      = battle
     @databox     = AnimatedBitmap.new(_INTL("Graphics/UI/Battle/databox_safari"))
-    self.x       = Graphics.width - 232
-    self.y       = Graphics.height - 184
+    self.x       = Graphics.width - 116
+    self.y       = Graphics.height - 92
     @contents    = Bitmap.new(@databox.width, @databox.height)
     self.bitmap  = @contents
     self.visible = false
@@ -81,8 +81,8 @@ class Battle::Scene::SafariDataBox < Sprite
     base   = Color.new(72, 72, 72)
     shadow = Color.new(184, 184, 184)
     textpos = []
-    textpos.push([_INTL("Safari Balls"), 30, 14, :left, base, shadow])
-    textpos.push([_INTL("Left: {1}", @battle.ballCount), 30, 44, :left, base, shadow])
+    textpos.push([_INTL("Safari Balls"), 15, 7, :left, base, shadow])
+    textpos.push([_INTL("Left: {1}", @battle.ballCount), 15, 22, :left, base, shadow])
     pbDrawTextPositions(self.bitmap, textpos)
   end
 end

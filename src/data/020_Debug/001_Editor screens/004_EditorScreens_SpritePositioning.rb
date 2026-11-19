@@ -66,7 +66,7 @@ class SpritePositioner
     @sprites["base_1"].x -= @sprites["base_1"].bitmap.width / 2 if @sprites["base_1"].bitmap
     @sprites["base_1"].y -= @sprites["base_1"].bitmap.height / 2 if @sprites["base_1"].bitmap
     @sprites["base_1"].z = 1
-    @sprites["messageBox"] = IconSprite.new(0, Graphics.height - 96, @viewport)
+    @sprites["messageBox"] = IconSprite.new(0, Graphics.height - 48, @viewport)
     @sprites["messageBox"].setBitmap("Graphics/UI/Debug/battle_message")
     @sprites["messageBox"].z = 2
     @sprites["shadow_1"] = IconSprite.new(0, 0, @viewport)
@@ -144,7 +144,7 @@ class SpritePositioner
     bitmap2 = @sprites["pokemon_1"].bitmap
     new_back_y  = (bitmap1.height - (findBottom(bitmap1) + 1)) / 2
     new_front_y = (bitmap2.height - (findBottom(bitmap2) + 1)) / 2
-    new_front_y += 4   # Just because
+    new_front_y += 2   # Just because
     if new_back_y != old_back_y || new_front_y != old_front_y || old_front_altitude != 0
       metrics_data.back_sprite[1]        = new_back_y
       metrics_data.front_sprite[1]       = new_front_y

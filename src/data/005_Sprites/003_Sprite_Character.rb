@@ -35,9 +35,9 @@ class BushBitmap
       y = i * charheight
       if cy >= 0
         ret.blt(0, y, bitmap, Rect.new(0, y, ret.width, cy))
-        ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 2), 170)
+        ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 1), 170)
       end
-      ret.blt(0, y + cy + 2, bitmap, Rect.new(0, y + cy + 2, ret.width, 2), 85) if cy + 2 >= 0
+      ret.blt(0, y + cy + 1, bitmap, Rect.new(0, y + cy + 1, ret.width, 1), 85) if cy + 1 >= 0
     end
     return ret
   end
@@ -49,9 +49,9 @@ class BushBitmap
     y = charheight
     if cy >= 0
       ret.blt(0, y, bitmap, Rect.new(0, y, ret.width, cy))
-      ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 2), 170)
+      ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 1), 170)
     end
-    ret.blt(0, y + cy + 2, bitmap, Rect.new(0, y + cy + 2, ret.width, 2), 85) if cy + 2 >= 0
+    ret.blt(0, y + cy + 1, bitmap, Rect.new(0, y + cy + 1, ret.width, 1), 85) if cy + 1 >= 0
     return ret
   end
 end
@@ -157,7 +157,7 @@ class Sprite_Character < RPG::Sprite
       sx = @character.pattern * @cw
       sy = ((@character.direction - 2) / 2) * @ch
       self.src_rect.set(sx, sy, @cw, @ch)
-      self.oy = (@spriteoffset rescue false) ? @ch - 16 : @ch
+      self.oy = (@spriteoffset rescue false) ? @ch - 8 : @ch
       self.oy -= @character.bob_height
     end
     if self.visible

@@ -41,7 +41,7 @@ module RPG
       ret = fromCache(path)
       if !ret
         if filename == ""
-          ret = BitmapWrapper.new(32, 32)
+          ret = BitmapWrapper.new(16, 16)
         else
           ret = BitmapWrapper.new(path)
         end
@@ -70,11 +70,11 @@ module RPG
       if ret
         ret.addRef
       else
-        ret = BitmapWrapper.new(32 * width, 32 * height)
-        x = ((tile_id - 384) % 8) * 32
-        y = (((tile_id - 384) / 8) - height + 1) * 32
+        ret = BitmapWrapper.new(16 * width, 16 * height)
+        x = ((tile_id - 384) % 8) * 16
+        y = (((tile_id - 384) / 8) - height + 1) * 16
         tileset = yield(filename)
-        ret.blt(0, 0, tileset, Rect.new(x, y, 32 * width, 32 * height))
+        ret.blt(0, 0, tileset, Rect.new(x, y, 16 * width, 16 * height))
         tileset.dispose
         ret.hue_change(hue) if hue != 0
         @cache[key] = ret

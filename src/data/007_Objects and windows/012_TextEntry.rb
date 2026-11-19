@@ -183,10 +183,10 @@ class Window_TextEntry < SpriteWindow_Base
     y = 0
     if @heading
       textwidth = bitmap.text_size(@heading).width
-      pbDrawShadowText(bitmap, x, y, textwidth + 4, 32, @heading, @baseColor, @shadowColor)
-      y += 32
+      pbDrawShadowText(bitmap, x, y, textwidth + 2, 16, @heading, @baseColor, @shadowColor)
+      y += 16
     end
-    x += 4
+    x += 2
     width = self.width - self.borderX
     cursorcolor = Color.new(16, 24, 32)
     textscan = self.text.scan(/./m)
@@ -198,7 +198,7 @@ class Window_TextEntry < SpriteWindow_Base
     while startpos > 0
       c = (@helper.passwordChar != "") ? @helper.passwordChar : textscan[startpos - 1]
       fromcursor += bitmap.text_size(c).width
-      break if fromcursor > width - 4
+      break if fromcursor > width - 2
       startpos -= 1
     end
     (startpos...scanlength).each do |i|
@@ -206,16 +206,16 @@ class Window_TextEntry < SpriteWindow_Base
       textwidth = bitmap.text_size(c).width
       next if c == "\n"
       # Draw text
-      pbDrawShadowText(bitmap, x, y, textwidth + 4, 32, c, @baseColor, @shadowColor)
+      pbDrawShadowText(bitmap, x, y, textwidth + 2, 16, c, @baseColor, @shadowColor)
       # Draw cursor if necessary
       if i == @helper.cursor && @cursor_shown
-        bitmap.fill_rect(x, y + 4, 2, 24, cursorcolor)
+        bitmap.fill_rect(x, y + 2, 1, 12, cursorcolor)
       end
       # Add x to drawn text width
       x += textwidth
     end
     if textscan.length == @helper.cursor && @cursor_shown
-      bitmap.fill_rect(x, y + 4, 2, 24, cursorcolor)
+      bitmap.fill_rect(x, y + 2, 1, 12, cursorcolor)
     end
   end
 end
@@ -548,9 +548,9 @@ class Window_MultilineTextEntry < SpriteWindow_Base
         end
         break
       end
-      cursorY += 4
-      cursorHeight = [4, textheight - 4, bitmap.text_size("X").height - 4].max
-      bitmap.fill_rect(cursorX, cursorY, 2, cursorHeight, cursorcolor)
+      cursorY += 2
+      cursorHeight = [2, textheight - 2, bitmap.text_size("X").height - 2].max
+      bitmap.fill_rect(cursorX, cursorY, 1, cursorHeight, cursorcolor)
     end
   end
 end

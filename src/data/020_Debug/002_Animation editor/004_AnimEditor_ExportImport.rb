@@ -49,7 +49,7 @@ module BattleAnimationEditor
     pbRgssChdir(".") { animfiles.concat(Dir.glob("*.anm")) }
     cmdwin = pbListWindow(animfiles, 320)
     cmdwin.opacity = 200
-    cmdwin.height = 480
+    cmdwin.height = 240
     cmdwin.viewport = canvas.viewport
     loop do
       Graphics.update

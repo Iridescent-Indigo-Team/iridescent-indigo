@@ -58,31 +58,31 @@ class ReadyMenuButton < Sprite
     sel = (@selected == @index && (@side == 0) == @command[2])
     self.y = ((Graphics.height - (@button.height / 2)) / 2) - ((@selected - @index) * ((@button.height / 2) + 4))
     if @command[2]   # Pokémon
-      self.x = (sel) ? 0 : -16
-      @icon.x = self.x + 52
-      @icon.y = self.y + 32
+      self.x = (sel) ? 0 : -8
+      @icon.x = self.x + 26
+      @icon.y = self.y + 16
     else   # Item
-      self.x = (sel) ? Graphics.width - @button.width : Graphics.width + 16 - @button.width
-      @icon.x = self.x + 32
+      self.x = (sel) ? Graphics.width - @button.width : Graphics.width + 8 - @button.width
+      @icon.x = self.x + 16
       @icon.y = self.y + (@button.height / 4)
     end
     self.bitmap.clear
     rect = Rect.new(0, (sel) ? @button.height / 2 : 0, @button.width, @button.height / 2)
     self.bitmap.blt(0, 0, @button.bitmap, rect)
-    textx = 164
+    textx = 82
     if !@command[2]
-      textx = (GameData::Item.get(@command[0]).is_important?) ? 146 : 124
+      textx = (GameData::Item.get(@command[0]).is_important?) ? 73 : 62
     end
     textpos = [
-      [@command[1], textx, 24, :center, Color.new(248, 248, 248), Color.new(40, 40, 40), :outline]
+      [@command[1], textx, 12, :center, Color.new(248, 248, 248), Color.new(40, 40, 40), :outline]
     ]
     if !@command[2] && !GameData::Item.get(@command[0]).is_important?
       qty = $bag.quantity(@command[0])
       if qty > 99
-        textpos.push([_INTL(">99"), 230, 24, :right,
+        textpos.push([_INTL(">99"), 115, 12, :right,
                       Color.new(248, 248, 248), Color.new(40, 40, 40), :outline])
       else
-        textpos.push([_INTL("x{1}", qty), 230, 24, :right,
+        textpos.push([_INTL("x{1}", qty), 115, 12, :right,
                       Color.new(248, 248, 248), Color.new(40, 40, 40), :outline])
       end
     end
@@ -127,7 +127,7 @@ class PokemonReadyMenu_Scene
     @viewport.z = 99999
     @sprites = {}
     @sprites["cmdwindow"] = Window_CommandPokemon.new((@index[2] == 0) ? @movecommands : @itemcommands)
-    @sprites["cmdwindow"].height = 192
+    @sprites["cmdwindow"].height = 96
     @sprites["cmdwindow"].visible = false
     @sprites["cmdwindow"].viewport = @viewport
     @commands[0].length.times do |i|

@@ -234,27 +234,27 @@ class Battle::Scene
     window.contents.clear
     pbSetSystemFont(window.contents)
     textpos = [
-      [battler1.name, 64, 6, :center, Color.new(248, 0, 0), Color.new(208, 208, 200)],
-      [_INTL("VS"), 144, 6, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [battler2.name, 224, 6, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [_INTL("Mind"), 144, 54, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [_INTL("Skill"), 144, 86, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [_INTL("Body"), 144, 118, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [total1.to_s, 64, 166, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [_INTL("Judgment"), 144, 166, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
-      [total2.to_s, 224, 166, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)]
+      [battler1.name, 32, 3, :center, Color.new(248, 0, 0), Color.new(208, 208, 200)],
+      [_INTL("VS"), 72, 3, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [battler2.name, 112, 3, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [_INTL("Mind"), 72, 27, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [_INTL("Skill"), 72, 43, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [_INTL("Body"), 72, 59, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [total1.to_s, 32, 83, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [_INTL("Judgment"), 72, 83, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)],
+      [total2.to_s, 112, 83, :center, Color.new(72, 72, 72), Color.new(208, 208, 200)]
     ]
     pbDrawTextPositions(window.contents, textpos)
     images = []
     phase.times do |i|
       y = [48, 80, 112][i]
-      x = (ratings1[i] == ratings2[i]) ? 64 : ((ratings1[i] > ratings2[i]) ? 0 : 32)
+      x = (ratings1[i] == ratings2[i]) ? 32 : ((ratings1[i] > ratings2[i]) ? 0 : 16)
       images.push(["Graphics/UI/Battle/judgment", 64 - 16, y, x, 0, 32, 32])
-      x = (ratings1[i] == ratings2[i]) ? 64 : ((ratings1[i] < ratings2[i]) ? 0 : 32)
+      x = (ratings1[i] == ratings2[i]) ? 32 : ((ratings1[i] < ratings2[i]) ? 0 : 16)
       images.push(["Graphics/UI/Battle/judgment", 224 - 16, y, x, 0, 32, 32])
     end
     pbDrawImagePositions(window.contents, images)
-    window.contents.fill_rect(16, 150, 256, 4, Color.new(80, 80, 80))
+    window.contents.fill_rect(8, 75, 128, 2, Color.new(80, 80, 80))
   end
 
   def pbBattleArenaBattlers(battler1, battler2)
@@ -275,7 +275,7 @@ class Battle::Scene
         dimmingvp.update
       end
       dimmingvp.z = 99999
-      infowindow = SpriteWindow_Base.new(80, 0, 320, 224)
+      infowindow = SpriteWindow_Base.new(40, 0, 160, 112)
       infowindow.contents = Bitmap.new(infowindow.width - infowindow.borderX,
                                        infowindow.height - infowindow.borderY)
       infowindow.z        = 99999

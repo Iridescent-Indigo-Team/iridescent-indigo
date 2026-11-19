@@ -231,7 +231,7 @@ class TimerDisplay # :nodoc:
   attr_accessor :start_time
 
   def initialize(start_time, max_time)
-    @timer = Window_AdvancedTextPokemon.newWithSize("", Graphics.width - 120, 0, 120, 64)
+    @timer = Window_AdvancedTextPokemon.newWithSize("", Graphics.width - 60, 0, 60, 32)
     @timer.z = 99999
     @start_time = start_time
     @max_time = max_time

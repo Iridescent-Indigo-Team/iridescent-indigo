@@ -43,13 +43,13 @@ class TilePuzzleCursor < BitmapSprite
     self.bitmap.clear
     x = (Graphics.width - (@tilewidth * @boardwidth)) / 2
     if @position >= @boardwidth * @boardheight
-      x = ((x - (@tilewidth * (@boardwidth / 2).ceil)) / 2) - 10
+      x = ((x - (@tilewidth * (@boardwidth / 2).ceil)) / 2) - 5
       if (@position % @boardwidth) >= (@boardwidth / 2).ceil
         x = Graphics.width - x - (@tilewidth * @boardwidth)
       end
     end
     x += @tilewidth * (@position % @boardwidth)
-    y = ((Graphics.height - (@tileheight * @boardheight)) / 2) - 32
+    y = ((Graphics.height - (@tileheight * @boardheight)) / 2) - 16
     y += @tileheight * ((@position % (@boardwidth * @boardheight)) / @boardwidth)
     self.tone = Tone.new(0, (@holding ? 64 : 0), (@holding ? 64 : 0), 0)
     # Cursor

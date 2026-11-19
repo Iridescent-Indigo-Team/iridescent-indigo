@@ -9,9 +9,9 @@ class PokemonPauseMenu_Scene
     @sprites["cmdwindow"] = Window_CommandPokemon.new([])
     @sprites["cmdwindow"].visible = false
     @sprites["cmdwindow"].viewport = @viewport
-    @sprites["infowindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 32, 32, @viewport)
+    @sprites["infowindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 16, 16, @viewport)
     @sprites["infowindow"].visible = false
-    @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 32, 32, @viewport)
+    @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 16, 16, @viewport)
     @sprites["helpwindow"].visible = false
     @infostate = false
     @helpstate = false

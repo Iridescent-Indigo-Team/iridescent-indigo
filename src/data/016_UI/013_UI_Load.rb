@@ -49,44 +49,44 @@ class PokemonLoadPanel < Sprite
     return if disposed?
     @refreshing = true
     if !self.bitmap || self.bitmap.disposed?
-      self.bitmap = Bitmap.new(@bgbitmap.width, 222)
+      self.bitmap = Bitmap.new(@bgbitmap.width, 111)
       pbSetSystemFont(self.bitmap)
     end
     if @refreshBitmap
       @refreshBitmap = false
       self.bitmap&.clear
       if @isContinue
-        self.bitmap.blt(0, 0, @bgbitmap.bitmap, Rect.new(0, (@selected) ? 222 : 0, @bgbitmap.width, 222))
+        self.bitmap.blt(0, 0, @bgbitmap.bitmap, Rect.new(0, (@selected) ? 111 : 0, @bgbitmap.width, 111))
       else
-        self.bitmap.blt(0, 0, @bgbitmap.bitmap, Rect.new(0, 444 + ((@selected) ? 46 : 0), @bgbitmap.width, 46))
+        self.bitmap.blt(0, 0, @bgbitmap.bitmap, Rect.new(0, 222 + ((@selected) ? 23 : 0), @bgbitmap.width, 23))
       end
       textpos = []
       if @isContinue
-        textpos.push([@title, 32, 16, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
-        textpos.push([_INTL("Badges:"), 32, 118, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
-        textpos.push([@trainer.badge_count.to_s, 206, 118, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
-        textpos.push([_INTL("Pokédex:"), 32, 150, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
-        textpos.push([@trainer.pokedex.seen_count.to_s, 206, 150, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
-        textpos.push([_INTL("Time:"), 32, 182, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([@title, 16, 8, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([_INTL("Badges:"), 16, 59, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([@trainer.badge_count.to_s, 103, 59, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([_INTL("Pokédex:"), 16, 75, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([@trainer.pokedex.seen_count.to_s, 103, 75, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([_INTL("Time:"), 16, 91, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
         hour = @totalsec / 60 / 60
         min  = @totalsec / 60 % 60
         if hour > 0
-          textpos.push([_INTL("{1}h {2}m", hour, min), 206, 182, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
+          textpos.push([_INTL("{1}h {2}m", hour, min), 103, 91, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
         else
-          textpos.push([_INTL("{1}m", min), 206, 182, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
+          textpos.push([_INTL("{1}m", min), 103, 91, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
         end
         if @trainer.male?
-          textpos.push([@trainer.name, 112, 70, :left, MALE_TEXT_COLOR, MALE_TEXT_SHADOW_COLOR])
+          textpos.push([@trainer.name, 56, 35, :left, MALE_TEXT_COLOR, MALE_TEXT_SHADOW_COLOR])
         elsif @trainer.female?
-          textpos.push([@trainer.name, 112, 70, :left, FEMALE_TEXT_COLOR, FEMALE_TEXT_SHADOW_COLOR])
+          textpos.push([@trainer.name, 56, 35, :left, FEMALE_TEXT_COLOR, FEMALE_TEXT_SHADOW_COLOR])
         else
-          textpos.push([@trainer.name, 112, 70, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+          textpos.push([@trainer.name, 56, 35, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
         end
         mapname = pbGetMapNameFromId(@mapid)
         mapname.gsub!(/\\PN/, @trainer.name)
-        textpos.push([mapname, 386, 16, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([mapname, 193, 8, :right, TEXT_COLOR, TEXT_SHADOW_COLOR])
       else
-        textpos.push([@title, 32, 14, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
+        textpos.push([@title, 16, 7, :left, TEXT_COLOR, TEXT_SHADOW_COLOR])
       end
       pbDrawTextPositions(self.bitmap, textpos)
     end
@@ -104,15 +104,15 @@ class PokemonLoad_Scene
     @viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
     @viewport.z = 99998
     addBackgroundOrColoredPlane(@sprites, "background", "Load/bg", Color.new(248, 248, 248), @viewport)
-    y = 32
+    y = 16
     commands.length.times do |i|
       @sprites["panel#{i}"] = PokemonLoadPanel.new(
         i, commands[i], (show_continue) ? (i == 0) : false, trainer, stats, map_id, @viewport
       )
-      @sprites["panel#{i}"].x = 48
+      @sprites["panel#{i}"].x = 24
       @sprites["panel#{i}"].y = y
       @sprites["panel#{i}"].pbRefresh
-      y += (show_continue && i == 0) ? 224 : 48
+      y += (show_continue && i == 0) ? 112 : 24
     end
     @sprites["cmdwindow"] = Window_CommandPokemon.new([])
     @sprites["cmdwindow"].viewport = @viewport
@@ -141,23 +141,23 @@ class PokemonLoad_Scene
       @sprites["panel#{newi}"].pbRefresh
       while @sprites["panel#{newi}"].y > Graphics.height - 80
         @commands.length.times do |i|
-          @sprites["panel#{i}"].y -= 48
+          @sprites["panel#{i}"].y -= 24
         end
         6.times do |i|
           break if !@sprites["party#{i}"]
-          @sprites["party#{i}"].y -= 48
+          @sprites["party#{i}"].y -= 24
         end
-        @sprites["player"].y -= 48 if @sprites["player"]
+        @sprites["player"].y -= 24 if @sprites["player"]
       end
       while @sprites["panel#{newi}"].y < 32
         @commands.length.times do |i|
-          @sprites["panel#{i}"].y += 48
+          @sprites["panel#{i}"].y += 24
         end
         6.times do |i|
           break if !@sprites["party#{i}"]
-          @sprites["party#{i}"].y += 48
+          @sprites["party#{i}"].y += 24
         end
-        @sprites["player"].y += 48 if @sprites["player"]
+        @sprites["player"].y += 24 if @sprites["player"]
       end
     end
   end
@@ -173,15 +173,15 @@ class PokemonLoad_Scene
       end
       charwidth  = @sprites["player"].bitmap.width
       charheight = @sprites["player"].bitmap.height
-      @sprites["player"].x = 112 - (charwidth / 8)
-      @sprites["player"].y = 112 - (charheight / 8)
+      @sprites["player"].x = 56 - (charwidth / 8)
+      @sprites["player"].y = 56 - (charheight / 8)
       @sprites["player"].z = 99999
     end
     trainer.party.each_with_index do |pkmn, i|
       @sprites["party#{i}"] = PokemonIconSprite.new(pkmn, @viewport)
       @sprites["party#{i}"].setOffset(PictureOrigin::CENTER)
-      @sprites["party#{i}"].x = 334 + (66 * (i % 2))
-      @sprites["party#{i}"].y = 112 + (50 * (i / 2))
+      @sprites["party#{i}"].x = 167 + (33 * (i % 2))
+      @sprites["party#{i}"].y = 56 + (25 * (i / 2))
       @sprites["party#{i}"].z = 99999
     end
   end

@@ -45,11 +45,11 @@ class PokegearButton < Sprite
     rect.y = @button.height / 2 if @selected
     self.bitmap.blt(0, 0, @button.bitmap, rect)
     textpos = [
-      [@name, rect.width / 2, (rect.height / 2) - 10, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]
+      [@name, rect.width / 2, (rect.height / 2) - 5, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]
     ]
     pbDrawTextPositions(self.bitmap, textpos)
     imagepos = [
-      [sprintf("Graphics/UI/Pokegear/icon_%s", @image), 18, 10]
+      [sprintf("Graphics/UI/Pokegear/icon_%s", @image), 9, 5]
     ]
     pbDrawImagePositions(self.bitmap, imagepos)
   end

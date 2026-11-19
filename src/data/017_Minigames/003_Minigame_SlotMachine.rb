@@ -13,7 +13,7 @@ class SlotMachineReel < BitmapSprite
   SLIPPING = [0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 3]
 
   def initialize(x, y, reel_num, difficulty = 1)
-    @viewport = Viewport.new(x, y, 64, 144)
+    @viewport = Viewport.new(x, y, 32, 72)
     @viewport.z = 99999
     super(64, 144, @viewport)
     @reel_num = reel_num
@@ -96,9 +96,9 @@ class SlotMachineReel < BitmapSprite
     4.times do |i|
       num = @index - i
       num += @reel.length if num < 0
-      self.bitmap.blt(0, @toppos + (i * 48), @images.bitmap, Rect.new(@reel[num] * 64, 0, 64, 48))
+      self.bitmap.blt(0, @toppos + (i * 24), @images.bitmap, Rect.new(@reel[num] * 32, 0, 32, 24))
     end
-    self.bitmap.blt(0, 0, @shading.bitmap, Rect.new(0, 0, 64, 144))
+    self.bitmap.blt(0, 0, @shading.bitmap, Rect.new(0, 0, 32, 72))
   end
 end
 
@@ -109,7 +109,7 @@ class SlotMachineScore < BitmapSprite
   attr_reader :score
 
   def initialize(x, y, score = 0)
-    @viewport = Viewport.new(x, y, 70, 22)
+    @viewport = Viewport.new(x, y, 35, 11)
     @viewport.z = 99999
     super(70, 22, @viewport)
     @numbers = AnimatedBitmap.new("Graphics/UI/Slot Machine/numbers")
@@ -126,7 +126,7 @@ class SlotMachineScore < BitmapSprite
     self.bitmap.clear
     5.times do |i|
       digit = (@score / (10**i)) % 10 # Least significant digit first
-      self.bitmap.blt(14 * (4 - i), 0, @numbers.bitmap, Rect.new(digit * 14, 0, 14, 22))
+      self.bitmap.blt(7 * (4 - i), 0, @numbers.bitmap, Rect.new(digit * 7, 0, 7, 11))
     end
   end
 end
@@ -204,15 +204,15 @@ class SlotMachineScene
         frame = ((System.uptime - timer_start) / 0.125).to_i
         @sprites["window2"].bitmap&.clear
         @sprites["window1"].setBitmap(_INTL("Graphics/UI/Slot Machine/win"))
-        @sprites["window1"].src_rect.set(152 * (frame % 4), 0, 152, 208)
+        @sprites["window1"].src_rect.set(76 * (frame % 4), 0, 76, 104)
         if bonus > 0
           @sprites["window2"].setBitmap(_INTL("Graphics/UI/Slot Machine/bonus"))
-          @sprites["window2"].src_rect.set(152 * (bonus - 1), 0, 152, 208)
+          @sprites["window2"].src_rect.set(76 * (bonus - 1), 0, 76, 104)
         end
         @sprites["light1"].visible = true
-        @sprites["light1"].src_rect.set(0, 26 * (frame % 4), 96, 26)
+        @sprites["light1"].src_rect.set(0, 13 * (frame % 4), 48, 13)
         @sprites["light2"].visible = true
-        @sprites["light2"].src_rect.set(0, 26 * (frame % 4), 96, 26)
+        @sprites["light2"].src_rect.set(0, 13 * (frame % 4), 48, 13)
         (1..5).each do |i|
           if wonRow[i - 1]
             @sprites["row#{i}"].visible = frame.even?
@@ -227,7 +227,7 @@ class SlotMachineScene
       end
       @sprites["light1"].visible = false
       @sprites["light2"].visible = false
-      @sprites["window1"].src_rect.set(0, 0, 152, 208)
+      @sprites["window1"].src_rect.set(0, 0, 76, 104)
       # Pay out
       timer_start = System.uptime
       last_paid_tick = -1
@@ -262,7 +262,7 @@ class SlotMachineScene
         frame = ((System.uptime - timer_start) / 0.25).to_i
         @sprites["window2"].bitmap&.clear
         @sprites["window1"].setBitmap(_INTL("Graphics/UI/Slot Machine/lose"))
-        @sprites["window1"].src_rect.set(152 * (frame % 2), 0, 152, 208)
+        @sprites["window1"].src_rect.set(76 * (frame % 2), 0, 76, 104)
         Graphics.update
         Input.update
         update
@@ -281,28 +281,28 @@ class SlotMachineScene
     @sprites["reel2"] = SlotMachineReel.new(144, 112, 2, difficulty)
     @sprites["reel3"] = SlotMachineReel.new(224, 112, 3, difficulty)
     (1..3).each do |i|
-      @sprites["button#{i}"] = IconSprite.new(68 + (80 * (i - 1)), 260, @viewport)
+      @sprites["button#{i}"] = IconSprite.new(34 + (40 * (i - 1)), 130, @viewport)
       @sprites["button#{i}"].setBitmap("Graphics/UI/Slot Machine/button")
       @sprites["button#{i}"].visible = false
     end
     (1..5).each do |i|
       y = [170, 122, 218, 82, 82][i - 1]
-      @sprites["row#{i}"] = IconSprite.new(2, y, @viewport)
+      @sprites["row#{i}"] = IconSprite.new(1, y, @viewport)
       @sprites["row#{i}"].setBitmap(sprintf("Graphics/UI/Slot Machine/line%1d%s",
                                             1 + (i / 2), (i >= 4) ? ((i == 4) ? "a" : "b") : ""))
       @sprites["row#{i}"].visible = false
     end
-    @sprites["light1"] = IconSprite.new(16, 32, @viewport)
+    @sprites["light1"] = IconSprite.new(8, 16, @viewport)
     @sprites["light1"].setBitmap("Graphics/UI/Slot Machine/lights")
     @sprites["light1"].visible = false
-    @sprites["light2"] = IconSprite.new(240, 32, @viewport)
+    @sprites["light2"] = IconSprite.new(120, 16, @viewport)
     @sprites["light2"].setBitmap("Graphics/UI/Slot Machine/lights")
     @sprites["light2"].mirror = true
     @sprites["light2"].visible = false
-    @sprites["window1"] = IconSprite.new(358, 96, @viewport)
+    @sprites["window1"] = IconSprite.new(179, 48, @viewport)
     @sprites["window1"].setBitmap(_INTL("Graphics/UI/Slot Machine/insert"))
-    @sprites["window1"].src_rect.set(0, 0, 152, 208)
-    @sprites["window2"] = IconSprite.new(358, 96, @viewport)
+    @sprites["window1"].src_rect.set(0, 0, 76, 104)
+    @sprites["window2"] = IconSprite.new(179, 48, @viewport)
     @sprites["credit"] = SlotMachineScore.new(360, 66, $player.coins)
     @sprites["payout"] = SlotMachineScore.new(438, 66, 0)
     @wager = 0
@@ -328,7 +328,7 @@ class SlotMachineScene
         timer_start = System.uptime
         loop do
           frame = ((System.uptime - timer_start) / 0.25).to_i
-          @sprites["window1"].src_rect.set(152 * (frame % 4), 0, 152, 208)
+          @sprites["window1"].src_rect.set(76 * (frame % 4), 0, 76, 104)
           Graphics.update
           Input.update
           update
@@ -366,10 +366,10 @@ class SlotMachineScene
         timer_start = System.uptime
         loop do
           frame = ((System.uptime - timer_start) / 0.4).to_i
-          @sprites["window1"].src_rect.set(152 * (frame % 2), 0, 152, 208)
+          @sprites["window1"].src_rect.set(76 * (frame % 2), 0, 76, 104)
           if @wager > 0
             @sprites["window2"].setBitmap(_INTL("Graphics/UI/Slot Machine/press"))
-            @sprites["window2"].src_rect.set(152 * (frame % 2), 0, 152, 208)
+            @sprites["window2"].src_rect.set(76 * (frame % 2), 0, 76, 104)
           end
           Graphics.update
           Input.update

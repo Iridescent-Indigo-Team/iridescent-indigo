@@ -25,10 +25,10 @@ class PokemonTrainerCard_Scene
     end
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
-    @sprites["trainer"] = IconSprite.new(336, 112, @viewport)
+    @sprites["trainer"] = IconSprite.new(168, 56, @viewport)
     @sprites["trainer"].setBitmap(GameData::TrainerType.player_front_sprite_filename($player.trainer_type))
-    @sprites["trainer"].x -= (@sprites["trainer"].bitmap.width - 128) / 2
-    @sprites["trainer"].y -= (@sprites["trainer"].bitmap.height - 128)
+    @sprites["trainer"].x -= (@sprites["trainer"].bitmap.width - 64) / 2
+    @sprites["trainer"].y -= (@sprites["trainer"].bitmap.height - 64)
     @sprites["trainer"].z = 2
     pbDrawTrainerCardFront
     pbFadeInAndShow(@sprites) { pbUpdate }
@@ -49,28 +49,28 @@ class PokemonTrainerCard_Scene
                       $PokemonGlobal.startTime.day,
                       $PokemonGlobal.startTime.year)
     textPositions = [
-      [_INTL("Name"), 34, 70, :left, baseColor, shadowColor],
-      [$player.name, 302, 70, :right, baseColor, shadowColor],
-      [_INTL("ID No."), 332, 70, :left, baseColor, shadowColor],
-      [sprintf("%05d", $player.public_ID), 468, 70, :right, baseColor, shadowColor],
-      [_INTL("Money"), 34, 118, :left, baseColor, shadowColor],
-      [_INTL("${1}", $player.money.to_s_formatted), 302, 118, :right, baseColor, shadowColor],
-      [_INTL("Pokédex"), 34, 166, :left, baseColor, shadowColor],
-      [sprintf("%d/%d", $player.pokedex.owned_count, $player.pokedex.seen_count), 302, 166, :right, baseColor, shadowColor],
-      [_INTL("Time"), 34, 214, :left, baseColor, shadowColor],
-      [time, 302, 214, :right, baseColor, shadowColor],
-      [_INTL("Started"), 34, 262, :left, baseColor, shadowColor],
-      [starttime, 302, 262, :right, baseColor, shadowColor]
+      [_INTL("Name"), 17, 35, :left, baseColor, shadowColor],
+      [$player.name, 151, 35, :right, baseColor, shadowColor],
+      [_INTL("ID No."), 166, 35, :left, baseColor, shadowColor],
+      [sprintf("%05d", $player.public_ID), 234, 35, :right, baseColor, shadowColor],
+      [_INTL("Money"), 17, 59, :left, baseColor, shadowColor],
+      [_INTL("${1}", $player.money.to_s_formatted), 151, 59, :right, baseColor, shadowColor],
+      [_INTL("Pokédex"), 17, 83, :left, baseColor, shadowColor],
+      [sprintf("%d/%d", $player.pokedex.owned_count, $player.pokedex.seen_count), 151, 83, :right, baseColor, shadowColor],
+      [_INTL("Time"), 17, 107, :left, baseColor, shadowColor],
+      [time, 151, 107, :right, baseColor, shadowColor],
+      [_INTL("Started"), 17, 131, :left, baseColor, shadowColor],
+      [starttime, 151, 131, :right, baseColor, shadowColor]
     ]
     pbDrawTextPositions(overlay, textPositions)
-    x = 72
+    x = 36
     region = pbGetCurrentRegion(0) # Get the current region
     imagePositions = []
     8.times do |i|
       if $player.badges[i + (region * 8)]
-        imagePositions.push(["Graphics/UI/Trainer Card/icon_badges", x, 310, i * 32, region * 32, 32, 32])
+        imagePositions.push(["Graphics/UI/Trainer Card/icon_badges", x, 155, i * 16, region * 16, 16, 16])
       end
-      x += 48
+      x += 24
     end
     pbDrawImagePositions(overlay, imagePositions)
   end

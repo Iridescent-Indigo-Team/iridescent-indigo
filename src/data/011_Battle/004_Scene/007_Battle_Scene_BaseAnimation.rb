@@ -745,7 +745,7 @@ module Battle::Scene::Animation::BallAnimationMixin
       y_pos = y_offsets[i]
       star_duration.times do |j|
         index = j + 1
-        x = 72 * index / star_duration
+        x = 36 * index / star_duration
         proportion = index.to_f / star_duration
         a = (2 * y_pos[2]) - (4 * y_pos[1])
         b = y_pos[2] - a

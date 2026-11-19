@@ -38,14 +38,14 @@ class PokemonTrade_Scene
     @sprites["rsprite1"].setPokemonBitmap(@pokemon, false)
     @sprites["rsprite1"].setOffset(PictureOrigin::BOTTOM)
     @sprites["rsprite1"].x = Graphics.width / 2
-    @sprites["rsprite1"].y = 264
+    @sprites["rsprite1"].y = 132
     @sprites["rsprite1"].z = 10
     @pokemon.species_data.apply_metrics_to_sprite(@sprites["rsprite1"], 1)
     @sprites["rsprite2"] = PokemonSprite.new(@viewport)
     @sprites["rsprite2"].setPokemonBitmap(@pokemon2, false)
     @sprites["rsprite2"].setOffset(PictureOrigin::BOTTOM)
     @sprites["rsprite2"].x = Graphics.width / 2
-    @sprites["rsprite2"].y = 264
+    @sprites["rsprite2"].y = 132
     @sprites["rsprite2"].z = 10
     @pokemon2.species_data.apply_metrics_to_sprite(@sprites["rsprite2"], 1)
     @sprites["rsprite2"].visible = false
@@ -113,7 +113,7 @@ class PokemonTrade_Scene
     picturePoke.setColor(0, Color.new(248, 176, 240))
     picturePoke.setVisible(0, false)
     # Dropping ball
-    y = Graphics.height - 96 - 16 - 16   # end point of Poké Ball
+    y = Graphics.height - 48 - 8 - 8   # end point of Poké Ball
     delay = picturePoke.totalDuration + 2
     4.times do |i|
       t = [4, 4, 3, 2][i]   # Time taken to rise or fall for each bounce

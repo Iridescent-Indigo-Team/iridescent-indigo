@@ -80,13 +80,13 @@ class PokemonEntryScene
     @viewport.z = 99999
     if USEKEYBOARD
       @sprites["entry"] = Window_TextEntry_Keyboard.new(
-        initialText, 0, 0, 400 - 112, 96, helptext, true
+        initialText, 0, 0, 200 - 56, 48, helptext, true
       )
       Input.text_input = true
     else
-      @sprites["entry"] = Window_TextEntry.new(initialText, 0, 0, 400, 96, helptext, true)
+      @sprites["entry"] = Window_TextEntry.new(initialText, 0, 0, 200, 48, helptext, true)
     end
-    @sprites["entry"].x = (Graphics.width / 2) - (@sprites["entry"].width / 2) + 32
+    @sprites["entry"].x = (Graphics.width / 2) - (@sprites["entry"].width / 2) + 16
     @sprites["entry"].viewport = @viewport
     @sprites["entry"].visible = true
     @minlength = minlength
@@ -103,12 +103,12 @@ class PokemonEntryScene
     if minlength == 0
       @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize(
         _INTL("Enter text using the keyboard. Press\nEnter to confirm, or Esc to cancel."),
-        32, Graphics.height - 96, Graphics.width - 64, 96, @viewport
+        16, Graphics.height - 48, Graphics.width - 32, 48, @viewport
       )
     else
       @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize(
         _INTL("Enter text using the keyboard.\nPress Enter to confirm."),
-        32, Graphics.height - 96, Graphics.width - 64, 96, @viewport
+        16, Graphics.height - 48, Graphics.width - 32, 48, @viewport
       )
     end
     @sprites["helpwindow"].letterbyletter = false
@@ -123,56 +123,56 @@ class PokemonEntryScene
       if meta
         @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
         @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-        @sprites["shadow"].x = 66
-        @sprites["shadow"].y = 64
+        @sprites["shadow"].x = 33
+        @sprites["shadow"].y = 32
         filename = pbGetPlayerCharset(meta.walk_charset, nil, true)
         @sprites["subject"] = TrainerWalkingCharSprite.new(filename, @viewport)
         charwidth = @sprites["subject"].bitmap.width
         charheight = @sprites["subject"].bitmap.height
-        @sprites["subject"].x = 88 - (charwidth / 8)
-        @sprites["subject"].y = 76 - (charheight / 4)
+        @sprites["subject"].x = 44 - (charwidth / 8)
+        @sprites["subject"].y = 38 - (charheight / 4)
       end
     when 2   # Pokémon
       if pokemon
         @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
         @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-        @sprites["shadow"].x = 66
-        @sprites["shadow"].y = 64
+        @sprites["shadow"].x = 33
+        @sprites["shadow"].y = 32
         @sprites["subject"] = PokemonIconSprite.new(pokemon, @viewport)
         @sprites["subject"].setOffset(PictureOrigin::CENTER)
-        @sprites["subject"].x = 88
-        @sprites["subject"].y = 54
-        @sprites["gender"] = BitmapSprite.new(32, 32, @viewport)
-        @sprites["gender"].x = 430
-        @sprites["gender"].y = 54
+        @sprites["subject"].x = 44
+        @sprites["subject"].y = 27
+        @sprites["gender"] = BitmapSprite.new(16, 16, @viewport)
+        @sprites["gender"].x = 215
+        @sprites["gender"].y = 27
         @sprites["gender"].bitmap.clear
         pbSetSystemFont(@sprites["gender"].bitmap)
         textpos = []
         if pokemon.male?
-          textpos.push([_INTL("♂"), 0, 6, :left, Color.new(0, 128, 248), Color.new(168, 184, 184)])
+          textpos.push([_INTL("♂"), 0, 3, :left, Color.new(0, 128, 248), Color.new(168, 184, 184)])
         elsif pokemon.female?
-          textpos.push([_INTL("♀"), 0, 6, :left, Color.new(248, 24, 24), Color.new(168, 184, 184)])
+          textpos.push([_INTL("♀"), 0, 3, :left, Color.new(248, 24, 24), Color.new(168, 184, 184)])
         end
         pbDrawTextPositions(@sprites["gender"].bitmap, textpos)
       end
     when 3   # NPC
       @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
       @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-      @sprites["shadow"].x = 66
-      @sprites["shadow"].y = 64
+      @sprites["shadow"].x = 33
+      @sprites["shadow"].y = 32
       @sprites["subject"] = TrainerWalkingCharSprite.new(pokemon.to_s, @viewport)
       charwidth = @sprites["subject"].bitmap.width
       charheight = @sprites["subject"].bitmap.height
-      @sprites["subject"].x = 88 - (charwidth / 8)
-      @sprites["subject"].y = 76 - (charheight / 4)
+      @sprites["subject"].x = 44 - (charwidth / 8)
+      @sprites["subject"].y = 38 - (charheight / 4)
     when 4   # Storage box
       @sprites["subject"] = TrainerWalkingCharSprite.new(nil, @viewport)
       @sprites["subject"].altcharset = "Graphics/UI/Naming/icon_storage"
       @sprites["subject"].anim_duration = 0.4
       charwidth = @sprites["subject"].bitmap.width
       charheight = @sprites["subject"].bitmap.height
-      @sprites["subject"].x = 88 - (charwidth / 8)
-      @sprites["subject"].y = 52 - (charheight / 2)
+      @sprites["subject"].x = 44 - (charwidth / 8)
+      @sprites["subject"].y = 26 - (charheight / 2)
     end
     pbFadeInAndShow(@sprites)
   end
@@ -292,33 +292,33 @@ class PokemonEntryScene2
       value = @cursorPos
       case value
       when PokemonEntryScene2::MODE1   # Upper case
-        @sprite.x = 44
-        @sprite.y = 120
+        @sprite.x = 22
+        @sprite.y = 60
         @cursortype = 1
       when PokemonEntryScene2::MODE2   # Lower case
-        @sprite.x = 106
-        @sprite.y = 120
+        @sprite.x = 53
+        @sprite.y = 60
         @cursortype = 1
       when PokemonEntryScene2::MODE3   # Accents
-        @sprite.x = 168
-        @sprite.y = 120
+        @sprite.x = 84
+        @sprite.y = 60
         @cursortype = 1
       when PokemonEntryScene2::MODE4   # Other symbols
-        @sprite.x = 230
-        @sprite.y = 120
+        @sprite.x = 115
+        @sprite.y = 60
         @cursortype = 1
       when PokemonEntryScene2::BACK   # Back
-        @sprite.x = 314
-        @sprite.y = 120
+        @sprite.x = 157
+        @sprite.y = 60
         @cursortype = 2
       when PokemonEntryScene2::OK   # OK
-        @sprite.x = 394
-        @sprite.y = 120
+        @sprite.x = 197
+        @sprite.y = 60
         @cursortype = 2
       else
         if value >= 0
-          @sprite.x = 52 + (32 * (value % PokemonEntryScene2::ROWS))
-          @sprite.y = 180 + (38 * (value / PokemonEntryScene2::ROWS))
+          @sprite.x = 26 + (16 * (value % PokemonEntryScene2::ROWS))
+          @sprite.y = 90 + (19 * (value / PokemonEntryScene2::ROWS))
           @cursortype = 0
         end
       end
@@ -383,16 +383,16 @@ class PokemonEntryScene2
       COLUMNS.times do |y|
         ROWS.times do |x|
           pos = (y * ROWS) + x
-          textPos.push([@@Characters[i][0][pos], 44 + (x * 32), 24 + (y * 38), :center,
+          textPos.push([@@Characters[i][0][pos], 22 + (x * 16), 12 + (y * 19), :center,
                         Color.new(16, 24, 32), Color.new(160, 160, 160)])
         end
       end
       pbDrawTextPositions(b, textPos)
       @bitmaps[@@Characters.length + i] = b
     end
-    underline_bitmap = Bitmap.new(24, 6)
-    underline_bitmap.fill_rect(2, 2, 22, 4, Color.new(168, 184, 184))
-    underline_bitmap.fill_rect(0, 0, 22, 4, Color.new(16, 24, 32))
+    underline_bitmap = Bitmap.new(12, 3)
+    underline_bitmap.fill_rect(1, 1, 11, 2, Color.new(168, 184, 184))
+    underline_bitmap.fill_rect(0, 0, 11, 2, Color.new(16, 24, 32))
     @bitmaps.push(underline_bitmap)
     # Create sprites
     @sprites = {}
@@ -404,56 +404,56 @@ class PokemonEntryScene2
       if meta
         @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
         @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-        @sprites["shadow"].x = 66
-        @sprites["shadow"].y = 64
+        @sprites["shadow"].x = 33
+        @sprites["shadow"].y = 32
         filename = pbGetPlayerCharset(meta.walk_charset, nil, true)
         @sprites["subject"] = TrainerWalkingCharSprite.new(filename, @viewport)
         charwidth = @sprites["subject"].bitmap.width
         charheight = @sprites["subject"].bitmap.height
-        @sprites["subject"].x = 88 - (charwidth / 8)
-        @sprites["subject"].y = 76 - (charheight / 4)
+        @sprites["subject"].x = 44 - (charwidth / 8)
+        @sprites["subject"].y = 38 - (charheight / 4)
       end
     when 2   # Pokémon
       if pokemon
         @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
         @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-        @sprites["shadow"].x = 66
-        @sprites["shadow"].y = 64
+        @sprites["shadow"].x = 33
+        @sprites["shadow"].y = 32
         @sprites["subject"] = PokemonIconSprite.new(pokemon, @viewport)
         @sprites["subject"].setOffset(PictureOrigin::CENTER)
-        @sprites["subject"].x = 88
-        @sprites["subject"].y = 54
-        @sprites["gender"] = BitmapSprite.new(32, 32, @viewport)
-        @sprites["gender"].x = 430
-        @sprites["gender"].y = 54
+        @sprites["subject"].x = 44
+        @sprites["subject"].y = 27
+        @sprites["gender"] = BitmapSprite.new(16, 16, @viewport)
+        @sprites["gender"].x = 215
+        @sprites["gender"].y = 27
         @sprites["gender"].bitmap.clear
         pbSetSystemFont(@sprites["gender"].bitmap)
         textpos = []
         if pokemon.male?
-          textpos.push([_INTL("♂"), 0, 6, :left, Color.new(0, 128, 248), Color.new(168, 184, 184)])
+          textpos.push([_INTL("♂"), 0, 3, :left, Color.new(0, 128, 248), Color.new(168, 184, 184)])
         elsif pokemon.female?
-          textpos.push([_INTL("♀"), 0, 6, :left, Color.new(248, 24, 24), Color.new(168, 184, 184)])
+          textpos.push([_INTL("♀"), 0, 3, :left, Color.new(248, 24, 24), Color.new(168, 184, 184)])
         end
         pbDrawTextPositions(@sprites["gender"].bitmap, textpos)
       end
     when 3   # NPC
       @sprites["shadow"] = IconSprite.new(0, 0, @viewport)
       @sprites["shadow"].setBitmap("Graphics/UI/Naming/icon_shadow")
-      @sprites["shadow"].x = 66
-      @sprites["shadow"].y = 64
+      @sprites["shadow"].x = 33
+      @sprites["shadow"].y = 32
       @sprites["subject"] = TrainerWalkingCharSprite.new(pokemon.to_s, @viewport)
       charwidth = @sprites["subject"].bitmap.width
       charheight = @sprites["subject"].bitmap.height
-      @sprites["subject"].x = 88 - (charwidth / 8)
-      @sprites["subject"].y = 76 - (charheight / 4)
+      @sprites["subject"].x = 44 - (charwidth / 8)
+      @sprites["subject"].y = 38 - (charheight / 4)
     when 4   # Storage box
       @sprites["subject"] = TrainerWalkingCharSprite.new(nil, @viewport)
       @sprites["subject"].altcharset = "Graphics/UI/Naming/icon_storage"
       @sprites["subject"].anim_duration = 0.4
       charwidth = @sprites["subject"].bitmap.width
       charheight = @sprites["subject"].bitmap.height
-      @sprites["subject"].x = 88 - (charwidth / 8)
-      @sprites["subject"].y = 52 - (charheight / 2)
+      @sprites["subject"].x = 44 - (charwidth / 8)
+      @sprites["subject"].y = 26 - (charheight / 2)
     end
     @sprites["bgoverlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbDoUpdateOverlay
@@ -463,21 +463,21 @@ class PokemonEntryScene2
     @maxlength = maxlength
     @maxlength.times do |i|
       @sprites["blank#{i}"] = Sprite.new(@viewport)
-      @sprites["blank#{i}"].x = 160 + (24 * i)
+      @sprites["blank#{i}"].x = 80 + (12 * i)
       @sprites["blank#{i}"].bitmap = @bitmaps[@bitmaps.length - 1]
       @blanks[i] = 0
     end
     @sprites["bottomtab"] = Sprite.new(@viewport)   # Current tab
-    @sprites["bottomtab"].x = 22
-    @sprites["bottomtab"].y = 162
+    @sprites["bottomtab"].x = 11
+    @sprites["bottomtab"].y = 81
     @sprites["bottomtab"].bitmap = @bitmaps[@@Characters.length]
     @sprites["toptab"] = Sprite.new(@viewport)   # Next tab
-    @sprites["toptab"].x = 22 - 504
-    @sprites["toptab"].y = 162
+    @sprites["toptab"].x = 11 - 252
+    @sprites["toptab"].y = 81
     @sprites["toptab"].bitmap = @bitmaps[@@Characters.length + 1]
     @sprites["controls"] = IconSprite.new(0, 0, @viewport)
-    @sprites["controls"].x = 16
-    @sprites["controls"].y = 96
+    @sprites["controls"].x = 8
+    @sprites["controls"].y = 48
     @sprites["controls"].setBitmap(_INTL("Graphics/UI/Naming/overlay_controls"))
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbDoUpdateOverlay2
@@ -506,13 +506,13 @@ class PokemonEntryScene2
     bgoverlay.clear
     pbSetSystemFont(bgoverlay)
     textPositions = [
-      [@helptext, 160, 18, :left, Color.new(16, 24, 32), Color.new(168, 184, 184)]
+      [@helptext, 80, 9, :left, Color.new(16, 24, 32), Color.new(168, 184, 184)]
     ]
     chars = @helper.textChars
-    x = 172
+    x = 86
     chars.each do |ch|
-      textPositions.push([ch, x, 54, :center, Color.new(16, 24, 32), Color.new(168, 184, 184)])
-      x += 24
+      textPositions.push([ch, x, 27, :center, Color.new(16, 24, 32), Color.new(168, 184, 184)])
+      x += 12
     end
     pbDrawTextPositions(bgoverlay, textPositions)
   end
@@ -545,8 +545,8 @@ class PokemonEntryScene2
     newtab = @bitmaps[((@mode + 1) % @@Characters.length) + @@Characters.length]
     @sprites["cursor"].visible = true
     @sprites["toptab"].bitmap = newtab
-    @sprites["toptab"].x = 22 - 504
-    @sprites["toptab"].y = 162
+    @sprites["toptab"].x = 11 - 252
+    @sprites["toptab"].y = 81
     pbSEPlay("GUI naming tab swap end")
     pbDoUpdateOverlay2
   end

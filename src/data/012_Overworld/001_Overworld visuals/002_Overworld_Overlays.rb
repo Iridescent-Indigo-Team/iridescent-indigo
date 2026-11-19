@@ -130,10 +130,10 @@ class LightEffect_Lamp < LightEffect
   def initialize(event, viewport = nil, map = nil)
     lamp = AnimatedBitmap.new("Graphics/Pictures/LE")
     @light = Sprite.new(viewport)
-    @light.bitmap = Bitmap.new(128, 64)
-    src_rect = Rect.new(0, 0, 64, 64)
+    @light.bitmap = Bitmap.new(64, 32)
+    src_rect = Rect.new(0, 0, 32, 32)
     @light.bitmap.blt(0, 0, lamp.bitmap, src_rect)
-    @light.bitmap.blt(20, 0, lamp.bitmap, src_rect)
+    @light.bitmap.blt(10, 0, lamp.bitmap, src_rect)
     @light.visible = true
     @light.z       = 1000
     lamp.dispose

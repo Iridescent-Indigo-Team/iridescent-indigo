@@ -333,12 +333,12 @@ class Game_Character
     z = screen_y_ground
     if @tile_id > 0
       begin
-        return z + (self.map.priorities[@tile_id] * 32)
+        return z + (self.map.priorities[@tile_id] * Game_Map::TILE_HEIGHT)
       rescue
         raise "Event's graphic is an out-of-range tile (event #{@id}, map #{self.map.map_id})"
       end
     end
-    # Add z if height exceeds 32
+    # Add z if height exceeds one tile
     return z + ((height > Game_Map::TILE_HEIGHT) ? Game_Map::TILE_HEIGHT - 1 : 0)
   end
 

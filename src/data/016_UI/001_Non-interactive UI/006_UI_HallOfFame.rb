@@ -215,10 +215,10 @@ class HallOfFame_Scene
     @sprites["trainer"].setBitmap(GameData::TrainerType.player_front_sprite_filename($player.trainer_type))
     if SINGLE_ROW_OF_POKEMON
       @sprites["trainer"].x = Graphics.width / 2
-      @sprites["trainer"].y = 208
+      @sprites["trainer"].y = 104
     else
-      @sprites["trainer"].x = Graphics.width - 96
-      @sprites["trainer"].y = 160
+      @sprites["trainer"].x = Graphics.width - 48
+      @sprites["trainer"].y = 80
     end
     @movements.push([Graphics.width / 2, @sprites["trainer"].x, @sprites["trainer"].y, @sprites["trainer"].y])
     @sprites["trainer"].z = 9
@@ -261,7 +261,7 @@ class HallOfFame_Scene
                       $player.pokedex.owned_count, $player.pokedex.seen_count) + "<br>"
     @sprites["messagebox"] = Window_AdvancedTextPokemon.new(lefttext)
     @sprites["messagebox"].viewport = @viewport
-    @sprites["messagebox"].width = 192 if @sprites["messagebox"].width < 192
+    @sprites["messagebox"].width = 96 if @sprites["messagebox"].width < 192
     @sprites["msgwindow"] = pbCreateMessageWindow(@viewport)
     pbMessageDisplay(@sprites["msgwindow"],
                      _INTL("League champion!\nCongratulations!") + "\\^")
@@ -286,16 +286,16 @@ class HallOfFame_Scene
       dexnumber = _ISPRINTF("No. {1:03d}", number)
     end
     textPositions = [
-      [dexnumber, 32, Graphics.height - 74, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
-      [pokename, Graphics.width - 192, Graphics.height - 74, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
+      [dexnumber, 16, Graphics.height - 37, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
+      [pokename, Graphics.width - 96, Graphics.height - 37, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
       [_INTL("Lv. {1}", pokemon.egg? ? "?" : pokemon.level),
-       64, Graphics.height - 42, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
+       32, Graphics.height - 21, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR],
       [_INTL("ID No. {1}", pokemon.egg? ? "?????" : idno),
-       Graphics.width - 192, Graphics.height - 42, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]
+       Graphics.width - 96, Graphics.height - 21, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]
     ]
     if hallNumber > -1
-      textPositions.push([_INTL("Hall of Fame No."), (Graphics.width / 2) - 104, 6, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR])
-      textPositions.push([hallNumber.to_s, (Graphics.width / 2) + 104, 6, :right, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR])
+      textPositions.push([_INTL("Hall of Fame No."), (Graphics.width / 2) - 52, 3, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR])
+      textPositions.push([hallNumber.to_s, (Graphics.width / 2) + 52, 3, :right, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR])
     end
     pbDrawTextPositions(overlay, textPositions)
   end
@@ -304,7 +304,7 @@ class HallOfFame_Scene
     overlay = @sprites["overlay"].bitmap
     overlay.clear
     pbDrawTextPositions(overlay, [[_INTL("Welcome to the Hall of Fame!"),
-                                   Graphics.width / 2, Graphics.height - 68, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
+                                   Graphics.width / 2, Graphics.height - 34, :center, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
   end
 
   def pbAnimationLoop

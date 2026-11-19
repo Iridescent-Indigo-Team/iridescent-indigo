@@ -20,15 +20,15 @@ class MiningGameCounter < BitmapSprite
   def update
     self.bitmap.clear
     value = @hits
-    startx = 416 - 48
+    startx = 208 - 24
     while value > 6
-      self.bitmap.blt(startx, 0, @image.bitmap, Rect.new(0, 0, 48, 52))
-      startx -= 48
+      self.bitmap.blt(startx, 0, @image.bitmap, Rect.new(0, 0, 24, 26))
+      startx -= 24
       value -= 6
     end
-    startx -= 48
+    startx -= 24
     if value > 0
-      self.bitmap.blt(startx, 0, @image.bitmap, Rect.new(0, value * 52, 96, 52))
+      self.bitmap.blt(startx, 0, @image.bitmap, Rect.new(0, value * 26, 48, 26))
     end
   end
 end
@@ -66,7 +66,7 @@ class MiningGameTile < BitmapSprite
   def update
     self.bitmap.clear
     if @layer > 0
-      self.bitmap.blt(0, 0, @image.bitmap, Rect.new(0, 32 * (@layer - 1), 32, 32))
+      self.bitmap.blt(0, 0, @image.bitmap, Rect.new(0, 16 * (@layer - 1), 16, 16))
     end
   end
 end
@@ -106,8 +106,8 @@ class MiningGameCursor < BitmapSprite
 
   def update
     self.bitmap.clear
-    x = 32 * (@position % MiningGameScene::BOARD_WIDTH)
-    y = 32 * (@position / MiningGameScene::BOARD_WIDTH)
+    x = 16 * (@position % MiningGameScene::BOARD_WIDTH)
+    y = 16 * (@position / MiningGameScene::BOARD_WIDTH)
     if @hit_timer_start
       hit_frame = ((System.uptime - @hit_timer_start) / HIT_FRAME_DURATION).to_i
       @hit_timer_start = nil if hit_frame >= TOOL_POSITIONS.length
@@ -122,21 +122,21 @@ class MiningGameCursor < BitmapSprite
           toolx += 6
         end
         self.bitmap.blt(toolx, tooly, @toolbitmap.bitmap,
-                        Rect.new(96 * TOOL_POSITIONS[hit_frame][0], 96 * @mode, 96, 96))
+                        Rect.new(48 * TOOL_POSITIONS[hit_frame][0], 48 * @mode, 48, 48))
         if hit_frame < 5 && hit_frame.even?
           if @hit == 2
-            self.bitmap.blt(x - 64, y, @hitsbitmap.bitmap, Rect.new(160 * 2, 0, 160, 160))
+            self.bitmap.blt(x - 32, y, @hitsbitmap.bitmap, Rect.new(80 * 2, 0, 80, 80))
           else
-            self.bitmap.blt(x - 64, y, @hitsbitmap.bitmap, Rect.new(160 * @mode, 0, 160, 160))
+            self.bitmap.blt(x - 32, y, @hitsbitmap.bitmap, Rect.new(80 * @mode, 0, 80, 80))
           end
         end
         if @hit == 1 && hit_frame < 3
-          self.bitmap.blt(x - 64, y, @hitsbitmap.bitmap, Rect.new(160 * hit_frame, 160, 160, 160))
+          self.bitmap.blt(x - 32, y, @hitsbitmap.bitmap, Rect.new(80 * hit_frame, 80, 80, 80))
         end
       end
     end
     if !@hit_timer_start
-      self.bitmap.blt(x, y + 64, @cursorbitmap.bitmap, Rect.new(32 * @mode, 0, 32, 32))
+      self.bitmap.blt(x, y + 32, @cursorbitmap.bitmap, Rect.new(16 * @mode, 0, 16, 16))
     end
   end
 end
@@ -145,8 +145,8 @@ end
 #
 #===============================================================================
 class MiningGameScene
-  BOARD_WIDTH  = 13
-  BOARD_HEIGHT = 10
+  BOARD_WIDTH  = 7
+  BOARD_HEIGHT = 5
   ITEMS = [   # Item, probability, graphic x, graphic y, width, height, pattern
     [:DOMEFOSSIL, 20, 0, 3, 5, 4, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0]],
     [:HELIXFOSSIL, 5, 5, 3, 4, 4, [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]],
@@ -247,17 +247,17 @@ class MiningGameScene
     BOARD_HEIGHT.times do |i|
       BOARD_WIDTH.times do |j|
         @sprites["tile#{j + (i * BOARD_WIDTH)}"] = MiningGameTile.new(@viewport)
-        @sprites["tile#{j + (i * BOARD_WIDTH)}"].x = 32 * j
-        @sprites["tile#{j + (i * BOARD_WIDTH)}"].y = 64 + (32 * i)
+        @sprites["tile#{j + (i * BOARD_WIDTH)}"].x = 16 * j
+        @sprites["tile#{j + (i * BOARD_WIDTH)}"].y = 32 + (16 * i)
         @sprites["tile#{j + (i * BOARD_WIDTH)}"].z = 20
       end
     end
     @sprites["crack"] = MiningGameCounter.new(0, 4, @viewport)
     @sprites["cursor"] = MiningGameCursor.new(58, 0, @viewport)   # central position, pick
     @sprites["cursor"].z = 50
-    @sprites["tool"] = IconSprite.new(434, 254, @viewport)
+    @sprites["tool"] = IconSprite.new(217, 127, @viewport)
     @sprites["tool"].setBitmap("Graphics/UI/Mining/toolicons")
-    @sprites["tool"].src_rect.set(0, 0, 68, 100)
+    @sprites["tool"].src_rect.set(0, 0, 34, 50)
     @sprites["tool"].z = 100
     update
     pbFadeInAndShow(@sprites)
@@ -303,7 +303,7 @@ class MiningGameScene
       oy = ITEMS[i[0]][3]
       rectx = ITEMS[i[0]][4]
       recty = ITEMS[i[0]][5]
-      layer.blt(32 * i[1], 64 + (32 * i[2]), @itembitmap.bitmap, Rect.new(32 * ox, 32 * oy, 32 * rectx, 32 * recty))
+      layer.blt(16 * i[1], 32 + (16 * i[2]), @itembitmap.bitmap, Rect.new(16 * ox, 16 * oy, 16 * rectx, 16 * recty))
     end
   end
 
@@ -329,7 +329,7 @@ class MiningGameScene
       oy = IRON[i[0]][1]
       rectx = IRON[i[0]][2]
       recty = IRON[i[0]][3]
-      layer.blt(32 * i[1], 64 + (32 * i[2]), @ironbitmap.bitmap, Rect.new(32 * ox, 32 * oy, 32 * rectx, 32 * recty))
+      layer.blt(16 * i[1], 32 + (16 * i[2]), @ironbitmap.bitmap, Rect.new(16 * ox, 16 * oy, 16 * rectx, 16 * recty))
     end
   end
 
@@ -506,10 +506,10 @@ class MiningGameScene
       loop do
         revealed.each do |index|
           burieditem = @items[index]
-          revealeditems.bitmap.blt(32 * burieditem[1], 64 + (32 * burieditem[2]),
+          revealeditems.bitmap.blt(16 * burieditem[1], 32 + (16 * burieditem[2]),
                                    @itembitmap.bitmap,
-                                   Rect.new(32 * ITEMS[burieditem[0]][2], 32 * ITEMS[burieditem[0]][3],
-                                            32 * ITEMS[burieditem[0]][4], 32 * ITEMS[burieditem[0]][5]))
+                                   Rect.new(16 * ITEMS[burieditem[0]][2], 16 * ITEMS[burieditem[0]][3],
+                                            16 * ITEMS[burieditem[0]][4], 16 * ITEMS[burieditem[0]][5]))
         end
         flash_alpha = lerp(alpha_start, alpha_end, flash_duration / 2, timer_start, System.uptime)
         revealeditems.color.alpha = flash_alpha
@@ -587,8 +587,8 @@ class MiningGameScene
         pbSEPlay("Mining tool change")
         newmode = (@sprites["cursor"].mode + 1) % 2
         @sprites["cursor"].mode = newmode
-        @sprites["tool"].src_rect.set(newmode * 68, 0, 68, 100)
-        @sprites["tool"].y = 254 - (144 * newmode)
+        @sprites["tool"].src_rect.set(newmode * 34, 0, 34, 50)
+        @sprites["tool"].y = 127 - (72 * newmode)
       elsif Input.trigger?(Input::USE)   # Hit
         pbHit
       elsif Input.trigger?(Input::BACK)   # Quit

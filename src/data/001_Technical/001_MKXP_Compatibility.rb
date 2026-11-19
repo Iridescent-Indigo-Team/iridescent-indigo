@@ -27,16 +27,28 @@ class Bitmap
   end
 end
 
+# True when running on Android (the mkxp-z Android app).
+def pbIsAndroid?
+  return System.platform[/Android/i] ? true : false
+end
+
+# Sets the window size.
+# factor: 0 = 1x, 1 = 2x, 2 = 3x, 3 = 4x (of Settings::SCREEN_WIDTH/HEIGHT),
+#         4 or negative = fullscreen.
+# Only whole-number scales are used so every game pixel stays the same size.
+# When the player resizes the window by hand, mkxp-z keeps the picture pixel
+# perfect itself (integer scaling with black borders, see src/mkxp.json).
+# On Android the game always fills the screen.
 def pbSetResizeFactor(factor)
   if !$ResizeInitialized
     Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
     $ResizeInitialized = true
   end
-  if factor < 0 || factor == 4
+  if pbIsAndroid? || factor < 0 || factor >= 4
     Graphics.fullscreen = true if !Graphics.fullscreen
   else
     Graphics.fullscreen = false if Graphics.fullscreen
-    Graphics.scale = (factor + 1) * 0.5
+    Graphics.scale = factor.to_i + 1
     Graphics.center
   end
 end

@@ -16,7 +16,7 @@ class Battle::Scene::PokemonDataBox < Sprite
   # a target. Set to nil to prevent bobbing.
   BOBBING_DURATION = 0.6
   # Height in pixels of a status icon
-  STATUS_ICON_HEIGHT = 16
+  STATUS_ICON_HEIGHT = 8
   # Text colors
   NAME_BASE_COLOR         = Color.new(72, 72, 72)
   NAME_SHADOW_COLOR       = Color.new(184, 184, 184)
@@ -82,7 +82,7 @@ class Battle::Scene::PokemonDataBox < Sprite
     @hpBarBitmap   = AnimatedBitmap.new("Graphics/UI/Battle/overlay_hp")
     @expBarBitmap  = AnimatedBitmap.new("Graphics/UI/Battle/overlay_exp")
     # Create sprite to draw HP numbers on
-    @hpNumbers = BitmapSprite.new(124, 16, viewport)
+    @hpNumbers = BitmapSprite.new(62, 8, viewport)
 #    pbSetSmallFont(@hpNumbers.bitmap)
     @sprites["hpNumbers"] = @hpNumbers
     # Create sprite wrapper that displays HP bar
@@ -114,16 +114,16 @@ class Battle::Scene::PokemonDataBox < Sprite
 
   def x=(value)
     super
-    @hpBar.x     = value + @spriteBaseX + 102
-    @expBar.x    = value + @spriteBaseX + 6
-    @hpNumbers.x = value + @spriteBaseX + 80
+    @hpBar.x     = value + @spriteBaseX + 51
+    @expBar.x    = value + @spriteBaseX + 3
+    @hpNumbers.x = value + @spriteBaseX + 40
   end
 
   def y=(value)
     super
-    @hpBar.y     = value + 40
-    @expBar.y    = value + 74
-    @hpNumbers.y = value + 52
+    @hpBar.y     = value + 20
+    @expBar.y    = value + 37
+    @hpNumbers.y = value + 26
   end
 
   def z=(value)
@@ -223,14 +223,14 @@ class Battle::Scene::PokemonDataBox < Sprite
     nameWidth = self.bitmap.text_size(@battler.name).width
     nameOffset = 0
     nameOffset = nameWidth - 116 if nameWidth > 116
-    pbDrawTextPositions(self.bitmap, [[@battler.name, @spriteBaseX + 8 - nameOffset, 12, :left,
+    pbDrawTextPositions(self.bitmap, [[@battler.name, @spriteBaseX + 4 - nameOffset, 6, :left,
                                        NAME_BASE_COLOR, NAME_SHADOW_COLOR]]
     )
   end
 
   def draw_level
     # "Lv" graphic
-    pbDrawImagePositions(self.bitmap, [[_INTL("Graphics/UI/Battle/overlay_lv"), @spriteBaseX + 140, 16]])
+    pbDrawImagePositions(self.bitmap, [[_INTL("Graphics/UI/Battle/overlay_lv"), @spriteBaseX + 70, 8]])
     # Level number
     pbDrawNumber(@battler.level, self.bitmap, @spriteBaseX + 162, 16)
   end
@@ -241,7 +241,7 @@ class Battle::Scene::PokemonDataBox < Sprite
     gender_text  = (gender == 0) ? _INTL("♂") : _INTL("♀")
     base_color   = (gender == 0) ? MALE_BASE_COLOR : FEMALE_BASE_COLOR
     shadow_color = (gender == 0) ? MALE_SHADOW_COLOR : FEMALE_SHADOW_COLOR
-    pbDrawTextPositions(self.bitmap, [[gender_text, @spriteBaseX + 126, 12, :left, base_color, shadow_color]])
+    pbDrawTextPositions(self.bitmap, [[gender_text, @spriteBaseX + 63, 6, :left, base_color, shadow_color]])
   end
 
   def draw_status
@@ -252,20 +252,20 @@ class Battle::Scene::PokemonDataBox < Sprite
       s = GameData::Status.get(@battler.status).icon_position
     end
     return if s < 0
-    pbDrawImagePositions(self.bitmap, [[_INTL("Graphics/UI/Battle/icon_statuses"), @spriteBaseX + 24, 36,
+    pbDrawImagePositions(self.bitmap, [[_INTL("Graphics/UI/Battle/icon_statuses"), @spriteBaseX + 12, 18,
                                         0, s * STATUS_ICON_HEIGHT, -1, STATUS_ICON_HEIGHT]])
   end
 
   def draw_shiny_icon
     return if !@battler.shiny?
-    shiny_x = (@battler.opposes?(0)) ? 206 : -6   # Foe's/player's
-    pbDrawImagePositions(self.bitmap, [["Graphics/UI/shiny", @spriteBaseX + shiny_x, 36]])
+    shiny_x = (@battler.opposes?(0)) ? 103 : -3   # Foe's/player's
+    pbDrawImagePositions(self.bitmap, [["Graphics/UI/shiny", @spriteBaseX + shiny_x, 18]])
   end
 
   def draw_special_form_icon
     # Mega Evolution/Primal Reversion icon
     if @battler.mega?
-      pbDrawImagePositions(self.bitmap, [["Graphics/UI/Battle/icon_mega", @spriteBaseX + 8, 34]])
+      pbDrawImagePositions(self.bitmap, [["Graphics/UI/Battle/icon_mega", @spriteBaseX + 4, 17]])
     elsif @battler.primal?
       filename = nil
       if @battler.isSpecies?(:GROUDON)
@@ -274,13 +274,13 @@ class Battle::Scene::PokemonDataBox < Sprite
         filename = "Graphics/UI/Battle/icon_primal_Kyogre"
       end
       primalX = (@battler.opposes?) ? 208 : -28   # Foe's/player's
-      pbDrawImagePositions(self.bitmap, [[filename, @spriteBaseX + primalX, 4]]) if filename
+      pbDrawImagePositions(self.bitmap, [[filename, @spriteBaseX + primalX, 2]]) if filename
     end
   end
 
   def draw_owned_icon
     return if !@battler.owned? || !@battler.opposes?(0)   # Draw for foe Pokémon only
-    pbDrawImagePositions(self.bitmap, [["Graphics/UI/Battle/icon_own", @spriteBaseX + 8, 36]])
+    pbDrawImagePositions(self.bitmap, [["Graphics/UI/Battle/icon_own", @spriteBaseX + 4, 18]])
   end
 
   def refresh
@@ -394,8 +394,8 @@ class Battle::Scene::PokemonDataBox < Sprite
       bob_delta = System.uptime % BOBBING_DURATION   # 0-BOBBING_DURATION
       bob_frame = (4 * bob_delta / BOBBING_DURATION).floor
       case bob_frame
-      when 1 then self.y = @spriteY - 2
-      when 3 then self.y = @spriteY + 2
+      when 1 then self.y = @spriteY - 1
+      when 3 then self.y = @spriteY + 1
       end
     end
   end
@@ -437,7 +437,7 @@ class Battle::Scene::AbilitySplashBar < Sprite
     pbSetSystemFont(self.bitmap)
     # Position the bar
     self.x       = (side == 0) ? -Graphics.width / 2 : Graphics.width
-    self.y       = (side == 0) ? 180 : 80
+    self.y       = (side == 0) ? 90 : 40
     self.z       = 120
     self.visible = false
   end
@@ -488,13 +488,13 @@ class Battle::Scene::AbilitySplashBar < Sprite
     self.bitmap.clear
     return if !@battler
     textPos = []
-    textX = (@side == 0) ? 10 : self.bitmap.width - 8
+    textX = (@side == 0) ? 5 : self.bitmap.width - 4
     align = (@side == 0) ? :left : :right
     # Draw Pokémon's name
-    textPos.push([_INTL("{1}'s", @battler.name), textX, 8, align,
+    textPos.push([_INTL("{1}'s", @battler.name), textX, 4, align,
                   TEXT_BASE_COLOR, TEXT_SHADOW_COLOR, :outline])
     # Draw Pokémon's ability
-    textPos.push([@battler.abilityName, textX, 38, align,
+    textPos.push([@battler.abilityName, textX, 19, align,
                   TEXT_BASE_COLOR, TEXT_SHADOW_COLOR, :outline])
     pbDrawTextPositions(self.bitmap, textPos)
   end

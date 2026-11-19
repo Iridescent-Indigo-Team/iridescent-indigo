@@ -199,7 +199,7 @@ class RPG::Animation
       otherframe = otherAnim.frames[i]
       cellStart = thisframe.cell_max
       thisframe.cell_max += otherframe.cell_max
-      thisframe.cell_data.resize(thisframe.cell_max, 8)
+      thisframe.cell_data.resize(thisframe.cell_max, 4)
       otherframe.cell_max.times do |j|
         thisframe.cell_data[cellStart + j, 0] = otherframe.cell_data[j, 0]
         thisframe.cell_data[cellStart + j, 1] = otherframe.cell_data[j, 1] + x
@@ -613,8 +613,8 @@ def pbSpriteSetAnimFrame(sprite, frame, user = nil, target = nil, inEditor = fal
                         animwidth, animwidth)
   else
     sprite.src_rect.set(0, 0,
-                        (sprite.bitmap) ? sprite.bitmap.width : 128,
-                        (sprite.bitmap) ? sprite.bitmap.height : 128)
+                        (sprite.bitmap) ? sprite.bitmap.width : 64,
+                        (sprite.bitmap) ? sprite.bitmap.height : 64)
   end
   sprite.zoom_x = frame[AnimFrame::ZOOMX] / 100.0
   sprite.zoom_y = frame[AnimFrame::ZOOMY] / 100.0
@@ -835,8 +835,8 @@ class PBAnimationPlayerX
           sprite.mirror = !sprite.mirror
         end
       end
-      sprite.x += 64 if @inEditor
-      sprite.y += 64 if @inEditor
+      sprite.x += 32 if @inEditor
+      sprite.y += 32 if @inEditor
     end
     # Play timings
     @animation.playTiming(@frame, @bgGraphic, @bgColor, @foGraphic, @foColor, @oldbg, @oldfo, @user)

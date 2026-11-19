@@ -17,16 +17,16 @@ class Window_DexesList < Window_CommandPokemon
   def drawItem(index, count, rect)
     super(index, count, rect)
     if index >= 0 && index < @commands2.length
-      pbDrawShadowText(self.contents, rect.x + 254, rect.y + (self.contents.text_offset_y || 0),
-                       64, rect.height, @commands2[index][0].to_s, self.baseColor, self.shadowColor, 1)
-      pbDrawShadowText(self.contents, rect.x + 350, rect.y + (self.contents.text_offset_y || 0),
-                       64, rect.height, @commands2[index][1].to_s, self.baseColor, self.shadowColor, 1)
+      pbDrawShadowText(self.contents, rect.x + 127, rect.y + (self.contents.text_offset_y || 0),
+                       32, rect.height, @commands2[index][0].to_s, self.baseColor, self.shadowColor, 1)
+      pbDrawShadowText(self.contents, rect.x + 175, rect.y + (self.contents.text_offset_y || 0),
+                       32, rect.height, @commands2[index][1].to_s, self.baseColor, self.shadowColor, 1)
       allseen = (@commands2[index][0] >= @commands2[index][2])
       allown  = (@commands2[index][1] >= @commands2[index][2])
       pbDrawImagePositions(
         self.contents,
-        [["Graphics/UI/Pokedex/icon_menuseenown", rect.x + 236, rect.y + 6, (allseen) ? 24 : 0, 0, 24, 24],
-         ["Graphics/UI/Pokedex/icon_menuseenown", rect.x + 332, rect.y + 6, (allown) ? 24 : 0, 24, 24, 24]]
+        [["Graphics/UI/Pokedex/icon_menuseenown", rect.x + 118, rect.y + 3, (allseen) ? 12 : 0, 0, 12, 12],
+         ["Graphics/UI/Pokedex/icon_menuseenown", rect.x + 166, rect.y + 3, (allown) ? 12 : 0, 12, 12, 12]]
       )
     end
   end
@@ -52,13 +52,13 @@ class PokemonPokedexMenu_Scene
     @sprites["background"].setBitmap(_INTL("Graphics/UI/Pokedex/bg_menu"))
     text_tag = shadowc3tag(SEEN_OBTAINED_TEXT_BASE, SEEN_OBTAINED_TEXT_SHADOW)
     @sprites["headings"] = Window_AdvancedTextPokemon.newWithSize(
-      text_tag + _INTL("SEEN") + "<r>" + _INTL("OBTAINED") + "</c3>", 286, 136, 208, 64, @viewport
+      text_tag + _INTL("SEEN") + "<r>" + _INTL("OBTAINED") + "</c3>", 143, 68, 104, 32, @viewport
     )
     @sprites["headings"].windowskin = nil
-    @sprites["commands"] = Window_DexesList.new(commands, commands2, Graphics.width - 84)
-    @sprites["commands"].x      = 40
-    @sprites["commands"].y      = 192
-    @sprites["commands"].height = 192
+    @sprites["commands"] = Window_DexesList.new(commands, commands2, Graphics.width - 42)
+    @sprites["commands"].x      = 20
+    @sprites["commands"].y      = 96
+    @sprites["commands"].height = 96
     @sprites["commands"].viewport = @viewport
     pbFadeInAndShow(@sprites) { pbUpdate }
   end

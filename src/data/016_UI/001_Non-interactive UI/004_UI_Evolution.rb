@@ -35,7 +35,7 @@ class PokemonEvolutionScene
     rsprite1.setOffset(PictureOrigin::CENTER)
     rsprite1.setPokemonBitmap(@pokemon, false)
     rsprite1.x = Graphics.width / 2
-    rsprite1.y = (Graphics.height - 64) / 2
+    rsprite1.y = (Graphics.height - 32) / 2
     rsprite2 = PokemonSprite.new(@viewport)
     rsprite2.setOffset(PictureOrigin::CENTER)
     rsprite2.setPokemonBitmapSpecies(@pokemon, @newspecies, false)

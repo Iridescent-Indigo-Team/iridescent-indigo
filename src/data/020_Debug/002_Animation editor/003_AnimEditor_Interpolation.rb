@@ -9,15 +9,15 @@ module BattleAnimationEditor
 
     def initialize(red, viewport = nil)
       super(viewport)
-      self.bitmap = Bitmap.new(6, 6)
-      self.bitmap.fill_rect(0, 0, 6, 1, Color.black)
-      self.bitmap.fill_rect(0, 0, 1, 6, Color.black)
-      self.bitmap.fill_rect(0, 5, 6, 1, Color.black)
-      self.bitmap.fill_rect(5, 0, 1, 6, Color.black)
+      self.bitmap = Bitmap.new(3, 3)
+      self.bitmap.fill_rect(0, 0, 3, 1, Color.black)
+      self.bitmap.fill_rect(0, 0, 1, 3, Color.black)
+      self.bitmap.fill_rect(0, 3, 3, 1, Color.black)
+      self.bitmap.fill_rect(3, 0, 1, 3, Color.black)
       color = (red) ? Color.new(255, 0, 0) : Color.black
-      self.bitmap.fill_rect(2, 2, 2, 2, color)
-      self.x = -6
-      self.y = -6
+      self.bitmap.fill_rect(1, 1, 1, 1, color)
+      self.x = -3
+      self.y = -3
       self.visible = false
       @dragging = false
     end
@@ -29,8 +29,8 @@ module BattleAnimationEditor
       end
       mouse = Mouse.getMousePos(true)
       return if !mouse
-      self.x = [[mouse[0], 0].max, 512].min
-      self.y = [[mouse[1], 0].max, 384].min
+      self.x = [[mouse[0], 0].max, 256].min
+      self.y = [[mouse[1], 0].max, 192].min
     end
 
     def hittest?
@@ -57,8 +57,8 @@ module BattleAnimationEditor
   class PointSprite < Sprite
     def initialize(x, y, viewport = nil)
       super(viewport)
-      self.bitmap = Bitmap.new(2, 2)
-      self.bitmap.fill_rect(0, 0, 2, 2, Color.black)
+      self.bitmap = Bitmap.new(1, 1)
+      self.bitmap.fill_rect(0, 0, 1, 1, Color.black)
       self.x = x
       self.y = y
     end
@@ -227,7 +227,7 @@ module BattleAnimationEditor
   end
 
   def pbDefinePath(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 320)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 160)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.addSlider(_INTL("Number of frames:"), 2, 500, 20)
     sliderwin2.opacity = 200
@@ -280,7 +280,7 @@ module BattleAnimationEditor
         sliderwin2.visible = false
         # This window displays the mouse's current position
         window = Window_UnformattedTextPokemon.newWithSize(
-          "", 0, 320 - 64, 128, 64, canvas.viewport
+          "", 0, 160 - 32, 64, 32, canvas.viewport
         )
         loop do
           Graphics.update
@@ -359,7 +359,7 @@ module BattleAnimationEditor
         end
         points.clear
         window = Window_UnformattedTextPokemon.newWithSize(
-          "", 0, 320 - 64, 128, 64, canvas.viewport
+          "", 0, 160 - 32, 64, 32, canvas.viewport
         )
         sliderwin2.visible = false
         loop do

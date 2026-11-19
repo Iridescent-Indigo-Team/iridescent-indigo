@@ -39,9 +39,9 @@ class MapBottomSprite < Sprite
   def refresh
     bitmap.clear
     textpos = [
-      [@mapname,                     18,   4, :left, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR],
-      [@maplocation,                 18, 360, :left, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR],
-      [@mapdetails, Graphics.width - 16, 360, :right, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR]
+      [@mapname,                     9,   2, :left, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR],
+      [@maplocation,                 9, 180, :left, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR],
+      [@mapdetails, Graphics.width - 8, 180, :right, TEXT_MAIN_COLOR, TEXT_SHADOW_COLOR]
     ]
     pbDrawTextPositions(bitmap, textpos)
   end
@@ -55,8 +55,8 @@ class PokemonRegionMap_Scene
   TOP           = 0
   RIGHT         = 29
   BOTTOM        = 19
-  SQUARE_WIDTH  = 16
-  SQUARE_HEIGHT = 16
+  SQUARE_WIDTH  = 8
+  SQUARE_HEIGHT = 8
 
   def initialize(region = - 1, wallmap = true)
     @region  = region
@@ -111,7 +111,7 @@ class PokemonRegionMap_Scene
     Settings::REGION_MAP_EXTRAS.each do |graphic|
       next if graphic[0] != mapindex || !location_shown?(graphic)
       if !@sprites["map2"]
-        @sprites["map2"] = BitmapSprite.new(480, 320, @viewport)
+        @sprites["map2"] = BitmapSprite.new(240, 160, @viewport)
         @sprites["map2"].x = @sprites["map"].x
         @sprites["map2"].y = @sprites["map"].y
       end
@@ -149,7 +149,7 @@ class PokemonRegionMap_Scene
     @sprites["cursor"].x        = point_x_to_screen_x(@map_x)
     @sprites["cursor"].y        = point_y_to_screen_y(@map_y)
     @sprites["cursor"].play
-    @sprites["help"] = BitmapSprite.new(Graphics.width, 32, @viewport)
+    @sprites["help"] = BitmapSprite.new(Graphics.width, 16, @viewport)
     pbSetSystemFont(@sprites["help"].bitmap)
     refresh_fly_screen
     @changed = false
@@ -236,7 +236,7 @@ class PokemonRegionMap_Scene
     text = (@mode == 0) ? _INTL("ACTION: Fly") : _INTL("ACTION: Cancel Fly")
     pbDrawTextPositions(
       @sprites["help"].bitmap,
-      [[text, Graphics.width - 16, 4, :right, Color.new(248, 248, 248), Color.black]]
+      [[text, Graphics.width - 8, 2, :right, Color.new(248, 248, 248), Color.black]]
     )
     @sprites.each do |key, sprite|
       next if !key.include?("point")

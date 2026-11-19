@@ -61,7 +61,7 @@ class Sprite_Reflection
       @sprite.x        = x + ((width / 2) * TilemapRenderer::ZOOM_X)
       @sprite.y        = y + ((height + (height / 2)) * TilemapRenderer::ZOOM_Y)
       @sprite.ox       = width / 2
-      @sprite.oy       = (height / 2) - 2   # Hard-coded 2 pixel shift up
+      @sprite.oy       = (height / 2) - 1   # Hard-coded 1 pixel shift up
       @sprite.oy       -= event.bob_height * 2
       @sprite.z        = -50   # Still water is -100, map is 0 and above
       @sprite.z        += 1 if event == $game_player

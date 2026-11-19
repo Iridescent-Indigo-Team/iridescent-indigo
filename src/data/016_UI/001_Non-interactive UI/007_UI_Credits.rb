@@ -131,11 +131,11 @@ class Scene_Credits
     @background_sprite = IconSprite.new(0, 0)
     @background_sprite.setBitmap("Graphics/Titles/" + BACKGROUNDS_LIST[0])
     @credit_sprites = []
-    @total_height = credit_lines.size * 32
+    @total_height = credit_lines.size * 16
     lines_per_bitmap = @bitmap_height / 32
     num_bitmaps = (credit_lines.size.to_f / lines_per_bitmap).ceil
     num_bitmaps.times do |i|
-      credit_bitmap = Bitmap.new(Graphics.width, @bitmap_height + 16)
+      credit_bitmap = Bitmap.new(Graphics.width, @bitmap_height + 8)
       pbSetSystemFont(credit_bitmap)
       lines_per_bitmap.times do |j|
         line = credit_lines[(i * lines_per_bitmap) + j]
@@ -148,23 +148,23 @@ class Scene_Credits
         line.length.times do |k|
           text = line[k].strip
           if line.length > 1
-            xpos = (k == 0) ? 0 : 20 + (Graphics.width / 2)
+            xpos = (k == 0) ? 0 : 10 + (Graphics.width / 2)
             align = (k == 0) ? 2 : 0   # Right align : left align
             linewidth = (Graphics.width / 2) - 20
           end
           credit_bitmap.font.color = TEXT_SHADOW_COLOR
-          credit_bitmap.draw_text(xpos, (j * 32) + 12, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos, (j * 16) + 6, linewidth, 16, text, align)
           credit_bitmap.font.color = TEXT_OUTLINE_COLOR
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 2, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos,     (j * 32) + 2, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 2, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 4, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 4, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos + 2, (j * 32) + 6, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos,     (j * 32) + 6, linewidth, 32, text, align)
-          credit_bitmap.draw_text(xpos - 2, (j * 32) + 6, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos + 1, (j * 16) + 1, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos,     (j * 16) + 1, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos - 1, (j * 16) + 1, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos + 1, (j * 16) + 2, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos - 1, (j * 16) + 2, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos + 1, (j * 16) + 3, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos,     (j * 16) + 3, linewidth, 16, text, align)
+          credit_bitmap.draw_text(xpos - 1, (j * 16) + 3, linewidth, 16, text, align)
           credit_bitmap.font.color = TEXT_BASE_COLOR
-          credit_bitmap.draw_text(xpos, (j * 32) + 4, linewidth, 32, text, align)
+          credit_bitmap.draw_text(xpos, (j * 16) + 2, linewidth, 16, text, align)
         end
       end
       credit_sprite = Sprite.new(text_viewport)

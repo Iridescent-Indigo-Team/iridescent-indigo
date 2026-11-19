@@ -9,7 +9,7 @@ class Window_PhoneList < Window_CommandPokemon
       selarrow = AnimatedBitmap.new("Graphics/UI/Phone/cursor")
       pbCopyBitmap(self.contents, selarrow.bitmap, rect.x, rect.y + 2)
     end
-    return Rect.new(rect.x + 28, rect.y + 8, rect.width - 16, rect.height)
+    return Rect.new(rect.x + 14, rect.y + 4, rect.width - 8, rect.height)
   end
 
   def drawItem(index, count, rect)
@@ -42,11 +42,11 @@ class PokemonPhone_Scene
     # Rematch readiness icons
     if Phone.rematches_enabled
       @sprites["list"].page_item_max.times do |i|
-        @sprites["rematch_#{i}"] = IconSprite.new(468, 62 + (i * 32), @viewport)
+        @sprites["rematch_#{i}"] = IconSprite.new(234, 31 + (i * 16), @viewport)
       end
     end
     # Phone signal icon
-    @sprites["signal"] = IconSprite.new(Graphics.width - 32, 0, @viewport)
+    @sprites["signal"] = IconSprite.new(Graphics.width - 16, 0, @viewport)
     if Phone::Call.can_make?
       @sprites["signal"].setBitmap("Graphics/UI/Phone/icon_signal")
     else
@@ -54,19 +54,19 @@ class PokemonPhone_Scene
     end
     # Title text
     @sprites["header"] = Window_UnformattedTextPokemon.newWithSize(
-      _INTL("Phone"), 2, -18, 128, 64, @viewport
+      _INTL("Phone"), 1, -9, 64, 32, @viewport
     )
     @sprites["header"].baseColor   = Color.new(248, 248, 248)
     @sprites["header"].shadowColor = Color.black
     @sprites["header"].windowskin = nil
     # Info text about all contacts
-    @sprites["info"] = Window_AdvancedTextPokemon.newWithSize("", -8, 224, 180, 160, @viewport)
+    @sprites["info"] = Window_AdvancedTextPokemon.newWithSize("", -4, 112, 90, 80, @viewport)
     @sprites["info"].windowskin = nil
     # Portrait of contact
-    @sprites["icon"] = IconSprite.new(70, 102, @viewport)
+    @sprites["icon"] = IconSprite.new(35, 51, @viewport)
     # Contact's location text
     @sprites["bottom"] = Window_AdvancedTextPokemon.newWithSize(
-      "", 162, Graphics.height - 64, Graphics.width - 158, 64, @viewport
+      "", 81, Graphics.height - 32, Graphics.width - 79, 32, @viewport
     )
     @sprites["bottom"].windowskin = nil
     # Start scene
@@ -124,8 +124,8 @@ class PokemonPhone_Scene
       @sprites["icon"].setBitmap(filename)
       charwidth  = @sprites["icon"].bitmap.width
       charheight = @sprites["icon"].bitmap.height
-      @sprites["icon"].x        = 86 - (charwidth / 8)
-      @sprites["icon"].y        = 134 - (charheight / 8)
+      @sprites["icon"].x        = 43 - (charwidth / 8)
+      @sprites["icon"].y        = 67 - (charheight / 8)
       @sprites["icon"].src_rect = Rect.new(0, 0, charwidth / 4, charheight / 4)
       # Redraw contact's location text
       map_name = (contact.map_id > 0) ? pbGetMapNameFromId(contact.map_id) : ""
