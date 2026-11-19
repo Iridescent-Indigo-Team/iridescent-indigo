@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWCLAW",
+  "real_name": "Shadow Claw",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user slashes with a sharp claw made from shadows. Critical hits land more easily."
+}

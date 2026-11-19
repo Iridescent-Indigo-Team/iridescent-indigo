@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SEEDBOMB",
+  "real_name": "Seed Bomb",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "The user slams a barrage of hard-shelled seeds down on the target from above."
+}

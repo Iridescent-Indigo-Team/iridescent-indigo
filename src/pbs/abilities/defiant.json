@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DEFIANT",
+  "real_name": "Defiant",
+  "real_description": "When its stats are lowered its Attack increases."
+}

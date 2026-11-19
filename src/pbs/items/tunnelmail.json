@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TUNNELMAIL",
+  "real_name": "Tunnel Mail",
+  "real_name_plural": "Tunnel Mail",
+  "real_portion_name": "piece of Tunnel Mail",
+  "real_portion_name_plural": "pieces of Tunnel Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a dimly lit coal mine. Let a Pokémon hold it for delivery."
+}

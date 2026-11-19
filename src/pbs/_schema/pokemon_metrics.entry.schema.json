@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pokemon_metrics.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "species": {"type": "string", "description": "A Species id from pokemon.txt."},
+    "form": {"type": "integer", "minimum": 1},
+    "back_sprite": {
+      "type": "object",
+      "properties": {
+        "x": {"type": "integer"},
+        "y": {"type": "integer"}
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false,
+      "description": "PBS key: BackSprite"
+    },
+    "front_sprite": {
+      "type": "object",
+      "properties": {
+        "x": {"type": "integer"},
+        "y": {"type": "integer"}
+      },
+      "required": ["x", "y"],
+      "additionalProperties": false,
+      "description": "PBS key: FrontSprite"
+    },
+    "front_sprite_altitude": {"type": "integer", "description": "PBS key: FrontSpriteAltitude"},
+    "shadow_x": {"type": "integer", "description": "PBS key: ShadowX"},
+    "shadow_size": {"type": "integer", "minimum": 0, "description": "PBS key: ShadowSize"}
+  },
+  "required": ["species"],
+  "additionalProperties": false
+}

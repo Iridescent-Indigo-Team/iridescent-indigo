@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ABILITYPATCH",
+  "real_name": "Ability Patch",
+  "real_name_plural": "Ability Patches",
+  "pocket": 2,
+  "price": 10000,
+  "bp_price": 200,
+  "field_use": "OnPokemon",
+  "real_description": "A patch that allows a Pokémon with a regular Ability to have a rare Ability."
+}

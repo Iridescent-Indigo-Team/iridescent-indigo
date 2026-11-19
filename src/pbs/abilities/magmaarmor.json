@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MAGMAARMOR",
+  "real_name": "Magma Armor",
+  "real_description": "Prevents the Pokémon from becoming frozen.",
+  "flags": ["FasterEggHatching"]
+}

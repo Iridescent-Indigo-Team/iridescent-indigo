@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DRAGONSMAW",
+  "real_name": "Dragon's Maw",
+  "real_description": "Powers up Dragon-type moves."
+}

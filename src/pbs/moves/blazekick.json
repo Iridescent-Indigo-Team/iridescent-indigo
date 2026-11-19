@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BLAZEKICK",
+  "real_name": "Blaze Kick",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "effect_chance": 10,
+  "real_description": "The user launches a kick with a high critical-hit ratio. It may also leave the target with a burn."
+}

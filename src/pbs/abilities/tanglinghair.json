@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TANGLINGHAIR",
+  "real_name": "Tangling Hair",
+  "real_description": "Contact with it lowers the attacker's Speed."
+}

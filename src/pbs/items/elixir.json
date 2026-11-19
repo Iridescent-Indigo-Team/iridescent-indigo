@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ELIXIR",
+  "real_name": "Elixir",
+  "real_name_plural": "Elixirs",
+  "pocket": 2,
+  "price": 3000,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "It restores the PP of all the moves learned by the targeted Pokémon by 10 points each."
+}

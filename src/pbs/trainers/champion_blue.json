@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "CHAMPION",
+  "name": "Blue",
+  "real_lose_text": "A good battle indeed!",
+  "pokemon": [
+    {"species": "VENUSAUR", "level": 63, "item": "SITRUSBERRY"},
+    {"species": "CHARIZARD", "level": 63, "item": "SITRUSBERRY"},
+    {"species": "BLASTOISE", "level": 63, "item": "SITRUSBERRY"}
+  ]
+}

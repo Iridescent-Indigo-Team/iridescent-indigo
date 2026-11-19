@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKTHROW",
+  "real_name": "Rock Throw",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user picks up and throws a small rock at the target to attack."
+}

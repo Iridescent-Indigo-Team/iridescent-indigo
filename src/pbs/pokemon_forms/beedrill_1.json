@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BEEDRILL",
+  "form": 1,
+  "real_form_name": "Mega Beedrill",
+  "mega_stone": "BEEDRILLITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 150,
+    "defense": 40,
+    "speed": 145,
+    "special_attack": 15,
+    "special_defense": 80
+  },
+  "base_exp": 284,
+  "abilities": ["ADAPTABILITY"],
+  "hidden_abilities": ["ADAPTABILITY"],
+  "height": 1.4,
+  "weight": 40.5,
+  "real_pokedex_entry": "Its legs have become poison stingers. It stabs its prey repeatedly with the stingers on its limbs, dealing the final blow with the stinger on its rear.",
+  "generation": 6
+}

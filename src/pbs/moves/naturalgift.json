@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NATURALGIFT",
+  "real_name": "Natural Gift",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TypeAndPowerDependOnUserBerry",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user draws power to attack by using its held Berry. The Berry determines its type and power."
+}

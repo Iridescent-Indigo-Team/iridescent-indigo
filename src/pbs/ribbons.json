@@ -1,0 +1,491 @@
+{
+  "$schema": "_schema/ribbons.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "id": "HOENNCOOL",
+          "real_name": "Cool Ribbon",
+          "icon_position": 0,
+          "real_description": "Hoenn Cool Contest Normal Rank winner!"
+        },
+        {
+          "id": "HOENNCOOLSUPER",
+          "real_name": "Cool Ribbon Super",
+          "icon_position": 1,
+          "real_description": "Hoenn Cool Contest Super Rank winner!"
+        },
+        {
+          "id": "HOENNCOOLHYPER",
+          "real_name": "Cool Ribbon Hyper",
+          "icon_position": 2,
+          "real_description": "Hoenn Cool Contest Hyper Rank winner!"
+        },
+        {
+          "id": "HOENNCOOLMASTER",
+          "real_name": "Cool Ribbon Master",
+          "icon_position": 3,
+          "real_description": "Hoenn Cool Contest Master Rank winner!"
+        },
+        {
+          "id": "HOENNBEAUTY",
+          "real_name": "Beauty Ribbon",
+          "icon_position": 4,
+          "real_description": "Hoenn Beauty Contest Normal Rank winner!"
+        },
+        {
+          "id": "HOENNBEAUTYSUPER",
+          "real_name": "Beauty Ribbon Super",
+          "icon_position": 5,
+          "real_description": "Hoenn Beauty Contest Super Rank winner!"
+        },
+        {
+          "id": "HOENNBEAUTYHYPER",
+          "real_name": "Beauty Ribbon Hyper",
+          "icon_position": 6,
+          "real_description": "Hoenn Beauty Contest Hyper Rank winner!"
+        },
+        {
+          "id": "HOENNBEAUTYMASTER",
+          "real_name": "Beauty Ribbon Master",
+          "icon_position": 7,
+          "real_description": "Hoenn Beauty Contest Master Rank winner!"
+        },
+        {
+          "id": "HOENNCUTE",
+          "real_name": "Cute Ribbon",
+          "icon_position": 8,
+          "real_description": "Hoenn Cute Contest Normal Rank winner!"
+        },
+        {
+          "id": "HOENNCUTESUPER",
+          "real_name": "Cute Ribbon Super",
+          "icon_position": 9,
+          "real_description": "Hoenn Cute Contest Super Rank winner!"
+        },
+        {
+          "id": "HOENNCUTEHYPER",
+          "real_name": "Cute Ribbon Hyper",
+          "icon_position": 10,
+          "real_description": "Hoenn Cute Contest Hyper Rank winner!"
+        },
+        {
+          "id": "HOENNCUTEMASTER",
+          "real_name": "Cute Ribbon Master",
+          "icon_position": 11,
+          "real_description": "Hoenn Cute Contest Master Rank winner!"
+        },
+        {
+          "id": "HOENNSMART",
+          "real_name": "Smart Ribbon",
+          "icon_position": 12,
+          "real_description": "Hoenn Smart Contest Normal Rank winner!"
+        },
+        {
+          "id": "HOENNSMARTSUPER",
+          "real_name": "Smart Ribbon Super",
+          "icon_position": 13,
+          "real_description": "Hoenn Smart Contest Super Rank winner!"
+        },
+        {
+          "id": "HOENNSMARTHYPER",
+          "real_name": "Smart Ribbon Hyper",
+          "icon_position": 14,
+          "real_description": "Hoenn Smart Contest Hyper Rank winner!"
+        },
+        {
+          "id": "HOENNSMARTMASTER",
+          "real_name": "Smart Ribbon Master",
+          "icon_position": 15,
+          "real_description": "Hoenn Smart Contest Master Rank winner!"
+        },
+        {
+          "id": "HOENNTOUGH",
+          "real_name": "Tough Ribbon",
+          "icon_position": 16,
+          "real_description": "Hoenn Tough Contest Normal Rank winner!"
+        },
+        {
+          "id": "HOENNTOUGHSUPER",
+          "real_name": "Tough Ribbon Super",
+          "icon_position": 17,
+          "real_description": "Hoenn Tough Contest Super Rank winner!"
+        },
+        {
+          "id": "HOENNTOUGHHYPER",
+          "real_name": "Tough Ribbon Hyper",
+          "icon_position": 18,
+          "real_description": "Hoenn Tough Contest Hyper Rank winner!"
+        },
+        {
+          "id": "HOENNTOUGHMASTER",
+          "real_name": "Tough Ribbon Master",
+          "icon_position": 19,
+          "real_description": "Hoenn Tough Contest Master Rank winner!"
+        },
+        {
+          "id": "SINNOHCOOL",
+          "real_name": "Cool Ribbon",
+          "icon_position": 20,
+          "real_description": "Super Contest Cool Category Normal Rank winner!"
+        },
+        {
+          "id": "SINNOHCOOLSUPER",
+          "real_name": "Cool Ribbon Great",
+          "icon_position": 21,
+          "real_description": "Super Contest Cool Category Great Rank winner!"
+        },
+        {
+          "id": "SINNOHCOOLHYPER",
+          "real_name": "Cool Ribbon Ultra",
+          "icon_position": 22,
+          "real_description": "Super Contest Cool Category Ultra Rank winner!"
+        },
+        {
+          "id": "SINNOHCOOLMASTER",
+          "real_name": "Cool Ribbon Master",
+          "icon_position": 23,
+          "real_description": "Super Contest Cool Category Master Rank winner!"
+        },
+        {
+          "id": "SINNOHBEAUTY",
+          "real_name": "Beauty Ribbon",
+          "icon_position": 24,
+          "real_description": "Super Contest Beauty Category Normal Rank winner!"
+        },
+        {
+          "id": "SINNOHBEAUTYSUPER",
+          "real_name": "Beauty Ribbon Great",
+          "icon_position": 25,
+          "real_description": "Super Contest Beauty Category Great Rank winner!"
+        },
+        {
+          "id": "SINNOHBEAUTYHYPER",
+          "real_name": "Beauty Ribbon Ultra",
+          "icon_position": 26,
+          "real_description": "Super Contest Beauty Category Ultra Rank winner!"
+        },
+        {
+          "id": "SINNOHBEAUTYMASTER",
+          "real_name": "Beauty Ribbon Master",
+          "icon_position": 27,
+          "real_description": "Super Contest Beauty Category Master Rank winner!"
+        },
+        {
+          "id": "SINNOHCUTE",
+          "real_name": "Cute Ribbon",
+          "icon_position": 28,
+          "real_description": "Super Contest Cute Category Normal Rank winner!"
+        },
+        {
+          "id": "SINNOHCUTESUPER",
+          "real_name": "Cute Ribbon Great",
+          "icon_position": 29,
+          "real_description": "Super Contest Cute Category Great Rank winner!"
+        },
+        {
+          "id": "SINNOHCUTEHYPER",
+          "real_name": "Cute Ribbon Ultra",
+          "icon_position": 30,
+          "real_description": "Super Contest Cute Category Ultra Rank winner!"
+        },
+        {
+          "id": "SINNOHCUTEMASTER",
+          "real_name": "Cute Ribbon Master",
+          "icon_position": 31,
+          "real_description": "Super Contest Cute Category Master Rank winner!"
+        },
+        {
+          "id": "SINNOHSMART",
+          "real_name": "Smart Ribbon",
+          "icon_position": 32,
+          "real_description": "Super Contest Smart Category Normal Rank winner!"
+        },
+        {
+          "id": "SINNOHSMARTSUPER",
+          "real_name": "Smart Ribbon Great",
+          "icon_position": 33,
+          "real_description": "Super Contest Smart Category Great Rank winner!"
+        },
+        {
+          "id": "SINNOHSMARTHYPER",
+          "real_name": "Smart Ribbon Ultra",
+          "icon_position": 34,
+          "real_description": "Super Contest Smart Category Ultra Rank winner!"
+        },
+        {
+          "id": "SINNOHSMARTMASTER",
+          "real_name": "Smart Ribbon Master",
+          "icon_position": 35,
+          "real_description": "Super Contest Smart Category Master Rank winner!"
+        },
+        {
+          "id": "SINNOHTOUGH",
+          "real_name": "Tough Ribbon",
+          "icon_position": 36,
+          "real_description": "Super Contest Tough Category Normal Rank winner!"
+        },
+        {
+          "id": "SINNOHTOUGHSUPER",
+          "real_name": "Tough Ribbon Great",
+          "icon_position": 37,
+          "real_description": "Super Contest Tough Category Great Rank winner!"
+        },
+        {
+          "id": "SINNOHTOUGHHYPER",
+          "real_name": "Tough Ribbon Ultra",
+          "icon_position": 38,
+          "real_description": "Super Contest Tough Category Ultra Rank winner!"
+        },
+        {
+          "id": "SINNOHTOUGHMASTER",
+          "real_name": "Tough Ribbon Master",
+          "icon_position": 39,
+          "real_description": "Super Contest Tough Category Master Rank winner!"
+        },
+        {
+          "id": "WINNING",
+          "real_name": "Winning Ribbon",
+          "icon_position": 40,
+          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge."
+        },
+        {
+          "id": "VICTORY",
+          "real_name": "Victory Ribbon",
+          "icon_position": 41,
+          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge."
+        },
+        {
+          "id": "ABILITY",
+          "real_name": "Ability Ribbon",
+          "icon_position": 42,
+          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+        },
+        {
+          "id": "GREATABILITY",
+          "real_name": "Great Ability Ribbon",
+          "icon_position": 43,
+          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+        },
+        {
+          "id": "DOUBLEABILITY",
+          "real_name": "Double Ability Ribbon",
+          "icon_position": 44,
+          "real_description": "A Ribbon awarded for completing the Battle Tower Double challenge."
+        },
+        {
+          "id": "MULTIABILITY",
+          "real_name": "Multi Ability Ribbon",
+          "icon_position": 45,
+          "real_description": "A Ribbon awarded for completing the Battle Tower Multi challenge."
+        },
+        {
+          "id": "PAIRABILITY",
+          "real_name": "Pair Ability Ribbon",
+          "icon_position": 46,
+          "real_description": "A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+        },
+        {
+          "id": "WORLDABILITY",
+          "real_name": "World Ability Ribbon",
+          "icon_position": 47,
+          "real_description": "A Ribbon awarded for completing the Wi-Fi Battle Tower challenge."
+        },
+        {
+          "id": "CHAMPION",
+          "real_name": "Champion Ribbon",
+          "icon_position": 48,
+          "real_description": "Ribbon for clearing the Pokémon League and entering the Hall of Fame in another region."
+        },
+        {
+          "id": "SINNOHCHAMP",
+          "real_name": "Sinnoh Champ Ribbon",
+          "icon_position": 49,
+          "real_description": "Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame."
+        },
+        {
+          "id": "RECORD",
+          "real_name": "Record Ribbon",
+          "icon_position": 50,
+          "real_description": "A Ribbon awarded for setting an incredible record."
+        },
+        {
+          "id": "EVENT",
+          "real_name": "Event Ribbon",
+          "icon_position": 51,
+          "real_description": "Pokémon Event Participation Ribbon."
+        },
+        {
+          "id": "LEGEND",
+          "real_name": "Legend Ribbon",
+          "icon_position": 52,
+          "real_description": "A Ribbon awarded for setting a legendary record."
+        },
+        {
+          "id": "GORGEOUS",
+          "real_name": "Gorgeous Ribbon",
+          "icon_position": 53,
+          "real_description": "An extraordinarily gorgeous and extravagant Ribbon."
+        },
+        {
+          "id": "ROYAL",
+          "real_name": "Royal Ribbon",
+          "icon_position": 54,
+          "real_description": "An incredibly regal Ribbon with an air of nobility."
+        },
+        {
+          "id": "GORGEOUSROYAL",
+          "real_name": "Gorgeous Royal Ribbon",
+          "icon_position": 55,
+          "real_description": "A gorgeous and regal Ribbon that is the peak of fabulous."
+        },
+        {
+          "id": "ALERT",
+          "real_name": "Alert Ribbon",
+          "icon_position": 56,
+          "real_description": "A Ribbon for recalling an invigorating event that created life energy."
+        },
+        {
+          "id": "SHOCK",
+          "real_name": "Shock Ribbon",
+          "icon_position": 57,
+          "real_description": "A Ribbon for recalling a thrilling event that made life more exciting."
+        },
+        {
+          "id": "DOWNCAST",
+          "real_name": "Downcast Ribbon",
+          "icon_position": 58,
+          "real_description": "A Ribbon for recalling feelings of sadness that added spice to life."
+        },
+        {
+          "id": "CARELESS",
+          "real_name": "Careless Ribbon",
+          "icon_position": 59,
+          "real_description": "A Ribbon for recalling a careless error that helped steer life decisions."
+        },
+        {
+          "id": "RELAX",
+          "real_name": "Relax Ribbon",
+          "icon_position": 60,
+          "real_description": "A Ribbon for recalling a refreshing event that added sparkle to life."
+        },
+        {
+          "id": "SNOOZE",
+          "real_name": "Snooze Ribbon",
+          "icon_position": 61,
+          "real_description": "A Ribbon for recalling a deep slumber that made life soothing."
+        },
+        {
+          "id": "SMILE",
+          "real_name": "Smile Ribbon",
+          "icon_position": 62,
+          "real_description": "A Ribbon for recalling that smiles enrich the quality of life."
+        },
+        {
+          "id": "FOOTPRINT",
+          "real_name": "Footprint Ribbon",
+          "icon_position": 63,
+          "real_description": "A Ribbon awarded to a Pokémon deemed to have a top-quality footprint."
+        },
+        {
+          "id": "ARTIST",
+          "real_name": "Artist Ribbon",
+          "icon_position": 64,
+          "real_description": "Ribbon awarded for being chosen as a super sketch model in Hoenn."
+        },
+        {
+          "id": "EFFORT",
+          "real_name": "Effort Ribbon",
+          "icon_position": 65,
+          "real_description": "Ribbon awarded for being an exceptionally hard worker."
+        },
+        {
+          "id": "BIRTHDAY",
+          "real_name": "Birthday Ribbon",
+          "icon_position": 66,
+          "real_description": "A Ribbon to celebrate a birthday."
+        },
+        {
+          "id": "SPECIAL",
+          "real_name": "Special Ribbon",
+          "icon_position": 67,
+          "real_description": "A special Ribbon for a special day."
+        },
+        {
+          "id": "CLASSIC",
+          "real_name": "Classic Ribbon",
+          "icon_position": 68,
+          "real_description": "A Ribbon that proclaims love for Pokémon."
+        },
+        {
+          "id": "PREMIER",
+          "real_name": "Premier Ribbon",
+          "icon_position": 69,
+          "real_description": "Special Holiday Ribbon."
+        },
+        {
+          "id": "SOUVENIR",
+          "real_name": "Souvenir Ribbon",
+          "icon_position": 70,
+          "real_description": "A Ribbon to cherish a special memory."
+        },
+        {
+          "id": "WISHING",
+          "real_name": "Wishing Ribbon",
+          "icon_position": 71,
+          "real_description": "A Ribbon said to make your wish come true."
+        },
+        {
+          "id": "NATIONAL",
+          "real_name": "National Ribbon",
+          "icon_position": 72,
+          "real_description": "A Ribbon awarded for overcoming all difficult challenges."
+        },
+        {
+          "id": "COUNTRY",
+          "real_name": "Country Ribbon",
+          "icon_position": 73,
+          "real_description": "Pokémon League Champion Ribbon."
+        },
+        {
+          "id": "BATTLECHAMPION",
+          "real_name": "Battle Champion Ribbon",
+          "icon_position": 74,
+          "real_description": "Battle Competition Champion Ribbon."
+        },
+        {
+          "id": "REGIONALCHAMPION",
+          "real_name": "Regional Champion Ribbon",
+          "icon_position": 75,
+          "real_description": "Pokémon World Championships Regional Champion Ribbon."
+        },
+        {
+          "id": "EARTH",
+          "real_name": "Earth Ribbon",
+          "icon_position": 76,
+          "real_description": "A Ribbon awarded for winning 100 matches in a row."
+        },
+        {
+          "id": "WORLD",
+          "real_name": "World Ribbon",
+          "icon_position": 77,
+          "real_description": "Pokémon League Champion Ribbon."
+        },
+        {
+          "id": "NATIONALCHAMPION",
+          "real_name": "National Champion Ribbon",
+          "icon_position": 78,
+          "real_description": "Pokémon World Championships National Champion Ribbon."
+        },
+        {
+          "id": "WORLDCHAMPION",
+          "real_name": "World Champion Ribbon",
+          "icon_position": 79,
+          "real_description": "Pokémon World Championships World Champion Ribbon."
+        }
+      ]
+    }
+  ]
+}

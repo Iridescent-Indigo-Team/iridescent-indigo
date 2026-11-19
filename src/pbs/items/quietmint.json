@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "QUIETMINT",
+  "real_name": "Quiet Mint",
+  "real_name_plural": "Quiet Mints",
+  "real_portion_name": "sprig of Quiet Mint",
+  "real_portion_name_plural": "sprigs of Quiet Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Sp. Atk will grow more easily, but its Speed will grow more slowly."
+}

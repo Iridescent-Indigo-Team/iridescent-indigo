@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DANCER",
+  "real_name": "Dancer",
+  "real_description": "Repeats another Pokémon's dance move immediately."
+}

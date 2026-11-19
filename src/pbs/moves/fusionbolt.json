@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FUSIONBOLT",
+  "real_name": "Fusion Bolt",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "DoublePowerAfterFusionFlare",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user throws down a giant thunderbolt. It does more damage if influenced by an enormous flame."
+}

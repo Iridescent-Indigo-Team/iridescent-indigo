@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POWERHERB",
+  "real_name": "Power Herb",
+  "real_name_plural": "Power Herbs",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_10"],
+  "real_description": "A single-use item to be held by a Pokémon. It allows the immediate use of a move that charges up first."
+}

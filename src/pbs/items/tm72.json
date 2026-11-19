@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM72",
+  "real_name": "TM72",
+  "real_name_plural": "TM72s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_60"],
+  "move": "AVALANCHE",
+  "real_description": "The power of this attack move is doubled if the user has been hurt by the target in the same turn."
+}

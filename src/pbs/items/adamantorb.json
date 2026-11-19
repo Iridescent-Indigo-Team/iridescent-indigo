@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ADAMANTORB",
+  "real_name": "Adamant Orb",
+  "real_name_plural": "Adamant Orbs",
+  "pocket": 1,
+  "price": 10000,
+  "sell_price": 0,
+  "flags": ["Fling_60"],
+  "real_description": "A brightly gleaming orb to be held by Dialga. It boosts the power of Dragon- and Steel-type moves."
+}

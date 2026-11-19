@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 66,
+  "real_name": "Safari Zone",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 12, "y": 12},
+  "battle_background": "field"
+}

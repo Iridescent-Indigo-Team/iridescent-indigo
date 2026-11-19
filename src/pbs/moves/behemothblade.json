@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BEHEMOTHBLADE",
+  "real_name": "Behemoth Blade",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user becomes a gigantic sword and cuts the target."
+}

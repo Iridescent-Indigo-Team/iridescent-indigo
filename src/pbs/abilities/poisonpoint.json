@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "POISONPOINT",
+  "real_name": "Poison Point",
+  "real_description": "Contact with the Pokémon may poison the attacker."
+}

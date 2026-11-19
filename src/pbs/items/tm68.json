@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM68",
+  "real_name": "TM68",
+  "real_name_plural": "TM68s",
+  "pocket": 4,
+  "price": 7500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_150"],
+  "move": "GIGAIMPACT",
+  "real_description": "The user charges at the target using every bit of its power. The user can't move on the next turn."
+}

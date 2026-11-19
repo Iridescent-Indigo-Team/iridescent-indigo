@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "YACHEBERRY",
+  "real_name": "Yache Berry",
+  "real_name_plural": "Yache Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_ICE_80"],
+  "real_description": "Weakens a supereffective Ice-type attack against the holding Pokémon."
+}

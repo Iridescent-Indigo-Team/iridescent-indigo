@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "METRONOME",
+  "real_name": "Metronome",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UseRandomMove",
+  "real_description": "The user waggles a finger and stimulates its brain into randomly using nearly any move."
+}

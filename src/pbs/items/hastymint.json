@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HASTYMINT",
+  "real_name": "Hasty Mint",
+  "real_name_plural": "Hasty Mints",
+  "real_portion_name": "sprig of Hasty Mint",
+  "real_portion_name_plural": "sprigs of Hasty Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Defense will grow more slowly."
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "POKEMONTRAINER_May",
+  "name": "May",
+  "real_lose_text": "...",
+  "pokemon": [
+    {"species": "COMBUSKEN", "level": 19}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRICKROOM",
+  "real_name": "Trick Room",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "BothSides",
+  "priority": -7,
+  "function_code": "StartSlowerBattlersActFirst",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user creates a bizarre area in which slower Pokémon get to move first for five turns."
+}

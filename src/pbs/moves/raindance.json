@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAINDANCE",
+  "real_name": "Rain Dance",
+  "type": "WATER",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "BothSides",
+  "function_code": "StartRainWeather",
+  "real_description": "The user summons a heavy rain that falls for five turns, powering up Water-type moves."
+}

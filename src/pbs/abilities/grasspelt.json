@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GRASSPELT",
+  "real_name": "Grass Pelt",
+  "real_description": "Boosts the Defense stat on Grassy Terrain."
+}

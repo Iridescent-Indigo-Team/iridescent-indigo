@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PRECIPICEBLADES",
+  "real_name": "Precipice Blades",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks its foes by manifesting the power of the land in fearsome blades of stone."
+}

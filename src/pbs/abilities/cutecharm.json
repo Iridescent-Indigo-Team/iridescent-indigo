@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CUTECHARM",
+  "real_name": "Cute Charm",
+  "real_description": "Contact with the Pokémon may cause infatuation."
+}

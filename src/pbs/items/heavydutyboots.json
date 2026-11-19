@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEAVYDUTYBOOTS",
+  "real_name": "Heavy-Duty Boots",
+  "real_name_plural": "Heavy-Duty Boots",
+  "real_portion_name": "pair of Heavy-Duty Boots",
+  "real_portion_name_plural": "pairs of Heavy-Duty Boots",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 25,
+  "flags": ["Fling_80"],
+  "real_description": "These boots prevent the effects of traps set on the battlefield."
+}

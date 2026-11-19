@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FISSURE",
+  "real_name": "Fissure",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 30,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "OHKOHitsUndergroundTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user opens up a fissure in the ground and drops the foe in. The target instantly faints if it hits."
+}

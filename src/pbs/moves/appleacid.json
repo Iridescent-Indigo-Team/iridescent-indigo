@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "APPLEACID",
+  "real_name": "Apple Acid",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpDef1",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "Attacks with an acidic liquid created from tart apples. This also lowers the target's Sp. Def."
+}

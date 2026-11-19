@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PRISMSCALE",
+  "real_name": "Prism Scale",
+  "real_name_plural": "Prism Scales",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 10,
+  "flags": ["Fling_30"],
+  "real_description": "A mysterious scale that evolves certain Pokémon. It shines in rainbow colors."
+}

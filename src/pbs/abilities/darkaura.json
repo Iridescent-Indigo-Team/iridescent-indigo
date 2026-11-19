@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DARKAURA",
+  "real_name": "Dark Aura",
+  "real_description": "Powers up each Pokémon's Dark-type moves."
+}

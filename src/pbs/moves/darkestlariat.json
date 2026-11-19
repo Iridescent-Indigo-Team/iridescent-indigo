@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DARKESTLARIAT",
+  "real_name": "Darkest Lariat",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "IgnoreTargetDefSpDefEvaStatStages",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user swings both arms and hits the target. Ignores the target's stat changes."
+}

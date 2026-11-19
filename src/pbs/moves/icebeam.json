@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICEBEAM",
+  "real_name": "Ice Beam",
+  "type": "ICE",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FreezeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The target is struck with an icy-cold beam of energy. It may also freeze the target solid."
+}

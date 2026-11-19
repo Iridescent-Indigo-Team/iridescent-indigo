@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "LATIOS",
+  "form": 1,
+  "real_form_name": "Mega Latios",
+  "mega_stone": "LATIOSITE",
+  "base_stats": {
+    "hp": 80,
+    "attack": 130,
+    "defense": 100,
+    "speed": 110,
+    "special_attack": 160,
+    "special_defense": 120
+  },
+  "base_exp": 350,
+  "height": 2.3,
+  "weight": 70.0,
+  "color": "Purple",
+  "generation": 6
+}

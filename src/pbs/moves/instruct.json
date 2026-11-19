@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "INSTRUCT",
+  "real_name": "Instruct",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TargetUsesItsLastUsedMoveAgain",
+  "flags": ["CanProtect"],
+  "real_description": "The user instructs the target to use the target's last move again."
+}

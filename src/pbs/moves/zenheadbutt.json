@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ZENHEADBUTT",
+  "real_name": "Zen Headbutt",
+  "type": "PSYCHIC",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user focuses its willpower to its head and attacks the foe. It may also make the target flinch."
+}

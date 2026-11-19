@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POKEMONBOXLINK",
+  "real_name": "Pokémon Box Link",
+  "real_name_plural": "Pokémon Box Links",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A device that allows you to access the Pokémon storage system. There are some places where it won't work."
+}

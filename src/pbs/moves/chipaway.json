@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHIPAWAY",
+  "real_name": "Chip Away",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "IgnoreTargetDefSpDefEvaStatStages",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Seeking an opening, the user strikes continually. The foe's stat changes don't affect the damage."
+}

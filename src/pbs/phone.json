@@ -1,0 +1,75 @@
+{
+  "$schema": "_schema/phone.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "id": "Default",
+          "intro": [
+            "Hello. This is \\TN.",
+            "Good day, \\PN! Hi. This is \\TN.",
+            "How are you doing? \\PN, howdy! This is \\TN. Isn't it nice out?",
+            "\\PN, good day! It's me, \\TN. Got a minute?",
+            "Hello, \\PN. This is \\TN. How are things?"
+          ],
+          "intro_morning": ["Good morning, \\PN. This is \\TN. Did I wake you?"],
+          "intro_afternoon": ["Good afternoon, \\PN! It's \\TN here."],
+          "intro_evening": ["\\PN, good evening! Hi. This is \\TN."],
+          "body": [
+            "How are your Pokémon doing?\\mMy \\TP's really energetic. It's a handful!\\mOh yeah, I managed to beat a tough \\TE.\\mI need to make my party stronger.",
+            "My \\TP's looking really awesome. I wish I could show you.\\mHey, listen! I almost caught a \\TE the other day.\\mOh, it was sooooooo close, too!"
+          ],
+          "body1": [
+            "How are your Pokémon doing?\\mMy \\TP's really energetic. It's a handful!",
+            "How are your Pokémon doing?\\mI always keep my \\TP in top shape by going to Pokémon Centers.",
+            "My \\TP's looking really awesome. I wish I could show you.",
+            "I dressed my \\TP and it looks even cuter than before."
+          ],
+          "body2": [
+            "Oh yeah, I managed to beat a tough \\TE.\\mI need to make my party stronger.",
+            "You have to hear this! I battled \\TE the other day.\\mIt was easy! I had a type advantage.",
+            "Hey, listen! I almost caught \\TE the other day.\\mOh, it was sooooooo close, too!",
+            "Guess what happened the other day. I missed catching \\TE again.\\mMaybe I'm not very good at this."
+          ],
+          "battle_request": [
+            "Want to battle? It's not going to be a repeat of the last time we met.\\mI'll be waiting for you around \\TM.",
+            "Do you want to battle? I'm going to win this time!\\mI'll be waiting for you around \\TM.\\mLook for me, OK? My \\TP will be expecting you."
+          ]
+        },
+        {
+          "id": "CAMPER,Jeff",
+          "intro": ["Hello. This is \\TN...\\mHow's it going, \\PN?"],
+          "body1": ["My \\TP is looking more and more like me. It's getting cuter!"],
+          "body2": [
+            "And you know? Now we can KO \\TE easily.\\mI should challenge the Cedolan Gym.",
+            "And you know? We just failed to beat \\TE by a tiny margin.\\mI'm guessing my Pokémon's levels aren't high enough yet..."
+          ],
+          "battle_request": [
+            "You must be a lot better now, huh?\\mHow about showing me your technique in a real battle with me?\\mI'll be waiting on \\TM."
+          ],
+          "battle_remind": ["Where are you? Let's have our battle soon!\\mI'll be waiting on \\TM."],
+          "end": ["See you later!"]
+        },
+        {
+          "id": "PICNICKER,Susie",
+          "intro": ["This is \\TN!", "Hi, this is \\TN!"],
+          "intro_morning": ["This is \\TN! Good morning, \\PN!", "Hi, this is \\TN! Good morning, \\PN!"],
+          "intro_afternoon": ["This is \\TN! Good afternoon, \\PN!", "Hi, this is \\TN! Good afternoon, \\PN!"],
+          "intro_evening": ["This is \\TN! Good evening, \\PN!", "Hi, this is \\TN! Good evening, \\PN!"],
+          "body1": ["My \\TP and I are getting more in sync with each other."],
+          "body2": [
+            "We battled a wild \\TE and managed to beat it in a close match.\\mWe're getting into the groove!",
+            "But, you know what? I still haven't caught \\TE.\\mIt's getting beyond frustrating..."
+          ],
+          "battle_request": [
+            "Would you be my practice partner again sometime?\\mI'll be waiting on \\TM...\\mCould you take it a little easier on me next time?"
+          ],
+          "battle_remind": ["How soon can I expect to see you?\\mDon't forget, \\TM!"],
+          "end": ["Bye! Let's chat again!"]
+        }
+      ]
+    }
+  ]
+}

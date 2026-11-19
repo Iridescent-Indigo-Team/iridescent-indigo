@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MIRRORARMOR",
+  "real_name": "Mirror Armor",
+  "real_description": "Bounces back stat-lowering effects."
+}

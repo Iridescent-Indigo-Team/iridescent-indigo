@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COVET",
+  "real_name": "Covet",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "UserTakesTargetItem",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user endearingly approaches the target, then steals the target's held item."
+}

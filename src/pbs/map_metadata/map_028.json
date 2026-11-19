@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 28,
+  "real_name": "Natural Park",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 16, "y": 8},
+  "battle_background": "field",
+  "flags": ["MossRock", "BugContest"]
+}

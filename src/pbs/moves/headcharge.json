@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEADCHARGE",
+  "real_name": "Head Charge",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RecoilQuarterOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user charges its head into the foe, using its powerful guard hair. The user also takes damage."
+}

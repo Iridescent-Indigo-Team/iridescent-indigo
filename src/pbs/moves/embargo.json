@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EMBARGO",
+  "real_name": "Embargo",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "StartTargetCannotUseItem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "It prevents the target from using its held item. Its Trainer is also prevented from using items on it."
+}

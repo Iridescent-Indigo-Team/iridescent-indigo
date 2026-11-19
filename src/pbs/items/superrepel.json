@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SUPERREPEL",
+  "real_name": "Super Repel",
+  "real_name_plural": "Super Repels",
+  "pocket": 1,
+  "price": 700,
+  "field_use": "Direct",
+  "flags": ["Repel", "Fling_30"],
+  "real_description": "An item that prevents weak wild Pokémon from appearing for 200 steps after its use."
+}

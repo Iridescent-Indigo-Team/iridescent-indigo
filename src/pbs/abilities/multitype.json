@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MULTITYPE",
+  "real_name": "Multitype",
+  "real_description": "Changes type to match the held Plate."
+}

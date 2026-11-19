@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SOULHEART",
+  "real_name": "Soul-Heart",
+  "real_description": "Boosts Sp. Atk each time a Pokémon faints."
+}

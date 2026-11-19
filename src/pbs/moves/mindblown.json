@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MINDBLOWN",
+  "real_name": "Mind Blown",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearOthers",
+  "function_code": "UserLosesHalfOfTotalHPExplosive",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks everything by causing its own head to explode. This also damages the user."
+}

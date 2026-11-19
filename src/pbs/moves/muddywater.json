@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MUDDYWATER",
+  "real_name": "Muddy Water",
+  "type": "WATER",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetAccuracy1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user attacks by shooting muddy water at the opposing team. It may also lower the target's accuracy."
+}

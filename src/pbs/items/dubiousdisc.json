@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DUBIOUSDISC",
+  "real_name": "Dubious Disc",
+  "real_name_plural": "Dubious Discs",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_50"],
+  "real_description": "A transparent device overflowing with dubious data.  Its producer is unknown."
+}

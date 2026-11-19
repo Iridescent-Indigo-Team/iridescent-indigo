@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FROSTBREATH",
+  "real_name": "Frost Breath",
+  "type": "ICE",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "AlwaysCriticalHit",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user blows a cold breath on the target. This attack always results in a critical hit."
+}

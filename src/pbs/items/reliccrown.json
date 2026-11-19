@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICCROWN",
+  "real_name": "Relic Crown",
+  "real_name_plural": "Relic Crowns",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A crown made in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

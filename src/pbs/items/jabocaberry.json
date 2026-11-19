@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "JABOCABERRY",
+  "real_name": "Jaboca Berry",
+  "real_name_plural": "Jaboca Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_DRAGON_100"],
+  "real_description": "If held by a Pokémon and a physical attack lands, the attacker also takes damage."
+}

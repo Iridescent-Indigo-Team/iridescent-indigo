@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ICEHEAL",
+  "real_name": "Ice Heal",
+  "real_name_plural": "Ice Heals",
+  "pocket": 2,
+  "price": 200,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine. It defrosts a Pokémon that has been frozen solid."
+}

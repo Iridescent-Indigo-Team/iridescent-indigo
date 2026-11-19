@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BABIRIBERRY",
+  "real_name": "Babiri Berry",
+  "real_name_plural": "Babiri Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_STEEL_80"],
+  "real_description": "Weakens a supereffective Steel-type attack against the holding Pokémon."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHOREUP",
+  "real_name": "Shore Up",
+  "type": "GROUND",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserDependingOnSandstorm",
+  "real_description": "The user regains up to half of its max HP. It restores more HP in a sandstorm."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "METRONOME",
+  "real_name": "Metronome",
+  "real_name_plural": "Metronomes",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 25,
+  "flags": ["Fling_30"],
+  "real_description": "A Pokémon held item that boosts a move used consecutively. Its effect is reset if another move is used."
+}

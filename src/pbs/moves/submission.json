@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUBMISSION",
+  "real_name": "Submission",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 80,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "RecoilQuarterOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user grabs the target and recklessly dives for the ground. It also hurts the user slightly."
+}

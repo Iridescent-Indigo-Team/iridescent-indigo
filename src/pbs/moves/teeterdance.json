@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TEETERDANCE",
+  "real_name": "Teeter Dance",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearOthers",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Dance"],
+  "real_description": "The user performs a wobbly dance that confuses the Pokémon around it."
+}

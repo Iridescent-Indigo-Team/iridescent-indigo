@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STORMTHROW",
+  "real_name": "Storm Throw",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "AlwaysCriticalHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user strikes the target with a fierce blow. This attack always results in a critical hit."
+}

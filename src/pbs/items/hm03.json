@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM03",
+  "real_name": "HM03",
+  "real_name_plural": "HM03s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "SURF",
+  "real_description": "Attacks everything by swamping the surroundings with a giant wave. This can also be used to cross water."
+}

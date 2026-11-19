@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DESTINYBOND",
+  "real_name": "Destiny Bond",
+  "type": "GHOST",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "User",
+  "function_code": "AttackerFaintsIfUserFaints",
+  "real_description": "When this move is used, if the user faints, the foe that landed the knockout hit also faints."
+}

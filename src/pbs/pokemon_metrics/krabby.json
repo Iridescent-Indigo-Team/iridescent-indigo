@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "KRABBY",
+  "back_sprite": {"x": 4, "y": 0},
+  "front_sprite": {"x": 2, "y": 21},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

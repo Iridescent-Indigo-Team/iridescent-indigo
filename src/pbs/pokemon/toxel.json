@@ -1,0 +1,61 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "TOXEL",
+  "real_name": "Toxel",
+  "types": ["ELECTRIC", "POISON"],
+  "base_stats": {"hp": 40, "attack": 38, "defense": 35, "speed": 40, "special_attack": 54, "special_defense": 35},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Parabolic",
+  "base_exp": 48,
+  "evs": [
+    {"stat": "SPECIAL_ATTACK", "amount": 1}
+  ],
+  "catch_rate": 75,
+  "happiness": 50,
+  "abilities": ["RATTLED", "STATIC"],
+  "hidden_abilities": ["KLUTZ"],
+  "moves": [
+    {"level": 1, "move": "BELCH"},
+    {"level": 1, "move": "TEARFULLOOK"},
+    {"level": 1, "move": "NUZZLE"},
+    {"level": 1, "move": "GROWL"},
+    {"level": 1, "move": "FLAIL"},
+    {"level": 1, "move": "ACID"}
+  ],
+  "tutor_moves": [
+    "ATTRACT",
+    "CAPTIVATE",
+    "CONFIDE",
+    "DOUBLETEAM",
+    "ENCORE",
+    "ENDURE",
+    "FACADE",
+    "FRUSTRATION",
+    "HIDDENPOWER",
+    "MIMIC",
+    "NATURALGIFT",
+    "PROTECT",
+    "REST",
+    "RETURN",
+    "ROUND",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SNORE",
+    "SUBSTITUTE",
+    "SWAGGER",
+    "TOXIC"
+  ],
+  "egg_moves": ["ENDEAVOR", "METALSOUND", "POWERUPPUNCH"],
+  "egg_groups": ["Undiscovered"],
+  "hatch_steps": 6400,
+  "height": 0.4,
+  "weight": 11.0,
+  "color": "Purple",
+  "shape": "BipedalTail",
+  "real_category": "Baby",
+  "real_pokedex_entry": "It manipulates the chemical makeup of its poison to produce electricity. The voltage is weak, but it can cause a tingling paralysis.",
+  "generation": 8,
+  "evolutions": [
+    {"species": "TOXTRICITY", "method": "Level", "parameter": 30}
+  ]
+}

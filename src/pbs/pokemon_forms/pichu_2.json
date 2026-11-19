@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PICHU",
+  "form": 2,
+  "real_form_name": "Spiky-Eared",
+  "generation": 4,
+  "evolutions": [
+    {"species": "PIKACHU", "method": "None"}
+  ]
+}

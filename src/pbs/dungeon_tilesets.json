@@ -1,0 +1,48 @@
+{
+  "$schema": "_schema/dungeon_tilesets.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "id": 7,
+          "autotile": [
+            {"id": 1, "type": "floor_patch"}
+          ],
+          "tile": [
+            {"id": 40, "type": "void"},
+            {"id": 41, "type": "void_decoration"},
+            {"id": 48, "type": "void_decoration_large"},
+            {"id": 42, "type": "floor"},
+            {"id": 50, "type": "floor_decoration_large"},
+            {"id": 0, "type": "walls"}
+          ],
+          "double_walls": true,
+          "floor_patch_under_walls": true
+        },
+        {
+          "id": 23,
+          "autotile": [
+            {"id": 1, "type": "floor_decoration"}
+          ],
+          "tile": [
+            {"id": 40, "type": "void"},
+            {"id": 42, "type": "floor"},
+            {"id": 43, "type": "floor"},
+            {"id": 44, "type": "floor"},
+            {"id": 45, "type": "floor"},
+            {"id": 46, "type": "floor"},
+            {"id": 47, "type": "floor_patch"},
+            {"id": 8, "type": "walls"},
+            {"id": 25, "type": "wall_top"}
+          ],
+          "snap_to_large_grid": true,
+          "large_void_tiles": true,
+          "large_wall_tiles": true,
+          "thin_north_wall_offset": -8
+        }
+      ]
+    }
+  ]
+}

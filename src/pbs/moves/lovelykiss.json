@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LOVELYKISS",
+  "real_name": "Lovely Kiss",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 75,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "SleepTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "With a scary face, the user tries to force a kiss on the target. If it suceeds, the target falls asleep."
+}

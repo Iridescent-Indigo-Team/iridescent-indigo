@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SLUDGEWAVE",
+  "real_name": "Sludge Wave",
+  "type": "POISON",
+  "category": "Special",
+  "power": 95,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearOthers",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "It swamps the area around the user with a giant sludge wave. It may also poison those hit."
+}

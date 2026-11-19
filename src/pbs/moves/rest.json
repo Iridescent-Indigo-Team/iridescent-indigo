@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REST",
+  "real_name": "Rest",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserFullyAndFallAsleep",
+  "real_description": "The user goes to sleep for two turns. It fully restores the user's HP and heals any status problem."
+}

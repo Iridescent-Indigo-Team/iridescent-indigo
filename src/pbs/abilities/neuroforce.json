@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "NEUROFORCE",
+  "real_name": "Neuroforce",
+  "real_description": "Powers up moves that are super-effective."
+}

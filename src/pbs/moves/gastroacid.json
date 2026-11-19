@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GASTROACID",
+  "real_name": "Gastro Acid",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "NegateTargetAbility",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user hurls up its stomach acids on the foe. The fluid negates the effect of the target's Ability."
+}

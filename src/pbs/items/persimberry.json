@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PERSIMBERRY",
+  "real_name": "Persim Berry",
+  "real_name_plural": "Persim Berries",
+  "pocket": 5,
+  "price": 20,
+  "battle_use": "OnBattler",
+  "flags": ["Berry", "Fling_10", "NaturalGift_GROUND_80"],
+  "real_description": "It may be used or held by a Pokémon to recover from confusion."
+}

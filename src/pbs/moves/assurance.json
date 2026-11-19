@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ASSURANCE",
+  "real_name": "Assurance",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetLostHPThisTurn",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "If the target has already taken some damage in the same turn, this attack's power is doubled."
+}

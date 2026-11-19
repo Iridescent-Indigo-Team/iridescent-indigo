@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROUND",
+  "real_name": "Round",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "UsedAfterAllyRoundWithDoublePower",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user attacks with a song. Others can join in the Round and make the attack do greater damage."
+}

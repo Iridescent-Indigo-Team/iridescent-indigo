@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHERISHBALL",
+  "real_name": "Cherish Ball",
+  "real_name_plural": "Cherish Balls",
+  "pocket": 3,
+  "price": 0,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A quite rare Poké Ball that has been specially crafted to commemorate an occasion of some sort."
+}

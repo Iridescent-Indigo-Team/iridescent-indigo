@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SNAPTRAP",
+  "real_name": "Snap Trap",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 35,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BindTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user snares the target in a snap trap for four to five turns."
+}

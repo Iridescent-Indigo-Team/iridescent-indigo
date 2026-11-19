@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ASSIST",
+  "real_name": "Assist",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "UseRandomMoveFromUserParty",
+  "real_description": "The user hurriedly and randomly uses a move among those known by other Pokémon in the party."
+}

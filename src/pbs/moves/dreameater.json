@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DREAMEATER",
+  "real_name": "Dream Eater",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDoneIfTargetAsleep",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user eats the dreams of a sleeping foe. It absorbs half the damage caused to heal the user's HP."
+}

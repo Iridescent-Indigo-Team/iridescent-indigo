@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKYATTACK",
+  "real_name": "Sky Attack",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 140,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "Other",
+  "function_code": "TwoTurnAttackFlinchTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "effect_chance": 30,
+  "real_description": "A second-turn attack move where critical hits land more easily. It may also make the target flinch."
+}

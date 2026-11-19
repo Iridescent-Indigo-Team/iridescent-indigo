@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COREENFORCER",
+  "real_name": "Core Enforcer",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "NegateTargetAbilityIfTargetActed",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "If the target has already moved this turn, the effect of its Ability is negated."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PROTECTOR",
+  "real_name": "Protector",
+  "real_name_plural": "Protectors",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "A protective item of some sort. It is extremely stiff and heavy. It is loved by a certain Pokémon."
+}

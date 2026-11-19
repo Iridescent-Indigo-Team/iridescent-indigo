@@ -1,0 +1,31 @@
+{
+  "$schema": "../_schema/index.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        "camper_liam",
+        "leader_brock_brock",
+        "teamrocket_m_grunt_1",
+        "teamrocket_f_grunt_1",
+        "youngster_ben",
+        "camper_jeff",
+        "camper_jeff_1",
+        "picnicker_susie",
+        "picnicker_susie_1",
+        "hiker_ford",
+        "fisherman_andrew",
+        "beauty_bridget",
+        "lass_crissy",
+        "coolcouple_alice_bob",
+        "pokemontrainer_may_may",
+        "swimmer2_f_ariel",
+        "rival1_blue",
+        "rival1_blue_1",
+        "rival1_blue_2",
+        "champion_blue"
+      ]
+    }
+  ]
+}

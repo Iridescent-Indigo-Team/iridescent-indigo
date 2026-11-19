@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "UNAWARE",
+  "real_name": "Unaware",
+  "real_description": "Ignores any stat changes in the Pokémon."
+}

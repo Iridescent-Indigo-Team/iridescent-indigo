@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "metadata.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {"type": "integer", "minimum": 0},
+                "start_money": {"type": "integer", "minimum": 0, "description": "PBS key: StartMoney"},
+                "start_item_storage": {
+                  "type": "array",
+                  "items": {"type": "string", "description": "A Item id from items.txt."},
+                  "description": "PBS key: StartItemStorage"
+                },
+                "home": {
+                  "type": "object",
+                  "properties": {
+                    "map_id": {"type": "integer", "minimum": 1},
+                    "x": {"type": "integer", "minimum": 0},
+                    "y": {"type": "integer", "minimum": 0},
+                    "direction": {"type": "integer", "minimum": 0}
+                  },
+                  "required": ["map_id", "x", "y", "direction"],
+                  "additionalProperties": false,
+                  "description": "PBS key: Home"
+                },
+                "real_storage_creator": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "wild_battle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "trainer_battle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "wild_victory_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "trainer_victory_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "wild_capture_me": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "surf_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "bicycle_bgm": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "trainer_type": {"type": "string", "description": "A TrainerType id from trainer_types.txt."},
+                "walk_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "run_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "cycle_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "surf_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "dive_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "fish_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "surf_fish_charset": {"type": "string", "pattern": "^[^#]*$", "description": "Text."}
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

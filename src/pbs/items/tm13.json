@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM13",
+  "real_name": "TM13",
+  "real_name_plural": "TM13s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "ICEBEAM",
+  "real_description": "The target is struck with an icy-cold beam of energy. This may also leave the target frozen."
+}

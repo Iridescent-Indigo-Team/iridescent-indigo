@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COACHING",
+  "real_name": "Coaching",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "AllAllies",
+  "function_code": "RaiseAlliesAtkDef1",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user properly coaches its ally Pokémon, boosting their Attack and Defense stats."
+}

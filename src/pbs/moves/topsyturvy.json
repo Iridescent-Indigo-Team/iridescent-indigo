@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TOPSYTURVY",
+  "real_name": "Topsy-Turvy",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "InvertTargetStatStages",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "All stat changes affecting the target turn topsy-turvy and become the opposite of what they were."
+}

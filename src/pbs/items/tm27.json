@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM27",
+  "real_name": "TM27",
+  "real_name_plural": "TM27s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_65"],
+  "move": "LOWSWEEP",
+  "real_description": "The user makes a swift attack on the target's legs, which lowers the target's Speed stat."
+}

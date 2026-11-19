@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BODYPRESS",
+  "real_name": "Body Press",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UseUserDefenseInsteadOfUserAttack",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks by slamming its body into the target. Power increases the higher the user's Defense is."
+}

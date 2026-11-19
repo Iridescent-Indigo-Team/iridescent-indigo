@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FIGYBERRY",
+  "real_name": "Figy Berry",
+  "real_name_plural": "Figy Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_BUG_80"],
+  "real_description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste."
+}

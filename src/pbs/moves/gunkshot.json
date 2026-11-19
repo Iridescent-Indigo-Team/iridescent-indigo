@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GUNKSHOT",
+  "real_name": "Gunk Shot",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user shoots filthy garbage at the target to attack. It may also poison the target."
+}

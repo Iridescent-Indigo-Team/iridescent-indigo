@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRUDGE",
+  "real_name": "Grudge",
+  "type": "GHOST",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "User",
+  "function_code": "SetAttackerMovePPTo0IfUserFaints",
+  "real_description": "If the user faints, the user's grudge fully depletes the PP of the foe's move that knocked it out."
+}

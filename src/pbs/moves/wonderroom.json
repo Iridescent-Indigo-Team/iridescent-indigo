@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WONDERROOM",
+  "real_name": "Wonder Room",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "priority": -7,
+  "function_code": "StartSwapAllBattlersBaseDefensiveStats",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user creates a bizarre area in which Pokémon's Defense and Sp. Def stats are swapped for 5 turns."
+}

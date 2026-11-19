@@ -55,12 +55,12 @@ Git LFS is not needed: all assets come with a normal `git clone`.
 **Building mkxp-z for Linux (`make mkxp`)**
 
 gcc/g++, cmake, meson, ninja, pkg-config, git, autoconf, automake, libtool,
-bison, nasm, **Ruby** (an installed Ruby is needed to build mkxp-z's own Ruby
+bison, nasm, xxd, **Ruby** (an installed Ruby is needed to build mkxp-z's own Ruby
 3.1 from source) and the X11/OpenGL/audio development headers. On
 Debian/Ubuntu:
 
 ```bash
-sudo apt install ruby build-essential cmake meson ninja-build pkg-config git autoconf automake libtool bison nasm libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libasound2-dev libpulse-dev libpixman-1-dev libuchardet-dev libdbus-1-dev zlib1g-dev libbz2-dev libffi-dev libyaml-dev
+sudo apt install ruby build-essential cmake meson ninja-build pkg-config git autoconf automake libtool bison nasm xxd libgl-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libasound2-dev libpulse-dev libpixman-1-dev libuchardet-dev libdbus-1-dev zlib1g-dev libbz2-dev libffi-dev libyaml-dev
 ```
 
 **Android (`make apk`)**: Android NDK r25+ (`ANDROID_NDK_HOME`), the Android

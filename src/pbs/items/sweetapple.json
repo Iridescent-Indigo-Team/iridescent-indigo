@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SWEETAPPLE",
+  "real_name": "Sweet Apple",
+  "real_name_plural": "Sweet Apples",
+  "pocket": 1,
+  "price": 2200,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally sweet."
+}

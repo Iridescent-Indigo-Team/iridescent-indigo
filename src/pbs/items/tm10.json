@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM10",
+  "real_name": "TM10",
+  "real_name_plural": "TM10s",
+  "pocket": 4,
+  "price": 1500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "WORKUP",
+  "real_description": "The user is roused, and its Attack and Sp. Atk stats increase."
+}

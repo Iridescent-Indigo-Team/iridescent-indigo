@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HEATPROOF",
+  "real_name": "Heatproof",
+  "real_description": "Weakens the power of Fire-type moves."
+}

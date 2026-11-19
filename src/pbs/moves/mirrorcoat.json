@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIRRORCOAT",
+  "real_name": "Mirror Coat",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "None",
+  "priority": -5,
+  "function_code": "CounterSpecialDamage",
+  "flags": ["CanProtect"],
+  "real_description": "A retaliation move that counters any special attack, inflicting double the damage taken."
+}

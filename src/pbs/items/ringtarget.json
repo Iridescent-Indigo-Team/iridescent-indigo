@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RINGTARGET",
+  "real_name": "Ring Target",
+  "real_name_plural": "Ring Targets",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 10,
+  "flags": ["Fling_10"],
+  "real_description": "Moves that would otherwise have no effect will land on the Pokémon that holds it."
+}

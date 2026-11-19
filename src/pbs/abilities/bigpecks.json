@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BIGPECKS",
+  "real_name": "Big Pecks",
+  "real_description": "Protects from Defense-lowering attacks."
+}

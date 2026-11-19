@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LEMONADE",
+  "real_name": "Lemonade",
+  "real_name_plural": "Lemonades",
+  "real_portion_name": "can of Lemonade",
+  "real_portion_name_plural": "cans of Lemonade",
+  "pocket": 2,
+  "price": 350,
+  "sell_price": 200,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A very sweet and refreshing drink. It can be used to restore 70 HP to a single Pokémon."
+}

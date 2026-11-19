@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LONGREACH",
+  "real_name": "Long Reach",
+  "real_description": "Uses moves without making contact with the target."
+}

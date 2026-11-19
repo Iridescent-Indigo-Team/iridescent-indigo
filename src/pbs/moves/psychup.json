@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYCHUP",
+  "real_name": "Psych Up",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserCopyTargetStatStages",
+  "real_description": "The user hypnotizes itself into copying any stat change made by the target."
+}

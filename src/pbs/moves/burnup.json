@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BURNUP",
+  "real_name": "Burn Up",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 130,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "UserLosesFireType",
+  "flags": ["CanProtect", "CanMirrorMove", "ThawsUser"],
+  "real_description": "To inflict massive damage, the user burns itself out. The user will no longer be Fire type."
+}

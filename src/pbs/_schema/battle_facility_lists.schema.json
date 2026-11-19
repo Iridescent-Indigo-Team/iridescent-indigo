@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "battle_facility_lists.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "default": {"type": "boolean", "description": "True for [DefaultTrainerList]."},
+                "trainers": {
+                  "type": "string",
+                  "description": "Trainers PBS file, e.g. battle_tower_trainers.txt."
+                },
+                "pokemon": {
+                  "type": "string",
+                  "description": "Pokémon PBS file, e.g. battle_tower_pokemon.txt."
+                },
+                "challenges": {
+                  "type": "array",
+                  "items": {"type": "string"}
+                }
+              },
+              "required": ["default", "trainers", "pokemon"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

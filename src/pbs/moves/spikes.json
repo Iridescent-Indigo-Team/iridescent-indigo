@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPIKES",
+  "real_name": "Spikes",
+  "type": "GROUND",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "FoeSide",
+  "function_code": "AddSpikesToFoeSide",
+  "real_description": "The user lays a trap of spikes at the foe's feet. The trap hurts foes that switch into battle."
+}

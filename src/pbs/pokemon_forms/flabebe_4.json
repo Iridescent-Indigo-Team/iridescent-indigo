@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FLABEBE",
+  "form": 4,
+  "real_form_name": "White Flower"
+}

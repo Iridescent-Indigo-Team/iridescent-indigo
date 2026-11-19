@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DEFENSECURL",
+  "real_name": "Defense Curl",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 40,
+  "target": "User",
+  "function_code": "RaiseUserDefense1CurlUpUser",
+  "real_description": "The user curls up to conceal weak spots and raise its Defense stat."
+}

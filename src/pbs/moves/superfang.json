@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUPERFANG",
+  "real_name": "Super Fang",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FixedDamageHalfTargetHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user chomps hard on the target with its sharp front fangs. It cuts the target's HP to half."
+}

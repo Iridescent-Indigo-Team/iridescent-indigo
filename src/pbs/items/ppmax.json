@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PPMAX",
+  "real_name": "PP Max",
+  "real_name_plural": "PP Maxes",
+  "real_portion_name": "bottle of PP Max",
+  "real_portion_name_plural": "bottles of PP Max",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "It maximally raises the top PP of a selected move that has been learned by the target Pokémon."
+}

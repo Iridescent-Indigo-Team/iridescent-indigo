@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EFFECTSPORE",
+  "real_name": "Effect Spore",
+  "real_description": "Contact may poison or cause paralysis or sleep."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUNNYDAY",
+  "real_name": "Sunny Day",
+  "type": "FIRE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "BothSides",
+  "function_code": "StartSunWeather",
+  "real_description": "The user intensifies the sun for five turns, powering up Fire-type moves."
+}

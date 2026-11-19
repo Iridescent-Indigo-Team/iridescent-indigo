@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDERFANG",
+  "real_name": "Thunder Fang",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "ParalyzeFlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 101,
+  "real_description": "The user bites with electrified fangs. It may also make the target flinch or leave it with paralysis."
+}

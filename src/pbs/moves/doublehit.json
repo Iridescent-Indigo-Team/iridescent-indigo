@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLEHIT",
+  "real_name": "Double Hit",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 35,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user slams the target with a long tail, vines, or tentacle. The target is hit twice in a row."
+}

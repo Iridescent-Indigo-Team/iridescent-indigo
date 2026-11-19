@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM70",
+  "real_name": "TM70",
+  "real_name_plural": "TM70s",
+  "pocket": 4,
+  "price": 1000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "FLASH",
+  "real_description": "The user flashes a light that lowers the target's accuracy. It can also be used to illuminate caves."
+}

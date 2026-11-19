@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CHARIZARD",
+  "form": 2,
+  "real_form_name": "Mega Charizard Y",
+  "mega_stone": "CHARIZARDITEY",
+  "base_stats": {
+    "hp": 78,
+    "attack": 104,
+    "defense": 78,
+    "speed": 100,
+    "special_attack": 159,
+    "special_defense": 115
+  },
+  "base_exp": 317,
+  "abilities": ["DROUGHT"],
+  "hidden_abilities": ["DROUGHT"],
+  "weight": 100.5,
+  "real_pokedex_entry": "Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.",
+  "generation": 6
+}

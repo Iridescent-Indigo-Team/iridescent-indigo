@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FOCUSPUNCH",
+  "real_name": "Focus Punch",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 150,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "priority": -3,
+  "function_code": "FailsIfUserDamagedThisTurn",
+  "flags": ["Contact", "CanProtect", "Punching"],
+  "real_description": "The user focuses its mind before launching a punch. It will fail if the user is hit before it is used."
+}

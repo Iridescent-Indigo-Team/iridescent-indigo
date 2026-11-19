@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PLASMAFISTS",
+  "real_name": "Plasma Fists",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "NormalMovesBecomeElectric",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching", "CannotMetronome"],
+  "real_description": "The user attacks with electrically charged fists. Normal-type moves become Electric-type."
+}

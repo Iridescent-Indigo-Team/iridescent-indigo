@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRASSYTERRAIN",
+  "real_name": "Grassy Terrain",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartGrassyTerrain",
+  "real_description": "The user turns the ground to grass for five turns. Grounded Pokémon restore a little HP every turn."
+}

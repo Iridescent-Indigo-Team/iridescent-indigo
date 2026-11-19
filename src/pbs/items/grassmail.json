@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRASSMAIL",
+  "real_name": "Grass Mail",
+  "real_name_plural": "Grass Mail",
+  "real_portion_name": "piece of Grass Mail",
+  "real_portion_name_plural": "pieces of Grass Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a refreshingly green field. Let a Pokémon hold it for delivery."
+}

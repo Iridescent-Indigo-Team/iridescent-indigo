@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLESLAP",
+  "real_name": "Double Slap",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 15,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is slapped repeatedly, back and forth, two to five times in a row."
+}

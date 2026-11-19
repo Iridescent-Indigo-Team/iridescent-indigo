@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GOURGEIST",
+  "form": 3,
+  "real_form_name": "Super Size",
+  "base_stats": {
+    "hp": 85,
+    "attack": 100,
+    "defense": 122,
+    "speed": 54,
+    "special_attack": 58,
+    "special_defense": 75
+  },
+  "hidden_abilities": ["INSOMNIA"],
+  "height": 1.7,
+  "weight": 39.0,
+  "real_pokedex_entry": "Supersized Gourgeist aren't picky. They will forcefully drag anyone off to the afterlife.",
+  "wild_item_common": ["MIRACLESEED"],
+  "wild_item_uncommon": ["MIRACLESEED"],
+  "wild_item_rare": ["MIRACLESEED"]
+}

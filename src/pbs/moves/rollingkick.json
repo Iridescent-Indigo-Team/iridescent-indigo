@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROLLINGKICK",
+  "real_name": "Rolling Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user lashes out with a quick, spinning kick. It may also make the target flinch."
+}

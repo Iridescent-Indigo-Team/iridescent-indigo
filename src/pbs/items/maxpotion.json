@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAXPOTION",
+  "real_name": "Max Potion",
+  "real_name_plural": "Max Potions",
+  "pocket": 2,
+  "price": 2500,
+  "bp_price": 2,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine for treating wounds. It can completely restore the max HP of a single Pokémon."
+}

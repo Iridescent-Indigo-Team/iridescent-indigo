@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PURSUIT",
+  "real_name": "Pursuit",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PursueSwitchingFoe",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "An attack move that inflicts double damage if used on a target that is switching out of battle."
+}

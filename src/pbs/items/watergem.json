@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WATERGEM",
+  "real_name": "Water Gem",
+  "real_name_plural": "Water Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of water. When held, it strengthens the power of a Water-type move only once."
+}

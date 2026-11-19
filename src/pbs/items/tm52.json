@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM52",
+  "real_name": "TM52",
+  "real_name_plural": "TM52s",
+  "pocket": 4,
+  "price": 5500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_120"],
+  "move": "FOCUSBLAST",
+  "real_description": "The user heightens its mental focus and unleashes its power. This may also lower the target's Sp. Def stat."
+}

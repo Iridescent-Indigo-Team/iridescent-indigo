@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STALWART",
+  "real_name": "Stalwart",
+  "real_description": "This Pokémon's moves cannot be redirected."
+}

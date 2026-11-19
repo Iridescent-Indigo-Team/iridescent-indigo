@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MAWILE",
+  "form": 1,
+  "real_form_name": "Mega Mawile",
+  "mega_stone": "MAWILITE",
+  "base_stats": {
+    "hp": 50,
+    "attack": 105,
+    "defense": 125,
+    "speed": 50,
+    "special_attack": 55,
+    "special_defense": 95
+  },
+  "base_exp": 168,
+  "abilities": ["HUGEPOWER"],
+  "hidden_abilities": ["HUGEPOWER"],
+  "height": 1.0,
+  "weight": 23.5,
+  "real_pokedex_entry": "Its two sets of jaws thrash about violently as if they each had a will of their own. One gnash from them can turn a boulder to dust.",
+  "generation": 6
+}

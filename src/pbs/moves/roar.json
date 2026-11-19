@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROAR",
+  "real_name": "Roar",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "priority": -6,
+  "function_code": "SwitchOutTargetStatusMove",
+  "flags": ["CanMirrorMove", "Sound"],
+  "real_description": "The target is scared off and replaced by another Pokémon in its party. In the wild, the battle ends."
+}

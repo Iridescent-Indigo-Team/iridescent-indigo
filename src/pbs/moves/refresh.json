@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REFRESH",
+  "real_name": "Refresh",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "CureUserBurnPoisonParalysis",
+  "real_description": "The user rests to cure itself of a poisoning, burn, or paralysis."
+}

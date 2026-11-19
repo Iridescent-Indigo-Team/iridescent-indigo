@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "AIRMAIL",
+  "real_name": "Air Mail",
+  "real_name_plural": "Air Mail",
+  "real_portion_name": "piece of Air Mail",
+  "real_portion_name_plural": "pieces of Air Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of colorful letter sets. Let a Pokémon hold it for delivery."
+}

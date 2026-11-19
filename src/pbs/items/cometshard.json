@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "COMETSHARD",
+  "real_name": "Comet Shard",
+  "real_name_plural": "Comet Shards",
+  "pocket": 1,
+  "price": 25000,
+  "flags": ["Fling_30"],
+  "real_description": "A shard which fell to the ground when a comet approached. A maniac will buy it for a high price."
+}

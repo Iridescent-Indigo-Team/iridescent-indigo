@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DRAGONGEM",
+  "real_name": "Dragon Gem",
+  "real_name_plural": "Dragon Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with a draconic essence. When held, it strengthens the power of a Dragon-type move only once."
+}

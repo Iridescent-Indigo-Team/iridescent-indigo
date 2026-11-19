@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "QUASH",
+  "real_name": "Quash",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TargetActsLast",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user suppresses the target and makes its move go last."
+}

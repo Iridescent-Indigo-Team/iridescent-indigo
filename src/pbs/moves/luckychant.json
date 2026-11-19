@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LUCKYCHANT",
+  "real_name": "Lucky Chant",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "UserSide",
+  "function_code": "StartPreventCriticalHitsAgainstUserSide",
+  "real_description": "The user chants an incantation toward the sky, preventing the foe from landing critical hits."
+}

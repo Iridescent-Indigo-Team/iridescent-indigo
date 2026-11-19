@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MATBLOCK",
+  "real_name": "Mat Block",
+  "type": "FIGHTING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "UserSide",
+  "function_code": "ProtectUserSideFromDamagingMovesIfUserFirstTurn",
+  "real_description": "Using a pulled-up mat as a shield, the user protects itself and its allies from damaging moves."
+}

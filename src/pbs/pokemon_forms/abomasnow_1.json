@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ABOMASNOW",
+  "form": 1,
+  "real_form_name": "Mega Abomasnow",
+  "mega_stone": "ABOMASITE",
+  "base_stats": {
+    "hp": 90,
+    "attack": 132,
+    "defense": 105,
+    "speed": 30,
+    "special_attack": 132,
+    "special_defense": 105
+  },
+  "base_exp": 208,
+  "hidden_abilities": ["SNOWWARNING"],
+  "height": 2.7,
+  "weight": 185.0,
+  "generation": 6
+}

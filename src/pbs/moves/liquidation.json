@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LIQUIDATION",
+  "real_name": "Liquidation",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user slams into the target using a full-force blast of water. May lower the target's Defense."
+}

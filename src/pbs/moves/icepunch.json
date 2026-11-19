@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ICEPUNCH",
+  "real_name": "Ice Punch",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FreezeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 10,
+  "real_description": "The target is punched with an icy fist. It may also leave the target frozen."
+}

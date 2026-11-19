@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STEAMENGINE",
+  "real_name": "Steam Engine",
+  "real_description": "Boosts Speed drastically if hit by a Fire or Water move.",
+  "flags": ["FasterEggHatching"]
+}

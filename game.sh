@@ -101,7 +101,7 @@ run_headless() {
 
 if [[ -n "$DUMP_SCHEMA" ]]; then
   [[ "$DUMP_SCHEMA" = /* ]] || DUMP_SCHEMA="$PWD/$DUMP_SCHEMA"
-  mkdir -p "$(dirname "$DUMP_SCHEMA")"
+  mkdir -p "$(dirname "$DUMP_SCHEMA")" "$BUILD/Data"   # Plugins compile into Data/
   cd "$BUILD"
   export POKESSENTIALS_DUMP_SCHEMA="$DUMP_SCHEMA"
   run_headless .dump_ok || die "dumping the PBS schema failed (see the output above)."

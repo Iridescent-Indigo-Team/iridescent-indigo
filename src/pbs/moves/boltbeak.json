@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BOLTBEAK",
+  "real_name": "Bolt Beak",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetNotActed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Stabs the target with an electrified beak. Power is doubled if the user attacks first."
+}

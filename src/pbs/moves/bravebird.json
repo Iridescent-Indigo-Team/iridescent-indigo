@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BRAVEBIRD",
+  "real_name": "Brave Bird",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "Other",
+  "function_code": "RecoilThirdOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user tucks in its wings and charges from a low altitude. The user also takes serious damage."
+}

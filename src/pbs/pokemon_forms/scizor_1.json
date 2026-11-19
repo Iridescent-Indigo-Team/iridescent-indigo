@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SCIZOR",
+  "form": 1,
+  "real_form_name": "Mega Scizor",
+  "mega_stone": "SCIZORITE",
+  "base_stats": {
+    "hp": 70,
+    "attack": 150,
+    "defense": 140,
+    "speed": 65,
+    "special_attack": 100,
+    "special_defense": 75
+  },
+  "base_exp": 210,
+  "abilities": ["TECHNICIAN"],
+  "hidden_abilities": ["TECHNICIAN"],
+  "height": 2.0,
+  "weight": 125.0,
+  "real_pokedex_entry": "It's better at beating things than grasping them. When it battles for a long time, the weight of its pincers becomes too much to bear.",
+  "generation": 6
+}

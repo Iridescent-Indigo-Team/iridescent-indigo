@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAGMARIZER",
+  "real_name": "Magmarizer",
+  "real_name_plural": "Magmarizers",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "A box packed with a tremendous amount of magma energy. It is loved by a certain Pokémon."
+}

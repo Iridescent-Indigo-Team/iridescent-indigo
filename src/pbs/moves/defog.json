@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DEFOG",
+  "real_name": "Defog",
+  "type": "FLYING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetEvasion1RemoveSideEffects",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A strong wind blows away the foe's obstacles such as Light Screen. It also lowers their evasion."
+}

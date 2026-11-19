@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DARKGEM",
+  "real_name": "Dark Gem",
+  "real_name_plural": "Dark Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of darkness. When held, it strengthens the power of a Dark-type move only once."
+}

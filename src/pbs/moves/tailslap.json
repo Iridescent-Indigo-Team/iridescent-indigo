@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TAILSLAP",
+  "real_name": "Tail Slap",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by striking the target with its hard tail. It hits the Pokémon two to five times in a row."
+}

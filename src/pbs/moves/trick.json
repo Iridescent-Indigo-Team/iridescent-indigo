@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRICK",
+  "real_name": "Trick",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapItems",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user catches the target off guard and swaps its held item with its own."
+}

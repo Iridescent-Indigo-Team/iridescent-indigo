@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POWERTRIP",
+  "real_name": "Power Trip",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithUserPositiveStatStages",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user boasts of its strength. Power increases the more the user's stats are raised."
+}

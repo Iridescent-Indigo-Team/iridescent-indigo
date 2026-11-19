@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "NEUTRALIZINGGAS",
+  "real_name": "Neutralizing Gas",
+  "real_description": "Nullifies the effects of all other Abilities."
+}

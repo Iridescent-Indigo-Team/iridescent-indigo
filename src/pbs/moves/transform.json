@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRANSFORM",
+  "real_name": "Transform",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TransformUserIntoTarget",
+  "real_description": "The user transforms into a copy of the target right down to having the same move set."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PERISHBODY",
+  "real_name": "Perish Body",
+  "real_description": "Both Pokémon faint 3 turns after taking a contact hit."
+}

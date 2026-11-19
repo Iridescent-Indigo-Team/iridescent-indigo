@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FIGHTINGGEM",
+  "real_name": "Fighting Gem",
+  "real_name_plural": "Fighting Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of combat. When held, it strengthens the power of a Fighting-type move only once."
+}

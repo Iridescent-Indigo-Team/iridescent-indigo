@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "METEORMASH",
+  "real_name": "Meteor Mash",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserAttack1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 20,
+  "real_description": "The target is hit with a hard punch fired like a meteor. It may also raise the user's Attack."
+}

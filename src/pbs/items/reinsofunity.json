@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REINSOFUNITY",
+  "real_name": "Reins of Unity",
+  "real_name_plural": "Reins of Unity",
+  "real_portion_name": "set of Reins of Unity",
+  "real_portion_name_plural": "sets of Reins of Unity",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "Reins that people presented to the king. They unite Calyrex with its beloved steed."
+}

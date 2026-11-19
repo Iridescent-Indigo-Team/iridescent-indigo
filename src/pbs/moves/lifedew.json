@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LIFEDEW",
+  "real_name": "Life Dew",
+  "type": "WATER",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "UserAndAllies",
+  "function_code": "HealUserAndAlliesQuarterOfTotalHP",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user scatters mysterious water around and restores the HP of itself and its allies."
+}

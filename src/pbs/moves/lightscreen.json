@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LIGHTSCREEN",
+  "real_name": "Light Screen",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "UserSide",
+  "function_code": "StartWeakenSpecialDamageAgainstUserSide",
+  "real_description": "A wondrous wall of light is put up to suppress damage from special attacks for five turns."
+}

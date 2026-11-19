@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DOWNLOAD",
+  "real_name": "Download",
+  "real_description": "Adjusts power according to a foe's defenses."
+}

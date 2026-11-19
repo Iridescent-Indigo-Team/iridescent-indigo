@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LIQUIDOOZE",
+  "real_name": "Liquid Ooze",
+  "real_description": "Damages attackers using any draining move."
+}

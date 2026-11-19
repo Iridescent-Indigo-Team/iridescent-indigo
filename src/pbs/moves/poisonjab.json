@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POISONJAB",
+  "real_name": "Poison Jab",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The target is stabbed with a tentacle or arm seeped with poison. It may also poison the target."
+}

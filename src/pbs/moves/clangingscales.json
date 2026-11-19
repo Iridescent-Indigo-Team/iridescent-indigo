@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CLANGINGSCALES",
+  "real_name": "Clanging Scales",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 110,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "LowerUserDefense1",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user rubs its scales and makes a huge noise. Also lowers the user's Defense stat."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GENTLEMINT",
+  "real_name": "Gentle Mint",
+  "real_name_plural": "Gentle Mints",
+  "real_portion_name": "sprig of Gentle Mint",
+  "real_portion_name_plural": "sprigs of Gentle Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Sp. Def will grow more easily, but its Defense will grow more slowly."
+}

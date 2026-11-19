@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM85",
+  "real_name": "TM85",
+  "real_name_plural": "TM85s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_100"],
+  "move": "DREAMEATER",
+  "real_description": "The user eats the dreams of a sleeping target. The user's HP is restored by half the damage dealt."
+}

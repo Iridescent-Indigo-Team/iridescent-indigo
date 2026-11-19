@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM50",
+  "real_name": "TM50",
+  "real_name_plural": "TM50s",
+  "pocket": 4,
+  "price": 5500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_130"],
+  "move": "OVERHEAT",
+  "real_description": "The user attacks the target at full power. The attack's recoil harshly lowers the user's Sp. Atk stat."
+}

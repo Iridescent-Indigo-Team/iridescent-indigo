@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WATERABSORB",
+  "real_name": "Water Absorb",
+  "real_description": "Restores HP if hit by a Water-type move."
+}

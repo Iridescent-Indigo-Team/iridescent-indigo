@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLUNDERPOLICY",
+  "real_name": "Blunder Policy",
+  "real_name_plural": "Blunder Policies",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 20,
+  "flags": ["Fling_80"],
+  "real_description": "Raises Speed sharply when a Pokémon misses with a move because of accuracy."
+}

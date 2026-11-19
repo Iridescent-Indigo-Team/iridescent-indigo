@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WHIPPEDDREAM",
+  "real_name": "Whipped Dream",
+  "real_name_plural": "Whipped Dreams",
+  "real_portion_name": "dollop of Whipped Dream",
+  "real_portion_name_plural": "dollops of Whipped Dream",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "A soft and sweet treat made of fluffy, puffy and whirled cream. It's loved by a certain Pokémon."
+}

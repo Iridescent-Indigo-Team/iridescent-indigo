@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TICKLE",
+  "real_name": "Tickle",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAtkDef1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user tickles the target into laughing, reducing its Attack and Defense stats."
+}

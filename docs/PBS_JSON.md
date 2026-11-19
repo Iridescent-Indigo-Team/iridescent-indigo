@@ -165,6 +165,16 @@ The exported PBS files are written the way the engine's own PBS writer
 The map-name comments the engine adds next to map ids are left out. Importing
 a file the debug editors wrote and exporting it again gives the same data.
 
+`make pull-pbs` records what the engine wrote, including the engine's own
+changes:
+
+- The compiler sorts encounter slots.
+- The Battle Tower Pokémon writer drops item and move ids it doesn't know.
+- The Battle Tower trainers writer (`write_battle_tower_trainers`) quotes text
+  that already has quote marks again. Text such as `"Man, I lost!"` comes back
+  as `"\"Man, I lost!\""`. This is an Essentials bug, so check
+  `git diff src/pbs` after pulling those files.
+
 ## Validation
 
 `make pbs` validates before it exports, and stops on errors.

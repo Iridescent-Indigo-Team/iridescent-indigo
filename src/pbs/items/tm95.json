@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM95",
+  "real_name": "TM95",
+  "real_name_plural": "TM95s",
+  "pocket": 4,
+  "price": 2500,
+  "bp_price": 64,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "SURF",
+  "real_description": "The user attacks everything around it by swamping its surroundings with a giant wave."
+}

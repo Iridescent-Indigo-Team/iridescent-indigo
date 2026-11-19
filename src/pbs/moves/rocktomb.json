@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKTOMB",
+  "real_name": "Rock Tomb",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "Boulders are hurled at the target. It also lowers the target's Speed by preventing its movement."
+}

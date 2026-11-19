@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WHIRLPOOL",
+  "real_name": "Whirlpool",
+  "type": "WATER",
+  "category": "Special",
+  "power": 35,
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BindTargetDoublePowerIfTargetUnderwater",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Traps foes in a violent swirling whirlpool for four to five turns."
+}

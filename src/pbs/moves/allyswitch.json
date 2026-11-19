@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ALLYSWITCH",
+  "real_name": "Ally Switch",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "priority": 2,
+  "function_code": "UserSwapsPositionsWithAlly",
+  "real_description": "The user teleports using a strange power and switches its place with one of its allies."
+}

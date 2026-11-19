@@ -1,0 +1,61 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "SNOM",
+  "real_name": "Snom",
+  "types": ["ICE", "BUG"],
+  "base_stats": {"hp": 30, "attack": 25, "defense": 35, "speed": 20, "special_attack": 45, "special_defense": 30},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 37,
+  "evs": [
+    {"stat": "SPECIAL_ATTACK", "amount": 1}
+  ],
+  "catch_rate": 190,
+  "happiness": 50,
+  "abilities": ["SHIELDDUST"],
+  "hidden_abilities": ["ICESCALES"],
+  "moves": [
+    {"level": 1, "move": "POWDERSNOW"},
+    {"level": 1, "move": "STRUGGLEBUG"}
+  ],
+  "tutor_moves": [
+    "ATTRACT",
+    "BUGBUZZ",
+    "CAPTIVATE",
+    "CONFIDE",
+    "DOUBLETEAM",
+    "ENDURE",
+    "FACADE",
+    "FRUSTRATION",
+    "HIDDENPOWER",
+    "ICICLESPEAR",
+    "ICYWIND",
+    "MIMIC",
+    "NATURALGIFT",
+    "PROTECT",
+    "REST",
+    "RETURN",
+    "ROUND",
+    "SECRETPOWER",
+    "SKITTERSMACK",
+    "SLEEPTALK",
+    "SNORE",
+    "SUBSTITUTE",
+    "SWAGGER",
+    "TOXIC"
+  ],
+  "egg_moves": ["BUGBITE", "FAIRYWIND", "MIRRORCOAT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 5120,
+  "height": 0.3,
+  "weight": 3.8,
+  "color": "White",
+  "shape": "Serpentine",
+  "real_category": "Worm",
+  "real_pokedex_entry": "It spits out thread imbued with a frigid sort of energy and uses it to tie its body to branches, disguising itself as an icicle while it sleeps.",
+  "generation": 8,
+  "wild_item_uncommon": ["SNOWBALL"],
+  "evolutions": [
+    {"species": "FROSMOTH", "method": "HappinessNight"}
+  ]
+}

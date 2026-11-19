@@ -90,7 +90,7 @@ validate-pbs:
 	@$(PBS_JSON) --src $(PBS_SRC) validate
 
 ## pbs-schema: dump the PBS schemas from the engine into tools/importer/pbs
-pbs-schema: scripts config
+pbs-schema: scripts plugins config
 	@./game.sh --no-build --dump-schema $(PBS_SCHEMA)
 	@if [ -d $(PBS_SRC) ]; then $(PBS_JSON) --src $(PBS_SRC) schema; fi
 

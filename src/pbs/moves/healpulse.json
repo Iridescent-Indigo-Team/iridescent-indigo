@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEALPULSE",
+  "real_name": "Heal Pulse",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "Other",
+  "function_code": "HealTargetHalfOfTotalHP",
+  "flags": ["CanProtect", "Pulse"],
+  "real_description": "The user emits a healing pulse which restores the target's HP by up to half of its max HP."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TAKEDOWN",
+  "real_name": "Take Down",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 85,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "RecoilQuarterOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A reckless, full-body charge attack for slamming into the foe. It also damages the user a little."
+}

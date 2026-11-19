@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM09",
+  "real_name": "TM09",
+  "real_name_plural": "TM09s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_25"],
+  "move": "BULLETSEED",
+  "real_description": "The user forcefully shoots seeds at the target two to five times in a row."
+}

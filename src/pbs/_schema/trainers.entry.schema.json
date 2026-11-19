@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "trainers.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "trainer_type": {"type": "string", "description": "A TrainerType id from trainer_types.txt."},
+    "name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+    "version": {"type": "integer", "minimum": 0},
+    "items": {
+      "type": "array",
+      "items": {"type": "string", "description": "A Item id from items.txt."},
+      "description": "PBS key: Items"
+    },
+    "real_lose_text": {
+      "type": "string",
+      "pattern": "^[^#]*$",
+      "description": "Text (the rest of the line, written as is)."
+    },
+    "pokemon": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "$schema": {"type": "string"},
+          "form": {"type": "integer", "minimum": 0, "description": "PBS key: Form"},
+          "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+          "moves": {
+            "type": "array",
+            "items": {"type": "string", "description": "A Move id from moves.txt."},
+            "description": "PBS key: Moves"
+          },
+          "ability": {"type": "string", "description": "A Ability id from abilities.txt."},
+          "ability_index": {"type": "integer", "minimum": 0, "description": "PBS key: AbilityIndex"},
+          "item": {"type": "string", "description": "A Item id from items.txt."},
+          "gender": {
+            "type": "string",
+            "enum": ["M", "m", "Male", "male", "0", "F", "f", "Female", "female", "1"],
+            "description": "PBS key: Gender"
+          },
+          "nature": {
+            "type": "string",
+            "enum": [
+              "HARDY",
+              "LONELY",
+              "BRAVE",
+              "ADAMANT",
+              "NAUGHTY",
+              "BOLD",
+              "DOCILE",
+              "RELAXED",
+              "IMPISH",
+              "LAX",
+              "TIMID",
+              "HASTY",
+              "SERIOUS",
+              "JOLLY",
+              "NAIVE",
+              "MODEST",
+              "MILD",
+              "QUIET",
+              "BASHFUL",
+              "RASH",
+              "CALM",
+              "GENTLE",
+              "SASSY",
+              "CAREFUL",
+              "QUIRKY"
+            ],
+            "description": "PBS key: Nature"
+          },
+          "iv": {
+            "type": "object",
+            "properties": {
+              "hp": {"type": "integer", "minimum": 0},
+              "attack": {"type": "integer", "minimum": 0},
+              "defense": {"type": "integer", "minimum": 0},
+              "speed": {"type": "integer", "minimum": 0},
+              "special_attack": {"type": "integer", "minimum": 0},
+              "special_defense": {"type": "integer", "minimum": 0}
+            },
+            "required": ["hp"],
+            "additionalProperties": false,
+            "description": "PBS key: IV"
+          },
+          "ev": {
+            "type": "object",
+            "properties": {
+              "hp": {"type": "integer", "minimum": 0},
+              "attack": {"type": "integer", "minimum": 0},
+              "defense": {"type": "integer", "minimum": 0},
+              "speed": {"type": "integer", "minimum": 0},
+              "special_attack": {"type": "integer", "minimum": 0},
+              "special_defense": {"type": "integer", "minimum": 0}
+            },
+            "required": ["hp"],
+            "additionalProperties": false,
+            "description": "PBS key: EV"
+          },
+          "happiness": {"type": "integer", "minimum": 0, "description": "PBS key: Happiness"},
+          "shininess": {"type": "boolean", "description": "PBS key: Shiny"},
+          "super_shininess": {"type": "boolean", "description": "PBS key: SuperShiny"},
+          "shadowness": {"type": "boolean", "description": "PBS key: Shadow"},
+          "poke_ball": {"type": "string", "description": "A Item id from items.txt."},
+          "species": {"type": "string", "description": "A Species id from pokemon.txt."},
+          "level": {"type": "integer", "minimum": 1}
+        },
+        "required": ["species", "level"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["trainer_type", "name"],
+  "additionalProperties": false
+}

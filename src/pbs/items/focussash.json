@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FOCUSSASH",
+  "real_name": "Focus Sash",
+  "real_name_plural": "Focus Sashes",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 15,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. If it has full HP, the holder will endure one potential KO attack, leaving 1 HP."
+}

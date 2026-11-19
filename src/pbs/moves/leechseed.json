@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LEECHSEED",
+  "real_name": "Leech Seed",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "StartLeechSeedTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A seed is planted on the target. It steals some HP from the target every turn."
+}

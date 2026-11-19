@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POKEDOLL",
+  "real_name": "Poké Doll",
+  "real_name_plural": "Poké Dolls",
+  "pocket": 7,
+  "price": 300,
+  "battle_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "A doll that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
+}

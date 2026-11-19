@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LIGHTOFRUIN",
+  "real_name": "Light of Ruin",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 140,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RecoilHalfOfDamageDealt",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Fires a powerful beam of light drawn from the Eternal Flower. It also damages the user a lot."
+}

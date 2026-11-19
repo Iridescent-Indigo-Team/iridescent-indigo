@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BULLETPROOF",
+  "real_name": "Bulletproof",
+  "real_description": "Protects the Pokémon from some ball and bomb moves."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLACKSLUDGE",
+  "real_name": "Black Sludge",
+  "real_name_plural": "Black Sludges",
+  "real_portion_name": "blob of Black Sludge",
+  "real_portion_name_plural": "blobs of Black Sludge",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 25,
+  "flags": ["Fling_30"],
+  "real_description": "A held item that gradually restores the HP of Poison-type Pokémon. It inflicts damage on all other types."
+}

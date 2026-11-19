@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AROMATHERAPY",
+  "real_name": "Aromatherapy",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "UserAndAllies",
+  "function_code": "CureUserPartyStatus",
+  "real_description": "The user releases a soothing scent that heals all status problems affecting the user's party."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BANETTE",
+  "form": 1,
+  "real_form_name": "Mega Banette",
+  "mega_stone": "BANETTITE",
+  "base_stats": {"hp": 64, "attack": 165, "defense": 75, "speed": 75, "special_attack": 93, "special_defense": 83},
+  "base_exp": 194,
+  "abilities": ["PRANKSTER"],
+  "hidden_abilities": ["PRANKSTER"],
+  "height": 1.2,
+  "weight": 13.0,
+  "real_pokedex_entry": "Extraordinary energy amplifies its cursing power to such an extent that it can't help but curse its own Trainer.",
+  "generation": 6
+}

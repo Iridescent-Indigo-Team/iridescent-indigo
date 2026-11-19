@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MISTBALL",
+  "real_name": "Mist Ball",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 50,
+  "real_description": "A mistlike flurry of down envelops and damages the target. It may also lower the target's Sp. Atk."
+}

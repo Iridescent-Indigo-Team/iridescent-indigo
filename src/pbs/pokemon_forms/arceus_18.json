@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ARCEUS",
+  "form": 18,
+  "real_form_name": "Fairy Type",
+  "types": ["FAIRY"],
+  "generation": 6
+}

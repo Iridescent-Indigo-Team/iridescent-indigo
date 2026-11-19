@@ -1,0 +1,24 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "NECROZMA",
+  "form": 1,
+  "real_form_name": "Dusk Mane",
+  "types": ["PSYCHIC", "STEEL"],
+  "base_stats": {
+    "hp": 97,
+    "attack": 157,
+    "defense": 127,
+    "speed": 77,
+    "special_attack": 113,
+    "special_defense": 109
+  },
+  "base_exp": 340,
+  "evs": [
+    {"stat": "ATTACK", "amount": 3}
+  ],
+  "height": 3.8,
+  "weight": 460.0,
+  "color": "Yellow",
+  "shape": "Quadruped",
+  "real_pokedex_entry": "This is Necrozma's form while it's absorbing the power of Solgaleo, making it extremely ferocious and impossible to control."
+}

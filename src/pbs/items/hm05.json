@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM05",
+  "real_name": "HM05",
+  "real_name_plural": "HM05s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "WATERFALL",
+  "real_description": "The user charges at the target and may make it flinch. It can also be used to climb a waterfall."
+}

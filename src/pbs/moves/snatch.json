@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SNATCH",
+  "real_name": "Snatch",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "StealAndUseBeneficialStatusMove",
+  "real_description": "The user steals the effects of any healing or stat-changing move the foe attempts to use."
+}

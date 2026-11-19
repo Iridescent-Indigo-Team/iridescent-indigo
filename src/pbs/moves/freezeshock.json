@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FREEZESHOCK",
+  "real_name": "Freeze Shock",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 140,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 30,
+  "real_description": "On the second turn, the user hits the foe with electrically charged ice. It may also paralyze the foe."
+}

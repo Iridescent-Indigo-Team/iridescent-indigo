@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LIMBER",
+  "real_name": "Limber",
+  "real_description": "The Pokémon is protected from paralysis."
+}

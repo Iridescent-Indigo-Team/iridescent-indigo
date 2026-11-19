@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAGEPOWDER",
+  "real_name": "Rage Powder",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "priority": 2,
+  "function_code": "RedirectAllMovesToUser",
+  "flags": ["Powder"],
+  "real_description": "The user scatters irritating powder to draw attention to itself. Opponents aim only at the user."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WILLOWISP",
+  "real_name": "Will-O-Wisp",
+  "type": "FIRE",
+  "category": "Status",
+  "accuracy": 85,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user shoots a sinister, bluish-white flame at the target to inflict a burn."
+}

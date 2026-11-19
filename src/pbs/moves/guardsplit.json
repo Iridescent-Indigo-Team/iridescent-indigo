@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GUARDSPLIT",
+  "real_name": "Guard Split",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetAverageBaseDefSpDef",
+  "flags": ["CanProtect"],
+  "real_description": "The user employs its psychic power to average its Defense and Sp. Def stats with those of its target."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RAZZBERRY",
+  "real_name": "Razz Berry",
+  "real_name_plural": "Razz Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_STEEL_80"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

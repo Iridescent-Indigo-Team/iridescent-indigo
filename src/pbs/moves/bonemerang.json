@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BONEMERANG",
+  "real_name": "Bonemerang",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoTimes",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user throws the bone it holds. The bone loops to hit the target twice, coming and going."
+}

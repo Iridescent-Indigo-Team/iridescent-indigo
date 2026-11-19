@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STALL",
+  "real_name": "Stall",
+  "real_description": "The Pokémon moves after all other Pokémon do."
+}

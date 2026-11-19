@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PINKNECTAR",
+  "real_name": "Pink Nectar",
+  "real_name_plural": "Pink Nectars",
+  "real_portion_name": "jar of Pink Nectar",
+  "real_portion_name_plural": "jars of Pink Nectar",
+  "pocket": 1,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "A flower nectar obtained from shrubs on Royal Avenue. It changes the form of certain species of Pokémon."
+}

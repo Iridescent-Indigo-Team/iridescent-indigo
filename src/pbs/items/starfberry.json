@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STARFBERRY",
+  "real_name": "Starf Berry",
+  "real_name_plural": "Starf Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_PSYCHIC_100"],
+  "real_description": "If held by a Pokémon, it sharply raises one of its stats in a pinch."
+}

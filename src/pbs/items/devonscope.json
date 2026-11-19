@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DEVONSCOPE",
+  "real_name": "Devon Scope",
+  "real_name_plural": "Devon Scopes",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A device by Devon that signals any unseeable Pokémon."
+}

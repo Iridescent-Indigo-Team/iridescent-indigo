@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SOLIDROCK",
+  "real_name": "Solid Rock",
+  "real_description": "Reduces damage from super-effective attacks."
+}

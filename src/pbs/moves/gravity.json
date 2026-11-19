@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRAVITY",
+  "real_name": "Gravity",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "BothSides",
+  "function_code": "StartGravity",
+  "real_description": "Gravity is intensified for five turns, making moves involving flying unusable and negating Levitation."
+}

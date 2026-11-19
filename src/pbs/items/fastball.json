@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FASTBALL",
+  "real_name": "Fast Ball",
+  "real_name_plural": "Fast Balls",
+  "pocket": 3,
+  "price": 300,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A Poké Ball that makes it easier to catch fast Pokémon."
+}

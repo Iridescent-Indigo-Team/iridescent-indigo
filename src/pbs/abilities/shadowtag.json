@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SHADOWTAG",
+  "real_name": "Shadow Tag",
+  "real_description": "Prevents the foe from escaping."
+}

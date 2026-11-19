@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HIDDENPOWER",
+  "real_name": "Hidden Power",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TypeDependsOnUserIVs",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A unique attack that varies in type and intensity depending on the Pokémon using it."
+}

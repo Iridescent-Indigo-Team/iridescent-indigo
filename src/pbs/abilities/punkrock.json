@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PUNKROCK",
+  "real_name": "Punk Rock",
+  "real_description": "Powers up own sound moves. Resists other sound moves."
+}

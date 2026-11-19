@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GIGADRAIN",
+  "real_name": "Giga Drain",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target."
+}

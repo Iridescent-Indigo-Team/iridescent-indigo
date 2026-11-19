@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "INNERFOCUS",
+  "real_name": "Inner Focus",
+  "real_description": "The Pokémon is protected from flinching."
+}

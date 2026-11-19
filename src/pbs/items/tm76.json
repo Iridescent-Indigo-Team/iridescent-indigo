@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM76",
+  "real_name": "TM76",
+  "real_name_plural": "TM76s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "STEALTHROCK",
+  "real_description": "The user lays a trap of levitating stones around the opposing team that hurt Pokémon that switch in."
+}

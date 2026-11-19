@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM04",
+  "real_name": "HM04",
+  "real_name_plural": "HM04s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "STRENGTH",
+  "real_description": "The target is slugged with a punch thrown at maximum power. This can also be used to move heavy boulders."
+}

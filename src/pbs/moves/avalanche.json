@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AVALANCHE",
+  "real_name": "Avalanche",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "priority": -4,
+  "function_code": "DoublePowerIfUserLostHPThisTurn",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "An attack move that inflicts double the damage if the user has been hurt by the foe in the same turn."
+}

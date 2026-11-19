@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DYNAMICPUNCH",
+  "real_name": "Dynamic Punch",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 50,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 100,
+  "real_description": "The user punches the target with full, concentrated power. It confuses the target if it hits."
+}

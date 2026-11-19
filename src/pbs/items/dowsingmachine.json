@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DOWSINGMACHINE",
+  "real_name": "Dowsing Machine",
+  "real_name_plural": "Dowsing Machines",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "It checks for unseen items in the area and makes noise and lights when it finds something."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "IRONDEFENSE",
+  "real_name": "Iron Defense",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "function_code": "RaiseUserDefense2",
+  "real_description": "The user hardens its body's surface like iron, sharply raising its Defense stat."
+}

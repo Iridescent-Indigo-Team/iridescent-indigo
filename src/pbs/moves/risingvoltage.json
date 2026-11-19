@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RISINGVOLTAGE",
+  "real_name": "Rising Voltage",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "DoublePowerInElectricTerrain",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with electric voltage rising from the ground. Power is doubled on Electric Terrain."
+}

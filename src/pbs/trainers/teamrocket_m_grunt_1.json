@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "TEAMROCKET_M",
+  "name": "Grunt",
+  "version": 1,
+  "real_lose_text": "You're too good for me!",
+  "pokemon": [
+    {"species": "WEEPINBELL", "level": 21, "shadowness": true}
+  ]
+}

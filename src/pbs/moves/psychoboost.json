@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYCHOBOOST",
+  "real_name": "Psycho Boost",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 140,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserSpAtk2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks the target at full power. The attack's recoil harshly reduces the user's Sp. Atk stat."
+}

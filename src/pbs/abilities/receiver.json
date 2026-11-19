@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RECEIVER",
+  "real_name": "Receiver",
+  "real_description": "Copies the Ability of a defeated ally."
+}

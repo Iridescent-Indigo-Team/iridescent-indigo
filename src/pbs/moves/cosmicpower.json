@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COSMICPOWER",
+  "real_name": "Cosmic Power",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserDefSpDef1",
+  "real_description": "The user absorbs a mystical power from space to raise its Defense and Sp. Def stats."
+}

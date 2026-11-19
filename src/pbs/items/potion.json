@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POTION",
+  "real_name": "Potion",
+  "real_name_plural": "Potions",
+  "pocket": 2,
+  "price": 200,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A spray-type medicine for treating wounds. It can be used to restore 20 HP to a single Pokémon."
+}

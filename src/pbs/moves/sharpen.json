@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHARPEN",
+  "real_name": "Sharpen",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "User",
+  "function_code": "RaiseUserAttack1",
+  "real_description": "The user reduces its polygon count to make itself more jagged, raising the Attack stat."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THUNDEROUSKICK",
+  "real_name": "Thunderous Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "Overwhelms the target with lightning-like movement, then kicks. Lowers the target's Defense stat."
+}

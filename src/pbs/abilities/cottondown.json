@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "COTTONDOWN",
+  "real_name": "Cotton Down",
+  "real_description": "Scatters Speed-lowering cotton fluff when hit."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PASSHOBERRY",
+  "real_name": "Passho Berry",
+  "real_name_plural": "Passho Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_WATER_80"],
+  "real_description": "Weakens a supereffective Water-type attack against the holding Pokémon."
+}

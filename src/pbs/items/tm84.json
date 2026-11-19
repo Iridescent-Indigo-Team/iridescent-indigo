@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM84",
+  "real_name": "TM84",
+  "real_name_plural": "TM84s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "POISONJAB",
+  "real_description": "The target is stabbed with a tentacle, arm, or the like steeped in poison. This may also poison them."
+}

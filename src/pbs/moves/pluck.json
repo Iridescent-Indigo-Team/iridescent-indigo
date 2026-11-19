@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PLUCK",
+  "real_name": "Pluck",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "Other",
+  "function_code": "UserConsumeTargetBerry",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user pecks the target. If the target is holding a Berry, the user eats it and gains its effect."
+}

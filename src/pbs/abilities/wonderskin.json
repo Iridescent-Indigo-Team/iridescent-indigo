@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WONDERSKIN",
+  "real_name": "Wonder Skin",
+  "real_description": "Makes status-changing moves more likely to miss."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAINPUNCH",
+  "real_name": "Drain Punch",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "An energy-draining punch. The user's HP is restored by half the damage taken by the target."
+}

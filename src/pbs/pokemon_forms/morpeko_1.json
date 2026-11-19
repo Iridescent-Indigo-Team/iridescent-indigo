@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MORPEKO",
+  "form": 1,
+  "real_form_name": "Hangry Mode",
+  "color": "Purple",
+  "real_pokedex_entry": "Hunger hormones affect its temperament. Until its hunger is appeased, it gets up to all manner of evil deeds."
+}

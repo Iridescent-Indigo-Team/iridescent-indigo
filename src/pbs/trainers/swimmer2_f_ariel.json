@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "SWIMMER2_F",
+  "name": "Ariel",
+  "real_lose_text": "Washed out!",
+  "pokemon": [
+    {"species": "STARYU", "level": 15},
+    {"species": "GOLDEEN", "level": 11}
+  ]
+}

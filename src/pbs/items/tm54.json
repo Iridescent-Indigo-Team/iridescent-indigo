@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM54",
+  "real_name": "TM54",
+  "real_name_plural": "TM54s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_40"],
+  "move": "FALSESWIPE",
+  "real_description": "A restrained attack that prevents the target from fainting. The target is left with at least 1 HP."
+}

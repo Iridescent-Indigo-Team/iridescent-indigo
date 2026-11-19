@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WAILMERPAIL",
+  "real_name": "Wailmer Pail",
+  "real_name_plural": "Wailmer Pails",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A nifty watering pail. Use it to promote strong growth in Berries planted in soft soil."
+}

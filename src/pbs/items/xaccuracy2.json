@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "XACCURACY2",
+  "real_name": "X Accuracy 2",
+  "real_name_plural": "X Accuracy 2s",
+  "pocket": 7,
+  "price": 0,
+  "battle_use": "OnBattler",
+  "flags": ["Fling_30"],
+  "real_description": "It sharply raises the accuracy of a Pokémon in battle. It wears off if the Pokémon is withdrawn."
+}

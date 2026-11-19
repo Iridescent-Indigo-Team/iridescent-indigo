@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 67,
+  "real_name": "Safari Zone",
+  "town_map_position": {"region": 0, "x": 12, "y": 12}
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THROATCHOP",
+  "real_name": "Throat Chop",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "DisableTargetSoundMoves",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user attacks the target's throat. The target cannot use sound-based moves for two turns."
+}

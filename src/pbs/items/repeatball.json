@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REPEATBALL",
+  "real_name": "Repeat Ball",
+  "real_name_plural": "Repeat Balls",
+  "pocket": 3,
+  "price": 1000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A somewhat different Poké Ball that works especially well on Pokémon species that were previously caught."
+}

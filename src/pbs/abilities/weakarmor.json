@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WEAKARMOR",
+  "real_name": "Weak Armor",
+  "real_description": "Physical attacks lower Defense and raise Speed."
+}

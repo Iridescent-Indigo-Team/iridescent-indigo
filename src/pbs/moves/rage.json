@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAGE",
+  "real_name": "Rage",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "StartRaiseUserAtk1WhenDamaged",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "As long as this move is in use, the user's Attack rises each time the user is hit in battle."
+}

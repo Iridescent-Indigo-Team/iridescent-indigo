@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AUTOTOMIZE",
+  "real_name": "Autotomize",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "function_code": "RaiseUserSpeed2LowerUserWeight",
+  "real_description": "The user sheds part of its body to make itself lighter and sharply raise its Speed stat."
+}

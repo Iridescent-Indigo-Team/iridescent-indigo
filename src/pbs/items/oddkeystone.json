@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ODDKEYSTONE",
+  "real_name": "Odd Keystone",
+  "real_name_plural": "Odd Keystones",
+  "pocket": 1,
+  "price": 2100,
+  "flags": ["Fling_80"],
+  "real_description": "A vital item that is needed to keep a stone tower from collapsing. Voices can be heard from it occasionally."
+}

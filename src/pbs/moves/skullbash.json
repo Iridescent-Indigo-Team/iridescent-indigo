@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKULLBASH",
+  "real_name": "Skull Bash",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 130,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackChargeRaiseUserDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user tucks in its head to raise its Defense in the first turn, then rams the foe on the next turn."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKILLSWAP",
+  "real_name": "Skill Swap",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapAbilities",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user employs its psychic power to exchange Abilities with the target."
+}

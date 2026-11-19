@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHOALSALT",
+  "real_name": "Shoal Salt",
+  "real_name_plural": "Shoal Salts",
+  "real_portion_name": "pile of Shoal Salt",
+  "real_portion_name_plural": "piles of Shoal Salt",
+  "pocket": 1,
+  "price": 20,
+  "flags": ["Fling_30"],
+  "real_description": "Pure salt that can be discovered deep inside the Shoal Cave. A maniac will buy it for a high price."
+}

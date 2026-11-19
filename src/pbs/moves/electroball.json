@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ELECTROBALL",
+  "real_name": "Electro Ball",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithUserFasterThanTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "The user hurls an electric orb at the foe. It does more damage the faster the user is."
+}

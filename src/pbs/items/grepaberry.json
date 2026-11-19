@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GREPABERRY",
+  "real_name": "Grepa Berry",
+  "real_name_plural": "Grepa Berries",
+  "pocket": 5,
+  "price": 20,
+  "field_use": "OnPokemon",
+  "flags": ["Berry", "Fling_10", "NaturalGift_FLYING_90"],
+  "real_description": "Using it on a Pokémon makes it more friendly, but it also lowers its base Sp. Def stat."
+}

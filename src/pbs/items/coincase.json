@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "COINCASE",
+  "real_name": "Coin Case",
+  "real_name_plural": "Coin Cases",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A case for holding coins obtained at the Game Corner. It holds up to 99,999 coins."
+}

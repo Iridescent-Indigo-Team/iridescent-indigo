@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ESCAPEROPE",
+  "real_name": "Escape Rope",
+  "real_name_plural": "Escape Ropes",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A long, durable rope. Use it to escape instantly from a cave or a dungeon."
+}

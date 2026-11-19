@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SILPHSCOPE",
+  "real_name": "Silph Scope",
+  "real_name_plural": "Silph Scopes",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A scope that makes unseeable Pokémon visible. It is made by Silph Co."
+}

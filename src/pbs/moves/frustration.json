@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FRUSTRATION",
+  "real_name": "Frustration",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PowerLowerWithUserHappiness",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A full-power attack that grows more powerful the less the user likes its Trainer."
+}

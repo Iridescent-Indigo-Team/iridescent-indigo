@@ -1,0 +1,73 @@
+{
+  "$schema": "../_schema/encounters.entry.schema.json",
+  "map": 21,
+  "types": [
+    {
+      "type": "Land",
+      "step_chance": 21,
+      "slots": [
+        {"chance": 50, "species": "RATTATA", "min_level": 12, "max_level": 15},
+        {"chance": 30, "species": "POOCHYENA", "min_level": 11, "max_level": 15},
+        {"chance": 10, "species": "SHINX", "min_level": 10, "max_level": 12},
+        {"chance": 10, "species": "SHINX", "min_level": 10, "max_level": 11}
+      ]
+    },
+    {
+      "type": "Water",
+      "step_chance": 2,
+      "slots": [
+        {"chance": 60, "species": "MAGIKARP", "min_level": 7, "max_level": 10},
+        {"chance": 30, "species": "GOLDEEN", "min_level": 11, "max_level": 14},
+        {"chance": 10, "species": "STARYU", "min_level": 12, "max_level": 15}
+      ]
+    },
+    {
+      "type": "OldRod",
+      "slots": [
+        {"chance": 70, "species": "MAGIKARP", "min_level": 7, "max_level": 10},
+        {"chance": 30, "species": "MAGIKARP", "min_level": 9, "max_level": 15}
+      ]
+    },
+    {
+      "type": "GoodRod",
+      "slots": [
+        {"chance": 60, "species": "GOLDEEN", "min_level": 12, "max_level": 14},
+        {"chance": 20, "species": "FINNEON", "min_level": 12, "max_level": 15},
+        {"chance": 20, "species": "MAGIKARP", "min_level": 12, "max_level": 17}
+      ]
+    },
+    {
+      "type": "SuperRod",
+      "slots": [
+        {"chance": 40, "species": "FINNEON", "min_level": 12, "max_level": 15},
+        {"chance": 40, "species": "GOLDEEN", "min_level": 12, "max_level": 14},
+        {"chance": 15, "species": "STARYU", "min_level": 12, "max_level": 15},
+        {"chance": 5, "species": "STARYU", "min_level": 14, "max_level": 17}
+      ]
+    },
+    {
+      "type": "HeadbuttLow",
+      "slots": [
+        {"chance": 50, "species": "PINECO", "min_level": 11, "max_level": 13},
+        {"chance": 30, "species": "LEDYBA", "min_level": 6, "max_level": 8},
+        {"chance": 19, "species": "SPINARAK", "min_level": 9, "max_level": 12},
+        {"chance": 1, "species": "MUNCHLAX", "min_level": 11, "max_level": 14}
+      ]
+    },
+    {
+      "type": "HeadbuttHigh",
+      "slots": [
+        {"chance": 50, "species": "PINECO", "min_level": 11, "max_level": 13},
+        {"chance": 30, "species": "WURMPLE", "min_level": 6, "max_level": 8},
+        {"chance": 20, "species": "SPINARAK", "min_level": 9, "max_level": 12}
+      ]
+    },
+    {
+      "type": "PokeRadar",
+      "step_chance": 10,
+      "slots": [
+        {"chance": 100, "species": "STANTLER", "min_level": 14}
+      ]
+    }
+  ]
+}

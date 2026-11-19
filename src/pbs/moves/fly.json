@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLY",
+  "real_name": "Fly",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "Other",
+  "function_code": "TwoTurnAttackInvulnerableInSky",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user soars, then strikes on the second turn. It can also be used for flying to any familiar town."
+}

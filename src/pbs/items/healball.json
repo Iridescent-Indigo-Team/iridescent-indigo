@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HEALBALL",
+  "real_name": "Heal Ball",
+  "real_name_plural": "Heal Balls",
+  "pocket": 3,
+  "price": 300,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A remedial Poké Ball that restores the caught Pokémon's HP and eliminates any status problem."
+}

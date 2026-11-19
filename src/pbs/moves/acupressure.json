@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ACUPRESSURE",
+  "real_name": "Acupressure",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "UserOrNearAlly",
+  "function_code": "RaiseTargetRandomStat2",
+  "real_description": "The user applies pressure to stress points, sharply boosting one of its stats."
+}

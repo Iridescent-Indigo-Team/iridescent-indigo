@@ -1,0 +1,413 @@
+{
+  "$schema": "_schema/berry_plants.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "id": "CHERIBERRY",
+          "hours_per_stage": 3,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "CHESTOBERRY",
+          "hours_per_stage": 3,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "PECHABERRY",
+          "hours_per_stage": 3,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "RAWSTBERRY",
+          "hours_per_stage": 3,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "ASPEARBERRY",
+          "hours_per_stage": 3,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "LEPPABERRY",
+          "hours_per_stage": 4,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "ORANBERRY",
+          "hours_per_stage": 4,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "PERSIMBERRY",
+          "hours_per_stage": 4,
+          "drying_per_hour": 15,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "LUMBERRY",
+          "hours_per_stage": 12,
+          "drying_per_hour": 8,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "SITRUSBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 7,
+          "yield": {"min": 2, "max": 5}
+        },
+        {
+          "id": "FIGYBERRY",
+          "hours_per_stage": 5,
+          "drying_per_hour": 10,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "WIKIBERRY",
+          "hours_per_stage": 5,
+          "drying_per_hour": 10,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "MAGOBERRY",
+          "hours_per_stage": 5,
+          "drying_per_hour": 10,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "AGUAVBERRY",
+          "hours_per_stage": 5,
+          "drying_per_hour": 10,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "IAPAPABERRY",
+          "hours_per_stage": 5,
+          "drying_per_hour": 10,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "RAZZBERRY",
+          "hours_per_stage": 2,
+          "drying_per_hour": 35,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "BLUKBERRY",
+          "hours_per_stage": 2,
+          "drying_per_hour": 35,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "NANABBERRY",
+          "hours_per_stage": 2,
+          "drying_per_hour": 35,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "WEPEARBERRY",
+          "hours_per_stage": 2,
+          "drying_per_hour": 35,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "PINAPBERRY",
+          "hours_per_stage": 2,
+          "drying_per_hour": 35,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "POMEGBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "KELPSYBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "QUALOTBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "HONDEWBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "GREPABERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "TAMATOBERRY",
+          "hours_per_stage": 8,
+          "drying_per_hour": 8,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "CORNNBERRY",
+          "hours_per_stage": 6,
+          "drying_per_hour": 10,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "MAGOSTBERRY",
+          "hours_per_stage": 6,
+          "drying_per_hour": 10,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "RABUTABERRY",
+          "hours_per_stage": 6,
+          "drying_per_hour": 10,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "NOMELBERRY",
+          "hours_per_stage": 6,
+          "drying_per_hour": 10,
+          "yield": {"min": 2, "max": 10}
+        },
+        {
+          "id": "SPELONBERRY",
+          "hours_per_stage": 15,
+          "drying_per_hour": 8,
+          "yield": {"min": 2, "max": 15}
+        },
+        {
+          "id": "PAMTREBERRY",
+          "hours_per_stage": 15,
+          "drying_per_hour": 8,
+          "yield": {"min": 3, "max": 15}
+        },
+        {
+          "id": "WATMELBERRY",
+          "hours_per_stage": 15,
+          "drying_per_hour": 8,
+          "yield": {"min": 2, "max": 15}
+        },
+        {
+          "id": "DURINBERRY",
+          "hours_per_stage": 15,
+          "drying_per_hour": 8,
+          "yield": {"min": 3, "max": 15}
+        },
+        {
+          "id": "BELUEBERRY",
+          "hours_per_stage": 15,
+          "drying_per_hour": 8,
+          "yield": {"min": 2, "max": 15}
+        },
+        {
+          "id": "OCCABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "PASSHOBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "WACANBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "RINDOBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "YACHEBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "CHOPLEBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "KEBIABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "SHUCABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "COBABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "PAYAPABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "TANGABERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "CHARTIBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "KASIBBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "HABANBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "COLBURBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "BABIRIBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "CHILANBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "LIECHIBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "GANLONBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "SALACBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "PETAYABERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "APICOTBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "LANSATBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "STARFBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 4,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "ENIGMABERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "MICLEBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "CUSTAPBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "JABOCABERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "ROWAPBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "ROSELIBERRY",
+          "hours_per_stage": 18,
+          "drying_per_hour": 6,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "KEEBERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        },
+        {
+          "id": "MARANGABERRY",
+          "hours_per_stage": 24,
+          "drying_per_hour": 7,
+          "yield": {"min": 1, "max": 5}
+        }
+      ]
+    }
+  ]
+}

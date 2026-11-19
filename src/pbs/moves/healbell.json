@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEALBELL",
+  "real_name": "Heal Bell",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "UserAndAllies",
+  "function_code": "CureUserPartyStatus",
+  "flags": ["Sound"],
+  "real_description": "The user makes a soothing bell chime to heal the status problems of all the party Pokémon."
+}

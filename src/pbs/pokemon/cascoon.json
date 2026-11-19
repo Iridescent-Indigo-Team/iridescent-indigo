@@ -1,0 +1,33 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "CASCOON",
+  "real_name": "Cascoon",
+  "types": ["BUG"],
+  "base_stats": {"hp": 50, "attack": 35, "defense": 55, "speed": 15, "special_attack": 25, "special_defense": 25},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 72,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 2}
+  ],
+  "catch_rate": 120,
+  "happiness": 50,
+  "abilities": ["SHEDSKIN"],
+  "moves": [
+    {"level": 0, "move": "HARDEN"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "IRONDEFENSE", "STRINGSHOT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.7,
+  "weight": 11.5,
+  "color": "Purple",
+  "shape": "Head",
+  "habitat": "Forest",
+  "real_category": "Cocoon",
+  "real_pokedex_entry": "To avoid detection by its enemies, it hides motionlessly beneath large leaves and in the gaps of branches. It also attaches dead leaves to its body for camouflage.",
+  "generation": 3,
+  "evolutions": [
+    {"species": "DUSTOX", "method": "Level", "parameter": 10}
+  ]
+}

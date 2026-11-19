@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICVASE",
+  "real_name": "Relic Vase",
+  "real_name_plural": "Relic Vases",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A vase made in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

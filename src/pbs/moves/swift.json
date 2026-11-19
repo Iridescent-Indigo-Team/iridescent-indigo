@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWIFT",
+  "real_name": "Swift",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Star-shaped rays are shot at the opposing team. This attack never misses."
+}

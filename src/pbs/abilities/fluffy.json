@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLUFFY",
+  "real_name": "Fluffy",
+  "real_description": "Resists contact damage but weaker to Fire-type."
+}

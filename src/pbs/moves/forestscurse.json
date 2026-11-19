@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FORESTSCURSE",
+  "real_name": "Forest's Curse",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "AddGrassTypeToTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user puts a forest curse on the target. The target is now Grass type as well."
+}

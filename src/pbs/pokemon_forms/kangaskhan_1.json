@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "KANGASKHAN",
+  "form": 1,
+  "real_form_name": "Mega Kangaskhan",
+  "mega_stone": "KANGASKHANITE",
+  "base_stats": {
+    "hp": 105,
+    "attack": 125,
+    "defense": 100,
+    "speed": 100,
+    "special_attack": 60,
+    "special_defense": 100
+  },
+  "base_exp": 207,
+  "abilities": ["PARENTALBOND"],
+  "hidden_abilities": ["PARENTALBOND"],
+  "weight": 100.0,
+  "real_pokedex_entry": "The explosive energy the child is bathed in causes temporary growth. The mother is beside herself with worry about it.",
+  "generation": 6
+}

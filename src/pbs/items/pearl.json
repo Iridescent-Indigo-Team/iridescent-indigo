@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PEARL",
+  "real_name": "Pearl",
+  "real_name_plural": "Pearls",
+  "pocket": 1,
+  "price": 2000,
+  "flags": ["Fling_30"],
+  "real_description": "A somewhat-small pearl that sparkles in a pretty silver color. It can be sold cheaply to shops."
+}

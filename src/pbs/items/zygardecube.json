@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ZYGARDECUBE",
+  "real_name": "Zygarde Cube",
+  "real_name_plural": "Zygarde Cubes",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "OnPokemon",
+  "flags": ["KeyItem"],
+  "real_description": "An item in which Zygarde Cores and Cells are gathered. You can also use it to change Zygarde's forms."
+}

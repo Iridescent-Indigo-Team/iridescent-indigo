@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DEEPSEATOOTH",
+  "real_name": "Deep Sea Tooth",
+  "real_name_plural": "Deep Sea Teeth",
+  "pocket": 1,
+  "price": 2000,
+  "bp_price": 5,
+  "flags": ["Fling_90"],
+  "real_description": "An item to be held by Clamperl. A fang that gleams a sharp silver, it raises the Sp. Atk stat."
+}

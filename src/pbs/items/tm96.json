@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM96",
+  "real_name": "TM96",
+  "real_name_plural": "TM96s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 40,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "STRENGTH",
+  "real_description": "The target is slugged with a punch thrown at maximum power."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SAFARIBALL",
+  "real_name": "Safari Ball",
+  "real_name_plural": "Safari Balls",
+  "pocket": 3,
+  "price": 0,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A special Poké Ball that is used only in the Safari Zone. It is decorated in a camouflage pattern."
+}

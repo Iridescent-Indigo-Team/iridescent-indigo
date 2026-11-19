@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "INGRAIN",
+  "real_name": "Ingrain",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "StartHealUserEachTurnTrapUserInBattle",
+  "real_description": "The user lays roots that restore its HP on every turn. Because it is rooted, it can't switch out."
+}

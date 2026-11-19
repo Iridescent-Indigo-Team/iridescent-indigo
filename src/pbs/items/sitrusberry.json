@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SITRUSBERRY",
+  "real_name": "Sitrus Berry",
+  "real_name_plural": "Sitrus Berries",
+  "pocket": 5,
+  "price": 20,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Berry", "Fling_10", "NaturalGift_PSYCHIC_80"],
+  "real_description": "It may be used or held by a Pokémon to heal the user's HP a little."
+}

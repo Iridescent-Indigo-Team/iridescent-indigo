@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUPERPOWER",
+  "real_name": "Superpower",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "LowerUserAtkDef1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks the target with great power. However, it also lowers the user's Attack and Defense."
+}

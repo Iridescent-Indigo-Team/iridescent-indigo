@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PREMIERBALL",
+  "real_name": "Premier Ball",
+  "real_name_plural": "Premier Balls",
+  "pocket": 3,
+  "price": 200,
+  "sell_price": 10,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A somewhat rare Poké Ball that has been specially made to commemorate an event of some sort."
+}

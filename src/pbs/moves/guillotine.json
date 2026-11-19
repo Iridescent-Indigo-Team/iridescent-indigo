@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GUILLOTINE",
+  "real_name": "Guillotine",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 30,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "OHKO",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A vicious, tearing attack with big pincers. The target will faint instantly if this attack hits."
+}

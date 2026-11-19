@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SURGINGSTRIKES",
+  "real_name": "Surging Strikes",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "HitThreeTimesAlwaysCriticalHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Hits three times in a row with mastery of the Water style. This attack always deals critical hits."
+}

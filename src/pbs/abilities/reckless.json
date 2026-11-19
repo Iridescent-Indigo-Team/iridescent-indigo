@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RECKLESS",
+  "real_name": "Reckless",
+  "real_description": "Powers up moves that have recoil damage."
+}

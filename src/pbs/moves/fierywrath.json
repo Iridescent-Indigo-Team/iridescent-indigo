@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIERYWRATH",
+  "real_name": "Fiery Wrath",
+  "type": "DARK",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "FlinchTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 20,
+  "real_description": "The user transforms its wrath into a fire-like aura to attack. This may also make foes flinch."
+}

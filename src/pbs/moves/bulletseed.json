@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BULLETSEED",
+  "real_name": "Bullet Seed",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "The user forcefully shoots seeds at the target. Two to five seeds are shot in rapid succession."
+}

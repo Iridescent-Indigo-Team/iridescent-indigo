@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "AURABREAK",
+  "real_name": "Aura Break",
+  "real_description": "Reverses \"Aura\" Abilities to weaken affected moves."
+}

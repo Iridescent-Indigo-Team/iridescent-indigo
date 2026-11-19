@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PAMTREBERRY",
+  "real_name": "Pamtre Berry",
+  "real_name_plural": "Pamtre Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_STEEL_90"],
+  "real_description": "In the Sinnoh region, they like to make sweets known as Poffins with this Berry."
+}

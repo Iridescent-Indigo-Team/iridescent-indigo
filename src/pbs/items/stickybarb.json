@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STICKYBARB",
+  "real_name": "Sticky Barb",
+  "real_name_plural": "Sticky Barbs",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 16,
+  "flags": ["Fling_80"],
+  "real_description": "A held item that damages the holder on every turn. It may latch on to Pokémon that touch the holder."
+}

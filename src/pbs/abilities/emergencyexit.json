@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EMERGENCYEXIT",
+  "real_name": "Emergency Exit",
+  "real_description": "Switches out if its HP becomes half or less."
+}

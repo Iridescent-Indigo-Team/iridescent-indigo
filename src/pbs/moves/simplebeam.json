@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SIMPLEBEAM",
+  "real_name": "Simple Beam",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SetTargetAbilityToSimple",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user's mysterious psychic wave changes the target's Ability to Simple."
+}

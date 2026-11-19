@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TERRAINPULSE",
+  "real_name": "Terrain Pulse",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeAndPowerDependOnTerrain",
+  "flags": ["CanProtect", "CanMirrorMove", "Pulse"],
+  "real_description": "Utilizes the power of the terrain to attack. This move's type and power vary with the terrain."
+}

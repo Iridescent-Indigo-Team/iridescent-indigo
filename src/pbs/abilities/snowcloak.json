@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SNOWCLOAK",
+  "real_name": "Snow Cloak",
+  "real_description": "Raises evasion in a hailstorm."
+}

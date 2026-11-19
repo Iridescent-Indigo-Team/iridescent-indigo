@@ -33,3 +33,6 @@ build/
 
 # Record of Essentials assets copied by tools/scripts/install_assets.sh
 src/assets/.installed_manifest
+
+# Python bytecode
+__pycache__/

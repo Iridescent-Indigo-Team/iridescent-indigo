@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FLUFFYTAIL",
+  "real_name": "Fluffy Tail",
+  "real_name_plural": "Fluffy Tails",
+  "pocket": 7,
+  "price": 300,
+  "battle_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
+}

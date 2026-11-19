@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWBALL",
+  "real_name": "Shadow Ball",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpDef1",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 20,
+  "real_description": "The user hurls a shadowy blob at the target. It may also lower the target's Sp. Def stat."
+}

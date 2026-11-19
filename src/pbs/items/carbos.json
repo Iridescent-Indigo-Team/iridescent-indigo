@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CARBOS",
+  "real_name": "Carbos",
+  "real_name_plural": "Carbos",
+  "real_portion_name": "bottle of Carbos",
+  "real_portion_name_plural": "bottles of Carbos",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A nutritious drink for Pokémon. It raises the base Speed stat of a single Pokémon."
+}

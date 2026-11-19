@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GUARDSPEC",
+  "real_name": "Guard Spec.",
+  "real_name_plural": "Guard Specs.",
+  "pocket": 7,
+  "price": 1500,
+  "battle_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "An item that prevents stat reduction among the Trainer's party Pokémon for five turns after use."
+}

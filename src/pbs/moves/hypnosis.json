@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPNOSIS",
+  "real_name": "Hypnosis",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 60,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "SleepTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user employs hypnotic suggestion to make the target fall into a deep sleep."
+}

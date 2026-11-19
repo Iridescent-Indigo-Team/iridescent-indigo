@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BARRAGE",
+  "real_name": "Barrage",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 15,
+  "accuracy": 85,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "Round objects are hurled at the target to strike two to five times in a row."
+}

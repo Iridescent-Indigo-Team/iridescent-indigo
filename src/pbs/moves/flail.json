@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLAIL",
+  "real_name": "Flail",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "PowerLowerWithUserHP",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user flails about aimlessly to attack. It becomes more powerful the less HP the user has."
+}

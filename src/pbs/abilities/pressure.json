@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PRESSURE",
+  "real_name": "Pressure",
+  "real_description": "The Pokémon raises the foe's PP usage."
+}

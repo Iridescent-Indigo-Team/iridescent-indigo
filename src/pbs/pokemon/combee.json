@@ -1,0 +1,48 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "COMBEE",
+  "real_name": "Combee",
+  "types": ["BUG", "FLYING"],
+  "base_stats": {"hp": 30, "attack": 30, "defense": 42, "speed": 70, "special_attack": 30, "special_defense": 42},
+  "gender_ratio": "FemaleOneEighth",
+  "growth_rate": "Parabolic",
+  "base_exp": 49,
+  "evs": [
+    {"stat": "SPEED", "amount": 1}
+  ],
+  "catch_rate": 120,
+  "happiness": 50,
+  "abilities": ["HONEYGATHER"],
+  "hidden_abilities": ["HUSTLE"],
+  "moves": [
+    {"level": 1, "move": "SWEETSCENT"},
+    {"level": 1, "move": "GUST"},
+    {"level": 1, "move": "STRUGGLEBUG"},
+    {"level": 1, "move": "BUGBITE"}
+  ],
+  "tutor_moves": [
+    "AIRCUTTER",
+    "BUGBITE",
+    "BUGBUZZ",
+    "DUALWINGBEAT",
+    "ENDEAVOR",
+    "MUDSLAP",
+    "OMINOUSWIND",
+    "SNORE",
+    "STRINGSHOT",
+    "TAILWIND"
+  ],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 5.5,
+  "color": "Yellow",
+  "shape": "MultiBody",
+  "real_category": "Tiny Bee",
+  "real_pokedex_entry": "A Pokémon formed by three others. It busily carries sweet floral honey to Vespiquen.",
+  "generation": 4,
+  "wild_item_uncommon": ["HONEY"],
+  "evolutions": [
+    {"species": "VESPIQUEN", "method": "LevelFemale", "parameter": 21}
+  ]
+}

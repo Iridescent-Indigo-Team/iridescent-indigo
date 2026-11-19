@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MOOMOOMILK",
+  "real_name": "Moomoo Milk",
+  "real_name_plural": "Moomoo Milks",
+  "real_portion_name": "bottle of Moomoo Milk",
+  "real_portion_name_plural": "bottles of Moomoo Milk",
+  "pocket": 2,
+  "price": 600,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Milk with a very high nutrition content. It restores the HP of one Pokémon by 100 points."
+}

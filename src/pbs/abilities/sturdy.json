@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STURDY",
+  "real_name": "Sturdy",
+  "real_description": "It cannot be knocked out with one hit."
+}

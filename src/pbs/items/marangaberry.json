@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MARANGABERRY",
+  "real_name": "Maranga Berry",
+  "real_name_plural": "Maranga Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_DARK_100"],
+  "real_description": "If held by a Pokémon, this Berry will increase the holder's Sp. Def if it's hit with a special move."
+}

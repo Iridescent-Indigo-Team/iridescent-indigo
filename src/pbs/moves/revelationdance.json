@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "REVELATIONDANCE",
+  "real_name": "Revelation Dance",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "TypeIsUserFirstType",
+  "flags": ["CanProtect", "CanMirrorMove", "Dance"],
+  "real_description": "The user attacks the target by dancing very hard. The user's type determines the type of this move."
+}

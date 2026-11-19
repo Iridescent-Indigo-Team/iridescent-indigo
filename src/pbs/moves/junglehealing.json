@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "JUNGLEHEALING",
+  "real_name": "Jungle Healing",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "UserAndAllies",
+  "function_code": "HealUserAndAlliesQuarterOfTotalHPCureStatus",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user becomes one with the jungle, and restores HP and cures status conditions of itself and allies."
+}

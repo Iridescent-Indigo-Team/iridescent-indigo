@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRASSKNOT",
+  "real_name": "Grass Knot",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetWeight",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user snares the target with grass and trips it. The heavier the target, the greater the damage."
+}

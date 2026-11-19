@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLASHFIRE",
+  "real_name": "Flash Fire",
+  "real_description": "It powers up Fire-type moves if it's hit by one."
+}

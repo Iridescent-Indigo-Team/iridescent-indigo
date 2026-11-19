@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SYMBIOSIS",
+  "real_name": "Symbiosis",
+  "real_description": "Passes its held item to an ally that has used theirs."
+}

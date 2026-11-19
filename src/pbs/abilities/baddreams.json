@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BADDREAMS",
+  "real_name": "Bad Dreams",
+  "real_description": "Reduces a sleeping foe's HP."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FIREPUNCH",
+  "real_name": "Fire Punch",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "effect_chance": 10,
+  "real_description": "The target is punched with a fiery fist. It may leave the target with a burn."
+}

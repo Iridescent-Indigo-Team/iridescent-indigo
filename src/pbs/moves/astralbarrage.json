@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ASTRALBARRAGE",
+  "real_name": "Astral Barrage",
+  "type": "GHOST",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user attacks by sending a frightful amount of small ghosts at opposing Pokémon."
+}

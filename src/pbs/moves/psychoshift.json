@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYCHOSHIFT",
+  "real_name": "Psycho Shift",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "GiveUserStatusToTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Using its psychic power of suggestion, the user transfers its status problems to the target."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BOUNCE",
+  "real_name": "Bounce",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 85,
+  "total_pp": 5,
+  "target": "Other",
+  "function_code": "TwoTurnAttackInvulnerableInSkyParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user bounces up high, then drops on the foe on the second turn. It may also paralyze the foe."
+}

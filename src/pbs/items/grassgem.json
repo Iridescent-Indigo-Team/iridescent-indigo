@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRASSGEM",
+  "real_name": "Grass Gem",
+  "real_name_plural": "Grass Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of nature. When held, it strengthens the power of a Grass-type move only once."
+}

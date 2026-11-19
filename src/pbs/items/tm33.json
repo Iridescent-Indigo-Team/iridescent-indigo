@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM33",
+  "real_name": "TM33",
+  "real_name_plural": "TM33s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "REFLECT",
+  "real_description": "A wondrous wall of light is put up to reduce damage from physical attacks for five turns."
+}

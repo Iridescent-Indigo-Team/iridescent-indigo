@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "QUIVERDANCE",
+  "real_name": "Quiver Dance",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpAtkSpDefSpd1",
+  "flags": ["Dance"],
+  "real_description": "The user performs a beautiful dance. It boosts the user's Sp. Atk, Sp. Def, and Speed stats."
+}

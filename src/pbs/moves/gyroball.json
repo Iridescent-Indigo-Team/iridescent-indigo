@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GYROBALL",
+  "real_name": "Gyro Ball",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithTargetFasterThanUser",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "The user tackles the target with a high-speed spin. The slower the user, the greater the damage."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PASTELVEIL",
+  "real_name": "Pastel Veil",
+  "real_description": "Protects the Pokémon and its allies from poisoning."
+}

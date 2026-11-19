@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "KEBIABERRY",
+  "real_name": "Kebia Berry",
+  "real_name_plural": "Kebia Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_POISON_80"],
+  "real_description": "Weakens a supereffective Poison-type attack against the holding Pokémon."
+}

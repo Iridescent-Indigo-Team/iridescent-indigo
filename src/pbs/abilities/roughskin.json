@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ROUGHSKIN",
+  "real_name": "Rough Skin",
+  "real_description": "Inflicts damage to the foe on contact."
+}

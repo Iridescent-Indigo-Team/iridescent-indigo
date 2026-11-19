@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWALLOW",
+  "real_name": "Swallow",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "HealUserDependingOnUserStockpile",
+  "real_description": "The power stored using the move Stockpile is absorbed by the user to heal its HP."
+}

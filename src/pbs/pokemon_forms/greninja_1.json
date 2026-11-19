@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GRENINJA",
+  "form": 1,
+  "abilities": ["BATTLEBOND"],
+  "hidden_abilities": ["BATTLEBOND"],
+  "egg_groups": ["Undiscovered"]
+}

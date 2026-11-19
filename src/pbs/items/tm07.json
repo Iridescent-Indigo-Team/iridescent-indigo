@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM07",
+  "real_name": "TM07",
+  "real_name_plural": "TM07s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "HAIL",
+  "real_description": "The user summons a hailstorm lasting five turns. It damages all Pokémon except Ice types."
+}

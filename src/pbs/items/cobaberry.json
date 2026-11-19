@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "COBABERRY",
+  "real_name": "Coba Berry",
+  "real_name_plural": "Coba Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FLYING_80"],
+  "real_description": "Weakens a supereffective Flying-type attack against the holding Pokémon."
+}

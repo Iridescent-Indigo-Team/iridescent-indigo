@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPIKECANNON",
+  "real_name": "Spike Cannon",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM15",
+  "real_name": "TM15",
+  "real_name_plural": "TM15s",
+  "pocket": 4,
+  "price": 7500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_150"],
+  "move": "HYPERBEAM",
+  "real_description": "The target is attacked with a powerful beam. The user can't move on the next turn."
+}

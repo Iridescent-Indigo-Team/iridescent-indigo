@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "AROMAVEIL",
+  "real_name": "Aroma Veil",
+  "real_description": "Protects against attacks that limit move choices."
+}

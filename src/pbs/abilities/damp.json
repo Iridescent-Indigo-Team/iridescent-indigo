@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DAMP",
+  "real_name": "Damp",
+  "real_description": "Prevents the use of self-destructing moves."
+}

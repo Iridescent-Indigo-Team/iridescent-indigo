@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "REFRIGERATE",
+  "real_name": "Refrigerate",
+  "real_description": "Normal-type moves become Ice-type and powered up."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWEETSCENT",
+  "real_name": "Sweet Scent",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetEvasion2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A sweet scent that lowers the foe's evasiveness. It also lures wild Pokémon if used in grass, etc."
+}

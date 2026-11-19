@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWORDSDANCE",
+  "real_name": "Swords Dance",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserAttack2",
+  "flags": ["Dance"],
+  "real_description": "A frenetic dance to uplift the fighting spirit. It sharply raises the user's Attack stat."
+}

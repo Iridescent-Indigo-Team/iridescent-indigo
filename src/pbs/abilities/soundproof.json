@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SOUNDPROOF",
+  "real_name": "Soundproof",
+  "real_description": "Gives full immunity to all sound-based moves."
+}

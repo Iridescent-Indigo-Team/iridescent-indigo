@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ETERNABEAM",
+  "real_name": "Eternabeam",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 160,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "This is Eternatus's most powerful attack in its original form. The user can't move on the next turn."
+}

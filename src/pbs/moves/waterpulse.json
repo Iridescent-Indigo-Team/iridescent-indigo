@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WATERPULSE",
+  "real_name": "Water Pulse",
+  "type": "WATER",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "Other",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Pulse"],
+  "effect_chance": 20,
+  "real_description": "The user attacks the target with a pulsing blast of water. It may also confuse the target."
+}

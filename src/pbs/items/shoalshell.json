@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHOALSHELL",
+  "real_name": "Shoal Shell",
+  "real_name_plural": "Shoal Shells",
+  "pocket": 1,
+  "price": 20,
+  "flags": ["Fling_30"],
+  "real_description": "A pretty seashell that can be found deep inside the Shoal Cave. A maniac will buy it for a high price."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ROCKYHELMET",
+  "real_name": "Rocky Helmet",
+  "real_name_plural": "Rocky Helmets",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 25,
+  "flags": ["Fling_60"],
+  "real_description": "If the holder of this item takes damage, the attacker will also be damaged upon contact."
+}

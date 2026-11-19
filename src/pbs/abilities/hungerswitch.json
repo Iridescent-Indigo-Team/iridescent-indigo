@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HUNGERSWITCH",
+  "real_name": "Hunger Switch",
+  "real_description": "Changes between Full Belly and Hangry Mode each turn."
+}

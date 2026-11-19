@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONSTRICT",
+  "real_name": "Constrict",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 10,
+  "accuracy": 100,
+  "total_pp": 35,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The foe is attacked with long, creeping tentacles or vines. It may also lower the target's Speed."
+}

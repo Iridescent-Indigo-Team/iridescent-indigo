@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DELTASTREAM",
+  "real_name": "Delta Stream",
+  "real_description": "Alters weather to remove Flying-type's weaknesses."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM42",
+  "real_name": "TM42",
+  "real_name_plural": "TM42s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_70"],
+  "move": "FACADE",
+  "real_description": "This attack move doubles its power if the user is poisoned, burned, or paralyzed."
+}

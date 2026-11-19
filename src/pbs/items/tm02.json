@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM02",
+  "real_name": "TM02",
+  "real_name_plural": "TM02s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "DRAGONCLAW",
+  "real_description": "The user slashes the target with huge sharp claws."
+}

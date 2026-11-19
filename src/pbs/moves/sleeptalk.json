@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SLEEPTALK",
+  "real_name": "Sleep Talk",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UseRandomUserMoveIfAsleep",
+  "real_description": "While it is asleep, the user randomly uses one of the moves it knows."
+}

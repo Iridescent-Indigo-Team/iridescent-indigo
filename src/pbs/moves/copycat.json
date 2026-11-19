@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COPYCAT",
+  "real_name": "Copycat",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "UseLastMoveUsed",
+  "real_description": "The user mimics the move used immediately before it. The move fails if no other move has been used yet."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM36",
+  "real_name": "TM36",
+  "real_name_plural": "TM36s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 80,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "SLUDGEBOMB",
+  "real_description": "Unsanitary sludge is hurled at the target. This may also poison the target."
+}

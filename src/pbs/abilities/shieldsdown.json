@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SHIELDSDOWN",
+  "real_name": "Shields Down",
+  "real_description": "Its shell breaks if its HP becomes half or less."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BOOMBURST",
+  "real_name": "Boomburst",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 140,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearOthers",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user attacks everything around it with the destructive power of a terrible, explosive sound."
+}

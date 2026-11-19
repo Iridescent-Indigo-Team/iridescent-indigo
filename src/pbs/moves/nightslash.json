@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NIGHTSLASH",
+  "real_name": "Night Slash",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user slashes the target the instant an opportunity arises. Critical hits land more easily."
+}

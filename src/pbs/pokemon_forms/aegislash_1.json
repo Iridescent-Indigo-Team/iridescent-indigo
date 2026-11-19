@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "AEGISLASH",
+  "form": 1,
+  "real_form_name": "Blade Forme",
+  "base_stats": {
+    "hp": 60,
+    "attack": 140,
+    "defense": 50,
+    "speed": 60,
+    "special_attack": 140,
+    "special_defense": 50
+  },
+  "evs": [
+    {"stat": "ATTACK", "amount": 2},
+    {"stat": "SPECIAL_ATTACK", "amount": 1}
+  ],
+  "real_pokedex_entry": "Once upon a time, a king with an Aegislash reigned over the land. His Pokémon eventually drained him of life, and his kingdom fell with him."
+}

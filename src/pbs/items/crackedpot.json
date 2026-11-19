@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CRACKEDPOT",
+  "real_name": "Cracked Pot",
+  "real_name_plural": "Cracked Pots",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 800,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_80"],
+  "real_description": "A peculiar cracked teapot that can make a certain species of Pokémon evolve. It makes delicious tea."
+}

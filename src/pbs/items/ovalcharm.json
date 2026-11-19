@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "OVALCHARM",
+  "real_name": "Oval Charm",
+  "real_name_plural": "Oval Charms",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "An oval charm said to increase the chance of Eggs being found at the Day Care."
+}

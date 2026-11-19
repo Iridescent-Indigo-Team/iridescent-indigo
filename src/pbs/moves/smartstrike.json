@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SMARTSTRIKE",
+  "real_name": "Smart Strike",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user stabs the target with a sharp horn. This attack never misses."
+}

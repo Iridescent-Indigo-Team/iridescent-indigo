@@ -1,0 +1,35 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "BELDUM",
+  "real_name": "Beldum",
+  "types": ["STEEL", "PSYCHIC"],
+  "base_stats": {"hp": 40, "attack": 55, "defense": 80, "speed": 30, "special_attack": 35, "special_defense": 60},
+  "gender_ratio": "Genderless",
+  "growth_rate": "Slow",
+  "base_exp": 60,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 1}
+  ],
+  "catch_rate": 3,
+  "happiness": 35,
+  "abilities": ["CLEARBODY"],
+  "hidden_abilities": ["LIGHTMETAL"],
+  "moves": [
+    {"level": 1, "move": "TACKLE"}
+  ],
+  "tutor_moves": ["HEADBUTT", "IRONDEFENSE", "IRONHEAD", "STEELBEAM", "ZENHEADBUTT"],
+  "egg_groups": ["Mineral"],
+  "hatch_steps": 10240,
+  "height": 0.6,
+  "weight": 95.2,
+  "color": "Blue",
+  "shape": "HeadBase",
+  "habitat": "RoughTerrain",
+  "real_category": "Iron Ball",
+  "real_pokedex_entry": "When Beldum gather in a swarm, they move in perfect unison as if they were but one Pokémon. They communicate with each other using brain waves.",
+  "generation": 3,
+  "wild_item_uncommon": ["METALCOAT"],
+  "evolutions": [
+    {"species": "METANG", "method": "Level", "parameter": 20}
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STEELWORKER",
+  "real_name": "Steelworker",
+  "real_description": "Powers up Steel-type moves."
+}

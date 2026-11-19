@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "berry_plants.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^(?![0-9])\\w+$",
+                  "description": "An id: letters, digits and underscores, not starting with a digit."
+                },
+                "hours_per_stage": {"type": "integer", "minimum": 1, "description": "PBS key: HoursPerStage"},
+                "drying_per_hour": {"type": "integer", "minimum": 0, "description": "PBS key: DryingPerHour"},
+                "yield": {
+                  "type": "object",
+                  "properties": {
+                    "min": {"type": "integer", "minimum": 0},
+                    "max": {"type": "integer", "minimum": 1}
+                  },
+                  "required": ["min", "max"],
+                  "additionalProperties": false,
+                  "description": "PBS key: Yield"
+                }
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

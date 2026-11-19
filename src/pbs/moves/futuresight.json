@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FUTURESIGHT",
+  "real_name": "Future Sight",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "AttackTwoTurnsLater",
+  "real_description": "Two turns after this move is used, a hunk of psychic energy attacks the target."
+}

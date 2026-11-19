@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM02",
+  "real_name": "HM02",
+  "real_name_plural": "HM02s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "FLY",
+  "real_description": "The user soars and then strikes on the next turn. This can also be used to fly to any familiar town."
+}

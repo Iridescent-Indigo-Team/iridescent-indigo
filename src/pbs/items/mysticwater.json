@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MYSTICWATER",
+  "real_name": "Mystic Water",
+  "real_name_plural": "Mystic Waters",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 500,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. It is a teardrop-shaped gem that ups the power of Water-type moves."
+}

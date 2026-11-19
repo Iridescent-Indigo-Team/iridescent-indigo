@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHELLSMASH",
+  "real_name": "Shell Smash",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "User",
+  "function_code": "LowerUserDefSpDef1RaiseUserAtkSpAtkSpd2",
+  "real_description": "The user breaks its shell, lowering its defenses but sharply raising attacking and Speed stats."
+}

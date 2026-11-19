@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CATCHINGCHARM",
+  "real_name": "Catching Charm",
+  "real_name_plural": "Catching Charms",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A charm said to increase the chance of getting a critical catch. The charm doesn't shake much."
+}

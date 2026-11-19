@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RESISTFEATHER",
+  "real_name": "Resist Feather",
+  "real_name_plural": "Resist Feathers",
+  "pocket": 2,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_20"],
+  "real_description": "An item for use on a Pokémon. It slightly increases the base Defense stat of a single Pokémon."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RESETURGE",
+  "real_name": "Reset Urge",
+  "real_name_plural": "Reset Urges",
+  "pocket": 7,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "When used, it restores any stat changes of an ally Pokémon."
+}

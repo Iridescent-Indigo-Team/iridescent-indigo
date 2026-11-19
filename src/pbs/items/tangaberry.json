@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TANGABERRY",
+  "real_name": "Tanga Berry",
+  "real_name_plural": "Tanga Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_BUG_80"],
+  "real_description": "Weakens a supereffective Bug-type attack against the holding Pokémon."
+}

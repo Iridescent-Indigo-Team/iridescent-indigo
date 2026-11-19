@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ZINGZAP",
+  "real_name": "Zing Zap",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "A strong electric blast crashes down on the target. This may also make the target flinch."
+}

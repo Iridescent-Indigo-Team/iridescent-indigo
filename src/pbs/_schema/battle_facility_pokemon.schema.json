@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Battle facility Pokémon file",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "species": {"type": "string"},
+                "item": {"type": "string"},
+                "nature": {
+                  "type": "string",
+                  "enum": [
+                    "HARDY",
+                    "LONELY",
+                    "BRAVE",
+                    "ADAMANT",
+                    "NAUGHTY",
+                    "BOLD",
+                    "DOCILE",
+                    "RELAXED",
+                    "IMPISH",
+                    "LAX",
+                    "TIMID",
+                    "HASTY",
+                    "SERIOUS",
+                    "JOLLY",
+                    "NAIVE",
+                    "MODEST",
+                    "MILD",
+                    "QUIET",
+                    "BASHFUL",
+                    "RASH",
+                    "CALM",
+                    "GENTLE",
+                    "SASSY",
+                    "CAREFUL",
+                    "QUIRKY"
+                  ]
+                },
+                "evs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["HP", "ATK", "DEF", "SA", "SPATK", "SD", "SPDEF", "SPD"]
+                  }
+                },
+                "moves": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "maxItems": 4
+                }
+              },
+              "required": ["species", "nature", "evs", "moves"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

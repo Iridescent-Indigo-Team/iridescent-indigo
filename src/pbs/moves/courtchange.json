@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "COURTCHANGE",
+  "real_name": "Court Change",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "SwapSideEffects",
+  "flags": ["CanMirrorMove"],
+  "real_description": "With its mysterious power, the user swaps the effects on either side of the field."
+}

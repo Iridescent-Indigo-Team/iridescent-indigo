@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SOULDEW",
+  "real_name": "Soul Dew",
+  "real_name_plural": "Soul Dews",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_30"],
+  "real_description": "A wondrous orb to be held by either Latios or Latias. It raises the power of Psychic- and Dragon-type moves."
+}

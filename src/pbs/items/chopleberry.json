@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHOPLEBERRY",
+  "real_name": "Chople Berry",
+  "real_name_plural": "Chople Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FIGHTING_80"],
+  "real_description": "Weakens a supereffective Fighting-type attack against the holding Pokémon."
+}

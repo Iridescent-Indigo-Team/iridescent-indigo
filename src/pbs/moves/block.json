@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BLOCK",
+  "real_name": "Block",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TrapTargetInBattle",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user blocks the target's way with arms spread wide to prevent escape."
+}

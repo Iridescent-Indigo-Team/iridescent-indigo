@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CIRCLETHROW",
+  "real_name": "Circle Throw",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "priority": -6,
+  "function_code": "SwitchOutTargetDamagingMove",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user throws the target and drags out another Pokémon in its party. In the wild, the battle ends."
+}

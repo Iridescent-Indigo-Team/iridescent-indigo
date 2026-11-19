@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LASERFOCUS",
+  "real_name": "Laser Focus",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "User",
+  "function_code": "EnsureNextCriticalHit",
+  "real_description": "The user focuses intensely. The attack on the next turn always results in a critical hit."
+}

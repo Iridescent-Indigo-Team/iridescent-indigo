@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "RUINMANIAC",
+  "real_name": "Ruin Maniac",
+  "gender": "Male",
+  "base_money": 48
+}

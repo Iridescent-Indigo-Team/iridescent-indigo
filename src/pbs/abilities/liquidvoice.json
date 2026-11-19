@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "LIQUIDVOICE",
+  "real_name": "Liquid Voice",
+  "real_description": "Its sound-based moves become Water-type."
+}

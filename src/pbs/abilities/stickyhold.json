@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STICKYHOLD",
+  "real_name": "Sticky Hold",
+  "real_description": "Protects the Pokémon from item theft."
+}

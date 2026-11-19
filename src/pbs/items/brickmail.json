@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BRICKMAIL",
+  "real_name": "Brick Mail",
+  "real_name_plural": "Brick Mail",
+  "real_portion_name": "piece of Brick Mail",
+  "real_portion_name_plural": "pieces of Brick Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a tough-looking brick pattern. Let a Pokémon hold it for delivery."
+}

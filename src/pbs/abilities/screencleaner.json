@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SCREENCLEANER",
+  "real_name": "Screen Cleaner",
+  "real_description": "On entering battle, clears effects of Reflect, etc."
+}

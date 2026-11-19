@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MOSAICMAIL",
+  "real_name": "Mosaic Mail",
+  "real_name_plural": "Mosaic Mail",
+  "real_portion_name": "piece of Mosaic Mail",
+  "real_portion_name_plural": "pieces of Mosaic Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a vivid rainbow pattern. Let a Pokémon hold it for delivery."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHARM",
+  "real_name": "Charm",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAttack2",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user charmingly gazes at the foe, making it less wary. The target's Attack is harshly lowered."
+}

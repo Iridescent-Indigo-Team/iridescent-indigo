@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ABILITYCAPSULE",
+  "real_name": "Ability Capsule",
+  "real_name_plural": "Ability Capsule",
+  "pocket": 2,
+  "price": 10000,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "real_description": "A capsule that allows a Pokémon with two Abilities to switch between these Abilities when it is used."
+}

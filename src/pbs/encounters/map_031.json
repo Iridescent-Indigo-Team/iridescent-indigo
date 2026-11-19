@@ -1,0 +1,77 @@
+{
+  "$schema": "../_schema/encounters.entry.schema.json",
+  "map": 31,
+  "types": [
+    {
+      "type": "Land",
+      "step_chance": 21,
+      "slots": [
+        {"chance": 30, "species": "NIDORANfE", "min_level": 12, "max_level": 15},
+        {"chance": 30, "species": "NIDORANmA", "min_level": 12, "max_level": 15},
+        {"chance": 20, "species": "PIKACHU", "min_level": 14, "max_level": 17},
+        {"chance": 10, "species": "EEVEE", "min_level": 15},
+        {"chance": 10, "species": "PONYTA", "min_level": 13, "max_level": 15}
+      ]
+    },
+    {
+      "type": "Water",
+      "step_chance": 2,
+      "slots": [
+        {"chance": 60, "species": "SURSKIT", "min_level": 13, "max_level": 14},
+        {"chance": 35, "species": "LOTAD", "min_level": 14},
+        {"chance": 5, "species": "LOTAD", "min_level": 15}
+      ]
+    },
+    {
+      "type": "OldRod",
+      "slots": [
+        {"chance": 70, "species": "MAGIKARP", "min_level": 6, "max_level": 11},
+        {"chance": 30, "species": "MAGIKARP", "min_level": 10, "max_level": 17}
+      ]
+    },
+    {
+      "type": "GoodRod",
+      "slots": [
+        {"chance": 60, "species": "POLIWAG", "min_level": 12, "max_level": 15},
+        {"chance": 20, "species": "PSYDUCK", "min_level": 11, "max_level": 14},
+        {"chance": 20, "species": "WOOPER", "min_level": 13, "max_level": 17}
+      ]
+    },
+    {
+      "type": "SuperRod",
+      "slots": [
+        {"chance": 40, "species": "CHINCHOU", "min_level": 11, "max_level": 12},
+        {"chance": 40, "species": "REMORAID", "min_level": 12, "max_level": 14},
+        {"chance": 20, "species": "LUVDISC", "min_level": 10, "max_level": 16}
+      ]
+    },
+    {
+      "type": "RockSmash",
+      "step_chance": 50,
+      "slots": [
+        {"chance": 60, "species": "NOSEPASS", "min_level": 13, "max_level": 14},
+        {"chance": 40, "species": "GEODUDE", "min_level": 12, "max_level": 15}
+      ]
+    },
+    {
+      "type": "HeadbuttLow",
+      "slots": [
+        {"chance": 30, "species": "PINECO", "min_level": 14, "max_level": 17},
+        {"chance": 25, "species": "COMBEE", "min_level": 15, "max_level": 17},
+        {"chance": 20, "species": "PINECO", "min_level": 14, "max_level": 16},
+        {"chance": 10, "species": "HERACROSS", "min_level": 16, "max_level": 18},
+        {"chance": 9, "species": "HERACROSS", "min_level": 16, "max_level": 17},
+        {"chance": 5, "species": "COMBEE", "min_level": 15, "max_level": 16},
+        {"chance": 1, "species": "MUNCHLAX", "min_level": 13, "max_level": 18}
+      ]
+    },
+    {
+      "type": "HeadbuttHigh",
+      "slots": [
+        {"chance": 50, "species": "SEEDOT", "min_level": 14, "max_level": 17},
+        {"chance": 30, "species": "SHROOMISH", "min_level": 14, "max_level": 17},
+        {"chance": 20, "species": "BURMY", "min_level": 12, "max_level": 15}
+      ]
+    }
+  ]
+}

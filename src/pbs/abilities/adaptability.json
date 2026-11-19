@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ADAPTABILITY",
+  "real_name": "Adaptability",
+  "real_description": "Powers up moves of the same type."
+}

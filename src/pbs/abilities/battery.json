@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "BATTERY",
+  "real_name": "Battery",
+  "real_description": "Powers up ally Pokémon's special moves."
+}

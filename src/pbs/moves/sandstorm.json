@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SANDSTORM",
+  "real_name": "Sandstorm",
+  "type": "ROCK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartSandstormWeather",
+  "real_description": "Summons a five-turn sandstorm to hurt all combatants except the Rock, Ground, and Steel types."
+}

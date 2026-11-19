@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEARTSTAMP",
+  "real_name": "Heart Stamp",
+  "type": "PSYCHIC",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user unleashes a vicious blow after its cute act makes the foe less wary. It may also cause flinching."
+}

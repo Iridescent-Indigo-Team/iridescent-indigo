@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GULPMISSILE",
+  "real_name": "Gulp Missile",
+  "real_description": "Catches prey via Surf or Dive, spits it out when hit."
+}

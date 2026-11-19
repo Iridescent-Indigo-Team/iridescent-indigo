@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKETCH",
+  "real_name": "Sketch",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 1,
+  "target": "NearOther",
+  "function_code": "ReplaceMoveWithTargetLastMoveUsed",
+  "real_description": "It enables the user to permanently learn the move last used by the foe. Once used, Sketch disappears."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BIGNUGGET",
+  "real_name": "Big Nugget",
+  "real_name_plural": "Big Nuggets",
+  "pocket": 1,
+  "price": 40000,
+  "flags": ["Fling_30"],
+  "real_description": "A big nugget of pure gold that gives off a lustrous gleam. A maniac will buy it for a high price."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LAGGINGTAIL",
+  "real_name": "Lagging Tail",
+  "real_name_plural": "Lagging Tails",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 25,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It is tremendously heavy and makes the holder move slower than usual."
+}

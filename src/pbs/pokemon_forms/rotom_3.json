@@ -1,0 +1,17 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ROTOM",
+  "form": 3,
+  "real_form_name": "Frost Rotom",
+  "types": ["ELECTRIC", "ICE"],
+  "base_stats": {
+    "hp": 50,
+    "attack": 65,
+    "defense": 107,
+    "speed": 86,
+    "special_attack": 105,
+    "special_defense": 107
+  },
+  "base_exp": 182,
+  "real_pokedex_entry": "Rotom assumes this form when it takes over a refrigerator powered by a special motor. It battles by spewing cold air."
+}

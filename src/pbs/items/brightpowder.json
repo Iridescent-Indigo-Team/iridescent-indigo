@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BRIGHTPOWDER",
+  "real_name": "Bright Powder",
+  "real_name_plural": "Bright Powders",
+  "real_portion_name": "bag of Bright Powder",
+  "real_portion_name_plural": "bags of Bright Powder",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "bp_price": 48,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It casts a tricky glare that lowers the opponent's accuracy."
+}

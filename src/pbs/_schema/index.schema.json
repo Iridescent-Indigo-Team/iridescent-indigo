@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBS dataset index",
+  "description": "The order of the entries of each PBS file of a dataset. Entries are file names (without .json) in this folder.",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string", "description": "PBS file <name>_<suffix>.txt; empty for <name>.txt."},
+          "bom": {"type": "boolean", "description": "Write a UTF-8 BOM at the start of the file."},
+          "entries": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

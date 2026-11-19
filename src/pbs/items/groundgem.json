@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GROUNDGEM",
+  "real_name": "Ground Gem",
+  "real_name_plural": "Ground Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of land. When held, it strengthens the power of a Ground-type move only once."
+}

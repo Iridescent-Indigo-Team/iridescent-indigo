@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ELECTRICSEED",
+  "real_name": "Electric Seed",
+  "real_name_plural": "Electric Seeds",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 2000,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It boosts Defense on Electric Terrain. It can only be used once."
+}

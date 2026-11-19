@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MENTALHERB",
+  "real_name": "Mental Herb",
+  "real_name_plural": "Mental Herbs",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 15,
+  "flags": ["Fling_10"],
+  "real_description": "An item to be held by a Pokémon. It snaps the holder out of infatuation. It can be used only once."
+}

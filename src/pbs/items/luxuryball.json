@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LUXURYBALL",
+  "real_name": "Luxury Ball",
+  "real_name_plural": "Luxury Balls",
+  "pocket": 3,
+  "price": 3000,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A comfortable Poké Ball that makes a caught wild Pokémon quickly grow friendly."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LEVELBALL",
+  "real_name": "Level Ball",
+  "real_name_plural": "Level Balls",
+  "pocket": 3,
+  "price": 300,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A Poké Ball for catching Pokémon that are a lower level than your own."
+}

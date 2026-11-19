@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "OVERGROW",
+  "real_name": "Overgrow",
+  "real_description": "Powers up Grass-type moves in a pinch."
+}

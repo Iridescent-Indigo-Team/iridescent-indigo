@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MAGNETPULL",
+  "real_name": "Magnet Pull",
+  "real_description": "Prevents Steel-type Pokémon from escaping."
+}

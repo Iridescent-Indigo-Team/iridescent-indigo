@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ANALYTIC",
+  "real_name": "Analytic",
+  "real_description": "Boosts move power when the Pokémon moves last."
+}

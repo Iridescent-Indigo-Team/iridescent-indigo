@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "IRONFIST",
+  "real_name": "Iron Fist",
+  "real_description": "Boosts the power of punching moves."
+}

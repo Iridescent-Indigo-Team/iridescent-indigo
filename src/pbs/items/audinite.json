@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "AUDINITE",
+  "real_name": "Audinite",
+  "real_name_plural": "Audinites",
+  "pocket": 1,
+  "price": 0,
+  "bp_price": 50,
+  "flags": ["MegaStone", "Fling_80"],
+  "real_description": "One of a variety of mysterious Mega Stones. Have Audino hold it, and it will be able to Mega Evolve."
+}

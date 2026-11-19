@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FACADE",
+  "real_name": "Facade",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfUserPoisonedBurnedParalyzed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "An attack move that doubles its power if the user is poisoned, burned, or has paralysis."
+}

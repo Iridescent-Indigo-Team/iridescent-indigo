@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SLEEPPOWDER",
+  "real_name": "Sleep Powder",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 75,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SleepTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Powder"],
+  "real_description": "The user scatters a big cloud of sleep-inducing dust around the target."
+}

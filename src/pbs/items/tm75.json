@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM75",
+  "real_name": "TM75",
+  "real_name_plural": "TM75s",
+  "pocket": 4,
+  "price": 1500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SWORDSDANCE",
+  "real_description": "A frenetic dance to uplift the fighting spirit. This sharply raises the user's Attack stat."
+}

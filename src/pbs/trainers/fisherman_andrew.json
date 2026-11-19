@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "FISHERMAN",
+  "name": "Andrew",
+  "real_lose_text": "Washed out!",
+  "pokemon": [
+    {"species": "MAGIKARP", "level": 14},
+    {"species": "MAGIKARP", "level": 18}
+  ]
+}

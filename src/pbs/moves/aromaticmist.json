@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AROMATICMIST",
+  "real_name": "Aromatic Mist",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearAlly",
+  "function_code": "RaiseTargetSpDef1",
+  "real_description": "The user raises the Sp. Def stat of an ally Pokémon by using a mysterious aroma."
+}

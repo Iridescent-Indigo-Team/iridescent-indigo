@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SACREDASH",
+  "real_name": "Sacred Ash",
+  "real_name_plural": "Sacred Ashes",
+  "real_portion_name": "bag of Sacred Ash",
+  "real_portion_name_plural": "bags of Sacred Ash",
+  "pocket": 2,
+  "price": 50000,
+  "field_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "It revives all fainted Pokémon. In doing so, it also fully restores their HP."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VITALTHROW",
+  "real_name": "Vital Throw",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "priority": -1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks last. In return, this throw move is guaranteed not to miss."
+}

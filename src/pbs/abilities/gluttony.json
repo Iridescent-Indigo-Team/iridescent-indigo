@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GLUTTONY",
+  "real_name": "Gluttony",
+  "real_description": "Encourages the early use of a held Berry."
+}

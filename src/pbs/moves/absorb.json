@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ABSORB",
+  "real_name": "Absorb",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "A nutrient-draining attack. The user's HP is restored by half the damage taken by the target."
+}

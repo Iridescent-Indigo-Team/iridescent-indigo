@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "IONDELUGE",
+  "real_name": "Ion Deluge",
+  "type": "ELECTRIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 25,
+  "target": "BothSides",
+  "priority": 1,
+  "function_code": "NormalMovesBecomeElectric",
+  "real_description": "The user disperses electrically charged particles. Normal-type moves become Electric-type."
+}

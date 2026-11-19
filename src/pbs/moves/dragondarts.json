@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONDARTS",
+  "real_name": "Dragon Darts",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitTwoTimesTargetThenTargetAlly",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks twice using Dreepy. If there are two targets, this move hits each one once."
+}

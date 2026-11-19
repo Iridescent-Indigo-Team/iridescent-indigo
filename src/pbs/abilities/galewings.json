@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GALEWINGS",
+  "real_name": "Gale Wings",
+  "real_description": "Flying-type moves gain priority when its HP is full."
+}

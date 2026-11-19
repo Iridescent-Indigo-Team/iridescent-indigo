@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "INCINERATE",
+  "real_name": "Incinerate",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearFoes",
+  "function_code": "DestroyTargetBerryOrGem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks the foe with fire. The target's held Berry becomes burnt up and unusable."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MEGAPUNCH",
+  "real_name": "Mega Punch",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 85,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The target is slugged by a punch thrown with muscle-packed power."
+}

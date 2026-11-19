@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "POISONHEAL",
+  "real_name": "Poison Heal",
+  "real_description": "Restores HP if the Pokémon is poisoned."
+}

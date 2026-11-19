@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHELLSIDEARM",
+  "real_name": "Shell Side Arm",
+  "type": "POISON",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "CategoryDependsOnHigherDamagePoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "Inflicts physical or special damage, whichever will be more effective. May also poison the target."
+}

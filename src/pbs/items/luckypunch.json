@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LUCKYPUNCH",
+  "real_name": "Lucky Punch",
+  "real_name_plural": "Lucky Punches",
+  "pocket": 1,
+  "price": 1000,
+  "bp_price": 7,
+  "flags": ["Fling_40"],
+  "real_description": "An item to be held by Chansey. It is a pair of gloves that boosts Chansey's critical-hit ratio."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EARLYBIRD",
+  "real_name": "Early Bird",
+  "real_description": "The Pokémon awakens quickly from sleep."
+}

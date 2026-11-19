@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "STARDUST",
+  "real_name": "Stardust",
+  "real_name_plural": "Stardusts",
+  "real_portion_name": "bag of Stardust",
+  "real_portion_name_plural": "bags of Stardust",
+  "pocket": 1,
+  "price": 3000,
+  "flags": ["Fling_30"],
+  "real_description": "Lovely, red-colored sand with a loose, silky feel. It can be sold at a high price to shops."
+}

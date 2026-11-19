@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PINMISSILE",
+  "real_name": "Pin Missile",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 95,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Sharp spikes are shot at the target in rapid succession. They hit two to five times in a row."
+}

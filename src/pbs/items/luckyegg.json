@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LUCKYEGG",
+  "real_name": "Lucky Egg",
+  "real_name_plural": "Lucky Eggs",
+  "pocket": 1,
+  "price": 10000,
+  "bp_price": 77,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. It is an egg filled with happiness that earns extra Exp. Points in battle."
+}

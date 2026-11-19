@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GRASSWHISTLE",
+  "real_name": "Grass Whistle",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 55,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SleepTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "The user plays a pleasant melody that lulls the target into a deep sleep."
+}

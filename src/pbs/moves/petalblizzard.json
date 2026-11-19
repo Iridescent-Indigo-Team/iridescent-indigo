@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PETALBLIZZARD",
+  "real_name": "Petal Blizzard",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearOthers",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user stirs up a violent petal blizzard and attacks everything around it."
+}

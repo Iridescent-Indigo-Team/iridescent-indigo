@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RAREBONE",
+  "real_name": "Rare Bone",
+  "real_name_plural": "Rare Bones",
+  "pocket": 1,
+  "price": 5000,
+  "flags": ["Fling_100"],
+  "real_description": "A bone that is extremely valuable for Pokémon archaeology. It can be sold for a high price to shops."
+}

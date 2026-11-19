@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SWEETKISS",
+  "real_name": "Sweet Kiss",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 75,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user kisses the target with a sweet, angelic cuteness that causes confusion."
+}

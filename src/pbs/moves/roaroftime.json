@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROAROFTIME",
+  "real_name": "Roar of Time",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 150,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user blasts the target with power that distorts even time. The user must rest on the next turn."
+}

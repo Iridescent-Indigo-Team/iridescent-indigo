@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM43",
+  "real_name": "TM43",
+  "real_name_plural": "TM43s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_70"],
+  "move": "VOLTSWITCH",
+  "real_description": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting."
+}

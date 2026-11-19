@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BLASTOISE",
+  "form": 1,
+  "real_form_name": "Mega Blastoise",
+  "mega_stone": "BLASTOISINITE",
+  "base_stats": {
+    "hp": 79,
+    "attack": 103,
+    "defense": 120,
+    "speed": 78,
+    "special_attack": 135,
+    "special_defense": 115
+  },
+  "base_exp": 315,
+  "abilities": ["MEGALAUNCHER"],
+  "hidden_abilities": ["MEGALAUNCHER"],
+  "weight": 101.1,
+  "real_pokedex_entry": "The cannon on its back is as powerful as a tank gun. Its tough legs and back enable it to withstand the recoil from firing the cannon.",
+  "generation": 6
+}

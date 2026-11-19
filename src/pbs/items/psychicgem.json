@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PSYCHICGEM",
+  "real_name": "Psychic Gem",
+  "real_name_plural": "Psychic Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of the mind. When held, it strengthens the power of a Psychic-type move only once."
+}

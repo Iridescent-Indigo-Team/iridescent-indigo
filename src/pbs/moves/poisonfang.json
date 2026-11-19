@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POISONFANG",
+  "real_name": "Poison Fang",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BadPoisonTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 50,
+  "real_description": "The user bites the target with toxic fangs. It may also leave the target badly poisoned."
+}

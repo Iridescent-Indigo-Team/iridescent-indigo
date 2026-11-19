@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CASTFORM",
+  "form": 1,
+  "real_form_name": "Sunny Form",
+  "types": ["FIRE"],
+  "color": "Red",
+  "real_pokedex_entry": "This is the form Castform takes on the brightest of days. Its skin is unexpectedly hot to the touch, so approach with care."
+}

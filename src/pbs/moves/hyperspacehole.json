@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPERSPACEHOLE",
+  "real_name": "Hyperspace Hole",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RemoveProtectionsBypassSubstitute",
+  "flags": ["CanMirrorMove", "CannotMetronome"],
+  "real_description": "Using a hyperspace hole, the user appears right next to the target and strikes. Skips protections."
+}

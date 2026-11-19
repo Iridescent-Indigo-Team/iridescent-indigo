@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "KNOCKOFF",
+  "real_name": "Knock Off",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "RemoveTargetItem",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user slaps down the target's held item, preventing that item from being used in the battle."
+}

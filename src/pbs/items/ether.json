@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ETHER",
+  "real_name": "Ether",
+  "real_name_plural": "Ethers",
+  "pocket": 2,
+  "price": 1200,
+  "bp_price": 4,
+  "field_use": "OnPokemon",
+  "battle_use": "OnMove",
+  "flags": ["Fling_30"],
+  "real_description": "It restores the PP of a Pokémon's selected move by a maximum of 10 points."
+}

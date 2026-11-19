@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TWINEEDLE",
+  "real_name": "Twineedle",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 25,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoTimesPoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The foe is stabbed twice by a pair of stingers. It may also poison the target."
+}

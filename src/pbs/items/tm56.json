@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM56",
+  "real_name": "TM56",
+  "real_name_plural": "TM56s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "FLING",
+  "real_description": "The user flings its held item at the target to attack. This move's power and effects depend on the item."
+}

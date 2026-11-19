@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SHELLOS",
+  "form": 1,
+  "real_form_name": "East Sea",
+  "color": "Blue",
+  "real_pokedex_entry": "Its appearance changes depending on the environment. One theory suggests that living in cold seas causes Shellos to take on this form."
+}

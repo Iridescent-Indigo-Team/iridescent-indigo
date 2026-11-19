@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BASCULIN",
+  "form": 1,
+  "real_form_name": "Blue-Striped",
+  "abilities": ["ROCKHEAD", "ADAPTABILITY"],
+  "real_pokedex_entry": "Even Basculin, which devours everything it can with its huge jaws, is nothing more than food to organisms stronger than itself.",
+  "wild_item_uncommon": ["DEEPSEASCALE"]
+}

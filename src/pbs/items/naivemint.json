@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "NAIVEMINT",
+  "real_name": "Naive Mint",
+  "real_name_plural": "Naive Mints",
+  "real_portion_name": "sprig of Naive Mint",
+  "real_portion_name_plural": "sprigs of Naive Mint",
+  "pocket": 2,
+  "price": 20,
+  "bp_price": 50,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "When a Pokémon smells this mint, its Speed will grow more easily, but its Sp. Def will grow more slowly."
+}

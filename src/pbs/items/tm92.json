@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM92",
+  "real_name": "TM92",
+  "real_name_plural": "TM92s",
+  "pocket": 4,
+  "price": 5500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "TRICKROOM",
+  "real_description": "The user creates a bizarre area in which slower Pokémon get to move first for five turns."
+}

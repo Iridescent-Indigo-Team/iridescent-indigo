@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WHITEFLUTE",
+  "real_name": "White Flute",
+  "real_name_plural": "White Flutes",
+  "pocket": 1,
+  "price": 20,
+  "field_use": "Direct",
+  "flags": ["Fling_30"],
+  "consumable": false,
+  "real_description": "A white flute made from blown glass. Its melody makes wild Pokémon more likely to appear."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TELEKINESIS",
+  "real_name": "Telekinesis",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "StartTargetAirborneAndAlwaysHitByMoves",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user makes the target float with its psychic power. The target is easier to hit for three turns."
+}

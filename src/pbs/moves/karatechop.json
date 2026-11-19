@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "KARATECHOP",
+  "real_name": "Karate Chop",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The target is attacked with a sharp chop. Critical hits land more easily."
+}

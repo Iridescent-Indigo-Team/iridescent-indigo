@@ -1,0 +1,6185 @@
+{
+  "$schema": "../_schema/battle_facility_pokemon.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "species": "SUNKERN",
+          "item": "LAXINCENSE",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["MEGADRAIN", "HELPINGHAND", "SUNNYDAY", "LIGHTSCREEN"]
+        },
+        {
+          "species": "AZURILL",
+          "item": "CHERIBERRY",
+          "nature": "RASH",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERPULSE", "ATTRACT", "SING", "CHARM"]
+        },
+        {
+          "species": "CATERPIE",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["TACKLE", "STRINGSHOT"]
+        },
+        {
+          "species": "WEEDLE",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["POISONSTING", "STRINGSHOT"]
+        },
+        {
+          "species": "WURMPLE",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["TACKLE", "STRINGSHOT", "POISONSTING"]
+        },
+        {
+          "species": "RALTS",
+          "item": "TWISTEDSPOON",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["CONFUSION", "IMPRISON", "DOUBLETEAM", "LIGHTSCREEN"]
+        },
+        {
+          "species": "MAGIKARP",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["FLAIL"]
+        },
+        {
+          "species": "FEEBAS",
+          "item": "FOCUSBAND",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["FLAIL", "MIRRORCOAT"]
+        },
+        {
+          "species": "METAPOD",
+          "item": "LAXINCENSE",
+          "nature": "BASHFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["HARDEN"]
+        },
+        {
+          "species": "KAKUNA",
+          "item": "LAXINCENSE",
+          "nature": "BASHFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["HARDEN"]
+        },
+        {
+          "species": "PICHU",
+          "item": "SITRUSBERRY",
+          "nature": "RASH",
+          "evs": ["HP", "SA"],
+          "moves": ["SWEETKISS", "THUNDERWAVE", "ATTRACT", "SHOCKWAVE"]
+        },
+        {
+          "species": "SILCOON",
+          "item": "LAXINCENSE",
+          "nature": "BASHFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["HARDEN"]
+        },
+        {
+          "species": "CASCOON",
+          "item": "LAXINCENSE",
+          "nature": "BASHFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["HARDEN"]
+        },
+        {
+          "species": "IGGLYBUFF",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["SWEETKISS", "SING", "ATTRACT", "SEISMICTOSS"]
+        },
+        {
+          "species": "WOOPER",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["YAWN", "DIG", "WATERPULSE", "RAINDANCE"]
+        },
+        {
+          "species": "TYROGUE",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["MACHPUNCH", "PROTECT", "DOUBLETEAM", "FACADE"]
+        },
+        {
+          "species": "SENTRET",
+          "item": "KINGSROCK",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["QUICKATTACK", "FOLLOWME", "HELPINGHAND", "ASSIST"]
+        },
+        {
+          "species": "CLEFFA",
+          "item": "LAXINCENSE",
+          "nature": "SERIOUS",
+          "evs": ["HP", "SA"],
+          "moves": ["SWEETKISS", "SING", "ATTRACT", "METRONOME"]
+        },
+        {
+          "species": "SEEDOT",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["BULLETSEED", "BIDE", "DEFENSECURL", "ROLLOUT"]
+        },
+        {
+          "species": "LOTAD",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["RAINDANCE", "WATERPULSE", "SUNNYDAY", "MEGADRAIN"]
+        },
+        {
+          "species": "POOCHYENA",
+          "item": "PETAYABERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["CRUNCH", "SWAGGER", "ROAR", "SANDATTACK"]
+        },
+        {
+          "species": "SHEDINJA",
+          "item": "LAXINCENSE",
+          "nature": "NAIVE",
+          "evs": ["HP", "SPD"],
+          "moves": ["SHADOWBALL", "CONFUSERAY", "SILVERWIND", "GRUDGE"]
+        },
+        {
+          "species": "MAKUHITA",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["FAKEOUT", "SEISMICTOSS", "DETECT", "WHIRLWIND"]
+        },
+        {
+          "species": "WHISMUR",
+          "item": "CHERIBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["UPROAR", "SWAGGER", "BODYSLAM", "SMELLINGSALTS"]
+        },
+        {
+          "species": "ZIGZAGOON",
+          "item": "SILKSCARF",
+          "nature": "TIMID",
+          "evs": ["HP", "ATK"],
+          "moves": ["HEADBUTT", "PINMISSILE", "SWIFT", "SANDATTACK"]
+        },
+        {
+          "species": "ZUBAT",
+          "item": "CHERIBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "ATK"],
+          "moves": ["POISONFANG", "WHIRLWIND", "CONFUSERAY", "AERIALACE"]
+        },
+        {
+          "species": "TOGEPI",
+          "item": "LAXINCENSE",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["RETURN", "YAWN", "WISH", "SWEETKISS"]
+        },
+        {
+          "species": "SPINARAK",
+          "item": "LIECHIBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SIGNALBEAM", "NIGHTSHADE", "SPIDERWEB", "SCARYFACE"]
+        },
+        {
+          "species": "MARILL",
+          "item": "MYSTICWATER",
+          "nature": "GENTLE",
+          "evs": ["HP", "ATK"],
+          "moves": ["WATERPULSE", "RAINDANCE", "LIGHTSCREEN", "RETURN"]
+        },
+        {
+          "species": "HOPPIP",
+          "item": "LAXINCENSE",
+          "nature": "LAX",
+          "evs": ["DEF", "SD"],
+          "moves": ["MEGADRAIN", "LEECHSEED", "SLEEPPOWDER", "STUNSPORE"]
+        },
+        {
+          "species": "SLUGMA",
+          "item": "SITRUSBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EMBER", "ROCKSLIDE", "YAWN", "BODYSLAM"]
+        },
+        {
+          "species": "SWINUB",
+          "item": "SITRUSBERRY",
+          "nature": "GENTLE",
+          "evs": ["ATK", "SA"],
+          "moves": ["ICYWIND", "DIG", "ROCKTOMB", "ENDURE"]
+        },
+        {
+          "species": "SMEARGLE",
+          "item": "KINGSROCK",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["EXTREMESPEED", "FAKEOUT", "QUICKATTACK", "MACHPUNCH"]
+        },
+        {
+          "species": "PIDGEY",
+          "item": "SHARPBEAK",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["GUST", "SANDATTACK", "WHIRLWIND", "QUICKATTACK"]
+        },
+        {
+          "species": "RATTATA",
+          "item": "KINGSROCK",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["HYPERFANG", "PURSUIT", "QUICKATTACK", "SWAGGER"]
+        },
+        {
+          "species": "WYNAUT",
+          "item": "LAXINCENSE",
+          "nature": "JOLLY",
+          "evs": ["DEF", "SD"],
+          "moves": ["ENCORE", "COUNTER", "MIRRORCOAT", "CHARM"]
+        },
+        {
+          "species": "SKITTY",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["SING", "ATTRACT", "CHARM", "DOUBLESLAP"]
+        },
+        {
+          "species": "SPEAROW",
+          "item": "LIECHIBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["FURYATTACK", "PURSUIT", "MIRRORMOVE", "PROTECT"]
+        },
+        {
+          "species": "HOOTHOOT",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["CONFUSION", "HYPNOSIS", "SUPERSONIC", "REFLECT"]
+        },
+        {
+          "species": "DIGLETT",
+          "item": "KINGSROCK",
+          "nature": "NAIVE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["MAGNITUDE", "SLASH", "ROCKTOMB", "SANDATTACK"]
+        },
+        {
+          "species": "LEDYBA",
+          "item": "SITRUSBERRY",
+          "nature": "BASHFUL",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYBEAM", "AGILITY", "BATONPASS", "LIGHTSCREEN"]
+        },
+        {
+          "species": "NINCADA",
+          "item": "PECHABERRY",
+          "nature": "CALM",
+          "evs": ["HP", "ATK"],
+          "moves": ["MUDSLAP", "DIG", "TOXIC", "PROTECT"]
+        },
+        {
+          "species": "SURSKIT",
+          "item": "MYSTICWATER",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["BUBBLEBEAM", "RAINDANCE", "SWEETSCENT", "QUICKATTACK"]
+        },
+        {
+          "species": "JIGGLYPUFF",
+          "item": "LAXINCENSE",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SING", "WISH", "MIMIC", "DOUBLESLAP"]
+        },
+        {
+          "species": "TAILLOW",
+          "item": "SALACBERRY",
+          "nature": "GENTLE",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["FLY", "QUICKATTACK", "ENDEAVOR", "FOCUSENERGY"]
+        },
+        {
+          "species": "WINGULL",
+          "item": "PERSIMBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERPULSE", "FLY", "QUICKATTACK", "STEELWING"]
+        },
+        {
+          "species": "NIDORANmA",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEKICK", "POISONSTING", "DISABLE", "HELPINGHAND"]
+        },
+        {
+          "species": "NIDORANfE",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["CRUNCH", "DOUBLEKICK", "FLATTER", "HELPINGHAND"]
+        },
+        {
+          "species": "KIRLIA",
+          "item": "WHITEHERB",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["CONFUSION", "WILLOWISP", "FUTURESIGHT", "LIGHTSCREEN"]
+        },
+        {
+          "species": "MAREEP",
+          "item": "CHERIBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["SHOCKWAVE", "FLASH", "REFLECT", "COTTONSPORE"]
+        },
+        {
+          "species": "MEDITITE",
+          "item": "MENTALHERB",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["HIGHJUMPKICK", "MEDITATE", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "SLAKOTH",
+          "item": "LEFTOVERS",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["YAWN", "SCRATCH", "ENCORE", "COUNTER"]
+        },
+        {
+          "species": "PARAS",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["SPORE", "LEECHLIFE", "SLASH", "LIGHTSCREEN"]
+        },
+        {
+          "species": "EKANS",
+          "item": "POISONBARB",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["ACID", "DIG", "SCREECH", "TORMENT"]
+        },
+        {
+          "species": "DITTO",
+          "item": "METALPOWDER",
+          "nature": "HARDY",
+          "evs": ["HP", "SPD"],
+          "moves": ["TRANSFORM"]
+        },
+        {
+          "species": "BARBOACH",
+          "item": "FOCUSBAND",
+          "nature": "BASHFUL",
+          "evs": ["ATK", "SA"],
+          "moves": ["MAGNITUDE", "WATERPULSE", "SPARK", "FUTURESIGHT"]
+        },
+        {
+          "species": "MEOWTH",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "BITE", "SCREECH", "FAKEOUT"]
+        },
+        {
+          "species": "PINECO",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SELFDESTRUCT", "TAKEDOWN", "REFLECT", "LIGHTSCREEN"]
+        },
+        {
+          "species": "TRAPINCH",
+          "item": "LAXINCENSE",
+          "nature": "SERIOUS",
+          "evs": ["HP", "ATK"],
+          "moves": ["TOXIC", "DIG", "SANDSTORM", "SANDATTACK"]
+        },
+        {
+          "species": "SPHEAL",
+          "item": "NEVERMELTICE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBALL", "WATERPULSE", "HAIL", "MUDSLAP"]
+        },
+        {
+          "species": "HORSEA",
+          "item": "PETAYABERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERGUN", "AGILITY", "ICYWIND", "TWISTER"]
+        },
+        {
+          "species": "SHROOMISH",
+          "item": "MIRACLESEED",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["SPORE", "BULLETSEED", "LEECHSEED", "HEADBUTT"]
+        },
+        {
+          "species": "SHUPPET",
+          "item": "RAWSTBERRY",
+          "nature": "RASH",
+          "evs": ["HP", "ATK"],
+          "moves": ["WILLOWISP", "NIGHTSHADE", "GRUDGE", "KNOCKOFF"]
+        },
+        {
+          "species": "DUSKULL",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SPD"],
+          "moves": ["SKILLSWAP", "NIGHTSHADE", "DISABLE", "CONFUSERAY"]
+        },
+        {
+          "species": "ELECTRIKE",
+          "item": "CHERIBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["SPARK", "THUNDERWAVE", "ROAR", "QUICKATTACK"]
+        },
+        {
+          "species": "VULPIX",
+          "item": "RAWSTBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["WILLOWISP", "CONFUSERAY", "FIRESPIN", "QUICKATTACK"]
+        },
+        {
+          "species": "PIKACHU",
+          "item": "LIGHTBALL",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["THUNDERPUNCH", "THUNDERWAVE", "DOUBLETEAM", "QUICKATTACK"]
+        },
+        {
+          "species": "SANDSHREW",
+          "item": "SOFTSAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["DIG", "ROCKTOMB", "SANDSTORM", "SANDATTACK"]
+        },
+        {
+          "species": "POLIWAG",
+          "item": "MYSTICWATER",
+          "nature": "RELAXED",
+          "evs": ["HP", "SPD"],
+          "moves": ["HYPNOSIS", "ICYWIND", "WATERGUN", "RAINDANCE"]
+        },
+        {
+          "species": "BELLSPROUT",
+          "item": "SITRUSBERRY",
+          "nature": "LAX",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["RAZORLEAF", "ACID", "STUNSPORE", "WRAP"]
+        },
+        {
+          "species": "GEODUDE",
+          "item": "FOCUSBAND",
+          "nature": "BRAVE",
+          "evs": ["HP", "ATK"],
+          "moves": ["MAGNITUDE", "ROCKBLAST", "STRENGTH", "PROTECT"]
+        },
+        {
+          "species": "DRATINI",
+          "item": "PERSIMBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["OUTRAGE", "THUNDERWAVE", "SUPERSONIC", "WATERPULSE"]
+        },
+        {
+          "species": "SNUBBULL",
+          "item": "SCOPELENS",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["BITE", "CHARM", "SWAGGER", "SCARYFACE"]
+        },
+        {
+          "species": "REMORAID",
+          "item": "PETAYABERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["BUBBLEBEAM", "AURORABEAM", "PSYBEAM", "PROTECT"]
+        },
+        {
+          "species": "LARVITAR",
+          "item": "PERSIMBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["THRASH", "ROCKSLIDE", "DIG", "DRAGONDANCE"]
+        },
+        {
+          "species": "BALTOY",
+          "item": "PERSIMBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYBEAM", "ANCIENTPOWER", "LIGHTSCREEN", "MUDSLAP"]
+        },
+        {
+          "species": "SNORUNT",
+          "item": "PERSIMBERRY",
+          "nature": "BRAVE",
+          "evs": ["HP", "ATK"],
+          "moves": ["ICYWIND", "HEADBUTT", "LEER", "BITE"]
+        },
+        {
+          "species": "BAGON",
+          "item": "LIECHIBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DRAGONBREATH", "HEADBUTT", "BRICKBREAK", "SCARYFACE"]
+        },
+        {
+          "species": "BELDUM",
+          "item": "CHOICEBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["TAKEDOWN"]
+        },
+        {
+          "species": "GULPIN",
+          "item": "LAXINCENSE",
+          "nature": "SERIOUS",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["TOXIC", "YAWN", "PAINSPLIT", "ATTRACT"]
+        },
+        {
+          "species": "VENONAT",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYBEAM", "SUPERSONIC", "STUNSPORE", "SKILLSWAP"]
+        },
+        {
+          "species": "MANKEY",
+          "item": "BLACKBELT",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["KARATECHOP", "LOWKICK", "SCREECH", "SWAGGER"]
+        },
+        {
+          "species": "MACHOP",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SEISMICTOSS", "REVENGE", "ROCKTOMB", "SCARYFACE"]
+        },
+        {
+          "species": "SHELLDER",
+          "item": "CHERIBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["ICICLESPEAR", "SUPERSONIC", "CLAMP", "WITHDRAW"]
+        },
+        {
+          "species": "SMOOCHUM",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["SWEETKISS", "SING", "MUDSLAP", "FAKEOUT"]
+        },
+        {
+          "species": "NUMEL",
+          "item": "LAXINCENSE",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["EMBER", "MAGNITUDE", "ROCKTOMB", "SANDSTORM"]
+        },
+        {
+          "species": "CARVANHA",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["BITE", "SCREECH", "SCARYFACE", "SWAGGER"]
+        },
+        {
+          "species": "CORPHISH",
+          "item": "MYSTICWATER",
+          "nature": "BRAVE",
+          "evs": ["HP", "SA"],
+          "moves": ["CRABHAMMER", "WATERPULSE", "MUDSLAP", "PROTECT"]
+        },
+        {
+          "species": "CHARMANDER",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["FIRESPIN", "METALCLAW", "SMOKESCREEN", "SCARYFACE"]
+        },
+        {
+          "species": "CYNDAQUIL",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["EMBER", "SWIFT", "QUICKATTACK", "SMOKESCREEN"]
+        },
+        {
+          "species": "ABRA",
+          "item": "TWISTEDSPOON",
+          "nature": "LONELY",
+          "evs": ["HP", "SPD"],
+          "moves": ["MIMIC", "METRONOME", "FLASH", "SEISMICTOSS"]
+        },
+        {
+          "species": "DODUO",
+          "item": "LIECHIBERRY",
+          "nature": "LONELY",
+          "evs": ["HP", "SPD"],
+          "moves": ["FURYATTACK", "UPROAR", "MUDSLAP", "FEINTATTACK"]
+        },
+        {
+          "species": "GASTLY",
+          "item": "LAXINCENSE",
+          "nature": "LONELY",
+          "evs": ["HP", "SPD"],
+          "moves": ["DREAMEATER", "HYPNOSIS", "NIGHTSHADE", "CONFUSERAY"]
+        },
+        {
+          "species": "SWABLU",
+          "item": "MENTALHERB",
+          "nature": "LONELY",
+          "evs": ["HP", "SA"],
+          "moves": ["TAKEDOWN", "DREAMEATER", "SING", "ATTRACT"]
+        },
+        {
+          "species": "TREECKO",
+          "item": "SCOPELENS",
+          "nature": "LONELY",
+          "evs": ["ATK", "SA"],
+          "moves": ["BULLETSEED", "AERIALACE", "QUICKATTACK", "DOUBLETEAM"]
+        },
+        {
+          "species": "TORCHIC",
+          "item": "BRIGHTPOWDER",
+          "nature": "LONELY",
+          "evs": ["HP", "SA"],
+          "moves": ["FIRESPIN", "QUICKATTACK", "SANDATTACK", "DOUBLETEAM"]
+        },
+        {
+          "species": "MUDKIP",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["WHIRLPOOL", "ENDEAVOR", "MUDSPORT", "MUDSLAP"]
+        },
+        {
+          "species": "SQUIRTLE",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERPULSE", "BITE", "WITHDRAW", "PROTECT"]
+        },
+        {
+          "species": "TOTODILE",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["SLASH", "WATERPULSE", "SCREECH", "ICYWIND"]
+        },
+        {
+          "species": "SLOWPOKE",
+          "item": "SITRUSBERRY",
+          "nature": "BRAVE",
+          "evs": ["HP", "SA"],
+          "moves": ["CONFUSION", "DISABLE", "WATERPULSE", "YAWN"]
+        },
+        {
+          "species": "BULBASAUR",
+          "item": "BRIGHTPOWDER",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["RAZORLEAF", "SWEETSCENT", "SLEEPPOWDER", "LIGHTSCREEN"]
+        },
+        {
+          "species": "CHIKORITA",
+          "item": "BRIGHTPOWDER",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["SECRETPOWER", "BULLETSEED", "MUDSLAP", "LIGHTSCREEN"]
+        },
+        {
+          "species": "ODDISH",
+          "item": "PECHABERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["ACID", "STUNSPORE", "SWEETSCENT", "MOONLIGHT"]
+        },
+        {
+          "species": "PSYDUCK",
+          "item": "PERSIMBERRY",
+          "nature": "HASTY",
+          "evs": ["ATK", "SA"],
+          "moves": ["CONFUSION", "FURYSWIPES", "AERIALACE", "DISABLE"]
+        },
+        {
+          "species": "CUBONE",
+          "item": "SOFTSAND",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["BONECLUB", "HEADBUTT", "BRICKBREAK", "AERIALACE"]
+        },
+        {
+          "species": "GOLDEEN",
+          "item": "PETAYABERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERFALL", "FURYATTACK", "AGILITY", "PSYBEAM"]
+        },
+        {
+          "species": "NATU",
+          "item": "TWISTEDSPOON",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["NIGHTSHADE", "FUTURESIGHT", "CONFUSERAY", "FLASH"]
+        },
+        {
+          "species": "CLEFAIRY",
+          "item": "LAXINCENSE",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["FOLLOWME", "RETURN", "ENCORE", "SING"]
+        },
+        {
+          "species": "MAGNEMITE",
+          "item": "RAWSTBERRY",
+          "nature": "GENTLE",
+          "evs": ["SPD", "SA"],
+          "moves": ["SHOCKWAVE", "SUPERSONIC", "METALSOUND", "REFLECT"]
+        },
+        {
+          "species": "SEEL",
+          "item": "ASPEARBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "SA"],
+          "moves": ["AURORABEAM", "DIVE", "BODYSLAM", "FAKEOUT"]
+        },
+        {
+          "species": "GRIMER",
+          "item": "PECHABERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SLUDGE", "ROCKTOMB", "ACIDARMOR", "MINIMIZE"]
+        },
+        {
+          "species": "KRABBY",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["CRABHAMMER", "MUDSHOT", "FLAIL", "KNOCKOFF"]
+        },
+        {
+          "species": "EXEGGCUTE",
+          "item": "PERSIMBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "SA"],
+          "moves": ["CONFUSION", "ANCIENTPOWER", "LEECHSEED", "LIGHTSCREEN"]
+        },
+        {
+          "species": "EEVEE",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["CHARM", "ATTRACT", "FLAIL", "ENDURE"]
+        },
+        {
+          "species": "DROWZEE",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["CONFUSION", "HEADBUTT", "DISABLE", "BARRIER"]
+        },
+        {
+          "species": "VOLTORB",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["SPARK", "SCREECH", "ROLLOUT", "LIGHTSCREEN"]
+        },
+        {
+          "species": "CHINCHOU",
+          "item": "LAXINCENSE",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SPARK", "DIVE", "CONFUSERAY", "TAKEDOWN"]
+        },
+        {
+          "species": "TEDDIURSA",
+          "item": "CHESTOBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["SECRETPOWER", "FAKETEARS", "FEINTATTACK", "REST"]
+        },
+        {
+          "species": "DELIBIRD",
+          "item": "NEVERMELTICE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["PRESENT", "ICEBALL", "AERIALACE", "HAIL"]
+        },
+        {
+          "species": "HOUNDOUR",
+          "item": "CHARCOAL",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["CRUNCH", "EMBER", "ROAR", "PROTECT"]
+        },
+        {
+          "species": "PHANPY",
+          "item": "LAXINCENSE",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["ROLLOUT", "DEFENSECURL", "ROCKTOMB", "SANDSTORM"]
+        },
+        {
+          "species": "SPOINK",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYWAVE", "BOUNCE", "MAGICCOAT", "CONFUSERAY"]
+        },
+        {
+          "species": "ARON",
+          "item": "PERSIMBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["METALCLAW", "AERIALACE", "METALSOUND", "ROAR"]
+        },
+        {
+          "species": "LUVDISC",
+          "item": "QUICKCLAW",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["SWEETKISS", "ATTRACT", "DIVE", "RAINDANCE"]
+        },
+        {
+          "species": "TENTACOOL",
+          "item": "PECHABERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["BUBBLEBEAM", "ACID", "BARRIER", "WRAP"]
+        },
+        {
+          "species": "CACNEA",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["NEEDLEARM", "FEINTATTACK", "COTTONSPORE", "SANDATTACK"]
+        },
+        {
+          "species": "UNOWN",
+          "item": "LAXINCENSE",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["HIDDENPOWER"]
+        },
+        {
+          "species": "KOFFING",
+          "item": "POISONBARB",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGE", "SMOKESCREEN", "TORMENT", "HAZE"]
+        },
+        {
+          "species": "STARYU",
+          "item": "SHELLBELL",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["BUBBLEBEAM", "MINIMIZE", "SWIFT", "LIGHTSCREEN"]
+        },
+        {
+          "species": "SKIPLOOM",
+          "item": "PERSIMBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["MEGADRAIN", "CONFUSION", "COTTONSPORE", "SYNTHESIS"]
+        },
+        {
+          "species": "NUZLEAF",
+          "item": "SITRUSBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "SA"],
+          "moves": ["EXTRASENSORY", "FAKEOUT", "RAZORWIND", "FEINTATTACK"]
+        },
+        {
+          "species": "LOMBRE",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["WATERPULSE", "FAKEOUT", "BRICKBREAK", "ABSORB"]
+        },
+        {
+          "species": "VIBRAVA",
+          "item": "CHERIBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DRAGONBREATH", "DIG", "SCREECH", "ROCKTOMB"]
+        },
+        {
+          "species": "RHYHORN",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["ROCKBLAST", "DIG", "SCARYFACE", "ROAR"]
+        },
+        {
+          "species": "CLAMPERL",
+          "item": "DEEPSEASCALE",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DIVE", "TOXIC", "IRONDEFENSE", "DOUBLETEAM"]
+        },
+        {
+          "species": "PIDGEOTTO",
+          "item": "WHITEHERB",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["AERIALACE", "QUICKATTACK", "FEATHERDANCE", "SANDATTACK"]
+        },
+        {
+          "species": "GROWLITHE",
+          "item": "RAWSTBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["FLAMEWHEEL", "BITE", "ROAR", "AGILITY"]
+        },
+        {
+          "species": "FARFETCHD",
+          "item": "STICK",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SLASH", "KNOCKOFF", "SWORDSDANCE", "AGILITY"]
+        },
+        {
+          "species": "OMANYTE",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["MUDSHOT", "WATERGUN", "ANCIENTPOWER", "TICKLE"]
+        },
+        {
+          "species": "KABUTO",
+          "item": "SITRUSBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["MEGADRAIN", "ANCIENTPOWER", "SANDATTACK", "PROTECT"]
+        },
+        {
+          "species": "LILEEP",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["ANCIENTPOWER", "ACID", "INGRAIN", "CONFUSERAY"]
+        },
+        {
+          "species": "ANORITH",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["METALCLAW", "FURYCUTTER", "ANCIENTPOWER", "WATERGUN"]
+        },
+        {
+          "species": "AIPOM",
+          "item": "SILKSCARF",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["FURYSWIPES", "SANDATTACK", "BATONPASS", "AGILITY"]
+        },
+        {
+          "species": "ELEKID",
+          "item": "CHERIBERRY",
+          "nature": "NAIVE",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDERPUNCH", "QUICKATTACK", "SWIFT", "LIGHTSCREEN"]
+        },
+        {
+          "species": "LOUDRED",
+          "item": "FOCUSBAND",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["STOMP", "HOWL", "ASTONISH", "SUPERSONIC"]
+        },
+        {
+          "species": "SPINDA",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["DIZZYPUNCH", "TEETERDANCE", "PSYBEAM", "FEINTATTACK"]
+        },
+        {
+          "species": "NIDORINA",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEKICK", "BITE", "AERIALACE", "FLATTER"]
+        },
+        {
+          "species": "NIDORINO",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEKICK", "WATERPULSE", "MUDSLAP", "FLATTER"]
+        },
+        {
+          "species": "FLAAFFY",
+          "item": "MAGNET",
+          "nature": "MILD",
+          "evs": ["HP", "SA"],
+          "moves": ["SHOCKWAVE", "THUNDERWAVE", "COTTONSPORE", "LIGHTSCREEN"]
+        },
+        {
+          "species": "MAGBY",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["FIREPUNCH", "SMOKESCREEN", "CONFUSERAY", "SMOG"]
+        },
+        {
+          "species": "NOSEPASS",
+          "item": "HARDSTONE",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["ROCKSLIDE", "SHOCKWAVE", "THUNDERWAVE", "SANDSTORM"]
+        },
+        {
+          "species": "CORSOLA",
+          "item": "SITRUSBERRY",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["BUBBLEBEAM", "MIRRORCOAT", "ATTRACT", "ANCIENTPOWER"]
+        },
+        {
+          "species": "MAWILE",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["CRUNCH", "FAKETEARS", "IRONDEFENSE", "BATONPASS"]
+        },
+        {
+          "species": "BUTTERFREE",
+          "item": "PECHABERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["SILVERWIND", "PSYBEAM", "TOXIC", "WHIRLWIND"]
+        },
+        {
+          "species": "BEEDRILL",
+          "item": "SCOPELENS",
+          "nature": "NAUGHTY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["TWINEEDLE", "PURSUIT", "ENDEAVOR", "AGILITY"]
+        },
+        {
+          "species": "POLIWHIRL",
+          "item": "PETAYABERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERPULSE", "DOUBLESLAP", "ICYWIND", "RAINDANCE"]
+        },
+        {
+          "species": "ONIX",
+          "item": "SITRUSBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["ROCKSLIDE", "BIND", "DRAGONBREATH", "SANDSTORM"]
+        },
+        {
+          "species": "BEAUTIFLY",
+          "item": "MENTALHERB",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["SILVERWIND", "MEGADRAIN", "ATTRACT", "WHIRLWIND"]
+        },
+        {
+          "species": "DUSTOX",
+          "item": "SILVERPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["SILVERWIND", "TOXIC", "PSYBEAM", "WHIRLWIND"]
+        },
+        {
+          "species": "LEDIAN",
+          "item": "FOCUSBAND",
+          "nature": "BASHFUL",
+          "evs": ["ATK", "SPD"],
+          "moves": ["COMETPUNCH", "BATONPASS", "SWORDSDANCE", "AGILITY"]
+        },
+        {
+          "species": "ARIADOS",
+          "item": "LAXINCENSE",
+          "nature": "SERIOUS",
+          "evs": ["HP", "ATK"],
+          "moves": ["SIGNALBEAM", "SPIDERWEB", "NIGHTSHADE", "TOXIC"]
+        },
+        {
+          "species": "YANMA",
+          "item": "LAXINCENSE",
+          "nature": "RELAXED",
+          "evs": ["DEF", "SD"],
+          "moves": ["SIGNALBEAM", "AERIALACE", "DOUBLETEAM", "DETECT"]
+        },
+        {
+          "species": "DELCATTY",
+          "item": "SITRUSBERRY",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SECRETPOWER", "FEINTATTACK", "DOUBLETEAM", "HEALBELL"]
+        },
+        {
+          "species": "SABLEYE",
+          "item": "BLACKGLASSES",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["FEINTATTACK", "CONFUSERAY", "KNOCKOFF", "FAKEOUT"]
+        },
+        {
+          "species": "LICKITUNG",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLAM", "BRICKBREAK", "LICK", "MUDSLAP"]
+        },
+        {
+          "species": "WEEPINBELL",
+          "item": "SCOPELENS",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["RAZORLEAF", "ACID", "WRAP", "SWEETSCENT"]
+        },
+        {
+          "species": "GRAVELER",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["MAGNITUDE", "ROCKTHROW", "DEFENSECURL", "BRICKBREAK"]
+        },
+        {
+          "species": "GLOOM",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["PETALDANCE", "ACID", "STUNSPORE", "MOONLIGHT"]
+        },
+        {
+          "species": "PORYGON",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYBEAM", "ICYWIND", "RECYCLE", "AGILITY"]
+        },
+        {
+          "species": "KADABRA",
+          "item": "TWISTEDSPOON",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF"],
+          "moves": ["CONFUSION", "ROLEPLAY", "FUTURESIGHT", "DISABLE"]
+        },
+        {
+          "species": "WAILMER",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["DEF", "SD"],
+          "moves": ["WHIRLPOOL", "ROAR", "DEFENSECURL", "ROLLOUT"]
+        },
+        {
+          "species": "ROSELIA",
+          "item": "PECHABERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["MAGICALLEAF", "TOXIC", "GRASSWHISTLE", "COTTONSPORE"]
+        },
+        {
+          "species": "VOLBEAT",
+          "item": "LIECHIBERRY",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SILVERWIND", "CONFUSERAY", "QUICKATTACK", "HELPINGHAND"]
+        },
+        {
+          "species": "ILLUMISE",
+          "item": "LIECHIBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SILVERWIND", "WISH", "QUICKATTACK", "HELPINGHAND"]
+        },
+        {
+          "species": "IVYSAUR",
+          "item": "PERSIMBERRY",
+          "nature": "GENTLE",
+          "evs": ["HP", "SA"],
+          "moves": ["PETALDANCE", "GROWTH", "SWEETSCENT", "FURYCUTTER"]
+        },
+        {
+          "species": "CHARMELEON",
+          "item": "SCOPELENS",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "FIRESPIN", "SWORDSDANCE", "AERIALACE"]
+        },
+        {
+          "species": "WARTORTLE",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["WATERPULSE", "BITE", "MUDSLAP", "YAWN"]
+        },
+        {
+          "species": "PARASECT",
+          "item": "SITRUSBERRY",
+          "nature": "RASH",
+          "evs": ["DEF", "SD"],
+          "moves": ["SLASH", "PSYBEAM", "STUNSPORE", "FLASH"]
+        },
+        {
+          "species": "MACHOKE",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["LOWKICK", "ROCKTOMB", "FORESIGHT", "SCARYFACE"]
+        },
+        {
+          "species": "HAUNTER",
+          "item": "PERSIMBERRY",
+          "nature": "RASH",
+          "evs": ["HP", "ATK"],
+          "moves": ["SHADOWPUNCH", "CONFUSERAY", "SPITE", "GRUDGE"]
+        },
+        {
+          "species": "BAYLEEF",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["RAZORLEAF", "TOXIC", "SAFEGUARD", "LIGHTSCREEN"]
+        },
+        {
+          "species": "QUILAVA",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["FLAMEWHEEL", "FURYSWIPES", "SWIFT", "SMOKESCREEN"]
+        },
+        {
+          "species": "CROCONAW",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["SLASH", "WATERPULSE", "BITE", "SCARYFACE"]
+        },
+        {
+          "species": "TOGETIC",
+          "item": "LAXINCENSE",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF"],
+          "moves": ["AERIALACE", "MAGICALLEAF", "WISH", "FOLLOWME"]
+        },
+        {
+          "species": "MURKROW",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FEINTATTACK", "FLY", "TORMENT", "TAUNT"]
+        },
+        {
+          "species": "WOBBUFFET",
+          "item": "FOCUSBAND",
+          "nature": "CAREFUL",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["COUNTER", "MIRRORCOAT", "CHARM", "SAFEGUARD"]
+        },
+        {
+          "species": "PLUSLE",
+          "item": "PETAYABERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["SPARK", "FAKETEARS", "QUICKATTACK", "HELPINGHAND"]
+        },
+        {
+          "species": "MINUN",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["SPARK", "CHARM", "ENCORE", "HELPINGHAND"]
+        },
+        {
+          "species": "GROVYLE",
+          "item": "BRIGHTPOWDER",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["FURYCUTTER", "ENDEAVOR", "BRICKBREAK", "DOUBLETEAM"]
+        },
+        {
+          "species": "COMBUSKEN",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["EMBER", "DOUBLEKICK", "QUICKATTACK", "SANDATTACK"]
+        },
+        {
+          "species": "MARSHTOMP",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["MUDSHOT", "WATERGUN", "ROCKTOMB", "MUDSLAP"]
+        },
+        {
+          "species": "PONYTA",
+          "item": "RAWSTBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["FIRESPIN", "BOUNCE", "QUICKATTACK", "TAILWHIP"]
+        },
+        {
+          "species": "AZUMARILL",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["DEF", "SD"],
+          "moves": ["BUBBLEBEAM", "FACADE", "DIG", "PROTECT"]
+        },
+        {
+          "species": "SUDOWOODO",
+          "item": "HARDSTONE",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["ROCKSLIDE", "FEINTATTACK", "SANDSTORM", "BLOCK"]
+        },
+        {
+          "species": "MAGCARGO",
+          "item": "LAXINCENSE",
+          "nature": "GENTLE",
+          "evs": ["HP", "SD"],
+          "moves": ["ROCKSLIDE", "EMBER", "ACIDARMOR", "SANDSTORM"]
+        },
+        {
+          "species": "PUPITAR",
+          "item": "SOFTSAND",
+          "nature": "HARDY",
+          "evs": ["HP", "SPD"],
+          "moves": ["DIG", "BITE", "SCARYFACE", "SANDSTORM"]
+        },
+        {
+          "species": "SEALEO",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["ICEBALL", "HAIL", "SNORE", "REST"]
+        },
+        {
+          "species": "RATICATE",
+          "item": "SILKSCARF",
+          "nature": "NAIVE",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["ENDEAVOR", "PURSUIT", "SCARYFACE", "QUICKATTACK"]
+        },
+        {
+          "species": "MASQUERAIN",
+          "item": "CHERIBERRY",
+          "nature": "RELAXED",
+          "evs": ["ATK", "DEF"],
+          "moves": ["SILVERWIND", "AERIALACE", "ICYWIND", "STUNSPORE"]
+        },
+        {
+          "species": "FURRET",
+          "item": "LIECHIBERRY",
+          "nature": "SERIOUS",
+          "evs": ["DEF", "SD"],
+          "moves": ["SLAM", "PROTECT", "HELPINGHAND", "FOLLOWME"]
+        },
+        {
+          "species": "DUNSPARCE",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["HEADBUTT", "GLARE", "DEFENSECURL", "ROLLOUT"]
+        },
+        {
+          "species": "DRAGONAIR",
+          "item": "CHERIBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SD"],
+          "moves": ["DRAGONBREATH", "LEER", "WRAP", "SAFEGUARD"]
+        },
+        {
+          "species": "MIGHTYENA",
+          "item": "MENTALHERB",
+          "nature": "TIMID",
+          "evs": ["ATK", "SA"],
+          "moves": ["BITE", "POISONFANG", "TAUNT", "ROAR"]
+        },
+        {
+          "species": "LINOONE",
+          "item": "WHITEHERB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SECRETPOWER", "SANDATTACK", "COVET", "TICKLE"]
+        },
+        {
+          "species": "CASTFORM",
+          "item": "PETAYABERRY",
+          "nature": "HASTY",
+          "evs": ["HP", "SA"],
+          "moves": ["EMBER", "WATERPULSE", "SHOCKWAVE", "ICYWIND"]
+        },
+        {
+          "species": "SHELGON",
+          "item": "CHERIBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["HEADBUTT", "DRAGONBREATH", "PROTECT", "SCARYFACE"]
+        },
+        {
+          "species": "METANG",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["ATK", "SD"],
+          "moves": ["METALCLAW", "CONFUSION", "PURSUIT", "SCARYFACE"]
+        },
+        {
+          "species": "WIGGLYTUFF",
+          "item": "SILKSCARF",
+          "nature": "RELAXED",
+          "evs": ["DEF", "SD"],
+          "moves": ["SING", "DISABLE", "WISH", "SECRETPOWER"]
+        },
+        {
+          "species": "SUNFLORA",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF"],
+          "moves": ["PETALDANCE", "INGRAIN", "LEECHSEED", "LIGHTSCREEN"]
+        },
+        {
+          "species": "CHIMECHO",
+          "item": "TWISTEDSPOON",
+          "nature": "SASSY",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYWAVE", "TAKEDOWN", "HEALBELL", "SAFEGUARD"]
+        },
+        {
+          "species": "GLIGAR",
+          "item": "SCOPELENS",
+          "nature": "HASTY",
+          "evs": ["HP", "SD"],
+          "moves": ["METALCLAW", "DIG", "AERIALACE", "QUICKATTACK"]
+        },
+        {
+          "species": "QWILFISH",
+          "item": "CHERIBERRY",
+          "nature": "IMPISH",
+          "evs": ["SA", "SD"],
+          "moves": ["BUBBLEBEAM", "PINMISSILE", "SPIKES", "MINIMIZE"]
+        },
+        {
+          "species": "SNEASEL",
+          "item": "PERSIMBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FEINTATTACK", "FAKEOUT", "ICYWIND", "QUICKATTACK"]
+        },
+        {
+          "species": "PELIPPER",
+          "item": "SITRUSBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["WATERPULSE", "AERIALACE", "STOCKPILE", "SWALLOW"]
+        },
+        {
+          "species": "SWELLOW",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["FLY", "ENDEAVOR", "FACADE", "QUICKATTACK"]
+        },
+        {
+          "species": "LAIRON",
+          "item": "METALCOAT",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["METALCLAW", "ROCKTOMB", "IRONDEFENSE", "PROTECT"]
+        },
+        {
+          "species": "TANGELA",
+          "item": "LAXINCENSE",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["MEGADRAIN", "SLAM", "TOXIC", "BIND"]
+        },
+        {
+          "species": "ARBOK",
+          "item": "PERSIMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["POISONFANG", "DIG", "BITE", "GLARE"]
+        },
+        {
+          "species": "PERSIAN",
+          "item": "SILKSCARF",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FAKEOUT", "SLASH", "TORMENT", "SWAGGER"]
+        },
+        {
+          "species": "SEADRA",
+          "item": "MYSTICWATER",
+          "nature": "SASSY",
+          "evs": ["HP", "SA"],
+          "moves": ["AURORABEAM", "SMOKESCREEN", "WATERGUN", "RAINDANCE"]
+        },
+        {
+          "species": "KECLEON",
+          "item": "FOCUSBAND",
+          "nature": "NAIVE",
+          "evs": ["HP", "ATK", "DEF"],
+          "moves": ["SECRETPOWER", "PSYBEAM", "MAGICCOAT", "SEISMICTOSS"]
+        },
+        {
+          "species": "VIGOROTH",
+          "item": "FOCUSBAND",
+          "nature": "LONELY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "COUNTER", "ENCORE", "UPROAR"]
+        },
+        {
+          "species": "LUNATONE",
+          "item": "SITRUSBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF"],
+          "moves": ["CONFUSION", "COSMICPOWER", "LIGHTSCREEN", "SANDSTORM"]
+        },
+        {
+          "species": "SOLROCK",
+          "item": "SITRUSBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["CONFUSION", "FIRESPIN", "LIGHTSCREEN", "SANDSTORM"]
+        },
+        {
+          "species": "NOCTOWL",
+          "item": "PERSIMBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF"],
+          "moves": ["CONFUSION", "AERIALACE", "FEINTATTACK", "REFLECT"]
+        },
+        {
+          "species": "SANDSLASH",
+          "item": "SITRUSBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["CRUSHCLAW", "ROCKSLIDE", "SWIFT", "SANDSTORM"]
+        },
+        {
+          "species": "VENOMOTH",
+          "item": "PERSIMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SPD"],
+          "moves": ["SILVERWIND", "PSYBEAM", "SLEEPPOWDER", "SKILLSWAP"]
+        },
+        {
+          "species": "CHANSEY",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["DEF", "SD"],
+          "moves": ["METRONOME", "REFRESH", "DEFENSECURL", "MINIMIZE"]
+        },
+        {
+          "species": "SEAKING",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SD"],
+          "moves": ["WATERPULSE", "PSYBEAM", "SWIFT", "AGILITY"]
+        },
+        {
+          "species": "JUMPLUFF",
+          "item": "LAXINCENSE",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["AERIALACE", "SWAGGER", "PSYCHUP", "SYNTHESIS"]
+        },
+        {
+          "species": "PILOSWINE",
+          "item": "SOFTSAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["DIG", "ANCIENTPOWER", "HAIL", "LIGHTSCREEN"]
+        },
+        {
+          "species": "GOLBAT",
+          "item": "SCOPELENS",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["AIRCUTTER", "CONFUSERAY", "TOXIC", "STEELWING"]
+        },
+        {
+          "species": "PRIMEAPE",
+          "item": "SCOPELENS",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["KARATECHOP", "COUNTER", "SWAGGER", "SCREECH"]
+        },
+        {
+          "species": "HITMONLEE",
+          "item": "BLACKBELT",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["ROLLINGKICK", "BRICKBREAK", "FOCUSENERGY", "FACADE"]
+        },
+        {
+          "species": "HITMONCHAN",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["MACHPUNCH", "SKYUPPERCUT", "DETECT", "COUNTER"]
+        },
+        {
+          "species": "GIRAFARIG",
+          "item": "PETAYABERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYBEAM", "STOMP", "WISH", "SKILLSWAP"]
+        },
+        {
+          "species": "HITMONTOP",
+          "item": "LIECHIBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["TRIPLEKICK", "DIG", "MACHPUNCH", "QUICKATTACK"]
+        },
+        {
+          "species": "BANETTE",
+          "item": "RAWSTBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["NIGHTSHADE", "WILLOWISP", "SPITE", "KNOCKOFF"]
+        },
+        {
+          "species": "NINJASK",
+          "item": "PETAYABERRY",
+          "nature": "MILD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["BATONPASS", "SWORDSDANCE", "ENDURE", "DIG"]
+        },
+        {
+          "species": "SEVIPER",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["POISONTAIL", "BITE", "GLARE", "SCREECH"]
+        },
+        {
+          "species": "ZANGOOSE",
+          "item": "PERSIMBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "DOUBLEKICK", "ROAR", "QUICKATTACK"]
+        },
+        {
+          "species": "CAMERUPT",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK"],
+          "moves": ["MAGNITUDE", "PROTECT", "SANDSTORM", "ROCKSLIDE"]
+        },
+        {
+          "species": "SHARPEDO",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["SLASH", "BITE", "WATERPULSE", "SCARYFACE"]
+        },
+        {
+          "species": "TROPIUS",
+          "item": "SITRUSBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["MAGICALLEAF", "WHIRLWIND", "AERIALACE", "STEELWING"]
+        },
+        {
+          "species": "MAGNETON",
+          "item": "CHERIBERRY",
+          "nature": "LONELY",
+          "evs": ["SPD", "SA"],
+          "moves": ["SHOCKWAVE", "SONICBOOM", "THUNDERWAVE", "SUPERSONIC"]
+        },
+        {
+          "species": "MANTINE",
+          "item": "MYSTICWATER",
+          "nature": "DOCILE",
+          "evs": ["HP", "SD"],
+          "moves": ["BUBBLEBEAM", "AERIALACE", "RAINDANCE", "ICYWIND"]
+        },
+        {
+          "species": "STANTLER",
+          "item": "TWISTEDSPOON",
+          "nature": "GENTLE",
+          "evs": ["HP", "SA"],
+          "moves": ["EXTRASENSORY", "CONFUSERAY", "STOMP", "SANDATTACK"]
+        },
+        {
+          "species": "ABSOL",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["BITE", "RAZORWIND", "FUTURESIGHT", "QUICKATTACK"]
+        },
+        {
+          "species": "SWALOT",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["DEF", "SD"],
+          "moves": ["STOCKPILE", "SWALLOW", "SPITUP", "SLUDGE"]
+        },
+        {
+          "species": "CRAWDAUNT",
+          "item": "PERSIMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["BUBBLEBEAM", "VICEGRIP", "KNOCKOFF", "PROTECT"]
+        },
+        {
+          "species": "PIDGEOT",
+          "item": "SHARPBEAK",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["AERIALACE", "FEATHERDANCE", "MUDSLAP", "FEINTATTACK"]
+        },
+        {
+          "species": "GRUMPIG",
+          "item": "PETAYABERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYBEAM", "CONFUSERAY", "FUTURESIGHT", "MAGICCOAT"]
+        },
+        {
+          "species": "TORKOAL",
+          "item": "SITRUSBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "SD"],
+          "moves": ["EMBER", "FIRESPIN", "SMOKESCREEN", "AMNESIA"]
+        },
+        {
+          "species": "KINGLER",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["CRABHAMMER", "METALCLAW", "MUDSHOT", "PROTECT"]
+        },
+        {
+          "species": "CACTURNE",
+          "item": "SCOPELENS",
+          "nature": "HASTY",
+          "evs": ["HP", "SPD"],
+          "moves": ["NEEDLEARM", "FEINTATTACK", "ACID", "MEGAPUNCH"]
+        },
+        {
+          "species": "BELLOSSOM",
+          "item": "PERSIMBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["PETALDANCE", "SAFEGUARD", "SUNNYDAY", "SYNTHESIS"]
+        },
+        {
+          "species": "OCTILLERY",
+          "item": "SHELLBELL",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["OCTAZOOKA", "AURORABEAM", "PSYBEAM", "ROCKBLAST"]
+        },
+        {
+          "species": "HUNTAIL",
+          "item": "PERSIMBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "ATK"],
+          "moves": ["WHIRLPOOL", "SCARYFACE", "MUDSLAP", "BITE"]
+        },
+        {
+          "species": "GOREBYSS",
+          "item": "PERSIMBERRY",
+          "nature": "BRAVE",
+          "evs": ["HP", "SA"],
+          "moves": ["WHIRLPOOL", "AMNESIA", "ICYWIND", "CONFUSION"]
+        },
+        {
+          "species": "RELICANTH",
+          "item": "LIECHIBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "SA", "SD"],
+          "moves": ["ANCIENTPOWER", "WATERPULSE", "HARDEN", "AMNESIA"]
+        },
+        {
+          "species": "OMASTAR",
+          "item": "SHELLBELL",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["BUBBLEBEAM", "SPIKECANNON", "TICKLE", "ANCIENTPOWER"]
+        },
+        {
+          "species": "KABUTOPS",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "DIG", "FURYCUTTER", "KNOCKOFF"]
+        },
+        {
+          "species": "POLIWRATH",
+          "item": "BLACKBELT",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SUBMISSION", "DIG", "ROCKTOMB", "BUBBLEBEAM"]
+        },
+        {
+          "species": "SCYTHER",
+          "item": "LIECHIBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "ATK"],
+          "moves": ["FURYCUTTER", "AERIALACE", "LIGHTSCREEN", "DOUBLETEAM"]
+        },
+        {
+          "species": "PINSIR",
+          "item": "BLACKBELT",
+          "nature": "NAUGHTY",
+          "evs": ["HP", "ATK"],
+          "moves": ["SUBMISSION", "FOCUSENERGY", "SWORDSDANCE", "REVENGE"]
+        },
+        {
+          "species": "POLITOED",
+          "item": "SHELLBELL",
+          "nature": "RELAXED",
+          "evs": ["DEF", "SD"],
+          "moves": ["DIVE", "DIG", "HYPNOSIS", "SWAGGER"]
+        },
+        {
+          "species": "CLOYSTER",
+          "item": "NEVERMELTICE",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["AURORABEAM", "SPIKECANNON", "SUPERSONIC", "PROTECT"]
+        },
+        {
+          "species": "DELCATTY",
+          "item": "QUICKCLAW",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FAKETEARS", "SING", "THUNDERBOLT", "ICEBEAM"]
+        },
+        {
+          "species": "SABLEYE",
+          "item": "LUMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["SHADOWBALL", "FEINTATTACK", "CONFUSERAY", "RECOVER"]
+        },
+        {
+          "species": "LICKITUNG",
+          "item": "CHERIBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "BODYSLAM", "SHADOWBALL", "ROCKSLIDE"]
+        },
+        {
+          "species": "WEEPINBELL",
+          "item": "SCOPELENS",
+          "nature": "QUIRKY",
+          "evs": ["DEF", "SD"],
+          "moves": ["SLUDGEBOMB", "RAZORLEAF", "SLEEPPOWDER", "REFLECT"]
+        },
+        {
+          "species": "GRAVELER",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "BRICKBREAK", "COUNTER"]
+        },
+        {
+          "species": "GLOOM",
+          "item": "PECHABERRY",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "SLUDGEBOMB", "MOONLIGHT"]
+        },
+        {
+          "species": "PORYGON",
+          "item": "CHERIBERRY",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["TRIATTACK", "PSYCHIC", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "KADABRA",
+          "item": "TWISTEDSPOON",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF"],
+          "moves": ["PSYCHIC", "THUNDERWAVE", "REFLECT", "RECOVER"]
+        },
+        {
+          "species": "WAILMER",
+          "item": "CHESTOBERRY",
+          "nature": "DOCILE",
+          "evs": ["DEF", "SD"],
+          "moves": ["WATERSPOUT", "EARTHQUAKE", "BODYSLAM", "REST"]
+        },
+        {
+          "species": "ROSELIA",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["GIGADRAIN", "SLUDGEBOMB", "GRASSWHISTLE", "SYNTHESIS"]
+        },
+        {
+          "species": "VOLBEAT",
+          "item": "PETAYABERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["SIGNALBEAM", "THUNDERBOLT", "ICEPUNCH", "TAILGLOW"]
+        },
+        {
+          "species": "ILLUMISE",
+          "item": "PETAYABERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["SILVERWIND", "THUNDERBOLT", "ICEPUNCH", "GIGADRAIN"]
+        },
+        {
+          "species": "IVYSAUR",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["GIGADRAIN", "SLUDGEBOMB", "SLEEPPOWDER", "LEECHSEED"]
+        },
+        {
+          "species": "CHARMELEON",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FLAMETHROWER", "SLASH", "ANCIENTPOWER", "DRAGONRAGE"]
+        },
+        {
+          "species": "WARTORTLE",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "ICEBEAM", "RAPIDSPIN", "PROTECT"]
+        },
+        {
+          "species": "PARASECT",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SPORE", "GIGADRAIN", "DIG", "DOUBLETEAM"]
+        },
+        {
+          "species": "MACHOKE",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "ROCKSLIDE", "FORESIGHT", "SCARYFACE"]
+        },
+        {
+          "species": "HAUNTER",
+          "item": "LUMBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PSYCHIC", "HYPNOSIS", "NIGHTMARE", "CONFUSERAY"]
+        },
+        {
+          "species": "BAYLEEF",
+          "item": "CHESTOBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["GIGADRAIN", "BODYSLAM", "GRASSWHISTLE", "REST"]
+        },
+        {
+          "species": "QUILAVA",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["FLAMETHROWER", "CRUSHCLAW", "BODYSLAM", "SMOKESCREEN"]
+        },
+        {
+          "species": "CROCONAW",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAKICK", "AERIALACE", "ROCKSLIDE", "DIG"]
+        },
+        {
+          "species": "TOGETIC",
+          "item": "SCOPELENS",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF"],
+          "moves": ["RETURN", "SWEETKISS", "AERIALACE", "YAWN"]
+        },
+        {
+          "species": "MURKROW",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PERISHSONG", "MEANLOOK", "DOUBLETEAM", "THUNDERWAVE"]
+        },
+        {
+          "species": "WOBBUFFET",
+          "item": "FOCUSBAND",
+          "nature": "CAREFUL",
+          "evs": ["DEF", "SD"],
+          "moves": ["COUNTER", "MIRRORCOAT", "ENCORE", "DESTINYBOND"]
+        },
+        {
+          "species": "PLUSLE",
+          "item": "PETAYABERRY",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "SEISMICTOSS", "WISH"]
+        },
+        {
+          "species": "MINUN",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "ATTRACT", "CHARM", "WISH"]
+        },
+        {
+          "species": "GROVYLE",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["GIGADRAIN", "CRUSHCLAW", "SCREECH", "ROCKTOMB"]
+        },
+        {
+          "species": "COMBUSKEN",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["FLAMETHROWER", "SKYUPPERCUT", "SLASH", "SANDATTACK"]
+        },
+        {
+          "species": "MARSHTOMP",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["MUDDYWATER", "EARTHQUAKE", "MUDSLAP", "PROTECT"]
+        },
+        {
+          "species": "PONYTA",
+          "item": "SITRUSBERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "BODYSLAM", "DOUBLEKICK", "DOUBLETEAM"]
+        },
+        {
+          "species": "AZUMARILL",
+          "item": "SHELLBELL",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["MEGAKICK", "BRICKBREAK", "IRONTAIL", "DIG"]
+        },
+        {
+          "species": "SUDOWOODO",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["MEGAKICK", "EARTHQUAKE", "LOWKICK", "SELFDESTRUCT"]
+        },
+        {
+          "species": "MAGCARGO",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["OVERHEAT", "EARTHQUAKE", "ROCKSLIDE", "BODYSLAM"]
+        },
+        {
+          "species": "PUPITAR",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "CRUNCH", "SCARYFACE"]
+        },
+        {
+          "species": "SEALEO",
+          "item": "SITRUSBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "SURF", "BODYSLAM", "HAIL"]
+        },
+        {
+          "species": "RATICATE",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SUPERFANG", "HYPERFANG", "SHADOWBALL", "SCARYFACE"]
+        },
+        {
+          "species": "MASQUERAIN",
+          "item": "LAXINCENSE",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA"],
+          "moves": ["HYDROPUMP", "ICEBEAM", "GIGADRAIN", "STUNSPORE"]
+        },
+        {
+          "species": "FURRET",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["TRICK", "FRUSTRATION", "SHADOWBALL", "FOLLOWME"]
+        },
+        {
+          "species": "DUNSPARCE",
+          "item": "LAXINCENSE",
+          "nature": "QUIET",
+          "evs": ["DEF", "SD"],
+          "moves": ["ICEBEAM", "ROCKTOMB", "BITE", "SHADOWBALL"]
+        },
+        {
+          "species": "DRAGONAIR",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["RETURN", "REST", "THUNDERWAVE", "DRAGONDANCE"]
+        },
+        {
+          "species": "MIGHTYENA",
+          "item": "KINGSROCK",
+          "nature": "QUIRKY",
+          "evs": ["DEF", "SA"],
+          "moves": ["CRUNCH", "SHADOWBALL", "FRUSTRATION", "SCARYFACE"]
+        },
+        {
+          "species": "LINOONE",
+          "item": "CHOICEBAND",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["TRICK", "FRUSTRATION", "THUNDERWAVE", "SANDATTACK"]
+        },
+        {
+          "species": "CASTFORM",
+          "item": "LAXINCENSE",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDERBOLT", "FLAMETHROWER", "ICEBEAM", "WATERPULSE"]
+        },
+        {
+          "species": "SHELGON",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["FRUSTRATION", "DRAGONDANCE", "CRUNCH", "SCARYFACE"]
+        },
+        {
+          "species": "METANG",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "SA"],
+          "moves": ["METEORMASH", "PSYCHIC", "BODYSLAM", "SCARYFACE"]
+        },
+        {
+          "species": "WIGGLYTUFF",
+          "item": "SITRUSBERRY",
+          "nature": "DOCILE",
+          "evs": ["DEF", "SD"],
+          "moves": ["FAKETEARS", "SING", "DREAMEATER", "BRICKBREAK"]
+        },
+        {
+          "species": "SUNFLORA",
+          "item": "LEFTOVERS",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF"],
+          "moves": ["GIGADRAIN", "GRASSWHISTLE", "GROWTH", "DOUBLETEAM"]
+        },
+        {
+          "species": "CHIMECHO",
+          "item": "TWISTEDSPOON",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PSYCHIC", "HYPNOSIS", "DREAMEATER", "HEALBELL"]
+        },
+        {
+          "species": "GLIGAR",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "AERIALACE", "GUILLOTINE", "SCREECH"]
+        },
+        {
+          "species": "QWILFISH",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["REVENGE", "SLUDGEBOMB", "SHADOWBALL", "DESTINYBOND"]
+        },
+        {
+          "species": "SNEASEL",
+          "item": "KINGSROCK",
+          "nature": "JOLLY",
+          "evs": ["HP", "DEF", "SPD"],
+          "moves": ["CRUSHCLAW", "BRICKBREAK", "AERIALACE", "SCREECH"]
+        },
+        {
+          "species": "PELIPPER",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["SURF", "BLIZZARD", "AERIALACE", "PROTECT"]
+        },
+        {
+          "species": "SWELLOW",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["FACADE", "AERIALACE", "PURSUIT", "DOUBLETEAM"]
+        },
+        {
+          "species": "LAIRON",
+          "item": "SITRUSBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "IRONTAIL", "ROAR", "PROTECT"]
+        },
+        {
+          "species": "TANGELA",
+          "item": "CHESTOBERRY",
+          "nature": "CALM",
+          "evs": ["HP", "SD"],
+          "moves": ["GIGADRAIN", "STUNSPORE", "REST", "AMNESIA"]
+        },
+        {
+          "species": "ARBOK",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["SLUDGEBOMB", "EARTHQUAKE", "IRONTAIL", "GLARE"]
+        },
+        {
+          "species": "PERSIAN",
+          "item": "SILKSCARF",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FRUSTRATION", "SHADOWBALL", "ROAR", "FAKEOUT"]
+        },
+        {
+          "species": "SEADRA",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["HP", "SD"],
+          "moves": ["HYDROPUMP", "FRUSTRATION", "DRAGONBREATH", "DRAGONDANCE"]
+        },
+        {
+          "species": "KECLEON",
+          "item": "CHOICEBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["TRICK", "BRICKBREAK", "SHADOWBALL", "SKILLSWAP"]
+        },
+        {
+          "species": "VIGOROTH",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["CRUSHCLAW", "REVERSAL", "ENDURE", "SHADOWBALL"]
+        },
+        {
+          "species": "LUNATONE",
+          "item": "LAXINCENSE",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF"],
+          "moves": ["PSYCHIC", "ICEBEAM", "COSMICPOWER", "CALMMIND"]
+        },
+        {
+          "species": "SOLROCK",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "COSMICPOWER", "OVERHEAT"]
+        },
+        {
+          "species": "NOCTOWL",
+          "item": "PERSIMBERRY",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "FEINTATTACK", "AERIALACE", "REFLECT"]
+        },
+        {
+          "species": "SANDSLASH",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "CRUSHCLAW", "SANDSTORM"]
+        },
+        {
+          "species": "VENOMOTH",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "SPD"],
+          "moves": ["SIGNALBEAM", "PSYCHIC", "SLUDGEBOMB", "GIGADRAIN"]
+        },
+        {
+          "species": "CHANSEY",
+          "item": "LEFTOVERS",
+          "nature": "RELAXED",
+          "evs": ["DEF", "SD"],
+          "moves": ["SEISMICTOSS", "SHADOWBALL", "DOUBLETEAM", "SOFTBOILED"]
+        },
+        {
+          "species": "SEAKING",
+          "item": "QUICKCLAW",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HORNDRILL", "MEGAHORN", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "JUMPLUFF",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["LEECHSEED", "SLEEPPOWDER", "GIGADRAIN", "DOUBLETEAM"]
+        },
+        {
+          "species": "PILOSWINE",
+          "item": "SHELLBELL",
+          "nature": "ADAMANT",
+          "evs": ["DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "BODYSLAM", "ROAR"]
+        },
+        {
+          "species": "GOLBAT",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "SHADOWBALL", "CONFUSERAY", "AIRCUTTER"]
+        },
+        {
+          "species": "PRIMEAPE",
+          "item": "SCOPELENS",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CROSSCHOP", "ROCKTOMB", "OVERHEAT", "BULKUP"]
+        },
+        {
+          "species": "HITMONLEE",
+          "item": "LAXINCENSE",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["MEGAKICK", "BRICKBREAK", "FORESIGHT", "ROCKTOMB"]
+        },
+        {
+          "species": "HITMONCHAN",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["DYNAMICPUNCH", "MACHPUNCH", "DETECT", "COUNTER"]
+        },
+        {
+          "species": "GIRAFARIG",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SD"],
+          "moves": ["PSYCHIC", "CRUNCH", "BATONPASS", "AGILITY"]
+        },
+        {
+          "species": "HITMONTOP",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["DOUBLEEDGE", "SEISMICTOSS", "ROCKSLIDE", "COUNTER"]
+        },
+        {
+          "species": "BANETTE",
+          "item": "LAXINCENSE",
+          "nature": "ADAMANT",
+          "evs": ["DEF", "SD"],
+          "moves": ["SHADOWBALL", "FRUSTRATION", "SCREECH", "WILLOWISP"]
+        },
+        {
+          "species": "NINJASK",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SLASH", "SHADOWBALL", "SWORDSDANCE", "BATONPASS"]
+        },
+        {
+          "species": "SEVIPER",
+          "item": "QUICKCLAW",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SLUDGEBOMB", "EARTHQUAKE", "CRUNCH", "GIGADRAIN"]
+        },
+        {
+          "species": "ZANGOOSE",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["CRUSHCLAW", "SHADOWBALL", "BRICKBREAK", "AERIALACE"]
+        },
+        {
+          "species": "CAMERUPT",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EARTHQUAKE", "ERUPTION", "BODYSLAM", "SCARYFACE"]
+        },
+        {
+          "species": "SHARPEDO",
+          "item": "SCOPELENS",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["DOUBLEEDGE", "CRUNCH", "EARTHQUAKE", "SURF"]
+        },
+        {
+          "species": "TROPIUS",
+          "item": "FOCUSBAND",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "SYNTHESIS", "BODYSLAM"]
+        },
+        {
+          "species": "MAGNETON",
+          "item": "LUMBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "SD"],
+          "moves": ["THUNDER", "RAINDANCE", "THUNDERWAVE", "METALSOUND"]
+        },
+        {
+          "species": "MANTINE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF"],
+          "moves": ["SURF", "ICEBEAM", "RAINDANCE", "CONFUSERAY"]
+        },
+        {
+          "species": "STANTLER",
+          "item": "LAXINCENSE",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FRUSTRATION", "SHADOWBALL", "THUNDERWAVE", "CONFUSERAY"]
+        },
+        {
+          "species": "ABSOL",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DOUBLEEDGE", "SHADOWBALL", "AERIALACE", "IRONTAIL"]
+        },
+        {
+          "species": "SWALOT",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "SHADOWBALL", "BODYSLAM", "COUNTER"]
+        },
+        {
+          "species": "CRAWDAUNT",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["GUILLOTINE", "FRUSTRATION", "ANCIENTPOWER", "AERIALACE"]
+        },
+        {
+          "species": "PIDGEOT",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["RETURN", "AERIALACE", "STEELWING", "MUDSLAP"]
+        },
+        {
+          "species": "GRUMPIG",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "ICEPUNCH", "THUNDERPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "TORKOAL",
+          "item": "WHITEHERB",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["OVERHEAT", "BODYSLAM", "SMOKESCREEN", "PROTECT"]
+        },
+        {
+          "species": "KINGLER",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["GUILLOTINE", "ROCKTOMB", "FLAIL", "ENDURE"]
+        },
+        {
+          "species": "CACTURNE",
+          "item": "PERSIMBERRY",
+          "nature": "HARDY",
+          "evs": ["DEF", "SD"],
+          "moves": ["MEGAKICK", "TEETERDANCE", "FEINTATTACK", "SANDSTORM"]
+        },
+        {
+          "species": "BELLOSSOM",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["SOLARBEAM", "ATTRACT", "SUNNYDAY", "SYNTHESIS"]
+        },
+        {
+          "species": "OCTILLERY",
+          "item": "LAXINCENSE",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["OCTAZOOKA", "FIREBLAST", "THUNDERWAVE", "MUDSLAP"]
+        },
+        {
+          "species": "HUNTAIL",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["SURF", "RAINDANCE", "CRUNCH", "BODYSLAM"]
+        },
+        {
+          "species": "GOREBYSS",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["SURF", "RAINDANCE", "PSYCHIC", "BODYSLAM"]
+        },
+        {
+          "species": "RELICANTH",
+          "item": "CHESTOBERRY",
+          "nature": "SASSY",
+          "evs": ["HP", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "AMNESIA", "REST"]
+        },
+        {
+          "species": "OMASTAR",
+          "item": "SITRUSBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SD"],
+          "moves": ["HYDROPUMP", "RAINDANCE", "ICEBEAM", "PROTECT"]
+        },
+        {
+          "species": "KABUTOPS",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["SLASH", "ROCKSLIDE", "FLAIL", "ENDURE"]
+        },
+        {
+          "species": "POLIWRATH",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["BRICKBREAK", "HYPNOSIS", "REST", "BELLYDRUM"]
+        },
+        {
+          "species": "SCYTHER",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SILVERWIND", "AERIALACE", "SWORDSDANCE", "DOUBLETEAM"]
+        },
+        {
+          "species": "PINSIR",
+          "item": "SALACBERRY",
+          "nature": "JOLLY",
+          "evs": ["HP", "SPD"],
+          "moves": ["GUILLOTINE", "SWORDSDANCE", "FLAIL", "ENDURE"]
+        },
+        {
+          "species": "POLITOED",
+          "item": "LAXINCENSE",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["SURF", "PSYCHIC", "MUDSLAP", "SWAGGER"]
+        },
+        {
+          "species": "CLOYSTER",
+          "item": "LEFTOVERS",
+          "nature": "CAREFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["DIVE", "TOXIC", "DOUBLETEAM", "PROTECT"]
+        },
+        {
+          "species": "DUGTRIO",
+          "item": "SOFTSAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "TRIATTACK", "SLASH", "SANDTOMB"]
+        },
+        {
+          "species": "MEDICHAM",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["PSYCHIC", "HIGHJUMPKICK", "CALMMIND", "BATONPASS"]
+        },
+        {
+          "species": "MISDREAVUS",
+          "item": "FOCUSBAND",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF"],
+          "moves": ["PAINSPLIT", "SHADOWBALL", "CONFUSERAY", "THUNDERWAVE"]
+        },
+        {
+          "species": "FEAROW",
+          "item": "SHARPBEAK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRILLPECK", "TRIATTACK", "FACADE", "MUDSLAP"]
+        },
+        {
+          "species": "GRANBULL",
+          "item": "CHERIBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAKICK", "SMELLINGSALTS", "THUNDERWAVE", "ROAR"]
+        },
+        {
+          "species": "JYNX",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "FAKEOUT", "LOVELYKISS", "ATTRACT"]
+        },
+        {
+          "species": "DUSCLOPS",
+          "item": "LEFTOVERS",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["WILLOWISP", "SEISMICTOSS", "PAINSPLIT", "CONFUSERAY"]
+        },
+        {
+          "species": "DODRIO",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRILLPECK", "TRIATTACK", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "MRMIME",
+          "item": "LEFTOVERS",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF"],
+          "moves": ["PSYCHIC", "MAGICALLEAF", "FAKEOUT", "REFLECT"]
+        },
+        {
+          "species": "LANTURN",
+          "item": "CHERIBERRY",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA"],
+          "moves": ["SURF", "CONFUSERAY", "ATTRACT", "THUNDERWAVE"]
+        },
+        {
+          "species": "BRELOOM",
+          "item": "KINGSROCK",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SKYUPPERCUT", "MACHPUNCH", "HEADBUTT", "COUNTER"]
+        },
+        {
+          "species": "FORRETRESS",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["DOUBLEEDGE", "ROCKSLIDE", "LIGHTSCREEN", "SPIKES"]
+        },
+        {
+          "species": "WHISCASH",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "AMNESIA", "REST"]
+        },
+        {
+          "species": "XATU",
+          "item": "SHARPBEAK",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["DRILLPECK", "NIGHTSHADE", "WISH", "FUTURESIGHT"]
+        },
+        {
+          "species": "SKARMORY",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["STEELWING", "AIRCUTTER", "COUNTER", "AGILITY"]
+        },
+        {
+          "species": "MAROWAK",
+          "item": "THICKCLUB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["BONEMERANG", "ROCKSLIDE", "ICYWIND", "HEADBUTT"]
+        },
+        {
+          "species": "QUAGSIRE",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "BRICKBREAK", "COUNTER", "MUDSLAP"]
+        },
+        {
+          "species": "CLEFABLE",
+          "item": "LEFTOVERS",
+          "nature": "BRAVE",
+          "evs": ["DEF", "SD"],
+          "moves": ["METRONOME", "DOUBLETEAM", "REFLECT", "FOLLOWME"]
+        },
+        {
+          "species": "HARIYAMA",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CROSSCHOP", "ROCKSLIDE", "COUNTER", "FAKEOUT"]
+        },
+        {
+          "species": "RAICHU",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["DEF", "SPD", "SA"],
+          "moves": ["THUNDERBOLT", "QUICKATTACK", "LIGHTSCREEN", "DOUBLETEAM"]
+        },
+        {
+          "species": "DEWGONG",
+          "item": "NEVERMELTICE",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "ICYWIND", "HEADBUTT", "FAKEOUT"]
+        },
+        {
+          "species": "MANECTRIC",
+          "item": "MAGNET",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "FLASH", "QUICKATTACK", "ROAR"]
+        },
+        {
+          "species": "VILEPLUME",
+          "item": "PERSIMBERRY",
+          "nature": "IMPISH",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "PETALDANCE", "MOONLIGHT", "AROMATHERAPY"]
+        },
+        {
+          "species": "VICTREEBEL",
+          "item": "SITRUSBERRY",
+          "nature": "QUIET",
+          "evs": ["DEF", "SD"],
+          "moves": ["GIGADRAIN", "SLEEPPOWDER", "SWEETSCENT", "SYNTHESIS"]
+        },
+        {
+          "species": "ELECTRODE",
+          "item": "FOCUSBAND",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDERBOLT", "SWIFT", "LIGHTSCREEN", "PROTECT"]
+        },
+        {
+          "species": "EXPLOUD",
+          "item": "CHESTOBERRY",
+          "nature": "IMPISH",
+          "evs": ["HP", "ATK"],
+          "moves": ["HYPERVOICE", "SHADOWBALL", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "SHIFTRY",
+          "item": "MIRACLESEED",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA", "SD"],
+          "moves": ["GIGADRAIN", "FEINTATTACK", "QUICKATTACK", "FAKEOUT"]
+        },
+        {
+          "species": "GLALIE",
+          "item": "PETAYABERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "CRUNCH", "HAIL", "PROTECT"]
+        },
+        {
+          "species": "LUDICOLO",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["SURF", "RAINDANCE", "THUNDERPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "HYPNO",
+          "item": "TWISTEDSPOON",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA"],
+          "moves": ["THUNDERPUNCH", "FIREPUNCH", "ICEPUNCH", "HYPNOSIS"]
+        },
+        {
+          "species": "GOLEM",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "BODYSLAM", "COUNTER", "ROCKTOMB"]
+        },
+        {
+          "species": "RHYDON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKTOMB", "SCARYFACE", "BRICKBREAK"]
+        },
+        {
+          "species": "ALAKAZAM",
+          "item": "FOCUSBAND",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["THUNDERPUNCH", "FIREPUNCH", "ICEPUNCH", "THUNDERWAVE"]
+        },
+        {
+          "species": "WEEZING",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "WILLOWISP", "SHADOWBALL", "SMOKESCREEN"]
+        },
+        {
+          "species": "KANGASKHAN",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DIZZYPUNCH", "BRICKBREAK", "COUNTER", "FAKEOUT"]
+        },
+        {
+          "species": "ELECTABUZZ",
+          "item": "CHERIBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "BRICKBREAK", "LIGHTSCREEN"]
+        },
+        {
+          "species": "TAUROS",
+          "item": "PERSIMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "THRASH", "SWAGGER", "FACADE"]
+        },
+        {
+          "species": "SLOWBRO",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["HP", "SD"],
+          "moves": ["SURF", "RAINDANCE", "HEADBUTT", "ICEPUNCH"]
+        },
+        {
+          "species": "SLOWKING",
+          "item": "LEFTOVERS",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF"],
+          "moves": ["PSYCHIC", "BRICKBREAK", "AMNESIA", "ATTRACT"]
+        },
+        {
+          "species": "MILTANK",
+          "item": "FOCUSBAND",
+          "nature": "CAREFUL",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FACADE", "SHADOWBALL", "COUNTER", "MILKDRINK"]
+        },
+        {
+          "species": "ALTARIA",
+          "item": "CHERIBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK"],
+          "moves": ["DRAGONCLAW", "AERIALACE", "REFRESH", "BODYSLAM"]
+        },
+        {
+          "species": "NIDOQUEEN",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "DOUBLEKICK", "BODYSLAM", "COUNTER"]
+        },
+        {
+          "species": "NIDOKING",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["HORNDRILL", "DOUBLEKICK", "BODYSLAM", "COUNTER"]
+        },
+        {
+          "species": "MAGMAR",
+          "item": "RAWSTBERRY",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["FLAMETHROWER", "SMOKESCREEN", "BRICKBREAK", "BARRIER"]
+        },
+        {
+          "species": "CRADILY",
+          "item": "LEFTOVERS",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["GIGADRAIN", "ROCKSLIDE", "BARRIER", "CONFUSERAY"]
+        },
+        {
+          "species": "ARMALDO",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLASH", "AERIALACE", "ANCIENTPOWER", "PROTECT"]
+        },
+        {
+          "species": "GOLDUCK",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["HYDROPUMP", "DIG", "BRICKBREAK", "LIGHTSCREEN"]
+        },
+        {
+          "species": "RAPIDASH",
+          "item": "CHARCOAL",
+          "nature": "QUIET",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "DOUBLEKICK", "QUICKATTACK", "PROTECT"]
+        },
+        {
+          "species": "MUK",
+          "item": "POISONBARB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SLUDGEBOMB", "BODYSLAM", "SCREECH", "MINIMIZE"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "LEFTOVERS",
+          "nature": "TIMID",
+          "evs": ["HP", "SPD", "SA"],
+          "moves": ["DREAMEATER", "HYPNOSIS", "CONFUSERAY", "ATTRACT"]
+        },
+        {
+          "species": "AMPHAROS",
+          "item": "MAGNET",
+          "nature": "RELAXED",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "THUNDERWAVE", "ATTRACT"]
+        },
+        {
+          "species": "SCIZOR",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["METALCLAW", "AERIALACE", "COUNTER", "QUICKATTACK"]
+        },
+        {
+          "species": "HERACROSS",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["MEGAHORN", "BRICKBREAK", "ROCKTOMB", "COUNTER"]
+        },
+        {
+          "species": "URSARING",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["MEGAKICK", "CRUNCH", "AERIALACE", "COUNTER"]
+        },
+        {
+          "species": "HOUNDOOM",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["FLAMETHROWER", "SHADOWBALL", "COUNTER", "WILLOWISP"]
+        },
+        {
+          "species": "DONPHAN",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ANCIENTPOWER", "SWAGGER", "REST"]
+        },
+        {
+          "species": "CLAYDOL",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "WAILORD",
+          "item": "SHELLBELL",
+          "nature": "SASSY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICYWIND", "BODYSLAM", "ROAR"]
+        },
+        {
+          "species": "NINETALES",
+          "item": "RAWSTBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "ROAR", "CONFUSERAY", "WILLOWISP"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "ROCKSLIDE", "COUNTER", "SCARYFACE"]
+        },
+        {
+          "species": "SHUCKLE",
+          "item": "CHESTOBERRY",
+          "nature": "BRAVE",
+          "evs": ["DEF", "SD"],
+          "moves": ["ROLLOUT", "DEFENSECURL", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "STEELIX",
+          "item": "SITRUSBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "DRAGONBREATH", "ROCKTOMB", "ROAR"]
+        },
+        {
+          "species": "TENTACRUEL",
+          "item": "PERSIMBERRY",
+          "nature": "IMPISH",
+          "evs": ["ATK", "DEF"],
+          "moves": ["SLUDGEBOMB", "ICYWIND", "BARRIER", "CONFUSERAY"]
+        },
+        {
+          "species": "AERODACTYL",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["ANCIENTPOWER", "DRAGONBREATH", "AERIALACE", "ROAR"]
+        },
+        {
+          "species": "PORYGON2",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["TRIATTACK", "AERIALACE", "SHADOWBALL", "RECOVER"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "LEFTOVERS",
+          "nature": "TIMID",
+          "evs": ["HP", "DEF", "SPD"],
+          "moves": ["DREAMEATER", "HYPNOSIS", "MAGICALLEAF", "REFLECT"]
+        },
+        {
+          "species": "EXEGGUTOR",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["DEF", "SD"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "SYNTHESIS", "LIGHTSCREEN"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "CONFUSERAY", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "FLYGON",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "STEELWING", "FEINTATTACK", "FACADE"]
+        },
+        {
+          "species": "VENUSAUR",
+          "item": "CHESTOBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["GIGADRAIN", "SUNNYDAY", "SYNTHESIS", "SLEEPPOWDER"]
+        },
+        {
+          "species": "VAPOREON",
+          "item": "MYSTICWATER",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA", "SD"],
+          "moves": ["SURF", "ROAR", "BITE", "QUICKATTACK"]
+        },
+        {
+          "species": "JOLTEON",
+          "item": "CHERIBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "ATTRACT", "PROTECT"]
+        },
+        {
+          "species": "FLAREON",
+          "item": "SITRUSBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["FLAMETHROWER", "ROAR", "BITE", "SANDATTACK"]
+        },
+        {
+          "species": "MEGANIUM",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "LIGHTSCREEN", "SYNTHESIS"]
+        },
+        {
+          "species": "ESPEON",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SPD", "SD"],
+          "moves": ["PSYCHIC", "CHARM", "CALMMIND", "BATONPASS"]
+        },
+        {
+          "species": "UMBREON",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CONFUSERAY", "FEINTATTACK", "DOUBLETEAM", "BATONPASS"]
+        },
+        {
+          "species": "BLASTOISE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["HYDROPUMP", "RAINDANCE", "BITE", "SEISMICTOSS"]
+        },
+        {
+          "species": "FERALIGATR",
+          "item": "LUMBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA", "SD"],
+          "moves": ["SURF", "RAINDANCE", "AERIALACE", "ROAR"]
+        },
+        {
+          "species": "AGGRON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["IRONTAIL", "EARTHQUAKE", "AERIALACE", "ROAR"]
+        },
+        {
+          "species": "BLAZIKEN",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["FLAMETHROWER", "SUNNYDAY", "DOUBLEKICK", "ROAR"]
+        },
+        {
+          "species": "WALREIN",
+          "item": "LEFTOVERS",
+          "nature": "QUIET",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["BLIZZARD", "HAIL", "YAWN", "PROTECT"]
+        },
+        {
+          "species": "SCEPTILE",
+          "item": "LEFTOVERS",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["LEAFBLADE", "LEECHSEED", "AERIALACE", "DETECT"]
+        },
+        {
+          "species": "CHARIZARD",
+          "item": "FOCUSBAND",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SUNNYDAY", "ROAR", "SCARYFACE"]
+        },
+        {
+          "species": "TYPHLOSION",
+          "item": "FOCUSBAND",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SUNNYDAY", "SMOKESCREEN", "ROAR"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["SURF", "ATTRACT", "CONFUSERAY", "SING"]
+        },
+        {
+          "species": "CROBAT",
+          "item": "KINGSROCK",
+          "nature": "QUIRKY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["SLUDGEBOMB", "BITE", "ASTONISH", "SCREECH"]
+        },
+        {
+          "species": "SWAMPERT",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "COUNTER", "REST", "CURSE"]
+        },
+        {
+          "species": "GYARADOS",
+          "item": "LUMBERRY",
+          "nature": "CAREFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["RETURN", "BITE", "THUNDERWAVE", "DRAGONDANCE"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["FACADE", "SHADOWBALL", "ATTRACT", "DOUBLETEAM"]
+        },
+        {
+          "species": "KINGDRA",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["HYDROPUMP", "DRAGONBREATH", "ICYWIND", "ATTRACT"]
+        },
+        {
+          "species": "BLISSEY",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["TOXIC", "DOUBLETEAM", "SING", "SOFTBOILED"]
+        },
+        {
+          "species": "MILOTIC",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["HYDROPUMP", "ICYWIND", "RECOVER", "MIRRORCOAT"]
+        },
+        {
+          "species": "ARCANINE",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FLAMETHROWER", "EXTREMESPEED", "CRUNCH", "BODYSLAM"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "KINGSROCK",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRAGONCLAW", "AERIALACE", "HEADBUTT", "ROCKSLIDE"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD", "SD"],
+          "moves": ["METEORMASH", "AERIALACE", "FACADE", "LIGHTSCREEN"]
+        },
+        {
+          "species": "SLAKING",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["YAWN", "BULKUP", "SWAGGER", "AERIALACE"]
+        },
+        {
+          "species": "DUGTRIO",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "ANCIENTPOWER", "AERIALACE", "TRIATTACK"]
+        },
+        {
+          "species": "MEDICHAM",
+          "item": "SALACBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["REVERSAL", "ENDURE", "PSYCHIC", "FAKEOUT"]
+        },
+        {
+          "species": "MAROWAK",
+          "item": "THICKCLUB",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "SWORDSDANCE", "ICYWIND"]
+        },
+        {
+          "species": "QUAGSIRE",
+          "item": "LEFTOVERS",
+          "nature": "SASSY",
+          "evs": ["DEF", "SD"],
+          "moves": ["CURSE", "ATTRACT", "YAWN", "ANCIENTPOWER"]
+        },
+        {
+          "species": "MISDREAVUS",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "ATTRACT", "THUNDERWAVE", "CONFUSERAY"]
+        },
+        {
+          "species": "FEAROW",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRILLPECK", "TRIATTACK", "ATTRACT", "PURSUIT"]
+        },
+        {
+          "species": "GRANBULL",
+          "item": "WHITEHERB",
+          "nature": "QUIET",
+          "evs": ["SA", "SD"],
+          "moves": ["OVERHEAT", "THUNDERBOLT", "ICEPUNCH", "FACADE"]
+        },
+        {
+          "species": "JYNX",
+          "item": "BRIGHTPOWDER",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF"],
+          "moves": ["PERISHSONG", "MEANLOOK", "LOVELYKISS", "PROTECT"]
+        },
+        {
+          "species": "DUSCLOPS",
+          "item": "LEFTOVERS",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["TOXIC", "CONFUSERAY", "DOUBLETEAM", "PROTECT"]
+        },
+        {
+          "species": "DODRIO",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRILLPECK", "DOUBLEEDGE", "FEINTATTACK", "PROTECT"]
+        },
+        {
+          "species": "MRMIME",
+          "item": "LIECHIBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["BATONPASS", "SWAGGER", "PSYCHUP", "PSYCHIC"]
+        },
+        {
+          "species": "LANTURN",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["FLAIL", "ENDURE", "THUNDERBOLT", "SURF"]
+        },
+        {
+          "species": "BRELOOM",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["GIGADRAIN", "LEECHSEED", "FOCUSPUNCH", "SPORE"]
+        },
+        {
+          "species": "FORRETRESS",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "DOUBLEEDGE", "COUNTER", "PROTECT"]
+        },
+        {
+          "species": "SKARMORY",
+          "item": "BRIGHTPOWDER",
+          "nature": "CAREFUL",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["SPIKES", "ROAR", "DRILLPECK", "TOXIC"]
+        },
+        {
+          "species": "WHISCASH",
+          "item": "SHELLBELL",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SURF", "EARTHQUAKE", "SPARK", "FUTURESIGHT"]
+        },
+        {
+          "species": "XATU",
+          "item": "LEFTOVERS",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FLY", "TOXIC", "CONFUSERAY", "ATTRACT"]
+        },
+        {
+          "species": "CLEFABLE",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["METEORMASH", "COSMICPOWER", "DOUBLETEAM", "FOLLOWME"]
+        },
+        {
+          "species": "HARIYAMA",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["CROSSCHOP", "FIREPUNCH", "ICEPUNCH", "THUNDERPUNCH"]
+        },
+        {
+          "species": "RAICHU",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["THUNDERBOLT", "REVERSAL", "ENDURE", "AGILITY"]
+        },
+        {
+          "species": "DEWGONG",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["BLIZZARD", "DOUBLEEDGE", "ENCORE", "DISABLE"]
+        },
+        {
+          "species": "MANECTRIC",
+          "item": "PETAYABERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "CRUNCH", "ROAR"]
+        },
+        {
+          "species": "VILEPLUME",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["INGRAIN", "DOUBLETEAM", "TOXIC", "GIGADRAIN"]
+        },
+        {
+          "species": "VICTREEBEL",
+          "item": "LEFTOVERS",
+          "nature": "SERIOUS",
+          "evs": ["ATK", "SA"],
+          "moves": ["GIGADRAIN", "SLUDGEBOMB", "SLEEPPOWDER", "ATTRACT"]
+        },
+        {
+          "species": "ELECTRODE",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["THUNDER", "RAINDANCE", "DOUBLETEAM", "SWAGGER"]
+        },
+        {
+          "species": "EXPLOUD",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "EARTHQUAKE", "COUNTER"]
+        },
+        {
+          "species": "SHIFTRY",
+          "item": "CHESTOBERRY",
+          "nature": "IMPISH",
+          "evs": ["DEF", "SD"],
+          "moves": ["LEECHSEED", "DIG", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "GLALIE",
+          "item": "SALACBERRY",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EXPLOSION", "ENDURE", "BODYSLAM", "ICYWIND"]
+        },
+        {
+          "species": "LUDICOLO",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "ICEBEAM", "THUNDERPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "HYPNO",
+          "item": "TWISTEDSPOON",
+          "nature": "MODEST",
+          "evs": ["DEF", "SD"],
+          "moves": ["HYPNOSIS", "NIGHTMARE", "DREAMEATER", "PSYCHIC"]
+        },
+        {
+          "species": "GOLEM",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["FOCUSPUNCH", "SUBSTITUTE", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "RHYDON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "HORNDRILL", "ROCKSLIDE", "BRICKBREAK"]
+        },
+        {
+          "species": "ALAKAZAM",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "CALMMIND", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "WEEZING",
+          "item": "SITRUSBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEMENTO", "SLUDGEBOMB", "FACADE", "DESTINYBOND"]
+        },
+        {
+          "species": "KANGASKHAN",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CRUSHCLAW", "SHADOWBALL", "ATTRACT", "REST"]
+        },
+        {
+          "species": "ELECTABUZZ",
+          "item": "LEFTOVERS",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "ATTRACT", "FOCUSPUNCH"]
+        },
+        {
+          "species": "TAUROS",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "SLOWBRO",
+          "item": "LEFTOVERS",
+          "nature": "MODEST",
+          "evs": ["ATK", "SD"],
+          "moves": ["SURF", "ICEBEAM", "CALMMIND", "YAWN"]
+        },
+        {
+          "species": "SLOWKING",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["YAWN", "THUNDERWAVE", "SURF", "PSYCHIC"]
+        },
+        {
+          "species": "MILTANK",
+          "item": "LEFTOVERS",
+          "nature": "CAREFUL",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["FOCUSPUNCH", "SHADOWBALL", "ATTRACT", "THUNDERWAVE"]
+        },
+        {
+          "species": "ALTARIA",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PERISHSONG", "DRAGONBREATH", "PURSUIT", "ATTRACT"]
+        },
+        {
+          "species": "NIDOQUEEN",
+          "item": "SHELLBELL",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "AERIALACE", "ROCKSLIDE"]
+        },
+        {
+          "species": "NIDOKING",
+          "item": "SHELLBELL",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAKICK", "EARTHQUAKE", "SHADOWBALL", "BRICKBREAK"]
+        },
+        {
+          "species": "MAGMAR",
+          "item": "QUICKCLAW",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SMOKESCREEN", "THUNDERPUNCH", "CONFUSERAY"]
+        },
+        {
+          "species": "CRADILY",
+          "item": "SITRUSBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ANCIENTPOWER", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "ARMALDO",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["IRONTAIL", "ANCIENTPOWER", "BRICKBREAK", "KNOCKOFF"]
+        },
+        {
+          "species": "GOLDUCK",
+          "item": "LUMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["CROSSCHOP", "SURF", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "RAPIDASH",
+          "item": "LEFTOVERS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["FIREBLAST", "BOUNCE", "DOUBLETEAM", "ATTRACT"]
+        },
+        {
+          "species": "MUK",
+          "item": "CHESTOBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "DEF"],
+          "moves": ["CURSE", "REST", "SLUDGEBOMB", "DYNAMICPUNCH"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SLUDGEBOMB", "SHADOWBALL", "CONFUSERAY", "WILLOWISP"]
+        },
+        {
+          "species": "AMPHAROS",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERPUNCH", "FIREPUNCH", "FOCUSPUNCH", "THUNDERWAVE"]
+        },
+        {
+          "species": "SCIZOR",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["SILVERWIND", "STEELWING", "SWORDSDANCE", "LIGHTSCREEN"]
+        },
+        {
+          "species": "HERACROSS",
+          "item": "LUMBERRY",
+          "nature": "JOLLY",
+          "evs": ["HP", "SPD"],
+          "moves": ["MEGAHORN", "EARTHQUAKE", "ATTRACT", "BULKUP"]
+        },
+        {
+          "species": "URSARING",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "BRICKBREAK", "COUNTER"]
+        },
+        {
+          "species": "HOUNDOOM",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "CRUNCH", "ROAR", "REST"]
+        },
+        {
+          "species": "DONPHAN",
+          "item": "QUICKCLAW",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FLAIL", "ENDURE", "EARTHQUAKE", "ROCKTOMB"]
+        },
+        {
+          "species": "CLAYDOL",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PSYCHIC", "EARTHQUAKE", "DOUBLETEAM", "COSMICPOWER"]
+        },
+        {
+          "species": "WAILORD",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DOUBLEEDGE", "REST", "CURSE", "AMNESIA"]
+        },
+        {
+          "species": "NINETALES",
+          "item": "LUMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["HEATWAVE", "BODYSLAM", "GRUDGE", "SUNNYDAY"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CROSSCHOP", "EARTHQUAKE", "BULKUP", "REST"]
+        },
+        {
+          "species": "SHUCKLE",
+          "item": "LEFTOVERS",
+          "nature": "CAREFUL",
+          "evs": ["DEF", "SD"],
+          "moves": ["SANDSTORM", "DIG", "FLASH", "DOUBLETEAM"]
+        },
+        {
+          "species": "STEELIX",
+          "item": "LEFTOVERS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "DRAGONBREATH", "SANDSTORM", "BLOCK"]
+        },
+        {
+          "species": "TENTACRUEL",
+          "item": "LEFTOVERS",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["TOXIC", "GIGADRAIN", "CONFUSERAY", "SURF"]
+        },
+        {
+          "species": "AERODACTYL",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["HYPERBEAM", "EARTHQUAKE", "AERIALACE", "ANCIENTPOWER"]
+        },
+        {
+          "species": "PORYGON2",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF"],
+          "moves": ["PSYCHIC", "CALMMIND", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "EXEGGUTOR",
+          "item": "CHESTOBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SD"],
+          "moves": ["RETURN", "CURSE", "SLEEPPOWDER", "REST"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HYDROPUMP", "THUNDER", "RAINDANCE", "RECOVER"]
+        },
+        {
+          "species": "FLYGON",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SOLARBEAM", "FIREBLAST", "CRUNCH", "SUNNYDAY"]
+        },
+        {
+          "species": "VENUSAUR",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["LEECHSEED", "GIGADRAIN", "DOUBLETEAM", "LIGHTSCREEN"]
+        },
+        {
+          "species": "VAPOREON",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICEBEAM", "BODYSLAM", "SHADOWBALL"]
+        },
+        {
+          "species": "JOLTEON",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "DIG", "DOUBLEKICK", "ROAR"]
+        },
+        {
+          "species": "FLAREON",
+          "item": "QUICKCLAW",
+          "nature": "RELAXED",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CURSE", "ATTRACT", "DOUBLEEDGE", "SHADOWBALL"]
+        },
+        {
+          "species": "MEGANIUM",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["LEECHSEED", "SUBSTITUTE", "DOUBLETEAM", "GRASSWHISTLE"]
+        },
+        {
+          "species": "ESPEON",
+          "item": "CHESTOBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "CALMMIND", "REST"]
+        },
+        {
+          "species": "UMBREON",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["CURSE", "SCREECH", "DOUBLETEAM", "DOUBLEEDGE"]
+        },
+        {
+          "species": "BLASTOISE",
+          "item": "SHELLBELL",
+          "nature": "BRAVE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["HYDROPUMP", "MEGAKICK", "BRICKBREAK", "MIRRORCOAT"]
+        },
+        {
+          "species": "FERALIGATR",
+          "item": "QUICKCLAW",
+          "nature": "SASSY",
+          "evs": ["HP", "SA", "SD"],
+          "moves": ["SURF", "DRAGONCLAW", "BRICKBREAK", "SCARYFACE"]
+        },
+        {
+          "species": "AGGRON",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["FOCUSPUNCH", "EARTHQUAKE", "ROCKSLIDE", "THUNDERWAVE"]
+        },
+        {
+          "species": "BLAZIKEN",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["BLAZEKICK", "MEGAKICK", "THUNDERPUNCH", "BRICKBREAK"]
+        },
+        {
+          "species": "WALREIN",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ICEBEAM", "CURSE", "DOUBLETEAM"]
+        },
+        {
+          "species": "SCEPTILE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["LEAFBLADE", "THUNDERPUNCH", "ATTRACT", "DOUBLETEAM"]
+        },
+        {
+          "species": "CHARIZARD",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "AERIALACE", "DRAGONDANCE", "SMOKESCREEN"]
+        },
+        {
+          "species": "TYPHLOSION",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["FLAMETHROWER", "THUNDERPUNCH", "AERIALACE", "ROCKSLIDE"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "QUICKCLAW",
+          "nature": "TIMID",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "ICEBEAM", "BODYSLAM", "ROAR"]
+        },
+        {
+          "species": "CROBAT",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["TOXIC", "GIGADRAIN", "CONFUSERAY", "DOUBLETEAM"]
+        },
+        {
+          "species": "SWAMPERT",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "EARTHQUAKE", "COUNTER", "MIRRORCOAT"]
+        },
+        {
+          "species": "GYARADOS",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["HYDROPUMP", "THUNDERBOLT", "FIREBLAST", "BLIZZARD"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "CURSE", "REST"]
+        },
+        {
+          "species": "KINGDRA",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICEBEAM", "DRAGONBREATH", "REST"]
+        },
+        {
+          "species": "BLISSEY",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["SEISMICTOSS", "SING", "ATTRACT", "SUBSTITUTE"]
+        },
+        {
+          "species": "MILOTIC",
+          "item": "FOCUSBAND",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "ICEBEAM", "SAFEGUARD", "MIRRORCOAT"]
+        },
+        {
+          "species": "ARCANINE",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SUNNYDAY", "CRUNCH", "ROAR"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "LEFTOVERS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["DOUBLEEDGE", "CRUNCH", "SWAGGER", "PROTECT"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SPD", "SD"],
+          "moves": ["EARTHQUAKE", "METEORMASH", "PSYCHUP", "SWAGGER"]
+        },
+        {
+          "species": "SLAKING",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["DEF", "SD"],
+          "moves": ["MEGAKICK", "SHADOWBALL", "YAWN", "AMNESIA"]
+        },
+        {
+          "species": "DUGTRIO",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "DOUBLEEDGE", "SLUDGEBOMB", "FISSURE"]
+        },
+        {
+          "species": "MEDICHAM",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["SPD", "SA"],
+          "moves": ["DYNAMICPUNCH", "THUNDERPUNCH", "ICEPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "MISDREAVUS",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF"],
+          "moves": ["PERISHSONG", "MEANLOOK", "THUNDERWAVE", "CONFUSERAY"]
+        },
+        {
+          "species": "FEAROW",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DRILLPECK", "RETURN", "STEELWING", "FEINTATTACK"]
+        },
+        {
+          "species": "GRANBULL",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "SLUDGEBOMB", "ROCKSLIDE"]
+        },
+        {
+          "species": "JYNX",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF"],
+          "moves": ["DREAMEATER", "LOVELYKISS", "ATTRACT", "SUBSTITUTE"]
+        },
+        {
+          "species": "DUSCLOPS",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PSYCHUP", "SWAGGER", "SHADOWBALL", "EARTHQUAKE"]
+        },
+        {
+          "species": "DODRIO",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["DOUBLEEDGE", "DRILLPECK", "STEELWING", "FEINTATTACK"]
+        },
+        {
+          "species": "MRMIME",
+          "item": "CHOICEBAND",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["TRICK", "TORMENT", "PSYCHIC", "THUNDERBOLT"]
+        },
+        {
+          "species": "LANTURN",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["HYDROPUMP", "THUNDER", "CONFUSERAY", "RAINDANCE"]
+        },
+        {
+          "species": "BRELOOM",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["IRONTAIL", "FOCUSPUNCH", "ATTRACT", "SPORE"]
+        },
+        {
+          "species": "FORRETRESS",
+          "item": "FOCUSBAND",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA", "SD"],
+          "moves": ["EXPLOSION", "EARTHQUAKE", "GIGADRAIN", "ZAPCANNON"]
+        },
+        {
+          "species": "WHISCASH",
+          "item": "CHESTOBERRY",
+          "nature": "HARDY",
+          "evs": ["DEF", "SD"],
+          "moves": ["SLEEPTALK", "REST", "SURF", "FISSURE"]
+        },
+        {
+          "species": "XATU",
+          "item": "KINGSROCK",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["DRILLPECK", "PSYCHIC", "GIGADRAIN", "STEELWING"]
+        },
+        {
+          "species": "SKARMORY",
+          "item": "CHESTOBERRY",
+          "nature": "CAREFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["TOXIC", "CURSE", "REST", "FLY"]
+        },
+        {
+          "species": "MAROWAK",
+          "item": "THICKCLUB",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "SWORDSDANCE", "BRICKBREAK"]
+        },
+        {
+          "species": "QUAGSIRE",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "SLUDGEBOMB", "DOUBLEEDGE", "CURSE"]
+        },
+        {
+          "species": "CLEFABLE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["THUNDERBOLT", "ICEBEAM", "FLAMETHROWER", "MAGICALLEAF"]
+        },
+        {
+          "species": "HARIYAMA",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "EARTHQUAKE", "ROCKSLIDE", "FACADE"]
+        },
+        {
+          "species": "RAICHU",
+          "item": "CHERIBERRY",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "IRONTAIL", "ATTRACT"]
+        },
+        {
+          "species": "DEWGONG",
+          "item": "CHESTOBERRY",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF"],
+          "moves": ["HORNDRILL", "SHEERCOLD", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "MANECTRIC",
+          "item": "LUMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "IRONTAIL", "THUNDERWAVE", "ROAR"]
+        },
+        {
+          "species": "VILEPLUME",
+          "item": "LEFTOVERS",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["ATTRACT", "STUNSPORE", "SLUDGEBOMB", "GIGADRAIN"]
+        },
+        {
+          "species": "VICTREEBEL",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["STUNSPORE", "INGRAIN", "GIGADRAIN", "SLUDGEBOMB"]
+        },
+        {
+          "species": "ELECTRODE",
+          "item": "LIECHIBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EXPLOSION", "THUNDERBOLT", "THUNDERWAVE", "ENDURE"]
+        },
+        {
+          "species": "EXPLOUD",
+          "item": "WHITEHERB",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "ICEBEAM", "THUNDERPUNCH", "EXTRASENSORY"]
+        },
+        {
+          "species": "SHIFTRY",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SOLARBEAM", "SUNNYDAY", "EXPLOSION", "SYNTHESIS"]
+        },
+        {
+          "species": "GLALIE",
+          "item": "SHELLBELL",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["BLIZZARD", "EARTHQUAKE", "DOUBLEEDGE", "SHADOWBALL"]
+        },
+        {
+          "species": "LUDICOLO",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["LEECHSEED", "RAINDANCE", "DOUBLETEAM", "GIGADRAIN"]
+        },
+        {
+          "species": "HYPNO",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["PSYCHUP", "SWAGGER", "MEGAKICK", "SHADOWBALL"]
+        },
+        {
+          "species": "GOLEM",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EXPLOSION", "EARTHQUAKE", "FLAMETHROWER", "BRICKBREAK"]
+        },
+        {
+          "species": "RHYDON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAHORN", "CRUSHCLAW", "EARTHQUAKE", "HORNDRILL"]
+        },
+        {
+          "species": "ALAKAZAM",
+          "item": "CHOICEBAND",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["TRICK", "DISABLE", "PSYCHIC", "SKILLSWAP"]
+        },
+        {
+          "species": "WEEZING",
+          "item": "FOCUSBAND",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EXPLOSION", "SLUDGEBOMB", "FLAMETHROWER", "THUNDERBOLT"]
+        },
+        {
+          "species": "KANGASKHAN",
+          "item": "SALACBERRY",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["REVERSAL", "ENDURE", "THUNDERBOLT", "EARTHQUAKE"]
+        },
+        {
+          "species": "ELECTABUZZ",
+          "item": "LUMBERRY",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREPUNCH", "ICEPUNCH", "THUNDERBOLT", "CROSSCHOP"]
+        },
+        {
+          "species": "TAUROS",
+          "item": "LEFTOVERS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "FLAMETHROWER", "ICEBEAM"]
+        },
+        {
+          "species": "SLOWBRO",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["SA", "SD"],
+          "moves": ["SURF", "PSYCHIC", "SHADOWBALL", "ATTRACT"]
+        },
+        {
+          "species": "SLOWKING",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["ATK", "DEF", "SA"],
+          "moves": ["PSYCHIC", "SURF", "ICEBEAM", "EARTHQUAKE"]
+        },
+        {
+          "species": "MILTANK",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["REVERSAL", "ENDURE", "EARTHQUAKE", "SHADOWBALL"]
+        },
+        {
+          "species": "ALTARIA",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SING", "DRAGONDANCE", "EARTHQUAKE", "AERIALACE"]
+        },
+        {
+          "species": "NIDOQUEEN",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDERBOLT", "FLAMETHROWER", "ICEBEAM", "CRUNCH"]
+        },
+        {
+          "species": "NIDOKING",
+          "item": "LEPPABERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["HORNDRILL", "FIREBLAST", "BLIZZARD", "SURF"]
+        },
+        {
+          "species": "MAGMAR",
+          "item": "SCOPELENS",
+          "nature": "IMPISH",
+          "evs": ["ATK", "DEF"],
+          "moves": ["MEGAKICK", "CROSSCHOP", "IRONTAIL", "COUNTER"]
+        },
+        {
+          "species": "CRADILY",
+          "item": "LEFTOVERS",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA", "SD"],
+          "moves": ["SUBSTITUTE", "SOLARBEAM", "SUNNYDAY", "RECOVER"]
+        },
+        {
+          "species": "ARMALDO",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "BRICKBREAK", "SWORDSDANCE"]
+        },
+        {
+          "species": "GOLDUCK",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["HYDROPUMP", "CROSSCHOP", "BLIZZARD", "PROTECT"]
+        },
+        {
+          "species": "RAPIDASH",
+          "item": "WHITEHERB",
+          "nature": "MODEST",
+          "evs": ["HP", "SPD", "SA"],
+          "moves": ["OVERHEAT", "SOLARBEAM", "SUNNYDAY", "HYPNOSIS"]
+        },
+        {
+          "species": "MUK",
+          "item": "LUMBERRY",
+          "nature": "QUIET",
+          "evs": ["DEF", "SA"],
+          "moves": ["SLUDGEBOMB", "THUNDERBOLT", "FLAMETHROWER", "ICEPUNCH"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "QUICKCLAW",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "GIGADRAIN", "SKILLSWAP"]
+        },
+        {
+          "species": "AMPHAROS",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "MEGAKICK", "IRONTAIL", "BRICKBREAK"]
+        },
+        {
+          "species": "SCIZOR",
+          "item": "FOCUSBAND",
+          "nature": "CAREFUL",
+          "evs": ["ATK", "SD"],
+          "moves": ["REVERSAL", "ENDURE", "AGILITY", "SLASH"]
+        },
+        {
+          "species": "HERACROSS",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["MEGAHORN", "EARTHQUAKE", "ROCKSLIDE", "BRICKBREAK"]
+        },
+        {
+          "species": "URSARING",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SPD", "SA"],
+          "moves": ["FIREPUNCH", "THUNDERPUNCH", "ICEPUNCH", "CRUNCH"]
+        },
+        {
+          "species": "HOUNDOOM",
+          "item": "WHITEHERB",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["OVERHEAT", "SHADOWBALL", "SLUDGEBOMB", "DOUBLEEDGE"]
+        },
+        {
+          "species": "DONPHAN",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["FISSURE", "EARTHQUAKE", "ROCKSLIDE", "SECRETPOWER"]
+        },
+        {
+          "species": "CLAYDOL",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "ICEBEAM", "SOLARBEAM", "SUNNYDAY"]
+        },
+        {
+          "species": "WAILORD",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HYDROPUMP", "FISSURE", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "NINETALES",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "IRONTAIL", "CONFUSERAY", "ATTRACT"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["CROSSCHOP", "FIREBLAST", "THUNDERPUNCH", "ICEPUNCH"]
+        },
+        {
+          "species": "SHUCKLE",
+          "item": "LEFTOVERS",
+          "nature": "CAREFUL",
+          "evs": ["DEF", "SD"],
+          "moves": ["SUBSTITUTE", "ATTRACT", "TOXIC", "DOUBLETEAM"]
+        },
+        {
+          "species": "STEELIX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "BODYSLAM", "ROCKSLIDE", "EXPLOSION"]
+        },
+        {
+          "species": "TENTACRUEL",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["DEF", "SPD", "SA"],
+          "moves": ["SURF", "GIGADRAIN", "ICEBEAM", "MIRRORCOAT"]
+        },
+        {
+          "species": "AERODACTYL",
+          "item": "KINGSROCK",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["DOUBLEEDGE", "ROCKSLIDE", "FIREBLAST", "DRAGONCLAW"]
+        },
+        {
+          "species": "PORYGON2",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "TRIATTACK", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "ICEPUNCH", "FIREPUNCH", "MAGICALLEAF"]
+        },
+        {
+          "species": "EXEGGUTOR",
+          "item": "LEFTOVERS",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["LEECHSEED", "GIGADRAIN", "TOXIC", "EXPLOSION"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "PSYCHIC", "THUNDERBOLT", "ICEBEAM"]
+        },
+        {
+          "species": "FLYGON",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["EARTHQUAKE", "DRAGONCLAW", "FLAMETHROWER", "GIGADRAIN"]
+        },
+        {
+          "species": "VENUSAUR",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF", "SD"],
+          "moves": ["DOUBLEEDGE", "SLUDGEBOMB", "EARTHQUAKE", "SLEEPPOWDER"]
+        },
+        {
+          "species": "VAPOREON",
+          "item": "QUICKCLAW",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICEBEAM", "ACIDARMOR", "BATONPASS"]
+        },
+        {
+          "species": "JOLTEON",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "AGILITY", "BATONPASS"]
+        },
+        {
+          "species": "FLAREON",
+          "item": "QUICKCLAW",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SHADOWBALL", "FLAIL", "ENDURE", "OVERHEAT"]
+        },
+        {
+          "species": "MEGANIUM",
+          "item": "SALACBERRY",
+          "nature": "JOLLY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "FLAIL", "ENDURE", "GIGADRAIN"]
+        },
+        {
+          "species": "ESPEON",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "BITE", "WISH", "REFLECT"]
+        },
+        {
+          "species": "UMBREON",
+          "item": "BRIGHTPOWDER",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SWAGGER", "PSYCHUP", "ATTRACT", "SHADOWBALL"]
+        },
+        {
+          "species": "BLASTOISE",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["SURF", "EARTHQUAKE", "ICEBEAM", "COUNTER"]
+        },
+        {
+          "species": "FERALIGATR",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["HYDROPUMP", "CRUNCH", "EARTHQUAKE", "ROCKSLIDE"]
+        },
+        {
+          "species": "AGGRON",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "THUNDER", "FIREBLAST", "BLIZZARD"]
+        },
+        {
+          "species": "BLAZIKEN",
+          "item": "SALACBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD"],
+          "moves": ["OVERHEAT", "EARTHQUAKE", "ENDURE", "REVERSAL"]
+        },
+        {
+          "species": "WALREIN",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SHEERCOLD", "FISSURE", "SURF", "ATTRACT"]
+        },
+        {
+          "species": "SCEPTILE",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["LEAFBLADE", "EARTHQUAKE", "CRUSHCLAW", "AERIALACE"]
+        },
+        {
+          "species": "CHARIZARD",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "DRAGONCLAW", "BITE", "BRICKBREAK"]
+        },
+        {
+          "species": "TYPHLOSION",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "OVERHEAT", "ENDURE", "REVERSAL"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DOUBLEEDGE", "PSYCHIC", "CONFUSERAY", "DRAGONDANCE"]
+        },
+        {
+          "species": "CROBAT",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["AIRCUTTER", "DOUBLEEDGE", "SHADOWBALL", "SCREECH"]
+        },
+        {
+          "species": "SWAMPERT",
+          "item": "SHELLBELL",
+          "nature": "BRAVE",
+          "evs": ["ATK", "SA"],
+          "moves": ["SURF", "EARTHQUAKE", "ICEBEAM", "COUNTER"]
+        },
+        {
+          "species": "GYARADOS",
+          "item": "QUICKCLAW",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["SURF", "THUNDER", "RAINDANCE", "EARTHQUAKE"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["DEF", "SD"],
+          "moves": ["MEGAKICK", "SHADOWBALL", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "KINGDRA",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FLAIL", "HYDROPUMP", "DRAGONDANCE", "ENDURE"]
+        },
+        {
+          "species": "BLISSEY",
+          "item": "FOCUSBAND",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["FIREBLAST", "BLIZZARD", "CALMMIND", "SOFTBOILED"]
+        },
+        {
+          "species": "MILOTIC",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "BLIZZARD", "ATTRACT", "RECOVER"]
+        },
+        {
+          "species": "ARCANINE",
+          "item": "WHITEHERB",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "EXTREMESPEED", "CRUNCH", "AERIALACE"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "SALACBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "CRUNCH", "ENDURE"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "METEORMASH", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "SLAKING",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["DEF", "SD"],
+          "moves": ["EARTHQUAKE", "SHADOWBALL", "AERIALACE", "BRICKBREAK"]
+        },
+        {
+          "species": "DUGTRIO",
+          "item": "KINGSROCK",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "DOUBLEEDGE", "ROCKSLIDE", "FISSURE"]
+        },
+        {
+          "species": "MEDICHAM",
+          "item": "LUMBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["MEGAKICK", "PSYCHIC", "SHADOWBALL", "ROCKSLIDE"]
+        },
+        {
+          "species": "MISDREAVUS",
+          "item": "LUMBERRY",
+          "nature": "TIMID",
+          "evs": ["SPD", "SA"],
+          "moves": ["DESTINYBOND", "PSYCHIC", "SHADOWBALL", "THUNDERBOLT"]
+        },
+        {
+          "species": "FEAROW",
+          "item": "LUMBERRY",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["DRILLPECK", "DOUBLEEDGE", "STEELWING", "SKYATTACK"]
+        },
+        {
+          "species": "GRANBULL",
+          "item": "CHOICEBAND",
+          "nature": "BRAVE",
+          "evs": ["ATK", "SA"],
+          "moves": ["MEGAKICK", "EARTHQUAKE", "CRUNCH", "SHADOWBALL"]
+        },
+        {
+          "species": "JYNX",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "ICEBEAM", "LOVELYKISS", "FAKETEARS"]
+        },
+        {
+          "species": "DUSCLOPS",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "SHADOWBALL", "CURSE", "REST"]
+        },
+        {
+          "species": "DODRIO",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FLAIL", "ENDURE", "DRILLPECK", "FACADE"]
+        },
+        {
+          "species": "MRMIME",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "LANTURN",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "THUNDERBOLT", "ICEBEAM", "CONFUSERAY"]
+        },
+        {
+          "species": "BRELOOM",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FOCUSPUNCH", "SLUDGEBOMB", "SPORE", "DOUBLETEAM"]
+        },
+        {
+          "species": "FORRETRESS",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EXPLOSION", "EARTHQUAKE", "ROCKSLIDE", "DOUBLEEDGE"]
+        },
+        {
+          "species": "WHISCASH",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["FISSURE", "SURF", "EARTHQUAKE", "ICEBEAM"]
+        },
+        {
+          "species": "XATU",
+          "item": "PETAYABERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYCHIC", "DRILLPECK", "SHADOWBALL", "CONFUSERAY"]
+        },
+        {
+          "species": "SKARMORY",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DRILLPECK", "STEELWING", "COUNTER", "ROCKSLIDE"]
+        },
+        {
+          "species": "MAROWAK",
+          "item": "THICKCLUB",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "SWORDSDANCE", "MEGAKICK"]
+        },
+        {
+          "species": "QUAGSIRE",
+          "item": "LEFTOVERS",
+          "nature": "SASSY",
+          "evs": ["ATK", "SA", "SD"],
+          "moves": ["SURF", "EARTHQUAKE", "ICEBEAM", "AMNESIA"]
+        },
+        {
+          "species": "CLEFABLE",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "DEF"],
+          "moves": ["MEGAKICK", "PSYCHIC", "SHADOWBALL", "SOFTBOILED"]
+        },
+        {
+          "species": "HARIYAMA",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "EARTHQUAKE", "ROCKSLIDE", "FAKEOUT"]
+        },
+        {
+          "species": "RAICHU",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "PROTECT", "MEGAKICK"]
+        },
+        {
+          "species": "DEWGONG",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["SHEERCOLD", "ICEBEAM", "SURF", "SIGNALBEAM"]
+        },
+        {
+          "species": "MANECTRIC",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "CRUNCH", "THUNDERWAVE", "ROAR"]
+        },
+        {
+          "species": "VILEPLUME",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["SOLARBEAM", "SLUDGEBOMB", "SUNNYDAY", "SYNTHESIS"]
+        },
+        {
+          "species": "VICTREEBEL",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "SA"],
+          "moves": ["GIGADRAIN", "DOUBLEEDGE", "SLUDGEBOMB", "SYNTHESIS"]
+        },
+        {
+          "species": "ELECTRODE",
+          "item": "LUMBERRY",
+          "nature": "NAUGHTY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EXPLOSION", "THUNDERBOLT", "THUNDERWAVE", "MIRRORCOAT"]
+        },
+        {
+          "species": "EXPLOUD",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["MEGAKICK", "EARTHQUAKE", "SHADOWBALL", "OVERHEAT"]
+        },
+        {
+          "species": "SHIFTRY",
+          "item": "FOCUSBAND",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EXPLOSION", "GIGADRAIN", "MEGAKICK", "FAKEOUT"]
+        },
+        {
+          "species": "GLALIE",
+          "item": "LEFTOVERS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["ICEBEAM", "EARTHQUAKE", "CRUNCH", "SHADOWBALL"]
+        },
+        {
+          "species": "LUDICOLO",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["LEECHSEED", "RAINDANCE", "DOUBLETEAM", "TOXIC"]
+        },
+        {
+          "species": "HYPNO",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "THUNDERPUNCH", "FIREPUNCH", "ICEPUNCH"]
+        },
+        {
+          "species": "GOLEM",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EXPLOSION", "EARTHQUAKE", "ROCKSLIDE", "DOUBLEEDGE"]
+        },
+        {
+          "species": "RHYDON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAHORN", "EARTHQUAKE", "ROCKSLIDE", "HORNDRILL"]
+        },
+        {
+          "species": "ALAKAZAM",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "THUNDERPUNCH", "FIREPUNCH", "ICEPUNCH"]
+        },
+        {
+          "species": "WEEZING",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EXPLOSION", "SLUDGEBOMB", "FRUSTRATION", "SHADOWBALL"]
+        },
+        {
+          "species": "KANGASKHAN",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["MEGAKICK", "EARTHQUAKE", "AERIALACE", "SHADOWBALL"]
+        },
+        {
+          "species": "ELECTABUZZ",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "PSYCHIC", "MEGAKICK", "CROSSCHOP"]
+        },
+        {
+          "species": "TAUROS",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["DOUBLEEDGE", "ROCKTOMB", "THUNDERBOLT", "SURF"]
+        },
+        {
+          "species": "SLOWBRO",
+          "item": "QUICKCLAW",
+          "nature": "SASSY",
+          "evs": ["SA", "SD"],
+          "moves": ["PSYCHIC", "SURF", "EARTHQUAKE", "ICEBEAM"]
+        },
+        {
+          "species": "SLOWKING",
+          "item": "QUICKCLAW",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["PSYCHIC", "SURF", "ICEBEAM", "FLAMETHROWER"]
+        },
+        {
+          "species": "MILTANK",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["DOUBLEEDGE", "CURSE", "DOUBLETEAM", "MILKDRINK"]
+        },
+        {
+          "species": "ALTARIA",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["DRAGONCLAW", "EARTHQUAKE", "FLAMETHROWER", "ICEBEAM"]
+        },
+        {
+          "species": "NIDOQUEEN",
+          "item": "WHITEHERB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SUPERPOWER", "SLUDGEBOMB", "EARTHQUAKE", "SHADOWBALL"]
+        },
+        {
+          "species": "NIDOKING",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["MEGAHORN", "SLUDGEBOMB", "EARTHQUAKE", "THUNDER"]
+        },
+        {
+          "species": "MAGMAR",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF"],
+          "moves": ["FLAMETHROWER", "PSYCHIC", "CROSSCHOP", "CONFUSERAY"]
+        },
+        {
+          "species": "CRADILY",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["TOXIC", "INGRAIN", "MIRRORCOAT", "GIGADRAIN"]
+        },
+        {
+          "species": "ARMALDO",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "AERIALACE", "ROCKSLIDE"]
+        },
+        {
+          "species": "GOLDUCK",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SURF", "CROSSCHOP", "ICEBEAM", "AERIALACE"]
+        },
+        {
+          "species": "RAPIDASH",
+          "item": "WHITEHERB",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["OVERHEAT", "DOUBLEEDGE", "IRONTAIL", "DOUBLEKICK"]
+        },
+        {
+          "species": "MUK",
+          "item": "QUICKCLAW",
+          "nature": "BRAVE",
+          "evs": ["ATK", "DEF"],
+          "moves": ["SLUDGEBOMB", "BRICKBREAK", "GIGADRAIN", "EXPLOSION"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "FIREPUNCH", "ICEPUNCH", "DESTINYBOND"]
+        },
+        {
+          "species": "AMPHAROS",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA"],
+          "moves": ["THUNDERBOLT", "FIREPUNCH", "THUNDERWAVE", "REFLECT"]
+        },
+        {
+          "species": "SCIZOR",
+          "item": "BRIGHTPOWDER",
+          "nature": "CAREFUL",
+          "evs": ["HP", "SD"],
+          "moves": ["SILVERWIND", "SWORDSDANCE", "AGILITY", "BATONPASS"]
+        },
+        {
+          "species": "HERACROSS",
+          "item": "SALACBERRY",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["MEGAHORN", "EARTHQUAKE", "REVERSAL", "ENDURE"]
+        },
+        {
+          "species": "URSARING",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "ROCKSLIDE", "AERIALACE"]
+        },
+        {
+          "species": "HOUNDOOM",
+          "item": "WHITEHERB",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "SOLARBEAM", "CRUNCH", "SUNNYDAY"]
+        },
+        {
+          "species": "DONPHAN",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["FISSURE", "EARTHQUAKE", "ROCKSLIDE", "IRONTAIL"]
+        },
+        {
+          "species": "CLAYDOL",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["PSYCHIC", "EARTHQUAKE", "SHADOWBALL", "EXPLOSION"]
+        },
+        {
+          "species": "WAILORD",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICEBEAM", "EARTHQUAKE", "FISSURE"]
+        },
+        {
+          "species": "NINETALES",
+          "item": "WHITEHERB",
+          "nature": "QUIRKY",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "DOUBLEEDGE", "CONFUSERAY", "WILLOWISP"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["CROSSCHOP", "EARTHQUAKE", "FLAMETHROWER", "ROCKSLIDE"]
+        },
+        {
+          "species": "SHUCKLE",
+          "item": "CHESTOBERRY",
+          "nature": "CAREFUL",
+          "evs": ["DEF", "SD"],
+          "moves": ["TOXIC", "DOUBLETEAM", "WRAP", "REST"]
+        },
+        {
+          "species": "STEELIX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SD"],
+          "moves": ["EARTHQUAKE", "IRONTAIL", "DOUBLEEDGE", "EXPLOSION"]
+        },
+        {
+          "species": "TENTACRUEL",
+          "item": "SHELLBELL",
+          "nature": "QUIRKY",
+          "evs": ["ATK", "DEF", "SA"],
+          "moves": ["HYDROPUMP", "SLUDGEBOMB", "ICEBEAM", "MIRRORCOAT"]
+        },
+        {
+          "species": "AERODACTYL",
+          "item": "KINGSROCK",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "FIREBLAST", "BITE"]
+        },
+        {
+          "species": "PORYGON2",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "RECOVER"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEPUNCH", "FIREPUNCH"]
+        },
+        {
+          "species": "EXEGGUTOR",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYCHIC", "GIGADRAIN", "SLUDGEBOMB", "EXPLOSION"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "RECOVER"]
+        },
+        {
+          "species": "FLYGON",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["EARTHQUAKE", "DRAGONCLAW", "DOUBLEEDGE", "CRUNCH"]
+        },
+        {
+          "species": "VENUSAUR",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA", "SD"],
+          "moves": ["SOLARBEAM", "SLUDGEBOMB", "SUNNYDAY", "EARTHQUAKE"]
+        },
+        {
+          "species": "VAPOREON",
+          "item": "LUMBERRY",
+          "nature": "CALM",
+          "evs": ["HP", "SA", "SD"],
+          "moves": ["SURF", "ICEBEAM", "ACIDARMOR", "REST"]
+        },
+        {
+          "species": "JOLTEON",
+          "item": "KINGSROCK",
+          "nature": "TIMID",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "BITE", "SHADOWBALL"]
+        },
+        {
+          "species": "FLAREON",
+          "item": "QUICKCLAW",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["OVERHEAT", "SUNNYDAY", "DOUBLEEDGE", "SHADOWBALL"]
+        },
+        {
+          "species": "MEGANIUM",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["GIGADRAIN", "EARTHQUAKE", "ANCIENTPOWER", "BODYSLAM"]
+        },
+        {
+          "species": "ESPEON",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "BITE", "ATTRACT", "CALMMIND"]
+        },
+        {
+          "species": "UMBREON",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["CONFUSERAY", "TOXIC", "FEINTATTACK", "DOUBLETEAM"]
+        },
+        {
+          "species": "BLASTOISE",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["SURF", "EARTHQUAKE", "ICEBEAM", "MIRRORCOAT"]
+        },
+        {
+          "species": "FERALIGATR",
+          "item": "SCOPELENS",
+          "nature": "HARDY",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["HYDROPUMP", "ICEBEAM", "EARTHQUAKE", "AERIALACE"]
+        },
+        {
+          "species": "AGGRON",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "ROCKSLIDE", "AERIALACE"]
+        },
+        {
+          "species": "BLAZIKEN",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["OVERHEAT", "EARTHQUAKE", "THUNDERPUNCH", "ROCKSLIDE"]
+        },
+        {
+          "species": "WALREIN",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["SURF", "ICEBEAM", "EARTHQUAKE", "SHEERCOLD"]
+        },
+        {
+          "species": "SCEPTILE",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["LEAFBLADE", "DRAGONCLAW", "CRUNCH", "THUNDERPUNCH"]
+        },
+        {
+          "species": "CHARIZARD",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["OVERHEAT", "EARTHQUAKE", "AERIALACE", "ROCKSLIDE"]
+        },
+        {
+          "species": "TYPHLOSION",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["OVERHEAT", "THUNDERPUNCH", "EARTHQUAKE", "CRUSHCLAW"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "ICEBEAM", "THUNDERBOLT", "PSYCHIC"]
+        },
+        {
+          "species": "CROBAT",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "SPD"],
+          "moves": ["SLUDGEBOMB", "AERIALACE", "SHADOWBALL", "CONFUSERAY"]
+        },
+        {
+          "species": "SWAMPERT",
+          "item": "SHELLBELL",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["SURF", "EARTHQUAKE", "ICEBEAM", "MIRRORCOAT"]
+        },
+        {
+          "species": "GYARADOS",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["RETURN", "EARTHQUAKE", "DRAGONDANCE", "REST"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["DOUBLEEDGE", "SHADOWBALL", "BRICKBREAK", "CURSE"]
+        },
+        {
+          "species": "KINGDRA",
+          "item": "CHESTOBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DOUBLEEDGE", "ICEBEAM", "DRAGONDANCE", "REST"]
+        },
+        {
+          "species": "BLISSEY",
+          "item": "FOCUSBAND",
+          "nature": "BOLD",
+          "evs": ["DEF", "SD"],
+          "moves": ["ICEBEAM", "CALMMIND", "COUNTER", "SOFTBOILED"]
+        },
+        {
+          "species": "MILOTIC",
+          "item": "LEFTOVERS",
+          "nature": "MODEST",
+          "evs": ["DEF", "SA", "SD"],
+          "moves": ["SURF", "ICEBEAM", "RECOVER", "MIRRORCOAT"]
+        },
+        {
+          "species": "ARCANINE",
+          "item": "WHITEHERB",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "EXTREMESPEED", "CRUNCH", "DOUBLEEDGE"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "AERIALACE", "DRAGONDANCE"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["METEORMASH", "PSYCHIC", "EARTHQUAKE", "SHADOWBALL"]
+        },
+        {
+          "species": "SLAKING",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SA", "SD"],
+          "moves": ["THUNDERBOLT", "FLAMETHROWER", "ICEBEAM", "YAWN"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["ICEBEAM", "WATERPULSE", "ICYWIND", "ROAR"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "DRILLPECK", "THUNDERWAVE", "ROAR"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["FLAMETHROWER", "AERIALACE", "MUDSLAP", "ROAR"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "CALMMIND", "REST"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "DOUBLETEAM", "CALMMIND", "REST"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "DOUBLETEAM", "CALMMIND", "REST"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "WHITEHERB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["SUPERPOWER", "EARTHQUAKE", "ROCKSLIDE", "EXPLOSION"]
+        },
+        {
+          "species": "REGICE",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "THUNDERBOLT", "AMNESIA", "REST"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["METALCLAW", "CURSE", "AMNESIA", "REST"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "DRAGONCLAW"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "DRAGONCLAW"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "LEFTOVERS",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SUBSTITUTE", "TOXIC", "BLIZZARD", "DOUBLETEAM"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["THUNDER", "RAINDANCE", "DRILLPECK", "DOUBLETEAM"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "WHITEHERB",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["OVERHEAT", "AERIALACE", "DOUBLETEAM", "PROTECT"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "DOUBLETEAM", "REFLECT"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SUNNYDAY", "SOLARBEAM", "REFLECT"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["TOXIC", "DIVE", "DOUBLETEAM", "PROTECT"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "COUNTER", "EXPLOSION"]
+        },
+        {
+          "species": "REGICE",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDER", "RAINDANCE", "BLIZZARD", "BRICKBREAK"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "BRIGHTPOWDER",
+          "nature": "QUIET",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["THUNDERBOLT", "ICEPUNCH", "EARTHQUAKE", "AERIALACE"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "EARTHQUAKE"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEBEAM", "EARTHQUAKE"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "BRIGHTPOWDER",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["ICEBEAM", "FACADE", "AERIALACE", "PROTECT"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "LEFTOVERS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["THUNDERBOLT", "DRILLPECK", "THUNDERWAVE", "SUBSTITUTE"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FIREBLAST", "SUNNYDAY", "DOUBLETEAM", "REST"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "KINGSROCK",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "THUNDERWAVE", "QUICKATTACK", "ROAR"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD"],
+          "moves": ["FLAMETHROWER", "DOUBLEEDGE", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "ICEBEAM", "RAINDANCE", "ROAR"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["ROCKSLIDE", "EARTHQUAKE", "CURSE", "REST"]
+        },
+        {
+          "species": "REGICE",
+          "item": "LUMBERRY",
+          "nature": "QUIET",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "THUNDERBOLT", "THUNDERWAVE", "EXPLOSION"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["ANCIENTPOWER", "AMNESIA", "COUNTER", "EXPLOSION"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["DRAGONCLAW", "THUNDERBOLT", "ICEBEAM", "EARTHQUAKE"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["DRAGONCLAW", "THUNDERBOLT", "ICEBEAM", "EARTHQUAKE"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "CHESTOBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["BLIZZARD", "DOUBLEEDGE", "REST", "REFLECT"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "DRILLPECK", "THUNDERWAVE", "LIGHTSCREEN"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "WHITEHERB",
+          "nature": "QUIET",
+          "evs": ["ATK", "SA"],
+          "moves": ["OVERHEAT", "DOUBLEEDGE", "STEELWING", "SAFEGUARD"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "BITE", "THUNDERWAVE", "REFLECT"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "KINGSROCK",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "BITE", "DOUBLETEAM", "REFLECT"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "ICEBEAM", "BITE", "REFLECT"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "LEFTOVERS",
+          "nature": "CAREFUL",
+          "evs": ["HP", "ATK", "SD"],
+          "moves": ["ROCKSLIDE", "BRICKBREAK", "DOUBLETEAM", "THUNDERWAVE"]
+        },
+        {
+          "species": "REGICE",
+          "item": "LEFTOVERS",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF"],
+          "moves": ["ICEBEAM", "HAIL", "DOUBLETEAM", "THUNDERWAVE"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "LEFTOVERS",
+          "nature": "IMPISH",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["ANCIENTPOWER", "EARTHQUAKE", "DOUBLETEAM", "THUNDERWAVE"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "LEFTOVERS",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["MISTBALL", "SHADOWBALL", "CHARM", "REFLECT"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["LUSTERPURGE", "THUNDERBOLT", "ICEBEAM", "DRAGONCLAW"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "THUNDERBOLT", "FIREPUNCH"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "THUNDERBOLT", "ICEPUNCH"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "FIREPUNCH", "DESTINYBOND"]
+        },
+        {
+          "species": "GENGAR",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "ICEPUNCH", "DESTINYBOND"]
+        },
+        {
+          "species": "URSARING",
+          "item": "CHOICEBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["MEGAKICK", "AERIALACE", "ROCKSLIDE", "BRICKBREAK"]
+        },
+        {
+          "species": "URSARING",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["HYPERBEAM", "YAWN", "SWORDSDANCE", "DOUBLETEAM"]
+        },
+        {
+          "species": "URSARING",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["FACADE", "EARTHQUAKE", "CRUNCH", "BULKUP"]
+        },
+        {
+          "species": "URSARING",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "ATK", "SA"],
+          "moves": ["FACADE", "EARTHQUAKE", "CRUNCH", "BRICKBREAK"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "SCOPELENS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "DOUBLEEDGE", "EARTHQUAKE", "ROCKSLIDE"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["CROSSCHOP", "EARTHQUAKE", "COUNTER", "ROCKTOMB"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["FOCUSPUNCH", "SUBSTITUTE", "ATTRACT", "DOUBLETEAM"]
+        },
+        {
+          "species": "MACHAMP",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["REVENGE", "ROCKSLIDE", "FACADE", "COUNTER"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["HP", "DEF", "SPD"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "ENDURE", "DESTINYBOND"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "LUMBERRY",
+          "nature": "TIMID",
+          "evs": ["HP", "SPD"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "WILLOWISP", "DESTINYBOND"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "QUICKCLAW",
+          "nature": "BOLD",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["PSYCHIC", "CALMMIND", "WILLOWISP", "DESTINYBOND"]
+        },
+        {
+          "species": "GARDEVOIR",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "MAGICALLEAF", "ATTRACT", "DOUBLETEAM"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "PSYCHIC", "RECOVER", "LIGHTSCREEN"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "LEFTOVERS",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "CONFUSERAY", "THUNDERWAVE", "RECOVER"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["PSYCHIC", "ICEBEAM", "COSMICPOWER", "RECOVER"]
+        },
+        {
+          "species": "STARMIE",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["SURF", "THUNDERBOLT", "COSMICPOWER", "RECOVER"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["PSYCHIC", "THUNDERBOLT", "IRONTAIL", "DOUBLEEDGE"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["HYDROPUMP", "THUNDER", "RAINDANCE", "BLIZZARD"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "LEPPABERRY",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SHEERCOLD", "HORNDRILL", "REST", "SLEEPTALK"]
+        },
+        {
+          "species": "LAPRAS",
+          "item": "QUICKCLAW",
+          "nature": "CALM",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SHEERCOLD", "HORNDRILL", "SING", "ATTRACT"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["MEGAKICK", "SHADOWBALL", "BRICKBREAK", "COUNTER"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF"],
+          "moves": ["EARTHQUAKE", "SHADOWBALL", "BRICKBREAK", "COUNTER"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HYPERBEAM", "SHADOWBALL", "EARTHQUAKE", "CURSE"]
+        },
+        {
+          "species": "SNORLAX",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["RETURN", "SHADOWBALL", "BELLYDRUM", "REST"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FACADE", "EARTHQUAKE", "ROCKSLIDE", "DRAGONDANCE"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "LUMBERRY",
+          "nature": "HARDY",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HEADBUTT", "AERIALACE", "CRUNCH", "DRAGONDANCE"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "DRAGONCLAW", "CRUNCH", "BRICKBREAK"]
+        },
+        {
+          "species": "SALAMENCE",
+          "item": "LEFTOVERS",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["FLAMETHROWER", "DRAGONCLAW", "CRUNCH", "ATTRACT"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "QUICKCLAW",
+          "nature": "JOLLY",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["EXPLOSION", "EARTHQUAKE", "ROCKSLIDE", "BRICKBREAK"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["METEORMASH", "PSYCHIC", "ICEPUNCH", "THUNDERPUNCH"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "SHELLBELL",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EARTHQUAKE", "SHADOWBALL", "ICEPUNCH", "THUNDERPUNCH"]
+        },
+        {
+          "species": "METAGROSS",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK", "SPD"],
+          "moves": ["METEORMASH", "EARTHQUAKE", "BRICKBREAK", "EXPLOSION"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["HYPERBEAM", "FOCUSPUNCH", "ROCKSLIDE", "DOUBLETEAM"]
+        },
+        {
+          "species": "REGIROCK",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "SD"],
+          "moves": ["SWAGGER", "PSYCHUP", "ROCKSLIDE", "EXPLOSION"]
+        },
+        {
+          "species": "REGICE",
+          "item": "LEFTOVERS",
+          "nature": "BRAVE",
+          "evs": ["HP", "DEF", "SA"],
+          "moves": ["EARTHQUAKE", "ICEBEAM", "CURSE", "COUNTER"]
+        },
+        {
+          "species": "REGICE",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["ICEBEAM", "THUNDERBOLT", "SLEEPTALK", "REST"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["FOCUSPUNCH", "SUBSTITUTE", "TOXIC", "DOUBLETEAM"]
+        },
+        {
+          "species": "REGISTEEL",
+          "item": "WHITEHERB",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SUPERPOWER", "AERIALACE", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DRAGONCLAW", "THUNDERWAVE", "CALMMIND", "RECOVER"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["MISTBALL", "DRAGONCLAW", "ATTRACT", "THUNDERWAVE"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["EARTHQUAKE", "SHADOWBALL", "SWAGGER", "PSYCHUP"]
+        },
+        {
+          "species": "LATIAS",
+          "item": "KINGSROCK",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "EARTHQUAKE", "AERIALACE"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DRAGONCLAW", "THUNDERWAVE", "CALMMIND", "RECOVER"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "SHELLBELL",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["LUSTERPURGE", "SHADOWBALL", "DRAGONCLAW", "THUNDERWAVE"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF"],
+          "moves": ["EARTHQUAKE", "SHADOWBALL", "DRAGONDANCE", "RECOVER"]
+        },
+        {
+          "species": "LATIOS",
+          "item": "KINGSROCK",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["PSYCHIC", "SHADOWBALL", "EARTHQUAKE", "AERIALACE"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "AERIALACE", "BRICKBREAK", "DRAGONDANCE"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "BRIGHTPOWDER",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "DOUBLEEDGE", "AERIALACE", "DRAGONDANCE"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "LEFTOVERS",
+          "nature": "ADAMANT",
+          "evs": ["ATK", "DEF", "SD"],
+          "moves": ["HYPERBEAM", "ATTRACT", "DOUBLETEAM", "THUNDERWAVE"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["HYPERBEAM", "THUNDERWAVE", "DRAGONDANCE", "REST"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["OUTRAGE", "DOUBLEEDGE", "THUNDERWAVE", "ROAR"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["DRAGONCLAW", "THUNDERBOLT", "SURF", "FLAMETHROWER"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["DRAGONCLAW", "THUNDERBOLT", "SURF", "ICEBEAM"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "SHELLBELL",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["DRAGONCLAW", "FLAMETHROWER", "ICEBEAM", "BRICKBREAK"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["THUNDER", "SURF", "RAINDANCE", "EARTHQUAKE"]
+        },
+        {
+          "species": "DRAGONITE",
+          "item": "QUICKCLAW",
+          "nature": "DOCILE",
+          "evs": ["HP", "SA"],
+          "moves": ["FIREBLAST", "BLIZZARD", "SUNNYDAY", "EARTHQUAKE"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EARTHQUAKE", "AERIALACE", "THUNDERBOLT", "SURF"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "BRIGHTPOWDER",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "CRUNCH", "THUNDERBOLT"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "FOCUSBAND",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "COUNTER", "DRAGONDANCE"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "QUICKCLAW",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["CRUNCH", "ICEBEAM", "THUNDERBOLT", "FLAMETHROWER"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "DRAGONDANCE", "REST"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "CHESTOBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["EARTHQUAKE", "ROCKSLIDE", "CURSE", "REST"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "QUICKCLAW",
+          "nature": "ADAMANT",
+          "evs": ["HP", "ATK"],
+          "moves": ["ROCKSLIDE", "AERIALACE", "BRICKBREAK", "CURSE"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["ROCKSLIDE", "THUNDERWAVE", "DRAGONDANCE", "REST"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "QUICKCLAW",
+          "nature": "HARDY",
+          "evs": ["ATK", "SA"],
+          "moves": ["CRUNCH", "EARTHQUAKE", "AERIALACE", "ATTRACT"]
+        },
+        {
+          "species": "TYRANITAR",
+          "item": "LUMBERRY",
+          "nature": "ADAMANT",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["DOUBLEEDGE", "EARTHQUAKE", "ROCKSLIDE", "DRAGONDANCE"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "FOCUSBAND",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["BLIZZARD", "DOUBLEEDGE", "AGILITY", "SWAGGER"]
+        },
+        {
+          "species": "ARTICUNO",
+          "item": "CHESTOBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["ICEBEAM", "AERIALACE", "REFLECT", "REST"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "SCOPELENS",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["THUNDERBOLT", "DRILLPECK", "DOUBLEEDGE", "THUNDERWAVE"]
+        },
+        {
+          "species": "ZAPDOS",
+          "item": "LUMBERRY",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SPD", "SA"],
+          "moves": ["THUNDER", "DRILLPECK", "RAINDANCE", "DOUBLEEDGE"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "WHITEHERB",
+          "nature": "DOCILE",
+          "evs": ["SPD", "SA"],
+          "moves": ["OVERHEAT", "SUNNYDAY", "SWAGGER", "FACADE"]
+        },
+        {
+          "species": "MOLTRES",
+          "item": "WHITEHERB",
+          "nature": "DOCILE",
+          "evs": ["ATK", "SA"],
+          "moves": ["OVERHEAT", "DOUBLEEDGE", "AERIALACE", "STEELWING"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "BRIGHTPOWDER",
+          "nature": "MODEST",
+          "evs": ["SPD", "SA"],
+          "moves": ["THUNDERBOLT", "DOUBLEEDGE", "ROAR", "REFLECT"]
+        },
+        {
+          "species": "RAIKOU",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF"],
+          "moves": ["THUNDERBOLT", "CALMMIND", "SUBSTITUTE", "REST"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "SALACBERRY",
+          "nature": "DOCILE",
+          "evs": ["DEF", "SD"],
+          "moves": ["FIREBLAST", "DOUBLEEDGE", "ENDURE", "REFLECT"]
+        },
+        {
+          "species": "ENTEI",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["DEF", "SD"],
+          "moves": ["FLAMETHROWER", "CALMMIND", "ROAR", "REST"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "LUMBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "SA"],
+          "moves": ["SURF", "ICEBEAM", "CALMMIND", "ICYWIND"]
+        },
+        {
+          "species": "SUICUNE",
+          "item": "CHESTOBERRY",
+          "nature": "MODEST",
+          "evs": ["HP", "DEF", "SD"],
+          "moves": ["SURF", "ICEBEAM", "CALMMIND", "REST"]
+        }
+      ]
+    }
+  ]
+}

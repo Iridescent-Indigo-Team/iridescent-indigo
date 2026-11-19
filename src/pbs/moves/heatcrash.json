@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEATCRASH",
+  "real_name": "Heat Crash",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithUserHeavierThanTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "TramplesMinimize"],
+  "real_description": "The user slams the foe with its flaming body. The heavier the user is, the greater the damage."
+}

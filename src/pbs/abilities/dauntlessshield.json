@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "DAUNTLESSSHIELD",
+  "real_name": "Dauntless Shield",
+  "real_description": "Boosts Defense when entering a battle."
+}

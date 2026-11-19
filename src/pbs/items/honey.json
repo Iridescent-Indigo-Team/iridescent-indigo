@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HONEY",
+  "real_name": "Honey",
+  "real_name_plural": "Honey",
+  "real_portion_name": "jar of Honey",
+  "real_portion_name_plural": "jars of Honey",
+  "pocket": 1,
+  "price": 900,
+  "field_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "A sweet honey with a lush aroma that attracts wild Pokémon when used in tall grass, in caves, or elsewhere."
+}

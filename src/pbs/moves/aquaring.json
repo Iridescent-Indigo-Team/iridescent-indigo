@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AQUARING",
+  "real_name": "Aqua Ring",
+  "type": "WATER",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "StartHealUserEachTurn",
+  "real_description": "The user envelops itself in a veil made of water. It regains some HP on every turn."
+}

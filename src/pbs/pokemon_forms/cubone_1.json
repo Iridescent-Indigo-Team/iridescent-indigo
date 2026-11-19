@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CUBONE",
+  "form": 1,
+  "generation": 7,
+  "evolutions": [
+    {"species": "MAROWAK", "method": "LevelNight", "parameter": 28}
+  ]
+}

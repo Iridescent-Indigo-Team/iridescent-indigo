@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM60",
+  "real_name": "TM60",
+  "real_name_plural": "TM60s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_75"],
+  "move": "DRAINPUNCH",
+  "real_description": "An energy-draining punch. The user's HP is restored by half the damage taken by the target."
+}

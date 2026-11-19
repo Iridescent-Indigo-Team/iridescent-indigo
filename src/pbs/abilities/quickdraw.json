@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "QUICKDRAW",
+  "real_name": "Quick Draw",
+  "real_description": "Enables the Pokémon to move first occasionally."
+}

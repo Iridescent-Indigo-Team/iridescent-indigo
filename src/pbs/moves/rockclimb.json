@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKCLIMB",
+  "real_name": "Rock Climb",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 85,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "ConfuseTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 20,
+  "real_description": "The user attacks the target by smashing into it with incredible force. It may also confuse the target."
+}

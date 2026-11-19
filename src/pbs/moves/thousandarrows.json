@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "THOUSANDARROWS",
+  "real_name": "Thousand Arrows",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "HitsTargetInSkyGroundsTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "This move also hits Pokémon that are in the air. Those Pokémon are knocked down to the ground."
+}

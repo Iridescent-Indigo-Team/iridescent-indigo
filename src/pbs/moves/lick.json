@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LICK",
+  "real_name": "Lick",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 30,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The target is licked with a long tongue, causing damage. It may also leave the target with paralysis."
+}

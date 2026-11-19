@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SWIFTSWIM",
+  "real_name": "Swift Swim",
+  "real_description": "Boosts the Pokémon's Speed in rain."
+}

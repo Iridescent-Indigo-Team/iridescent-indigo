@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GYARADOS",
+  "form": 1,
+  "real_form_name": "Mega Gyarados",
+  "mega_stone": "GYARADOSITE",
+  "types": ["WATER", "DARK"],
+  "base_stats": {
+    "hp": 95,
+    "attack": 155,
+    "defense": 109,
+    "speed": 81,
+    "special_attack": 70,
+    "special_defense": 130
+  },
+  "base_exp": 224,
+  "abilities": ["MOLDBREAKER"],
+  "hidden_abilities": ["MOLDBREAKER"],
+  "weight": 305.0,
+  "real_pokedex_entry": "It zooms out of the water at Mach speeds. Even large ships caught in its path are split cleanly in two!",
+  "generation": 6
+}

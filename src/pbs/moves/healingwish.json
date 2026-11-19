@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEALINGWISH",
+  "real_name": "Healing Wish",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserFaintsHealAndCureReplacement",
+  "real_description": "The user faints. In return, the Pokémon taking its place will have its HP restored and status cured."
+}

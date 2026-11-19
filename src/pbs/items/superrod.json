@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SUPERROD",
+  "real_name": "Super Rod",
+  "real_name_plural": "Super Rods",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "An awesome, high-tech fishing rod. Use it by any body of water to fish for wild aquatic Pokémon."
+}

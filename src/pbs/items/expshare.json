@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "EXPSHARE",
+  "real_name": "Exp. Share",
+  "real_name_plural": "Exp. Shares",
+  "pocket": 1,
+  "price": 3000,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. The holder gets a share of a battle's Exp. Points without battling."
+}

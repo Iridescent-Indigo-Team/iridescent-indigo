@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SCALD",
+  "real_name": "Scald",
+  "type": "WATER",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "BurnTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "ThawsUser"],
+  "effect_chance": 30,
+  "real_description": "The user shoots boiling hot water at its target. It may also leave the target with a burn."
+}

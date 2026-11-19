@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ACROBATICS",
+  "real_name": "Acrobatics",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 55,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "Other",
+  "function_code": "DoublePowerIfUserHasNoItem",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user nimbly strikes the foe. This attack does more damage if the user is not holding an item."
+}

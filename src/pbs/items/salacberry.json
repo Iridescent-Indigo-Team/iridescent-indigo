@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SALACBERRY",
+  "real_name": "Salac Berry",
+  "real_name_plural": "Salac Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FIGHTING_100"],
+  "real_description": "If held by a Pokémon, it raises its Speed stat in a pinch."
+}

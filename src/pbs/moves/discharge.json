@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DISCHARGE",
+  "real_name": "Discharge",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "AllNearOthers",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "A flare of electricity is loosed to strike the area around the user. It may also cause paralysis."
+}

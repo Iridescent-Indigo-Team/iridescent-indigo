@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "YELLOWAPRICORN",
+  "real_name": "Yellow Apricorn",
+  "real_name_plural": "Yellow Apricorns",
+  "pocket": 1,
+  "price": 200,
+  "flags": ["Apricorn"],
+  "real_description": "A yellow Apricorn. It has an invigorating scent."
+}

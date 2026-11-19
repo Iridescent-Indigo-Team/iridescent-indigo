@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AERIALACE",
+  "real_name": "Aerial Ace",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "Other",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user confounds the foe with speed, then slashes. The attack lands without fail."
+}

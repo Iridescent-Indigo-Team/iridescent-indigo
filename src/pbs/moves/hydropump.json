@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYDROPUMP",
+  "real_name": "Hydro Pump",
+  "type": "WATER",
+  "category": "Special",
+  "power": 110,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The target is blasted by a huge volume of water launched under great pressure."
+}

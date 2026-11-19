@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWFORCE",
+  "real_name": "Shadow Force",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackInvulnerableRemoveProtections",
+  "flags": ["Contact", "CanMirrorMove"],
+  "real_description": "The user disappears, then strikes the foe on the second turn. It hits even if the foe protects itself."
+}

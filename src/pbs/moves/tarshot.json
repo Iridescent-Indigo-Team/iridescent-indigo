@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TARSHOT",
+  "real_name": "Tar Shot",
+  "type": "ROCK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeed1MakeTargetWeakerToFire",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Pours sticky tar over the target, lowering its Speed and making it weaker to Fire-type moves."
+}

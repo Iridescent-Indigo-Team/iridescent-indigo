@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STOMPINGTANTRUM",
+  "real_name": "Stomping Tantrum",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfUserLastMoveFailed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks driven by frustration. Power increases if the user's previous move failed."
+}

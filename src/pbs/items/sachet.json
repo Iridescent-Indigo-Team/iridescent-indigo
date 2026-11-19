@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SACHET",
+  "real_name": "Sachet",
+  "real_name_plural": "Sachets",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_80"],
+  "real_description": "A sachet filled with slightly overwhelming fragrant perfumes. Yet it's loved by a certain Pokémon."
+}

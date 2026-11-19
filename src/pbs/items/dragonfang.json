@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DRAGONFANG",
+  "real_name": "Dragon Fang",
+  "real_name_plural": "Dragon Fangs",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 500,
+  "flags": ["Fling_70"],
+  "real_description": "An item to be held by a Pokémon. It is a hard and sharp fang that ups the power of Dragon-type moves."
+}

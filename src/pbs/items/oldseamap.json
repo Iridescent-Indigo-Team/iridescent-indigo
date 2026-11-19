@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "OLDSEAMAP",
+  "real_name": "Old Sea Map",
+  "real_name_plural": "Old Sea Maps",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A faded sea chart that shows the way to a certain island."
+}

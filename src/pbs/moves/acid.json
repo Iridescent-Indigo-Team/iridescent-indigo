@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ACID",
+  "real_name": "Acid",
+  "type": "POISON",
+  "category": "Special",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetSpDef1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The foe is attacked with a spray of harsh acid. It may also lower the target's Sp. Def stat."
+}

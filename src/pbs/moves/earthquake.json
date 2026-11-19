@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "EARTHQUAKE",
+  "real_name": "Earthquake",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearOthers",
+  "function_code": "DoublePowerIfTargetUnderground",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user sets off an earthquake that strikes every Pokémon around it."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CELLBATTERY",
+  "real_name": "Cell Battery",
+  "real_name_plural": "Cell Batteries",
+  "pocket": 1,
+  "price": 4000,
+  "bp_price": 10,
+  "flags": ["Fling_30"],
+  "real_description": "A consumable battery. If the holder is hit by an Electric-type move, its Attack will rise."
+}

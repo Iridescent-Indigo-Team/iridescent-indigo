@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "UTURN",
+  "real_name": "U-turn",
+  "type": "BUG",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "SwitchOutUserDamagingMove",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "After making its attack, the user rushes back to switch places with a party Pokémon in waiting."
+}

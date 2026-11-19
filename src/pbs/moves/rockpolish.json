@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKPOLISH",
+  "real_name": "Rock Polish",
+  "type": "ROCK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpeed2",
+  "real_description": "The user polishes its body to reduce drag. It can sharply raise the Speed stat."
+}

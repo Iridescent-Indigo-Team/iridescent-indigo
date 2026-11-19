@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HYPERFANG",
+  "real_name": "Hyper Fang",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 10,
+  "real_description": "The user bites hard on the target with its sharp front fangs. It may also make the target flinch."
+}

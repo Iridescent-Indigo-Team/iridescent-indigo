@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FLYINGGEM",
+  "real_name": "Flying Gem",
+  "real_name_plural": "Flying Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of air. When held, it strengthens the power of a Flying-type move only once."
+}

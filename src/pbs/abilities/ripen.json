@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "RIPEN",
+  "real_name": "Ripen",
+  "real_description": "Ripens Berries and doubles their effect."
+}

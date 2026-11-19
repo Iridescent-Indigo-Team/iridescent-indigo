@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "IAPAPABERRY",
+  "real_name": "Iapapa Berry",
+  "real_name_plural": "Iapapa Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_DARK_80"],
+  "real_description": "If held by a Pokémon, it restores the user's HP in a pinch, but will cause confusion if it hates the taste."
+}

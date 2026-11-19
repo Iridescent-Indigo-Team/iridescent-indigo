@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM100",
+  "real_name": "TM100",
+  "real_name_plural": "TM100s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_90"],
+  "move": "ROCKCLIMB",
+  "real_description": "A charging attack that may also leave the foe confused."
+}

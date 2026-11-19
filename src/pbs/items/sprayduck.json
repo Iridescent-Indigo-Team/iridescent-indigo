@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SPRAYDUCK",
+  "real_name": "Sprayduck",
+  "real_name_plural": "Sprayducks",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A watering can shaped like a Psyduck. It helps promote healthy growth of Berries planted in soft soil."
+}

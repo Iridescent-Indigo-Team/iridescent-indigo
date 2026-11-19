@@ -1,0 +1,38 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "WOBBUFFET",
+  "real_name": "Wobbuffet",
+  "types": ["PSYCHIC"],
+  "base_stats": {"hp": 190, "attack": 33, "defense": 58, "speed": 33, "special_attack": 33, "special_defense": 58},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 142,
+  "evs": [
+    {"stat": "HP", "amount": 2}
+  ],
+  "catch_rate": 45,
+  "happiness": 50,
+  "abilities": ["SHADOWTAG"],
+  "hidden_abilities": ["TELEPATHY"],
+  "moves": [
+    {"level": 0, "move": "COUNTER"},
+    {"level": 0, "move": "MIRRORCOAT"},
+    {"level": 0, "move": "SAFEGUARD"},
+    {"level": 0, "move": "DESTINYBOND"},
+    {"level": 1, "move": "SPLASH"},
+    {"level": 1, "move": "CHARM"},
+    {"level": 1, "move": "ENCORE"},
+    {"level": 1, "move": "AMNESIA"}
+  ],
+  "tutor_moves": ["AMNESIA", "CHARM", "ENCORE", "SAFEGUARD"],
+  "egg_groups": ["Amorphous"],
+  "hatch_steps": 5120,
+  "height": 1.3,
+  "weight": 28.5,
+  "color": "Blue",
+  "shape": "HeadBase",
+  "habitat": "Cave",
+  "real_category": "Patient",
+  "real_pokedex_entry": "Usually docile, a Wobbuffet strikes back ferociously if its black tail is attacked. It makes its lair in caves where it waits for nightfall.",
+  "generation": 2
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUCKERPUNCH",
+  "real_name": "Sucker Punch",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "FailsIfTargetActed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "This move enables the user to attack first. It fails if the target is not readying an attack, however."
+}

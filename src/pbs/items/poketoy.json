@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POKETOY",
+  "real_name": "Poké Toy",
+  "real_name_plural": "Poké Toys",
+  "pocket": 7,
+  "price": 300,
+  "battle_use": "Direct",
+  "flags": ["Fling_30"],
+  "real_description": "An item that attracts Pokémon. Use it to flee from any battle with a wild Pokémon."
+}

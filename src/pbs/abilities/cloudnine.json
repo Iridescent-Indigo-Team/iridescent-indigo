@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CLOUDNINE",
+  "real_name": "Cloud Nine",
+  "real_description": "Eliminates the effects of weather."
+}

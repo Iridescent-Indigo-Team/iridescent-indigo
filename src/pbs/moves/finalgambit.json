@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FINALGAMBIT",
+  "real_name": "Final Gambit",
+  "type": "FIGHTING",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "UserFaintsFixedDamageUserHP",
+  "flags": ["CanProtect"],
+  "real_description": "The user risks all to attack the foe. The user faints but does damage equal to its HP."
+}

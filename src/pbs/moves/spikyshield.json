@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPIKYSHIELD",
+  "real_name": "Spiky Shield",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUserFromTargetingMovesSpikyShield",
+  "real_description": "Protects the user from attacks. Also damages attackers that make contact with the user."
+}

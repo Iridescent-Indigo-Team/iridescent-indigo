@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MOXIE",
+  "real_name": "Moxie",
+  "real_description": "Boosts Attack after knocking out any Pokémon."
+}

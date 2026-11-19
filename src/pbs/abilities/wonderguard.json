@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WONDERGUARD",
+  "real_name": "Wonder Guard",
+  "real_description": "Only super-effective moves will hit."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHIFTGEAR",
+  "real_name": "Shift Gear",
+  "type": "STEEL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserAtk1Spd2",
+  "real_description": "The user rotates its gears, raising its Attack and sharply raising its Speed."
+}

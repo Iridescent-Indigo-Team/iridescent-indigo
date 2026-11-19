@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SWEETVEIL",
+  "real_name": "Sweet Veil",
+  "real_description": "Prevents itself and allies from falling asleep."
+}

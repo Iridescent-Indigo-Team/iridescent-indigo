@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "WATERSTONE",
+  "real_name": "Water Stone",
+  "real_name_plural": "Water Stones",
+  "pocket": 1,
+  "price": 3000,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar stone that makes certain species of Pokémon evolve. It is a clear, light blue."
+}

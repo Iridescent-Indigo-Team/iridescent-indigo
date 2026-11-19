@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "SALAMENCE",
+  "form": 1,
+  "real_form_name": "Mega Salamence",
+  "mega_stone": "SALAMENCITE",
+  "base_stats": {
+    "hp": 95,
+    "attack": 145,
+    "defense": 130,
+    "speed": 120,
+    "special_attack": 120,
+    "special_defense": 90
+  },
+  "base_exp": 350,
+  "abilities": ["AERILATE"],
+  "hidden_abilities": ["AERILATE"],
+  "height": 1.8,
+  "weight": 112.6,
+  "real_pokedex_entry": "It puts its forelegs inside its shell to streamline itself for flight. Salamence flies at high speeds over all kinds of topographical features.",
+  "generation": 6
+}

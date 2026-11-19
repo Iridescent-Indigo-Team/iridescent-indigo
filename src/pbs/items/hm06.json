@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HM06",
+  "real_name": "HM06",
+  "real_name_plural": "HM06s",
+  "pocket": 4,
+  "price": 0,
+  "field_use": "HM",
+  "move": "DIVE",
+  "real_description": "Diving on the first turn, the user floats up and attacks on the second. It can be used to dive underwater."
+}

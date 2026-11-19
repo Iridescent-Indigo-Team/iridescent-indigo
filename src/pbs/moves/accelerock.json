@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ACCELEROCK",
+  "real_name": "Accelerock",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user smashes into the target at high speed. This move always goes first."
+}

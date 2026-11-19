@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CRAMORANT",
+  "form": 2,
+  "real_form_name": "Gorging Form",
+  "real_pokedex_entry": "This Cramorant has accidentally gotten a Pikachu lodged in its gullet. Cramorant is choking a little, but it isn't really bothered."
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RUSTEDSHIELD",
+  "real_name": "Rusted Shield",
+  "real_name_plural": "Rusted Shields",
+  "pocket": 1,
+  "price": 0,
+  "real_description": "It is said that a hero used this shield to halt a disaster in ancient times. But it's grown rusty and worn."
+}

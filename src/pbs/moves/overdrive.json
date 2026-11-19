@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "OVERDRIVE",
+  "real_name": "Overdrive",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "None",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound", "CannotMetronome"],
+  "real_description": "The user attacks all foes by twanging a guitar or bass guitar, causing a huge echo and strong vibration."
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "_schema/town_map.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        {
+          "id": 0,
+          "real_name": "Essen",
+          "filename": "mapRegion0.png",
+          "point": [
+            {
+              "x": 13,
+              "y": 12,
+              "name": "Lappet Town",
+              "point_name": "Oak's Lab",
+              "fly_map": 2,
+              "fly_x": 8,
+              "fly_y": 8
+            },
+            {"x": 13, "y": 11, "name": "Route 1"},
+            {
+              "x": 13,
+              "y": 10,
+              "name": "Cedolan City",
+              "point_name": "Cedolan Dept. Store",
+              "fly_map": 7,
+              "fly_x": 47,
+              "fly_y": 11
+            },
+            {"x": 14, "y": 10, "name": "Cedolan City", "fly_map": 7, "fly_x": 47, "fly_y": 11},
+            {"x": 14, "y": 9, "name": "Route 2"},
+            {"x": 14, "y": 8, "name": "Route 2"},
+            {"x": 15, "y": 8, "name": "Lerucean Town", "fly_map": 23, "fly_x": 11, "fly_y": 15},
+            {"x": 16, "y": 8, "name": "Natural Park"},
+            {"x": 15, "y": 7, "name": "Route 3"},
+            {"x": 15, "y": 6, "name": "Route 3", "point_name": "Ice Cave"},
+            {"x": 14, "y": 6, "name": "Route 3"},
+            {"x": 13, "y": 6, "name": "Ingido Plateau", "fly_map": 35, "fly_x": 17, "fly_y": 7},
+            {"x": 12, "y": 6, "name": "Route 4"},
+            {"x": 11, "y": 6, "name": "Route 4"},
+            {"x": 11, "y": 7, "name": "Route 5", "point_name": "Cycle Road"},
+            {"x": 11, "y": 8, "name": "Route 5", "point_name": "Cycle Road"},
+            {"x": 11, "y": 9, "name": "Route 5", "point_name": "Cycle Road"},
+            {"x": 11, "y": 10, "name": "Route 6"},
+            {"x": 12, "y": 10, "name": "Route 6"},
+            {"x": 15, "y": 10, "name": "Route 7"},
+            {"x": 16, "y": 10, "name": "Route 7", "point_name": "Rock Cave"},
+            {"x": 17, "y": 10, "name": "Battle Frontier", "fly_map": 52, "fly_x": 17, "fly_y": 14},
+            {"x": 12, "y": 12, "name": "Safari Zone"},
+            {"x": 13, "y": 13, "name": "Route 8", "point_name": "Diving area"},
+            {"x": 18, "y": 17, "name": "Berth Island", "switch": 51},
+            {"x": 22, "y": 16, "name": "Faraday Island", "switch": 52}
+          ]
+        },
+        {
+          "id": 1,
+          "real_name": "Tiall",
+          "filename": "mapRegion1.png",
+          "point": [
+            {"x": 13, "y": 16, "name": "Here"}
+          ]
+        }
+      ]
+    }
+  ]
+}

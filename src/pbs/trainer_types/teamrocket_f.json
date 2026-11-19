@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "TEAMROCKET_F",
+  "real_name": "Team Rocket",
+  "gender": "Female",
+  "base_money": 32
+}

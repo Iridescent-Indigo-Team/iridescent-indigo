@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FUSIONFLARE",
+  "real_name": "Fusion Flare",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "DoublePowerAfterFusionBolt",
+  "flags": ["CanProtect", "CanMirrorMove", "ThawsUser"],
+  "real_description": "The user brings down a giant flame. It does more damage if influenced by an enormous thunderbolt."
+}

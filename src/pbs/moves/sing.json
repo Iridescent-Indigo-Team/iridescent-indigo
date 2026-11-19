@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SING",
+  "real_name": "Sing",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 55,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SleepTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "A soothing lullaby is sung in a calming voice that puts the target into a deep slumber."
+}

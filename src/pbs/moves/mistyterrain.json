@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MISTYTERRAIN",
+  "real_name": "Misty Terrain",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartMistyTerrain",
+  "real_description": "The user covers the ground with mist for five turns. Grounded Pokémon can't gain status conditions."
+}

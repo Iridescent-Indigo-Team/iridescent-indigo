@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GROWTH",
+  "real_name": "Growth",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserAtkSpAtk1Or2InSun",
+  "real_description": "The user's body grows all at once, raising the Atk and Sp. Atk stats."
+}

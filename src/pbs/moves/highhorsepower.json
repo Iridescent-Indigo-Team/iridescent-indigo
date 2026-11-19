@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HIGHHORSEPOWER",
+  "real_name": "High Horsepower",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 95,
+  "accuracy": 95,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user fiercely attacks the target using its entire body."
+}

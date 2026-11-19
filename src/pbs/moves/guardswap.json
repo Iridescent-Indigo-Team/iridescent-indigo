@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "GUARDSWAP",
+  "real_name": "Guard Swap",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapDefSpDefStages",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user employs its psychic power to switch changes to its Defense and Sp. Def with the target."
+}

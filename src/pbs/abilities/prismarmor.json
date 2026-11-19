@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "PRISMARMOR",
+  "real_name": "Prism Armor",
+  "real_description": "Reduces damage from super-effective attacks."
+}

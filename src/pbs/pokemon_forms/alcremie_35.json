@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ALCREMIE",
+  "form": 35,
+  "real_form_name": "Salted Cream",
+  "real_pokedex_entry": "The cells that compose its cream fluctuated suddenly during evolution, giving the cream a salty flavor."
+}

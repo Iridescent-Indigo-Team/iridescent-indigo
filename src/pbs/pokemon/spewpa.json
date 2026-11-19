@@ -1,0 +1,34 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "SPEWPA",
+  "real_name": "Spewpa",
+  "types": ["BUG"],
+  "base_stats": {"hp": 45, "attack": 22, "defense": 60, "speed": 29, "special_attack": 27, "special_defense": 30},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Medium",
+  "base_exp": 75,
+  "evs": [
+    {"stat": "DEFENSE", "amount": 2}
+  ],
+  "catch_rate": 120,
+  "happiness": 50,
+  "abilities": ["SHEDSKIN"],
+  "hidden_abilities": ["FRIENDGUARD"],
+  "moves": [
+    {"level": 0, "move": "PROTECT"},
+    {"level": 1, "move": "HARDEN"}
+  ],
+  "tutor_moves": ["BUGBITE", "ELECTROWEB", "IRONDEFENSE", "PROTECT"],
+  "egg_groups": ["Bug"],
+  "hatch_steps": 3840,
+  "height": 0.3,
+  "weight": 8.4,
+  "color": "Black",
+  "shape": "HeadBase",
+  "real_category": "Scatterdust",
+  "real_pokedex_entry": "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+  "generation": 6,
+  "evolutions": [
+    {"species": "VIVILLON", "method": "Level", "parameter": 12}
+  ]
+}

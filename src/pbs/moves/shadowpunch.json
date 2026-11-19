@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHADOWPUNCH",
+  "real_name": "Shadow Punch",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Punching"],
+  "real_description": "The user throws a punch from the shadows. The punch lands without fail."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLEIRONBASH",
+  "real_name": "Double Iron Bash",
+  "type": "STEEL",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "HitTwoTimesFlinchTarget",
+  "flags": ["Contact", "CanProtect", "Punching", "CannotMetronome"],
+  "effect_chance": 30,
+  "real_description": "The user rotates, centering the hex nut in its chest, and then strikes twice. May cause flinching."
+}

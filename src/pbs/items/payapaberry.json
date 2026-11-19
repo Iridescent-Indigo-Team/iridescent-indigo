@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PAYAPABERRY",
+  "real_name": "Payapa Berry",
+  "real_name_plural": "Payapa Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_PSYCHIC_80"],
+  "real_description": "Weakens a supereffective Psychic-type attack against the holding Pokémon."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MOTORDRIVE",
+  "real_name": "Motor Drive",
+  "real_description": "Raises Speed if hit by an Electric-type move."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FORECAST",
+  "real_name": "Forecast",
+  "real_description": "Castform transforms with the weather."
+}

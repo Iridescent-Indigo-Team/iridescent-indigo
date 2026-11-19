@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "POISONGEM",
+  "real_name": "Poison Gem",
+  "real_name_plural": "Poison Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of poison. When held, it strengthens the power of a Poison-type move only once."
+}

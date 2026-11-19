@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM61",
+  "real_name": "TM61",
+  "real_name_plural": "TM61s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "WILLOWISP",
+  "real_description": "The user shoots a sinister flame at the target to inflict a burn."
+}

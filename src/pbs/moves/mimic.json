@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MIMIC",
+  "real_name": "Mimic",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ReplaceMoveThisBattleWithTargetLastMoveUsed",
+  "flags": ["CanProtect"],
+  "real_description": "The user copies the move last used by the foe. The move can be used until the user is switched out."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLATTER",
+  "real_name": "Flatter",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RaiseTargetSpAtk1ConfuseTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Flattery is used to confuse the target. However, it also raises the target's Sp. Atk stat."
+}

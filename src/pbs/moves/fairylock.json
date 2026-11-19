@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FAIRYLOCK",
+  "real_name": "Fairy Lock",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "TrapAllBattlersInBattleForOneTurn",
+  "flags": ["CanMirrorMove"],
+  "real_description": "By locking down the battlefield, the user keeps all Pokémon from fleeing during the next turn."
+}

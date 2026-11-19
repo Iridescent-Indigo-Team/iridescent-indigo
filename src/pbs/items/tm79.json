@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM79",
+  "real_name": "TM79",
+  "real_name_plural": "TM79s",
+  "pocket": 4,
+  "price": 3000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_80"],
+  "move": "DARKPULSE",
+  "real_description": "The user releases a horrible aura imbued with dark thoughts. This may also make the target flinch."
+}

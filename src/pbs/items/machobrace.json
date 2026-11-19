@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MACHOBRACE",
+  "real_name": "Macho Brace",
+  "real_name_plural": "Macho Braces",
+  "pocket": 1,
+  "price": 3000,
+  "bp_price": 10,
+  "flags": ["Fling_60"],
+  "real_description": "An item to be held by a Pokémon. It is a stiff, heavy brace that promotes strong growth but lowers Speed."
+}

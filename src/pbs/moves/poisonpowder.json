@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "POISONPOWDER",
+  "real_name": "Poison Powder",
+  "type": "POISON",
+  "category": "Status",
+  "accuracy": 75,
+  "total_pp": 35,
+  "target": "NearOther",
+  "function_code": "PoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Powder"],
+  "real_description": "The user scatters a cloud of poisonous dust on the target. It may poison the target."
+}

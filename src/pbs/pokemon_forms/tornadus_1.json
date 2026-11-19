@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TORNADUS",
+  "form": 1,
+  "real_form_name": "Therian Forme",
+  "base_stats": {
+    "hp": 79,
+    "attack": 100,
+    "defense": 80,
+    "speed": 121,
+    "special_attack": 110,
+    "special_defense": 90
+  },
+  "evs": [
+    {"stat": "SPEED", "amount": 3}
+  ],
+  "abilities": ["REGENERATOR"],
+  "hidden_abilities": ["REGENERATOR"],
+  "height": 1.4,
+  "shape": "Winged"
+}

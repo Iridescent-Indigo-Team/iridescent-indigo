@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ARCEUS",
+  "form": 9,
+  "real_form_name": "Unknown Type",
+  "types": ["QMARKS"]
+}

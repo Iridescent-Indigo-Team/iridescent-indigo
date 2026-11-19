@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "RELICGOLD",
+  "real_name": "Relic Gold",
+  "real_name_plural": "Relic Golds",
+  "real_portion_name": "Relic Gold coin",
+  "real_portion_name_plural": "Relic Gold coins",
+  "pocket": 1,
+  "price": 60000,
+  "flags": ["Fling_30"],
+  "real_description": "A gold coin used in a civilization about 3,000 years ago. A maniac will buy it for a high price."
+}

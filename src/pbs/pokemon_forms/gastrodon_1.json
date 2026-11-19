@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GASTRODON",
+  "form": 1,
+  "real_form_name": "East Sea",
+  "color": "Blue",
+  "real_pokedex_entry": "Its body is covered in a sticky slime. It's very susceptible to dehydration, so it can't spend too much time on land."
+}

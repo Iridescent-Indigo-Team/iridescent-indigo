@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "YELLOWNECTAR",
+  "real_name": "Yellow Nectar",
+  "real_name_plural": "Yellow Nectars",
+  "real_portion_name": "jar of Yellow Nectar",
+  "real_portion_name_plural": "jars of Yellow Nectar",
+  "pocket": 1,
+  "price": 300,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_10"],
+  "real_description": "A flower nectar obtained at Melemele Meadow. It changes the form of certain species of Pokémon."
+}

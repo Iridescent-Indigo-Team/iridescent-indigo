@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CONVERSION",
+  "real_name": "Conversion",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 30,
+  "target": "User",
+  "function_code": "SetUserTypesToUserMoveType",
+  "real_description": "The user changes its type to become the same type as one of its moves."
+}

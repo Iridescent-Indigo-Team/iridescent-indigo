@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BERRYSWEET",
+  "real_name": "Berry Sweet",
+  "real_name_plural": "Berry Sweets",
+  "pocket": 1,
+  "price": 500,
+  "bp_price": 5,
+  "flags": ["Fling_10"],
+  "real_description": "A berry-shaped sweet. When a Milcery holds this, it spins around happily."
+}

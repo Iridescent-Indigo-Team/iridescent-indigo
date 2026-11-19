@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPARK",
+  "real_name": "Spark",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user throws an electrically charged tackle at the target. It may also leave the target with paralysis."
+}

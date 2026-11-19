@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM38",
+  "real_name": "TM38",
+  "real_name_plural": "TM38s",
+  "pocket": 4,
+  "price": 5500,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_110"],
+  "move": "FIREBLAST",
+  "real_description": "The target is attacked with an intense blast of all-consuming fire. This may also leave them with a burn."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "NORMALIZE",
+  "real_name": "Normalize",
+  "real_description": "All the Pokémon's moves become the Normal type."
+}

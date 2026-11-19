@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TAILWIND",
+  "real_name": "Tailwind",
+  "type": "FLYING",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "UserSide",
+  "function_code": "StartUserSideDoubleSpeed",
+  "real_description": "The user whips up a turbulent whirlwind that ups the Speed of all party Pokémon for four turns."
+}

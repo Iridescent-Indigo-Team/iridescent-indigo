@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/trainer_types.entry.schema.json",
+  "id": "YOUNGCOUPLE",
+  "real_name": "Young Couple",
+  "gender": "Unknown",
+  "base_money": 60,
+  "skill_level": 32
+}

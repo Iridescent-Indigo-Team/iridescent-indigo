@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPIDERWEB",
+  "real_name": "Spider Web",
+  "type": "BUG",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TrapTargetInBattle",
+  "flags": ["CanMirrorMove"],
+  "real_description": "The user ensnares the target with thin, gooey silk so it can't flee from battle."
+}

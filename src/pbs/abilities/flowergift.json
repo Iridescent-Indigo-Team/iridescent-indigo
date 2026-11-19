@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLOWERGIFT",
+  "real_name": "Flower Gift",
+  "real_description": "Powers up party Pokémon when it is sunny."
+}

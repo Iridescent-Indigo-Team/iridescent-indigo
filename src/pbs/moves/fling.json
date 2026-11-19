@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLING",
+  "real_name": "Fling",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ThrowUserItemAtTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user flings its held item at the target to attack. Its power and effects depend on the item."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "RIVAL1",
+  "name": "Blue",
+  "real_lose_text": "Not too shabby.",
+  "pokemon": [
+    {"species": "PIDGEOTTO", "level": 17},
+    {"species": "RATTATA", "level": 15},
+    {"species": "BULBASAUR", "level": 18}
+  ]
+}

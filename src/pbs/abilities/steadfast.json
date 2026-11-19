@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "STEADFAST",
+  "real_name": "Steadfast",
+  "real_description": "Raises Speed each time the Pokémon flinches."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MOONLIGHT",
+  "real_name": "Moonlight",
+  "type": "FAIRY",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "User",
+  "function_code": "HealUserDependingOnWeather",
+  "real_description": "The user restores its own HP. The amount of HP regained varies with the weather."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPITUP",
+  "real_name": "Spit Up",
+  "type": "NORMAL",
+  "category": "Special",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerDependsOnUserStockpile",
+  "flags": ["CanProtect"],
+  "real_description": "The power stored using the move Stockpile is released all at once in an attack."
+}

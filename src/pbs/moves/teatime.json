@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TEATIME",
+  "real_name": "Teatime",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "AllBattlers",
+  "function_code": "AllBattlersConsumeBerry",
+  "real_description": "The user has teatime with all the Pokémon in the battle. Each Pokémon eats its held Berry."
+}

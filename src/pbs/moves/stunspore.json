@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STUNSPORE",
+  "real_name": "Stun Spore",
+  "type": "GRASS",
+  "category": "Status",
+  "accuracy": 75,
+  "total_pp": 30,
+  "target": "NearOther",
+  "function_code": "ParalyzeTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "Powder"],
+  "real_description": "The user scatters a cloud of paralyzing powder. It may leave the target with paralysis."
+}

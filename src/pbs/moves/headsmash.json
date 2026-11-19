@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEADSMASH",
+  "real_name": "Head Smash",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 150,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RecoilHalfOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks the foe with a hazardous, full-power headbutt. The user also takes terrible damage."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "UPGRADE",
+  "real_name": "Upgrade",
+  "real_name_plural": "Upgrades",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1000,
+  "bp_price": 5,
+  "flags": ["Fling_30"],
+  "real_description": "A transparent device filled with all sorts of data. It was produced by Silph Co."
+}

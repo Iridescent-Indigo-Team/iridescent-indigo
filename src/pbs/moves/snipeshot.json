@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SNIPESHOT",
+  "real_name": "Snipe Shot",
+  "type": "WATER",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "CannotBeRedirected",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "The user ignores any effects that redirect moves, allowing this move to hit the chosen target."
+}

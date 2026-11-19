@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GRISEOUSORB",
+  "real_name": "Griseous Orb",
+  "real_name_plural": "Griseous Orbs",
+  "pocket": 1,
+  "price": 10000,
+  "sell_price": 0,
+  "flags": ["Fling_60"],
+  "real_description": "A glowing orb to be held by Giratina. It boosts the power of Dragon- and Ghost-type moves."
+}

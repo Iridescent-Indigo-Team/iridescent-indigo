@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WATERVEIL",
+  "real_name": "Water Veil",
+  "real_description": "Prevents the Pokémon from getting a burn."
+}

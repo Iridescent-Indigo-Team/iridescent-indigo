@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM37",
+  "real_name": "TM37",
+  "real_name_plural": "TM37s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "SANDSTORM",
+  "real_description": "A five-turn sandstorm is summoned to hurt all combatants except Rock, Ground, and Steel types."
+}

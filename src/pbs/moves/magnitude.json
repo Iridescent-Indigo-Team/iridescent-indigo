@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAGNITUDE",
+  "real_name": "Magnitude",
+  "type": "GROUND",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 30,
+  "target": "AllNearOthers",
+  "function_code": "RandomPowerDoublePowerIfTargetUnderground",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user looses a ground-shaking quake affecting everyone around the user. Its power varies."
+}

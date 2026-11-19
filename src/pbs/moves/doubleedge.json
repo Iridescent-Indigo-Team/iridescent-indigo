@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOUBLEEDGE",
+  "real_name": "Double-Edge",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RecoilThirdOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A reckless, life-risking tackle. It also damages the user by a fairly large amount, however."
+}

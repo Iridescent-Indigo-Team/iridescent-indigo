@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TRIPLEKICK",
+  "real_name": "Triple Kick",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 10,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitThreeTimesPowersUpWithEachHit",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "A consecutive three-kick attack that becomes more powerful with each successive hit."
+}

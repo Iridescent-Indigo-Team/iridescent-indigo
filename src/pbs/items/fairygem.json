@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FAIRYGEM",
+  "real_name": "Fairy Gem",
+  "real_name_plural": "Fairy Gems",
+  "pocket": 1,
+  "price": 4000,
+  "flags": ["TypeGem"],
+  "real_description": "A gem with an essence of the fey. When held, it strengthens the power of a Fairy-type move only once."
+}

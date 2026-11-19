@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SHARPBEAK",
+  "real_name": "Sharp Beak",
+  "real_name_plural": "Sharp Beaks",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 500,
+  "flags": ["Fling_50"],
+  "real_description": "An item to be held by a Pokémon. It is a long, sharp beak that boosts the power of Flying-type moves."
+}

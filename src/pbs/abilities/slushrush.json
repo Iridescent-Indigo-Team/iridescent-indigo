@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SLUSHRUSH",
+  "real_name": "Slush Rush",
+  "real_description": "Boosts the Pokémon's Speed stat in a hailstorm."
+}

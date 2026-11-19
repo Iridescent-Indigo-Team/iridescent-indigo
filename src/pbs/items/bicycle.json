@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BICYCLE",
+  "real_name": "Bicycle",
+  "real_name_plural": "Bicycles",
+  "pocket": 8,
+  "price": 0,
+  "field_use": "Direct",
+  "flags": ["KeyItem"],
+  "real_description": "A folding Bicycle that enables much faster movement than the Running Shoes."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FAIRYAURA",
+  "real_name": "Fairy Aura",
+  "real_description": "Powers up each Pokémon's Fairy-type moves."
+}

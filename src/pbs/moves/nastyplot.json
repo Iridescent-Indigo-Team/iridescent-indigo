@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "NASTYPLOT",
+  "real_name": "Nasty Plot",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "RaiseUserSpAtk2",
+  "real_description": "The user stimulates its brain by thinking bad thoughts. It sharply raises the user's Sp. Atk."
+}

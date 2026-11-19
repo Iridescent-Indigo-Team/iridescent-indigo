@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAPIDSPIN",
+  "real_name": "Rapid Spin",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 40,
+  "target": "NearOther",
+  "function_code": "RemoveUserBindingAndEntryHazards",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "A spin attack that raises the user's Speed and eliminates the effects of Bind, Spikes, etc."
+}

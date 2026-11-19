@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BUBBLEMAIL",
+  "real_name": "Bubble Mail",
+  "real_name_plural": "Bubble Mail",
+  "real_portion_name": "piece of Bubble Mail",
+  "real_portion_name_plural": "pieces of Bubble Mail",
+  "pocket": 6,
+  "price": 50,
+  "flags": ["IconMail"],
+  "real_description": "Stationery featuring a print of a blue world underwater. Let a Pokémon hold it for delivery."
+}

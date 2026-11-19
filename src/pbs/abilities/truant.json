@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TRUANT",
+  "real_name": "Truant",
+  "real_description": "Pokémon can't attack on consecutive turns."
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WATERBUBBLE",
+  "real_name": "Water Bubble",
+  "real_description": "Weakens incoming Fire-type moves and prevents burns."
+}

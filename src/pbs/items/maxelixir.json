@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MAXELIXIR",
+  "real_name": "Max Elixir",
+  "real_name_plural": "Max Elixirs",
+  "pocket": 2,
+  "price": 4500,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "It fully restores the PP of all the moves learned by the targeted Pokémon."
+}

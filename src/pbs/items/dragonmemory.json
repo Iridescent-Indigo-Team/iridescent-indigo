@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "DRAGONMEMORY",
+  "real_name": "Dragon Memory",
+  "real_name_plural": "Dragon Memories",
+  "pocket": 1,
+  "price": 1000,
+  "flags": ["Fling_50"],
+  "real_description": "A memory disc containing Dragon-type data. It changes the holder's type if held by a certain Pokémon."
+}

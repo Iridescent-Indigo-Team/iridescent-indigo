@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FISHIOUSREND",
+  "real_name": "Fishious Rend",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 85,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetNotActed",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user rends the target with its hard gills. Power doubles if the user moves first."
+}

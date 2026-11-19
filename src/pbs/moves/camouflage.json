@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CAMOUFLAGE",
+  "real_name": "Camouflage",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "User",
+  "function_code": "SetUserTypesBasedOnEnvironment",
+  "real_description": "The user's type is changed depending on its environment, such as at water's edge, in grass, or in a cave."
+}

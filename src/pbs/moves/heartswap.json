@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HEARTSWAP",
+  "real_name": "Heart Swap",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "UserTargetSwapStatStages",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user employs its psychic power to switch stat changes with the target."
+}

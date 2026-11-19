@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "town_map.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {"type": "integer", "minimum": 0},
+                "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "filename": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "point": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "x": {"type": "integer", "minimum": 0},
+                      "y": {"type": "integer", "minimum": 0},
+                      "name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                      "point_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                      "fly_map": {"type": "integer", "minimum": 0},
+                      "fly_x": {"type": "integer", "minimum": 0},
+                      "fly_y": {"type": "integer", "minimum": 0},
+                      "switch": {"type": "integer", "minimum": 0}
+                    },
+                    "required": ["x", "y", "name"],
+                    "additionalProperties": false
+                  },
+                  "description": "PBS key: Point"
+                },
+                "flags": {
+                  "type": "array",
+                  "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                  "description": "PBS key: Flags"
+                }
+              },
+              "required": ["id"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

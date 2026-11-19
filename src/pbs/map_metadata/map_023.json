@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/map_metadata.entry.schema.json",
+  "id": 23,
+  "real_name": "Lerucean Town",
+  "outdoor_map": true,
+  "announce_location": true,
+  "town_map_position": {"region": 0, "x": 15, "y": 8}
+}

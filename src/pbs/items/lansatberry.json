@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LANSATBERRY",
+  "real_name": "Lansat Berry",
+  "real_name_plural": "Lansat Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FLYING_100"],
+  "real_description": "If held by a Pokémon, it raises its critical-hit ratio in a pinch."
+}

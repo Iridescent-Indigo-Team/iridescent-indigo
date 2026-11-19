@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "AURORAVEIL",
+  "real_name": "Aurora Veil",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 20,
+  "target": "UserSide",
+  "function_code": "StartWeakenDamageAgainstUserSideIfHail",
+  "real_description": "This move reduces damage from attacks for five turns. This can be used only in a hailstorm."
+}

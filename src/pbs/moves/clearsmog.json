@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CLEARSMOG",
+  "real_name": "Clear Smog",
+  "type": "POISON",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "ResetTargetStatStages",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by throwing a clump of special mud. All status changes are returned to normal."
+}

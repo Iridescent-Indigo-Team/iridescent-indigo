@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FREEZINGGLARE",
+  "real_name": "Freezing Glare",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FreezeTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 10,
+  "real_description": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen."
+}

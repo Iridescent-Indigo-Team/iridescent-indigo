@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPARKLINGARIA",
+  "real_name": "Sparkling Aria",
+  "type": "WATER",
+  "category": "Special",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "AllNearOthers",
+  "function_code": "CureTargetBurn",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "effect_chance": 100,
+  "real_description": "The user bursts into song, emitting many bubbles. Any burnt Pokémon will be healed by these bubbles."
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "XSPATK",
+  "real_name": "X Sp. Atk",
+  "real_name_plural": "X Sp. Atks",
+  "pocket": 7,
+  "price": 1000,
+  "battle_use": "OnBattler",
+  "flags": ["Fling_30"],
+  "real_description": "An item that sharply boosts the Sp. Atk stat of a Pokémon while it remains in battle."
+}

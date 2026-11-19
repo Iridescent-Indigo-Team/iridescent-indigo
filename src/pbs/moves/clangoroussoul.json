@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CLANGOROUSSOUL",
+  "real_name": "Clangorous Soul",
+  "type": "DRAGON",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "User",
+  "function_code": "RaiseUserMainStats1LoseThirdOfTotalHP",
+  "flags": ["Sound", "CannotMetronome", "Dance"],
+  "real_description": "The user raises all its stats by using some of its HP."
+}

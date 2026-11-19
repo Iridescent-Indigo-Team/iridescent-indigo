@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FURYATTACK",
+  "real_name": "Fury Attack",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 15,
+  "accuracy": 85,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "HitTwoToFiveTimes",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The target is jabbed repeatedly with a horn or beak two to five times in a row."
+}

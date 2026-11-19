@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ROSELIBERRY",
+  "real_name": "Roseli Berry",
+  "real_name_plural": "Roseli Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_FAIRY_80"],
+  "real_description": "If held by a Pokémon, this Berry will lessen the damage taken from one supereffective Fairy-type attack."
+}

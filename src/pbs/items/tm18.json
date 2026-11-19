@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TM18",
+  "real_name": "TM18",
+  "real_name_plural": "TM18s",
+  "pocket": 4,
+  "price": 2000,
+  "bp_price": 32,
+  "field_use": "TR",
+  "flags": ["Fling_10"],
+  "move": "RAINDANCE",
+  "real_description": "The user summons a heavy rain for five turns, powering up Water-type moves and weakening Fire-type ones."
+}

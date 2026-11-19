@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MIMIKYU",
+  "form": 1,
+  "real_form_name": "Busted Form",
+  "real_pokedex_entry": "Sad that its true identity may be exposed, Mimikyu will mercilessly seek revenge on any opponent that breaks its neck."
+}

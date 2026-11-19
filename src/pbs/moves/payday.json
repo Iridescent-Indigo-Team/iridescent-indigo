@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PAYDAY",
+  "real_name": "Pay Day",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "AddMoneyGainedFromBattle",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Numerous coins are hurled at the target to inflict damage. Money is earned after battle."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "METEORBEAM",
+  "real_name": "Meteor Beam",
+  "type": "ROCK",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TwoTurnAttackChargeRaiseUserSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Gathers space power and boosts its Sp. Atk stat on the first turn, attacks on the next turn."
+}

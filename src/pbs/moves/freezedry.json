@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FREEZEDRY",
+  "real_name": "Freeze-Dry",
+  "type": "ICE",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "FreezeTargetSuperEffectiveAgainstWater",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user rapidly cools the target. This may freeze the target. Is super-effective on Water types."
+}

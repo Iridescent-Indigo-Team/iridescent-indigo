@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "JUSTIFIED",
+  "real_name": "Justified",
+  "real_description": "Raises Attack when hit by a Dark-type move."
+}

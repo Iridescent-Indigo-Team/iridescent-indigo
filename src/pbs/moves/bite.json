@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BITE",
+  "real_name": "Bite",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 25,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Biting"],
+  "effect_chance": 30,
+  "real_description": "The target is bitten with viciously sharp fangs. It may make the target flinch."
+}

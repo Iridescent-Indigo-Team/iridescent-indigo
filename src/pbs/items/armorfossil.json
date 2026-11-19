@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ARMORFOSSIL",
+  "real_name": "Armor Fossil",
+  "real_name_plural": "Armor Fossils",
+  "pocket": 1,
+  "price": 7000,
+  "flags": ["Fossil", "Fling_100"],
+  "real_description": "A fossil from a prehistoric Pokémon that lived on the land. It appears to be part of a collar."
+}

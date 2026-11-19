@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "SHEDSKIN",
+  "real_name": "Shed Skin",
+  "real_description": "The Pokémon may heal its own status problems."
+}

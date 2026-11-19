@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FLAREBOOST",
+  "real_name": "Flare Boost",
+  "real_description": "Powers up special attacks when burned."
+}

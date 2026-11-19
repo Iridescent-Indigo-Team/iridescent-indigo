@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "LASS",
+  "name": "Crissy",
+  "real_lose_text": "You didn't have to win so convincingly!",
+  "pokemon": [
+    {"species": "PLUSLE", "level": 17},
+    {"species": "MINUN", "level": 17}
+  ]
+}

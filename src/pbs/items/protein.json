@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "PROTEIN",
+  "real_name": "Protein",
+  "real_name_plural": "Proteins",
+  "real_portion_name": "bottle of Protein",
+  "real_portion_name_plural": "bottles of Protein",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A nutritious drink for Pokémon. It raises the base Attack stat of a single Pokémon."
+}

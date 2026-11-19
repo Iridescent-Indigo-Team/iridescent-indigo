@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "map_connections.txt",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "suffix": {"type": "string"},
+          "bom": {"type": "boolean"},
+          "entries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "map": {"type": "integer"},
+                "side": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": ["N", "North", "E", "East", "S", "South", "W", "West"]
+                    },
+                    {"type": "integer"}
+                  ],
+                  "description": "Edge of the map (N, E, S, W), or an x coordinate."
+                },
+                "offset": {"type": "integer"},
+                "other_map": {"type": "integer"},
+                "other_side": {
+                  "oneOf": [
+                    {
+                      "type": "string",
+                      "enum": ["N", "North", "E", "East", "S", "South", "W", "West"]
+                    },
+                    {"type": "integer"}
+                  ],
+                  "description": "Edge of the map (N, E, S, W), or an x coordinate."
+                },
+                "other_offset": {"type": "integer"}
+              },
+              "required": ["map", "side", "offset", "other_map", "other_side", "other_offset"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["suffix", "entries"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

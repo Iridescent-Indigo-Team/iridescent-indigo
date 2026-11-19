@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GOOEYMULCH",
+  "real_name": "Gooey Mulch",
+  "real_name_plural": "Gooey Mulch",
+  "real_portion_name": "bag of Gooey Mulch",
+  "real_portion_name_plural": "bags of Gooey Mulch",
+  "pocket": 1,
+  "price": 200,
+  "flags": ["Mulch", "Fling_30"],
+  "real_description": "A fertilizer to be spread on soft soil in regions where Berries are grown. A maniac will buy it for a high price."
+}

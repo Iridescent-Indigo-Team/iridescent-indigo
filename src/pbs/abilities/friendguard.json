@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "FRIENDGUARD",
+  "real_name": "Friend Guard",
+  "real_description": "Reduces damage done to allies."
+}

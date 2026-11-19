@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STOREDPOWER",
+  "real_name": "Stored Power",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 20,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "PowerHigherWithUserPositiveStatStages",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with stored power. The more the user's stats are raised, the greater the damage."
+}

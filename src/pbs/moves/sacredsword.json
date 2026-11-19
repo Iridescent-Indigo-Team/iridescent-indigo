@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SACREDSWORD",
+  "real_name": "Sacred Sword",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "IgnoreTargetDefSpDefEvaStatStages",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by slicing with its long horns. The target's stat changes don't affect the damage."
+}

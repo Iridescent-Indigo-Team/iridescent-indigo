@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "HOUNDOOM",
+  "form": 1,
+  "real_form_name": "Mega Houndoom",
+  "mega_stone": "HOUNDOOMINITE",
+  "base_stats": {
+    "hp": 75,
+    "attack": 90,
+    "defense": 90,
+    "speed": 115,
+    "special_attack": 140,
+    "special_defense": 90
+  },
+  "base_exp": 210,
+  "abilities": ["SOLARPOWER"],
+  "hidden_abilities": ["SOLARPOWER"],
+  "height": 1.9,
+  "weight": 49.5,
+  "real_pokedex_entry": "Its red claws and the tips of its tail are melting from high internal temperatures that are painful to Houndoom itself.",
+  "generation": 6
+}

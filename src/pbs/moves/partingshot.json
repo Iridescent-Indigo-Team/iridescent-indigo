@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PARTINGSHOT",
+  "real_name": "Parting Shot",
+  "type": "DARK",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAtkSpAtk1SwitchOutUser",
+  "flags": ["CanProtect", "CanMirrorMove", "Sound"],
+  "real_description": "With a parting threat, the user lowers the target's Attack and Sp. Atk stats. Then it switches out."
+}

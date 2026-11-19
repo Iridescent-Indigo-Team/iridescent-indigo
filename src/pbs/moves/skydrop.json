@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SKYDROP",
+  "real_name": "Sky Drop",
+  "type": "FLYING",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "Other",
+  "function_code": "TwoTurnAttackInvulnerableInSkyTargetCannotAct",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user takes the foe into the sky, then drops it on the next turn. The foe cannot attack while airborne."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ZINC",
+  "real_name": "Zinc",
+  "real_name_plural": "Zincs",
+  "real_portion_name": "bottle of Zinc",
+  "real_portion_name_plural": "bottles of Zinc",
+  "pocket": 2,
+  "price": 10000,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "A nutritious drink for Pokémon. It raises the base Sp. Def (Special Defense) stat of a single Pokémon."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHARTIBERRY",
+  "real_name": "Charti Berry",
+  "real_name_plural": "Charti Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_ROCK_80"],
+  "real_description": "Weakens a supereffective Rock-type attack against the holding Pokémon."
+}

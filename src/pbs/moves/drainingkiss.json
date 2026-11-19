@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAININGKISS",
+  "real_name": "Draining Kiss",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByThreeQuartersOfDamageDone",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user steals the target's HP with a kiss. The user's HP is restored by over half of the damage dealt."
+}

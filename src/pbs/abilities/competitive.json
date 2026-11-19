@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "COMPETITIVE",
+  "real_name": "Competitive",
+  "real_description": "Sharply boosts Sp. Atk when a stat is lowered."
+}

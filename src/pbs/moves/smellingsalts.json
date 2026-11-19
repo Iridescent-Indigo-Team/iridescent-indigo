@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SMELLINGSALTS",
+  "real_name": "Smelling Salts",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetParalyzedCureTarget",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "This attack inflicts double damage on a paralyzed foe. It also cures the target's paralysis, however."
+}

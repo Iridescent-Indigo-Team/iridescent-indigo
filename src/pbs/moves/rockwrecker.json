@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ROCKWRECKER",
+  "real_name": "Rock Wrecker",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 150,
+  "accuracy": 90,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "AttackAndSkipNextTurn",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "real_description": "The user launches a huge boulder at the target to attack. It must rest on the next turn, however."
+}

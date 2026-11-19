@@ -1,0 +1,63 @@
+{
+  "$schema": "../_schema/pokemon.entry.schema.json",
+  "id": "DREEPY",
+  "real_name": "Dreepy",
+  "types": ["DRAGON", "GHOST"],
+  "base_stats": {"hp": 28, "attack": 60, "defense": 30, "speed": 82, "special_attack": 40, "special_defense": 30},
+  "gender_ratio": "Female50Percent",
+  "growth_rate": "Slow",
+  "base_exp": 54,
+  "evs": [
+    {"stat": "SPEED", "amount": 1}
+  ],
+  "catch_rate": 45,
+  "happiness": 50,
+  "abilities": ["CLEARBODY", "INFILTRATOR"],
+  "hidden_abilities": ["CURSEDBODY"],
+  "moves": [
+    {"level": 1, "move": "ASTONISH"},
+    {"level": 1, "move": "INFESTATION"},
+    {"level": 1, "move": "QUICKATTACK"},
+    {"level": 1, "move": "BITE"}
+  ],
+  "tutor_moves": [
+    "ATTRACT",
+    "BATONPASS",
+    "CAPTIVATE",
+    "CONFIDE",
+    "DOUBLETEAM",
+    "DRACOMETEOR",
+    "ENDURE",
+    "FACADE",
+    "FRUSTRATION",
+    "HELPINGHAND",
+    "HIDDENPOWER",
+    "MIMIC",
+    "NATURALGIFT",
+    "PROTECT",
+    "REST",
+    "RETURN",
+    "ROUND",
+    "SECRETPOWER",
+    "SLEEPTALK",
+    "SNORE",
+    "SUBSTITUTE",
+    "SWAGGER",
+    "SWIFT",
+    "THUNDERWAVE",
+    "TOXIC"
+  ],
+  "egg_moves": ["CONFUSERAY", "CURSE", "DISABLE", "DOUBLETEAM", "DRAGONTAIL", "GRUDGE", "SUCKERPUNCH"],
+  "egg_groups": ["Amorphous", "Dragon"],
+  "hatch_steps": 10240,
+  "height": 0.5,
+  "weight": 2.0,
+  "color": "Green",
+  "shape": "Serpentine",
+  "real_category": "Lingering",
+  "real_pokedex_entry": "After being reborn as a ghost Pokémon, Dreepy wanders the areas it used to inhabit back when it was alive in prehistoric seas.",
+  "generation": 8,
+  "evolutions": [
+    {"species": "DRAKLOAK", "method": "Level", "parameter": 50}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PRESENT",
+  "real_name": "Present",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RandomlyDamageOrHealTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks by giving the target a gift with a hidden trap. It restores HP sometimes, however."
+}

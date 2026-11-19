@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PUMPKABOO",
+  "form": 2,
+  "real_form_name": "Large Size",
+  "base_stats": {"hp": 54, "attack": 66, "defense": 70, "speed": 46, "special_attack": 44, "special_defense": 55},
+  "height": 0.5,
+  "weight": 7.5,
+  "real_pokedex_entry": "When taking spirits to the afterlife, large Pumpkaboo prefer the spirits of adults to those of children."
+}

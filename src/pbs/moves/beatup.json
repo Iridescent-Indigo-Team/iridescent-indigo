@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BEATUP",
+  "real_name": "Beat Up",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 1,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HitOncePerUserTeamMember",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user gets all the party Pokémon to attack the foe. The more party Pokémon, the more damage."
+}

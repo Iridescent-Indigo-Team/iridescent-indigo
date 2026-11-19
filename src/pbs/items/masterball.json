@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MASTERBALL",
+  "real_name": "Master Ball",
+  "real_name_plural": "Master Balls",
+  "pocket": 3,
+  "price": 0,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "The best Ball with the ultimate level of performance. It will catch any wild Pokémon without fail."
+}

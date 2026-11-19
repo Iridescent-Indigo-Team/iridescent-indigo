@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "HAIL",
+  "real_name": "Hail",
+  "type": "ICE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "BothSides",
+  "function_code": "StartHailWeather",
+  "real_description": "The user summons a hail storm lasting five turns. It damages all Pokémon except the Ice type."
+}

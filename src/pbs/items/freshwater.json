@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FRESHWATER",
+  "real_name": "Fresh Water",
+  "real_name_plural": "Fresh Waters",
+  "real_portion_name": "bottle of Fresh Water",
+  "real_portion_name_plural": "bottles of Fresh Water",
+  "pocket": 2,
+  "price": 200,
+  "field_use": "OnPokemon",
+  "battle_use": "OnPokemon",
+  "flags": ["Fling_30"],
+  "real_description": "Water with high mineral content. It can be used to restore 30 HP to a single Pokémon."
+}

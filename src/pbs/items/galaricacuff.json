@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GALARICACUFF",
+  "real_name": "Galarica Cuff",
+  "real_name_plural": "Galarica Cuffs",
+  "pocket": 1,
+  "price": 6000,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A cuff made from woven-together Galarica Twigs. Giving it to a Galarian Slowpoke would make it very happy."
+}

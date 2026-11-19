@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SCRATCH",
+  "real_name": "Scratch",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 35,
+  "target": "NearOther",
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "Hard, pointed, and sharp claws rake the target to inflict damage."
+}

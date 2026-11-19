@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "VENOSHOCK",
+  "real_name": "Venoshock",
+  "type": "POISON",
+  "category": "Special",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetPoisoned",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user drenches the foe in a special poisonous liquid. Its power doubles if the target is poisoned."
+}

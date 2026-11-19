@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GANLONBERRY",
+  "real_name": "Ganlon Berry",
+  "real_name_plural": "Ganlon Berries",
+  "pocket": 5,
+  "price": 20,
+  "flags": ["Berry", "Fling_10", "NaturalGift_ICE_100"],
+  "real_description": "If held by a Pokémon, it raises its Defense stat in a pinch."
+}

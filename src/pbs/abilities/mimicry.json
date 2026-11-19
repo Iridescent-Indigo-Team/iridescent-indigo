@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MIMICRY",
+  "real_name": "Mimicry",
+  "real_description": "Changes type depending on the terrain."
+}

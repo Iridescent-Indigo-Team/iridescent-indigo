@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/trainers.entry.schema.json",
+  "trainer_type": "PICNICKER",
+  "name": "Susie",
+  "version": 1,
+  "real_lose_text": "Defeated! Oh my!",
+  "pokemon": [
+    {"species": "PERSIAN", "level": 32}
+  ]
+}
