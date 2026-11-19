@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MEGASOL",
+  "real_name": "Mega Sol",
+  "real_description": "Uses its moves as if in sunny weather."
+}

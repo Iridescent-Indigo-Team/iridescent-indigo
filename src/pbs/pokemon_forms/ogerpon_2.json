@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 2,
+  "real_form_name": "Hearthflame Mask",
+  "types": ["GRASS", "FIRE"],
+  "abilities": ["MOLDBREAKER"],
+  "color": "Red",
+  "real_pokedex_entry": "This form is the most aggressive, bombarding enemies with the intensity of flames blazing within a hearth.",
+  "flags": ["Legendary", "TeraType_FIRE"]
+}

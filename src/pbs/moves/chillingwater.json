@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CHILLINGWATER",
+  "real_name": "Chilling Water",
+  "type": "WATER",
+  "category": "Special",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 20,
+  "target": "NearOther",
+  "function_code": "LowerTargetAttack1",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "The user showers the target with frigid water. This also lowers the target's Attack stat."
+}

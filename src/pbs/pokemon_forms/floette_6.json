@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FLOETTE",
+  "form": 6,
+  "real_form_name": "Mega Floette",
+  "mega_stone": "FLOETTITE",
+  "unmega_form": 5,
+  "base_stats": {
+    "hp": 74,
+    "attack": 85,
+    "defense": 87,
+    "speed": 102,
+    "special_attack": 155,
+    "special_defense": 148
+  },
+  "base_exp": 293,
+  "abilities": ["FAIRYAURA"],
+  "hidden_abilities": ["FAIRYAURA"],
+  "weight": 100.8,
+  "real_pokedex_entry": "The Eternal Flower has absorbed all the energy from Mega Evolution. The flower now attacks enemies on its own.",
+  "generation": 9
+}

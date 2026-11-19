@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LASTRESPECTS",
+  "real_name": "Last Respects",
+  "type": "GHOST",
+  "category": "Physical",
+  "power": 50,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "IncreasePowerEachFaintedAlly",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks to avenge its allies. The move’s power increases for each defeated ally."
+}

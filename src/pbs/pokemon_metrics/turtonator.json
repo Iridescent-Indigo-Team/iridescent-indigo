@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "TURTONATOR",
+  "back_sprite": {"x": 0, "y": 32},
+  "front_sprite": {"x": 2, "y": 20},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

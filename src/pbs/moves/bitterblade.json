@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BITTERBLADE",
+  "real_name": "Bitter Blade",
+  "type": "FIRE",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "HealUserByHalfOfDamageDone",
+  "flags": ["Contact", "CanProtect", "Slicing", "CanMirrorMove"],
+  "real_description": "A spiteful slashing attack. The user’s HP is restored by up to half the damage taken by the target."
+}

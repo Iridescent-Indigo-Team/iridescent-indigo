@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "DIALGA",
-  "back_sprite": {"x": 1, "y": 0},
-  "front_sprite": {"x": -2, "y": 6},
+  "back_sprite": {"x": 0, "y": 21},
+  "front_sprite": {"x": 8, "y": 11},
   "shadow_x": 0,
   "shadow_size": 3
 }

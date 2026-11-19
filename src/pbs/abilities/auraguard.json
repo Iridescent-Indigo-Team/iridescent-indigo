@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "AURAGUARD",
+  "real_name": "Aura Guard",
+  "real_description": "Halves the damage from contact moves."
+}

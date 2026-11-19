@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "VIKAVOLT",
+  "back_sprite": {"x": 0, "y": 36},
+  "front_sprite": {"x": 0, "y": 12},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

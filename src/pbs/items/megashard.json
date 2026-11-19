@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MEGASHARD",
+  "real_name": "Mega Shard",
+  "real_name_plural": "Mega Shards",
+  "pocket": 1,
+  "price": 0,
+  "real_description": "A mysterious shard found by smashing Mega Crystals. It seems that some people collect these shards."
+}

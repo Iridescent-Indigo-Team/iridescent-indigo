@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "LUNARBLESSING",
+  "real_name": "Lunar Blessing",
+  "type": "PSYCHIC",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 5,
+  "target": "UserAndAllies",
+  "function_code": "HealUserAndAlliesQuarterOfTotalHPCureStatus",
+  "real_description": "The user is blessed by the moon, restoring HP and curing status conditions of itself and allies."
+}

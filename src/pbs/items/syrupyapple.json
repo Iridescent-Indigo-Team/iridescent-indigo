@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SYRUPYAPPLE",
+  "real_name": "Syrupy Apple",
+  "real_name_plural": "Syrupy Apples",
+  "pocket": 1,
+  "price": 2200,
+  "sell_price": 550,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally syrupy."
+}

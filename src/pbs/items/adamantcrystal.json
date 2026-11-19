@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "ADAMANTCRYSTAL",
+  "real_name": "Adamant Crystal",
+  "real_name_plural": "Adamant Crystals",
+  "pocket": 1,
+  "price": 20000,
+  "sell_price": 0,
+  "flags": ["Fling_60"],
+  "real_description": "When held by Dialga, this large, glowing gem wells with power and allows the Pokémon to change form."
+}

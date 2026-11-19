@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ORDERUP",
+  "real_name": "Order Up",
+  "type": "DRAGON",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserStat1Commander",
+  "flags": ["CanProtect", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "If used when the user has a Tatsugiri in its mouth, a boost occurs based on its form."
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PYROAR",
+  "form": 1,
+  "real_form_name": "Mega Pyroar",
+  "mega_stone": "PYROARITE",
+  "base_stats": {
+    "hp": 86,
+    "attack": 88,
+    "defense": 92,
+    "speed": 126,
+    "special_attack": 129,
+    "special_defense": 86
+  },
+  "base_exp": 227,
+  "abilities": ["FIREMANE"],
+  "hidden_abilities": ["FIREMANE"],
+  "weight": 93.3,
+  "real_pokedex_entry": "This Pokémon spews flames hotter than 18,000 degrees Fahrenheit. It swings around its grand, blazing mane as it protects its allies.",
+  "generation": 9
+}

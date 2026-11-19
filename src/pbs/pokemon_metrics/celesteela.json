@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "CELESTEELA",
+  "back_sprite": {"x": 7, "y": 27},
+  "front_sprite": {"x": 2, "y": -3},
+  "shadow_x": 0,
+  "shadow_size": 3
+}

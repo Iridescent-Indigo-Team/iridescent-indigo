@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 4,
+  "pokedex_form": 0
+}

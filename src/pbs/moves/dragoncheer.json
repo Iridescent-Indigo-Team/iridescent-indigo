@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DRAGONCHEER",
+  "real_name": "Dragon Cheer",
+  "type": "DRAGON",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 15,
+  "target": "AllAllies",
+  "function_code": "RaiseAlliesCriticalHitRate1DragonTypes2",
+  "real_description": "The user raises its allies’ critical hit ratio with a draconic cry. This rouses Dragon types more."
+}

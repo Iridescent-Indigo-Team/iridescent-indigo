@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "COSTAR",
+  "real_name": "Costar",
+  "real_description": "Copies an ally's stat changes upon entry to battle."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "INDIGODISK",
+  "real_name": "Indigo Disk",
+  "real_name_plural": "Indigo Disks",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A mysterious disk with an indigo shine to it, given by the Top Champion. It seems to be tied to Area Zero."
+}

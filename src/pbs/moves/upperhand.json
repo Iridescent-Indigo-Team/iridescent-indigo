@@ -1,0 +1,16 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "UPPERHAND",
+  "real_name": "Upper Hand",
+  "type": "FIGHTING",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "priority": 3,
+  "function_code": "FlinchTargetFailsIfTargetNotUsingPriorityMove",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "An attack that hits first and makes the target flinch. Fails if the target isn't using a high priority move."
+}

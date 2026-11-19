@@ -1,0 +1,18 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ZERAORA",
+  "form": 1,
+  "real_form_name": "Mega Zeraora",
+  "mega_stone": "ZERAORITE",
+  "base_stats": {
+    "hp": 88,
+    "attack": 157,
+    "defense": 75,
+    "speed": 153,
+    "special_attack": 147,
+    "special_defense": 80
+  },
+  "base_exp": 350,
+  "real_pokedex_entry": "It stores up 10 lightning strikes' worth of electricity. When it stops limiting itself, it's in the strongest class of electric Pokémon.",
+  "generation": 9
+}

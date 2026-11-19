@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "MEDICHAM",
+  "form": 1,
+  "back_sprite": {"x": 0, "y": 28},
+  "front_sprite": {"x": 3, "y": 16},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

@@ -4,12 +4,6 @@ class Battle::Battler
   #=============================================================================
   def pbEffectsOnMakingHit(move, user, target)
     if target.damageState.calcDamage > 0 && !target.damageState.substitute
-      # Target's ability
-      if target.abilityActive?(true)
-        oldHP = user.hp
-        Battle::AbilityEffects.triggerOnBeingHit(target.ability, user, target, move, @battle)
-        user.pbItemHPHealCheck if user.hp < oldHP
-      end
       # Cramorant - Gulp Missile
       if target.isSpecies?(:CRAMORANT) && target.ability == :GULPMISSILE &&
          target.form > 0 && !target.effects[PBEffects::Transform]
@@ -18,18 +12,25 @@ class Battle::Battler
         #       target Cramorant attacking the user) and the ability splash
         #       shouldn't be shown.
         @battle.pbShowAbilitySplash(target)
+        target_form = target.form
         target.pbChangeForm(0, nil)
         if user.takesIndirectDamage?(Battle::Scene::USE_ABILITY_SPLASH)
           @battle.scene.pbDamageAnimation(user)
           user.pbReduceHP(user.totalhp / 4, false)
         end
-        case target.form
+        case target_form
         when 1   # Gulping Form
           user.pbLowerStatStageByAbility(:DEFENSE, 1, target, false)
         when 2   # Gorging Form
           user.pbParalyze(target) if user.pbCanParalyze?(target, false)
         end
         @battle.pbHideAbilitySplash(target)
+        user.pbItemHPHealCheck if user.hp < oldHP
+      end
+      # Target's ability
+      if target.abilityActive?(true)
+        oldHP = user.hp
+        Battle::AbilityEffects.triggerOnBeingHit(target.ability, user, target, move, @battle)
         user.pbItemHPHealCheck if user.hp < oldHP
       end
       # User's ability

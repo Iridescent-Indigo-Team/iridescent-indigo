@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERORANBERRY",
+  "real_name": "Hyper Oran Berry",
+  "real_name_plural": "Hyper Oran Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. It goes well in curries, meringue, chocolate, and confitures."
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "PALKIA",
+  "form": 1,
+  "real_form_name": "Origin Forme",
+  "base_stats": {
+    "hp": 90,
+    "attack": 100,
+    "defense": 100,
+    "speed": 120,
+    "special_attack": 150,
+    "special_defense": 120
+  },
+  "height": 6.3,
+  "weight": 660.0,
+  "shape": "Quadruped",
+  "real_pokedex_entry": "It soars across the sky in a form that greatly resembles the creator of all things. This imitation of appearance may be its attempt to gain Arceus's powers.",
+  "generation": 8
+}

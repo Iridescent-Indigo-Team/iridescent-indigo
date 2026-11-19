@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "ELECTROMORPHOSIS",
+  "real_name": "Electromorphosis",
+  "real_description": "The Pokémon becomes charged upon taking damage."
+}

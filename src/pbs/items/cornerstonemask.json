@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CORNERSTONEMASK",
+  "real_name": "Cornerstone Mask",
+  "real_name_plural": "Cornerstone Masks",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_60"],
+  "real_description": "A carved wooden mask to be held by Ogerpon. It allows Ogerpon to wield the Rock type during battle."
+}

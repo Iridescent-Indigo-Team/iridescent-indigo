@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "TIDYUP",
+  "real_name": "Tidy Up",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "RaiseUserAtkSpd1RemoveHazardsSubstitutes",
+  "flags": ["CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "Clears hazards and substitutes from the field. This also boosts the user’s Attack and Speed."
+}

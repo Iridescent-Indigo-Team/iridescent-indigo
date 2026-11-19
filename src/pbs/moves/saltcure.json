@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SALTCURE",
+  "real_name": "Salt Cure",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 40,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "StartSaltCureTarget",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 100,
+  "real_description": "The user salt cures the target, inflicting damage every turn. Steel and Water types take more damage."
+}

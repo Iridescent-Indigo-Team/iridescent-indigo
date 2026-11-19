@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ELECTRODRIFT",
+  "real_name": "Electro Drift",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "IncreasePowerSuperEffective",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "A futuristic electric strike. This move’s power is boosted more than usual if it’s a supereffective hit."
+}

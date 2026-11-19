@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GREENCANARIPLUSHLV2",
+  "real_name": "Green Canari Plush",
+  "real_name_plural": "Green Canari Plushies",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Canari plush holding a green charm. It makes you a less likely to black out from taking damage."
+}

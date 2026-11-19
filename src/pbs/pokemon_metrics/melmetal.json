@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "MELMETAL",
+  "back_sprite": {"x": 7, "y": 36},
+  "front_sprite": {"x": -8, "y": 15},
+  "shadow_x": 0,
+  "shadow_size": 3
+}

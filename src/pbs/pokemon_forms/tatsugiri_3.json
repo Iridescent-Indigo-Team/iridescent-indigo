@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TATSUGIRI",
+  "form": 3,
+  "real_form_name": "Mega Tatsugiri (Curly Form)",
+  "mega_stone": "TATSUGIRINITE",
+  "base_stats": {
+    "hp": 68,
+    "attack": 65,
+    "defense": 90,
+    "speed": 92,
+    "special_attack": 135,
+    "special_defense": 125
+  },
+  "base_exp": 216,
+  "height": 0.6,
+  "weight": 24.0,
+  "real_pokedex_entry": "Tatsugiri's brain has been invigorated by Mega Evolution, making it even wilier. It can create and command copies of itself."
+}

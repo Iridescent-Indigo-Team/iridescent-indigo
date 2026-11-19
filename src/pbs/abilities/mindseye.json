@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MINDSEYE",
+  "real_name": "Mind's Eye",
+  "real_description": "Prevents accuracy loss. Ignores Ghost immunities."
+}

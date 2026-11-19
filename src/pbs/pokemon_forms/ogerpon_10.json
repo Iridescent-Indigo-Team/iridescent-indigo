@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 10,
+  "real_form_name": "Terastal Hearthflame Mask",
+  "types": ["GRASS", "FIRE"],
+  "abilities": ["EMBODYASPECT_2"],
+  "color": "Red",
+  "flags": ["Legendary", "TeraType_FIRE"]
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "REVAVROOM",
+  "form": 1,
+  "types": ["FIRE"],
+  "abilities": ["SPEEDBOOST"]
+}

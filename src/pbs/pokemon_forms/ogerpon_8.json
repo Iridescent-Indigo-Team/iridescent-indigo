@@ -1,0 +1,7 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 8,
+  "real_form_name": "Terastal Teal Mask",
+  "abilities": ["EMBODYASPECT"]
+}

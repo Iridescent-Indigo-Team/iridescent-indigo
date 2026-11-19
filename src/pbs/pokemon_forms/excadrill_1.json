@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "EXCADRILL",
+  "form": 1,
+  "real_form_name": "Mega Excadrill",
+  "mega_stone": "EXCADRITE",
+  "base_stats": {
+    "hp": 110,
+    "attack": 165,
+    "defense": 100,
+    "speed": 103,
+    "special_attack": 65,
+    "special_defense": 65
+  },
+  "base_exp": 228,
+  "abilities": ["PIERCINGDRILL"],
+  "hidden_abilities": ["PIERCINGDRILL"],
+  "height": 0.9,
+  "weight": 60.0,
+  "real_pokedex_entry": "If this Pokémon brings its arms and head together to form a streamlined shape and spins at high speeds, it can destroy anything.",
+  "generation": 9
+}

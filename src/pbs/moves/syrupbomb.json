@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SYRUPBOMB",
+  "real_name": "Syrup Bomb",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 60,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "LowerTargetSpeedOverTime",
+  "flags": ["CanProtect", "CanMirrorMove", "Bomb"],
+  "effect_chance": 100,
+  "real_description": "An explosion of sticky candy syrup, which drop the target's Speed stat each turn for three turns."
+}

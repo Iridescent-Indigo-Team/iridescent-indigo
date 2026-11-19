@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FLOWERTRICK",
+  "real_name": "Flower Trick",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "AlwaysCriticalHit",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "The user throws a rigged bouquet of flowers at the target, which always hits and lands a critical hit."
+}

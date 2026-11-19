@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TATSUGIRI",
+  "form": 4,
+  "real_form_name": "Mega Tatsugiri (Droopy Form)",
+  "mega_stone": "TATSUGIRINITE",
+  "unmega_form": 1,
+  "base_stats": {
+    "hp": 68,
+    "attack": 65,
+    "defense": 90,
+    "speed": 92,
+    "special_attack": 135,
+    "special_defense": 125
+  },
+  "base_exp": 216,
+  "height": 0.6,
+  "weight": 24.0,
+  "color": "Pink",
+  "real_pokedex_entry": "It solidifies the energy of Mega Evolution, building up an overflowing pile to launch as projectiles. These projectiles explode on contact."
+}

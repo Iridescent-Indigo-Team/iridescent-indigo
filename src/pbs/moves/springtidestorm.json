@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SPRINGTIDESTORM",
+  "real_name": "Springtide Storm",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 80,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "LowerTargetAttack1",
+  "flags": ["Wind", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "effect_chance": 30,
+  "real_description": "The user wraps winds of fierce emotion around opponents. This may lower their Attack stats."
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CHESNAUGHT",
+  "form": 1,
+  "real_form_name": "Mega Chesnaught",
+  "mega_stone": "CHESNAUGHTITE",
+  "base_stats": {
+    "hp": 88,
+    "attack": 137,
+    "defense": 172,
+    "speed": 44,
+    "special_attack": 74,
+    "special_defense": 115
+  },
+  "base_exp": 315,
+  "abilities": ["BULLETPROOF"],
+  "hidden_abilities": ["BULLETPROOF"],
+  "real_pokedex_entry": "It has fortified armor and a will to defend at all costs. Both are absurdly strong.",
+  "generation": 9
+}

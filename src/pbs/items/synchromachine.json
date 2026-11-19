@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SYNCHROMACHINE",
+  "real_name": "Synchro Machine",
+  "real_name_plural": "Synchro Machines",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A device that synchronizes your mind and feelings with your Pokémon's as one. It's still a prototype—hence."
+}

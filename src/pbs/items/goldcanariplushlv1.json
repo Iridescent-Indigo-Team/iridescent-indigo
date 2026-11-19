@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GOLDCANARIPLUSHLV1",
+  "real_name": "Gold Canari Plush",
+  "real_name_plural": "Gold Canari Plushies",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Canari plush holding a gold charm. It slightly increases the battle's prize money you get."
+}

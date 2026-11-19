@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "PSYSHIELDBASH",
+  "real_name": "Psyshield Bash",
+  "type": "PSYCHIC",
+  "category": "Physical",
+  "power": 70,
+  "accuracy": 90,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserDefense1",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "Cloaking itself in psychic energy, the user slams into the target. This raises the user’s Defense."
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "FALINKS",
+  "form": 1,
+  "real_form_name": "Mega Falinks",
+  "mega_stone": "FALINKSITE",
+  "base_stats": {
+    "hp": 65,
+    "attack": 135,
+    "defense": 135,
+    "speed": 100,
+    "special_attack": 70,
+    "special_defense": 65
+  },
+  "base_exp": 215,
+  "abilities": ["DEFIANT"],
+  "hidden_abilities": ["DEFIANT"],
+  "height": 1.6,
+  "weight": 99.0,
+  "real_pokedex_entry": "Mega Falinks has taken on the ultimate battle formation, which can be achieved only if the troopers and brass have the strongest of bonds.",
+  "generation": 9
+}

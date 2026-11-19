@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "MORPEKO",
+  "back_sprite": {"x": 0, "y": 35},
+  "front_sprite": {"x": 2, "y": 26},
+  "shadow_x": 0,
+  "shadow_size": 1
+}

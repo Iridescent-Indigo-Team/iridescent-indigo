@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WICKEDTORQUE",
+  "real_name": "Wicked Torque",
+  "type": "DARK",
+  "category": "Physical",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "StarmobileSleepTarget",
+  "flags": ["CanProtect", "CannotMetronome"],
+  "effect_chance": 10,
+  "real_description": "This move is only used by a Starmobile. It may put the target to sleep."
+}

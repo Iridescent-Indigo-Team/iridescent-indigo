@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SUPREMEBUTTER",
+  "real_name": "Supreme Butter",
+  "real_name_plural": "Supreme Butters",
+  "real_portion_name": "pack of Supreme Butter",
+  "real_portion_name_plural": "packs of Supreme Butter",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A supreme pack of butter found in Hyperspace Lumiose. With it, you could make higher quality donuts."
+}

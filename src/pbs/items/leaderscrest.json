@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LEADERSCREST",
+  "real_name": "Leader's Crest",
+  "real_name_plural": "Leader's Crests",
+  "pocket": 1,
+  "price": 3000,
+  "flags": ["Fling_30"],
+  "real_description": "A shard of what appears to be an old blade of some sort. It is held only by a head of certain Pokémon group."
+}

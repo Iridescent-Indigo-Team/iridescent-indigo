@@ -1,0 +1,9 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "ORICORIO",
+  "form": 2,
+  "back_sprite": {"x": 0, "y": 36},
+  "front_sprite": {"x": 4, "y": 24},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

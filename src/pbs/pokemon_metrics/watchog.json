@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "WATCHOG",
-  "back_sprite": {"x": -2, "y": 0},
-  "front_sprite": {"x": 6, "y": 15},
+  "back_sprite": {"x": 0, "y": 36},
+  "front_sprite": {"x": 5, "y": 17},
   "shadow_x": 0,
   "shadow_size": 1
 }

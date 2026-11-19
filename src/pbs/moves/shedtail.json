@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SHEDTAIL",
+  "real_name": "Shed Tail",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "function_code": "UserMakeSubstituteSwitchOut",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user creates a substitute and switches places with a party Pokémon in waiting."
+}

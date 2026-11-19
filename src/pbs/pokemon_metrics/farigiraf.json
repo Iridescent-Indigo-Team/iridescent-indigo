@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "FARIGIRAF",
+  "back_sprite": {"x": -3, "y": 29},
+  "front_sprite": {"x": -13, "y": 9},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

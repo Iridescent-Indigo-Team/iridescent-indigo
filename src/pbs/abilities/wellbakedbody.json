@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "WELLBAKEDBODY",
+  "real_name": "Well-Baked Body",
+  "real_description": "Fire-type moves deal no damage and sharply boost Defense."
+}

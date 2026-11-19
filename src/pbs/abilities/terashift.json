@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TERASHIFT",
+  "real_name": "Tera Shift",
+  "real_description": "Enters Terastal Form when sent out."
+}

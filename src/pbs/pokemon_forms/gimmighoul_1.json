@@ -1,0 +1,17 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GIMMIGHOUL",
+  "form": 1,
+  "real_form_name": "Roaming Form",
+  "base_stats": {"hp": 45, "attack": 30, "defense": 25, "speed": 80, "special_attack": 75, "special_defense": 45},
+  "abilities": ["RUNAWAY"],
+  "height": 0.1,
+  "weight": 0.1,
+  "color": "Gray",
+  "shape": "Bipedal",
+  "real_category": "Coin Hunter",
+  "real_pokedex_entry": "It wanders around, carrying an old coin on its back. It survives by draining the life-force from humans who try to pick up its coin.",
+  "evolutions": [
+    {"species": "GHOLDENGO", "method": "None"}
+  ]
+}

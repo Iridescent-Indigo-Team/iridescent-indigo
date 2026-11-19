@@ -1,0 +1,25 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "ZYGARDE",
+  "form": 4,
+  "real_form_name": "Mega Zygarde",
+  "mega_stone": "ZYGARDITE",
+  "unmega_form": 2,
+  "base_stats": {
+    "hp": 216,
+    "attack": 70,
+    "defense": 91,
+    "speed": 100,
+    "special_attack": 216,
+    "special_defense": 85
+  },
+  "base_exp": 389,
+  "abilities": ["POWERCONSTRUCT"],
+  "hidden_abilities": ["POWERCONSTRUCT"],
+  "height": 7.7,
+  "weight": 610.0,
+  "color": "Black",
+  "shape": "BipedalTail",
+  "real_pokedex_entry": "In response to people's emotions during an unprecedented crisis, Zygarde Mega Evolves and calms the situation with its unmatched power.",
+  "generation": 9
+}

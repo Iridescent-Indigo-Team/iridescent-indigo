@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "METALALLOY",
+  "real_name": "Metal Alloy",
+  "real_name_plural": "Metal Alloys",
+  "real_portion_name": "hunk of Metal Alloy",
+  "real_portion_name_plural": "hunks of Metal Alloy",
+  "pocket": 1,
+  "price": 3000,
+  "sell_price": 1500,
+  "bp_price": 8,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar metal that can make certain species of Pokémon evolve. It is composed of many layers."
+}

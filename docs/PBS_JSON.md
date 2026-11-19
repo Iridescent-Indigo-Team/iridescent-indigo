@@ -241,6 +241,21 @@ This runs `./game.sh --dump-schema` headlessly. The game starts with
 The file is committed, so the converter runs without the engine.
 
 Run `make pbs-schema` again whenever a script or plugin changes a `SCHEMA`.
+
+The Generation 9 Pack (`src/data/022_Generation 9 Pack/`) changes the schema in
+two ways, and the committed `engine_schema.json` already includes both:
+
+- `Moves` in `pokemon` and `pokemon_forms` accepts level `-1` (`*ie` instead
+  of `*ue`). Moves at level -1 can only be learned from the Move Reminder.
+- Six evolution methods: `CollectItems` and `LevelDefeatItsKindWithItem` (item),
+  `LevelUseMoveCount` (move), and `LevelWithPartner`, `LevelRecoilDamage` and
+  `LevelWalk` (integer).
+
+The pack's own data is kept in the `*_Gen_9_Pack.txt` files of
+`lib/pokemon-essentials/PBS`, so in `src/pbs` it is the second entry of `files`
+in each `_index.json`, with the suffix `Gen_9_Pack` (`base_Gen_9_Pack` for
+species). Its entries come after the Essentials entries, so the existing species
+keep their numbers.
 Plugins are loaded before the dump, so their changes are included.
 
 ## names.json and layout.json

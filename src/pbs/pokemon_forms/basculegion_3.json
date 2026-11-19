@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BASCULEGION",
+  "form": 3,
+  "real_form_name": "Female",
+  "base_stats": {
+    "hp": 120,
+    "attack": 92,
+    "defense": 65,
+    "speed": 78,
+    "special_attack": 100,
+    "special_defense": 75
+  },
+  "real_pokedex_entry": "It can afflict a target with terrifying illusions that are under its control. The deeper the sadness in its friends' souls, the paler Basculegion becomes."
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "REDCANARIPLUSHLV1",
+  "real_name": "Red Canari Plush",
+  "real_name_plural": "Red Canari Plushies",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Canari plush holding a red charm. It slightly boosts the Exp. Points that Pokémon can get."
+}

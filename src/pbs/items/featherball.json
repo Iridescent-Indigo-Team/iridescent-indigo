@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "FEATHERBALL",
+  "real_name": "Feather Ball",
+  "real_name_plural": "Feather Balls",
+  "pocket": 3,
+  "price": 700,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "A ball that flies fast and true ideal for catching nimble Pokémon or Pokémon that fly high in the air."
+}

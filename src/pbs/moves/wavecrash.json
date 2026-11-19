@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WAVECRASH",
+  "real_name": "Wave Crash",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RecoilThirdOfDamageDealt",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "The user shrouds itself in water and slams into the target. This also damages the user."
+}

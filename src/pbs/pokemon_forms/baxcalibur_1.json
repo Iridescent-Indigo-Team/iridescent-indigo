@@ -1,0 +1,20 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "BAXCALIBUR",
+  "form": 1,
+  "real_form_name": "Mega Baxcalibur",
+  "mega_stone": "BAXCALIBRITE",
+  "base_stats": {
+    "hp": 115,
+    "attack": 175,
+    "defense": 117,
+    "speed": 87,
+    "special_attack": 105,
+    "special_defense": 101
+  },
+  "base_exp": 350,
+  "abilities": ["THERMALEXCHANGE"],
+  "hidden_abilities": ["THERMALEXCHANGE"],
+  "weight": 315.0,
+  "real_pokedex_entry": "Baxcalibur's dorsal blade has grown even more massive thanks to Mega Evolution. This Pokémon fires beams from the hilt at its solar plexus."
+}

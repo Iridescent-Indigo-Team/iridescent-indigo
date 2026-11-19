@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "TERAFORMZERO",
+  "real_name": "Teraform Zero",
+  "real_description": "Eliminates all weather and terrain."
+}

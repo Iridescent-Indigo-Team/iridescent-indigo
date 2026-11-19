@@ -215,6 +215,13 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
   battlers are anchored (`ox = width / 2`, `oy = height`), so they stand in
   the same place. A sprite that can't fit in 96×96 without losing opaque
   pixels stops the build with an error.
+- **3× back sprites.** The Generation 9 Pack's back sprites are 288×288: 3×
+  upscales of 96×96 art, drawn 1.5× larger than the front sprites. Battle
+  frames of 288×288 are divided by 3 instead of 2, so they come out as clean
+  96×96 sprites. Their `BackSprite` metrics in `pokemon_metrics` were scaled by
+  2/3 to match, which keeps each Pokémon's feet on its base. A few stock back
+  sprites the pack doesn't replace (`PICHU_2`, `ARCEUS_9`, some female and
+  Shadow variants) are still 160×160 and use their stock metrics.
 - Files that aren't PNGs are copied unchanged. Outputs whose source was
   deleted are removed.
 

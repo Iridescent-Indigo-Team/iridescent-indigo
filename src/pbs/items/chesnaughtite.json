@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "CHESNAUGHTITE",
+  "real_name": "Chesnaughtite",
+  "real_name_plural": "Chesnaughtites",
+  "pocket": 1,
+  "price": 0,
+  "bp_price": 50,
+  "flags": ["MegaStone", "Fling_80"],
+  "real_description": "One of a variety of mysterious Mega Stones. Have Chesnaught hold it, and it will be able to Mega Evolve."
+}

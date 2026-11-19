@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CRESSELIA",
-  "back_sprite": {"x": -5, "y": 0},
-  "front_sprite": {"x": 3, "y": -5},
+  "back_sprite": {"x": 0, "y": 30},
+  "front_sprite": {"x": 0, "y": 5},
   "shadow_x": 0,
   "shadow_size": 2
 }

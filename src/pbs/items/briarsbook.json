@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BRIARSBOOK",
+  "real_name": "Briar's Book",
+  "real_name_plural": "Briar's Books",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A proof copy of the exploration notes, along with Briar's thoughts covering the Area Zero Underdepths."
+}

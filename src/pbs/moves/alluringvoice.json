@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ALLURINGVOICE",
+  "real_name": "Alluring Voice",
+  "type": "FAIRY",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "ConfuseTargetIfTargetStatsRaisedThisTurn",
+  "flags": ["Sound", "CanProtect", "CanMirrorMove"],
+  "effect_chance": 100,
+  "real_description": "Attacks using an angelic voice. This confuses the target if its stats have been raised this turn."
+}

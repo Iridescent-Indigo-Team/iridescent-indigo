@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MASTERPIECETEACUP",
+  "real_name": "Masterpiece Teacup",
+  "real_name_plural": "Masterpiece Teacups",
+  "pocket": 1,
+  "price": 1500,
+  "sell_price": 9500,
+  "bp_price": 5,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_80"],
+  "real_description": "A peculiar chipped teacup that can make a certain species of Pokémon evolve. It makes delicious tea."
+}

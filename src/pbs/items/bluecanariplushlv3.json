@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLUECANARIPLUSHLV3",
+  "real_name": "Blue Canari Plush",
+  "real_name_plural": "Blue Canari Plushies",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Canari plush holding a blue charm. It greatly boosts your chance of catching Pokémon."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BARBBARRAGE",
+  "real_name": "Barb Barrage",
+  "type": "POISON",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetPoisonedPoisonTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 50,
+  "real_description": "Fires toxic barbs which may poison the target. Power is doubled if the target is poisoned."
+}

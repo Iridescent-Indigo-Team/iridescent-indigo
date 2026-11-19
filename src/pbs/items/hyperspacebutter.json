@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERSPACEBUTTER",
+  "real_name": "Hyperspace Butter",
+  "real_name_plural": "Hyperspace Butters",
+  "real_portion_name": "pack of Hyperspace Butter",
+  "real_portion_name_plural": "packs of Hyperspace Butter",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "The absolute ultimate butter found in Hyperspace Lumiose. With it, you could make higher quality donuts."
+}

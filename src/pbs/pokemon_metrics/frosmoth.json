@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "FROSMOTH",
+  "back_sprite": {"x": 5, "y": 33},
+  "front_sprite": {"x": 5, "y": 7},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

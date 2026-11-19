@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "HAWLUCHA",
+  "form": 1,
+  "real_form_name": "Mega Hawlucha",
+  "mega_stone": "HAWLUCHANITE",
+  "base_stats": {
+    "hp": 78,
+    "attack": 137,
+    "defense": 100,
+    "speed": 118,
+    "special_attack": 74,
+    "special_defense": 93
+  },
+  "base_exp": 225,
+  "abilities": ["NOGUARD"],
+  "hidden_abilities": ["NOGUARD"],
+  "height": 1.0,
+  "weight": 25.0,
+  "real_pokedex_entry": "Mega Evolution has pumped up all its muscles. Hawlucha flexes to show off its strength.",
+  "generation": 9
+}

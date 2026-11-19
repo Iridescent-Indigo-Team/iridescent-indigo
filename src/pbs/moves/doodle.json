@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "DOODLE",
+  "real_name": "Doodle",
+  "type": "NORMAL",
+  "category": "Status",
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearFoe",
+  "function_code": "SetUserAlliesAbilityToTargetAbility",
+  "flags": ["CannotMetronome"],
+  "real_description": "The user captures a quick sketch, changing the Abilities of the user and its allies to the target's."
+}

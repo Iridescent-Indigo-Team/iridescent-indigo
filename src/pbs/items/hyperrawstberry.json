@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HYPERRAWSTBERRY",
+  "real_name": "Hyper Rawst Berry",
+  "real_name_plural": "Hyper Rawst Berries",
+  "pocket": 5,
+  "price": 0,
+  "flags": ["Berry"],
+  "real_description": "A mysterious Berry found in Hyperspace Lumiose. Its bitter bite works beautifully in chocolate."
+}

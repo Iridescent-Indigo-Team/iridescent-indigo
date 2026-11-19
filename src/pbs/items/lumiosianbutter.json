@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "LUMIOSIANBUTTER",
+  "real_name": "Lumiosian Butter",
+  "real_name_plural": "Lumiosian Butters",
+  "real_portion_name": "pack of Lumiosian Butter",
+  "real_portion_name_plural": "packs of Lumiosian Butter",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "Some of the best butter produced in the Kalos region. Highly sought after by the cooks of Lumiose."
+}

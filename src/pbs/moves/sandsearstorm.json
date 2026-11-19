@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SANDSEARSTORM",
+  "real_name": "Sandsear Storm",
+  "type": "GROUND",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 80,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "BurnTargetAlwaysHitsInRain",
+  "flags": ["CanProtect", "CanMirrorMove", "Wind"],
+  "effect_chance": 20,
+  "real_description": "The user wraps fierce winds and hot sand around opponents. This may leave them with a burn."
+}

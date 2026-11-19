@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 6,
+  "real_form_name": "Hearthflame Mask",
+  "pokedex_form": 2,
+  "types": ["GRASS", "FIRE"],
+  "abilities": ["MOLDBREAKER"],
+  "color": "Red",
+  "flags": ["Legendary", "TeraType_FIRE"]
+}

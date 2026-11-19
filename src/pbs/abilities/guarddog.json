@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "GUARDDOG",
+  "real_name": "Guard Dog",
+  "real_description": "Boosts Atk if intimidated and immune to being forced out."
+}

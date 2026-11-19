@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "STONEAXE",
+  "real_name": "Stone Axe",
+  "type": "ROCK",
+  "category": "Physical",
+  "power": 65,
+  "accuracy": 90,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "SplintersTargetGen8AddStealthRocksGen9",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "Slicing"],
+  "effect_chance": 100,
+  "real_description": "The user swings at the opponent with its stone axes. May leave floating rocks around the target."
+}

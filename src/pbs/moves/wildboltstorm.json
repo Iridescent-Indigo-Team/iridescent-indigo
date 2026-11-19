@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WILDBOLTSTORM",
+  "real_name": "Wildbolt Storm",
+  "type": "ELECTRIC",
+  "category": "Special",
+  "power": 100,
+  "accuracy": 80,
+  "total_pp": 10,
+  "target": "AllNearFoes",
+  "function_code": "ParalyzeTargetAlwaysHitsInRain",
+  "flags": ["CanProtect", "CanMirrorMove", "Wind"],
+  "effect_chance": 20,
+  "real_description": "The user attacks opposing Pokémon with a thunderous tempest. This may also leave them paralyzed."
+}

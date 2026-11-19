@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "HOENNIANSALT",
+  "real_name": "Hoennian Salt",
+  "real_name_plural": "Hoennian Salts",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A coarse salt harvested in the Hoenn region. A tiny pinch will impart a wondrous depth of flavor."
+}

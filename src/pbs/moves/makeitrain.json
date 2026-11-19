@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MAKEITRAIN",
+  "real_name": "Make It Rain",
+  "type": "STEEL",
+  "category": "Special",
+  "power": 120,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "AllNearFoes",
+  "function_code": "AddMoneyGainedFromBattleLowerUserSpAtk1",
+  "flags": ["CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "Throws out a huge mass of coins that lowers its Sp. Atk stat. Money is earned after the battle."
+}

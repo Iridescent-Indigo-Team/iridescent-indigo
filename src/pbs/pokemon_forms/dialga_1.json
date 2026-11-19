@@ -1,0 +1,19 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "DIALGA",
+  "form": 1,
+  "real_form_name": "Origin Forme",
+  "base_stats": {
+    "hp": 100,
+    "attack": 100,
+    "defense": 120,
+    "speed": 90,
+    "special_attack": 150,
+    "special_defense": 120
+  },
+  "height": 7.0,
+  "weight": 850.0,
+  "color": "Blue",
+  "real_pokedex_entry": "Radiant light caused Dialga to take on a form bearing a striking resemblance to the creator Pokémon. Dialga now wields colossal strength.",
+  "generation": 8
+}

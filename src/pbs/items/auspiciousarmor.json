@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "AUSPICIOUSARMOR",
+  "real_name": "Auspicious Armor",
+  "real_name_plural": "Auspicious Armors",
+  "real_portion_name": "set of Auspicious Armor",
+  "real_portion_name_plural": "sets of Auspicious Armor",
+  "pocket": 1,
+  "price": 3000,
+  "field_use": "OnPokemon",
+  "flags": ["EvolutionStone", "Fling_30"],
+  "real_description": "A peculiar set of armor that can make a certain Pokémon evolve. Auspicious wishes live within it."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "AMAZINGBUTTER",
+  "real_name": "Amazing Butter",
+  "real_name_plural": "Amazing Butters",
+  "real_portion_name": "pack of Amazing Butter",
+  "real_portion_name_plural": "packs of Amazing Butter",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "An amazing pack of butter found in Hyperspace Lumiose. With it, you could make higher quality donuts."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "ESPERWING",
+  "real_name": "Esper Wing",
+  "type": "PSYCHIC",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "RaiseUserSpeed1",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "effect_chance": 100,
+  "real_description": "The user slashes with aura-enriched wings which boosts its Speed stat. Critical hits land more easily."
+}

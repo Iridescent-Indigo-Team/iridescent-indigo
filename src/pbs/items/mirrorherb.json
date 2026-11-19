@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MIRRORHERB",
+  "real_name": "Mirror Herb",
+  "real_name_plural": "Mirror Herbs",
+  "pocket": 1,
+  "price": 30000,
+  "flags": ["Fling_30"],
+  "real_description": "An item to be held by a Pokémon. This herb will allow the holder to mirror an opponent's stat increases once."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BURNINGBULWARK",
+  "real_name": "Burning Bulwark",
+  "type": "FIRE",
+  "category": "Status",
+  "accuracy": 0,
+  "total_pp": 10,
+  "target": "User",
+  "priority": 4,
+  "function_code": "ProtectUserBurningBulwark",
+  "real_description": "Protects the user from attacks. Also burns any attacker that makes contact with the user."
+}

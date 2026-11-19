@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "HOSPITALITY",
+  "real_name": "Hospitality",
+  "real_description": "Restores ally's HP a little when entering battle."
+}

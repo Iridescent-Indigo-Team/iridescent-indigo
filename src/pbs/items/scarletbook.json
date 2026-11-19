@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "SCARLETBOOK",
+  "real_name": "Scarlet Book",
+  "real_name_plural": "Scarlet Books",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A record of the Heath's expedition on the Great Crater of Paldea. It has the name \"Sada\" written on it."
+}

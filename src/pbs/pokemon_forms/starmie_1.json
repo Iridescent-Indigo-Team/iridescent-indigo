@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "STARMIE",
+  "form": 1,
+  "real_form_name": "Mega Starmie",
+  "mega_stone": "STARMINITE",
+  "base_stats": {
+    "hp": 60,
+    "attack": 100,
+    "defense": 105,
+    "speed": 120,
+    "special_attack": 130,
+    "special_defense": 105
+  },
+  "base_exp": 232,
+  "abilities": ["HUGEPOWER"],
+  "hidden_abilities": ["HUGEPOWER"],
+  "height": 2.3,
+  "real_pokedex_entry": "Its movements have become more humanlike. Whether it's simply trying to communicate or wants to supplant humanity is unclear.",
+  "generation": 9
+}

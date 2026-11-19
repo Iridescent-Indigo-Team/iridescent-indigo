@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "MEOWSTIC",
+  "form": 2,
+  "real_form_name": "Mega Meowstic",
+  "mega_stone": "MEOWSTICITE",
+  "base_stats": {
+    "hp": 74,
+    "attack": 48,
+    "defense": 76,
+    "speed": 124,
+    "special_attack": 143,
+    "special_defense": 101
+  },
+  "base_exp": 213,
+  "abilities": ["TRACE"],
+  "hidden_abilities": ["TRACE"],
+  "height": 0.8,
+  "weight": 10.1,
+  "real_category": "Second Sight",
+  "real_pokedex_entry": "Mega Meowstic can use its psychic power to compress or expand anything. It overwhelms foes by contorting space itself.",
+  "generation": 9
+}

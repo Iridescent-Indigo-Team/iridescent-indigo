@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GIMMIGHOULCOIN",
+  "real_name": "Gimmighoul Coin",
+  "real_name_plural": "Gimmighoul Coins",
+  "pocket": 1,
+  "price": 0,
+  "flags": ["Fling_10"],
+  "real_description": "An item that accidentally dropped by a Pokémon. It seems that Gimmighoul treasure and hoard these."
+}

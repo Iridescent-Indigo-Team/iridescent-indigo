@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MYTHICALPECHABERRY",
+  "real_name": "Mythical Pecha Berry",
+  "real_name_plural": "Mythical Pecha Berries",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "A Pecha Berry of the highest quality. It's one of every a few years berry that carefully tended by an expert."
+}

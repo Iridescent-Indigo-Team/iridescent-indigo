@@ -1,0 +1,23 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CLEFABLE",
+  "form": 1,
+  "real_form_name": "Mega Clefable",
+  "mega_stone": "CLEFABLITE",
+  "types": ["FAIRY", "FLYING"],
+  "base_stats": {
+    "hp": 95,
+    "attack": 80,
+    "defense": 93,
+    "speed": 70,
+    "special_attack": 135,
+    "special_defense": 110
+  },
+  "base_exp": 292,
+  "abilities": ["MAGICBOUNCE"],
+  "hidden_abilities": ["MAGICBOUNCE"],
+  "height": 1.7,
+  "weight": 42.3,
+  "real_pokedex_entry": "It flies by using the power of moonlight to control gravity within a radius of over 32 feet around it.",
+  "generation": 9
+}

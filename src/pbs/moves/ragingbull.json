@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "RAGINGBULL",
+  "real_name": "Raging Bull",
+  "type": "NORMAL",
+  "category": "Physical",
+  "power": 90,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeIsUserSecondTypeRemoveScreens",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome"],
+  "real_description": "The user charges and destroys enemy barriers. This move’s type depends on the user’s form."
+}

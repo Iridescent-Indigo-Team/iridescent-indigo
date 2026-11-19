@@ -127,10 +127,11 @@ class Game_Event < Game_Character
   end
 
   def onEvent?
-    return @map_id == $game_map.map_id && at_coordinate?($game_player.x, $game_player.y)
+    return @map_id == $game_player.map_id && at_coordinate?($game_player.x, $game_player.y)
   end
 
   def over_trigger?
+    return false if @map_id != $game_player.map_id   # Not on a connected map
     return false if @character_name != "" && !@through
     return false if @event.name[/hiddenitem/i]
     each_occupied_tile do |i, j|
@@ -140,6 +141,7 @@ class Game_Event < Game_Character
   end
 
   def check_event_trigger_touch(dir)
+    return if @map_id != $game_player.map_id   # Not on a connected map
     return if $game_system.map_interpreter.running?
     return if @trigger != 2   # Event touch
     case dir
@@ -158,6 +160,7 @@ class Game_Event < Game_Character
   end
 
   def check_event_trigger_after_turning
+    return if @map_id != $game_player.map_id   # Not on a connected map
     return if $game_system.map_interpreter.running? || @starting
     return if @trigger != 2   # Not Event Touch
     return if !self.name[/(?:sight|trainer)\((\d+)\)/i]
@@ -168,6 +171,7 @@ class Game_Event < Game_Character
   end
 
   def check_event_trigger_after_moving
+    return if @map_id != $game_player.map_id   # Not on a connected map
     return if $game_system.map_interpreter.running? || @starting
     return if @trigger != 2   # Not Event Touch
     if self.name[/(?:sight|trainer)\((\d+)\)/i]

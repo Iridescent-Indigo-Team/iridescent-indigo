@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "SUPERCELLSLAM",
+  "real_name": "Supercell Slam",
+  "type": "ELECTRIC",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 95,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "CrashDamageIfFails",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user drops onto the target with its electrified body. If it misses, the user is hurt instead."
+}

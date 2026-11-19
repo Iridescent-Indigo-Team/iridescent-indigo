@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "EARTHEATER",
+  "real_name": "Earth Eater",
+  "real_description": "Restores HP if hit by a Ground-type move."
+}

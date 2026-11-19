@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "MYCELIUMMIGHT",
+  "real_name": "Mycelium Might",
+  "real_description": "Status moves are unimpeded by this Ability but slower to use."
+}

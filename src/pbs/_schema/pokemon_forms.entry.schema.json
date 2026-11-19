@@ -78,7 +78,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "level": {"type": "integer", "minimum": 0},
+          "level": {"type": "integer"},
           "move": {"type": "string", "description": "A Move id from moves.txt."}
         },
         "required": ["level", "move"],
@@ -268,7 +268,13 @@
               "TradeSpecies",
               "BattleDealCriticalHit",
               "Event",
-              "EventAfterDamageTaken"
+              "EventAfterDamageTaken",
+              "CollectItems",
+              "LevelWithPartner",
+              "LevelUseMoveCount",
+              "LevelDefeatItsKindWithItem",
+              "LevelRecoilDamage",
+              "LevelWalk"
             ]
           },
           "parameter": {"type": "string", "pattern": "^[^#]*$", "description": "Text."}

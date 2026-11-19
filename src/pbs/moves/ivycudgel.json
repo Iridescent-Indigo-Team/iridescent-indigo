@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "IVYCUDGEL",
+  "real_name": "Ivy Cudgel",
+  "type": "GRASS",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "TypeIsUserSecondType",
+  "flags": ["CanProtect", "CanMirrorMove", "HighCriticalHitRate"],
+  "real_description": "An ivy-wrapped cudgel strike with a high critical-hit ratio. Type changes based on the user's Mask."
+}

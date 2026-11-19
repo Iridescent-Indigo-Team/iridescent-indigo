@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "FICKLEBEAM",
+  "real_name": "Fickle Beam",
+  "type": "DRAGON",
+  "category": "Special",
+  "power": 80,
+  "accuracy": 100,
+  "total_pp": 5,
+  "target": "NearOther",
+  "function_code": "RandomlyDealsDoubleDamage",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "Sometimes all of the user's heads shoot beams in unison, doubling this move's power."
+}

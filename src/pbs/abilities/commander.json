@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "COMMANDER",
+  "real_name": "Commander",
+  "real_description": "Pairs up and commands with an active Dondozo."
+}

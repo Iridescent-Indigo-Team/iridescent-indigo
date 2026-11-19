@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "MOUNTAINGALE",
+  "real_name": "Mountain Gale",
+  "type": "ICE",
+  "category": "Physical",
+  "power": 100,
+  "accuracy": 85,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "FlinchTarget",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 30,
+  "real_description": "The user hurls giant chunks of ice at the target. This may also make the target flinch."
+}

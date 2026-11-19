@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "CRABOMINABLE",
+  "form": 1,
+  "real_form_name": "Mega Crabominable",
+  "mega_stone": "CRABOMINITE",
+  "base_stats": {
+    "hp": 97,
+    "attack": 157,
+    "defense": 122,
+    "speed": 33,
+    "special_attack": 62,
+    "special_defense": 107
+  },
+  "base_exp": 217,
+  "abilities": ["IRONFIST"],
+  "hidden_abilities": ["IRONFIST"],
+  "height": 2.6,
+  "weight": 252.8,
+  "real_pokedex_entry": "It can pulverize reinforced concrete with a light swing of one of its fists, each of which is covered in a thick layer of ice.",
+  "generation": 9
+}

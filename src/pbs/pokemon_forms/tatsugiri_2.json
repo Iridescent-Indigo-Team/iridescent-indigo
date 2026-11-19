@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "TATSUGIRI",
+  "form": 2,
+  "real_form_name": "Stretchy Form",
+  "color": "Yellow",
+  "real_pokedex_entry": "Bird Pokémon are its main prey. This Pokémon knows it’s weak, so it hunts with a partner."
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "JETPUNCH",
+  "real_name": "Jet Punch",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 60,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "priority": 1,
+  "function_code": "None",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove", "CannotMetronome", "Punching"],
+  "real_description": "The user summons a torrent around its fist and punches at blinding speed. Always goes first."
+}

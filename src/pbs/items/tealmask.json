@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "TEALMASK",
+  "real_name": "Teal Mask",
+  "real_name_plural": "Teal Masks",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem", "Fling_60"],
+  "real_description": "A teal mask patterned after the face of an ogre. Dropped by Ogerpon after visiting the Festival of Masks."
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "GLIMMORA",
+  "form": 1,
+  "real_form_name": "Mega Glimmora",
+  "mega_stone": "GLIMMORANITE",
+  "base_stats": {
+    "hp": 83,
+    "attack": 90,
+    "defense": 105,
+    "speed": 101,
+    "special_attack": 150,
+    "special_defense": 96
+  },
+  "base_exp": 234,
+  "abilities": ["ADAPTABILITY"],
+  "hidden_abilities": ["ADAPTABILITY"],
+  "height": 2.8,
+  "weight": 77.0,
+  "real_pokedex_entry": "Glimmora's petals-now larger and separated from its main body-rotate around it to provide defense while scattering poisonous fragments."
+}

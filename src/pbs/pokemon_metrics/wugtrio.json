@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "WUGTRIO",
+  "back_sprite": {"x": 0, "y": 37},
+  "front_sprite": {"x": -2, "y": 24},
+  "shadow_x": 0,
+  "shadow_size": 2
+}

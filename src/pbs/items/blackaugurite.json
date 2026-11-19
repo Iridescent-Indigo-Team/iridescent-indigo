@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "BLACKAUGURITE",
+  "real_name": "Black Augurite",
+  "real_name_plural": "Black Augurites",
+  "pocket": 1,
+  "price": 2100,
+  "field_use": "OnPokemon",
+  "flags": ["Fling_30", "EvolutionStone"],
+  "real_description": "A glassy black stone that produces a sharp cutting edge when split. It’s loved by a certain Pokémon."
+}

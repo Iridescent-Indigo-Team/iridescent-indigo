@@ -1,0 +1,8 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "WALKINGWAKE",
+  "back_sprite": {"x": -9, "y": 32},
+  "front_sprite": {"x": -14, "y": 12},
+  "shadow_x": 0,
+  "shadow_size": 3
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "RAICHU",
+  "form": 2,
+  "real_form_name": "Mega Raichu X",
+  "mega_stone": "RAICHUNITEX",
+  "base_stats": {
+    "hp": 60,
+    "attack": 135,
+    "defense": 95,
+    "speed": 110,
+    "special_attack": 90,
+    "special_defense": 95
+  },
+  "base_exp": 293,
+  "abilities": ["ELECTRICSURGE"],
+  "hidden_abilities": ["ELECTRICSURGE"],
+  "height": 1.2,
+  "weight": 38.0,
+  "real_pokedex_entry": "It resembles an X as it flies through the air with 50 million volts of electricity sparking from its ears and forked tail.",
+  "generation": 9
+}

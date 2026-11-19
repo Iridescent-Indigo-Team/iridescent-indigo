@@ -1,0 +1,6 @@
+{
+  "$schema": "../_schema/abilities.entry.schema.json",
+  "id": "CUDCHEW",
+  "real_name": "Cud Chew",
+  "real_description": "Reuses an eaten Berry at the end of the next turn."
+}

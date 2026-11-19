@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "GIGATONBALL",
+  "real_name": "Gigaton Ball",
+  "real_name_plural": "Gigaton Balls",
+  "pocket": 3,
+  "price": 1500,
+  "battle_use": "OnFoe",
+  "flags": ["PokeBall"],
+  "real_description": "The ultimate iteration of the Heavy Ball. It has an even higher success rate than the Leaden Ball does."
+}

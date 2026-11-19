@@ -1,0 +1,11 @@
+{
+  "$schema": "../_schema/pokemon_forms.entry.schema.json",
+  "species": "OGERPON",
+  "form": 7,
+  "real_form_name": "Cornerstone Mask",
+  "pokedex_form": 3,
+  "types": ["GRASS", "ROCK"],
+  "abilities": ["STURDY"],
+  "color": "Gray",
+  "flags": ["Legendary", "TeraType_ROCK"]
+}
