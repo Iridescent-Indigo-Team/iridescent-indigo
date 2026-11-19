@@ -120,7 +120,7 @@ def pbConvertRPGAnimation(animation)
   yOffset = 0
   pbAnim.position = animation.position
   yOffset = -64 if animation.position == 0
-  yOffset = 64 if animation.position == 2
+  yOffset = 32 if animation.position == 2
   animation.frames.length.times do |i|
     frame = pbAnim.addFrame
     animFrame = animation.frames[i]
@@ -132,7 +132,7 @@ def pbConvertRPGAnimation(animation)
       end
       if animation.position == 3   # Screen
         point = transformPoint(
-          -160, 80, 160, -80,
+          -80, 40, 80, -40,
           Battle::Scene::FOCUSUSER_X, Battle::Scene::FOCUSUSER_Y,
           Battle::Scene::FOCUSTARGET_X, Battle::Scene::FOCUSTARGET_Y,
           data[j, 1], data[j, 2]
@@ -199,7 +199,7 @@ class RPG::Animation
       otherframe = otherAnim.frames[i]
       cellStart = thisframe.cell_max
       thisframe.cell_max += otherframe.cell_max
-      thisframe.cell_data.resize(thisframe.cell_max, 4)
+      thisframe.cell_data.resize(thisframe.cell_max, 8)
       otherframe.cell_max.times do |j|
         thisframe.cell_data[cellStart + j, 0] = otherframe.cell_data[j, 0]
         thisframe.cell_data[cellStart + j, 1] = otherframe.cell_data[j, 1] + x
@@ -608,7 +608,7 @@ def pbSpriteSetAnimFrame(sprite, frame, user = nil, target = nil, inEditor = fal
   end
   pattern = frame[AnimFrame::PATTERN]
   if pattern >= 0
-    animwidth = 192
+    animwidth = 96
     sprite.src_rect.set((pattern % 5) * animwidth, (pattern / 5) * animwidth,
                         animwidth, animwidth)
   else

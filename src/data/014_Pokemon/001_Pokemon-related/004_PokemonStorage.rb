@@ -6,8 +6,8 @@ class PokemonBox
   attr_accessor :name
   attr_accessor :background
 
-  BOX_WIDTH  = 3
-  BOX_HEIGHT = 3
+  BOX_WIDTH  = 6
+  BOX_HEIGHT = 5
   BOX_SIZE   = BOX_WIDTH * BOX_HEIGHT
 
   def initialize(name, maxPokemon = BOX_SIZE)

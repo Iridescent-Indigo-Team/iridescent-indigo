@@ -16,23 +16,23 @@ class ButtonEventScene < EventScene
     @keys = []
     @key_screens = []
 
-    addImageForScreen(1, 44, 122, _INTL("Graphics/UI/Controls help/help_f1"))
-    addImageForScreen(1, 44, 252, _INTL("Graphics/UI/Controls help/help_f8"))
-    addLabelForScreen(1, 134, 84, 352, _INTL("Opens the Key Bindings window, where you can choose which keyboard keys to use for each control."))
-    addLabelForScreen(1, 134, 244, 352, _INTL("Take a screenshot. It is put in the same folder as the save file."))
+    addImageForScreen(1, 22, 61, _INTL("Graphics/UI/Controls help/help_f1"))
+    addImageForScreen(1, 22, 126, _INTL("Graphics/UI/Controls help/help_f8"))
+    addLabelForScreen(1, 67, 42, 176, _INTL("Opens the Key Bindings window, where you can choose which keyboard keys to use for each control."))
+    addLabelForScreen(1, 67, 122, 176, _INTL("Take a screenshot. It is put in the same folder as the save file."))
 
-    addImageForScreen(2, 16, 158, _INTL("Graphics/UI/Controls help/help_arrows"))
-    addLabelForScreen(2, 134, 100, 352, _INTL("Use the Arrow keys to move the main character.\n\nYou can also use the Arrow keys to select entries and navigate menus."))
+    addImageForScreen(2, 8, 79, _INTL("Graphics/UI/Controls help/help_arrows"))
+    addLabelForScreen(2, 67, 50, 176, _INTL("Use the Arrow keys to move the main character.\n\nYou can also use the Arrow keys to select entries and navigate menus."))
 
-    addImageForScreen(3, 16, 90, _INTL("Graphics/UI/Controls help/help_usekey"))
-    addImageForScreen(3, 16, 236, _INTL("Graphics/UI/Controls help/help_backkey"))
-    addLabelForScreen(3, 134, 68, 352, _INTL("Used to confirm a choice, interact with people and things, and move through text. (Default: C)"))
-    addLabelForScreen(3, 134, 196, 352, _INTL("Used to exit, cancel a choice, and cancel a mode. While moving around, hold to move at a different speed. (Default: X)"))
+    addImageForScreen(3, 8, 45, _INTL("Graphics/UI/Controls help/help_usekey"))
+    addImageForScreen(3, 8, 118, _INTL("Graphics/UI/Controls help/help_backkey"))
+    addLabelForScreen(3, 67, 34, 176, _INTL("Used to confirm a choice, interact with people and things, and move through text. (Default: C)"))
+    addLabelForScreen(3, 67, 98, 176, _INTL("Used to exit, cancel a choice, and cancel a mode. While moving around, hold to move at a different speed. (Default: X)"))
 
-    addImageForScreen(4, 16, 90, _INTL("Graphics/UI/Controls help/help_actionkey"))
-    addImageForScreen(4, 16, 236, _INTL("Graphics/UI/Controls help/help_specialkey"))
-    addLabelForScreen(4, 134, 68, 352, _INTL("Used to open the Pause Menu. Also has various functions depending on context. (Default: Z)"))
-    addLabelForScreen(4, 134, 196, 352, _INTL("Press to open the Ready Menu, where registered items and available field moves can be used. (Default: D)"))
+    addImageForScreen(4, 8, 45, _INTL("Graphics/UI/Controls help/help_actionkey"))
+    addImageForScreen(4, 8, 118, _INTL("Graphics/UI/Controls help/help_specialkey"))
+    addLabelForScreen(4, 67, 34, 176, _INTL("Used to open the Pause Menu. Also has various functions depending on context. (Default: Z)"))
+    addLabelForScreen(4, 67, 98, 176, _INTL("Press to open the Ready Menu, where registered items and available field moves can be used. (Default: D)"))
 
     set_up_screen(@current_screen)
     Graphics.transition

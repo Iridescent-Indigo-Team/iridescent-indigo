@@ -135,17 +135,17 @@ class Battle::Scene::Animation::ThrowBait < Battle::Scene::Animation
     delay = ball.totalDuration + 3
     2.times do
       battler.setSE(delay, "player jump")
-      battler.moveDelta(delay, 3, 0, -16)
-      battler.moveDelta(delay + 4, 3, 0, 16)
+      battler.moveDelta(delay, 3, 0, -8)
+      battler.moveDelta(delay + 4, 3, 0, 8)
       delay = battler.totalDuration + 1
     end
     # Show Pokémon eating the bait
     delay = battler.totalDuration + 3
     2.times do
       battler.moveAngle(delay, 7, 5)
-      battler.moveDelta(delay, 7, 0, 6)
+      battler.moveDelta(delay, 7, 0, 3)
       battler.moveAngle(delay + 7, 7, 0)
-      battler.moveDelta(delay + 7, 7, 0, -6)
+      battler.moveDelta(delay + 7, 7, 0, -3)
       delay = battler.totalDuration
     end
   end
@@ -206,7 +206,7 @@ class Battle::Scene::Animation::ThrowRock < Battle::Scene::Animation
       anger.moveZoom(delay, 3, 130)
       anger.moveZoom(delay + 3, 3, 100)
       anger.setVisible(delay + 6, false)
-      anger.setDelta(delay + 6, 96, -16)
+      anger.setDelta(delay + 6, 48, -8)
       delay = anger.totalDuration + 3
     end
   end

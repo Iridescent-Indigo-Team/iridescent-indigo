@@ -407,7 +407,7 @@ class PokemonPartyPanel < Sprite
     if @pokemon.able?
       w = @pokemon.hp * HP_BAR_WIDTH / @pokemon.totalhp.to_f
       w = 1 if w < 1
-      w = ((w / 2).round) * 2   # Round to the nearest 2 pixels
+      w = w.round
       hpzone = 0
       hpzone = 1 if @pokemon.hp <= (@pokemon.totalhp / 2).floor
       hpzone = 2 if @pokemon.hp <= (@pokemon.totalhp / 4).floor

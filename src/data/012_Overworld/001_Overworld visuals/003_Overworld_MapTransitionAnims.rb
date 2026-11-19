@@ -8,8 +8,8 @@ def pbCaveEntranceEx(exiting)
   # Define values used for the animation
   duration = 0.4
   totalBands = 15
-  bandheight = ((Graphics.height / 2.0) - 10) / totalBands
-  bandwidth  = ((Graphics.width / 2.0) - 12) / totalBands
+  bandheight = ((Graphics.height / 2.0) - 5) / totalBands
+  bandwidth  = ((Graphics.width / 2.0) - 6) / totalBands
   start_gray = (exiting) ? 0 : 255
   end_gray = (exiting) ? 255 : 0
   # Create initial array of band colors (black if exiting, white if entering)

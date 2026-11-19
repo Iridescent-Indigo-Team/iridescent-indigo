@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #===============================================================================
-# halve_script_coords.rb [--dry-run] [--odd] FILE_OR_DIR...
+# halve_script_coords.rb [--dry-run] [--odd] [--only=NAMES] FILE_OR_DIR...
 #-------------------------------------------------------------------------------
 # Migration aid: halves hard-coded pixel values in Essentials-style Ruby
 # scripts, so code written for the 512x384 Essentials screen fits the
@@ -25,7 +25,9 @@
 # and factors of 4 or more in * are halved, so "Graphics.width / 2" stays.
 #
 # --dry-run prints what would change; --odd lists odd values (which can't be
-# halved exactly) so they can be checked by hand.
+# halved exactly) so they can be checked by hand. --only=name1,name2 applies
+# just the call rules for those method names (useful to re-run one rule on
+# already converted code without halving anything twice).
 # Needs Ruby 3.3+ (prism).
 #===============================================================================
 require "prism"
@@ -48,7 +50,18 @@ class CoordHalver < Prism::Visitor
     "pbDrawOutlineText"  => [1, 2, 3, 4],
     "getFormattedText"   => [1, 2, 3, 4, 6],
     "getLineBrokenText"  => [2],
-    "pbBottomLeftLines"  => [2]
+    "pbBottomLeftLines"  => [2],
+    "pbAddSprite"        => [1, 2],
+    "setXY"              => [1, 2],      # PictureEx: (delay, x, y)
+    "setDelta"           => [1, 2],
+    "moveXY"             => [2, 3],      # PictureEx: (delay, duration, x, y)
+    "moveDelta"          => [2, 3],
+    "moveCurve"          => [2, 3, 4, 5, 6, 7],
+    "setSrc"             => [1, 2],
+    "setSrcSize"         => [1, 2],
+    "addLabelForScreen"  => [1, 2, 3],
+    "addImageForScreen"  => [1, 2],
+    "drawSpot"           => [2, 3]
   }.freeze
   # Constructors: class name => argument indices.
   NEW_ARGS = {
@@ -64,15 +77,17 @@ class CoordHalver < Prism::Visitor
   COORD_NAME = /\A@?(x|y|ox|oy|w|h|xpos|ypos|x_pos|y_pos|xpos\d|ypos\d|width|height|left|top|
                  [a-z_]*_(x|y|xpos|ypos|width|height|offset|spacing|gap)|
                  (offset|spacing|gap)(_[a-z]+)?|(start|end|base|text|icon|bar|box)(x|y))\z/ix
-  CONST_NAME = /(\A|_)(X|Y|WIDTH|HEIGHT|OFFSET|SPACING|GAP|MARGIN|PADDING|LINE_HEIGHT)(_|\z)|POS\z|._(LEFT|TOP)\z/
-  CONST_SKIP = /FONT|SUBPIXELS|COLOR|SPEED|TIME|FRAME|COUNT|MAX|ZOOM/
+  CONST_NAME = /(\A|_)(X|Y|WIDTH|HEIGHT|OFFSET|SPACING|GAP|MARGIN|PADDING|LINE_HEIGHT)(_|\z)|POS\z/
+  CONST_SKIP = /FONT|SUBPIXELS|COLOR|SPEED|TIME|FRAME|COUNT|MAX|ZOOM|NUM|TOTAL|DURATION|ORIGIN/
   TEXTPOS_VAR = /textpos|textpositions|txtpos/i
   IMAGEPOS_VAR = /imagepos|imgpos|imagepositions/i
 
   attr_reader :edits, :odd
 
-  def initialize(source)
+  # only: list of method names; when set, only those call rules are applied.
+  def initialize(source, only = nil)
     super()
+    @only = only
     @source = source
     @edits = {}   # start offset => [end offset, text]
     @odd = []
@@ -141,6 +156,10 @@ class CoordHalver < Prism::Visitor
     node = node.body.body.last while node.is_a?(Prism::ParenthesesNode) && node.body.is_a?(Prism::StatementsNode)
     return true if node.is_a?(Prism::ConstantReadNode) || node.is_a?(Prism::ConstantPathNode)
     return true if node.is_a?(Prism::CallNode) && %i[width height].include?(node.name)
+    # An expression built from a size (such as "Graphics.width / 32") is too.
+    if node.is_a?(Prism::CallNode) && %i[/ * + -].include?(node.name)
+      return pixel_size?(node.receiver) || (node.arguments&.arguments || []).any? { |a| pixel_size?(a) }
+    end
     return false
   end
 
@@ -196,6 +215,10 @@ class CoordHalver < Prism::Visitor
   def visit_call_node(node)
     name = node.name.to_s
     recv = node.receiver
+    if @only
+      scale_args(node.arguments, CALL_ARGS[name]) if @only.include?(name) && CALL_ARGS.key?(name)
+      return super
+    end
     if name == "new" && recv.is_a?(Prism::ConstantReadNode)
       cname = recv.name.to_s
       if NEW_ARGS.key?(cname)
@@ -230,6 +253,7 @@ class CoordHalver < Prism::Visitor
 
   # recv.x += 4
   def visit_call_operator_write_node(node)
+    return super if @only
     if ATTRS.include?(node.read_name.to_s.delete_suffix("=")) && additive?(node)
       scale(node.value)
     end
@@ -237,16 +261,19 @@ class CoordHalver < Prism::Visitor
   end
 
   def visit_local_variable_write_node(node)
+    return super if @only
     var_write(node.name.to_s, node.value)
     super
   end
 
   def visit_instance_variable_write_node(node)
+    return super if @only
     var_write(node.name.to_s, node.value)
     super
   end
 
   def visit_local_variable_operator_write_node(node)
+    return super if @only
     if node.name.to_s =~ COORD_NAME && additive?(node)
       scale(node.value)
     end
@@ -274,6 +301,7 @@ class CoordHalver < Prism::Visitor
   end
 
   def visit_constant_write_node(node)
+    return super if @only
     name = node.name.to_s
     if name =~ CONST_NAME && name !~ CONST_SKIP
       value = node.value
@@ -299,6 +327,8 @@ end
 if $PROGRAM_NAME == __FILE__
   dry = ARGV.delete("--dry-run")
   show_odd = ARGV.delete("--odd")
+  only_arg = ARGV.find { |a| a.start_with?("--only=") }
+  only = only_arg && ARGV.delete(only_arg).split("=", 2)[1].split(",")
   if ARGV.empty?
     warn("Usage: ruby #{File.basename(__FILE__)} [--dry-run] [--odd] FILE_OR_DIR...")
     exit 2
@@ -312,7 +342,7 @@ if $PROGRAM_NAME == __FILE__
       warn("#{file}: parse error, skipped")
       next
     end
-    halver = CoordHalver.new(source)
+    halver = CoordHalver.new(source, only)
     parsed.value.accept(halver)
     next if halver.edits.empty?
     total += halver.edits.size

@@ -60,9 +60,9 @@ class PokemonTrade_Scene
     ballimage = sprintf("Graphics/Battle animations/ball_%s", @pokemon.poke_ball)
     ballopenimage = sprintf("Graphics/Battle animations/ball_%s_open", @pokemon.poke_ball)
     # Starting position of ball
-    pictureBall.setXY(0, Graphics.width / 2, 48)
+    pictureBall.setXY(0, Graphics.width / 2, 24)
     pictureBall.setName(0, ballimage)
-    pictureBall.setSrcSize(0, 32, 64)
+    pictureBall.setSrcSize(0, 16, 32)
     pictureBall.setOrigin(0, PictureOrigin::CENTER)
     pictureBall.setVisible(0, true)
     # Starting position of sprite
@@ -75,18 +75,18 @@ class PokemonTrade_Scene
     delay = picturePoke.totalDuration
     picturePoke.setSE(delay, "Battle recall")
     pictureBall.setName(delay, ballopenimage)
-    pictureBall.setSrcSize(delay, 32, 64)
+    pictureBall.setSrcSize(delay, 16, 32)
     # Move sprite to ball
     picturePoke.moveZoom(delay, 8, 0)
-    picturePoke.moveXY(delay, 8, Graphics.width / 2, 48)
+    picturePoke.moveXY(delay, 8, Graphics.width / 2, 24)
     picturePoke.setSE(delay + 5, "Battle jump to ball")
     picturePoke.setVisible(delay + 8, false)
     delay = picturePoke.totalDuration + 1
     pictureBall.setName(delay, ballimage)
-    pictureBall.setSrcSize(delay, 32, 64)
+    pictureBall.setSrcSize(delay, 16, 32)
     # Make Poké Ball go off the top of the screen
     delay = picturePoke.totalDuration + 10
-    pictureBall.moveXY(delay, 6, Graphics.width / 2, -32)
+    pictureBall.moveXY(delay, 6, Graphics.width / 2, -16)
     # Play animation
     pbRunPictures(
       [picturePoke, pictureBall],
@@ -102,9 +102,9 @@ class PokemonTrade_Scene
     ballimage = sprintf("Graphics/Battle animations/ball_%s", @pokemon2.poke_ball)
     ballopenimage = sprintf("Graphics/Battle animations/ball_%s_open", @pokemon2.poke_ball)
     # Starting position of ball
-    pictureBall.setXY(0, Graphics.width / 2, -32)
+    pictureBall.setXY(0, Graphics.width / 2, -16)
     pictureBall.setName(0, ballimage)
-    pictureBall.setSrcSize(0, 32, 64)
+    pictureBall.setSrcSize(0, 16, 32)
     pictureBall.setOrigin(0, PictureOrigin::CENTER)
     pictureBall.setVisible(0, true)
     # Starting position of sprite
@@ -122,7 +122,7 @@ class PokemonTrade_Scene
       if i > 0
         pictureBall.setZoomXY(delay, 100 + (5 * (5 - i)), 100 - (5 * (5 - i)))   # Squish
         pictureBall.moveZoom(delay, 2, 100)                      # Unsquish
-        pictureBall.moveXY(delay, t, Graphics.width / 2, y - (100 / d))
+        pictureBall.moveXY(delay, t, Graphics.width / 2, y - (50 / d))
       end
       pictureBall.moveXY(delay + t, t, Graphics.width / 2, y)
       pictureBall.setSE(delay + (2 * t), "Battle ball drop")
@@ -133,7 +133,7 @@ class PokemonTrade_Scene
     delay = pictureBall.totalDuration + 15
     pictureBall.setSE(delay, "Battle recall")
     pictureBall.setName(delay, ballopenimage)
-    pictureBall.setSrcSize(delay, 32, 64)
+    pictureBall.setSrcSize(delay, 16, 32)
     pictureBall.setVisible(delay + 5, false)
     # Pokémon appears and enlarges
     picturePoke.setVisible(delay, true)

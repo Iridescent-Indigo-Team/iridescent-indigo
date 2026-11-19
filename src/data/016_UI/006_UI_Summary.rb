@@ -472,7 +472,7 @@ class PokemonSummary_Scene
     # Draw Exp bar
     if @pokemon.level < GameData::GrowthRate.max_level
       w = @pokemon.exp_fraction * 64
-      w = ((w / 2).round) * 2
+      w = w.round
       pbDrawImagePositions(overlay,
                            [["Graphics/UI/Summary/overlay_exp", 181, 186, 0, 0, w, 3]])
     end
@@ -678,7 +678,7 @@ class PokemonSummary_Scene
     if @pokemon.hp > 0
       w = @pokemon.hp * 48 / @pokemon.totalhp.to_f
       w = 1 if w < 1
-      w = ((w / 2).round) * 2
+      w = w.round
       hpzone = 0
       hpzone = 1 if @pokemon.hp <= (@pokemon.totalhp / 2).floor
       hpzone = 2 if @pokemon.hp <= (@pokemon.totalhp / 4).floor

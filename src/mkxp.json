@@ -38,7 +38,7 @@
       "l": "(unused)",
       "r": "(unused)"
     },
-    "midiSoundFont": "soundfont.sf2",
+    "midiSoundFont": "Audio/soundfont.sf2",
     "subImageFix": true,
     "vsync": true,
     "syncToRefreshrate": true,

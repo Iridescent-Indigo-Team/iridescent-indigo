@@ -149,7 +149,7 @@ class Battle::Scene::CommandMenu < Battle::Scene::MenuBase
         [], self.x + Graphics.width - 120, self.y, 120, Graphics.height - self.y, viewport
       )
       @cmdWindow.columns       = 2
-      @cmdWindow.columnSpacing = 4
+      @cmdWindow.columnSpacing = 2
       @cmdWindow.ignore_input  = true
       addSprite("cmdWindow", @cmdWindow)
     end
@@ -294,7 +294,7 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
         [], self.x, self.y, 160, Graphics.height - self.y, viewport
       )
       @cmdWindow.columns       = 2
-      @cmdWindow.columnSpacing = 4
+      @cmdWindow.columnSpacing = 2
       @cmdWindow.ignore_input  = true
       pbSetNarrowFont(@cmdWindow.contents)
       addSprite("cmdWindow", @cmdWindow)
@@ -356,7 +356,7 @@ class Battle::Scene::FightMenu < Battle::Scene::MenuBase
         #       The pixel is at coordinates 10,34 in the button box. If you
         #       change the graphic, you may want to change the below line of
         #       code to ensure the font is an appropriate color.
-        moveNameBase = button.bitmap.get_pixel(10, button.src_rect.y + 34)
+        moveNameBase = button.bitmap.get_pixel(5, button.src_rect.y + 17)
       end
       textPos.push([moves[i].name, x, y, :center, moveNameBase, TEXT_SHADOW_COLOR])
     end
@@ -481,13 +481,13 @@ class Battle::Scene::TargetMenu < Battle::Scene::MenuBase
       button.src_rect.width  = (@smallButtons) ? CMD_BUTTON_WIDTH_SMALL : @buttonBitmap.width / 2
       button.src_rect.height = BUTTON_HEIGHT
       if @smallButtons
-        button.x    = self.x + 85 - [0, 82, 166][numButtons - 1]
+        button.x    = self.x + 85 - [0, 41, 83][numButtons - 1]
       else
-        button.x    = self.x + 69 - [0, 116][numButtons - 1]
+        button.x    = self.x + 69 - [0, 58][numButtons - 1]
       end
-      button.x += (button.src_rect.width - 4) * inc
+      button.x += (button.src_rect.width - 2) * inc
       button.y = self.y + 3
-      button.y += (BUTTON_HEIGHT - 4) * ((i + 1) % 2)
+      button.y += (BUTTON_HEIGHT - 2) * ((i + 1) % 2)
       addSprite("button_#{i}", button)
       next button
     end

@@ -2,7 +2,7 @@
 # Edits the terrain tags of tiles in tilesets.
 #===============================================================================
 class PokemonTilesetScene
-  TILE_SIZE            = 32   # in pixels
+  TILE_SIZE            = 16   # in pixels
   TILES_PER_ROW        = 8
   TILESET_WIDTH        = TILES_PER_ROW * TILE_SIZE
   TILES_PER_AUTOTILE   = 48

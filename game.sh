@@ -76,6 +76,8 @@ ARGS+=(${ENGINE_ARGS[@]+"${ENGINE_ARGS[@]}"})
 cd "$BUILD"
 if [[ $COMPILE -eq 1 ]]; then
   export POKESSENTIALS_COMPILE_ONLY=1
+  # No sound is needed, and a headless machine may have no audio device.
+  export ALSOFT_DRIVERS="${ALSOFT_DRIVERS:-null}"
   rm -f "$BUILD/.compile_ok"
   # Never wait forever: a message box can't be answered in a headless run.
   TIMEOUT=()

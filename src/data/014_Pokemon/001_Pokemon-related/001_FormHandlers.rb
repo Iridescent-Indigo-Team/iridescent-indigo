@@ -38,15 +38,20 @@ end
 #===============================================================================
 #
 #===============================================================================
+# Spot coordinates are in Spinda's original 80x80 sprite. Battle sprites are
+# padded to 96x96 (centred horizontally, aligned to the bottom), so the spots
+# are shifted by that padding.
 def drawSpot(bitmap, spotpattern, x, y, red, green, blue)
   height = spotpattern.length
   width  = spotpattern[0].length
+  pad_x = [(bitmap.width - 80) / 2, 0].max
+  pad_y = [bitmap.height - 80, 0].max
   height.times do |yy|
     spot = spotpattern[yy]
     width.times do |xx|
       next if spot[xx] != 1
-      xOrg = (x + xx) * 2
-      yOrg = (y + yy) * 2
+      xOrg = x + xx + pad_x
+      yOrg = y + yy + pad_y
       color = bitmap.get_pixel(xOrg, yOrg)
       r = color.red + red
       g = color.green + green
@@ -55,15 +60,11 @@ def drawSpot(bitmap, spotpattern, x, y, red, green, blue)
       color.green = [[g, 0].max, 255].min
       color.blue  = [[b, 0].max, 255].min
       bitmap.set_pixel(xOrg, yOrg, color)
-      bitmap.set_pixel(xOrg + 1, yOrg, color)
-      bitmap.set_pixel(xOrg, yOrg + 1, color)
-      bitmap.set_pixel(xOrg + 1, yOrg + 1, color)
     end
   end
 end
 
 def pbSpindaSpots(pkmn, bitmap)
-  # NOTE: These spots are doubled in size when drawing them.
   spot1 = [
     [0, 0, 1, 1, 1, 1, 0, 0],
     [0, 1, 1, 1, 1, 1, 1, 0],
@@ -124,8 +125,8 @@ def pbSpindaSpots(pkmn, bitmap)
   c = (id >> 8) & 15
   b = (id >> 4) & 15
   a = (id) & 15
-  # NOTE: The coordinates below (b + 33, a + 25 and so on) are doubled when
-  #       drawing the spot.
+  # NOTE: The coordinates below (b + 33, a + 25 and so on) are pixels in the
+  #       original 80x80 front sprite.
   if pkmn.shiny?
     drawSpot(bitmap, spot1, b + 33, a + 25, -75, -10, -150)
     drawSpot(bitmap, spot2, d + 21, c + 24, -75, -10, -150)

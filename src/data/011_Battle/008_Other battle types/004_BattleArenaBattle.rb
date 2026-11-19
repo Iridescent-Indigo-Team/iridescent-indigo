@@ -247,11 +247,11 @@ class Battle::Scene
     pbDrawTextPositions(window.contents, textpos)
     images = []
     phase.times do |i|
-      y = [48, 80, 112][i]
+      y = [24, 40, 56][i]
       x = (ratings1[i] == ratings2[i]) ? 32 : ((ratings1[i] > ratings2[i]) ? 0 : 16)
-      images.push(["Graphics/UI/Battle/judgment", 64 - 16, y, x, 0, 32, 32])
+      images.push(["Graphics/UI/Battle/judgment", 32 - 8, y, x, 0, 16, 16])
       x = (ratings1[i] == ratings2[i]) ? 32 : ((ratings1[i] < ratings2[i]) ? 0 : 16)
-      images.push(["Graphics/UI/Battle/judgment", 224 - 16, y, x, 0, 32, 32])
+      images.push(["Graphics/UI/Battle/judgment", 112 - 8, y, x, 0, 16, 16])
     end
     pbDrawImagePositions(window.contents, images)
     window.contents.fill_rect(8, 75, 128, 2, Color.new(80, 80, 80))

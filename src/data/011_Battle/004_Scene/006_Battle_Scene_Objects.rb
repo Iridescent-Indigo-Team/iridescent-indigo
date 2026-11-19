@@ -58,21 +58,21 @@ class Battle::Scene::PokemonDataBox < Sprite
     @databoxBitmap = AnimatedBitmap.new(bgFilename)
     # Determine the co-ordinates of the data box and the left edge padding width
     if onPlayerSide
-      @spriteX = Graphics.width - 244
-      @spriteY = Graphics.height - 192
-      @spriteBaseX = 34
+      @spriteX = Graphics.width - 122
+      @spriteY = Graphics.height - 96
+      @spriteBaseX = 17
     else
-      @spriteX = -16
-      @spriteY = 36
-      @spriteBaseX = 16
+      @spriteX = -8
+      @spriteY = 18
+      @spriteBaseX = 8
     end
     case sideSize
     when 2
-      @spriteX += [-12,  12,  0,  0][@battler.index]
-      @spriteY += [-20, -34, 34, 20][@battler.index]
+      @spriteX += [-6,   6,  0,  0][@battler.index]
+      @spriteY += [-10, -17, 17, 10][@battler.index]
     when 3
-      @spriteX += [-12,  12, -6,  6,  0,  0][@battler.index]
-      @spriteY += [-42, -46,  4,  0, 50, 46][@battler.index]
+      @spriteX += [-6,   6, -3,  3,  0,  0][@battler.index]
+      @spriteY += [-21, -23,  2,  0, 25, 23][@battler.index]
     end
   end
 
@@ -222,7 +222,7 @@ class Battle::Scene::PokemonDataBox < Sprite
   def draw_name
     nameWidth = self.bitmap.text_size(@battler.name).width
     nameOffset = 0
-    nameOffset = nameWidth - 116 if nameWidth > 116
+    nameOffset = nameWidth - 58 if nameWidth > 58
     pbDrawTextPositions(self.bitmap, [[@battler.name, @spriteBaseX + 4 - nameOffset, 6, :left,
                                        NAME_BASE_COLOR, NAME_SHADOW_COLOR]]
     )
@@ -232,7 +232,7 @@ class Battle::Scene::PokemonDataBox < Sprite
     # "Lv" graphic
     pbDrawImagePositions(self.bitmap, [[_INTL("Graphics/UI/Battle/overlay_lv"), @spriteBaseX + 70, 8]])
     # Level number
-    pbDrawNumber(@battler.level, self.bitmap, @spriteBaseX + 162, 16)
+    pbDrawNumber(@battler.level, self.bitmap, @spriteBaseX + 81, 8)
   end
 
   def draw_gender
@@ -273,7 +273,7 @@ class Battle::Scene::PokemonDataBox < Sprite
       elsif @battler.isSpecies?(:KYOGRE)
         filename = "Graphics/UI/Battle/icon_primal_Kyogre"
       end
-      primalX = (@battler.opposes?) ? 208 : -28   # Foe's/player's
+      primalX = (@battler.opposes?) ? 104 : -14   # Foe's/player's
       pbDrawImagePositions(self.bitmap, [[filename, @spriteBaseX + primalX, 2]]) if filename
     end
   end
@@ -303,18 +303,16 @@ class Battle::Scene::PokemonDataBox < Sprite
     return if !@battler.pokemon
     # Show HP numbers
     if @show_hp_numbers
-      pbDrawNumber(self.hp, @hpNumbers.bitmap, 54, 2, :right)
-      pbDrawNumber(-1, @hpNumbers.bitmap, 54, 2)   # / char
-      pbDrawNumber(@battler.totalhp, @hpNumbers.bitmap, 70, 2)
+      pbDrawNumber(self.hp, @hpNumbers.bitmap, 27, 1, :right)
+      pbDrawNumber(-1, @hpNumbers.bitmap, 27, 1)   # / char
+      pbDrawNumber(@battler.totalhp, @hpNumbers.bitmap, 35, 1)
     end
     # Resize HP bar
     w = 0
     if self.hp > 0
       w = @hpBarBitmap.width.to_f * self.hp / @battler.totalhp
       w = 1 if w < 1
-      # NOTE: The line below snaps the bar's width to the nearest 2 pixels, to
-      #       fit in with the rest of the graphics which are doubled in size.
-      w = ((w / 2.0).round) * 2
+      w = w.round
     end
     @hpBar.src_rect.width = w
     hpColor = 0                                      # Green bar
@@ -326,9 +324,7 @@ class Battle::Scene::PokemonDataBox < Sprite
   def refresh_exp
     return if !@show_exp_bar
     w = exp_fraction * @expBarBitmap.width
-    # NOTE: The line below snaps the bar's width to the nearest 2 pixels, to
-    #       fit in with the rest of the graphics which are doubled in size.
-    w = ((w / 2).round) * 2
+    w = w.round
     @expBar.src_rect.width = w
   end
 
@@ -618,8 +614,8 @@ class Battle::Scene::BattlerSprite < RPG::Sprite
       bob_delta = System.uptime % COMMAND_BOBBING_DURATION   # 0-COMMAND_BOBBING_DURATION
       bob_frame = (4 * bob_delta / COMMAND_BOBBING_DURATION).floor
       case bob_frame
-      when 1 then @spriteYExtra = 2
-      when 3 then @spriteYExtra = -2
+      when 1 then @spriteYExtra = 1
+      when 3 then @spriteYExtra = -1
       end
     end
     self.x       = self.x

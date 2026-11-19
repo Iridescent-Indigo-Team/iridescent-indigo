@@ -72,7 +72,7 @@ def pbPokeRadarHighlightGrass(showmessage = true)
       x = [$game_player.x + i + 1, $game_player.x - i - 1][r % 2]
       y = $game_player.y - i + ((r - 1 - ((i + 1) * 2)) / 2).floor
     else
-      x = $game_player.x - i + r - ((i + 1) * 3)
+      x = $game_player.x - i + r - ((i + 1) * 6)
       y = $game_player.y + i + 1
     end
     # Add tile to grasses array if it's a valid grass tile

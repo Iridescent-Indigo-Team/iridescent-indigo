@@ -42,8 +42,11 @@ if [[ "${SKIP_DEPS:-0}" != 1 ]]; then
 fi
 
 # Step 2: mkxp-z itself, against the dependencies built above.
+# vars.sh reads variables that may be unset, so relax "set -u" for it.
+set +u
 # shellcheck disable=SC1091
 source "$MKXPZ_SRC/linux/vars.sh"
+set -u
 if [[ ! -f "$MESON_BUILD/build.ninja" ]]; then
   meson setup "$MESON_BUILD" "$MKXPZ_SRC" --buildtype=release
 fi

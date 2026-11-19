@@ -175,8 +175,8 @@ module Transitions
   #
   #=============================================================================
   class BreakingGlass < Transition_Base
-    NUM_SPRITES_X = 4
-    NUM_SPRITES_Y = 3
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -216,8 +216,8 @@ module Transitions
   #
   #=============================================================================
   class ShrinkingPieces < Transition_Base
-    NUM_SPRITES_X = 4
-    NUM_SPRITES_Y = 3
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -251,9 +251,9 @@ module Transitions
   #
   #=============================================================================
   class SplashTransition < Transition_Base
-    NUM_SPRITES_X = 8
-    NUM_SPRITES_Y = 6
-    SPEED         = 40
+    NUM_SPRITES_X = 16
+    NUM_SPRITES_Y = 12
+    SPEED         = 20
 
     def initialize_sprites
       @overworld_sprite.visible = false
@@ -458,8 +458,8 @@ module Transitions
   class SnakeSquares < Transition_Base
     DURATION      = 1.25
     TIME_TO_ZOOM  = 0.2   # In seconds
-    NUM_SPRITES_X = 4
-    NUM_SPRITES_Y = 3   # Must be an even number
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6   # Must be an even number
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
 
     def initialize_bitmaps
@@ -526,8 +526,8 @@ module Transitions
   class DiagonalBubble < Transition_Base
     DURATION      = 1.25
     TIME_TO_ZOOM  = 0.2   # In seconds
-    NUM_SPRITES_X = 4
-    NUM_SPRITES_Y = 3
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
 
     def initialize_bitmaps
@@ -594,10 +594,10 @@ module Transitions
   #=============================================================================
   class RisingSplash < Transition_Base
     DURATION             = 1.25
-    MAX_WAVE_AMPLITUDE   = 6
+    MAX_WAVE_AMPLITUDE   = 3
     WAVE_SPACING         = Math::PI / 10   # Density of overworld waves (20 strips per wave)
     WAVE_SPEED           = Math::PI * 10   # Speed of overworld waves going up the screen
-    MAX_BUBBLE_AMPLITUDE = -32
+    MAX_BUBBLE_AMPLITUDE = -16
     BUBBLES_WAVE_SPEED   = Math::PI * 2
 
     def initialize_bitmaps
@@ -611,10 +611,10 @@ module Transitions
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
       rect = Rect.new(0, 0, Graphics.width, 1)
-      (Graphics.height / 2).times do |i|
-        @sprites[i] = new_sprite(0, i * 2, @overworld_bitmap)
+      Graphics.height.times do |i|
+        @sprites[i] = new_sprite(0, i, @overworld_bitmap)
         @sprites[i].z = 2
-        rect.y = i * 2
+        rect.y = i
         @sprites[i].src_rect = rect
       end
       # Bubbles
@@ -843,8 +843,8 @@ module Transitions
   #=============================================================================
   class ThreeBallDown < Transition_Base
     DURATION      = 2.0
-    NUM_SPRITES_X = 4
-    NUM_SPRITES_Y = 3
+    NUM_SPRITES_X = 8
+    NUM_SPRITES_Y = 6
     TOTAL_SPRITES = NUM_SPRITES_X * NUM_SPRITES_Y
     BALL_START_Y_OFFSETS = [200, 0, 50]
 
@@ -876,7 +876,7 @@ module Transitions
       # Falling balls
       @ball_sprites = []
       3.times do |i|
-        @ball_sprites[i] = new_sprite((Graphics.width / 2) + ((i - 1) * 160),
+        @ball_sprites[i] = new_sprite((Graphics.width / 2) + ((i - 1) * 80),
                                       -@ball_bitmap.height - BALL_START_Y_OFFSETS[i],
                                       @ball_bitmap, @ball_bitmap.width / 2, @ball_bitmap.height / 2)
         @ball_sprites[i].z = 2
@@ -1009,7 +1009,7 @@ module Transitions
   class WavyThreeBallUp < Transition_Base
     DURATION           = 1.1
     BALL_OFFSETS       = [1.5, 3.25, 2.5]
-    MAX_WAVE_AMPLITUDE = 24
+    MAX_WAVE_AMPLITUDE = 12
     WAVE_SPACING       = Math::PI / 24   # Density of overworld waves (48 strips per wave)
     WAVE_SPEED         = Math::PI * 4   # Speed of overworld waves going up the screen
 
@@ -1023,8 +1023,8 @@ module Transitions
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
       rect = Rect.new(0, 0, Graphics.width, 2)
-      (Graphics.height / 4).times do |i|
-        @sprites[i] = new_sprite(0, i * 4, @overworld_bitmap)
+      (Graphics.height / 2).times do |i|
+        @sprites[i] = new_sprite(0, i * 2, @overworld_bitmap)
         @sprites[i].z = 2
         rect.y = i * 2
         @sprites[i].src_rect = rect
@@ -1090,7 +1090,7 @@ module Transitions
   #=============================================================================
   class WavySpinBall < Transition_Base
     DURATION           = 1.0
-    MAX_WAVE_AMPLITUDE = 24
+    MAX_WAVE_AMPLITUDE = 12
     WAVE_SPACING       = Math::PI / 24   # Density of overworld waves (48 strips per wave)
     WAVE_SPEED         = Math::PI * 4   # Speed of overworld waves going up the screen
 
@@ -1104,8 +1104,8 @@ module Transitions
       @overworld_sprite.visible = false
       # Overworld strips (they go all wavy)
       rect = Rect.new(0, 0, Graphics.width, 2)
-      (Graphics.height / 4).times do |i|
-        @sprites[i] = new_sprite(0, i * 4, @overworld_bitmap)
+      (Graphics.height / 2).times do |i|
+        @sprites[i] = new_sprite(0, i * 2, @overworld_bitmap)
         @sprites[i].z = 2
         rect.y = i * 2
         @sprites[i].src_rect = rect
@@ -1244,7 +1244,7 @@ module Transitions
   class VSTrainer < Transition_Base
     DURATION           = 4.0
     BAR_Y              = 40
-    BAR_SCROLL_SPEED   = 1800
+    BAR_SCROLL_SPEED   = 900
     BAR_MASK           = [8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7]
     FOE_SPRITE_X_LIMIT = 192   # Slides to here before jumping to final position
     FOE_SPRITE_X       = 214   # Final position of foe sprite
@@ -1419,9 +1419,9 @@ module Transitions
       else
         start_x = Graphics.width * (1 - (timer / @bar_appear_end))
         color = Color.new(0, 0, 0, 0)   # Transparent
-        (@sprites[0].height / 2).times do |i|
-          x = start_x - (BAR_MASK[i % BAR_MASK.length] * 2)
-          @bar_mask_sprite.bitmap.fill_rect(x, BAR_Y + (i * 2), @bar_mask_sprite.width - x, 1, color)
+        @sprites[0].height.times do |i|
+          x = start_x - (BAR_MASK[(i / 2) % BAR_MASK.length] * 2)
+          @bar_mask_sprite.bitmap.fill_rect(x, BAR_Y + i, @bar_mask_sprite.width - x, 1, color)
         end
       end
     end

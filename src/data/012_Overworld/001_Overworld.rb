@@ -442,9 +442,9 @@ module PBMoveRoute
   LEFT                  = 2
   RIGHT                 = 3
   UP                    = 4
-  LOWER_LEFT            = 3
+  LOWER_LEFT            = 5
   LOWER_RIGHT           = 6
-  UPPER_LEFT            = 4
+  UPPER_LEFT            = 7
   UPPER_RIGHT           = 8
   RANDOM                = 9
   TOWARD_PLAYER         = 10
@@ -454,7 +454,7 @@ module PBMoveRoute
   JUMP                  = 14   # xoffset, yoffset
   WAIT                  = 15   # frames
   TURN_DOWN             = 16
-  TURN_LEFT             = 9
+  TURN_LEFT             = 17
   TURN_RIGHT            = 18
   TURN_UP               = 19
   TURN_RIGHT90          = 20

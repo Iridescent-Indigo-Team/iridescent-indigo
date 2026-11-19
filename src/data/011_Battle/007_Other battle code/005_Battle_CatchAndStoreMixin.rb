@@ -228,7 +228,7 @@ module Battle::CatchAndStoreMixin
     # Definite capture, no need to perform randomness checks
     return 4 if x >= 255 || Battle::PokeBallEffects.isUnconditional?(ball, self, battler)
     # Second half of the shakes calculation
-    y = (32768 / ((255.0 / x)**0.1875)).floor
+    y = (65_536 / ((255.0 / x)**0.1875)).floor
     # Critical capture check
     if Settings::ENABLE_CRITICAL_CAPTURES
       dex_modifier = 0
