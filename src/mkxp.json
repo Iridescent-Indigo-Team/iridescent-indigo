@@ -1,0 +1,48 @@
+{
+    // Pokessentials mkxp-z configuration.
+    // This file is copied into build/ by `make`. Paths are relative to the
+    // game folder (build/) and use forward slashes so the same file works on
+    // desktop and Android.
+
+    "rgssVersion": 1,
+    "windowTitle": "Pokessentials",
+
+    // Run the script loader instead of Data/Scripts.rxdata.
+    "customScript": "loader.rb",
+
+    // The game renders at 256x192 (see Settings::SCREEN_WIDTH/HEIGHT).
+    // The window starts at 3x that size.
+    "defScreenW": 768,
+    "defScreenH": 576,
+
+    // Pixel-perfect scaling: only whole multiples of 256x192, nearest
+    // neighbour, with black bars filling the rest of the window.
+    "smoothScaling": 0,
+    "smoothScalingDown": 0,
+    "bitmapSmoothScaling": 0,
+    "bitmapSmoothScalingDown": 0,
+    "fixedAspectRatio": true,
+    "integerScalingActive": true,
+    "integerScalingLastMile": false,
+
+    // Case-insensitive asset lookups (needed on Linux and Android).
+    "pathCache": true,
+
+    "bindingNames": {
+      "c": "Use",
+      "b": "Back",
+      "a": "Action",
+      "x": "JumpUp",
+      "y": "JumpDown",
+      "z": "Special",
+      "l": "(unused)",
+      "r": "(unused)"
+    },
+    "midiSoundFont": "soundfont.sf2",
+    "subImageFix": true,
+    "vsync": true,
+    "syncToRefreshrate": true,
+
+    "dataPathOrg": "pokessentials",
+    "dataPathApp": "pokessentials"
+}

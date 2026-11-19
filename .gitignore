@@ -28,3 +28,8 @@ dist-ssr
 
 # Builds
 dist/
+# Game build output (make / game.sh)
+build/
+
+# Record of Essentials assets copied by tools/scripts/install_assets.sh
+src/assets/.installed_manifest
