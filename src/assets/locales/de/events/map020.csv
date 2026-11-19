@@ -1,0 +1,8 @@
+﻿key,context,english,translation,status,notes
+ev002.p1.c005,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Text",Which floor do you want?,,,
+ev002.p1.c006.choice1,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",5F,,,
+ev002.p1.c006.choice2,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",4F,,,
+ev002.p1.c006.choice3,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",3F,,,
+ev002.p1.c017.choice1,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",2F,,,
+ev002.p1.c017.choice2,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",1F,,,
+ev002.p1.c017.choice3,"Map 20 (Cedolan Dept. Elevator), event 2, page 1: Show Choices option",Cancel,,,

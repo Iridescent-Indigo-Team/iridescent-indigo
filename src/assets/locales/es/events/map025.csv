@@ -1,0 +1,13 @@
+﻿key,context,english,translation,status,notes
+ev003.p1.c003,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text",There is a questionnaire.\nWould you like to fill it out?,,,
+ev003.p1.c004.choice1,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Choices option",Yes,,,
+ev003.p1.c004.choice2,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Choices option",No,,,
+ev003.p1.c006,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text",\PN filled in the questionnaire.,,,
+ev003.p1.c011,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text","\bOh, hello!\nYou filled in the questionnaire?",,,
+ev003.p1.c012,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text",\bThat means you must know about the Mystery Gift.,,,
+ev003.p1.c013,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text","\bFrom now on, you should be receiving Mystery Gifts!",,,
+ev003.p1.c016,"Map 25 (Lerucean Town Mart), event 3, page 1: Show Text","\w[signskin]Once you save your game, you can access the Mystery Gift.",,,
+ev004.p2.c001,"Map 25 (Lerucean Town Mart), event 4, page 2: Show Text",\bHello. You must be \PN.,,,
+ev004.p2.c002,"Map 25 (Lerucean Town Mart), event 4, page 2: Show Text",\bI've received a gift for you.\nHere you go!,,,
+ev004.p2.c007,"Map 25 (Lerucean Town Mart), event 4, page 2: Show Text",\bI haven't received any other gifts for you.,,,
+ev004.p2.c010,"Map 25 (Lerucean Town Mart), event 4, page 2: Show Text",\bWe look forward to your next visit.,,,

@@ -1,0 +1,6 @@
+﻿key,context,english,translation,status,notes
+ev001.p1.c000,"Map 75 (Tiall Region), event 1, page 1: Show Text",\bThis is the Tiall Region.,,,
+ev001.p1.c001,"Map 75 (Tiall Region), event 1, page 1: Show Text",\bDo you want to go back to the Essen Region?,,,
+ev001.p1.c002.choice1,"Map 75 (Tiall Region), event 1, page 1: Show Choices option",Yes,,,
+ev001.p1.c002.choice2,"Map 75 (Tiall Region), event 1, page 1: Show Choices option",No,,,
+ev001.p1.c011,"Map 75 (Tiall Region), event 1, page 1: Show Text",\bLet me know if you do.,,,

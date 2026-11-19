@@ -1,0 +1,6 @@
+﻿key,context,english,translation,status,notes
+ev004.p1.c000,"Map 69 (Route 8), event 4, page 1: Show Text",\bI'm just swimming around in this 5x5 area.,,,
+ev004.p1.c001,"Map 69 (Route 8), event 4, page 1: Show Text","\bMy custom autonomous movement calls a method which makes me move randomly, but not further than 2 tiles horizontally or vertically from my initial position.",,,
+ev004.p1.c004,"Map 69 (Route 8), event 4, page 1: Show Text",\bOther scripts that could be called here are move_random_UD(range) for up/down only and move_random_LR(range) for left/right only.,,,
+ev005.p1.c002,"Map 69 (Route 8), event 5, page 1: Show Text","\rI'm a swimming trainer, just like any other trainer!",,,
+ev005.p2.c000,"Map 69 (Route 8), event 5, page 2: Show Text",\rJust make sure swimming trainers don't try to swim over land to get to the player when they spot them.,,,

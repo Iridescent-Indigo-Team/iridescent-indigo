@@ -1,0 +1,3 @@
+﻿key,context,english,translation,status,notes
+ev003.p1.c000,"Map 2 (Lappet Town), event 3, page 1: Show Text","\bThese doors are examples of good, solid door events.",,,
+ev003.p1.c002,"Map 2 (Lappet Town), event 3, page 1: Show Text","\bWhen the player goes outside, be sure to transfer the player onto the door rather than next to it.  It looks better that way.",,,

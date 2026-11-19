@@ -1,0 +1,5 @@
+﻿key,context,english,translation,status,notes
+ev003.p1.c000,"Map 34 (Ice Cave), event 3, page 1: Show Text","On the right is an example of a cracked ice tile.  You can walk over it once, but step on it again and you'll fall through to another map.",,,
+ev004.p1.c000,"Map 34 (Ice Cave), event 4, page 1: Show Text",Ice you slide around on has terrain tag 12.,,,
+ev011.p1.c000,"Map 34 (Ice Cave), event 11, page 1: Show Text",This is another boulder-down-hole puzzle.,,,
+ev011.p1.c001,"Map 34 (Ice Cave), event 11, page 1: Show Text","It is identical to the regular kind, except the boulder downstairs is just a regular immovable event rather than a boulder itself.",,,
