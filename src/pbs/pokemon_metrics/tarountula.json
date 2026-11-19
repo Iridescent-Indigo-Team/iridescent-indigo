@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TAROUNTULA",
-  "back_sprite": {"x": 0, "y": 31},
-  "front_sprite": {"x": -1, "y": 26},
+  "back_sprite": {"x": 0, "y": 13},
+  "front_sprite": {"x": -1, "y": 27},
   "shadow_x": 0,
   "shadow_size": 1
 }

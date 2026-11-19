@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ALCREMIE",
-  "back_sprite": {"x": -1, "y": 34},
+  "back_sprite": {"x": -1, "y": 9},
   "front_sprite": {"x": 0, "y": 25},
   "shadow_x": 0,
   "shadow_size": 1

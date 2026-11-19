@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ARROKUDA",
-  "back_sprite": {"x": 0, "y": 41},
-  "front_sprite": {"x": 0, "y": 19},
+  "back_sprite": {"x": 0, "y": 9},
+  "front_sprite": {"x": 0, "y": 35},
+  "front_sprite_altitude": 16,
   "shadow_x": 0,
   "shadow_size": 2
 }

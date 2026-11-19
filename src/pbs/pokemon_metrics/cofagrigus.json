@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "COFAGRIGUS",
-  "back_sprite": {"x": 8, "y": 32},
-  "front_sprite": {"x": -8, "y": 2},
+  "back_sprite": {"x": 8, "y": -8},
+  "front_sprite": {"x": -8, "y": 14},
+  "front_sprite_altitude": 12,
   "shadow_x": 0,
   "shadow_size": 2
 }

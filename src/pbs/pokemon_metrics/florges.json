@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "FLORGES",
-  "back_sprite": {"x": 2, "y": 32},
-  "front_sprite": {"x": 5, "y": 14},
+  "back_sprite": {"x": 2, "y": 0},
+  "front_sprite": {"x": 5, "y": 16},
   "shadow_x": 0,
   "shadow_size": 2
 }

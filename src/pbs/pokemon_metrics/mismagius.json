@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MISMAGIUS",
-  "back_sprite": {"x": 0, "y": 29},
-  "front_sprite": {"x": -2, "y": 10},
+  "back_sprite": {"x": 0, "y": -7},
+  "front_sprite": {"x": -2, "y": 20},
+  "front_sprite_altitude": 10,
   "shadow_x": 0,
   "shadow_size": 2
 }

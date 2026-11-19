@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TOGETIC",
-  "back_sprite": {"x": 0, "y": 35},
-  "front_sprite": {"x": 0, "y": 12},
+  "back_sprite": {"x": 0, "y": -4},
+  "front_sprite": {"x": 0, "y": 26},
+  "front_sprite_altitude": 14,
   "shadow_x": 0,
   "shadow_size": 1
 }

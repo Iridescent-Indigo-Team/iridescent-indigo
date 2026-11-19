@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "DIANCIE",
   "form": 1,
-  "back_sprite": {"x": 7, "y": 32},
-  "front_sprite": {"x": -1, "y": 3},
+  "back_sprite": {"x": 7, "y": -6},
+  "front_sprite": {"x": -1, "y": 4},
   "shadow_x": 0,
   "shadow_size": 3
 }

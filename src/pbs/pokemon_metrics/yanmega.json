@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "YANMEGA",
-  "back_sprite": {"x": 0, "y": 38},
-  "front_sprite": {"x": 0, "y": 4},
+  "back_sprite": {"x": 0, "y": -7},
+  "front_sprite": {"x": 0, "y": 21},
+  "front_sprite_altitude": 17,
   "shadow_x": 0,
   "shadow_size": 2
 }

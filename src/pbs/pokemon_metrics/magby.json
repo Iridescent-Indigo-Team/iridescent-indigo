@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MAGBY",
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": -2, "y": 31},
+  "back_sprite": {"x": 0, "y": 17},
+  "front_sprite": {"x": -2, "y": 33},
   "shadow_x": 0,
   "shadow_size": 1
 }

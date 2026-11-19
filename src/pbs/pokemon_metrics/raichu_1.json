@@ -2,8 +2,9 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "RAICHU",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": 0, "y": 12},
+  "back_sprite": {"x": 0, "y": -2},
+  "front_sprite": {"x": 0, "y": 18},
+  "front_sprite_altitude": 6,
   "shadow_x": 0,
   "shadow_size": 2
 }

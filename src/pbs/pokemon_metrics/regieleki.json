@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "REGIELEKI",
-  "back_sprite": {"x": 3, "y": 32},
-  "front_sprite": {"x": 4, "y": 10},
+  "back_sprite": {"x": 3, "y": 1},
+  "front_sprite": {"x": 4, "y": 15},
   "shadow_x": 0,
   "shadow_size": 2
 }

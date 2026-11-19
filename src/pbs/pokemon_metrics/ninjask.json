@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "NINJASK",
-  "back_sprite": {"x": 0, "y": 35},
-  "front_sprite": {"x": 0, "y": 12},
+  "back_sprite": {"x": 0, "y": 0},
+  "front_sprite": {"x": 0, "y": 29},
+  "front_sprite_altitude": 17,
   "shadow_x": 0,
   "shadow_size": 2
 }

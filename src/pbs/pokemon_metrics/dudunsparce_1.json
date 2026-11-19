@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "DUDUNSPARCE",
   "form": 1,
-  "back_sprite": {"x": -3, "y": 39},
-  "front_sprite": {"x": -4, "y": 29},
+  "back_sprite": {"x": -3, "y": 16},
+  "front_sprite": {"x": -4, "y": 25},
   "shadow_x": 0,
   "shadow_size": 3
 }

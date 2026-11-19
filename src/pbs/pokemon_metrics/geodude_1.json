@@ -2,8 +2,9 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GEODUDE",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 39},
-  "front_sprite": {"x": 0, "y": 20},
+  "back_sprite": {"x": 0, "y": 6},
+  "front_sprite": {"x": 0, "y": 35},
+  "front_sprite_altitude": 15,
   "shadow_x": 0,
   "shadow_size": 2
 }

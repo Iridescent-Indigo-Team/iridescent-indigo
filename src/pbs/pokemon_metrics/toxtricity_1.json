@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TOXTRICITY",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 29},
-  "front_sprite": {"x": 4, "y": 10},
+  "back_sprite": {"x": 0, "y": -5},
+  "front_sprite": {"x": 4, "y": 11},
   "shadow_x": 0,
   "shadow_size": 2
 }

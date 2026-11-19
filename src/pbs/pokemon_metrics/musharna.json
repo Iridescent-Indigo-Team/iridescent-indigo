@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MUSHARNA",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": -12, "y": 6},
+  "back_sprite": {"x": 0, "y": -9},
+  "front_sprite": {"x": -12, "y": 22},
+  "front_sprite_altitude": 16,
   "shadow_x": 0,
   "shadow_size": 2
 }

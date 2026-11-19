@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MOLTRES",
-  "back_sprite": {"x": 11, "y": 33},
-  "front_sprite": {"x": 9, "y": 8},
+  "back_sprite": {"x": 11, "y": -4},
+  "front_sprite": {"x": 9, "y": 17},
+  "front_sprite_altitude": 9,
   "shadow_x": 0,
   "shadow_size": 3
 }

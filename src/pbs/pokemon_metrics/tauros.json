@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TAUROS",
-  "back_sprite": {"x": -3, "y": 36},
-  "front_sprite": {"x": -12, "y": 24},
+  "back_sprite": {"x": -3, "y": 7},
+  "front_sprite": {"x": -12, "y": 23},
   "shadow_x": 0,
   "shadow_size": 2
 }

@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CRYOGONAL",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": 0, "y": 10},
+  "back_sprite": {"x": 0, "y": -5},
+  "front_sprite": {"x": 0, "y": 17},
+  "front_sprite_altitude": 7,
   "shadow_x": 0,
   "shadow_size": 2
 }

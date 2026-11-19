@@ -3,7 +3,7 @@
   "species": "ARCEUS",
   "form": 9,
   "back_sprite": {"x": -4, "y": 0},
-  "front_sprite": {"x": 2, "y": 6},
+  "front_sprite": {"x": 2, "y": 8},
   "shadow_x": 0,
   "shadow_size": 3
 }

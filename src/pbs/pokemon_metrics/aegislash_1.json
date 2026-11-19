@@ -2,8 +2,9 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "AEGISLASH",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 38},
-  "front_sprite": {"x": 5, "y": 9},
+  "back_sprite": {"x": 0, "y": -10},
+  "front_sprite": {"x": 5, "y": 16},
+  "front_sprite_altitude": 7,
   "shadow_x": 0,
   "shadow_size": 2
 }

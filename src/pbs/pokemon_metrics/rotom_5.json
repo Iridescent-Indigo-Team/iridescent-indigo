@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ROTOM",
   "form": 5,
-  "back_sprite": {"x": 0, "y": 37},
+  "back_sprite": {"x": 0, "y": 10},
   "front_sprite": {"x": 0, "y": 19},
   "shadow_x": 0,
   "shadow_size": 2

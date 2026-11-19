@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TYPHLOSION",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 29},
-  "front_sprite": {"x": -2, "y": 15},
+  "back_sprite": {"x": 0, "y": 0},
+  "front_sprite": {"x": -2, "y": 17},
   "shadow_x": 0,
   "shadow_size": 2
 }

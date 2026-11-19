@@ -17,6 +17,16 @@ class Battle::Scene
   # Centre middle of the foe's side base graphic
   FOE_BASE_X           = Settings::SCREEN_WIDTH - 64
   FOE_BASE_Y           = (Settings::SCREEN_HEIGHT * 3 / 4) - 56
+  # Where a battler's feet stand (its "ground line"), relative to the base
+  # position above. Used when sprite metrics are worked out automatically
+  # (Debug > PBS editors > Auto-set pokemon_metrics.txts, and
+  # tools/scripts/ground_battlers.py).
+  # The player's ground line is above the message box (which starts at
+  # SCREEN_HEIGHT - 48), so full-body back sprites show their feet. The foe's
+  # ground line matches where the faint animation crops the sprite.
+  # tools/scripts/ground_battlers.py has a copy of these values.
+  PLAYER_FEET_OFFSET   = -12
+  FOE_FEET_OFFSET      = 4
   # Default focal points of user and target in animations - do not change!
   # Is the centre middle of each sprite
   FOCUSUSER_X          = 64

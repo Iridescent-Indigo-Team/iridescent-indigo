@@ -2,8 +2,9 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TERAPAGOS",
   "form": 1,
-  "back_sprite": {"x": -6, "y": 61},
-  "front_sprite": {"x": 1, "y": 13},
+  "back_sprite": {"x": -6, "y": -10},
+  "front_sprite": {"x": 1, "y": 24},
+  "front_sprite_altitude": 11,
   "shadow_x": 0,
   "shadow_size": 3
 }

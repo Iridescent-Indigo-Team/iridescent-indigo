@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SKELEDIRGE",
-  "back_sprite": {"x": 0, "y": 29},
-  "front_sprite": {"x": -10, "y": 25},
+  "back_sprite": {"x": 0, "y": 4},
+  "front_sprite": {"x": -10, "y": 24},
   "shadow_x": 0,
   "shadow_size": 3
 }

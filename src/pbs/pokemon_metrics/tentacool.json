@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TENTACOOL",
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": 0, "y": 8},
+  "back_sprite": {"x": 0, "y": -8},
+  "front_sprite": {"x": 0, "y": 25},
+  "front_sprite_altitude": 17,
   "shadow_x": 0,
   "shadow_size": 1
 }

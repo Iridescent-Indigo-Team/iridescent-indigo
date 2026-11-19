@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GRAPPLOCT",
-  "back_sprite": {"x": 1, "y": 32},
-  "front_sprite": {"x": -7, "y": 18},
+  "back_sprite": {"x": 1, "y": 2},
+  "front_sprite": {"x": -7, "y": 20},
   "shadow_x": 0,
   "shadow_size": 2
 }

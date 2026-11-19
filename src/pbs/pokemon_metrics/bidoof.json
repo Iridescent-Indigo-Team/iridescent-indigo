@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BIDOOF",
-  "back_sprite": {"x": 3, "y": 37},
+  "back_sprite": {"x": 3, "y": 17},
   "front_sprite": {"x": -3, "y": 32},
   "shadow_x": 0,
   "shadow_size": 1

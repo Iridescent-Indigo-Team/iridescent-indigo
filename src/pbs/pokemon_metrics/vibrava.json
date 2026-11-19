@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "VIBRAVA",
-  "back_sprite": {"x": 0, "y": 33},
+  "back_sprite": {"x": 0, "y": 15},
   "front_sprite": {"x": 7, "y": 29},
   "shadow_x": 0,
   "shadow_size": 2

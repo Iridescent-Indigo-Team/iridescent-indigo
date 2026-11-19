@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BOLDORE",
-  "back_sprite": {"x": -2, "y": 35},
-  "front_sprite": {"x": 1, "y": 32},
+  "back_sprite": {"x": -2, "y": 14},
+  "front_sprite": {"x": 1, "y": 30},
   "shadow_x": 0,
   "shadow_size": 2
 }

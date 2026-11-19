@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "PALAFIN",
   "form": 1,
-  "back_sprite": {"x": -3, "y": 35},
-  "front_sprite": {"x": 4, "y": 6},
+  "back_sprite": {"x": -3, "y": -8},
+  "front_sprite": {"x": 4, "y": 9},
   "shadow_x": 0,
   "shadow_size": 1
 }

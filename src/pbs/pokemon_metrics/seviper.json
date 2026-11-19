@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SEVIPER",
-  "back_sprite": {"x": 0, "y": 37},
-  "front_sprite": {"x": 6, "y": 22},
+  "back_sprite": {"x": 0, "y": 7},
+  "front_sprite": {"x": 6, "y": 23},
   "shadow_x": 0,
   "shadow_size": 3
 }

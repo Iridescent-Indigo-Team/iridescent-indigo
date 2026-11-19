@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CHARIZARD",
   "form": 2,
-  "back_sprite": {"x": 4, "y": 27},
+  "back_sprite": {"x": 4, "y": -5},
   "front_sprite": {"x": 1, "y": 10},
   "shadow_x": 0,
   "shadow_size": 3

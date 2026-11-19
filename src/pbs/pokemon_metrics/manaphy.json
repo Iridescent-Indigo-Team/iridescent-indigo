@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MANAPHY",
-  "back_sprite": {"x": -3, "y": 36},
-  "front_sprite": {"x": 9, "y": 24},
+  "back_sprite": {"x": -3, "y": 8},
+  "front_sprite": {"x": 9, "y": 33},
+  "front_sprite_altitude": 9,
   "shadow_x": 0,
   "shadow_size": 1
 }

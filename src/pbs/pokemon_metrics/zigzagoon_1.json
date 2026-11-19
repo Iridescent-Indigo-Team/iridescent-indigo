@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ZIGZAGOON",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 33},
-  "front_sprite": {"x": 4, "y": 30},
+  "back_sprite": {"x": 0, "y": 14},
+  "front_sprite": {"x": 4, "y": 29},
   "shadow_x": 0,
   "shadow_size": 2
 }

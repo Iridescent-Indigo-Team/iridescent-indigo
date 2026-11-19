@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SIZZLIPEDE",
-  "back_sprite": {"x": 0, "y": 39},
-  "front_sprite": {"x": -6, "y": 32},
+  "back_sprite": {"x": 0, "y": 17},
+  "front_sprite": {"x": -6, "y": 33},
   "shadow_x": 0,
   "shadow_size": 2
 }

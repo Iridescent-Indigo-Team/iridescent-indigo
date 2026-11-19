@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BELLIBOLT",
-  "back_sprite": {"x": 0, "y": 37},
-  "front_sprite": {"x": -1, "y": 25},
+  "back_sprite": {"x": 0, "y": 10},
+  "front_sprite": {"x": -1, "y": 26},
   "shadow_x": 0,
   "shadow_size": 2
 }

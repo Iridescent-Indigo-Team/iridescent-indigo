@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "FROSMOTH",
-  "back_sprite": {"x": 5, "y": 33},
-  "front_sprite": {"x": 5, "y": 7},
+  "back_sprite": {"x": 5, "y": -9},
+  "front_sprite": {"x": 5, "y": 19},
+  "front_sprite_altitude": 12,
   "shadow_x": 0,
   "shadow_size": 2
 }

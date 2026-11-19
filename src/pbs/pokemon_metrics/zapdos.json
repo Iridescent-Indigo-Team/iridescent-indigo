@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ZAPDOS",
-  "back_sprite": {"x": 0, "y": 28},
-  "front_sprite": {"x": 3, "y": 9},
+  "back_sprite": {"x": 0, "y": -11},
+  "front_sprite": {"x": 3, "y": 22},
+  "front_sprite_altitude": 13,
   "shadow_x": 0,
   "shadow_size": 2
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ROARINGMOON",
-  "back_sprite": {"x": -3, "y": 33},
-  "front_sprite": {"x": -6, "y": 12},
+  "back_sprite": {"x": -3, "y": -11},
+  "front_sprite": {"x": -6, "y": 11},
   "shadow_x": 0,
   "shadow_size": 3
 }

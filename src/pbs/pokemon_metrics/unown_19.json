@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_metrics.entry.schema.json",
+  "species": "UNOWN",
+  "form": 19,
+  "back_sprite": {"x": 0, "y": 3},
+  "front_sprite": {"x": 0, "y": 38},
+  "front_sprite_altitude": 21,
+  "shadow_x": 0,
+  "shadow_size": 2
+}

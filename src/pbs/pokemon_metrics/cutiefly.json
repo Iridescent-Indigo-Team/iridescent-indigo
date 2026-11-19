@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CUTIEFLY",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": 3, "y": 12},
+  "back_sprite": {"x": 0, "y": -4},
+  "front_sprite": {"x": 3, "y": 32},
+  "front_sprite_altitude": 20,
   "shadow_x": 0,
   "shadow_size": 1
 }
