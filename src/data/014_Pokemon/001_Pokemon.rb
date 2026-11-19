@@ -848,6 +848,24 @@ class Pokemon
     return @owner.id != trainer.id || @owner.name != trainer.name
   end
 
+  # Language tags of the language IDs in Pokemon::Owner#language.
+  LANGUAGE_TAGS = {
+    1 => "JPN", 2 => "ENG", 3 => "FRE", 4 => "ITA", 5 => "GER", 7 => "SPA",
+    8 => "KOR", 9 => "CHS", 10 => "CHT", 11 => "SPL"
+  }
+
+  # @return [Integer] the language ID of the game this Pokémon was originally
+  #   obtained in (its original trainer's language; see Settings::LANGUAGES)
+  def language
+    return @owner.language
+  end
+
+  # @return [String] the three-letter tag of this Pokémon's language ("GER"),
+  #   or "" if it has none
+  def language_tag
+    return LANGUAGE_TAGS[language] || ""
+  end
+
   # @return [Time] the time when this Pokémon was obtained
   def timeReceived
     return Time.at(@timeReceived)

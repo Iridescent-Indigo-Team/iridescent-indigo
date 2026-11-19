@@ -1,0 +1,150 @@
+{
+  "_comment": "Configuration of the CSV localization tools (tools/importer/locales). See docs/LOCALIZATION.md.",
+
+  "languages": [
+    {"code": "de", "name": "Deutsch", "owner_language": 5, "tag": "GER",
+     "plural": "one_is_1", "thousands": ".", "default_gender": "m", "genders": ["m", "f", "n"]},
+    {"code": "fr", "name": "Français", "owner_language": 3, "tag": "FRE",
+     "plural": "one_is_0_1", "thousands": " ", "default_gender": "m", "genders": ["m", "f"]},
+    {"code": "it", "name": "Italiano", "owner_language": 4, "tag": "ITA",
+     "plural": "one_is_1", "thousands": ".", "default_gender": "m", "genders": ["m", "f"]},
+    {"code": "es", "name": "Español (España)", "owner_language": 7, "tag": "SPA",
+     "plural": "one_is_1", "thousands": ".", "default_gender": "m", "genders": ["m", "f"]},
+    {"code": "es_419", "name": "Español (Latinoamérica)", "owner_language": 11, "tag": "SPL",
+     "plural": "one_is_1", "thousands": ",", "default_gender": "m", "genders": ["m", "f"]}
+  ],
+
+  "_grammar_comment": [
+    "Article tables for {n|<article>} grammar tokens. Each article maps a noun form to the text put before the noun.",
+    "A noun form is looked up most specific first. Plural nouns: gender.pl.sound, pl.sound, gender.pl, pl, then as singular. Singular: gender.sound, sound, gender, then \"\".",
+    "gender is m/f/n, number is sg or pl (only pl is written), sound is vowel or special (see sounds).",
+    "A value that ends in an apostrophe is joined to the noun without a space."
+  ],
+  "grammar": {
+    "de": {
+      "articles": {
+        "def":       {"m": "der ", "f": "die ", "n": "das ", "pl": "die "},
+        "def.acc":   {"m": "den ", "f": "die ", "n": "das ", "pl": "die "},
+        "def.dat":   {"m": "dem ", "f": "der ", "n": "dem ", "pl": "den "},
+        "def.gen":   {"m": "des ", "f": "der ", "n": "des ", "pl": "der "},
+        "indef":     {"m": "ein ", "f": "eine ", "n": "ein ", "pl": ""},
+        "indef.acc": {"m": "einen ", "f": "eine ", "n": "ein ", "pl": ""},
+        "indef.dat": {"m": "einem ", "f": "einer ", "n": "einem ", "pl": ""},
+        "indef.gen": {"m": "eines ", "f": "einer ", "n": "eines ", "pl": ""},
+        "kein":      {"m": "kein ", "f": "keine ", "n": "kein ", "pl": "keine "},
+        "kein.acc":  {"m": "keinen ", "f": "keine ", "n": "kein ", "pl": "keine "},
+        "dein":      {"m": "dein ", "f": "deine ", "n": "dein ", "pl": "deine "},
+        "dein.acc":  {"m": "deinen ", "f": "deine ", "n": "dein ", "pl": "deine "},
+        "dein.dat":  {"m": "deinem ", "f": "deiner ", "n": "deinem ", "pl": "deinen "},
+        "zu.def":    {"m": "zum ", "f": "zur ", "n": "zum ", "pl": "zu den "},
+        "in.def":    {"m": "im ", "f": "in der ", "n": "im ", "pl": "in den "},
+        "von.def":   {"m": "vom ", "f": "von der ", "n": "vom ", "pl": "von den "}
+      },
+      "sounds": {}
+    },
+    "fr": {
+      "articles": {
+        "def":     {"m": "le ", "f": "la ", "vowel": "l’", "pl": "les "},
+        "indef":   {"m": "un ", "f": "une ", "pl": "des "},
+        "de.def":  {"m": "du ", "f": "de la ", "vowel": "de l’", "pl": "des "},
+        "a.def":   {"m": "au ", "f": "à la ", "vowel": "à l’", "pl": "aux "},
+        "de":      {"": "de ", "vowel": "d’"},
+        "ce":      {"m": "ce ", "m.vowel": "cet ", "f": "cette ", "pl": "ces "},
+        "ton":     {"m": "ton ", "f": "ta ", "f.vowel": "ton ", "pl": "tes "},
+        "son":     {"m": "son ", "f": "sa ", "f.vowel": "son ", "pl": "ses "}
+      },
+      "sounds": {"vowel": "^[aeiouyàâäéèêëîïôöùûüœæh]"}
+    },
+    "it": {
+      "articles": {
+        "def":    {"m": "il ", "m.special": "lo ", "f": "la ", "vowel": "l’",
+                   "m.pl": "i ", "m.pl.vowel": "gli ", "m.pl.special": "gli ", "f.pl": "le "},
+        "indef":  {"m": "un ", "m.special": "uno ", "f": "una ", "f.vowel": "un’", "pl": ""},
+        "di.def": {"m": "del ", "m.special": "dello ", "f": "della ", "vowel": "dell’",
+                   "m.pl": "dei ", "m.pl.vowel": "degli ", "m.pl.special": "degli ", "f.pl": "delle "},
+        "a.def":  {"m": "al ", "m.special": "allo ", "f": "alla ", "vowel": "all’",
+                   "m.pl": "ai ", "m.pl.vowel": "agli ", "m.pl.special": "agli ", "f.pl": "alle "},
+        "da.def": {"m": "dal ", "m.special": "dallo ", "f": "dalla ", "vowel": "dall’",
+                   "m.pl": "dai ", "m.pl.vowel": "dagli ", "m.pl.special": "dagli ", "f.pl": "dalle "},
+        "in.def": {"m": "nel ", "m.special": "nello ", "f": "nella ", "vowel": "nell’",
+                   "m.pl": "nei ", "m.pl.vowel": "negli ", "m.pl.special": "negli ", "f.pl": "nelle "},
+        "su.def": {"m": "sul ", "m.special": "sullo ", "f": "sulla ", "vowel": "sull’",
+                   "m.pl": "sui ", "m.pl.vowel": "sugli ", "m.pl.special": "sugli ", "f.pl": "sulle "}
+      },
+      "sounds": {"vowel": "^[aeiouàèéìòóùh]", "special": "^(s[^aeiouàèéìòù]|z|gn|ps|pn|x|y|i[aeiou])"}
+    },
+    "es": {
+      "articles": {
+        "def":    {"m": "el ", "f": "la ", "f.special": "el ", "m.pl": "los ", "f.pl": "las "},
+        "indef":  {"m": "un ", "f": "una ", "f.special": "un ", "m.pl": "unos ", "f.pl": "unas "},
+        "de.def": {"m": "del ", "f": "de la ", "f.special": "del ", "m.pl": "de los ", "f.pl": "de las "},
+        "a.def":  {"m": "al ", "f": "a la ", "f.special": "al ", "m.pl": "a los ", "f.pl": "a las "},
+        "este":   {"m": "este ", "f": "esta ", "m.pl": "estos ", "f.pl": "estas "},
+        "tu":     {"": "tu ", "pl": "tus "}
+      },
+      "sounds": {}
+    },
+    "es_419": {"same_as": "es"}
+  },
+
+  "_message_comment": "The message window at 256x192: 256 wide minus the speech frame border (40) and text padding (2), 16 px lines, 2 lines per box.",
+  "message_box": {"font": "power green.ttf", "size": 16, "width": 214, "lines": 2},
+
+  "_samples_comment": "Sample text measured in place of codes whose text is only known in game (worst realistic cases).",
+  "samples": {
+    "pn": "WWWWWWW",
+    "pm": "$999,999",
+    "v": "99999",
+    "n": "WWWWWWW",
+    "tn": "WWWWWWWWWW",
+    "tp": "Fletchinder",
+    "te": "Fletchinder",
+    "placeholder": "Fletchinder"
+  },
+
+  "_fields_comment": [
+    "Text boxes with a fixed size, by CSV file and field. mode is message (getFormattedText) or chunks (drawTextEx).",
+    "Fields not listed here that are single-line names are checked against the widest English value of the same field."
+  ],
+  "fields": {
+    "abilities.description": {"font": "power green.ttf", "size": 16, "width": 141, "lines": 2, "mode": "chunks",
+                              "where": "Summary screen"},
+    "moves.description":     {"font": "power green.ttf", "size": 16, "width": 115, "lines": 5, "mode": "chunks",
+                              "where": "Summary screen move list"},
+    "ribbons.description":   {"font": "power green.ttf", "size": 16, "width": 240, "lines": 2, "mode": "chunks",
+                              "where": "Summary screen ribbons"},
+    "species.pokedex":       {"font": "power green.ttf", "size": 16, "width": 216, "lines": 4, "mode": "chunks",
+                              "where": "Pokédex entry"},
+    "species.pokedex_form":  {"font": "power green.ttf", "size": 16, "width": 216, "lines": 4, "mode": "chunks",
+                              "where": "Pokédex entry"},
+    "items.description":     {"font": "power green.ttf", "size": 16, "width": 192, "lines": 3, "mode": "chunks",
+                              "where": "Bag"}
+  },
+  "name_font": {"font": "power green.ttf", "size": 16},
+
+  "_graphics_comment": "Graphics (paths under src/assets/graphics, no extension) known to have English text drawn into them. Each language without its own version gets a warning.",
+  "graphics_with_text": [
+    "Titles/start",
+    "Titles/title",
+    "UI/Battle/cursor_command",
+    "UI/Battle/cursor_shift",
+    "UI/Battle/cursor_mega",
+    "UI/Battle/overlay_lv",
+    "UI/Battle/overlay_hp",
+    "UI/Battle/icon_statuses",
+    "UI/statuses",
+    "UI/Party/overlay_lv",
+    "UI/Party/overlay_hp_back",
+    "UI/Pokedex/bg_info",
+    "UI/Pokedex/bg_menu",
+    "UI/Summary/bg_1",
+    "UI/Summary/bg_2",
+    "UI/Summary/bg_3",
+    "UI/Summary/bg_4",
+    "UI/Summary/bg_5",
+    "UI/Naming/overlay_controls",
+    "UI/Naming/icon_mode",
+    "UI/Trainer Card/card",
+    "UI/Trainer Card/card_f"
+  ]
+}

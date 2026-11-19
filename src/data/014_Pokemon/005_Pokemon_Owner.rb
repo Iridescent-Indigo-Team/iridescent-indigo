@@ -35,10 +35,10 @@ class Pokemon
     # Returns an Owner object with a foreign ID.
     # @param name [String] owner name
     # @param gender [Integer] owner gender
-    # @param language [Integer] owner language
+    # @param language [Integer, nil] owner language (nil = the game's language)
     # @return [Owner] foreign Owner object
-    def self.new_foreign(name = "", gender = 2, language = 2)
-      return new($player.make_foreign_ID, name, gender, language)
+    def self.new_foreign(name = "", gender = 2, language = nil)
+      return new($player.make_foreign_ID, name, gender, language || pbGetLanguage)
     end
 
     # @param new_id [Integer] new owner ID

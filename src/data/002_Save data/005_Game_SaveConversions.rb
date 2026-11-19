@@ -418,3 +418,23 @@ SaveData.register_conversion(:v21_add_bump_stat) do
     end
   end
 end
+
+#===============================================================================
+# Pokessentials 1.1.0: the game's language is chosen per save. Older saves
+# keep the language their $PokemonSystem has, and the player's language ID
+# (stored in the Pokémon they obtain) now comes from it.
+#===============================================================================
+SaveData.register_conversion(:pokessentials_save_language) do
+  game_version "1.1.0"
+  display_title "Storing the game language in the save"
+  to_all do |save_data|
+    system = save_data[:pokemon_system]
+    player = save_data[:player]
+    next if !system || !player
+    index = system.language || 0
+    index = 0 if !Settings::LANGUAGES[index]
+    system.language = index
+    lang = Settings::LANGUAGES[index]
+    player.language = lang[2] if lang && lang[2].is_a?(Integer)
+  end
+end

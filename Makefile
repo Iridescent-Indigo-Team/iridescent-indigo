@@ -14,6 +14,9 @@
 #                                             instead until src/pbs exists)
 #   src/assets/data      -> build/Data/      (pixel values halved)
 #   src/assets/plugins   -> build/Plugins/
+#   src/assets/locales   -> build/Data/messages_<lang>_*.dat and
+#                           build/Graphics/Locales/<lang>/ (translations,
+#                           validated and compiled by tools/importer/locales)
 #
 # See docs/BUILDING.md for the full guide. Run `make help` for the targets.
 #===============================================================================
@@ -34,17 +37,23 @@ PBS_JSON  := $(PYTHON) -I tools/importer/pbs/pbs_json.py
 PBS_SRC   := $(SRC)/pbs
 PBS_SCHEMA := tools/importer/pbs/engine_schema.json
 FORCE     ?= 0
+LOCALES   := $(PYTHON) -I tools/importer/locales/locales.py
+# LANGS=de,fr limits the locale targets to some languages; STRICT=1 makes
+# translation warnings fail the build too.
+LANGS     ?=
+STRICT    ?= 0
+LOCALE_ARGS = $(if $(LANGS),--lang $(LANGS))
 
 .PHONY: all build scripts graphics audio fonts pbs data plugins config \
         run debug release live compile pull-pbs import-pbs validate-pbs \
-        pbs-schema test-pbs \
+        pbs-schema test-pbs locales update-locales validate-locales test-locales \
         mkxp desktop android apk \
         install-assets uninstall-assets clean clean-data distclean help
 
 all: build
 
 ## build: build the whole game folder in build/ (default)
-build: scripts graphics audio fonts pbs data plugins config
+build: scripts graphics audio fonts pbs data plugins config locales
 	@echo "Built $(BUILD)/. Run ./game.sh to play."
 
 ## scripts: copy src/data to build/Scripts
@@ -97,6 +106,26 @@ pbs-schema: scripts plugins config
 ## test-pbs: run the PBS <-> JSON converter's tests
 test-pbs:
 	@$(PYTHON) -I -m unittest discover -s tools/importer/pbs/tests -t tools/importer/pbs
+
+# Translations: one folder of CSVs per language in src/assets/locales (see
+# docs/LOCALIZATION.md). `make locales` validates them and compiles them into
+# the message files the game loads; errors stop the build, warnings don't
+# (unless STRICT=1).
+## locales: validate the translations and compile them into build/Data
+locales: data
+	@$(LOCALES) $(LOCALE_ARGS) build $(BUILD) $(if $(filter 1,$(STRICT)),--strict)
+
+## update-locales: write the current English text into every language's CSVs
+update-locales:
+	@$(LOCALES) $(LOCALE_ARGS) update
+
+## validate-locales: check the translations (VERBOSE=1 lists every warning)
+validate-locales:
+	@$(LOCALES) $(LOCALE_ARGS) validate $(if $(filter 1,$(STRICT)),--strict) $(if $(filter 1,$(VERBOSE)),--verbose)
+
+## test-locales: run the localization tools' tests
+test-locales:
+	@$(PYTHON) -I -m unittest discover -s tools/importer/locales/tests -t tools/importer/locales
 
 ## data: copy src/assets/data to build/Data, halving pixel values
 data:

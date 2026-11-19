@@ -291,7 +291,6 @@ class PokemonLoadScreen
     cmd_continue     = -1
     cmd_new_game     = -1
     cmd_options      = -1
-    cmd_language     = -1
     cmd_mystery_gift = -1
     cmd_debug        = -1
     cmd_quit         = -1
@@ -304,7 +303,6 @@ class PokemonLoadScreen
     end
     commands[cmd_new_game = commands.length]  = _INTL("New Game")
     commands[cmd_options = commands.length]   = _INTL("Options")
-    commands[cmd_language = commands.length]  = _INTL("Language") if Settings::LANGUAGES.length >= 2
     commands[cmd_debug = commands.length]     = _INTL("Debug") if $DEBUG
     commands[cmd_quit = commands.length]      = _INTL("Quit Game")
     map_id = show_continue ? @save_data[:map_factory].map.map_id : 0
@@ -321,6 +319,9 @@ class PokemonLoadScreen
         return
       when cmd_new_game
         @scene.pbEndScene
+        # A new save chooses its language (the language of an existing save is
+        # fixed; with no save, it was chosen when the game booted)
+        pbChooseLanguage if show_continue && Settings::LANGUAGES.length >= 2
         Game.start_new
         return
       when cmd_mystery_gift
@@ -331,16 +332,6 @@ class PokemonLoadScreen
           screen = PokemonOptionScreen.new(scene)
           screen.pbStartScreen(true)
         end
-      when cmd_language
-        @scene.pbEndScene
-        $PokemonSystem.language = pbChooseLanguage
-        MessageTypes.load_message_files(Settings::LANGUAGES[$PokemonSystem.language][1])
-        if show_continue
-          @save_data[:pokemon_system] = $PokemonSystem
-          File.open(SaveData::FILE_PATH, "wb") { |file| Marshal.dump(@save_data, file) }
-        end
-        $scene = pbCallTitle
-        return
       when cmd_debug
         pbFadeOutIn { pbDebugMenu(false) }
       when cmd_quit

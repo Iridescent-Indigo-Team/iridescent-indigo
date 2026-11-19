@@ -6,7 +6,7 @@
 
 module Settings
   # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
-  GAME_VERSION = "1.0.0"
+  GAME_VERSION = "1.1.0"
 
   # The generation that the battle system follows. Used throughout the battle
   # scripts, and also by some other settings which are used in and out of battle
@@ -417,14 +417,24 @@ module Settings
   # Languages
   #-----------------------------------------------------------------------------
 
-  # An array of available languages in the game. Each one is an array containing
-  # the display name of the language in-game, and that language's filename
-  # fragment. A language will use the language data files from the Data folder
-  # called messages_FRAGMENT_core.dat and messages_FRAGMENT_game.dat (if they
-  # exist).
+  # The languages the player can choose from. Each one is an array containing:
+  #   * the language's name in that language (shown in the language picker),
+  #   * the language's code: its folder in src/assets/locales and the
+  #     fragment of its message files (Data/messages_CODE_core.dat and
+  #     Data/messages_CODE_game.dat, compiled from the CSVs by `make`),
+  #   * the language ID stored in the Pokémon the player obtains (see
+  #     Pokemon::Owner#language; 1 Japanese, 2 English, 3 French, 4 Italian,
+  #     5 German, 7 Spanish (Spain), 8 Korean, 11 Spanish (Latin America)).
+  # English is the source language, so it has no message files. The player
+  # chooses a language when starting a new game; it can't be changed later.
+  # See docs/LOCALIZATION.md.
   LANGUAGES = [
-#    ["English", "english"],
-#    ["Deutsch", "deutsch"]
+    ["English",                 "en",     2],
+    ["Deutsch",                 "de",     5],
+    ["Français",                "fr",     3],
+    ["Italiano",                "it",     4],
+    ["Español (España)",        "es",     7],
+    ["Español (Latinoamérica)", "es_419", 11]
   ]
 
   #-----------------------------------------------------------------------------

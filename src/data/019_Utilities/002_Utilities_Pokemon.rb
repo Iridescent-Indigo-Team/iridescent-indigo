@@ -128,10 +128,13 @@ def pbAddToPartySilent(pkmn, level = nil, see_form = true)
   return true
 end
 
-def pbAddForeignPokemon(pkmn, level = 1, owner_name = nil, nickname = nil, owner_gender = 0, see_form = true)
+# language is the language ID of the Pokémon's original trainer (see
+# Pokemon::Owner#language); nil means the game's language.
+def pbAddForeignPokemon(pkmn, level = 1, owner_name = nil, nickname = nil, owner_gender = 0, see_form = true,
+                        language = nil)
   return false if !pkmn || $player.party_full?
   pkmn = Pokemon.new(pkmn, level) if !pkmn.is_a?(Pokemon)
-  pkmn.owner = Pokemon::Owner.new_foreign(owner_name || "", owner_gender)
+  pkmn.owner = Pokemon::Owner.new_foreign(owner_name || "", owner_gender, language)
   pkmn.name = nickname[0, Pokemon::MAX_NAME_SIZE] if !nil_or_empty?(nickname)
   pkmn.calc_stats
   if owner_name

@@ -36,7 +36,9 @@ module RPG
     end
 
     def self.load_bitmap(folder_name, filename, hue = 0)
-      path = folder_name + filename
+      # Cached by the localized path, so changing language never reuses the
+      # bitmap of another language
+      path = pbLocalizedGraphic(folder_name + filename)
       cached = true
       ret = fromCache(path)
       if !ret

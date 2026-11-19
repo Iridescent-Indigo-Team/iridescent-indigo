@@ -82,6 +82,7 @@ See `lib/mkxp-z/android/README.md`.
 | `src/pbs/` (JSON) | `build/PBS/` | validated and exported as PBS files (see [PBS_JSON.md](PBS_JSON.md)); until `src/pbs/` exists, `src/assets/pbs/` is copied instead |
 | `src/assets/data/` | `build/Data/` | pixel values **halved** (`halve_data.rb`) |
 | `src/assets/plugins/` | `build/Plugins/` | copied |
+| `src/assets/locales/` (CSV) | `build/Data/messages_<lang>_*.dat`, `build/Graphics/Locales/` | translations validated and compiled (see [LOCALIZATION.md](LOCALIZATION.md)) |
 
 Every step is incremental, so a rebuild only touches what changed.
 
@@ -130,6 +131,10 @@ throw those changes away). See [PBS_JSON.md](PBS_JSON.md).
 | `make validate-pbs` | Check the JSON in `src/pbs/` |
 | `make pbs-schema` | Dump the PBS schemas from the engine into `tools/importer/pbs/engine_schema.json` |
 | `make test-pbs` | Run the PBS ⇄ JSON converter's tests |
+| `make locales` | Validate the translation CSVs and compile them into `build/` (`LANGS=de,fr`, `STRICT=1`) |
+| `make update-locales` | Write the current English text into every language's CSVs (keeps translations) |
+| `make validate-locales` | Check the translations (`VERBOSE=1` lists every warning) |
+| `make test-locales` | Run the localization tools' tests |
 | `make clean-data` | Remove compiled data (`build/Data/*.dat`) |
 | `make clean` | Remove `build/`, keeping the built engine |
 | `make distclean` | Remove `build/` and `dist/` |

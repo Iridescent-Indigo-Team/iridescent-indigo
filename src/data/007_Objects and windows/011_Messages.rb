@@ -419,6 +419,9 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   text = message.clone
   linecount = (Graphics.height > 200) ? 3 : 2
   ### Text replacement
+  # Player gender grammar tokens in text that didn't come through _INTL
+  # (phone calls, trainer speeches...)
+  text = LocaleGrammar.format(text, []) if text.include?("{pg:")
   text.gsub!(/\\sign\[([^\]]*)\]/i) do      # \sign[something] gets turned into
     next "\\op\\cl\\ts[]\\w[" + $1 + "]"    # \op\cl\ts[]\w[something]
   end
