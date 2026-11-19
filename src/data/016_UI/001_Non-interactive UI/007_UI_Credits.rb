@@ -150,7 +150,7 @@ class Scene_Credits
           if line.length > 1
             xpos = (k == 0) ? 0 : 10 + (Graphics.width / 2)
             align = (k == 0) ? 2 : 0   # Right align : left align
-            linewidth = (Graphics.width / 2) - 20
+            linewidth = (Graphics.width / 2) - 10
           end
           credit_bitmap.font.color = TEXT_SHADOW_COLOR
           credit_bitmap.draw_text(xpos, (j * 16) + 6, linewidth, 16, text, align)

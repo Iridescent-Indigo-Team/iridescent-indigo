@@ -9,7 +9,7 @@ class Window_CharacterEntry < Window_DrawableCommand
     @viewport = viewport
     @charset = charset
     @othercharset = ""
-    super(0, 96, 480, 192)
+    super(0, 48, 240, 96)
     colors = getDefaultTextColors(self.windowskin)
     self.baseColor = colors[0]
     self.shadowColor = colors[1]
@@ -530,7 +530,7 @@ class PokemonEntryScene2
       Graphics.update
       Input.update
       pbUpdate
-      break if @sprites["toptab"].x >= 22 && @sprites["bottomtab"].y >= 414
+      break if @sprites["toptab"].x >= 11 && @sprites["bottomtab"].y >= 207
     end
     # Swap top and bottom tab around
     @sprites["toptab"].x, @sprites["bottomtab"].x = @sprites["bottomtab"].x, @sprites["toptab"].x
@@ -560,7 +560,7 @@ class PokemonEntryScene2
     cursorpos = @helper.cursor.clamp(0, @maxlength - 1)
     @maxlength.times do |i|
       @blanks[i] = (i == cursorpos) ? 1 : 0
-      @sprites["blank#{i}"].y = [78, 82][@blanks[i]]
+      @sprites["blank#{i}"].y = [39, 41][@blanks[i]]
     end
     pbDoUpdateOverlay
     pbUpdateSpriteHash(@sprites)

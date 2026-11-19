@@ -226,7 +226,7 @@ class Window_PokemonOption < Window_DrawableCommand
       xpos = optionwidth + rect.x
       self.contents.fill_rect(xpos, rect.y - 1 + (rect.height / 2), sliderlength, 2, self.baseColor)
       self.contents.fill_rect(
-        xpos + ((sliderlength - 8) * (@options[index].lowest_value + self[index]) / @options[index].highest_value),
+        xpos + ((sliderlength - 4) * (@options[index].lowest_value + self[index]) / @options[index].highest_value),
         rect.y - 4 + (rect.height / 2),
         4, 8, SEL_VALUE_BASE_COLOR
       )

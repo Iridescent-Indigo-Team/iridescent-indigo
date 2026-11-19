@@ -11,7 +11,7 @@ class MiningGameCounter < BitmapSprite
     @viewport = viewport
     @x = x
     @y = y
-    super(416, 60, @viewport)
+    super(208, 30, @viewport)
     @hits = 0
     @image = AnimatedBitmap.new("Graphics/UI/Mining/cracks")
     update
@@ -41,7 +41,7 @@ class MiningGameTile < BitmapSprite
 
   def initialize(viewport)
     @viewport = viewport
-    super(32, 32, @viewport)
+    super(16, 16, @viewport)
     r = rand(100)
     if r < 10
       @layer = 2   # 10%

@@ -156,7 +156,7 @@ module BattleAnimationEditor
       @contents.clear
       @contents.fill_rect(0, 0, @contents.width, @contents.height, Color.new(180, 180, 180))
       @contents.blt(0, 0, @arrows.bitmap, Rect.new(0, 0, arrowwidth, 48))
-      @contents.blt(arrowwidth + (NUMFRAMES * 96), 0, @arrows.bitmap,
+      @contents.blt(arrowwidth + (NUMFRAMES * 48), 0, @arrows.bitmap,
                     Rect.new(arrowwidth, 0, arrowwidth, 48))
       havebitmap = (self.animbitmap && !self.animbitmap.disposed?)
       if havebitmap
@@ -165,8 +165,8 @@ module BattleAnimationEditor
         x = arrowwidth
         NUMFRAMES.times do |i|
           j = i + @start
-          rect.set((j % 5) * 192, (j / 5) * 192, 192, 192)
-          rectdst.set(x, 0, 96, 96)
+          rect.set((j % 5) * 96, (j / 5) * 96, 96, 96)
+          rectdst.set(x, 0, 48, 48)
           @contents.stretch_blt(rectdst, self.animbitmap, rect)
           x += 48
         end
@@ -190,7 +190,7 @@ module BattleAnimationEditor
       return if !mousepos
       return if !self.animbitmap
       arrowwidth = @arrows.bitmap.width / 2
-      maxindex = (self.animbitmap.height / 192) * 5
+      maxindex = (self.animbitmap.height / 96) * 5
       left = Rect.new(0, 0, arrowwidth, 48)
       right = Rect.new(arrowwidth + (NUMFRAMES * 96), 0, arrowwidth, 48)
       left.x += self.x
@@ -364,7 +364,7 @@ module BattleAnimationEditor
     attr_reader :animbitmap # Currently selected animation bitmap
     attr_accessor :pattern  # Currently selected pattern
 
-    BORDERSIZE = 64
+    BORDERSIZE = 32
 
     def initialize(animation, viewport = nil)
       super(viewport)
@@ -737,8 +737,8 @@ module BattleAnimationEditor
         xwidth = 0
         xheight = 0
       else
-        xwidth = width - 64
-        xheight = height - 64
+        xwidth = width - 32
+        xheight = height - 32
         width = 32 if width > 64 && !usealpha
         height = 32 if height > 64 && !usealpha
       end
@@ -770,7 +770,7 @@ module BattleAnimationEditor
         bitmapY = bitmapY.round
         if sprite.mirror
           xmirror = bitmapX - sprite.src_rect.x
-          bitmapX = sprite.src_rect.x + 192 - xmirror
+          bitmapX = sprite.src_rect.x + 96 - xmirror
         end
         color = sprite.bitmap.get_pixel(bitmapX, bitmapY)
         return false if color.alpha == 0

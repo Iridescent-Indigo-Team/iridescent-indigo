@@ -90,8 +90,9 @@ class Game_Screen
     end
     if @shake_timer_start
       delta_t = now - @shake_timer_start
-      movement_per_second = @shake_power * @shake_speed * 4
-      limit = @shake_power * 2.5   # Maximum pixel displacement
+      # Halved from Essentials' values to match the 256x192 resolution.
+      movement_per_second = @shake_power * @shake_speed * 2
+      limit = @shake_power * 1.25   # Maximum pixel displacement
       phase = (delta_t * movement_per_second / limit).to_i % 4
       case phase
       when 0, 2

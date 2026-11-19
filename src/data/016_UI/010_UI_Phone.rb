@@ -7,7 +7,7 @@ class Window_PhoneList < Window_CommandPokemon
   def drawCursor(index, rect)
     if self.index == index
       selarrow = AnimatedBitmap.new("Graphics/UI/Phone/cursor")
-      pbCopyBitmap(self.contents, selarrow.bitmap, rect.x, rect.y + 2)
+      pbCopyBitmap(self.contents, selarrow.bitmap, rect.x, rect.y + 1)
     end
     return Rect.new(rect.x + 14, rect.y + 4, rect.width - 8, rect.height)
   end
@@ -37,7 +37,7 @@ class PokemonPhone_Scene
     # Background
     addBackgroundPlane(@sprites, "bg", "Phone/bg", @viewport)
     # List of contacts
-    @sprites["list"] = Window_PhoneList.newEmpty(152, 32, Graphics.width - 142, Graphics.height - 80, @viewport)
+    @sprites["list"] = Window_PhoneList.newEmpty(76, 16, Graphics.width - 71, Graphics.height - 40, @viewport)
     @sprites["list"].windowskin = nil
     # Rematch readiness icons
     if Phone.rematches_enabled

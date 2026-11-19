@@ -47,7 +47,7 @@ module BattleAnimationEditor
   def pbImportAnim(animations, canvas, animwin)
     animfiles = []
     pbRgssChdir(".") { animfiles.concat(Dir.glob("*.anm")) }
-    cmdwin = pbListWindow(animfiles, 320)
+    cmdwin = pbListWindow(animfiles, 160)
     cmdwin.opacity = 200
     cmdwin.height = 240
     cmdwin.viewport = canvas.viewport
@@ -116,7 +116,7 @@ module BattleAnimationEditor
             textdata[i][j][AnimFrame::FOCUS] = (textdata.position || 4)
             if textdata.position == 1
               textdata[i][j][AnimFrame::X] += Battle::Scene::FOCUSTARGET_X
-              textdata[i][j][AnimFrame::Y] += Battle::Scene::FOCUSTARGET_Y - 2
+              textdata[i][j][AnimFrame::Y] += Battle::Scene::FOCUSTARGET_Y - 1
             end
           end
         end

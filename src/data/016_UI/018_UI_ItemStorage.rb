@@ -41,7 +41,7 @@ class Window_PokemonItemStorage < Window_DrawableCommand
       if GameData::Item.get(item).show_quantity?
         qty     = _ISPRINTF("x{1: 2d}", @bag[index][1])
         sizeQty = self.contents.text_size(qty).width
-        xQty = rect.x + rect.width - sizeQty - 2
+        xQty = rect.x + rect.width - sizeQty - 1
         textpos.push([qty, xQty, rect.y, :left, baseColor, self.shadowColor])
       end
     end

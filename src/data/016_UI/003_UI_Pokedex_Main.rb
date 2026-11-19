@@ -40,9 +40,9 @@ class Window_Pokedex < Window_DrawableCommand
     indexNumber -= 1 if @commands[index][:shift]
     if $player.seen?(species)
       if $player.owned?(species)
-        pbCopyBitmap(self.contents, @pokeballOwn.bitmap, rect.x - 6, rect.y + 10)
+        pbCopyBitmap(self.contents, @pokeballOwn.bitmap, rect.x - 3, rect.y + 5)
       else
-        pbCopyBitmap(self.contents, @pokeballSeen.bitmap, rect.x - 6, rect.y + 10)
+        pbCopyBitmap(self.contents, @pokeballSeen.bitmap, rect.x - 3, rect.y + 5)
       end
       num_text = sprintf("%03d", indexNumber)
       name_text = @commands[index][:name]
@@ -107,39 +107,39 @@ class PokedexSearchSelectionSprite < Sprite
     @mode = value
     case @mode
     when 0     # Order
-      @xstart = 46
-      @ystart = 128
-      @xgap = 236
-      @ygap = 64
+      @xstart = 23
+      @ystart = 64
+      @xgap = 118
+      @ygap = 32
       @cols = 2
     when 1     # Name
-      @xstart = 78
-      @ystart = 114
-      @xgap = 52
-      @ygap = 52
+      @xstart = 39
+      @ystart = 57
+      @xgap = 26
+      @ygap = 26
       @cols = 7
     when 2     # Type
-      @xstart = 8
-      @ystart = 104
-      @xgap = 124
-      @ygap = 44
+      @xstart = 4
+      @ystart = 52
+      @xgap = 62
+      @ygap = 22
       @cols = 4
     when 3, 4   # Height, weight
-      @xstart = 44
-      @ystart = 110
-      @xgap = 8
-      @ygap = 112
+      @xstart = 22
+      @ystart = 55
+      @xgap = 4
+      @ygap = 56
     when 5     # Color
-      @xstart = 62
-      @ystart = 114
-      @xgap = 132
-      @ygap = 52
+      @xstart = 31
+      @ystart = 57
+      @xgap = 66
+      @ygap = 26
       @cols = 3
     when 6     # Shape
-      @xstart = 82
-      @ystart = 116
-      @xgap = 70
-      @ygap = 70
+      @xstart = 41
+      @ystart = 58
+      @xgap = 35
+      @ygap = 35
       @cols = 5
     end
   end
@@ -459,15 +459,15 @@ class PokemonPokedex_Scene
     end
     # Draw slider box
     if showslider
-      sliderheight = 268
+      sliderheight = 134
       boxheight = (sliderheight * itemlist.page_row_max / itemlist.row_max).floor
       boxheight += [(sliderheight - boxheight) / 2, sliderheight / 6].min
-      boxheight = [boxheight.floor, 40].max
+      boxheight = [boxheight.floor, 20].max
       y = 39
       y += ((sliderheight - boxheight) * itemlist.top_row / (itemlist.row_max - itemlist.page_row_max)).floor
       overlay.blt(234, y, @sliderbitmap.bitmap, Rect.new(20, 0, 20, 4))
       i = 0
-      while i * 16 < boxheight - 8 - 16
+      while i * 8 < boxheight - 4 - 8
         height = [boxheight - 4 - 8 - (i * 8), 8].min
         overlay.blt(234, y + 4 + (i * 8), @sliderbitmap.bitmap, Rect.new(20, 4, 20, height))
         i += 1
@@ -564,57 +564,57 @@ class PokemonPokedex_Scene
     textpos.push([title, 51, (mode == 6) ? 35 : 32, :left, base, shadow])
     case mode
     when 0   # Order
-      xstart = 46
-      ystart = 128
-      xgap = 236
-      ygap = 64
-      halfwidth = 92
+      xstart = 23
+      ystart = 64
+      xgap = 118
+      ygap = 32
+      halfwidth = 46
       cols = 2
       selbuttony = 0
-      selbuttonheight = 44
+      selbuttonheight = 22
     when 1   # Name
-      xstart = 78
-      ystart = 114
-      xgap = 52
-      ygap = 52
-      halfwidth = 22
+      xstart = 39
+      ystart = 57
+      xgap = 26
+      ygap = 26
+      halfwidth = 11
       cols = 7
-      selbuttony = 156
-      selbuttonheight = 44
+      selbuttony = 78
+      selbuttonheight = 22
     when 2   # Type
-      xstart = 8
-      ystart = 104
-      xgap = 124
-      ygap = 44
-      halfwidth = 62
+      xstart = 4
+      ystart = 52
+      xgap = 62
+      ygap = 22
+      halfwidth = 31
       cols = 4
-      selbuttony = 44
-      selbuttonheight = 44
+      selbuttony = 22
+      selbuttonheight = 22
     when 3, 4   # Height, weight
-      xstart = 44
-      ystart = 110
-      xgap = 304 / (cmds.length + 1)
-      ygap = 112
-      halfwidth = 60
+      xstart = 22
+      ystart = 55
+      xgap = 152 / (cmds.length + 1)
+      ygap = 56
+      halfwidth = 30
       cols = cmds.length + 1
     when 5   # Color
-      xstart = 62
-      ystart = 114
-      xgap = 132
-      ygap = 52
-      halfwidth = 62
+      xstart = 31
+      ystart = 57
+      xgap = 66
+      ygap = 26
+      halfwidth = 31
       cols = 3
-      selbuttony = 44
-      selbuttonheight = 44
+      selbuttony = 22
+      selbuttonheight = 22
     when 6   # Shape
-      xstart = 82
-      ystart = 116
-      xgap = 70
-      ygap = 70
+      xstart = 41
+      ystart = 58
+      xgap = 35
+      ygap = 35
       halfwidth = 0
       cols = 5
-      selbuttony = 88
-      selbuttonheight = 68
+      selbuttony = 44
+      selbuttonheight = 34
     end
     # Draw selected option(s) text in top bar
     case mode

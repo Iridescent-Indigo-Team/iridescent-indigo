@@ -49,12 +49,12 @@ class PokemonPokedexInfo_Scene
     @sprites["formicon"].setOffset(PictureOrigin::CENTER)
     @sprites["formicon"].x = 41
     @sprites["formicon"].y = 164
-    @sprites["uparrow"] = AnimatedSprite.new("Graphics/UI/up_arrow", 8, 28, 40, 2, @viewport)
+    @sprites["uparrow"] = AnimatedSprite.new("Graphics/UI/up_arrow", 8, 14, 20, 2, @viewport)
     @sprites["uparrow"].x = 121
     @sprites["uparrow"].y = 134
     @sprites["uparrow"].play
     @sprites["uparrow"].visible = false
-    @sprites["downarrow"] = AnimatedSprite.new("Graphics/UI/down_arrow", 8, 28, 40, 2, @viewport)
+    @sprites["downarrow"] = AnimatedSprite.new("Graphics/UI/down_arrow", 8, 14, 20, 2, @viewport)
     @sprites["downarrow"].x = 121
     @sprites["downarrow"].y = 174
     @sprites["downarrow"].play

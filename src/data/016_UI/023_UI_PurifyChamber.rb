@@ -675,7 +675,7 @@ end
 #===============================================================================
 class DirectFlowDiagram
   # Distance travelled by a dot in 1 second.
-  DOT_SPEED = 80
+  DOT_SPEED = 40
 
   def initialize(viewport = nil)
     @points = []
@@ -685,7 +685,7 @@ class DirectFlowDiagram
     @offset = 0
     @x = 153
     @y = 79
-    @distance = 96
+    @distance = 48
   end
 
   def dispose
@@ -734,7 +734,7 @@ class DirectFlowDiagram
         @points[j].y = pt[1]
         j += 1
       end
-      i += (@strength == 2) ? 16 : 32
+      i += (@strength == 2) ? 8 : 16
     end
     offset_delta = System.uptime * DOT_SPEED
     offset_delta *= 1.5 if @strength == 2
@@ -747,7 +747,7 @@ end
 #===============================================================================
 class FlowDiagram
   # Distance travelled by a dot in 1 second.
-  DOT_SPEED = 80
+  DOT_SPEED = 40
 
   def initialize(viewport = nil)
     @points = []
@@ -757,7 +757,7 @@ class FlowDiagram
     @offset = 0
     @x = 153
     @y = 79
-    @distance = 96
+    @distance = 48
   end
 
   def dispose
@@ -979,7 +979,7 @@ class PurifyChamberSetView < Sprite
         @directflow.setAngle(angle)
         @directflow.setFlowStrength(@chamber[@set].shadowAffinity)
       end
-      point = calcPoint(306, 158, 96, angle)
+      point = calcPoint(153, 79, 48, angle)
       @__sprites[i + 1].x = point[0]
       @__sprites[i + 1].y = point[1]
       @__sprites[i + 1].z = 2

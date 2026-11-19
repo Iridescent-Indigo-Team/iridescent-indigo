@@ -121,7 +121,7 @@ class Window_BattlePointShop < Window_DrawableCommand
       itemname = @adapter.getDisplayName(item)
       qty = @adapter.getDisplayPrice(item)
       sizeQty = self.contents.text_size(qty).width
-      xQty = rect.x + rect.width - sizeQty - 2 - 16
+      xQty = rect.x + rect.width - sizeQty - 1 - 8
       textpos.push([itemname, rect.x, ypos + 1, :left, self.baseColor, self.shadowColor])
       textpos.push([qty, xQty, ypos + 1, :left, self.baseColor, self.shadowColor])
     end

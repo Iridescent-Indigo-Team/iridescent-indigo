@@ -58,14 +58,14 @@ module BattleAnimationEditor
     def parentX
       return 0 if !self.parent
       return self.parent.x + self.parent.leftEdge if self.parent.is_a?(SpriteWindow)
-      return self.parent.x + 16 if self.parent.is_a?(Window)
+      return self.parent.x + 8 if self.parent.is_a?(Window)
       return self.parent.x
     end
 
     def parentY
       return 0 if !self.parent
       return self.parent.y + self.parent.topEdge if self.parent.is_a?(SpriteWindow)
-      return self.parent.y + 16 if self.parent.is_a?(Window)
+      return self.parent.y + 8 if self.parent.is_a?(Window)
       return self.parent.y
     end
 
@@ -110,7 +110,7 @@ module BattleAnimationEditor
       bitmap = self.bitmap
       bitmap.fill_rect(self.x, self.y, self.width, self.height, Color.new(0, 0, 0, 0))
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, self.x + 4, self.y, size, self.height, self.label, @disabled)
+      shadowtext(bitmap, self.x + 2, self.y, size, self.height, self.label, @disabled)
     end
   end
 
@@ -158,7 +158,7 @@ module BattleAnimationEditor
       end
       # Draw text
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, x + 4, y, size, height, self.label, @disabled)
+      shadowtext(bitmap, x + 2, y, size, height, self.label, @disabled)
       # Draw outline
       color = Color.new(120, 120, 120)
       bitmap.fill_rect(x + 1, y + 1, width - 1, 1, color)
@@ -217,9 +217,9 @@ module BattleAnimationEditor
         bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(0, 0, 0, 0))
       end
       # Draw text
-      shadowtext(bitmap, x, y, 32, 32, "X", @disabled, 1) if self.checked
+      shadowtext(bitmap, x, y, 16, 16, "X", @disabled, 1) if self.checked
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, x + 36, y, size, height, self.label, @disabled)
+      shadowtext(bitmap, x + 18, y, size, height, self.label, @disabled)
       # Draw outline
       color = Color.new(120, 120, 120)
       bitmap.fill_rect(x + 1, y + 1, width - 1, 1, color)
@@ -346,7 +346,7 @@ module BattleAnimationEditor
       while startpos > 0
         c = textscan[startpos - 1]
         fromcursor += bitmap.text_size(c).width
-        break if fromcursor > width - 4
+        break if fromcursor > width - 2
         startpos -= 1
       end
       (startpos...scanlength).each do |i|
@@ -354,7 +354,7 @@ module BattleAnimationEditor
         textwidth = bitmap.text_size(c).width
         next if c == "\n"
         # Draw text
-        shadowtext(bitmap, x, y, textwidth + 4, 32, c)
+        shadowtext(bitmap, x, y, textwidth + 2, 16, c)
         # Draw cursor if necessary
         if i == @cursor && @cursor_shown
           bitmap.fill_rect(x, y + 2, 1, 12, Color.new(120, 120, 120))

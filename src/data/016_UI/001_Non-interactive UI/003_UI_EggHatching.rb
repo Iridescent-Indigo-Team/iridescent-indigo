@@ -143,7 +143,7 @@ class PokemonEggHatch_Scene
 
   def swingEgg(speed, swingTimes = 1)
     @sprites["hatch"].visible = true
-    amplitude = 8
+    amplitude = 4
     duration = 0.05 * amplitude / speed
     targets = []
     swingTimes.times do

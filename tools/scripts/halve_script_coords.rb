@@ -79,7 +79,7 @@ class CoordHalver < Prism::Visitor
                  (offset|spacing|gap)(_[a-z]+)?|(start|end|base|text|icon|bar|box)(x|y))\z/ix
   CONST_NAME = /(\A|_)(X|Y|WIDTH|HEIGHT|OFFSET|SPACING|GAP|MARGIN|PADDING|LINE_HEIGHT)(_|\z)|POS\z/
   CONST_SKIP = /FONT|SUBPIXELS|COLOR|SPEED|TIME|FRAME|COUNT|MAX|ZOOM|NUM|TOTAL|DURATION|ORIGIN/
-  TEXTPOS_VAR = /textpos|textpositions|txtpos/i
+  TEXTPOS_VAR = /textpos|textpositions|txtpos|textstrings/i
   IMAGEPOS_VAR = /imagepos|imgpos|imagepositions/i
 
   attr_reader :edits, :odd

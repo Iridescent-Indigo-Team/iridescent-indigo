@@ -134,15 +134,15 @@ class HallOfFame_Scene
   # Don't use odd numbers!
   def xpointformula(battlernumber)
     if SINGLE_ROW_OF_POKEMON
-      ret = ((60 * (battlernumber / 2)) + 48) * (xpositionformula(battlernumber) - 1)   # -48, 48, -108, 108, -168, 168
-      return ret + (Graphics.width / 2)                   # 208, 304, 148, 364, 88, 424
+      ret = ((30 * (battlernumber / 2)) + 24) * (xpositionformula(battlernumber) - 1)   # -24, 24, -54, 54, -84, 84
+      return ret + (Graphics.width / 2)                   # 104, 152, 74, 182, 44, 212
     end
-    return 96 + (160 * xpositionformula(battlernumber))   # 256, 96, 456, 256, 456, 96
+    return 48 + (80 * xpositionformula(battlernumber))   # 128, 48, 228, 128, 228, 48
   end
 
   def ypointformula(battlernumber)
-    return 180 - (32 * (battlernumber / 2)) if SINGLE_ROW_OF_POKEMON   # 180, 180, 148, 148, 116, 116
-    return 96 + (64 * ypositionformula(battlernumber))                 # 90, 90, 90, 160, 160, 160
+    return 90 - (16 * (battlernumber / 2)) if SINGLE_ROW_OF_POKEMON   # 90, 90, 74, 74, 58, 58
+    return 48 + (32 * ypositionformula(battlernumber))                 # 48, 48, 48, 80, 80, 80
   end
 
   # Returns 0, 1 or 2 as the x position value (left, middle, right column)

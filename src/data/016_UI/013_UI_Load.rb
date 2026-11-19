@@ -139,7 +139,7 @@ class PokemonLoad_Scene
       @sprites["panel#{oldi}"].pbRefresh
       @sprites["panel#{newi}"].selected = true
       @sprites["panel#{newi}"].pbRefresh
-      while @sprites["panel#{newi}"].y > Graphics.height - 80
+      while @sprites["panel#{newi}"].y > Graphics.height - 40
         @commands.length.times do |i|
           @sprites["panel#{i}"].y -= 24
         end
@@ -149,7 +149,7 @@ class PokemonLoad_Scene
         end
         @sprites["player"].y -= 24 if @sprites["player"]
       end
-      while @sprites["panel#{newi}"].y < 32
+      while @sprites["panel#{newi}"].y < 16
         @commands.length.times do |i|
           @sprites["panel#{i}"].y += 24
         end

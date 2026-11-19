@@ -54,7 +54,7 @@ class TilePuzzleCursor < BitmapSprite
     self.tone = Tone.new(0, (@holding ? 64 : 0), (@holding ? 64 : 0), 0)
     # Cursor
     if @game != 3
-      expand = (@holding) ? 0 : 4
+      expand = (@holding) ? 0 : 2
       4.times do |i|
         self.bitmap.blt(
           x + ((i % 2) * (@tilewidth - (@cursorbitmap.width / 4))) + (expand * (((i % 2) * 2) - 1)),
@@ -67,7 +67,7 @@ class TilePuzzleCursor < BitmapSprite
     end
     # Arrows
     if @selected || @game == 3
-      expand = (@game == 3) ? 0 : 4
+      expand = (@game == 3) ? 0 : 2
       xin = [(@tilewidth - (@cursorbitmap.width / 4)) / 2, -expand,
              @tilewidth - (@cursorbitmap.width / 4) + expand, (@tilewidth - (@cursorbitmap.width / 4)) / 2]
       yin = [@tileheight - (@cursorbitmap.height / 2) + expand, (@tileheight - (@cursorbitmap.height / 2)) / 2,
@@ -96,7 +96,7 @@ class TilePuzzleScene
 
   def update
     xtop = (Graphics.width - (@tilewidth * @boardwidth)) / 2
-    ytop = ((Graphics.height - (@tileheight * @boardheight)) / 2) + (@tileheight / 2) - 32
+    ytop = ((Graphics.height - (@tileheight * @boardheight)) / 2) + (@tileheight / 2) - 16
     (@boardwidth * @boardheight).times do |i|
       pos = -1
       @tiles.length.times do |j|
@@ -112,7 +112,7 @@ class TilePuzzleScene
       thisx = xtop
       if pos >= 0
         if pos >= @boardwidth * @boardheight
-          thisx = ((xtop - (@tilewidth * (@boardwidth / 2).ceil)) / 2) - 10
+          thisx = ((xtop - (@tilewidth * (@boardwidth / 2).ceil)) / 2) - 5
           if (pos % @boardwidth) >= (@boardwidth / 2).ceil
             thisx = Graphics.width - thisx - (@tilewidth * @boardwidth)
           end

@@ -29,7 +29,7 @@ module BattleAnimationEditor
   def pbSelectAnim(canvas, animwin)
     animfiles = []
     pbRgssChdir(File.join("Graphics", "Animations")) { animfiles.concat(Dir.glob("*.png")) }
-    cmdwin = pbListWindow(animfiles, 320)
+    cmdwin = pbListWindow(animfiles, 160)
     cmdwin.opacity = 200
     cmdwin.height = 256
     bmpwin = BitmapDisplayWindow.new(160, 0, 160, 224)
@@ -120,7 +120,7 @@ module BattleAnimationEditor
       animations[i] = PBAnimation.new if !animations[i]
       commands[commands.length] = _INTL("{1} {2}", i, animations[i].name)
     end
-    cmdwin = pbListWindow(commands, 320)
+    cmdwin = pbListWindow(commands, 160)
     cmdwin.height = 208
     cmdwin.opacity = 224
     cmdwin.index = animations.selected
@@ -300,8 +300,8 @@ module BattleAnimationEditor
     okbutton = sliderwin2.addButton(_INTL("OK"))
     cancelbutton = sliderwin2.addButton(_INTL("Cancel"))
     # Set X and Y for preview sprite
-    cel[AnimFrame::X] = 320 + 96
-    cel[AnimFrame::Y] = 96
+    cel[AnimFrame::X] = 160 + 48
+    cel[AnimFrame::Y] = 48
     canvas.setSpriteBitmap(previewsprite, cel)
     pbSpriteSetAnimFrame(previewsprite, cel, nil, nil)
     previewsprite.z = previewwin.z + 1
@@ -386,7 +386,7 @@ module BattleAnimationEditor
     commands[cmdEditBG = commands.length] = _INTL("Add: Edit Background Color/Location...")
     commands[cmdNewFO = commands.length] = _INTL("Add: Set Foreground Graphic...")
     commands[cmdEditFO = commands.length] = _INTL("Add: Edit Foreground Color/Location...")
-    cmdwin = pbListWindow(commands, 480)
+    cmdwin = pbListWindow(commands, 240)
     cmdwin.x = 0
     cmdwin.y = 0
     cmdwin.width = 320
@@ -515,7 +515,7 @@ module BattleAnimationEditor
     animfiles.uniq!
     animfiles.sort! { |a, b| a.downcase <=> b.downcase }
     animfiles = [_INTL("[Play user's cry]")] + animfiles
-    cmdwin = pbListWindow(animfiles, 320)
+    cmdwin = pbListWindow(animfiles, 160)
     cmdwin.height = 240
     cmdwin.opacity = 200
     cmdwin.viewport = canvas.viewport
@@ -574,7 +574,7 @@ module BattleAnimationEditor
     end
     animfiles.uniq!
     animfiles.sort! { |a, b| a.downcase <=> b.downcase }
-    cmdwin = pbListWindow(animfiles, 320)
+    cmdwin = pbListWindow(animfiles, 160)
     cmdwin.height = 240
     cmdwin.opacity = 200
     cmdwin.viewport = canvas.viewport
@@ -1161,7 +1161,7 @@ def pbAnimationEditor
     animation = PBAnimations.new
     animation[0].graphic = ""
   end
-  Graphics.resize_screen(Settings::SCREEN_WIDTH + 288, Settings::SCREEN_HEIGHT + 288)
+  Graphics.resize_screen(Settings::SCREEN_WIDTH + 144, Settings::SCREEN_HEIGHT + 144)
   pbSetResizeFactor(1)
   BattleAnimationEditor.animationEditorMain(animation)
   Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)

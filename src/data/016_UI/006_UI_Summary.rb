@@ -150,12 +150,12 @@ class PokemonSummary_Scene
     @sprites["ribbonpresel"].preselected = true
     @sprites["ribbonsel"] = RibbonSelectionSprite.new(@viewport)
     @sprites["ribbonsel"].visible = false
-    @sprites["uparrow"] = AnimatedSprite.new("Graphics/UI/up_arrow", 8, 28, 40, 2, @viewport)
+    @sprites["uparrow"] = AnimatedSprite.new("Graphics/UI/up_arrow", 8, 14, 20, 2, @viewport)
     @sprites["uparrow"].x = 175
     @sprites["uparrow"].y = 28
     @sprites["uparrow"].play
     @sprites["uparrow"].visible = false
-    @sprites["downarrow"] = AnimatedSprite.new("Graphics/UI/down_arrow", 8, 28, 40, 2, @viewport)
+    @sprites["downarrow"] = AnimatedSprite.new("Graphics/UI/down_arrow", 8, 14, 20, 2, @viewport)
     @sprites["downarrow"].x = 175
     @sprites["downarrow"].y = 130
     @sprites["downarrow"].play
@@ -365,7 +365,7 @@ class PokemonSummary_Scene
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
     # Draw the Pokémon's markings
-    drawMarkings(overlay, 84, 292)
+    drawMarkings(overlay, 42, 146)
     # Draw page-specific information
     case page
     when 1 then drawPageOne
@@ -536,7 +536,7 @@ class PokemonSummary_Scene
     # Draw all text
     drawFormattedTextEx(overlay, 116, 43, 134, memo)
     # Draw the Pokémon's markings
-    drawMarkings(overlay, 84, 292)
+    drawMarkings(overlay, 42, 146)
   end
 
   def drawPageTwo

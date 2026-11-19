@@ -57,7 +57,7 @@ class Window_PokemonBag < Window_DrawableCommand
   def drawCursor(index, rect)
     if self.index == index
       bmp = (@sorting) ? @swaparrow.bitmap : @selarrow.bitmap
-      pbCopyBitmap(self.contents, bmp, rect.x, rect.y + 2)
+      pbCopyBitmap(self.contents, bmp, rect.x, rect.y + 1)
     end
   end
 
@@ -98,7 +98,7 @@ class Window_PokemonBag < Window_DrawableCommand
       if item_data.show_quantity? && !showing_register_icon
         qty = (@filterlist) ? thispocket[@filterlist[@pocket][index]][1] : thispocket[index][1]
         qtytext = _ISPRINTF("x{1: 3d}", qty)
-        xQty    = rect.x + rect.width - self.contents.text_size(qtytext).width - 16
+        xQty    = rect.x + rect.width - self.contents.text_size(qtytext).width - 8
         textpos.push([qtytext, xQty, rect.y + 1, :left, baseColor, shadowColor])
       end
     end
@@ -187,12 +187,12 @@ class PokemonBag_Scene
     @sprites["pocketicon"] = BitmapSprite.new(93, 16, @viewport)
     @sprites["pocketicon"].x = 0
     @sprites["pocketicon"].y = 112
-    @sprites["leftarrow"] = AnimatedSprite.new("Graphics/UI/left_arrow", 8, 40, 28, 2, @viewport)
+    @sprites["leftarrow"] = AnimatedSprite.new("Graphics/UI/left_arrow", 8, 20, 14, 2, @viewport)
     @sprites["leftarrow"].x       = -2
     @sprites["leftarrow"].y       = 38
     @sprites["leftarrow"].visible = (!@choosing || numfilledpockets > 1)
     @sprites["leftarrow"].play
-    @sprites["rightarrow"] = AnimatedSprite.new("Graphics/UI/right_arrow", 8, 40, 28, 2, @viewport)
+    @sprites["rightarrow"] = AnimatedSprite.new("Graphics/UI/right_arrow", 8, 20, 14, 2, @viewport)
     @sprites["rightarrow"].x       = 75
     @sprites["rightarrow"].y       = 38
     @sprites["rightarrow"].visible = (!@choosing || numfilledpockets > 1)
@@ -312,15 +312,15 @@ class PokemonBag_Scene
     end
     # Draw slider box
     if showslider
-      sliderheight = 174
+      sliderheight = 87
       boxheight = (sliderheight * itemlist.page_row_max / itemlist.row_max).floor
       boxheight += [(sliderheight - boxheight) / 2, sliderheight / 6].min
-      boxheight = [boxheight.floor, 38].max
+      boxheight = [boxheight.floor, 19].max
       y = 27
       y += ((sliderheight - boxheight) * itemlist.top_row / (itemlist.row_max - itemlist.page_row_max)).floor
       overlay.blt(235, y, @sliderbitmap.bitmap, Rect.new(18, 0, 18, 2))
       i = 0
-      while i * 16 < boxheight - 4 - 18
+      while i * 8 < boxheight - 2 - 9
         height = [boxheight - 2 - 9 - (i * 8), 8].min
         overlay.blt(235, y + 2 + (i * 8), @sliderbitmap.bitmap, Rect.new(18, 2, 18, height))
         i += 1
