@@ -28,6 +28,10 @@
     // Case-insensitive asset lookups (needed on Linux and Android).
     "pathCache": true,
 
+    // Report the real rendered height of text. With the default (nominal)
+    // height the bottom row of the small pixel fonts gets cut off.
+    "fontHeightReporting": 1,
+
     "bindingNames": {
       "c": "Use",
       "b": "Back",

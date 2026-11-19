@@ -1023,7 +1023,7 @@ class PokemonStorageScene
     newbox.x = start_x + 168
     timer_start = System.uptime
     loop do
-      @sprites["box"].x = lerp(start_x, start_x - 336, 0.25, timer_start, System.uptime)
+      @sprites["box"].x = lerp(start_x, start_x - 168, 0.25, timer_start, System.uptime)
       newbox.x = @sprites["box"].x + 168
       self.update
       Graphics.update
@@ -1040,7 +1040,7 @@ class PokemonStorageScene
     newbox.x = start_x - 168
     timer_start = System.uptime
     loop do
-      @sprites["box"].x = lerp(start_x, start_x + 336, 0.25, timer_start, System.uptime)
+      @sprites["box"].x = lerp(start_x, start_x + 168, 0.25, timer_start, System.uptime)
       newbox.x = @sprites["box"].x - 168
       self.update
       Graphics.update

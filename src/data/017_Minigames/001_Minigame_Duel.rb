@@ -71,10 +71,10 @@ class PokemonDuel
     @sprites["opponentwindow"].viewport = @viewport
     pbWait(0.5)
     pbWait(0.5) do |delta_t|
-      @sprites["player"].x = lerp(-160, 0, 0.4, delta_t)
-      @sprites["playerwindow"].x = lerp(-@sprites["playerwindow"].width, 160 - @sprites["playerwindow"].width, 0.4, delta_t)
-      @sprites["opponent"].x = lerp(Graphics.width + 32, Graphics.width - 128, 0.4, delta_t)
-      @sprites["opponentwindow"].x = lerp(Graphics.width, Graphics.width - 160, 0.4, delta_t)
+      @sprites["player"].x = lerp(-80, 0, 0.4, delta_t)
+      @sprites["playerwindow"].x = lerp(-@sprites["playerwindow"].width, 80 - @sprites["playerwindow"].width, 0.4, delta_t)
+      @sprites["opponent"].x = lerp(Graphics.width + 16, Graphics.width - 64, 0.4, delta_t)
+      @sprites["opponentwindow"].x = lerp(Graphics.width, Graphics.width - 80, 0.4, delta_t)
     end
     @sprites["player"].x = 0
     @sprites["playerwindow"].x = 80 - @sprites["playerwindow"].width

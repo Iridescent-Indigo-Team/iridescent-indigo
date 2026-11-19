@@ -187,7 +187,7 @@ def getFormattedTextFast(bitmap, xDst, yDst, widthDst, heightDst, text, lineheig
                        defaultfontname, bitmap.font.size, position, nil, 0])
     end
     x += width
-    if !explicitBreaksOnly && x + 2 > widthDst && lastword[1] != 0 &&
+    if !explicitBreaksOnly && x + 1 > widthDst && lastword[1] != 0 &&
        (!hadnonspace || !hadspace)
       havenl = true
       characters.insert(lastword[0], ["\n", x, (y * lineheight) + yDst, 0, lineheight,
@@ -634,7 +634,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
       charactersInternal.push([alignment, y, xStart, textchars[position], extraspace])
     end
     x += width
-    if !explicitBreaksOnly && x + 2 > widthDst && lastword[1] != 0 &&
+    if !explicitBreaksOnly && x + 1 > widthDst && lastword[1] != 0 &&
        (!hadnonspace || !hadspace)
       havenl = true
       characters.insert(lastword[0], ["\n", x, (y * lineheight) + yDst, 0, lineheight,
@@ -770,7 +770,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
     next if block[0] >= block[1]
     (block[0]...block[1]).each do |i|
       case block[2]
-      when 1 then characters[i][1] = xDst + (widthDst - block[3] - 4) + characters[i][1]
+      when 1 then characters[i][1] = xDst + (widthDst - block[3] - 2) + characters[i][1]
       when 2 then characters[i][1] = xDst + ((widthDst / 2) - (block[3] / 2)) + characters[i][1]
       else        characters[i][1] = xDst + characters[i][1]
       end

@@ -11,15 +11,16 @@ module MessageConfig
   FEMALE_TEXT_MAIN_COLOR   = Color.new(224, 8, 8)   # Used by message tag "\r"
   FEMALE_TEXT_SHADOW_COLOR = Color.new(208, 208, 200)
   FONT_NAME                = "Power Green"
-  # The Power fonts are pixel fonts; these are the sizes at which they draw
-  # crisp 1x pixels at the 256x192 resolution.
-  FONT_SIZE                = 12
+  # The Power fonts are pixel fonts; these are the sizes at which mkxp-z draws
+  # them with crisp 1x pixels at the 256x192 resolution (mkxp-z treats the
+  # size as the character cell height, like Windows does, not the em size).
+  FONT_SIZE                = 16
   FONT_Y_OFFSET            = 4
   SMALL_FONT_NAME          = "Power Green Small"
-  SMALL_FONT_SIZE          = 9
+  SMALL_FONT_SIZE          = 13
   SMALL_FONT_Y_OFFSET      = 4
   NARROW_FONT_NAME         = "Power Green Narrow"
-  NARROW_FONT_SIZE         = 12
+  NARROW_FONT_SIZE         = 16
   NARROW_FONT_Y_OFFSET     = 4
   # 0 = Pause cursor is displayed at end of text
   # 1 = Pause cursor is displayed at bottom right

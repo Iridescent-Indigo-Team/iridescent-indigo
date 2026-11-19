@@ -495,7 +495,7 @@ class PokemonEntryScene2
   def pbDoUpdateOverlay2
     overlay = @sprites["overlay"].bitmap
     overlay.clear
-    modeIcon = [[_INTL("Graphics/UI/Naming/icon_mode"), 44 + (@mode * 62), 120, @mode * 60, 0, 60, 44]]
+    modeIcon = [[_INTL("Graphics/UI/Naming/icon_mode"), 22 + (@mode * 31), 60, @mode * 30, 0, 30, 22]]
     pbDrawImagePositions(overlay, modeIcon)
   end
 
@@ -525,8 +525,8 @@ class PokemonEntryScene2
     # onto the screen
     timer_start = System.uptime
     loop do
-      @sprites["bottomtab"].y = lerp(162, 414, 0.5, timer_start, System.uptime)
-      @sprites["toptab"].x = lerp(22 - 504, 22, 0.5, timer_start, System.uptime)
+      @sprites["bottomtab"].y = lerp(81, 207, 0.5, timer_start, System.uptime)
+      @sprites["toptab"].x = lerp(11 - 252, 11, 0.5, timer_start, System.uptime)
       Graphics.update
       Input.update
       pbUpdate

@@ -136,7 +136,7 @@ class PokemonEvolutionScene
   def pbUpdateNarrowScreen(timer_start)
     return if @bgviewport.rect.y >= 40
     buffer = 40
-    @bgviewport.rect.height = Graphics.height - lerp(0, 64 + (buffer * 2), 0.7, timer_start, System.uptime).to_i
+    @bgviewport.rect.height = Graphics.height - lerp(0, 32 + (buffer * 2), 0.7, timer_start, System.uptime).to_i
     @bgviewport.rect.y = lerp(0, buffer, 0.5, timer_start + 0.2, System.uptime).to_i
     @sprites["background"].oy = @bgviewport.rect.y
   end
@@ -144,7 +144,7 @@ class PokemonEvolutionScene
   def pbUpdateExpandScreen(timer_start)
     return if @bgviewport.rect.height >= Graphics.height
     buffer = 40
-    @bgviewport.rect.height = Graphics.height - lerp(64 + (buffer * 2), 0, 0.7, timer_start, System.uptime).to_i
+    @bgviewport.rect.height = Graphics.height - lerp(32 + (buffer * 2), 0, 0.7, timer_start, System.uptime).to_i
     @bgviewport.rect.y = lerp(buffer, 0, 0.5, timer_start, System.uptime).to_i
     @sprites["background"].oy = @bgviewport.rect.y
   end
