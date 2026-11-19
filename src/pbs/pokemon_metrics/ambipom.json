@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "AMBIPOM",
-  "back_sprite": {"x": 1, "y": 24},
-  "front_sprite": {"x": 7, "y": 15},
+  "back_sprite": {"x": 1, "y": 1},
+  "front_sprite": {"x": 7, "y": 17},
   "shadow_x": 0,
   "shadow_size": 1
 }

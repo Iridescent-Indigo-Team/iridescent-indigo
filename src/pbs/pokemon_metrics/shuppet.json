@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SHUPPET",
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": 0, "y": 18},
+  "back_sprite": {"x": 0, "y": 2},
+  "front_sprite": {"x": 0, "y": 33},
+  "front_sprite_altitude": 15,
   "shadow_x": 0,
   "shadow_size": 2
 }

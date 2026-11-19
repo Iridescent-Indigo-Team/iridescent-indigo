@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "DUNSPARCE",
-  "back_sprite": {"x": 0, "y": 40},
+  "back_sprite": {"x": 0, "y": 22},
   "front_sprite": {"x": 1, "y": 32},
   "shadow_x": 0,
   "shadow_size": 2

@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "CARNIVINE",
-  "back_sprite": {"x": 5, "y": 35},
-  "front_sprite": {"x": 4, "y": 12},
+  "back_sprite": {"x": 5, "y": -3},
+  "front_sprite": {"x": 4, "y": 22},
+  "front_sprite_altitude": 10,
   "shadow_x": 0,
   "shadow_size": 2
 }

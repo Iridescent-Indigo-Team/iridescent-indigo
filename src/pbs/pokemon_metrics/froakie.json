@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "FROAKIE",
-  "back_sprite": {"x": 0, "y": 41},
+  "back_sprite": {"x": 0, "y": 19},
   "front_sprite": {"x": 0, "y": 35},
   "shadow_x": 0,
   "shadow_size": 2

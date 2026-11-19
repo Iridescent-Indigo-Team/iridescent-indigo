@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BONSLY",
-  "back_sprite": {"x": -3, "y": 31},
-  "front_sprite": {"x": 4, "y": 26},
+  "back_sprite": {"x": -3, "y": 11},
+  "front_sprite": {"x": 4, "y": 27},
   "shadow_x": 0,
   "shadow_size": 1
 }

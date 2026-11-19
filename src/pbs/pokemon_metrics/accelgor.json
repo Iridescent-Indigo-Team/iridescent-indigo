@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ACCELGOR",
-  "back_sprite": {"x": 6, "y": 32},
-  "front_sprite": {"x": 5, "y": 26},
+  "back_sprite": {"x": 6, "y": 7},
+  "front_sprite": {"x": 5, "y": 27},
   "shadow_x": 0,
   "shadow_size": 2
 }

@@ -11,6 +11,54 @@ def findBottom(bitmap)
   return 0
 end
 
+# Works out the BackSprite or FrontSprite y metric that stands a battler's feet
+# (the lowest opaque row of its sprite) on its side's ground line, given by
+# Battle::Scene::PLAYER_FEET_OFFSET and Battle::Scene::FOE_FEET_OFFSET.
+# Battle sprites are drawn at the game's resolution (1x), so the result is in
+# the same pixels as the metrics.
+#
+# A cut-off back sprite (see pbCutOffSprite?) has its cut edge put on the base
+# position instead, which is behind the message box.
+#
+# tools/scripts/ground_battlers.py does the same for the metrics in src/pbs;
+# keep the two in step.
+# @param bitmap [Bitmap] the battler sprite (one frame)
+# @param back [Boolean] whether this is a back sprite (player's side)
+# @param altitude [Integer] FrontSpriteAltitude; a floating Pokémon's back
+#   sprite is raised by the same amount (front sprites get it at runtime)
+# @return [Integer] the y metric
+def pbGroundedSpriteY(bitmap, back, altitude = 0)
+  gap = bitmap.height - (findBottom(bitmap) + 1)   # Transparent rows below the feet
+  return gap + Battle::Scene::FOE_FEET_OFFSET if !back
+  return 0 if pbCutOffSprite?(bitmap)
+  return gap + Battle::Scene::PLAYER_FEET_OFFSET - altitude
+end
+
+# The shortest unbroken run of opaque pixels along a sprite's bottom row that
+# means the sprite is cut off there, rather than full-body. The feet of a big
+# full-body sprite can touch the bottom row, but only cover a few pixels of it
+# (12 at most in the Generation 9 Pack's art); a cut-off body covers more (17
+# or more). tools/scripts/ground_battlers.py has a copy of this value.
+CUT_OFF_SPRITE_RUN = 16
+
+# Whether a battler sprite is cut off at its bottom edge (like the old-style
+# back sprites), rather than showing the whole body.
+# @param bitmap [Bitmap] the battler sprite (one frame)
+# @return [Boolean]
+def pbCutOffSprite?(bitmap)
+  return false if !bitmap
+  y = bitmap.height - 1
+  run = 0
+  bitmap.width.times do |x|
+    run = (bitmap.get_pixel(x, y).alpha > 0) ? run + 1 : 0
+    return true if run >= CUT_OFF_SPRITE_RUN
+  end
+  return false
+end
+
+# Recalculates the y metrics of every species and form so their feet stand on
+# the ground lines (see pbGroundedSpriteY). Other metrics (x offsets, altitude,
+# shadows) are kept, since they can't be worked out from the sprites.
 def pbAutoPositionAll
   t = System.uptime
   GameData::Species.each do |sp|
@@ -22,17 +70,11 @@ def pbAutoPositionAll
     bitmap1 = GameData::Species.sprite_bitmap(sp.species, sp.form, nil, nil, nil, true)
     bitmap2 = GameData::Species.sprite_bitmap(sp.species, sp.form)
     if bitmap1&.bitmap   # Player's y
-      metrics.back_sprite[0] = 0
-      metrics.back_sprite[1] = (bitmap1.height - (findBottom(bitmap1.bitmap) + 1)) / 2
+      metrics.back_sprite[1] = pbGroundedSpriteY(bitmap1.bitmap, true, metrics.front_sprite_altitude)
     end
     if bitmap2&.bitmap   # Foe's y
-      metrics.front_sprite[0] = 0
-      metrics.front_sprite[1] = (bitmap2.height - (findBottom(bitmap2.bitmap) + 1)) / 2
-      metrics.front_sprite[1] += 4   # Just because
+      metrics.front_sprite[1] = pbGroundedSpriteY(bitmap2.bitmap, false)
     end
-    metrics.front_sprite_altitude = 0   # Shouldn't be used
-    metrics.shadow_x              = 0
-    metrics.shadow_size           = 2
     bitmap1&.dispose
     bitmap2&.dispose
   end
@@ -139,16 +181,14 @@ class SpritePositioner
     metrics_data = GameData::SpeciesMetrics.get_species_form(@species, @form)
     old_back_y         = metrics_data.back_sprite[1]
     old_front_y        = metrics_data.front_sprite[1]
-    old_front_altitude = metrics_data.front_sprite_altitude
     bitmap1 = @sprites["pokemon_0"].bitmap
     bitmap2 = @sprites["pokemon_1"].bitmap
-    new_back_y  = (bitmap1.height - (findBottom(bitmap1) + 1)) / 2
-    new_front_y = (bitmap2.height - (findBottom(bitmap2) + 1)) / 2
-    new_front_y += 2   # Just because
-    if new_back_y != old_back_y || new_front_y != old_front_y || old_front_altitude != 0
-      metrics_data.back_sprite[1]        = new_back_y
-      metrics_data.front_sprite[1]       = new_front_y
-      metrics_data.front_sprite_altitude = 0
+    # Altitude is kept: it's what makes a floating Pokémon float
+    new_back_y  = pbGroundedSpriteY(bitmap1, true, metrics_data.front_sprite_altitude)
+    new_front_y = pbGroundedSpriteY(bitmap2, false)
+    if new_back_y != old_back_y || new_front_y != old_front_y
+      metrics_data.back_sprite[1]  = new_back_y
+      metrics_data.front_sprite[1] = new_front_y
       @metricsChanged = true
       refresh
     end

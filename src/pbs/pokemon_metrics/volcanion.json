@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "VOLCANION",
-  "back_sprite": {"x": 0, "y": 29},
+  "back_sprite": {"x": 0, "y": -6},
   "front_sprite": {"x": 0, "y": 10},
   "shadow_x": 0,
   "shadow_size": 3

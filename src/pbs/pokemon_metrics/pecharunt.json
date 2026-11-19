@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "PECHARUNT",
-  "back_sprite": {"x": 0, "y": 33},
-  "front_sprite": {"x": 0, "y": 7},
+  "back_sprite": {"x": 0, "y": -9},
+  "front_sprite": {"x": 0, "y": 25},
+  "front_sprite_altitude": 18,
   "shadow_x": 0,
   "shadow_size": 2
 }

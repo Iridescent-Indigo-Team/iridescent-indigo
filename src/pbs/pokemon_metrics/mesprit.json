@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MESPRIT",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": 2, "y": 15},
+  "back_sprite": {"x": 0, "y": -1},
+  "front_sprite": {"x": 2, "y": 27},
+  "front_sprite_altitude": 12,
   "shadow_x": 0,
   "shadow_size": 1
 }

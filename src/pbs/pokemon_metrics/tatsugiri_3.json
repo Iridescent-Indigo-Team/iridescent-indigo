@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TATSUGIRI",
   "form": 3,
-  "back_sprite": {"x": 7, "y": 31},
-  "front_sprite": {"x": -1, "y": 31},
+  "back_sprite": {"x": 7, "y": 12},
+  "front_sprite": {"x": -1, "y": 30},
   "shadow_x": 0,
   "shadow_size": 2
 }

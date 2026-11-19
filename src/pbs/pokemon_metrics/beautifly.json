@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BEAUTIFLY",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": 3, "y": 11},
+  "back_sprite": {"x": 0, "y": -7},
+  "front_sprite": {"x": 3, "y": 27},
+  "front_sprite_altitude": 16,
   "shadow_x": 0,
   "shadow_size": 2
 }

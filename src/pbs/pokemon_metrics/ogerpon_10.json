@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "OGERPON",
   "form": 10,
-  "back_sprite": {"x": -2, "y": 37},
-  "front_sprite": {"x": -1, "y": 4},
+  "back_sprite": {"x": -2, "y": -12},
+  "front_sprite": {"x": -1, "y": 5},
   "shadow_x": 0,
   "shadow_size": 2
 }

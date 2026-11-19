@@ -2,8 +2,9 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GLIMMORA",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 33},
-  "front_sprite": {"x": 0, "y": 6},
+  "back_sprite": {"x": 0, "y": -11},
+  "front_sprite": {"x": 0, "y": 14},
+  "front_sprite_altitude": 8,
   "shadow_x": 0,
   "shadow_size": 1
 }

@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GOODRA",
   "form": 1,
-  "back_sprite": {"x": 1, "y": 25},
+  "back_sprite": {"x": 1, "y": -6},
   "front_sprite": {"x": -7, "y": 11},
   "shadow_x": 0,
   "shadow_size": 2

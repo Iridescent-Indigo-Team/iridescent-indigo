@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "MORGREM",
-  "back_sprite": {"x": 0, "y": 31},
-  "front_sprite": {"x": 0, "y": 21},
+  "back_sprite": {"x": 0, "y": 6},
+  "front_sprite": {"x": 0, "y": 22},
   "shadow_x": 0,
   "shadow_size": 2
 }

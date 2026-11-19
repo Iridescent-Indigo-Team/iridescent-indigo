@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "AMAURA",
-  "back_sprite": {"x": -3, "y": 31},
-  "front_sprite": {"x": -1, "y": 23},
+  "back_sprite": {"x": -3, "y": 6},
+  "front_sprite": {"x": -1, "y": 24},
   "shadow_x": 0,
   "shadow_size": 1
 }

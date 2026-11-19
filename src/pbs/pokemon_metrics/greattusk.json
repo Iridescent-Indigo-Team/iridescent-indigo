@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GREATTUSK",
-  "back_sprite": {"x": 0, "y": 35},
-  "front_sprite": {"x": -9, "y": 27},
+  "back_sprite": {"x": 0, "y": 8},
+  "front_sprite": {"x": -9, "y": 26},
   "shadow_x": 0,
   "shadow_size": 2
 }

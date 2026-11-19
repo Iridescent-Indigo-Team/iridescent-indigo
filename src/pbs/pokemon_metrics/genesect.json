@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GENESECT",
-  "back_sprite": {"x": 2, "y": 31},
+  "back_sprite": {"x": 2, "y": 2},
   "front_sprite": {"x": -6, "y": 19},
   "shadow_x": 0,
   "shadow_size": 2

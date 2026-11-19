@@ -46,7 +46,7 @@ LOCALE_ARGS = $(if $(LANGS),--lang $(LANGS))
 
 .PHONY: all build scripts graphics audio fonts pbs data plugins config \
         run debug release live compile pull-pbs import-pbs validate-pbs \
-        pbs-schema test-pbs locales update-locales validate-locales test-locales \
+        pbs-schema test-pbs ground-battlers test-ground-battlers locales update-locales validate-locales test-locales \
         mkxp desktop android apk \
         install-assets uninstall-assets clean clean-data distclean help
 
@@ -106,6 +106,17 @@ pbs-schema: scripts plugins config
 ## test-pbs: run the PBS <-> JSON converter's tests
 test-pbs:
 	@$(PYTHON) -I -m unittest discover -s tools/importer/pbs/tests -t tools/importer/pbs
+
+# Battle sprite metrics: stand every Pokémon's feet on the ground lines (see
+# docs/BUILDING.md#battler-positions). ARGS passes options to the tool, e.g.
+# ARGS=--check or ARGS="--species PIKACHU --verbose".
+## ground-battlers: recalculate the y metrics in src/pbs/pokemon_metrics from the sprites
+ground-battlers:
+	@$(PYTHON) -I $(SCRIPTS)/ground_battlers.py --new-forms $(ARGS)
+
+## test-ground-battlers: run the battler grounding tool's tests
+test-ground-battlers:
+	@$(PYTHON) -I -m unittest discover -s $(SCRIPTS)/tests -t $(SCRIPTS)
 
 # Translations: one folder of CSVs per language in src/assets/locales (see
 # docs/LOCALIZATION.md). `make locales` validates them and compiles them into

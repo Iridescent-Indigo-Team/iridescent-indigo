@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "TYRANITAR",
-  "back_sprite": {"x": 1, "y": 32},
+  "back_sprite": {"x": 1, "y": -3},
   "front_sprite": {"x": 10, "y": 14},
   "shadow_x": 0,
   "shadow_size": 2

@@ -145,8 +145,16 @@ class PokemonPokedexInfo_Scene
     @sprites["formfront"]&.setSpeciesBitmap(@species, @gender, @form, @shiny)
     if @sprites["formback"]
       @sprites["formback"].setSpeciesBitmap(@species, @gender, @form, @shiny, false, true)
-      @sprites["formback"].y = 128
-      @sprites["formback"].y += metrics_data.back_sprite[1] * 2
+      # Stand the sprite's feet on the bottom of its panel (y = 128). Metrics
+      # are in the game's pixels (1x), like the sprite, and put the feet on the
+      # battle ground line, which is PLAYER_FEET_OFFSET from the base position;
+      # that offset is undone here. A cut-off back sprite has its cut edge on
+      # the base position instead (see pbGroundedSpriteY), so it needs no
+      # undoing.
+      @sprites["formback"].y = 128 + metrics_data.back_sprite[1]
+      if !pbCutOffSprite?(@sprites["formback"].bitmap)
+        @sprites["formback"].y -= Battle::Scene::PLAYER_FEET_OFFSET
+      end
     end
     @sprites["formicon"]&.pbSetParams(@species, @gender, @form, @shiny)
   end

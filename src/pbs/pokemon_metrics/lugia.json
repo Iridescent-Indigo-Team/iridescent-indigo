@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "LUGIA",
-  "back_sprite": {"x": 9, "y": 29},
-  "front_sprite": {"x": -7, "y": 6},
+  "back_sprite": {"x": 9, "y": -12},
+  "front_sprite": {"x": -7, "y": 13},
+  "front_sprite_altitude": 7,
   "shadow_x": 0,
   "shadow_size": 3
 }

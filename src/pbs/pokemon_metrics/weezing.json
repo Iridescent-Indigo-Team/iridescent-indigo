@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "WEEZING",
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": 0, "y": 7},
+  "back_sprite": {"x": 0, "y": -6},
+  "front_sprite": {"x": 0, "y": 22},
+  "front_sprite_altitude": 15,
   "shadow_x": 0,
   "shadow_size": 2
 }

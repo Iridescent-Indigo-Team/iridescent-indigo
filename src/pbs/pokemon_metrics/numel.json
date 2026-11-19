@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "NUMEL",
-  "back_sprite": {"x": 0, "y": 32},
+  "back_sprite": {"x": 0, "y": 9},
   "front_sprite": {"x": -5, "y": 28},
   "shadow_x": 0,
   "shadow_size": 2

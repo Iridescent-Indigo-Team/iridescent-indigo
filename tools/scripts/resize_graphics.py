@@ -22,8 +22,9 @@ transparency at bottom-centre, which matches how Essentials anchors battlers
 must lose only transparent margin, otherwise the build fails.
 
 Frames of 288x288 are 3x upscales of 96x96 art (the Generation 9 Pack's back
-sprites), so they are divided by 3 instead of 2. Their BackSprite metrics in
-PBS were scaled by 2/3 to match (see docs/BUILDING.md).
+sprites), so they are divided by 3 instead of 2. Their metrics in PBS are
+worked out from the resulting frames by ground_battlers.py (see
+docs/BUILDING.md).
 
 Files that are not PNGs are copied unchanged. Work is incremental: a file is
 only processed again when its source is newer than its output (or --force).

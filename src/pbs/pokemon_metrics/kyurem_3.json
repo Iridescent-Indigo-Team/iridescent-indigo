@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "KYUREM",
   "form": 3,
-  "back_sprite": {"x": 13, "y": 33},
-  "front_sprite": {"x": 8, "y": 8},
+  "back_sprite": {"x": 13, "y": -4},
+  "front_sprite": {"x": 8, "y": 7},
   "shadow_x": 0,
   "shadow_size": 3
 }

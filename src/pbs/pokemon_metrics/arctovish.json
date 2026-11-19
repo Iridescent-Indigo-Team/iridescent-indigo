@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ARCTOVISH",
-  "back_sprite": {"x": -1, "y": 37},
-  "front_sprite": {"x": -7, "y": 12},
+  "back_sprite": {"x": -1, "y": -10},
+  "front_sprite": {"x": -7, "y": 20},
+  "front_sprite_altitude": 8,
   "shadow_x": 0,
   "shadow_size": 2
 }

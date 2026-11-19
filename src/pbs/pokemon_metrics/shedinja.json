@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "SHEDINJA",
-  "back_sprite": {"x": 0, "y": 35},
-  "front_sprite": {"x": 0, "y": 12},
+  "back_sprite": {"x": 0, "y": -4},
+  "front_sprite": {"x": 0, "y": 30},
+  "front_sprite_altitude": 18,
   "shadow_x": 0,
   "shadow_size": 1
 }

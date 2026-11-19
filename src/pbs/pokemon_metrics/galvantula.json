@@ -1,8 +1,8 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GALVANTULA",
-  "back_sprite": {"x": 0, "y": 40},
-  "front_sprite": {"x": 4, "y": 33},
+  "back_sprite": {"x": 0, "y": 17},
+  "front_sprite": {"x": 4, "y": 29},
   "shadow_x": 0,
   "shadow_size": 2
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "LOUDRED",
-  "back_sprite": {"x": 0, "y": 32},
+  "back_sprite": {"x": 0, "y": 5},
   "front_sprite": {"x": 0, "y": 22},
   "shadow_x": 0,
   "shadow_size": 2

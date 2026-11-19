@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "VOLBEAT",
-  "back_sprite": {"x": 0, "y": 32},
-  "front_sprite": {"x": 0, "y": 21},
+  "back_sprite": {"x": 0, "y": 5},
+  "front_sprite": {"x": 0, "y": 27},
+  "front_sprite_altitude": 6,
   "shadow_x": 0,
   "shadow_size": 1
 }

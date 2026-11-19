@@ -1,8 +1,9 @@
 {
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "BASCULIN",
-  "back_sprite": {"x": 0, "y": 35},
-  "front_sprite": {"x": 0, "y": 24},
+  "back_sprite": {"x": 0, "y": 7},
+  "front_sprite": {"x": 0, "y": 35},
+  "front_sprite_altitude": 11,
   "shadow_x": 0,
   "shadow_size": 1
 }

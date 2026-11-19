@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "ZAMAZENTA",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 36},
-  "front_sprite": {"x": -3, "y": 11},
+  "back_sprite": {"x": 0, "y": -9},
+  "front_sprite": {"x": -3, "y": 7},
   "shadow_x": 0,
   "shadow_size": 3
 }

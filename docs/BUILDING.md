@@ -175,6 +175,7 @@ All scripts are in `tools/scripts/`.
 | `uninstall_assets.sh [--force]` | Removes exactly the files `install_assets.sh` installed. |
 | `clean_data.sh [--all]` | Removes compiled data and staging (`--all`: the whole `build/`). |
 | `resize_graphics.py` | The graphics halver used by `make`. |
+| `ground_battlers.py` | Recalculates the battle sprite metrics so every Pokémon stands on the ground (`make ground-battlers`, see [Battler positions](#battler-positions)). |
 | `halve_data.rb` | The map/animation data converter used by `make`. |
 | `halve_script_coords.rb` | Converts Essentials-style scripts to 256×192 (see [below](#converting-scripts-and-plugins)). |
 | `sync_dir.py` | Incremental folder copy used by `make`. |
@@ -218,10 +219,11 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
 - **3× back sprites.** The Generation 9 Pack's back sprites are 288×288: 3×
   upscales of 96×96 art, drawn 1.5× larger than the front sprites. Battle
   frames of 288×288 are divided by 3 instead of 2, so they come out as clean
-  96×96 sprites. Their `BackSprite` metrics in `pokemon_metrics` were scaled by
-  2/3 to match, which keeps each Pokémon's feet on its base. A few stock back
-  sprites the pack doesn't replace (`PICHU_2`, `ARCEUS_9`, some female and
-  Shadow variants) are still 160×160 and use their stock metrics.
+  96×96 sprites. They are full-body, unlike the stock back sprites (which are
+  cut off at the bottom and hidden behind the message box), so their metrics
+  are worked out from the sprites (see [Battler positions](#battler-positions)).
+  A few stock back sprites the pack doesn't replace (`PICHU_2`, `ARCEUS_9`,
+  some female and Shadow variants) are still cut off.
 - Files that aren't PNGs are copied unchanged. Outputs whose source was
   deleted are removed.
 
@@ -233,6 +235,56 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
 
 Tile-based values are left alone. Pokémon sprite metrics in PBS are already in
 1× pixels and are used as-is.
+
+## Battler positions
+
+A battler sprite is anchored at its bottom centre, on its side's base position
+(`Battle::Scene.pbBattlerPosition`), then moved by its `BackSprite` or
+`FrontSprite` metrics in `src/pbs/pokemon_metrics`. The metrics are worked out
+from the sprites so every Pokémon's feet (the lowest opaque row of its 96×96
+frame) stand on a ground line:
+
+| Side | Ground line | Why |
+| --- | --- | --- |
+| Player (back sprites) | `PLAYER_BASE_Y + PLAYER_FEET_OFFSET` (y 140) | Above the message box (y 144), so full-body back sprites show their feet. |
+| Foe (front sprites) | `FOE_BASE_Y + FOE_FEET_OFFSET` (y 92) | Where the faint animation crops the sprite. |
+
+The offsets are constants in `Battle::Scene`
+(`src/data/011_Battle/004_Scene/001_Battle_Scene.rb`).
+
+- **Floating Pokémon** use `FrontSpriteAltitude`: the front sprite is drawn
+  that much higher at runtime and its shadow stays on the base. The back
+  sprite's y is raised by the same amount.
+- **Cut-off back sprites** (a wide run of opaque pixels along the bottom row)
+  have their cut edge on the base position instead, behind the message box.
+- **x offsets and shadows** can't be worked out from the sprites and are kept.
+
+To recalculate the metrics after adding or changing sprites:
+
+```sh
+make ground-battlers                 # rewrite src/pbs/pokemon_metrics
+make ground-battlers ARGS=--check    # only report; exit 1 if anything would change
+make ground-battlers ARGS="--species PIKACHU,ZUBAT --verbose"
+```
+
+`tools/scripts/ground_battlers.py` reads the sprites from `src/assets/graphics`
+(or `lib/pokemon-essentials/Graphics` if no art is installed) and shrinks them
+exactly as the build does. It also adds metrics entries for forms that have
+their own sprites but no entry yet, and lists back sprites that are still cut
+off.
+
+`--keep-hover` is a one-time migration for metrics that baked a floating
+Pokémon's hover into its y value, as the Generation 9 Pack's did: a front
+sprite whose metrics lift it at least `--hover-min` pixels (default 6) off the
+ground gets that lift as its `FrontSpriteAltitude`. The metrics in this repo
+have already been migrated, so don't use it again: a new sprite whose feet sit
+higher in its frame would look like a hover. To make a Pokémon float, set its
+`front_sprite_altitude` and run the tool. In the game, **Debug > PBS editors > Auto-set pokemon_metrics.txts** and the
+sprite positioner's auto-position use the same rules (`pbGroundedSpriteY`).
+
+Move animations aim at the centre of each battler's sprite frame, relative to
+`FOCUSUSER_X/Y` and `FOCUSTARGET_X/Y`, so they follow the sprites wherever the
+metrics put them.
 
 ## Resolution, scaling and fonts
 

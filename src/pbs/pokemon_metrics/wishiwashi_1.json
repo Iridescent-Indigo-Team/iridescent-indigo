@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "WISHIWASHI",
   "form": 1,
-  "back_sprite": {"x": 0, "y": 39},
+  "back_sprite": {"x": 0, "y": -11},
   "front_sprite": {"x": 9, "y": 14},
   "shadow_x": 0,
   "shadow_size": 3

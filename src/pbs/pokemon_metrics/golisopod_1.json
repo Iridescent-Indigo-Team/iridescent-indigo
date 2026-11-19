@@ -2,8 +2,8 @@
   "$schema": "../_schema/pokemon_metrics.entry.schema.json",
   "species": "GOLISOPOD",
   "form": 1,
-  "back_sprite": {"x": -2, "y": 29},
-  "front_sprite": {"x": 2, "y": 10},
+  "back_sprite": {"x": -2, "y": -7},
+  "front_sprite": {"x": 2, "y": 5},
   "shadow_x": 0,
   "shadow_size": 3
 }
