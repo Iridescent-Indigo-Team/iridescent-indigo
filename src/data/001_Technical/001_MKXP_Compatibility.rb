@@ -42,13 +42,24 @@ end
 def pbSetResizeFactor(factor)
   if !$ResizeInitialized
     Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
+    # resize_screen also resizes the window to 1x, but asynchronously. Wait
+    # for that to happen, otherwise the resize below thinks the window already
+    # has the wanted size and is skipped.
+    10.times do
+      break if (Graphics.scale - 1.0).abs < 0.01
+      Graphics.update
+    end
     $ResizeInitialized = true
   end
   if pbIsAndroid? || factor < 0 || factor >= 4
     Graphics.fullscreen = true if !Graphics.fullscreen
   else
     Graphics.fullscreen = false if Graphics.fullscreen
-    Graphics.scale = factor.to_i + 1
+    scale = factor.to_i + 1
+    # resize_window is used instead of Graphics.scale=, which can skip the
+    # resize right after resize_screen because it compares against the old
+    # window size.
+    Graphics.resize_window(Settings::SCREEN_WIDTH * scale, Settings::SCREEN_HEIGHT * scale)
     Graphics.center
   end
 end

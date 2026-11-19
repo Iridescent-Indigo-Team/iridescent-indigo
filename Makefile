@@ -106,11 +106,13 @@ compile: build
 mkxp:
 	@$(SCRIPTS)/build_engine.sh $(BUILD)/engine
 
-## desktop: package build/ and the engine into dist/<name>-linux.tar.gz
+## desktop: package build/, the engine and play.sh into dist/<name>-linux.tar.gz
 desktop: compile
 	@test -x $(BUILD)/engine/mkxp-z || { echo "No engine in $(BUILD)/engine; run 'make mkxp' first."; exit 1; }
 	@mkdir -p $(DIST)
-	@tar -czf $(DIST)/$(GAME_NAME)-linux.tar.gz --exclude=.essentials --exclude=resize_report.txt \
+	@cp $(SCRIPTS)/play.sh $(BUILD)/play.sh
+	@tar -czf $(DIST)/$(GAME_NAME)-linux.tar.gz --exclude=.essentials --exclude=.engine-build \
+		--exclude=resize_report.txt --exclude=errorlog.txt \
 		--transform 's|^$(BUILD)|$(GAME_NAME)|' $(BUILD)
 	@echo "Wrote $(DIST)/$(GAME_NAME)-linux.tar.gz"
 
@@ -119,7 +121,8 @@ android: compile
 	@mkdir -p $(DIST)
 	@rm -f $(DIST)/$(GAME_NAME)-android.zip
 	@cd $(BUILD) && zip -qr -X ../$(DIST)/$(GAME_NAME)-android.zip . \
-		-x 'engine/*' -x '.essentials/*' -x 'resize_report.txt'
+		-x 'engine/*' -x '.engine-build/*' -x '.essentials/*' -x 'resize_report.txt' \
+		-x 'errorlog.txt' -x '.compile_ok' -x 'play.sh'
 	@cp $(DIST)/$(GAME_NAME)-android.zip $(DIST)/main.1.$(ANDROID_PACKAGE).obb
 	@echo "Wrote $(DIST)/$(GAME_NAME)-android.zip and $(DIST)/main.1.$(ANDROID_PACKAGE).obb"
 
