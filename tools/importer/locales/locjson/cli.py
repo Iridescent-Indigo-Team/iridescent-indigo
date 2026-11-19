@@ -34,7 +34,7 @@ def _languages(config, codes):
 
 def _gather(args):
     """@return (strings, events_loaded)"""
-    return gather(pbs_dir=args.pbs, data_dir=args.data, build_dir=args.build_dir, events=not args.no_events)
+    return gather(pbs_dir=args.pbs, data_dir=args.data, events=not args.no_events)
 
 
 def _is_event_file(file):
@@ -173,7 +173,6 @@ def main(argv=None):
     parser.add_argument("--locales", default=cfg.LOCALES_DIR, help="folder of the language folders")
     parser.add_argument("--pbs", default=cfg.PBS_DIR, help="the JSON game data (src/pbs)")
     parser.add_argument("--data", default=None, help="RMXP data with the maps (default src/assets/data)")
-    parser.add_argument("--build-dir", default=None, help="build folder to read compiled maps from")
     parser.add_argument("--graphics", default=cfg.GRAPHICS_DIR, help="English graphics")
     parser.add_argument("--fonts", default=cfg.FONTS_DIR, help="fonts folder")
     parser.add_argument("--no-events", action="store_true", help="leave event text out")
@@ -190,8 +189,6 @@ def main(argv=None):
             p.add_argument("out", help="the game folder (build/)")
         p.set_defaults(func=func)
     args = parser.parse_args(argv)
-    if args.build_dir is None:
-        args.build_dir = os.path.join(cfg.ROOT, "build")
     if args.lang:
         args.lang = [c for item in args.lang for c in item.split(",") if c]
     try:

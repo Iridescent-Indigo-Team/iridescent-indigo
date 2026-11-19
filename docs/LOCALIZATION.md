@@ -60,8 +60,8 @@ changing game data, scripts or maps. It never loses a translation:
   text.
 
 Event text is read from the maps in `src/assets/data` (installed by
-`tools/scripts/install_assets.sh`), or from `build/Data` once the game has been
-compiled. Without map data the event CSVs are left as they are.
+`tools/scripts/install_assets.sh`). Without map data the event CSVs are left as
+they are.
 
 ```bash
 make validate-locales

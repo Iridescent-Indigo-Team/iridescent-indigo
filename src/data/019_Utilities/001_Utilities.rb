@@ -653,7 +653,21 @@ def pbChooseLanguage
   commands = Settings::LANGUAGES.map { |lang| lang[0] }
   index = pbSystemLanguageIndex
   loop do
-    index = pbShowCommands(nil, commands, 0, index)
+    cmdwindow = Window_CommandPokemonEx.new(commands)
+    cmdwindow.z = 99999
+    cmdwindow.resizeToFit(commands)
+    cmdwindow.x = (Graphics.width - cmdwindow.width) / 2
+    cmdwindow.y = (Graphics.height - cmdwindow.height) / 2
+    cmdwindow.index = index
+    loop do
+      Graphics.update
+      Input.update
+      cmdwindow.update
+      break if Input.trigger?(Input::USE)
+    end
+    index = cmdwindow.index
+    cmdwindow.dispose
+    pbPlayDecisionSE
     pbLoadLanguage(index)
     break if pbConfirmMessage(_INTL("{1}: is this the language you want to play in?", commands[index]))
   end

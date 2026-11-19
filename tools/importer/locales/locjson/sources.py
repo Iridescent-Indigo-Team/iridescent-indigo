@@ -228,28 +228,16 @@ def script_strings(dirs=None):
 #===============================================================================
 # Events
 #===============================================================================
-def event_data_dir(data_dir=None, build_dir=None):
+def event_data_dir(data_dir=None):
     """Where to read event text from. @return (folder, compiled) or (None, False)
 
-    The compiled maps in build/Data (written by `make compile` / a debug run)
-    are exactly what the game shows, so they're used when they are newer than
-    the source maps. Otherwise the source maps in src/assets/data are read and
-    the compiler's text fixes are replayed.
+    The source maps in src/assets/data are read, and extract_events.rb replays
+    the compiler's Show Text fixes, which gives exactly the text of the
+    compiled maps in build/Data.
     """
     data_dir = data_dir or cfg.DATA_DIR
-    build_dir = build_dir or os.path.join(cfg.ROOT, "build")
-    built = os.path.join(build_dir, "Data")
-    src_ok = os.path.isfile(os.path.join(data_dir, "MapInfos.rxdata"))
-    built_ok = os.path.isfile(os.path.join(build_dir, ".compile_ok")) and \
-        os.path.isfile(os.path.join(built, "MapInfos.rxdata"))
-    if built_ok and src_ok:
-        newest_src = max(os.path.getmtime(os.path.join(data_dir, f)) for f in os.listdir(data_dir))
-        if os.path.getmtime(os.path.join(build_dir, ".compile_ok")) >= newest_src:
-            return built, True
-    if src_ok:
+    if os.path.isfile(os.path.join(data_dir, "MapInfos.rxdata")):
         return data_dir, False
-    if built_ok:
-        return built, True
     return None, False
 
 
@@ -342,7 +330,7 @@ def strings_from_event_csvs(lang_dir):
     return out
 
 
-def gather(pbs_dir=cfg.PBS_DIR, script_dirs=None, data_dir=None, build_dir=None, events=True, log=print):
+def gather(pbs_dir=cfg.PBS_DIR, script_dirs=None, data_dir=None, events=True, log=print):
     """Every translatable string of the game.
 
     @return (list of SourceString, True if event text was read from map data)
@@ -350,7 +338,7 @@ def gather(pbs_dir=cfg.PBS_DIR, script_dirs=None, data_dir=None, build_dir=None,
     strings = pbs_strings(pbs_dir) + script_strings(script_dirs)
     loaded = False
     if events:
-        folder, compiled = event_data_dir(data_dir, build_dir)
+        folder, compiled = event_data_dir(data_dir)
         if folder:
             strings += event_strings(folder, compiled)
             loaded = True
