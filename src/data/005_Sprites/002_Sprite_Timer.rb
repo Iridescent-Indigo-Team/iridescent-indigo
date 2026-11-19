@@ -21,8 +21,8 @@ class Sprite_Timer
     if $game_system.timer_start
       @timer.visible = true if @timer
       if !@timer
-        @timer = Window_AdvancedTextPokemon.newWithSize("", Graphics.width - 120, 0, 120, 64)
-        @timer.width = @timer.borderX + 96
+        @timer = Window_AdvancedTextPokemon.newWithSize("", Graphics.width - 60, 0, 60, 32)
+        @timer.width = @timer.borderX + 48
         @timer.x = Graphics.width - @timer.width
         @timer.viewport = @viewport
         @timer.z = 99998

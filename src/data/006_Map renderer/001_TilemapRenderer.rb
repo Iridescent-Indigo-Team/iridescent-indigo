@@ -11,10 +11,10 @@ class TilemapRenderer
   attr_accessor :oy        # Does nothing
   attr_accessor :visible   # Does nothing
 
-  DISPLAY_TILE_WIDTH      = Game_Map::TILE_WIDTH rescue 32
-  DISPLAY_TILE_HEIGHT     = Game_Map::TILE_HEIGHT rescue 32
-  SOURCE_TILE_WIDTH       = 32
-  SOURCE_TILE_HEIGHT      = 32
+  DISPLAY_TILE_WIDTH      = Game_Map::TILE_WIDTH rescue 16
+  DISPLAY_TILE_HEIGHT     = Game_Map::TILE_HEIGHT rescue 16
+  SOURCE_TILE_WIDTH       = 16
+  SOURCE_TILE_HEIGHT      = 16
   ZOOM_X                  = DISPLAY_TILE_WIDTH / SOURCE_TILE_WIDTH
   ZOOM_Y                  = DISPLAY_TILE_HEIGHT / SOURCE_TILE_HEIGHT
   TILESET_TILES_PER_ROW   = 8

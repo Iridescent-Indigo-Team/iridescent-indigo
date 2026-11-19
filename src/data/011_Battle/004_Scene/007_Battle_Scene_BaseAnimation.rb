@@ -110,27 +110,27 @@ module Battle::Scene::Animation::BallAnimationMixin
       return ballStartX, ballStartY
     end
     # Back sprite is animated, make the Poké Ball track the trainer's hand
-    coordSets = [[traSprite.x - 44, traSprite.y - 32], [-10, -36], [118, -4]]
+    coordSets = [[traSprite.x - 22, traSprite.y - 16], [-5, -18], [59, -2]]
     case @trainer.trainer_type
     when :POKEMONTRAINER_Leaf
-      coordSets = [[traSprite.x - 30, traSprite.y - 30], [-18, -36], [118, -6]]
+      coordSets = [[traSprite.x - 15, traSprite.y - 15], [-9, -18], [59, -3]]
     when :POKEMONTRAINER_Brendan
-      coordSets = [[traSprite.x - 46, traSprite.y - 40], [-4, -30], [118, -2]]
+      coordSets = [[traSprite.x - 23, traSprite.y - 20], [-2, -15], [59, -1]]
     when :POKEMONTRAINER_May
-      coordSets = [[traSprite.x - 44, traSprite.y - 38], [-8, -30], [122, 0]]
+      coordSets = [[traSprite.x - 22, traSprite.y - 19], [-4, -15], [61, 0]]
     end
     # Arm stretched out behind player
     ball.setVisible(0, true)
     ball.setXY(0, coordSets[0][0], coordSets[0][1])
     ball.moveDelta(0, 5, -5 * (Graphics.width / 32), 0) if !safariThrow
-    ball.setDelta(0, -12, 0) if safariThrow
+    ball.setDelta(0, -6, 0) if safariThrow
     # Arm mid throw
     ball.setDelta(5, coordSets[1][0], coordSets[1][1])
     ball.moveDelta(5, 2, -2 * (Graphics.width / 32), 0) if !safariThrow
-    ball.setDelta(5, 34, 0) if safariThrow
+    ball.setDelta(5, 17, 0) if safariThrow
     # Start of throw
     ball.setDelta(7, coordSets[2][0], coordSets[2][1])
-    ball.setDelta(7, -14, 0) if safariThrow
+    ball.setDelta(7, -7, 0) if safariThrow
     # Update Poké Ball trajectory's start position
     ballStartX = ballStartY = 0
     coordSets.each do |c|
@@ -138,7 +138,7 @@ module Battle::Scene::Animation::BallAnimationMixin
       ballStartY += c[1]
     end
     ballStartX -= ball.totalDuration * (Graphics.width / 32) if !safariThrow
-    ballStartX += 8 if safariThrow   # -12 + 34 - 14
+    ballStartX += 4 if safariThrow   # -6 + 17 - 7
     return ballStartX, ballStartY
   end
 
@@ -152,13 +152,13 @@ module Battle::Scene::Animation::BallAnimationMixin
     trainer.setSrc(9, size * 4, 0)
     trainer.setSrc(18, 0, 0)
     # Alter trainer's positioning
-    trainer.setDelta(0, -12, 0)
-    trainer.setDelta(5, 34, 0)
-    trainer.setDelta(7, -14, 0)
-    trainer.setDelta(9, 28, 0)
-    trainer.moveDelta(10, 3, -6, 6)
-    trainer.setDelta(18, -4, 0)
-    trainer.setDelta(19, -26, -6)
+    trainer.setDelta(0, -6, 0)
+    trainer.setDelta(5, 17, 0)
+    trainer.setDelta(7, -7, 0)
+    trainer.setDelta(9, 14, 0)
+    trainer.moveDelta(10, 3, -3, 3)
+    trainer.setDelta(18, -2, 0)
+    trainer.setDelta(19, -13, -3)
     # Make ball track the trainer's hand
     ballStartX, ballStartY = ballTracksHand(ball, traSprite, true)
     return ballStartX, ballStartY
@@ -354,7 +354,7 @@ module Battle::Scene::Animation::BallAnimationMixin
     particle_fade_duration = 8
     ray_lifetime = 13
     ray_fade_duration = 5
-    ray_min_radius = 24   # How far out from the center a ray starts
+    ray_min_radius = 12   # How far out from the center a ray starts
     cherish_ball_ray_tones = [Tone.new(-104, -144, -8),   # Indigo
                               Tone.new(-64, -144, -24),   # Purple
                               Tone.new(-8, -144, -64),   # Pink
@@ -438,7 +438,7 @@ module Battle::Scene::Animation::BallAnimationMixin
       end
       # Animate particles
       start = delay + (i / 4)
-      max_radius = rand(256...384)
+      max_radius = rand(128...192)
       angle = rand(360)
       radian = angle * Math::PI / 180
       [particle1, particle2].each_with_index do |particle, num|
@@ -571,7 +571,7 @@ module Battle::Scene::Animation::BallAnimationMixin
     ring_duration = 5
     num_particles = 9
     base_angle = 270
-    base_radius = (poke_ball == :MASTERBALL) ? 192 : 144   # How far out from the Poké Ball the particles go
+    base_radius = (poke_ball == :MASTERBALL) ? 96 : 72   # How far out from the Poké Ball the particles go
     # Get array of things that vary for each kind of Poké Ball
     variances = BALL_BURST_CAPTURE_VARIANCES[poke_ball] || BALL_BURST_CAPTURE_VARIANCES[:POKEBALL]
     # Set up glare particles
@@ -730,7 +730,7 @@ module Battle::Scene::Animation::BallAnimationMixin
     ball.moveTone(delay, 4, Tone.new(-128, -128, -128))   # Ball goes darker
     delay = ball.totalDuration
     star_duration = 12   # In 20ths of a second
-    y_offsets = [[0, 74, 52], [0, 62, 28], [0, 74, 48]]
+    y_offsets = [[0, 37, 26], [0, 31, 14], [0, 37, 24]]
     3.times do |i|   # Left, middle, right
       # Set up particle
       star = addNewSprite(ballX, ballY, "Graphics/Battle animations/ballBurst_star", PictureOrigin::CENTER)
@@ -745,7 +745,7 @@ module Battle::Scene::Animation::BallAnimationMixin
       y_pos = y_offsets[i]
       star_duration.times do |j|
         index = j + 1
-        x = 72 * index / star_duration
+        x = 36 * index / star_duration
         proportion = index.to_f / star_duration
         a = (2 * y_pos[2]) - (4 * y_pos[1])
         b = y_pos[2] - a
@@ -770,7 +770,7 @@ module Battle::Scene::Animation::BallAnimationMixin
     # Burst particles
     num_particles = 5
     base_angle = 55
-    base_radius = 64   # How far out from the Poké Ball the particles go
+    base_radius = 32   # How far out from the Poké Ball the particles go
     num_particles.times do |i|
       # Set up particle
       particle = addNewSprite(ballX, ballY, "Graphics/Battle animations/ballBurst_particle", PictureOrigin::CENTER)

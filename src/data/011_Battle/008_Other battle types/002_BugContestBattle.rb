@@ -8,7 +8,7 @@ class Battle::Scene
     _bugContest_pbInitSprites
     # "helpwindow" shows the currently caught Pokémon's details when asking if
     # you want to replace it with a newly caught Pokémon.
-    @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 32, 32, @viewport)
+    @sprites["helpwindow"] = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 16, 16, @viewport)
     @sprites["helpwindow"].z       = 90
     @sprites["helpwindow"].visible = false
   end

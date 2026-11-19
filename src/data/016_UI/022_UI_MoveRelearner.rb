@@ -28,16 +28,16 @@ class MoveRelearner_Scene
     addBackgroundPlane(@sprites, "bg", "Move Reminder/bg", @viewport)
     @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon, @viewport)
     @sprites["pokeicon"].setOffset(PictureOrigin::CENTER)
-    @sprites["pokeicon"].x = 320
-    @sprites["pokeicon"].y = 84
+    @sprites["pokeicon"].x = 160
+    @sprites["pokeicon"].y = 42
     @sprites["background"] = IconSprite.new(0, 0, @viewport)
     @sprites["background"].setBitmap("Graphics/UI/Move Reminder/cursor")
-    @sprites["background"].y = 78
-    @sprites["background"].src_rect = Rect.new(0, 72, 258, 72)
+    @sprites["background"].y = 39
+    @sprites["background"].src_rect = Rect.new(0, 36, 129, 36)
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
-    @sprites["commands"] = Window_CommandPokemon.new(moveCommands, 32)
-    @sprites["commands"].height = 32 * (VISIBLEMOVES + 1)
+    @sprites["commands"] = Window_CommandPokemon.new(moveCommands, 16)
+    @sprites["commands"].height = 16 * (VISIBLEMOVES + 1)
     @sprites["commands"].visible = false
     @sprites["msgwindow"] = Window_AdvancedTextPokemon.new("")
     @sprites["msgwindow"].visible = false
@@ -54,56 +54,56 @@ class MoveRelearner_Scene
     overlay.clear
     @pokemon.types.each_with_index do |type, i|
       type_number = GameData::Type.get(type).icon_position
-      type_rect = Rect.new(0, type_number * 28, 64, 28)
-      type_x = (@pokemon.types.length == 1) ? 400 : 366 + (70 * i)
-      overlay.blt(type_x, 70, @typebitmap.bitmap, type_rect)
+      type_rect = Rect.new(0, type_number * 14, 32, 14)
+      type_x = (@pokemon.types.length == 1) ? 200 : 183 + (35 * i)
+      overlay.blt(type_x, 35, @typebitmap.bitmap, type_rect)
     end
     textpos = [
-      [_INTL("Teach which move?"), 16, 14, :left, Color.new(88, 88, 80), Color.new(168, 184, 184)]
+      [_INTL("Teach which move?"), 8, 7, :left, Color.new(88, 88, 80), Color.new(168, 184, 184)]
     ]
     imagepos = []
-    yPos = 88
+    yPos = 44
     VISIBLEMOVES.times do |i|
       moveobject = @moves[@sprites["commands"].top_item + i]
       if moveobject
         moveData = GameData::Move.get(moveobject)
         type_number = GameData::Type.get(moveData.display_type(@pokemon)).icon_position
-        imagepos.push([_INTL("Graphics/UI/types"), 12, yPos - 4, 0, type_number * 28, 64, 28])
-        textpos.push([moveData.name, 80, yPos, :left, Color.new(248, 248, 248), Color.black])
-        textpos.push([_INTL("PP"), 112, yPos + 32, :left, Color.new(64, 64, 64), Color.new(176, 176, 176)])
+        imagepos.push([_INTL("Graphics/UI/types"), 6, yPos - 2, 0, type_number * 14, 32, 14])
+        textpos.push([moveData.name, 40, yPos, :left, Color.new(248, 248, 248), Color.black])
+        textpos.push([_INTL("PP"), 56, yPos + 16, :left, Color.new(64, 64, 64), Color.new(176, 176, 176)])
         if moveData.total_pp > 0
-          textpos.push([moveData.total_pp.to_s + "/" + moveData.total_pp.to_s, 230, yPos + 32, :right,
+          textpos.push([moveData.total_pp.to_s + "/" + moveData.total_pp.to_s, 115, yPos + 16, :right,
                         Color.new(64, 64, 64), Color.new(176, 176, 176)])
         else
-          textpos.push(["--", 230, yPos + 32, :right, Color.new(64, 64, 64), Color.new(176, 176, 176)])
+          textpos.push(["--", 115, yPos + 16, :right, Color.new(64, 64, 64), Color.new(176, 176, 176)])
         end
       end
-      yPos += 64
+      yPos += 32
     end
     imagepos.push(["Graphics/UI/Move Reminder/cursor",
-                   0, 78 + ((@sprites["commands"].index - @sprites["commands"].top_item) * 64),
-                   0, 0, 258, 72])
+                   0, 39 + ((@sprites["commands"].index - @sprites["commands"].top_item) * 32),
+                   0, 0, 129, 36])
     selMoveData = GameData::Move.get(@moves[@sprites["commands"].index])
     power = selMoveData.display_damage(@pokemon)
     category = selMoveData.display_category(@pokemon)
     accuracy = selMoveData.display_accuracy(@pokemon)
-    textpos.push([_INTL("CATEGORY"), 272, 120, :left, Color.new(248, 248, 248), Color.black])
-    textpos.push([_INTL("POWER"), 272, 152, :left, Color.new(248, 248, 248), Color.black])
-    textpos.push([power <= 1 ? power == 1 ? "???" : "---" : power.to_s, 468, 152, :center,
+    textpos.push([_INTL("CATEGORY"), 136, 60, :left, Color.new(248, 248, 248), Color.black])
+    textpos.push([_INTL("POWER"), 136, 76, :left, Color.new(248, 248, 248), Color.black])
+    textpos.push([power <= 1 ? power == 1 ? "???" : "---" : power.to_s, 234, 76, :center,
                   Color.new(64, 64, 64), Color.new(176, 176, 176)])
-    textpos.push([_INTL("ACCURACY"), 272, 184, :left, Color.new(248, 248, 248), Color.black])
-    textpos.push([accuracy == 0 ? "---" : "#{accuracy}%", 468, 184, :center,
+    textpos.push([_INTL("ACCURACY"), 136, 92, :left, Color.new(248, 248, 248), Color.black])
+    textpos.push([accuracy == 0 ? "---" : "#{accuracy}%", 234, 92, :center,
                   Color.new(64, 64, 64), Color.new(176, 176, 176)])
     pbDrawTextPositions(overlay, textpos)
-    imagepos.push(["Graphics/UI/category", 436, 116, 0, category * 28, 64, 28])
+    imagepos.push(["Graphics/UI/category", 218, 58, 0, category * 14, 32, 14])
     if @sprites["commands"].index < @moves.length - 1
-      imagepos.push(["Graphics/UI/Move Reminder/buttons", 48, 350, 0, 0, 76, 32])
+      imagepos.push(["Graphics/UI/Move Reminder/buttons", 24, 175, 0, 0, 38, 16])
     end
     if @sprites["commands"].index > 0
-      imagepos.push(["Graphics/UI/Move Reminder/buttons", 134, 350, 76, 0, 76, 32])
+      imagepos.push(["Graphics/UI/Move Reminder/buttons", 67, 175, 38, 0, 38, 16])
     end
     pbDrawImagePositions(overlay, imagepos)
-    drawTextEx(overlay, 272, 216, 230, 5, selMoveData.description,
+    drawTextEx(overlay, 136, 108, 115, 5, selMoveData.description,
                Color.new(64, 64, 64), Color.new(176, 176, 176))
   end
 
@@ -118,7 +118,7 @@ class MoveRelearner_Scene
         pbUpdate
         if @sprites["commands"].index != oldcmd
           @sprites["background"].x = 0
-          @sprites["background"].y = 78 + ((@sprites["commands"].index - @sprites["commands"].top_item) * 64)
+          @sprites["background"].y = 39 + ((@sprites["commands"].index - @sprites["commands"].top_item) * 32)
           pbDrawMoveList
         end
         if Input.trigger?(Input::BACK)

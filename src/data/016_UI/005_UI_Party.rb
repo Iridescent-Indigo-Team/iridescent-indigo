@@ -19,7 +19,7 @@ class PokemonPartyConfirmCancelSprite < Sprite
     @overlaysprite = BitmapSprite.new(@bgsprite.bitmap.width, @bgsprite.bitmap.height, viewport)
     @overlaysprite.z = self.z + 1
     pbSetSystemFont(@overlaysprite.bitmap)
-    textpos = [[text, 56, (narrowbox) ? 8 : 14, :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
+    textpos = [[text, 28, (narrowbox) ? 4 : 7, :center, Color.new(248, 248, 248), Color.new(40, 40, 40)]]
     pbDrawTextPositions(@overlaysprite.bitmap, textpos)
     self.x = x
     self.y = y
@@ -139,7 +139,7 @@ class PokemonPartyBlankPanel < Sprite
   def initialize(_pokemon, index, viewport = nil)
     super(viewport)
     self.x = (index % 2) * Graphics.width / 2
-    self.y = (16 * (index % 2)) + (96 * (index / 2))
+    self.y = (8 * (index % 2)) + (48 * (index / 2))
     @panelbgsprite = AnimatedBitmap.new("Graphics/UI/Party/panel_blank")
     self.bitmap = @panelbgsprite.bitmap
     @text = nil
@@ -172,9 +172,9 @@ class PokemonPartyPanel < Sprite
 
   TEXT_BASE_COLOR    = Color.new(248, 248, 248)
   TEXT_SHADOW_COLOR  = Color.new(40, 40, 40)
-  HP_BAR_WIDTH       = 96
-  STATUS_ICON_WIDTH  = 44
-  STATUS_ICON_HEIGHT = 16
+  HP_BAR_WIDTH       = 48
+  STATUS_ICON_WIDTH  = 22
+  STATUS_ICON_HEIGHT = 8
 
   def initialize(pokemon, index, viewport = nil)
     super(viewport)
@@ -182,7 +182,7 @@ class PokemonPartyPanel < Sprite
     @active = (index == 0)   # true = rounded panel, false = rectangular panel
     @refreshing = true
     self.x = (index % 2) * Graphics.width / 2
-    self.y = (16 * (index % 2)) + (96 * (index / 2))
+    self.y = (8 * (index % 2)) + (48 * (index / 2))
     @panelbgsprite = ChangelingSprite.new(0, 0, viewport)
     @panelbgsprite.z = self.z
     if @active   # Rounded panel
@@ -331,31 +331,31 @@ class PokemonPartyPanel < Sprite
     else
       @hpbgsprite.changeBitmap("able")
     end
-    @hpbgsprite.x     = self.x + 96
-    @hpbgsprite.y     = self.y + 50
+    @hpbgsprite.x     = self.x + 48
+    @hpbgsprite.y     = self.y + 25
     @hpbgsprite.color = self.color
   end
 
   def refresh_ball_graphic
     return if !@ballsprite || @ballsprite.disposed?
     @ballsprite.changeBitmap((self.selected) ? "sel" : "desel")
-    @ballsprite.x     = self.x + 10
+    @ballsprite.x     = self.x + 5
     @ballsprite.y     = self.y
     @ballsprite.color = self.color
   end
 
   def refresh_pokemon_icon
     return if !@pkmnsprite || @pkmnsprite.disposed?
-    @pkmnsprite.x        = self.x + 60
-    @pkmnsprite.y        = self.y + 40
+    @pkmnsprite.x        = self.x + 30
+    @pkmnsprite.y        = self.y + 20
     @pkmnsprite.color    = self.color
     @pkmnsprite.selected = self.selected
   end
 
   def refresh_held_item_icon
     return if !@helditemsprite || @helditemsprite.disposed? || !@helditemsprite.visible
-    @helditemsprite.x     = self.x + 62
-    @helditemsprite.y     = self.y + 48
+    @helditemsprite.x     = self.x + 31
+    @helditemsprite.y     = self.y + 24
     @helditemsprite.color = self.color
   end
 
@@ -373,18 +373,18 @@ class PokemonPartyPanel < Sprite
 
   def draw_name
     pbDrawTextPositions(@overlaysprite.bitmap,
-                        [[@pokemon.name, 96, 22, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
+                        [[@pokemon.name, 48, 11, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
   end
 
   def draw_level
     return if @pokemon.egg?
     # "Lv" graphic
     pbDrawImagePositions(@overlaysprite.bitmap,
-                         [[_INTL("Graphics/UI/Party/overlay_lv"), 20, 70, 0, 0, 22, 14]])
+                         [[_INTL("Graphics/UI/Party/overlay_lv"), 10, 35, 0, 0, 11, 7]])
     # Level number
     pbSetSmallFont(@overlaysprite.bitmap)
     pbDrawTextPositions(@overlaysprite.bitmap,
-                        [[@pokemon.level.to_s, 42, 68, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
+                        [[@pokemon.level.to_s, 21, 34, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
     pbSetSystemFont(@overlaysprite.bitmap)
   end
 
@@ -394,7 +394,7 @@ class PokemonPartyPanel < Sprite
     base_color   = (@pokemon.male?) ? Color.new(0, 112, 248) : Color.new(232, 32, 16)
     shadow_color = (@pokemon.male?) ? Color.new(120, 184, 232) : Color.new(248, 168, 184)
     pbDrawTextPositions(@overlaysprite.bitmap,
-                        [[gender_text, 224, 22, :left, base_color, shadow_color]])
+                        [[gender_text, 112, 11, :left, base_color, shadow_color]])
   end
 
   def draw_hp
@@ -402,17 +402,17 @@ class PokemonPartyPanel < Sprite
     # HP numbers
     hp_text = sprintf("% 3d /% 3d", @pokemon.hp, @pokemon.totalhp)
     pbDrawTextPositions(@overlaysprite.bitmap,
-                        [[hp_text, 224, 66, :right, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
+                        [[hp_text, 112, 33, :right, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
     # HP bar
     if @pokemon.able?
       w = @pokemon.hp * HP_BAR_WIDTH / @pokemon.totalhp.to_f
       w = 1 if w < 1
-      w = ((w / 2).round) * 2   # Round to the nearest 2 pixels
+      w = w.round
       hpzone = 0
       hpzone = 1 if @pokemon.hp <= (@pokemon.totalhp / 2).floor
       hpzone = 2 if @pokemon.hp <= (@pokemon.totalhp / 4).floor
-      hprect = Rect.new(0, hpzone * 8, w, 8)
-      @overlaysprite.bitmap.blt(128, 52, @hpbar.bitmap, hprect)
+      hprect = Rect.new(0, hpzone * 4, w, 4)
+      @overlaysprite.bitmap.blt(64, 26, @hpbar.bitmap, hprect)
     end
   end
 
@@ -428,19 +428,19 @@ class PokemonPartyPanel < Sprite
     end
     return if status < 0
     statusrect = Rect.new(0, STATUS_ICON_HEIGHT * status, STATUS_ICON_WIDTH, STATUS_ICON_HEIGHT)
-    @overlaysprite.bitmap.blt(78, 68, @statuses.bitmap, statusrect)
+    @overlaysprite.bitmap.blt(39, 34, @statuses.bitmap, statusrect)
   end
 
   def draw_shiny_icon
     return if @pokemon.egg? || !@pokemon.shiny?
     pbDrawImagePositions(@overlaysprite.bitmap,
-                         [["Graphics/UI/shiny", 80, 48, 0, 0, 16, 16]])
+                         [["Graphics/UI/shiny", 40, 24, 0, 0, 8, 8]])
   end
 
   def draw_annotation
     return if !@text || @text.length == 0
     pbDrawTextPositions(@overlaysprite.bitmap,
-                        [[@text, 96, 62, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
+                        [[@text, 48, 31, :left, TEXT_BASE_COLOR, TEXT_SHADOW_COLOR]])
   end
 
   def refresh
@@ -493,8 +493,8 @@ class PokemonParty_Scene
     @sprites["storagetext"] = Window_UnformattedTextPokemon.new(
       @can_access_storage ? _INTL("[Special]: To Boxes") : ""
     )
-    @sprites["storagetext"].x           = 32
-    @sprites["storagetext"].y           = Graphics.height - @sprites["messagebox"].height - 16
+    @sprites["storagetext"].x           = 16
+    @sprites["storagetext"].y           = Graphics.height - @sprites["messagebox"].height - 8
     @sprites["storagetext"].z           = 10
     @sprites["storagetext"].viewport    = @viewport
     @sprites["storagetext"].baseColor   = Color.new(248, 248, 248)
@@ -624,7 +624,7 @@ class PokemonParty_Scene
     helpwindow = @sprites["helpwindow"]
     pbBottomLeftLines(helpwindow, 1)
     helpwindow.text = helptext
-    helpwindow.width = 398
+    helpwindow.width = 199
     helpwindow.visible = true
   end
 

@@ -22,11 +22,38 @@ def mainFunction
   return 1
 end
 
+# Compiles the game data and quits, without opening the game. Used by
+# `make compile` (./game.sh --compile) to produce Data/*.dat for builds that
+# can't compile at runtime, such as Android. Errors are printed to the console
+# instead of message boxes so a headless run never hangs.
+def pbCompileOnlyAndExit
+  # Send messages that would open a message box to the console instead.
+  Object.send(:define_method, :pbPrintException) do |e|
+    $stdout.puts("#{e.class}: #{e.message}")
+    $stdout.puts(e.backtrace.join("\n")) if e.backtrace
+  end
+  Object.send(:define_method, :print) { |*args| $stdout.puts(args.join) }
+  begin
+    $full_compile = true
+    PluginManager.runPlugins
+    Compiler.main
+    File.open(".compile_ok", "wb") { |f| f.write("ok") }
+    Kernel.exit!(0)
+  rescue Exception => e
+    raise if e.is_a?(SystemExit)
+    $stdout.puts("Compiling failed: #{e.class}: #{e.message}")
+    $stdout.puts(e.backtrace.join("\n")) if e.backtrace
+    $stdout.flush
+    Kernel.exit!(1)
+  end
+end
+
 def mainFunctionDebug
   begin
     MessageTypes.load_default_messages if FileTest.exist?("Data/messages_core.dat")
+    pbCompileOnlyAndExit if ENV["POKESSENTIALS_COMPILE_ONLY"] == "1"
     if $DEBUG && !FileTest.exist?("Game.rgssad") && Settings::PROMPT_TO_COMPILE
-      pbSetResizeFactor(1)   # Needed to make the message look good
+      pbSetResizeFactor(2)   # Needed to make the message look good (3x)
       if pbConfirmMessage("\\ts[]" + "Do you want to compile your data and plugins?")
         $full_compile = true
       end

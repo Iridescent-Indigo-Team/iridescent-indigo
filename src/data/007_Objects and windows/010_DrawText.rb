@@ -110,9 +110,9 @@ def itemIconTag(item)
   if item.respond_to?("icon_name")
     return sprintf("<icon=%s>", item.icon_name)
   else
-    ix = (item.icon_index % 16) * 24
-    iy = (item.icon_index / 16) * 24
-    return sprintf("<img=Graphics/System/Iconset|%d|%d|24|24>", ix, iy)
+    ix = (item.icon_index % 16) * 12
+    iy = (item.icon_index / 16) * 12
+    return sprintf("<img=Graphics/System/Iconset|%d|%d|12|12>", ix, iy)
   end
 end
 
@@ -182,12 +182,12 @@ def getFormattedTextFast(bitmap, xDst, yDst, widthDst, heightDst, text, lineheig
     if heightDst < 0 || yStart < yDst + heightDst
       havenl = true if isWaitChar(textchars[position])
       characters.push([textchars[position],
-                       x + xStart, texty, width + 2, lineheight,
+                       x + xStart, texty, width + 1, lineheight,
                        false, bold, italic, colorclone, nil, false, false,
                        defaultfontname, bitmap.font.size, position, nil, 0])
     end
     x += width
-    if !explicitBreaksOnly && x + 2 > widthDst && lastword[1] != 0 &&
+    if !explicitBreaksOnly && x + 1 > widthDst && lastword[1] != 0 &&
        (!hadnonspace || !hadspace)
       havenl = true
       characters.insert(lastword[0], ["\n", x, (y * lineheight) + yDst, 0, lineheight,
@@ -342,7 +342,7 @@ end
 # To draw the characters, pass the returned array to the
 # _drawFormattedChars_ function.
 #===============================================================================
-def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight = 32,
+def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight = 16,
                      newlineBreaks = true, explicitBreaksOnly = false,
                      collapseAlignments = false)
   dummybitmap = nil
@@ -424,7 +424,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
     nextline = 0
     graphic = nil
     graphicX = 0
-    graphicY = 4
+    graphicY = 2
     graphicWidth = nil
     graphicHeight = nil
     graphicRect = nil
@@ -560,13 +560,13 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
       width = graphicWidth   # +8  # No padding
       xStart = 0   # 4
       yStart = [(lineheight / 2) - (graphicHeight / 2), 0].max
-      yStart += 4   # TEXT OFFSET
+      yStart += 2   # TEXT OFFSET
       graphicRect = Rect.new(graphicX, graphicY, graphicWidth, graphicHeight)
     else
       xStart = 0
       yStart = 0
       width = isWaitChar(textchars[position]) ? 0 : bitmap.text_size(textchars[position]).width
-      width += 2 if width > 0 && outline2count > 0
+      width += 1 if width > 0 && outline2count > 0
     end
     if rightalign == 1 && nextline == 0
       alignment = 1
@@ -604,7 +604,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
         textchars[position] = " "
         if !graphic
           width = bitmap.text_size(textchars[position]).width
-          width += 2 if width > 0 && outline2count > 0
+          width += 1 if width > 0 && outline2count > 0
         end
       end
     end
@@ -618,7 +618,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
     elsif isspace
       hadspace = true
     end
-    texty = (lineheight * y) + yDst + yStart - 2   # TEXT OFFSET
+    texty = (lineheight * y) + yDst + yStart - 1   # TEXT OFFSET
     colors = getLastColors(colorstack, opacitystack, defaultcolors)
     # Push character
     if heightDst < 0 || texty < yDst + heightDst
@@ -634,7 +634,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
       charactersInternal.push([alignment, y, xStart, textchars[position], extraspace])
     end
     x += width
-    if !explicitBreaksOnly && x + 2 > widthDst && lastword[1] != 0 &&
+    if !explicitBreaksOnly && x + 1 > widthDst && lastword[1] != 0 &&
        (!hadnonspace || !hadspace)
       havenl = true
       characters.insert(lastword[0], ["\n", x, (y * lineheight) + yDst, 0, lineheight,
@@ -758,7 +758,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
       totalLineWidths[y] = 0 if !totalLineWidths[y]
       if totalLineWidths[y] != 0
         # padding in case more than one line has different alignments
-        totalLineWidths[y] += 16
+        totalLineWidths[y] += 8
       end
       totalLineWidths[y] += block[3]
     end
@@ -770,7 +770,7 @@ def getFormattedText(bitmap, xDst, yDst, widthDst, heightDst, text, lineheight =
     next if block[0] >= block[1]
     (block[0]...block[1]).each do |i|
       case block[2]
-      when 1 then characters[i][1] = xDst + (widthDst - block[3] - 4) + characters[i][1]
+      when 1 then characters[i][1] = xDst + (widthDst - block[3] - 2) + characters[i][1]
       when 2 then characters[i][1] = xDst + ((widthDst / 2) - (block[3] / 2)) + characters[i][1]
       else        characters[i][1] = xDst + characters[i][1]
       end
@@ -861,7 +861,7 @@ def getLineBrokenChunks(bitmap, value, width, dims, plain = false)
     ccheck = c
     if ccheck == "\n"
       x = 0
-      y += 32
+      y += 16
       next
     end
     textcols = []
@@ -880,10 +880,10 @@ def getLineBrokenChunks(bitmap, value, width, dims, plain = false)
           minTextSize = bitmap.text_size(word.gsub(/\s*/, ""))
           if x > 0 && x + minTextSize.width > width
             x = 0
-            y += 32
+            y += 16
           end
         end
-        ret.push([word, x, y, textwidth, 32, color])
+        ret.push([word, x, y, textwidth, 16, color])
         x += textwidth
         dims[0] = x if dims && dims[0] < x
       end
@@ -901,7 +901,7 @@ def renderLineBrokenChunks(bitmap, xDst, yDst, normtext, maxheight = 0)
     texty = text[2] + yDst
     if maxheight == 0 || text[2] < maxheight
       bitmap.font.color = text[5]
-      bitmap.draw_text(textx, texty, width + 2, text[4], text[0])
+      bitmap.draw_text(textx, texty, width + 1, text[4], text[0])
     end
   end
 end
@@ -915,11 +915,11 @@ def renderLineBrokenChunksWithShadow(bitmap, xDst, yDst, normtext, maxheight, ba
     height = text[4]
     text = text[0]
     bitmap.font.color = shadowColor
-    bitmap.draw_text(textx + 2, texty, width + 2, height, text)
-    bitmap.draw_text(textx, texty + 2, width + 2, height, text)
-    bitmap.draw_text(textx + 2, texty + 2, width + 2, height, text)
+    bitmap.draw_text(textx + 1, texty, width + 1, height, text)
+    bitmap.draw_text(textx, texty + 1, width + 1, height, text)
+    bitmap.draw_text(textx + 1, texty + 1, width + 1, height, text)
     bitmap.font.color = baseColor
-    bitmap.draw_text(textx, texty, width + 2, height, text)
+    bitmap.draw_text(textx, texty, width + 1, height, text)
   end
 end
 
@@ -948,10 +948,10 @@ def drawSingleFormattedChar(bitmap, ch)
   bitmap.font.size = ch[13] if bitmap.font.size != ch[13]
   if ch[9]   # shadow
     if ch[10]   # underline
-      bitmap.fill_rect(ch[1], ch[2] + ch[4] - [(ch[4] - bitmap.font.size) / 2, 0].max - 2, ch[3], 4, ch[9])
+      bitmap.fill_rect(ch[1], ch[2] + ch[4] - [(ch[4] - bitmap.font.size) / 2, 0].max - 1, ch[3], 2, ch[9])
     end
     if ch[11]   # strikeout
-      bitmap.fill_rect(ch[1], ch[2] + 2 + (ch[4] / 2), ch[3], 4, ch[9])
+      bitmap.fill_rect(ch[1], ch[2] + 1 + (ch[4] / 2), ch[3], 2, ch[9])
     end
   end
   if ch[0] == "\n" || ch[0] == "\r" || ch[0] == " " || isWaitChar(ch[0])
@@ -963,7 +963,7 @@ def drawSingleFormattedChar(bitmap, ch)
     offset = 0
     if ch[9]   # shadow
       bitmap.font.color = ch[9]
-      if (ch[16] & 1) != 0   # outline
+      if (ch[16] & 3) != 0   # outline / outline 2 (both 1px at this resolution)
         offset = 1
         bitmap.draw_text(ch[1], ch[2], ch[3] + 2, ch[4], ch[0])
         bitmap.draw_text(ch[1], ch[2] + 1, ch[3] + 2, ch[4], ch[0])
@@ -973,30 +973,20 @@ def drawSingleFormattedChar(bitmap, ch)
         bitmap.draw_text(ch[1] + 2, ch[2], ch[3] + 2, ch[4], ch[0])
         bitmap.draw_text(ch[1] + 2, ch[2] + 1, ch[3] + 2, ch[4], ch[0])
         bitmap.draw_text(ch[1] + 2, ch[2] + 2, ch[3] + 2, ch[4], ch[0])
-      elsif (ch[16] & 2) != 0   # outline 2
-        offset = 2
-        bitmap.draw_text(ch[1], ch[2], ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1], ch[2] + 2, ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1], ch[2] + 4, ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 2, ch[2], ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 2, ch[2] + 4, ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 4, ch[2], ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 4, ch[2] + 2, ch[3] + 4, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 4, ch[2] + 4, ch[3] + 4, ch[4], ch[0])
       else
-        bitmap.draw_text(ch[1] + 2, ch[2], ch[3] + 2, ch[4], ch[0])
-        bitmap.draw_text(ch[1], ch[2] + 2, ch[3] + 2, ch[4], ch[0])
-        bitmap.draw_text(ch[1] + 2, ch[2] + 2, ch[3] + 2, ch[4], ch[0])
+        bitmap.draw_text(ch[1] + 1, ch[2], ch[3] + 1, ch[4], ch[0])
+        bitmap.draw_text(ch[1], ch[2] + 1, ch[3] + 1, ch[4], ch[0])
+        bitmap.draw_text(ch[1] + 1, ch[2] + 1, ch[3] + 1, ch[4], ch[0])
       end
     end
     bitmap.font.color = ch[8] if bitmap.font.color != ch[8]
     bitmap.draw_text(ch[1] + offset, ch[2] + offset, ch[3], ch[4], ch[0])
   end
   if ch[10]   # underline
-    bitmap.fill_rect(ch[1], ch[2] + ch[4] - [(ch[4] - bitmap.font.size) / 2, 0].max - 2, ch[3] - 2, 2, ch[8])
+    bitmap.fill_rect(ch[1], ch[2] + ch[4] - [(ch[4] - bitmap.font.size) / 2, 0].max - 1, ch[3] - 1, 1, ch[8])
   end
   if ch[11]   # strikeout
-    bitmap.fill_rect(ch[1], ch[2] + 2 + (ch[4] / 2), ch[3] - 2, 2, ch[8])
+    bitmap.fill_rect(ch[1], ch[2] + 1 + (ch[4] / 2), ch[3] - 1, 1, ch[8])
   end
 end
 
@@ -1028,11 +1018,11 @@ end
 
 def drawTextEx(bitmap, x, y, width, numlines, text, baseColor, shadowColor)
   normtext = getLineBrokenChunks(bitmap, text, width, nil, true)
-  renderLineBrokenChunksWithShadow(bitmap, x, y, normtext, numlines * 32,
+  renderLineBrokenChunksWithShadow(bitmap, x, y, normtext, numlines * 16,
                                    baseColor, shadowColor)
 end
 
-def drawFormattedTextEx(bitmap, x, y, width, text, baseColor = nil, shadowColor = nil, lineheight = 32)
+def drawFormattedTextEx(bitmap, x, y, width, text, baseColor = nil, shadowColor = nil, lineheight = 16)
   base = baseColor ? baseColor.clone : Color.new(96, 96, 96)
   shadow = shadowColor ? shadowColor.clone : Color.new(208, 208, 200)
   text = shadowc3tag(base, shadow) + text
@@ -1062,9 +1052,9 @@ def pbDrawShadowText(bitmap, x, y, width, height, string, baseColor, shadowColor
   height = (height < 0) ? bitmap.text_size(string).height + 1 : height
   if shadowColor && shadowColor.alpha > 0
     bitmap.font.color = shadowColor
-    bitmap.draw_text(x + 2, y, width, height, string, align)
-    bitmap.draw_text(x, y + 2, width, height, string, align)
-    bitmap.draw_text(x + 2, y + 2, width, height, string, align)
+    bitmap.draw_text(x + 1, y, width, height, string, align)
+    bitmap.draw_text(x, y + 1, width, height, string, align)
+    bitmap.draw_text(x + 1, y + 1, width, height, string, align)
   end
   if baseColor && baseColor.alpha > 0
     bitmap.font.color = baseColor
@@ -1074,18 +1064,18 @@ end
 
 def pbDrawOutlineText(bitmap, x, y, width, height, string, baseColor, shadowColor = nil, align = 0)
   return if !bitmap || !string
-  width = (width < 0) ? bitmap.text_size(string).width + 4 : width
-  height = (height < 0) ? bitmap.text_size(string).height + 4 : height
+  width = (width < 0) ? bitmap.text_size(string).width + 2 : width
+  height = (height < 0) ? bitmap.text_size(string).height + 2 : height
   if shadowColor && shadowColor.alpha > 0
     bitmap.font.color = shadowColor
-    bitmap.draw_text(x - 2, y - 2, width, height, string, align)
-    bitmap.draw_text(x, y - 2, width, height, string, align)
-    bitmap.draw_text(x + 2, y - 2, width, height, string, align)
-    bitmap.draw_text(x - 2, y, width, height, string, align)
-    bitmap.draw_text(x + 2, y, width, height, string, align)
-    bitmap.draw_text(x - 2, y + 2, width, height, string, align)
-    bitmap.draw_text(x, y + 2, width, height, string, align)
-    bitmap.draw_text(x + 2, y + 2, width, height, string, align)
+    bitmap.draw_text(x - 1, y - 1, width, height, string, align)
+    bitmap.draw_text(x, y - 1, width, height, string, align)
+    bitmap.draw_text(x + 1, y - 1, width, height, string, align)
+    bitmap.draw_text(x - 1, y, width, height, string, align)
+    bitmap.draw_text(x + 1, y, width, height, string, align)
+    bitmap.draw_text(x - 1, y + 1, width, height, string, align)
+    bitmap.draw_text(x, y + 1, width, height, string, align)
+    bitmap.draw_text(x + 1, y + 1, width, height, string, align)
   end
   if baseColor && baseColor.alpha > 0
     bitmap.font.color = baseColor

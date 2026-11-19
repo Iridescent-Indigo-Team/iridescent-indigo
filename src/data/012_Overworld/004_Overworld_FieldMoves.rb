@@ -85,8 +85,8 @@ def pbHiddenMoveAnimation(pokemon)
   strobes_start_x = []
   strobes_timers = []
   15.times do |i|
-    strobe = BitmapSprite.new(52, 16, viewport)
-    strobe.bitmap.blt(0, 0, strobebitmap.bitmap, Rect.new(0, (i % 2) * 16, 52, 16))
+    strobe = BitmapSprite.new(26, 8, viewport)
+    strobe.bitmap.blt(0, 0, strobebitmap.bitmap, Rect.new(0, (i % 2) * 8, 26, 8))
     strobe.z = (i.even? ? 2 : 0)
     strobe.visible = false
     strobes.push(strobe)

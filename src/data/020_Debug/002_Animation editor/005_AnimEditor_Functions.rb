@@ -29,11 +29,11 @@ module BattleAnimationEditor
   def pbSelectAnim(canvas, animwin)
     animfiles = []
     pbRgssChdir(File.join("Graphics", "Animations")) { animfiles.concat(Dir.glob("*.png")) }
-    cmdwin = pbListWindow(animfiles, 320)
+    cmdwin = pbListWindow(animfiles, 160)
     cmdwin.opacity = 200
-    cmdwin.height = 512
-    bmpwin = BitmapDisplayWindow.new(320, 0, 320, 448)
-    ctlwin = ControlWindow.new(320, 448, 320, 64)
+    cmdwin.height = 256
+    bmpwin = BitmapDisplayWindow.new(160, 0, 160, 224)
+    ctlwin = ControlWindow.new(160, 224, 160, 32)
     cmdwin.viewport = canvas.viewport
     bmpwin.viewport = canvas.viewport
     ctlwin.viewport = canvas.viewport
@@ -66,7 +66,7 @@ module BattleAnimationEditor
   end
 
   def pbChangeMaximum(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 4)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 2)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.addSlider(_INTL("Frames:"), 1, 1000, canvas.animation.length)
     okbutton = sliderwin2.addButton(_INTL("OK"))
@@ -89,7 +89,7 @@ module BattleAnimationEditor
   end
 
   def pbAnimName(animation, cmdwin)
-    window = ControlWindow.new(320, 128, 320, 32 * 4)
+    window = ControlWindow.new(160, 64, 160, 32 * 2)
     window.z = 99999
     window.addControl(TextField.new(_INTL("New Name:"), animation.name))
     Input.text_input = true
@@ -120,16 +120,16 @@ module BattleAnimationEditor
       animations[i] = PBAnimation.new if !animations[i]
       commands[commands.length] = _INTL("{1} {2}", i, animations[i].name)
     end
-    cmdwin = pbListWindow(commands, 320)
-    cmdwin.height = 416
+    cmdwin = pbListWindow(commands, 160)
+    cmdwin.height = 208
     cmdwin.opacity = 224
     cmdwin.index = animations.selected
     cmdwin.viewport = canvas.viewport
     helpwindow = Window_UnformattedTextPokemon.newWithSize(
       _INTL("Enter: Load/rename an animation\nEsc: Cancel"),
-      320, 0, 320, 128, canvas.viewport
+      160, 0, 160, 64, canvas.viewport
     )
-    maxsizewindow = ControlWindow.new(0, 416, 320, 32 * 3)
+    maxsizewindow = ControlWindow.new(0, 208, 160, 16 * 3)
     maxsizewindow.addSlider(_INTL("Total Animations:"), 1, 2000, animations.length)
     maxsizewindow.addButton(_INTL("Resize Animation List"))
     maxsizewindow.opacity = 224
@@ -187,7 +187,7 @@ module BattleAnimationEditor
   #=============================================================================
   def pbChooseNum(cel)
     ret = cel
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 5)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 3)
     sliderwin2.z = 99999
     sliderwin2.addLabel(_INTL("Old Number: {1}", cel))
     sliderwin2.addSlider(_INTL("New Number:"), 2, PBAnimation::MAX_SPRITES, cel)
@@ -211,7 +211,7 @@ module BattleAnimationEditor
   end
 
   def pbSetTone(cel, previewsprite)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 320)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 160)
     sliderwin2.z = 99999
     sliderwin2.addSlider(_INTL("Red Offset:"), -255, 255, cel[AnimFrame::TONERED])
     sliderwin2.addSlider(_INTL("Green Offset:"), -255, 255, cel[AnimFrame::TONEGREEN])
@@ -241,7 +241,7 @@ module BattleAnimationEditor
   end
 
   def pbSetFlash(cel, previewsprite)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 320)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 160)
     sliderwin2.z = 99999
     sliderwin2.addSlider(_INTL("Red:"), 0, 255, cel[AnimFrame::COLORRED])
     sliderwin2.addSlider(_INTL("Green:"), 0, 255, cel[AnimFrame::COLORGREEN])
@@ -273,8 +273,8 @@ module BattleAnimationEditor
   def pbCellProperties(canvas)
     cel = canvas.currentCel.clone # Clone cell, in case operation is canceled
     return if !cel
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 16)
-    previewwin = ControlWindow.new(320, 0, 192, 192)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 8)
+    previewwin = ControlWindow.new(160, 0, 96, 96)
     sliderwin2.viewport = canvas.viewport
     previewwin.viewport = canvas.viewport
     previewsprite = Sprite.new(canvas.viewport)
@@ -300,8 +300,8 @@ module BattleAnimationEditor
     okbutton = sliderwin2.addButton(_INTL("OK"))
     cancelbutton = sliderwin2.addButton(_INTL("Cancel"))
     # Set X and Y for preview sprite
-    cel[AnimFrame::X] = 320 + 96
-    cel[AnimFrame::Y] = 96
+    cel[AnimFrame::X] = 160 + 48
+    cel[AnimFrame::Y] = 48
     canvas.setSpriteBitmap(previewsprite, cel)
     pbSpriteSetAnimFrame(previewsprite, cel, nil, nil)
     previewsprite.z = previewwin.z + 1
@@ -386,14 +386,14 @@ module BattleAnimationEditor
     commands[cmdEditBG = commands.length] = _INTL("Add: Edit Background Color/Location...")
     commands[cmdNewFO = commands.length] = _INTL("Add: Set Foreground Graphic...")
     commands[cmdEditFO = commands.length] = _INTL("Add: Edit Foreground Color/Location...")
-    cmdwin = pbListWindow(commands, 480)
+    cmdwin = pbListWindow(commands, 240)
     cmdwin.x = 0
     cmdwin.y = 0
-    cmdwin.width = 640
-    cmdwin.height = 384
+    cmdwin.width = 320
+    cmdwin.height = 192
     cmdwin.opacity = 200
     cmdwin.viewport = canvas.viewport
-    framewindow = ControlWindow.new(0, 384, 640, 32 * 4)
+    framewindow = ControlWindow.new(0, 192, 320, 32 * 2)
     framewindow.addSlider(_INTL("Frame:"), 1, canvas.animation.length, canvas.currentframe + 1)
     framewindow.addButton(_INTL("Set Frame"))
     framewindow.addButton(_INTL("Delete Timing"))
@@ -515,11 +515,11 @@ module BattleAnimationEditor
     animfiles.uniq!
     animfiles.sort! { |a, b| a.downcase <=> b.downcase }
     animfiles = [_INTL("[Play user's cry]")] + animfiles
-    cmdwin = pbListWindow(animfiles, 320)
-    cmdwin.height = 480
+    cmdwin = pbListWindow(animfiles, 160)
+    cmdwin.height = 240
     cmdwin.opacity = 200
     cmdwin.viewport = canvas.viewport
-    maxsizewindow = ControlWindow.new(320, 0, 320, 32 * 8)
+    maxsizewindow = ControlWindow.new(160, 0, 160, 32 * 4)
     maxsizewindow.addLabel(_INTL("File: \"{1}\"", displayname))
     maxsizewindow.addSlider(_INTL("Volume:"), 0, 100, audio.volume)
     maxsizewindow.addSlider(_INTL("Pitch:"), 20, 250, audio.pitch)
@@ -574,11 +574,11 @@ module BattleAnimationEditor
     end
     animfiles.uniq!
     animfiles.sort! { |a, b| a.downcase <=> b.downcase }
-    cmdwin = pbListWindow(animfiles, 320)
-    cmdwin.height = 480
+    cmdwin = pbListWindow(animfiles, 160)
+    cmdwin.height = 240
     cmdwin.opacity = 200
     cmdwin.viewport = canvas.viewport
-    maxsizewindow = ControlWindow.new(320, 0, 320, 32 * 11)
+    maxsizewindow = ControlWindow.new(160, 0, 160, 32 * 6)
     maxsizewindow.addLabel(_INTL("File: \"{1}\"", filename))
     maxsizewindow.addSlider(_INTL("X:"), -500, 500, timing.bgX || 0)
     maxsizewindow.addSlider(_INTL("Y:"), -500, 500, timing.bgY || 0)
@@ -623,7 +623,7 @@ module BattleAnimationEditor
 
   def pbEditBG(canvas, timing)
     ret = false
-    maxsizewindow = ControlWindow.new(0, 0, 320, 32 * 11)
+    maxsizewindow = ControlWindow.new(0, 0, 160, 32 * 6)
     maxsizewindow.addSlider(_INTL("Duration:"), 0, 50, timing.duration)
     maxsizewindow.addOptionalSlider(_INTL("X:"), -500, 500, timing.bgX || 0)
     maxsizewindow.addOptionalSlider(_INTL("Y:"), -500, 500, timing.bgY || 0)
@@ -677,7 +677,7 @@ module BattleAnimationEditor
   end
 
   def pbCopyFrames(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 6)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 3)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.addSlider(_INTL("First Frame:"), 1, canvas.animation.length, 1)
     sliderwin2.addSlider(_INTL("Last Frame:"), 1, canvas.animation.length, canvas.animation.length)
@@ -724,7 +724,7 @@ module BattleAnimationEditor
   end
 
   def pbClearFrames(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 5)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 3)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.addSlider(_INTL("First Frame:"), 1, canvas.animation.length, 1)
     sliderwin2.addSlider(_INTL("Last Frame:"), 1, canvas.animation.length, canvas.animation.length)
@@ -752,7 +752,7 @@ module BattleAnimationEditor
   end
 
   def pbTweening(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 10)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 5)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.opacity = 200
     s1set0 = sliderwin2.addSlider(_INTL("Starting Frame:"), 1, canvas.animation.length, 1)
@@ -829,14 +829,14 @@ module BattleAnimationEditor
   end
 
   def pbCellBatch(canvas)
-    sliderwin1 = ControlWindow.new(0, 0, 300, 32 * 5)
+    sliderwin1 = ControlWindow.new(0, 0, 150, 32 * 3)
     sliderwin1.viewport = canvas.viewport
     sliderwin1.opacity = 200
     s1set0 = sliderwin1.addSlider(_INTL("First Frame:"), 1, canvas.animation.length, 1)
     s1set1 = sliderwin1.addSlider(_INTL("Last Frame:"), 1, canvas.animation.length, canvas.animation.length)
     s1set2 = sliderwin1.addSlider(_INTL("First Cel:"), 0, PBAnimation::MAX_SPRITES - 1, 0)
     s1set3 = sliderwin1.addSlider(_INTL("Last Cel:"), 0, PBAnimation::MAX_SPRITES - 1, PBAnimation::MAX_SPRITES - 1)
-    sliderwin2 = ControlWindow.new(300, 0, 340, 32 * 14)
+    sliderwin2 = ControlWindow.new(150, 0, 170, 32 * 7)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.opacity = 200
     set0 = sliderwin2.addOptionalSlider(_INTL("Pattern:"), -2, 1000, 0)
@@ -894,7 +894,7 @@ module BattleAnimationEditor
   end
 
   def pbEntireSlide(canvas)
-    sliderwin2 = ControlWindow.new(0, 0, 320, 32 * 7)
+    sliderwin2 = ControlWindow.new(0, 0, 160, 32 * 4)
     sliderwin2.viewport = canvas.viewport
     sliderwin2.addSlider(_INTL("First Frame:"), 1, canvas.animation.length, 1)
     sliderwin2.addSlider(_INTL("Last Frame:"), 1, canvas.animation.length, canvas.animation.length)
@@ -932,7 +932,7 @@ module BattleAnimationEditor
                "E, R - Rotate left/right.\nP - Open properties screen.\nArrow keys - Move cel 8 pixels " +
                "(hold ALT for 2 pixels).\n+/- : Zoom in/out.\nL - Lock a cel. Locking a cel prevents it " +
                "from being moved or deleted.\nDEL - Deletes the cel.\nAlso press TAB to switch the selected cel."
-    cmdwin = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 640, 512)
+    cmdwin = Window_UnformattedTextPokemon.newWithSize("", 0, 0, 320, 256)
     cmdwin.opacity = 224
     cmdwin.z = 99999
     cmdwin.text = helptext
@@ -949,12 +949,12 @@ module BattleAnimationEditor
   # Main
   #=============================================================================
   def animationEditorMain(animation)
-    viewport = Viewport.new(0, 0, Settings::SCREEN_WIDTH + 288, Settings::SCREEN_HEIGHT + 288)
+    viewport = Viewport.new(0, 0, Settings::SCREEN_WIDTH + 144, Settings::SCREEN_HEIGHT + 144)
     viewport.z = 99999
     # Canvas
     canvas = AnimationCanvas.new(animation[animation.selected] || animation[0], viewport)
     # Right hand menu
-    sidewin = ControlWindow.new(512 + 128, 0, 160, 384 + 128)
+    sidewin = ControlWindow.new(256 + 64, 0, 80, 192 + 64)
     sidewin.addButton(_INTL("SE and BG..."))
     sidewin.addButton(_INTL("Cel Focus..."))
     sidewin.addSpace
@@ -972,16 +972,16 @@ module BattleAnimationEditor
     sidewin.addButton(_INTL("Help"))
     sidewin.viewport = canvas.viewport
     # Bottom left menu
-    sliderwin = ControlWindow.new(0, 384 + 128, 240, 160)
+    sliderwin = ControlWindow.new(0, 192 + 64, 120, 80)
     sliderwin.addControl(FrameCountSlider.new(canvas))
     sliderwin.addControl(FrameCountButton.new(canvas))
     sliderwin.addButton(_INTL("Set Animation Sheet"))
     sliderwin.addButton(_INTL("List of Animations"))
     sliderwin.viewport = canvas.viewport
     # Animation sheet window
-    animwin = CanvasAnimationWindow.new(canvas, 240, 384 + 128, 512, 96, canvas.viewport)
+    animwin = CanvasAnimationWindow.new(canvas, 120, 192 + 64, 256, 48, canvas.viewport)
     # Name window
-    bottomwindow = AnimationNameWindow.new(canvas, 240, 384 + 128 + 96, 512, 64, canvas.viewport)
+    bottomwindow = AnimationNameWindow.new(canvas, 120, 192 + 64 + 48, 256, 32, canvas.viewport)
     loop do
       Graphics.update
       Input.update
@@ -1161,7 +1161,7 @@ def pbAnimationEditor
     animation = PBAnimations.new
     animation[0].graphic = ""
   end
-  Graphics.resize_screen(Settings::SCREEN_WIDTH + 288, Settings::SCREEN_HEIGHT + 288)
+  Graphics.resize_screen(Settings::SCREEN_WIDTH + 144, Settings::SCREEN_HEIGHT + 144)
   pbSetResizeFactor(1)
   BattleAnimationEditor.animationEditorMain(animation)
   Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)

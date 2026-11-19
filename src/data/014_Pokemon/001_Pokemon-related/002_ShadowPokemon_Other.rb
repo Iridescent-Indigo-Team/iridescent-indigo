@@ -90,9 +90,9 @@ class RelicStoneScene
     @sprites["msgwindow"] = Window_AdvancedTextPokemon.new("")
     @sprites["msgwindow"].viewport = @viewport
     @sprites["msgwindow"].x        = 0
-    @sprites["msgwindow"].y        = Graphics.height - 96
+    @sprites["msgwindow"].y        = Graphics.height - 48
     @sprites["msgwindow"].width    = Graphics.width
-    @sprites["msgwindow"].height   = 96
+    @sprites["msgwindow"].height   = 48
     @sprites["msgwindow"].text     = ""
     @sprites["msgwindow"].visible  = true
     pbDeactivateWindows(@sprites)

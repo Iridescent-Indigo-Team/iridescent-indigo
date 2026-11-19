@@ -85,7 +85,7 @@ class TriadCard
   end
 
   def self.createBack(type = nil, noback = false)
-    bitmap = Bitmap.new(80, 96)
+    bitmap = Bitmap.new(40, 48)
     if !noback
       cardbitmap = AnimatedBitmap.new("Graphics/UI/Triple Triad/card_opponent")
       bitmap.blt(0, 0, cardbitmap.bitmap, Rect.new(0, 0, cardbitmap.width, cardbitmap.height))
@@ -94,8 +94,8 @@ class TriadCard
     if type
       typebitmap = AnimatedBitmap.new(_INTL("Graphics/UI/types"))
       type_number = GameData::Type.get(type).icon_position
-      typerect = Rect.new(0, type_number * 28, 64, 28)
-      bitmap.blt(8, 50, typebitmap.bitmap, typerect, 192)
+      typerect = Rect.new(0, type_number * 14, 32, 14)
+      bitmap.blt(4, 25, typebitmap.bitmap, typerect, 192)
       typebitmap.dispose
     end
     return bitmap
@@ -103,7 +103,7 @@ class TriadCard
 
   def createBitmap(owner)
     return TriadCard.createBack if owner == 0
-    bitmap = Bitmap.new(80, 96)
+    bitmap = Bitmap.new(40, 48)
     if owner == 2   # Opponent
       cardbitmap = AnimatedBitmap.new("Graphics/UI/Triple Triad/card_opponent")
     else            # Player
@@ -116,15 +116,15 @@ class TriadCard
     bitmap.blt(0, 0, cardbitmap.bitmap, Rect.new(0, 0, cardbitmap.width, cardbitmap.height))
     # Draw type icon
     type_number = GameData::Type.get(@type).icon_position
-    typerect = Rect.new(0, type_number * 28, 64, 28)
-    bitmap.blt(8, 50, typebitmap.bitmap, typerect, 192)
+    typerect = Rect.new(0, type_number * 14, 32, 14)
+    bitmap.blt(4, 25, typebitmap.bitmap, typerect, 192)
     # Draw Pokémon icon
-    bitmap.blt(8, 24, iconbitmap.bitmap, Rect.new(0, 0, 64, 64))
+    bitmap.blt(4, 12, iconbitmap.bitmap, Rect.new(0, 0, 32, 32))
     # Draw numbers
-    bitmap.blt(8, 16, numbersbitmap.bitmap, Rect.new(@west * 16, 0, 16, 16))
-    bitmap.blt(22, 6, numbersbitmap.bitmap, Rect.new(@north * 16, 0, 16, 16))
-    bitmap.blt(36, 16, numbersbitmap.bitmap, Rect.new(@east * 16, 0, 16, 16))
-    bitmap.blt(22, 26, numbersbitmap.bitmap, Rect.new(@south * 16, 0, 16, 16))
+    bitmap.blt(4, 8, numbersbitmap.bitmap, Rect.new(@west * 8, 0, 8, 8))
+    bitmap.blt(11, 3, numbersbitmap.bitmap, Rect.new(@north * 8, 0, 8, 8))
+    bitmap.blt(18, 8, numbersbitmap.bitmap, Rect.new(@east * 8, 0, 8, 8))
+    bitmap.blt(11, 13, numbersbitmap.bitmap, Rect.new(@south * 8, 0, 8, 8))
     cardbitmap.dispose
     typebitmap.dispose
     iconbitmap.dispose
@@ -171,12 +171,12 @@ class TriadScene
     @viewport.z = 99999
     addBackgroundPlane(@sprites, "background", "Triple Triad/bg", @viewport)
     @sprites["helpwindow"] = Window_AdvancedTextPokemon.newWithSize(
-      "", 0, Graphics.height - 64, Graphics.width, 64, @viewport
+      "", 0, Graphics.height - 32, Graphics.width, 32, @viewport
     )
     (@battle.width * @battle.height).times do |i|
       @sprites["sprite#{i}"] = Sprite.new(@viewport)
-      @sprites["sprite#{i}"].x = (Graphics.width / 2) - 118 + ((i % 3) * 78)
-      @sprites["sprite#{i}"].y = 36 + ((i / 3) * 94)
+      @sprites["sprite#{i}"].x = (Graphics.width / 2) - 59 + ((i % 3) * 39)
+      @sprites["sprite#{i}"].y = 18 + ((i / 3) * 47)
       @sprites["sprite#{i}"].z = 2
       bm = TriadCard.createBack(@battle.board[i].type, true)
       @bitmaps.push(bm)
@@ -190,8 +190,8 @@ class TriadScene
     @boardCards          = []
     @battle.maxCards.times do |i|
       @sprites["player#{i}"] = Sprite.new(@viewport)
-      @sprites["player#{i}"].x = Graphics.width - 92
-      @sprites["player#{i}"].y = 44 + (44 * i)
+      @sprites["player#{i}"].x = Graphics.width - 46
+      @sprites["player#{i}"].y = 22 + (22 * i)
       @sprites["player#{i}"].z = 2
       @cardIndexes.push(i)
     end
@@ -200,8 +200,8 @@ class TriadScene
     pbSetSystemFont(@sprites["overlay"].bitmap)
     pbDrawTextPositions(
       @sprites["overlay"].bitmap,
-      [[@battle.opponentName, 52, 10, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)],
-       [@battle.playerName, Graphics.width - 52, 10, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)]]
+      [[@battle.opponentName, 26, 5, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)],
+       [@battle.playerName, Graphics.width - 26, 5, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)]]
     )
     @sprites["score"] = Sprite.new(@viewport)
     @sprites["score"].bitmap = Bitmap.new(Graphics.width, Graphics.height)
@@ -261,17 +261,17 @@ class TriadScene
     cardStorage.each do |item|
       commands.push(_INTL("{1} x{2}", GameData::Species.get(item[0]).name, item[1]))
     end
-    command = Window_CommandPokemonEx.newWithSize(commands, 0, 0, Graphics.width / 2, Graphics.height - 64, @viewport)
+    command = Window_CommandPokemonEx.newWithSize(commands, 0, 0, Graphics.width / 2, Graphics.height - 32, @viewport)
     @sprites["helpwindow"].text = _INTL("Choose {1} cards to use for this duel.", @battle.maxCards)
     preview = Sprite.new(@viewport)
-    preview.x = (Graphics.width / 2) + 20
-    preview.y = 60
+    preview.x = (Graphics.width / 2) + 10
+    preview.y = 30
     preview.z = 4
     index = -1
     @battle.maxCards.times do |i|
       @sprites["player#{i}"] = Sprite.new(@viewport)
-      @sprites["player#{i}"].x = Graphics.width - 92
-      @sprites["player#{i}"].y = 44 + (44 * i)
+      @sprites["player#{i}"].x = Graphics.width - 46
+      @sprites["player#{i}"].y = 22 + (22 * i)
       @sprites["player#{i}"].z = 2
     end
     loop do
@@ -348,8 +348,8 @@ class TriadScene
   def pbShowPlayerCards(cards)
     @battle.maxCards.times do |i|
       @sprites["player#{i}"] = Sprite.new(@viewport)
-      @sprites["player#{i}"].x      = Graphics.width - 92
-      @sprites["player#{i}"].y      = 44 + (44 * i)
+      @sprites["player#{i}"].x      = Graphics.width - 46
+      @sprites["player#{i}"].y      = 22 + (22 * i)
       @sprites["player#{i}"].z      = 2
       @sprites["player#{i}"].bitmap = TriadCard.new(cards[i]).createBitmap(1)
       @cardBitmaps.push(@sprites["player#{i}"].bitmap)
@@ -359,8 +359,8 @@ class TriadScene
   def pbShowOpponentCards(cards)
     @battle.maxCards.times do |i|
       @sprites["opponent#{i}"] = Sprite.new(@viewport)
-      @sprites["opponent#{i}"].x      = 12
-      @sprites["opponent#{i}"].y      = 44 + (44 * i)
+      @sprites["opponent#{i}"].x      = 6
+      @sprites["opponent#{i}"].y      = 22 + (22 * i)
       @sprites["opponent#{i}"].z      = 2
       @sprites["opponent#{i}"].bitmap = @battle.openHand ? TriadCard.new(cards[i]).createBitmap(2) : TriadCard.createBack
       @opponentCardBitmaps.push(@sprites["opponent#{i}"].bitmap)
@@ -374,13 +374,13 @@ class TriadScene
     lastChoice = -1
     loop do
       if lastChoice != choice
-        y = 44
+        y = 22
         @opponentCardIndexes.length.times do |i|
           @sprites["opponent#{@opponentCardIndexes[i]}"].bitmap = @opponentCardBitmaps[@opponentCardIndexes[i]]
-          @sprites["opponent#{@opponentCardIndexes[i]}"].x      = (i == choice) ? 28 : 12
+          @sprites["opponent#{@opponentCardIndexes[i]}"].x      = (i == choice) ? 14 : 6
           @sprites["opponent#{@opponentCardIndexes[i]}"].y      = y
           @sprites["opponent#{@opponentCardIndexes[i]}"].z      = 2
-          y += 44
+          y += 22
         end
         lastChoice = choice
       end
@@ -414,13 +414,13 @@ class TriadScene
     lastChoice = -1
     loop do
       if lastChoice != choice
-        y = 44
+        y = 22
         @cardIndexes.length.times do |i|
           @sprites["player#{@cardIndexes[i]}"].bitmap = @cardBitmaps[@cardIndexes[i]]
-          @sprites["player#{@cardIndexes[i]}"].x      = (i == choice) ? Graphics.width - 108 : Graphics.width - 92
+          @sprites["player#{@cardIndexes[i]}"].x      = (i == choice) ? Graphics.width - 54 : Graphics.width - 46
           @sprites["player#{@cardIndexes[i]}"].y      = y
           @sprites["player#{@cardIndexes[i]}"].z      = 2
-          y += 44
+          y += 22
         end
         lastChoice = choice
       end
@@ -456,17 +456,17 @@ class TriadScene
     doRefresh = true
     loop do
       if doRefresh
-        y = 44
+        y = 22
         @cardIndexes.length.times do |i|
           if i == cardIndex   # Card being placed
-            @sprites["player#{@cardIndexes[i]}"].x = (Graphics.width / 2) - 118 + (boardX * 78)
-            @sprites["player#{@cardIndexes[i]}"].y = 36 + (boardY * 94)
+            @sprites["player#{@cardIndexes[i]}"].x = (Graphics.width / 2) - 59 + (boardX * 39)
+            @sprites["player#{@cardIndexes[i]}"].y = 18 + (boardY * 47)
             @sprites["player#{@cardIndexes[i]}"].z = 4
           else   # Other cards in hand
-            @sprites["player#{@cardIndexes[i]}"].x = Graphics.width - 92
+            @sprites["player#{@cardIndexes[i]}"].x = Graphics.width - 46
             @sprites["player#{@cardIndexes[i]}"].y = y
             @sprites["player#{@cardIndexes[i]}"].z = 2
-            y += 44
+            y += 22
           end
         end
         doRefresh = false
@@ -520,21 +520,21 @@ class TriadScene
   end
 
   def pbOpponentPlaceCard(triadCard, position, cardIndex)
-    y = 44
+    y = 22
     @opponentCardIndexes.length.times do |i|
       sprite = @sprites["opponent#{@opponentCardIndexes[i]}"]
       if i == cardIndex
         @opponentCardBitmaps[@opponentCardIndexes[i]] = triadCard.createBitmap(2)
         sprite.bitmap&.dispose
         sprite.bitmap = @opponentCardBitmaps[@opponentCardIndexes[i]]
-        sprite.x = (Graphics.width / 2) - 118 + (position[0] * 78)
-        sprite.y = 36 + (position[1] * 94)
+        sprite.x = (Graphics.width / 2) - 59 + (position[0] * 39)
+        sprite.y = 18 + (position[1] * 47)
         sprite.z = 2
       else
-        sprite.x = 12
+        sprite.x = 6
         sprite.y = y
         sprite.z = 2
-        y += 44
+        y += 22
       end
     end
   end
@@ -577,7 +577,7 @@ class TriadScene
     end
     pbDrawTextPositions(
       bitmap,
-      [[_INTL("{1}-{2}", oppscore, playerscore), Graphics.width / 2, 10, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)]]
+      [[_INTL("{1}-{2}", oppscore, playerscore), Graphics.width / 2, 5, :center, Color.new(248, 248, 248), Color.new(96, 96, 96)]]
     )
   end
 
@@ -598,8 +598,8 @@ class TriadScreen
 
   def initialize(scene)
     @scene = scene
-    @width              = 3
-    @height             = 3
+    @width              = 2
+    @height             = 2
     @sameWins           = false
     @openHand           = false
     @wrapAround         = false
@@ -1066,15 +1066,15 @@ def pbBuyTriads
   cmdwindow = Window_CommandPokemonEx.newWithSize(realcommands, 0, 0, Graphics.width / 2, Graphics.height)
   cmdwindow.z = 99999
   goldwindow = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Money:\n{1}", pbGetGoldString), 0, 0, 32, 32
+    _INTL("Money:\n{1}", pbGetGoldString), 0, 0, 16, 16
   )
   goldwindow.resizeToFit(goldwindow.text, Graphics.width)
   goldwindow.x = Graphics.width - goldwindow.width
   goldwindow.y = 0
   goldwindow.z = 99999
   preview = Sprite.new
-  preview.x = (Graphics.width * 3 / 4) - 40
-  preview.y = (Graphics.height / 2) - 48
+  preview.x = (Graphics.width * 3 / 4) - 20
+  preview.y = (Graphics.height / 2) - 24
   preview.z = 4
   preview.bitmap = TriadCard.new(commands[cmdwindow.index][3]).createBitmap(1)
   olditem = commands[cmdwindow.index][3]
@@ -1156,15 +1156,15 @@ def pbSellTriads
   cmdwindow = Window_CommandPokemonEx.newWithSize(commands, 0, 0, Graphics.width / 2, Graphics.height)
   cmdwindow.z = 99999
   goldwindow = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Money:\n{1}", pbGetGoldString), 0, 0, 32, 32
+    _INTL("Money:\n{1}", pbGetGoldString), 0, 0, 16, 16
   )
   goldwindow.resizeToFit(goldwindow.text, Graphics.width)
   goldwindow.x = Graphics.width - goldwindow.width
   goldwindow.y = 0
   goldwindow.z = 99999
   preview = Sprite.new
-  preview.x = (Graphics.width * 3 / 4) - 40
-  preview.y = (Graphics.height / 2) - 48
+  preview.x = (Graphics.width * 3 / 4) - 20
+  preview.y = (Graphics.height / 2) - 24
   preview.z = 4
   item = $PokemonGlobal.triads.get_item(cmdwindow.index)
   preview.bitmap = TriadCard.new(item).createBitmap(1)
@@ -1260,8 +1260,8 @@ def pbTriadList
   cmdwindow = Window_CommandPokemonEx.newWithSize(commands, 0, 0, Graphics.width / 2, Graphics.height)
   cmdwindow.z = 99999
   sprite = Sprite.new
-  sprite.x = (Graphics.width / 2) + 40
-  sprite.y = 48
+  sprite.x = (Graphics.width / 2) + 20
+  sprite.y = 24
   sprite.z = 99999
   done = false
   lastIndex = -1

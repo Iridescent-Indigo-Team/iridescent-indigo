@@ -519,7 +519,7 @@ class Game_Player < Game_Character
       bob_pattern = (4 * System.uptime / SURF_BOB_DURATION).to_i % 4
       @pattern = bob_pattern if !@lock_pattern
       @pattern_surf = bob_pattern
-      @bob_height = (bob_pattern >= 2) ? 2 : 0
+      @bob_height = (bob_pattern >= 2) ? 1 : 0
       @anime_count = 0
     else
       @bob_height = 0

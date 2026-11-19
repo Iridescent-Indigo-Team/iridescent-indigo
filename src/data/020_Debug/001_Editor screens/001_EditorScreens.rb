@@ -9,7 +9,7 @@ def pbEncountersEditor
   maps = []
   list = pbListWindow([])
   help_window = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Edit wild encounters"), Graphics.width / 2, 0, Graphics.width / 2, 96
+    _INTL("Edit wild encounters"), Graphics.width / 2, 0, Graphics.width / 2, 48
   )
   help_window.z = 99999
   ret = 0
@@ -131,7 +131,7 @@ def pbEncounterMapVersionEditor(enc_data)
   enc_types = []
   list = pbListWindow([])
   help_window = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Edit map's encounters"), Graphics.width / 2, 0, Graphics.width / 2, 96
+    _INTL("Edit map's encounters"), Graphics.width / 2, 0, Graphics.width / 2, 48
   )
   help_window.z = 99999
   ret = 0
@@ -257,7 +257,7 @@ def pbEncounterTypeEditor(enc_data, enc_type)
   commands = []
   list = pbListWindow([])
   help_window = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Edit encounter slots"), Graphics.width / 2, 0, Graphics.width / 2, 96
+    _INTL("Edit encounter slots"), Graphics.width / 2, 0, Graphics.width / 2, 48
   )
   help_window.z = 99999
   enc_type_name = ""
@@ -995,7 +995,7 @@ def pbRegionalDexEditor(dex)
   cmd_window = pbListWindow([])
   info = Window_AdvancedTextPokemon.newWithSize(
     _INTL("Z+Up/Down: Rearrange entries\nZ+Right: Insert new entry\nZ+Left: Delete entry\nD: Clear entry"),
-    Graphics.width / 2, 64, Graphics.width / 2, Graphics.height - 64, viewport
+    Graphics.width / 2, 32, Graphics.width / 2, Graphics.height - 32, viewport
   )
   info.z = 2
   dex.compact!
@@ -1103,12 +1103,12 @@ def pbRegionalDexEditorMain
   cmd_window.viewport = viewport
   cmd_window.z        = 2
   title = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Regional Dexes Editor"), Graphics.width / 2, 0, Graphics.width / 2, 64, viewport
+    _INTL("Regional Dexes Editor"), Graphics.width / 2, 0, Graphics.width / 2, 32, viewport
   )
   title.z = 2
   info = Window_AdvancedTextPokemon.newWithSize(
-    _INTL("Z+Up/Down: Rearrange Dexes"), Graphics.width / 2, 64,
-    Graphics.width / 2, Graphics.height - 64, viewport
+    _INTL("Z+Up/Down: Rearrange Dexes"), Graphics.width / 2, 32,
+    Graphics.width / 2, Graphics.height - 32, viewport
   )
   info.z = 2
   dex_lists = []
@@ -1261,12 +1261,12 @@ def pbAnimationsOrganiser
   cmdwin.viewport = viewport
   cmdwin.z        = 2
   title = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Animations Organiser"), Graphics.width / 2, 0, Graphics.width / 2, 64, viewport
+    _INTL("Animations Organiser"), Graphics.width / 2, 0, Graphics.width / 2, 32, viewport
   )
   title.z = 2
   info = Window_AdvancedTextPokemon.newWithSize(
     _INTL("Z+Up/Down: Swap\nZ+Left: Delete\nZ+Right: Insert"),
-    Graphics.width / 2, 64, Graphics.width / 2, Graphics.height - 64, viewport
+    Graphics.width / 2, 32, Graphics.width / 2, Graphics.height - 32, viewport
   )
   info.z = 2
   commands = []

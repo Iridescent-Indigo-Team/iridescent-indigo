@@ -217,9 +217,9 @@ class FaceWindowVX < SpriteWindow_Base
     self.contents&.dispose
     @faceIndex = faceinfo[1].to_i
     @facebitmaptmp = AnimatedBitmap.new(facefile)
-    @facebitmap = Bitmap.new(96, 96)
+    @facebitmap = Bitmap.new(48, 48)
     @facebitmap.blt(0, 0, @facebitmaptmp.bitmap,
-                    Rect.new((@faceIndex % 4) * 96, (@faceIndex / 4) * 96, 96, 96))
+                    Rect.new((@faceIndex % 4) * 48, (@faceIndex / 4) * 48, 48, 48))
     self.contents = @facebitmap
   end
 
@@ -228,7 +228,7 @@ class FaceWindowVX < SpriteWindow_Base
     if @facebitmaptmp.totalFrames > 1
       @facebitmaptmp.update
       @facebitmap.blt(0, 0, @facebitmaptmp.bitmap,
-                      Rect.new((@faceIndex % 4) * 96, (@faceIndex / 4) * 96, 96, 96))
+                      Rect.new((@faceIndex % 4) * 48, (@faceIndex / 4) * 48, 48, 48))
     end
   end
 
@@ -316,7 +316,7 @@ def pbDisplayGoldWindow(msgwindow)
   goldwindow = Window_AdvancedTextPokemon.new(_INTL("Money:\n<ar>{1}</ar>", moneyString))
   goldwindow.setSkin("Graphics/Windowskins/goldskin")
   goldwindow.resizeToFit(goldwindow.text, Graphics.width)
-  goldwindow.width = 160 if goldwindow.width <= 160
+  goldwindow.width = 80 if goldwindow.width <= 80
   if msgwindow.y == 0
     goldwindow.y = Graphics.height - goldwindow.height
   else
@@ -332,7 +332,7 @@ def pbDisplayCoinsWindow(msgwindow, goldwindow)
   coinwindow = Window_AdvancedTextPokemon.new(_INTL("Coins:\n<ar>{1}</ar>", coinString))
   coinwindow.setSkin("Graphics/Windowskins/goldskin")
   coinwindow.resizeToFit(coinwindow.text, Graphics.width)
-  coinwindow.width = 160 if coinwindow.width <= 160
+  coinwindow.width = 80 if coinwindow.width <= 80
   if msgwindow.y == 0
     coinwindow.y = (goldwindow) ? goldwindow.y - coinwindow.height : Graphics.height - coinwindow.height
   else
@@ -348,7 +348,7 @@ def pbDisplayBattlePointsWindow(msgwindow)
   pointswindow = Window_AdvancedTextPokemon.new(_INTL("Battle Points:\n<ar>{1}</ar>", pointsString))
   pointswindow.setSkin("Graphics/Windowskins/goldskin")
   pointswindow.resizeToFit(pointswindow.text, Graphics.width)
-  pointswindow.width = 160 if pointswindow.width <= 160
+  pointswindow.width = 80 if pointswindow.width <= 80
   if msgwindow.y == 0
     pointswindow.y = Graphics.height - pointswindow.height
   else
@@ -417,7 +417,7 @@ def pbMessageDisplay(msgwindow, message, letterbyletter = true, commandProc = ni
   msgwindow.waitcount = 0
   autoresume = false
   text = message.clone
-  linecount = (Graphics.height > 400) ? 3 : 2
+  linecount = (Graphics.height > 200) ? 3 : 2
   ### Text replacement
   text.gsub!(/\\sign\[([^\]]*)\]/i) do      # \sign[something] gets turned into
     next "\\op\\cl\\ts[]\\w[" + $1 + "]"    # \op\cl\ts[]\w[something]
@@ -818,8 +818,8 @@ def pbMessageWaitForInput(msgwindow, frames, showPause = false)
   msgwindow.stopPause if msgwindow && showPause
 end
 
-def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 240)
-  window = Window_TextEntry_Keyboard.new(currenttext, 0, 0, width, 64)
+def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 120)
+  window = Window_TextEntry_Keyboard.new(currenttext, 0, 0, width, 32)
   ret = ""
   window.maxlength = maxlength
   window.visible = true
@@ -848,7 +848,7 @@ def pbFreeText(msgwindow, currenttext, passwordbox, maxlength, width = 240)
   return ret
 end
 
-def pbMessageFreeText(message, currenttext, passwordbox, maxlength, width = 240, &block)
+def pbMessageFreeText(message, currenttext, passwordbox, maxlength, width = 120, &block)
   msgwindow = pbCreateMessageWindow
   retval = pbMessageDisplay(msgwindow, message, true,
                             proc { |msgwndw|

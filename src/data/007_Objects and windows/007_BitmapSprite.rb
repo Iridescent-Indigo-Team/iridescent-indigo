@@ -68,7 +68,7 @@ class AnimatedSprite < Sprite
     begin
       @animbitmap = AnimatedBitmap.new(animname).deanimate
     rescue
-      @animbitmap = Bitmap.new(framecount * 4, 32)
+      @animbitmap = Bitmap.new(framecount * 2, 16)
     end
     if @animbitmap.width % framecount != 0
       raise _INTL("Bitmap's width ({1}) is not a multiple of frame count ({2}) [Bitmap={3}]",

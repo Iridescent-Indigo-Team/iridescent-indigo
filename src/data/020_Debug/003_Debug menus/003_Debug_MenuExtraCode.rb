@@ -65,7 +65,7 @@ class SpriteWindow_DebugVariables < Window_DrawableCommand
     when 2   # Centre aligned
       x += (w / 2) - (width / 2)
     end
-    y += 8   # TEXT OFFSET
+    y += 4   # TEXT OFFSET
     base = Color.new(96, 96, 96)
     case colors
     when 1   # Red
@@ -392,7 +392,7 @@ class SpriteWindow_DebugRoamers < Window_DrawableCommand
   end
 
   def shadowtext(t, x, y, w, h, align = 0, colors = 0)
-    y += 8   # TEXT OFFSET
+    y += 4   # TEXT OFFSET
     width = self.contents.text_size(t).width
     case align
     when 1

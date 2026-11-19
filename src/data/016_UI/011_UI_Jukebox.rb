@@ -14,13 +14,13 @@ class PokemonJukebox_Scene
     @sprites["background"] = IconSprite.new(0, 0, @viewport)
     @sprites["background"].setBitmap(_INTL("Graphics/UI/jukebox_bg"))
     @sprites["header"] = Window_UnformattedTextPokemon.newWithSize(
-      _INTL("Jukebox"), 2, -18, 128, 64, @viewport
+      _INTL("Jukebox"), 1, -9, 64, 32, @viewport
     )
     @sprites["header"].baseColor   = Color.new(248, 248, 248)
     @sprites["header"].shadowColor = Color.black
     @sprites["header"].windowskin  = nil
     @sprites["commands"] = Window_CommandPokemon.newWithSize(
-      @commands, 94, 92, 324, 224, @viewport
+      @commands, 47, 46, 162, 112, @viewport
     )
     @sprites["commands"].windowskin = nil
     pbFadeInAndShow(@sprites) { pbUpdate }

@@ -57,7 +57,7 @@ def pbAllocateAnimation(animations, name)
     end
   end
   oldlength = animations.length
-  animations.resize(10)
+  animations.resize(5)
   return oldlength
 end
 

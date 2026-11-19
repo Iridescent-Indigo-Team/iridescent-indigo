@@ -23,7 +23,7 @@ class PokemonEggHatch_Scene
     @sprites["pokemon"] = PokemonSprite.new(@viewport)
     @sprites["pokemon"].setOffset(PictureOrigin::BOTTOM)
     @sprites["pokemon"].x = Graphics.width / 2
-    @sprites["pokemon"].y = 264 + 56   # 56 to offset the egg sprite
+    @sprites["pokemon"].y = 132 + 28   # 56 to offset the egg sprite
     @sprites["pokemon"].setSpeciesBitmap(@pokemon.species, @pokemon.gender,
                                          @pokemon.form, @pokemon.shiny?,
                                          false, false, true)   # Egg sprite
@@ -83,7 +83,7 @@ class PokemonEggHatch_Scene
     updateScene(0.75)
     @sprites["pokemon"].setPokemonBitmap(@pokemon) # Pokémon sprite
     @sprites["pokemon"].x = Graphics.width / 2
-    @sprites["pokemon"].y = 264
+    @sprites["pokemon"].y = 132
     @pokemon.species_data.apply_metrics_to_sprite(@sprites["pokemon"], 1)
     @sprites["hatch"].visible = false
     timer_start = System.uptime
@@ -143,7 +143,7 @@ class PokemonEggHatch_Scene
 
   def swingEgg(speed, swingTimes = 1)
     @sprites["hatch"].visible = true
-    amplitude = 8
+    amplitude = 4
     duration = 0.05 * amplitude / speed
     targets = []
     swingTimes.times do

@@ -168,12 +168,12 @@ class SpriteAnimation
   end
 
   def animation_set_sprites(sprites, cell_data, position, quick_update = false)
-    sprite_x = 320
-    sprite_y = 240
+    sprite_x = 160
+    sprite_y = 120
     if position == 3   # Screen
       if self.viewport
         sprite_x = self.viewport.rect.width / 2
-        sprite_y = self.viewport.rect.height - 160
+        sprite_y = self.viewport.rect.height - 80
       end
     else
       sprite_x = self.x - self.ox + (self.src_rect.width / 2)
@@ -194,15 +194,15 @@ class SpriteAnimation
       sprite.y = sprite_y + cell_data[i, 2]
       next if quick_update
       sprite.visible = true
-      sprite.src_rect.set((pattern % 5) * 192, (pattern / 5) * 192, 192, 192)
+      sprite.src_rect.set((pattern % 5) * 96, (pattern / 5) * 96, 96, 96)
       case @_animation_height
       when 0 then sprite.z = 1
       when 1 then sprite.z = sprite.y + (Game_Map::TILE_HEIGHT * 3 / 2) + 1
       when 2 then sprite.z = sprite.y + (Game_Map::TILE_HEIGHT * 3) + 1
       else        sprite.z = 2000
       end
-      sprite.ox         = 96
-      sprite.oy         = 96
+      sprite.ox         = 48
+      sprite.oy         = 48
       sprite.zoom_x     = cell_data[i, 3] / 100.0
       sprite.zoom_y     = cell_data[i, 3] / 100.0
       sprite.angle      = cell_data[i, 4]

@@ -108,18 +108,20 @@ class TileDrawingHelper
     return if !autotile || autotile.disposed?
     cxTile = [cxTile / 2, 1].max
     cyTile = [cyTile / 2, 1].max
-    if autotile.height == 32
-      anim = frame * 32
-      src_rect = Rect.new(anim, 0, 32, 32)
+    tile_w = TilemapRenderer::SOURCE_TILE_WIDTH
+    tile_h = TilemapRenderer::SOURCE_TILE_HEIGHT
+    if autotile.height == tile_h
+      anim = frame * tile_w
+      src_rect = Rect.new(anim, 0, tile_w, tile_h)
       bitmap.stretch_blt(Rect.new(x, y, cxTile * 2, cyTile * 2), autotile, src_rect)
     else
-      anim = frame * 96
+      anim = frame * tile_w * 3
       id %= 48
       tiles = AUTOTILE_PATTERNS[id >> 3][id & 7]
       src = Rect.new(0, 0, 0, 0)
       4.times do |i|
         tile_position = tiles[i] - 1
-        src.set(((tile_position % 6) * 16) + anim, (tile_position / 6) * 16, 16, 16)
+        src.set(((tile_position % 6) * tile_w / 2) + anim, (tile_position / 6) * tile_h / 2, tile_w / 2, tile_h / 2)
         bitmap.stretch_blt(Rect.new((i % 2 * cxTile) + x, (i / 2 * cyTile) + y, cxTile, cyTile),
                            autotile, src)
       end
@@ -128,7 +130,9 @@ class TileDrawingHelper
 
   def bltSmallRegularTile(bitmap, x, y, cxTile, cyTile, id)
     return if id < 384 || !@tileset || @tileset.disposed?
-    rect = Rect.new(((id - 384) % 8) * 32, ((id - 384) / 8) * 32, 32, 32)
+    tile_w = TilemapRenderer::SOURCE_TILE_WIDTH
+    tile_h = TilemapRenderer::SOURCE_TILE_HEIGHT
+    rect = Rect.new(((id - 384) % 8) * tile_w, ((id - 384) / 8) * tile_h, tile_w, tile_h)
     rect = TilemapRenderer::TilesetWrapper.getWrappedRect(rect) if @shouldWrap
     bitmap.stretch_blt(Rect.new(x, y, cxTile, cyTile), @tileset, rect)
   end
@@ -142,11 +146,11 @@ class TileDrawingHelper
   end
 
   def bltAutotile(bitmap, x, y, id, frame)
-    bltSmallAutotile(bitmap, x, y, 32, 32, id, frame)
+    bltSmallAutotile(bitmap, x, y, Game_Map::TILE_WIDTH, Game_Map::TILE_HEIGHT, id, frame)
   end
 
   def bltRegularTile(bitmap, x, y, id)
-    bltSmallRegularTile(bitmap, x, y, 32, 32, id)
+    bltSmallRegularTile(bitmap, x, y, Game_Map::TILE_WIDTH, Game_Map::TILE_HEIGHT, id)
   end
 
   def bltTile(bitmap, x, y, id, frame = 0)
@@ -163,7 +167,7 @@ end
 #===============================================================================
 def createMinimap(mapid)
   map = load_data(sprintf("Data/Map%03d.rxdata", mapid)) rescue nil
-  return Bitmap.new(32, 32) if !map
+  return Bitmap.new(16, 16) if !map
   bitmap = Bitmap.new(map.width * 4, map.height * 4)
   black = Color.black
   tilesets = $data_tilesets

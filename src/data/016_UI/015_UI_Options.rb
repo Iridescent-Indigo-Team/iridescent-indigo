@@ -24,7 +24,7 @@ class PokemonSystem
     @givenicknames = 0     # Give nicknames (0=give, 1=don't give)
     @frame         = 0     # Default window frame (see also Settings::MENU_WINDOWSKINS)
     @textskin      = 0     # Speech frame
-    @screensize    = (Settings::SCREEN_SCALE * 2).floor - 1   # 0=half size, 1=full size, 2=full-and-a-half size, 3=double size
+    @screensize    = Settings::SCREEN_SCALE.floor - 1   # 0=1x, 1=2x, 2=3x, 3=4x, 4=fullscreen
     @language      = 0     # Language (see also Settings::LANGUAGES in script PokemonSystem)
     @runstyle      = 0     # Default movement speed (0=walk, 1=run)
     @bgmvolume     = 80    # Volume of background music and ME
@@ -224,11 +224,11 @@ class Window_PokemonOption < Window_DrawableCommand
       value = sprintf(" %d", @options[index].highest_value)
       sliderlength = rect.width - rect.x - optionwidth - self.contents.text_size(value).width
       xpos = optionwidth + rect.x
-      self.contents.fill_rect(xpos, rect.y - 2 + (rect.height / 2), sliderlength, 4, self.baseColor)
+      self.contents.fill_rect(xpos, rect.y - 1 + (rect.height / 2), sliderlength, 2, self.baseColor)
       self.contents.fill_rect(
-        xpos + ((sliderlength - 8) * (@options[index].lowest_value + self[index]) / @options[index].highest_value),
-        rect.y - 8 + (rect.height / 2),
-        8, 16, SEL_VALUE_BASE_COLOR
+        xpos + ((sliderlength - 4) * (@options[index].lowest_value + self[index]) / @options[index].highest_value),
+        rect.y - 4 + (rect.height / 2),
+        4, 8, SEL_VALUE_BASE_COLOR
       )
       value = (@options[index].lowest_value + self[index]).to_s
       xpos += (rect.width - rect.x - optionwidth) - self.contents.text_size(value).width
@@ -286,14 +286,14 @@ class PokemonOption_Scene
     @sprites = {}
     addBackgroundOrColoredPlane(@sprites, "bg", "optionsbg", Color.new(192, 200, 208), @viewport)
     @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
-      _INTL("Options"), 0, -16, Graphics.width, 64, @viewport
+      _INTL("Options"), 0, -8, Graphics.width, 32, @viewport
     )
     @sprites["title"].back_opacity = 0
     @sprites["textbox"] = pbCreateMessageWindow
     pbSetSystemFont(@sprites["textbox"].contents)
     @sprites["option"] = Window_PokemonOption.new(
-      @options, 0, @sprites["title"].y + @sprites["title"].height - 16, Graphics.width,
-      Graphics.height - (@sprites["title"].y + @sprites["title"].height - 16) - @sprites["textbox"].height
+      @options, 0, @sprites["title"].y + @sprites["title"].height - 8, Graphics.width,
+      Graphics.height - (@sprites["title"].y + @sprites["title"].height - 8) - @sprites["textbox"].height
     )
     @sprites["option"].viewport = @viewport
     @sprites["option"].visible  = true
@@ -533,8 +533,9 @@ MenuHandlers.add(:options_menu, :screen_size, {
   "name"        => _INTL("Screen Size"),
   "order"       => 120,
   "type"        => EnumOption,
-  "parameters"  => [_INTL("S"), _INTL("M"), _INTL("L"), _INTL("XL"), _INTL("Full")],
+  "parameters"  => [_INTL("1x"), _INTL("2x"), _INTL("3x"), _INTL("4x"), _INTL("Full")],
   "description" => _INTL("Choose the size of the game window."),
+  "condition"   => proc { next !pbIsAndroid? },   # Always fullscreen on Android
   "get_proc"    => proc { next [$PokemonSystem.screensize, 4].min },
   "set_proc"    => proc { |value, _scene|
     next if $PokemonSystem.screensize == value

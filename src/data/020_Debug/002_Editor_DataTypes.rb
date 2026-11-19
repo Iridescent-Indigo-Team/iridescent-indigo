@@ -747,7 +747,7 @@ def chooseMapPoint(map, rgnmap = false)
   viewport = Viewport.new(0, 0, Graphics.width, Graphics.height)
   viewport.z = 99999
   title = Window_UnformattedTextPokemon.newWithSize(
-    _INTL("Click a point on the map."), 0, Graphics.height - 64, Graphics.width, 64, viewport
+    _INTL("Click a point on the map."), 0, Graphics.height - 32, Graphics.width, 32, viewport
   )
   title.z = 2
   if rgnmap
@@ -1628,7 +1628,7 @@ def pbPropertyList(title, data, properties, saveprompt = false)
   list.viewport = viewport
   list.z        = 2
   title = Window_UnformattedTextPokemon.newWithSize(
-    title, list.width, 0, Graphics.width / 2, 64, viewport
+    title, list.width, 0, Graphics.width / 2, 32, viewport
   )
   title.z = 2
   desc = Window_UnformattedTextPokemon.newWithSize(

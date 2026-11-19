@@ -30,8 +30,8 @@ def pbDrawGauge(bitmap, rect, color, value, maxValue)
   bitmap.fill_rect(rect.x, rect.y, rect.width, rect.height, Color.black)
   width = (maxValue <= 0) ? 0 : (rect.width - 4) * value / maxValue
   if rect.width >= 4 && rect.height >= 4
-    bitmap.fill_rect(rect.x + 2, rect.y + 2, rect.width - 4, rect.height - 4, Color.new(248, 248, 248))
-    bitmap.fill_rect(rect.x + 2, rect.y + 2, width, rect.height - 4, color)
+    bitmap.fill_rect(rect.x + 1, rect.y + 1, rect.width - 2, rect.height - 2, Color.new(248, 248, 248))
+    bitmap.fill_rect(rect.x + 1, rect.y + 1, width, rect.height - 2, color)
   end
 end
 
@@ -657,11 +657,11 @@ class Window_PurifyChamberSets < Window_DrawableCommand
       textpos.push([(index + 1).to_s, rect.x, rect.y, :left, self.baseColor, self.shadowColor])
     end
     if @chamber.setCount(index) > 0
-      pbDrawGauge(self.contents, Rect.new(rect.x + 16, rect.y + 6, 48, 8),
+      pbDrawGauge(self.contents, Rect.new(rect.x + 8, rect.y + 3, 24, 4),
                   Color.new(0, 0, 256), @chamber[index].tempo, PurifyChamber.maximumTempo)
     end
     if @chamber.getShadow(index)
-      pbDrawGauge(self.contents, Rect.new(rect.x + 16, rect.y + 18, 48, 8),
+      pbDrawGauge(self.contents, Rect.new(rect.x + 8, rect.y + 9, 24, 4),
                   Color.new(192, 0, 256),
                   @chamber.getShadow(index).heart_gauge,
                   @chamber.getShadow(index).max_gauge_size)
@@ -675,7 +675,7 @@ end
 #===============================================================================
 class DirectFlowDiagram
   # Distance travelled by a dot in 1 second.
-  DOT_SPEED = 80
+  DOT_SPEED = 40
 
   def initialize(viewport = nil)
     @points = []
@@ -683,9 +683,9 @@ class DirectFlowDiagram
     @viewport = viewport
     @strength = 0
     @offset = 0
-    @x = 306
-    @y = 158
-    @distance = 96
+    @x = 153
+    @y = 79
+    @distance = 48
   end
 
   def dispose
@@ -711,8 +711,8 @@ class DirectFlowDiagram
 
   def ensurePoint(j)
     if !@points[j] || @points[j].disposed?
-      @points[j] = BitmapSprite.new(8, 8, @viewport)
-      @points[j].bitmap.fill_rect(0, 0, 8, 8, Color.black)
+      @points[j] = BitmapSprite.new(4, 4, @viewport)
+      @points[j].bitmap.fill_rect(0, 0, 4, 4, Color.black)
     end
     @points[j].tone = (@strength == 2) ? Tone.new(232, 232, 248) : Tone.new(16, 16, 232)
     @points[j].visible = (@strength != 0)
@@ -734,7 +734,7 @@ class DirectFlowDiagram
         @points[j].y = pt[1]
         j += 1
       end
-      i += (@strength == 2) ? 16 : 32
+      i += (@strength == 2) ? 8 : 16
     end
     offset_delta = System.uptime * DOT_SPEED
     offset_delta *= 1.5 if @strength == 2
@@ -747,7 +747,7 @@ end
 #===============================================================================
 class FlowDiagram
   # Distance travelled by a dot in 1 second.
-  DOT_SPEED = 80
+  DOT_SPEED = 40
 
   def initialize(viewport = nil)
     @points = []
@@ -755,9 +755,9 @@ class FlowDiagram
     @viewport = viewport
     @strength = 0
     @offset = 0
-    @x = 306
-    @y = 158
-    @distance = 96
+    @x = 153
+    @y = 79
+    @distance = 48
   end
 
   def dispose
@@ -779,8 +779,8 @@ class FlowDiagram
 
   def ensurePoint(j)
     if !@points[j] || @points[j].disposed?
-      @points[j] = BitmapSprite.new(8, 8, @viewport)
-      @points[j].bitmap.fill_rect(0, 0, 8, 8, Color.black)
+      @points[j] = BitmapSprite.new(4, 4, @viewport)
+      @points[j].bitmap.fill_rect(0, 0, 4, 4, Color.black)
     end
     @points[j].tone = (@strength == 2) ? Tone.new(232, 232, 248) : Tone.new(16, 16, 232)
     @points[j].visible = (@strength != 0)
@@ -841,10 +841,10 @@ class PurifyChamberSetView < Sprite
     @set = set
     @heldpkmn = nil
     @cursor = -1
-    @view = BitmapSprite.new(64, 64, viewport)
-    @view.bitmap.fill_rect(8, 8, 48, 48, Color.white)
-    @view.bitmap.fill_rect(10, 10, 44, 44, Color.new(255, 255, 255, 128))
-    @info = BitmapSprite.new(Graphics.width - 112, 48, viewport)
+    @view = BitmapSprite.new(32, 32, viewport)
+    @view.bitmap.fill_rect(4, 4, 24, 24, Color.white)
+    @view.bitmap.fill_rect(5, 5, 22, 22, Color.new(255, 255, 255, 128))
+    @info = BitmapSprite.new(Graphics.width - 56, 24, viewport)
     @flows = []
     @directflow = DirectFlowDiagram.new(viewport)
     @directflow.setAngle(0)
@@ -942,28 +942,28 @@ class PurifyChamberSetView < Sprite
         type_string += GameData::Type.get(type).name
       end
       textpos.push([_INTL("{1}  Lv.{2}  {3}", pkmn.name, pkmn.level, type_string),
-                    2, 6, :left, Color.new(248, 248, 248), Color.new(128, 128, 128)])
-      textpos.push([_INTL("FLOW"), 2 + (@info.bitmap.width / 2), 30, :left,
+                    1, 3, :left, Color.new(248, 248, 248), Color.new(128, 128, 128)])
+      textpos.push([_INTL("FLOW"), 1 + (@info.bitmap.width / 2), 15, :left,
                     Color.new(248, 248, 248), Color.new(128, 128, 128)])
       # draw heart gauge
-      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 3 / 4, 8, @info.bitmap.width * 1 / 4, 8),
+      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 3 / 4, 4, @info.bitmap.width * 1 / 4, 4),
                   Color.new(192, 0, 256), pkmn.heart_gauge, pkmn.max_gauge_size)
       # draw flow gauge
-      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 3 / 4, 32, @info.bitmap.width * 1 / 4, 8),
+      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 3 / 4, 16, @info.bitmap.width * 1 / 4, 4),
                   Color.new(0, 0, 248), @chamber.chamberFlow(@set), 7)
     end
     if @chamber.setCount(@set) > 0
-      textpos.push([_INTL("TEMPO"), 2, 30, :left, Color.new(248, 248, 248), Color.new(128, 128, 128)])
+      textpos.push([_INTL("TEMPO"), 1, 15, :left, Color.new(248, 248, 248), Color.new(128, 128, 128)])
       # draw tempo gauge
-      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 1 / 4, 32, @info.bitmap.width * 1 / 4, 8),
+      pbDrawGauge(@info.bitmap, Rect.new(@info.bitmap.width * 1 / 4, 16, @info.bitmap.width * 1 / 4, 4),
                   Color.new(0, 0, 248), @chamber[@set].tempo, PurifyChamber.maximumTempo)
     end
     pbDrawTextPositions(@info.bitmap, textpos)
     @info.x = Graphics.width - @info.bitmap.width
     @info.y = Graphics.height - @info.bitmap.height
     @__sprites[0].pokemon = pkmn
-    @__sprites[0].x = 306
-    @__sprites[0].y = 158
+    @__sprites[0].x = 153
+    @__sprites[0].y = 79
     @__sprites[0].z = 2
     @directflow.setAngle(angle)
     @directflow.setFlowStrength(0)
@@ -979,7 +979,7 @@ class PurifyChamberSetView < Sprite
         @directflow.setAngle(angle)
         @directflow.setFlowStrength(@chamber[@set].shadowAffinity)
       end
-      point = calcPoint(306, 158, 96, angle)
+      point = calcPoint(153, 79, 48, angle)
       @__sprites[i + 1].x = point[0]
       @__sprites[i + 1].y = point[1]
       @__sprites[i + 1].z = 2
@@ -1096,7 +1096,7 @@ class PurifyChamberScene
     addBackgroundOrColoredPlane(@sprites, "bg", "purifychamber_bg",
                                 Color.new(64, 48, 96), @viewport)
     @sprites["setwindow"] = Window_PurifyChamberSets.new(
-      @chamber, 0, 0, 112, Graphics.height, @viewport
+      @chamber, 0, 0, 56, Graphics.height, @viewport
     )
     @sprites["setview"] = PurifyChamberSetView.new(@chamber, set, @viewport)
     @sprites["msgwindow"] = Window_AdvancedTextPokemon.new("")

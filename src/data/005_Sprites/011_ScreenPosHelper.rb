@@ -1,10 +1,10 @@
 module ScreenPosHelper
   def self.pbScreenZoomX(ch)
-    return Game_Map::TILE_WIDTH / 32.0
+    return Game_Map::TILE_WIDTH.to_f / TilemapRenderer::SOURCE_TILE_WIDTH
   end
 
   def self.pbScreenZoomY(ch)
-    return Game_Map::TILE_HEIGHT / 32.0
+    return Game_Map::TILE_HEIGHT.to_f / TilemapRenderer::SOURCE_TILE_HEIGHT
   end
 
   def self.pbScreenX(ch)
@@ -32,7 +32,7 @@ module ScreenPosHelper
     if height.nil?
       height = 0
       if ch.tile_id > 0
-        height = 32
+        height = 16
       elsif ch.character_name != ""
         height = bmHeight(ch.character_name) / 4
       end

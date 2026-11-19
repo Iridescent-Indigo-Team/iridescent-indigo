@@ -103,7 +103,7 @@ class Window_UnformattedTextPokemon < SpriteWindow_Base
     self.contents = pbDoEnsureBitmap(self.contents, self.width - self.borderX,
                                      self.height - self.borderY)
     self.contents.clear
-    drawTextEx(self.contents, 0, -2, self.contents.width, 0,   # TEXT OFFSET
+    drawTextEx(self.contents, 0, -1, self.contents.width, 0,   # TEXT OFFSET
                @text.gsub(/\r/, ""), @baseColor, @shadowColor)
   end
 end
@@ -126,7 +126,7 @@ class Window_AdvancedTextPokemon < SpriteWindow_Base
     @scroll_timer_start = nil
     @realframes         = 0
     @nodraw             = false
-    @lineHeight         = 32
+    @lineHeight         = 16
     @linesdrawn         = 0
     @bufferbitmap       = nil
     @letterbyletter     = false
@@ -445,18 +445,18 @@ class Window_AdvancedTextPokemon < SpriteWindow_Base
     cursor = 2 if cursor == 0 && !@endOfText
     case cursor
     when 0   # End of text
-      @pausesprite.x = self.x + self.startX + @endOfText.x + @endOfText.width - 2
+      @pausesprite.x = self.x + self.startX + @endOfText.x + @endOfText.width - 1
       @pausesprite.y = self.y + self.startY + @endOfText.y - @scrollY
     when 1   # Lower right
-      pauseWidth  = @pausesprite.bitmap ? @pausesprite.framewidth : 16
-      pauseHeight = @pausesprite.bitmap ? @pausesprite.frameheight : 16
-      @pausesprite.x = self.x + self.width - 40 + (pauseWidth / 2)
-      @pausesprite.y = self.y + self.height - 60 + (pauseHeight / 2)
+      pauseWidth  = @pausesprite.bitmap ? @pausesprite.framewidth : 8
+      pauseHeight = @pausesprite.bitmap ? @pausesprite.frameheight : 8
+      @pausesprite.x = self.x + self.width - 20 + (pauseWidth / 2)
+      @pausesprite.y = self.y + self.height - 30 + (pauseHeight / 2)
     when 2   # Lower middle
-      pauseWidth  = @pausesprite.bitmap ? @pausesprite.framewidth : 16
-      pauseHeight = @pausesprite.bitmap ? @pausesprite.frameheight : 16
+      pauseWidth  = @pausesprite.bitmap ? @pausesprite.framewidth : 8
+      pauseHeight = @pausesprite.bitmap ? @pausesprite.frameheight : 8
       @pausesprite.x = self.x + (self.width / 2) - (pauseWidth / 2)
-      @pausesprite.y = self.y + self.height - 36 + (pauseHeight / 2)
+      @pausesprite.y = self.y + self.height - 18 + (pauseHeight / 2)
     end
   end
 
@@ -502,7 +502,7 @@ class Window_AdvancedTextPokemon < SpriteWindow_Base
           allocPause
           moveCursor
         else
-          @endOfText = Rect.new(rcdst.x + rcdst.width, rcdst.y, 8, 1)
+          @endOfText = Rect.new(rcdst.x + rcdst.width, rcdst.y, 4, 1)
         end
       end
     end
@@ -632,8 +632,8 @@ class Window_InputNumberPokemon < SpriteWindow_Base
     @sign = false
     @negative = false
     super(0, 0, 32, 32)
-    self.width = (digits_max * 24) + 8 + self.borderX
-    self.height = 32 + self.borderY
+    self.width = (digits_max * 12) + 4 + self.borderX
+    self.height = 16 + self.borderY
     colors = getDefaultTextColors(self.windowskin)
     @baseColor = colors[0]
     @shadowColor = colors[1]
@@ -664,7 +664,7 @@ class Window_InputNumberPokemon < SpriteWindow_Base
 
   def sign=(value)
     @sign = value
-    self.width = (@digits_max * 24) + 8 + self.borderX + (@sign ? 24 : 0)
+    self.width = (@digits_max * 12) + 4 + self.borderX + (@sign ? 12 : 0)
     @index = (@digits_max - 1) + (@sign ? 1 : 0)
     refresh
   end
@@ -680,7 +680,7 @@ class Window_InputNumberPokemon < SpriteWindow_Base
     end
     @digits_max.times do |i|
       index = i + (@sign ? 1 : 0)
-      textHelper(index * 24, 0, s[i, 1], index)
+      textHelper(index * 12, 0, s[i, 1], index)
     end
   end
 
@@ -736,13 +736,13 @@ class Window_InputNumberPokemon < SpriteWindow_Base
   def textHelper(x, y, text, i)
     textwidth = self.contents.text_size(text).width
     pbDrawShadowText(self.contents,
-                     x + (12 - (textwidth / 2)),
-                     y - 2 + (self.contents.text_offset_y || 0),   # TEXT OFFSET (the - 2)
-                     textwidth + 4, 32, text, @baseColor, @shadowColor)
+                     x + (6 - (textwidth / 2)),
+                     y - 1 + (self.contents.text_offset_y || 0),   # TEXT OFFSET (the - 1)
+                     textwidth + 2, 16, text, @baseColor, @shadowColor)
     # Draw cursor
     if @index == i && @active && @cursor_shown
-      self.contents.fill_rect(x + (12 - (textwidth / 2)), y + 28, textwidth, 4, @shadowColor)
-      self.contents.fill_rect(x + (12 - (textwidth / 2)), y + 28, textwidth - 2, 2, @baseColor)
+      self.contents.fill_rect(x + (6 - (textwidth / 2)), y + 14, textwidth, 2, @shadowColor)
+      self.contents.fill_rect(x + (6 - (textwidth / 2)), y + 14, textwidth - 1, 1, @baseColor)
     end
   end
 end
@@ -758,10 +758,10 @@ class SpriteWindow_Selectable < SpriteWindow_Base
     super(x, y, width, height)
     @item_max = 1
     @column_max = 1
-    @virtualOy = 2   # TEXT OFFSET
+    @virtualOy = 1   # TEXT OFFSET
     @index = -1
-    @row_height = 32
-    @column_spacing = 32
+    @row_height = 16
+    @column_spacing = 16
     @ignore_input = false
   end
 
@@ -777,7 +777,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
   end
 
   def rowHeight
-    return @row_height || 32
+    return @row_height || 16
   end
 
   def rowHeight=(value)
@@ -801,7 +801,7 @@ class SpriteWindow_Selectable < SpriteWindow_Base
   end
 
   def columnSpacing
-    return @column_spacing || 32
+    return @column_spacing || 16
   end
 
   def columnSpacing=(value)
@@ -820,13 +820,13 @@ class SpriteWindow_Selectable < SpriteWindow_Base
   end
 
   def top_row
-    return (@virtualOy / (@row_height || 32)).to_i
+    return (@virtualOy / (@row_height || 16)).to_i
   end
 
   def top_row=(row)
     row = row_max - 1 if row > row_max - 1
     row = 0 if row < 0
-    @virtualOy = (row * @row_height) + 2   # TEXT OFFSET (the + 2)
+    @virtualOy = (row * @row_height) + 1   # TEXT OFFSET (the + 1)
   end
 
   def top_item
@@ -1105,7 +1105,7 @@ class Window_DrawableCommand < SpriteWindow_SelectableEx
         width = [width, tmpbitmap.text_size(i).width].max
       end
       # one 16 to allow cursor
-      width += 16 + 16 + SpriteWindow_Base::TEXT_PADDING
+      width += 8 + 8 + SpriteWindow_Base::TEXT_PADDING
       tmpbitmap.dispose
     end
     # Store suggested width and height of window
@@ -1125,9 +1125,9 @@ class Window_DrawableCommand < SpriteWindow_SelectableEx
 
   def drawCursor(index, rect)
     if self.index == index
-      pbCopyBitmap(self.contents, @selarrow.bitmap, rect.x, rect.y + 2)   # TEXT OFFSET (counters the offset above)
+      pbCopyBitmap(self.contents, @selarrow.bitmap, rect.x, rect.y + 1)   # TEXT OFFSET (counters the offset above)
     end
-    return Rect.new(rect.x + 16, rect.y, rect.width - 16, rect.height)
+    return Rect.new(rect.x + 8, rect.y, rect.width - 8, rect.height)
   end
 
   # To be implemented by derived classes.
@@ -1262,7 +1262,7 @@ class Window_AdvancedCommandPokemon < Window_DrawableCommand
   def textWidth(bitmap, text)
     dims = [nil, 0]
     chars = getFormattedText(bitmap, 0, 0,
-                             Graphics.width - self.borderX - SpriteWindow_Base::TEXT_PADDING - 16,
+                             Graphics.width - self.borderX - SpriteWindow_Base::TEXT_PADDING - 8,
                              -1, text, self.rowHeight, true, true)
     chars.each do |ch|
       dims[0] = dims[0] ? [dims[0], ch[1]].min : ch[1]
@@ -1343,7 +1343,7 @@ class Window_AdvancedCommandPokemon < Window_DrawableCommand
     dims = []
     getAutoDims(commands, dims, width)
     self.width = dims[0]
-    self.height = dims[1] - 6
+    self.height = dims[1] - 3
   end
 
   def itemCount

@@ -12,17 +12,17 @@ class Battle::Scene
   # The number of party balls to show in each side's lineup.
   NUM_BALLS            = Settings::MAX_PARTY_SIZE
   # Centre bottom of the player's side base graphic
-  PLAYER_BASE_X        = 128
-  PLAYER_BASE_Y        = Settings::SCREEN_HEIGHT - 80
+  PLAYER_BASE_X        = 64
+  PLAYER_BASE_Y        = Settings::SCREEN_HEIGHT - 40
   # Centre middle of the foe's side base graphic
-  FOE_BASE_X           = Settings::SCREEN_WIDTH - 128
-  FOE_BASE_Y           = (Settings::SCREEN_HEIGHT * 3 / 4) - 112
+  FOE_BASE_X           = Settings::SCREEN_WIDTH - 64
+  FOE_BASE_Y           = (Settings::SCREEN_HEIGHT * 3 / 4) - 56
   # Default focal points of user and target in animations - do not change!
   # Is the centre middle of each sprite
-  FOCUSUSER_X          = 128
-  FOCUSUSER_Y          = 224
-  FOCUSTARGET_X        = 384
-  FOCUSTARGET_Y        = 96
+  FOCUSUSER_X          = 64
+  FOCUSUSER_Y          = 112
+  FOCUSTARGET_X        = 192
+  FOCUSTARGET_Y        = 48
   # Menu types
   BLANK                = 0
   MESSAGE_BOX          = 1
@@ -43,11 +43,11 @@ class Battle::Scene
     # Shift depending on index (no shifting needed for sideSize of 1)
     case sideSize
     when 2
-      ret[0] += [-48, 48, 32, -32][index]
-      ret[1] += [  0,  0, 16, -16][index]
+      ret[0] += [-24, 24, 16, -16][index]
+      ret[1] += [  0,  0,  8,  -8][index]
     when 3
-      ret[0] += [-80, 80,  0,  0, 80, -80][index]
-      ret[1] += [  0,  0,  8, -8, 16, -16][index]
+      ret[0] += [-40, 40,  0,  0, 40, -40][index]
+      ret[1] += [  0,  0,  4, -4,  8,  -8][index]
     end
     return ret
   end
@@ -57,18 +57,18 @@ class Battle::Scene
   def self.pbTrainerPosition(side, index = 0, sideSize = 1)
     # Start at the centre of the base for the appropriate side
     if side == 0
-      ret = [PLAYER_BASE_X, PLAYER_BASE_Y - 16]
+      ret = [PLAYER_BASE_X, PLAYER_BASE_Y - 8]
     else
-      ret = [FOE_BASE_X, FOE_BASE_Y + 6]
+      ret = [FOE_BASE_X, FOE_BASE_Y + 3]
     end
     # Shift depending on index (no shifting needed for sideSize of 1)
     case sideSize
     when 2
-      ret[0] += [-48, 48, 32, -32][(2 * index) + side]
-      ret[1] += [  0,  0,  0, -16][(2 * index) + side]
+      ret[0] += [-24, 24, 16, -16][(2 * index) + side]
+      ret[1] += [  0,  0,  0,  -8][(2 * index) + side]
     when 3
-      ret[0] += [-80, 80,  0,  0, 80, -80][(2 * index) + side]
-      ret[1] += [  0,  0,  0, -8,  0, -16][(2 * index) + side]
+      ret[0] += [-40, 40,  0,  0, 40, -40][(2 * index) + side]
+      ret[1] += [  0,  0,  0, -4,  0,  -8][(2 * index) + side]
     end
     return ret
   end

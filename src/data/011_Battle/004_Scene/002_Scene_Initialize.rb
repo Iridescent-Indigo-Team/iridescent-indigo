@@ -26,12 +26,12 @@ class Battle::Scene
     # The background image and each side's base graphic
     pbCreateBackdropSprites
     # Create message box graphic
-    messageBox = pbAddSprite("messageBox", 0, Graphics.height - 96,
+    messageBox = pbAddSprite("messageBox", 0, Graphics.height - 48,
                              "Graphics/UI/Battle/overlay_message", @viewport)
     messageBox.z = 195
     # Create message window (displays the message)
     msgWindow = Window_AdvancedTextPokemon.newWithSize(
-      "", 16, Graphics.height - 96 + 2, Graphics.width - 32, 96, @viewport
+      "", 8, Graphics.height - 48 + 1, Graphics.width - 16, 48, @viewport
     )
     msgWindow.z              = 200
     msgWindow.opacity        = 0
@@ -146,7 +146,7 @@ class Battle::Scene
         base.oy = (side == 0) ? base.bitmap.height : base.bitmap.height / 2
       end
     end
-    cmdBarBG = pbAddSprite("cmdBar_bg", 0, Graphics.height - 96, messageBG, @viewport)
+    cmdBarBG = pbAddSprite("cmdBar_bg", 0, Graphics.height - 48, messageBG, @viewport)
     cmdBarBG.z = 180
   end
 

@@ -65,8 +65,8 @@ class Battle::Scene::SafariDataBox < Sprite
     @selected    = 0
     @battle      = battle
     @databox     = AnimatedBitmap.new(_INTL("Graphics/UI/Battle/databox_safari"))
-    self.x       = Graphics.width - 232
-    self.y       = Graphics.height - 184
+    self.x       = Graphics.width - 116
+    self.y       = Graphics.height - 92
     @contents    = Bitmap.new(@databox.width, @databox.height)
     self.bitmap  = @contents
     self.visible = false
@@ -81,8 +81,8 @@ class Battle::Scene::SafariDataBox < Sprite
     base   = Color.new(72, 72, 72)
     shadow = Color.new(184, 184, 184)
     textpos = []
-    textpos.push([_INTL("Safari Balls"), 30, 14, :left, base, shadow])
-    textpos.push([_INTL("Left: {1}", @battle.ballCount), 30, 44, :left, base, shadow])
+    textpos.push([_INTL("Safari Balls"), 15, 7, :left, base, shadow])
+    textpos.push([_INTL("Left: {1}", @battle.ballCount), 15, 22, :left, base, shadow])
     pbDrawTextPositions(self.bitmap, textpos)
   end
 end
@@ -135,17 +135,17 @@ class Battle::Scene::Animation::ThrowBait < Battle::Scene::Animation
     delay = ball.totalDuration + 3
     2.times do
       battler.setSE(delay, "player jump")
-      battler.moveDelta(delay, 3, 0, -16)
-      battler.moveDelta(delay + 4, 3, 0, 16)
+      battler.moveDelta(delay, 3, 0, -8)
+      battler.moveDelta(delay + 4, 3, 0, 8)
       delay = battler.totalDuration + 1
     end
     # Show Pokémon eating the bait
     delay = battler.totalDuration + 3
     2.times do
       battler.moveAngle(delay, 7, 5)
-      battler.moveDelta(delay, 7, 0, 6)
+      battler.moveDelta(delay, 7, 0, 3)
       battler.moveAngle(delay + 7, 7, 0)
-      battler.moveDelta(delay + 7, 7, 0, -6)
+      battler.moveDelta(delay + 7, 7, 0, -3)
       delay = battler.totalDuration
     end
   end
@@ -206,7 +206,7 @@ class Battle::Scene::Animation::ThrowRock < Battle::Scene::Animation
       anger.moveZoom(delay, 3, 130)
       anger.moveZoom(delay + 3, 3, 100)
       anger.setVisible(delay + 6, false)
-      anger.setDelta(delay + 6, 96, -16)
+      anger.setDelta(delay + 6, 48, -8)
       delay = anger.totalDuration + 3
     end
   end

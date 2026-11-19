@@ -11,7 +11,7 @@ module BattleAnimationEditor
       when 1
         x += (w / 2) - (width / 2)
       end
-      pbDrawShadowText(bitmap, x, y + 6, w, h, t,
+      pbDrawShadowText(bitmap, x, y + 3, w, h, t,
                        disabled ? Color.new(208, 208, 200) : Color.new(96, 96, 96),
                        Color.new(208, 208, 200))
     end
@@ -58,14 +58,14 @@ module BattleAnimationEditor
     def parentX
       return 0 if !self.parent
       return self.parent.x + self.parent.leftEdge if self.parent.is_a?(SpriteWindow)
-      return self.parent.x + 16 if self.parent.is_a?(Window)
+      return self.parent.x + 8 if self.parent.is_a?(Window)
       return self.parent.x
     end
 
     def parentY
       return 0 if !self.parent
       return self.parent.y + self.parent.topEdge if self.parent.is_a?(SpriteWindow)
-      return self.parent.y + 16 if self.parent.is_a?(Window)
+      return self.parent.y + 8 if self.parent.is_a?(Window)
       return self.parent.y
     end
 
@@ -110,7 +110,7 @@ module BattleAnimationEditor
       bitmap = self.bitmap
       bitmap.fill_rect(self.x, self.y, self.width, self.height, Color.new(0, 0, 0, 0))
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, self.x + 4, self.y, size, self.height, self.label, @disabled)
+      shadowtext(bitmap, self.x + 2, self.y, size, self.height, self.label, @disabled)
     end
   end
 
@@ -130,7 +130,7 @@ module BattleAnimationEditor
       mousepos = Mouse.getMousePos
       self.changed = false
       return if !mousepos
-      rect = Rect.new(self.x + 1, self.y + 1, self.width - 2, self.height - 2)
+      rect = Rect.new(self.x + 1, self.y + 1, self.width - 1, self.height - 1)
       rect = toAbsoluteRect(rect)
       if Input.trigger?(Input::MOUSELEFT) &&
          rect.contains?(mousepos[0], mousepos[1]) && !@captured
@@ -152,21 +152,21 @@ module BattleAnimationEditor
       height = self.height
       # Draw background
       if @captured
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(120, 120, 120, 80))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(120, 120, 120, 80))
       else
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(0, 0, 0, 0))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(0, 0, 0, 0))
       end
       # Draw text
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, x + 4, y, size, height, self.label, @disabled)
+      shadowtext(bitmap, x + 2, y, size, height, self.label, @disabled)
       # Draw outline
       color = Color.new(120, 120, 120)
-      bitmap.fill_rect(x + 1, y + 1, width - 2, 1, color)
-      bitmap.fill_rect(x + 1, y + 1, 1, height - 2, color)
-      bitmap.fill_rect(x + 1, y + height - 2, width - 2, 1, color)
-      bitmap.fill_rect(x + width - 2, y + 1, 1, height - 2, color)
+      bitmap.fill_rect(x + 1, y + 1, width - 1, 1, color)
+      bitmap.fill_rect(x + 1, y + 1, 1, height - 1, color)
+      bitmap.fill_rect(x + 1, y + height - 1, width - 1, 1, color)
+      bitmap.fill_rect(x + width - 1, y + 1, 1, height - 1, color)
       # Return the control's clickable area
-      ret = Rect.new(x + 1, y + 1, width - 2, height - 2)
+      ret = Rect.new(x + 1, y + 1, width - 1, height - 1)
       return ret
     end
   end
@@ -207,27 +207,27 @@ module BattleAnimationEditor
       bitmap = self.bitmap
       x = self.x
       y = self.y
-      width = [self.width, 32].min
-      height = [self.height, 32].min
+      width = [self.width, 16].min
+      height = [self.height, 16].min
       # Draw background
-      bitmap.fill_rect(x + 2, y + 2, self.width - 4, self.height - 4, Color.new(0, 0, 0, 0))
+      bitmap.fill_rect(x + 1, y + 1, self.width - 2, self.height - 2, Color.new(0, 0, 0, 0))
       if @captured
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(120, 120, 120, 80))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(120, 120, 120, 80))
       else
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(0, 0, 0, 0))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(0, 0, 0, 0))
       end
       # Draw text
-      shadowtext(bitmap, x, y, 32, 32, "X", @disabled, 1) if self.checked
+      shadowtext(bitmap, x, y, 16, 16, "X", @disabled, 1) if self.checked
       size = bitmap.text_size(self.label).width
-      shadowtext(bitmap, x + 36, y, size, height, self.label, @disabled)
+      shadowtext(bitmap, x + 18, y, size, height, self.label, @disabled)
       # Draw outline
       color = Color.new(120, 120, 120)
-      bitmap.fill_rect(x + 1, y + 1, width - 2, 1, color)
-      bitmap.fill_rect(x + 1, y + 1, 1, height - 2, color)
-      bitmap.fill_rect(x + 1, y + height - 2, width - 2, 1, color)
-      bitmap.fill_rect(x + width - 2, y + 1, 1, height - 2, color)
+      bitmap.fill_rect(x + 1, y + 1, width - 1, 1, color)
+      bitmap.fill_rect(x + 1, y + 1, 1, height - 1, color)
+      bitmap.fill_rect(x + 1, y + height - 1, width - 1, 1, color)
+      bitmap.fill_rect(x + width - 1, y + 1, 1, height - 1, color)
       # Return the control's clickable area
-      ret = Rect.new(x + 1, y + 1, width - 2, height - 2)
+      ret = Rect.new(x + 1, y + 1, width - 1, height - 1)
       return ret
     end
   end
@@ -331,12 +331,12 @@ module BattleAnimationEditor
       outline_y = y
       # Draw background
       if @captured
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(120, 120, 120, 80))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(120, 120, 120, 80))
       else
-        bitmap.fill_rect(x + 2, y + 2, width - 4, height - 4, Color.new(0, 0, 0, 0))
+        bitmap.fill_rect(x + 1, y + 1, width - 2, height - 2, Color.new(0, 0, 0, 0))
       end
       # Draw text
-      x += 4
+      x += 2
       textscan = self.text.scan(/./m)
       scanlength = textscan.length
       @cursor = scanlength if @cursor > scanlength
@@ -346,7 +346,7 @@ module BattleAnimationEditor
       while startpos > 0
         c = textscan[startpos - 1]
         fromcursor += bitmap.text_size(c).width
-        break if fromcursor > width - 4
+        break if fromcursor > width - 2
         startpos -= 1
       end
       (startpos...scanlength).each do |i|
@@ -354,24 +354,24 @@ module BattleAnimationEditor
         textwidth = bitmap.text_size(c).width
         next if c == "\n"
         # Draw text
-        shadowtext(bitmap, x, y, textwidth + 4, 32, c)
+        shadowtext(bitmap, x, y, textwidth + 2, 16, c)
         # Draw cursor if necessary
         if i == @cursor && @cursor_shown
-          bitmap.fill_rect(x, y + 4, 2, 24, Color.new(120, 120, 120))
+          bitmap.fill_rect(x, y + 2, 1, 12, Color.new(120, 120, 120))
         end
         # Add x to drawn text width
         x += textwidth
       end
       if textscan.length == @cursor && @cursor_shown
-        bitmap.fill_rect(x, y + 4, 2, 24, Color.new(120, 120, 120))
+        bitmap.fill_rect(x, y + 2, 1, 12, Color.new(120, 120, 120))
       end
       # Draw outline
-      bitmap.fill_rect(outline_x + 1, outline_y + 1, width - 2, 1, color)
-      bitmap.fill_rect(outline_x + 1, outline_y + 1, 1, height - 2, color)
-      bitmap.fill_rect(outline_x + 1, outline_y + height - 2, width - 2, 1, color)
-      bitmap.fill_rect(outline_x + width - 2, outline_y + 1, 1, height - 2, color)
+      bitmap.fill_rect(outline_x + 1, outline_y + 1, width - 1, 1, color)
+      bitmap.fill_rect(outline_x + 1, outline_y + 1, 1, height - 1, color)
+      bitmap.fill_rect(outline_x + 1, outline_y + height - 1, width - 1, 1, color)
+      bitmap.fill_rect(outline_x + width - 1, outline_y + 1, 1, height - 1, color)
       # Return the control's clickable area
-      ret = Rect.new(x + 1, y + 1, width - 2, height - 2)
+      ret = Rect.new(x + 1, y + 1, width - 1, height - 1)
       return ret
     end
   end
@@ -575,7 +575,7 @@ module BattleAnimationEditor
       @checkbox.height = self.height
       @checkbox.bitmap = self.bitmap
       @checkbox.parent = self.parent
-      @slider.x = self.x + checkboxwidth + 4
+      @slider.x = self.x + checkboxwidth + 2
       @slider.y = self.y
       @slider.width = self.width - checkboxwidth
       @slider.height = self.height
@@ -830,7 +830,7 @@ module BattleAnimationEditor
       @checkbox.height = self.height
       @checkbox.bitmap = self.bitmap
       @checkbox.parent = self.parent
-      @slider.x = self.x + checkboxwidth + 4
+      @slider.x = self.x + checkboxwidth + 2
       @slider.y = self.y
       @slider.width = self.width - checkboxwidth
       @slider.height = self.height
@@ -846,7 +846,7 @@ module BattleAnimationEditor
 
     def initialize(x, y, width, height)
       super(x, y, width, height)
-      self.contents = Bitmap.new(width - 32, height - 32)
+      self.contents = Bitmap.new(width - 16, height - 16)
       pbSetNarrowFont(self.contents)
       @controls = []
     end
@@ -881,9 +881,9 @@ module BattleAnimationEditor
       i = @controls.length
       @controls[i] = control
       @controls[i].x = 0
-      @controls[i].y = i * 32
+      @controls[i].y = i * 16
       @controls[i].width = self.contents.width
-      @controls[i].height = 32
+      @controls[i].height = 16
       @controls[i].parent = self
       @controls[i].bitmap = self.contents
       @controls[i].invalidate

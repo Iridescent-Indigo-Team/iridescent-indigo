@@ -12,7 +12,7 @@ end
 class ColoredPlane < Plane
   def initialize(color, viewport = nil)
     super(viewport)
-    self.bitmap = Bitmap.new(32, 32)
+    self.bitmap = Bitmap.new(16, 16)
     set_plane_color(color)
   end
 

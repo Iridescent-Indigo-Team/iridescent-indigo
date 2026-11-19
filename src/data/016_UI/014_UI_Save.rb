@@ -67,7 +67,7 @@ class PokemonSave_Scene
     @sprites["locwindow"].viewport = @viewport
     @sprites["locwindow"].x = 0
     @sprites["locwindow"].y = 0
-    @sprites["locwindow"].width = 228 if @sprites["locwindow"].width < 228
+    @sprites["locwindow"].width = 114 if @sprites["locwindow"].width < 228
     @sprites["locwindow"].visible = true
   end
 

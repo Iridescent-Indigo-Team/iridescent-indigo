@@ -34,15 +34,15 @@ class Window_Pokedex < Window_DrawableCommand
 
   def drawItem(index, _count, rect)
     return if index >= self.top_row + self.page_item_max
-    rect = Rect.new(rect.x + 16, rect.y, rect.width - 16, rect.height)
+    rect = Rect.new(rect.x + 8, rect.y, rect.width - 8, rect.height)
     species     = @commands[index][:species]
     indexNumber = @commands[index][:number]
     indexNumber -= 1 if @commands[index][:shift]
     if $player.seen?(species)
       if $player.owned?(species)
-        pbCopyBitmap(self.contents, @pokeballOwn.bitmap, rect.x - 6, rect.y + 10)
+        pbCopyBitmap(self.contents, @pokeballOwn.bitmap, rect.x - 3, rect.y + 5)
       else
-        pbCopyBitmap(self.contents, @pokeballSeen.bitmap, rect.x - 6, rect.y + 10)
+        pbCopyBitmap(self.contents, @pokeballSeen.bitmap, rect.x - 3, rect.y + 5)
       end
       num_text = sprintf("%03d", indexNumber)
       name_text = @commands[index][:name]
@@ -50,9 +50,9 @@ class Window_Pokedex < Window_DrawableCommand
       num_text = sprintf("%03d", indexNumber)
       name_text = "----------"
     end
-    pbDrawShadowText(self.contents, rect.x + 36, rect.y + 6, rect.width, rect.height,
+    pbDrawShadowText(self.contents, rect.x + 18, rect.y + 3, rect.width, rect.height,
                      num_text, self.baseColor, self.shadowColor)
-    pbDrawShadowText(self.contents, rect.x + 84, rect.y + 6, rect.width, rect.height,
+    pbDrawShadowText(self.contents, rect.x + 42, rect.y + 3, rect.width, rect.height,
                      name_text, self.baseColor, self.shadowColor)
   end
 
@@ -107,39 +107,39 @@ class PokedexSearchSelectionSprite < Sprite
     @mode = value
     case @mode
     when 0     # Order
-      @xstart = 46
-      @ystart = 128
-      @xgap = 236
-      @ygap = 64
+      @xstart = 23
+      @ystart = 64
+      @xgap = 118
+      @ygap = 32
       @cols = 2
     when 1     # Name
-      @xstart = 78
-      @ystart = 114
-      @xgap = 52
-      @ygap = 52
+      @xstart = 39
+      @ystart = 57
+      @xgap = 26
+      @ygap = 26
       @cols = 7
     when 2     # Type
-      @xstart = 8
-      @ystart = 104
-      @xgap = 124
-      @ygap = 44
+      @xstart = 4
+      @ystart = 52
+      @xgap = 62
+      @ygap = 22
       @cols = 4
     when 3, 4   # Height, weight
-      @xstart = 44
-      @ystart = 110
-      @xgap = 8
-      @ygap = 112
+      @xstart = 22
+      @ystart = 55
+      @xgap = 4
+      @ygap = 56
     when 5     # Color
-      @xstart = 62
-      @ystart = 114
-      @xgap = 132
-      @ygap = 52
+      @xstart = 31
+      @ystart = 57
+      @xgap = 66
+      @ygap = 26
       @cols = 3
     when 6     # Shape
-      @xstart = 82
-      @ystart = 116
-      @xgap = 70
-      @ygap = 70
+      @xstart = 41
+      @ystart = 58
+      @xgap = 35
+      @ygap = 35
       @cols = 5
     end
   end
@@ -150,62 +150,62 @@ class PokedexSearchSelectionSprite < Sprite
       case @index
       when 0     # Order
         self.src_rect.y = 0
-        self.src_rect.height = 44
+        self.src_rect.height = 22
       when 1, 5   # Name, color
-        self.src_rect.y = 44
-        self.src_rect.height = 44
+        self.src_rect.y = 22
+        self.src_rect.height = 22
       when 2     # Type
-        self.src_rect.y = 88
-        self.src_rect.height = 44
+        self.src_rect.y = 44
+        self.src_rect.height = 22
       when 3, 4   # Height, weight
-        self.src_rect.y = 132
-        self.src_rect.height = 44
+        self.src_rect.y = 66
+        self.src_rect.height = 22
       when 6     # Shape
-        self.src_rect.y = 176
-        self.src_rect.height = 68
+        self.src_rect.y = 88
+        self.src_rect.height = 34
       else       # Reset/start/cancel
-        self.src_rect.y = 244
-        self.src_rect.height = 40
+        self.src_rect.y = 122
+        self.src_rect.height = 20
       end
       case @index
       when 0         # Order
-        self.x = 252
-        self.y = 52
+        self.x = 126
+        self.y = 26
       when 1, 2, 3, 4   # Name, type, height, weight
-        self.x = 114
-        self.y = 110 + ((@index - 1) * 52)
+        self.x = 57
+        self.y = 55 + ((@index - 1) * 26)
       when 5         # Color
-        self.x = 382
-        self.y = 110
+        self.x = 191
+        self.y = 55
       when 6         # Shape
-        self.x = 420
-        self.y = 214
+        self.x = 210
+        self.y = 107
       when 7, 8, 9     # Reset, start, cancel
-        self.x = 4 + ((@index - 7) * 176)
-        self.y = 334
+        self.x = 2 + ((@index - 7) * 88)
+        self.y = 167
       end
     else   # Parameter screen
       case @index
       when -2, -3   # OK, Cancel
-        self.src_rect.y = 244
-        self.src_rect.height = 40
+        self.src_rect.y = 122
+        self.src_rect.height = 20
       else
         case @mode
         when 0     # Order
           self.src_rect.y = 0
-          self.src_rect.height = 44
+          self.src_rect.height = 22
         when 1     # Name
-          self.src_rect.y = 284
-          self.src_rect.height = 44
+          self.src_rect.y = 142
+          self.src_rect.height = 22
         when 2, 5   # Type, color
-          self.src_rect.y = 44
-          self.src_rect.height = 44
+          self.src_rect.y = 22
+          self.src_rect.height = 22
         when 3, 4   # Height, weight
-          self.src_rect.y = (@minmax == 1) ? 328 : 424
-          self.src_rect.height = 96
+          self.src_rect.y = (@minmax == 1) ? 164 : 212
+          self.src_rect.height = 48
         when 6     # Shape
-          self.src_rect.y = 176
-          self.src_rect.height = 68
+          self.src_rect.y = 88
+          self.src_rect.height = 34
         end
       end
       case @index
@@ -218,11 +218,11 @@ class PokedexSearchSelectionSprite < Sprite
           self.y = @ystart + ((@cmds / @cols).floor * @ygap)
         end
       when -2   # OK
-        self.x = 4
-        self.y = 334
+        self.x = 2
+        self.y = 167
       when -3   # Cancel
-        self.x = 356
-        self.y = 334
+        self.x = 178
+        self.y = 167
       else
         case @mode
         when 0, 1, 2, 5, 6   # Order, name, type, color, shape
@@ -281,11 +281,11 @@ class PokemonPokedex_Scene
 #    end
     addBackgroundPlane(@sprites, "searchbg", "Pokedex/bg_search", @viewport)
     @sprites["searchbg"].visible = false
-    @sprites["pokedex"] = Window_Pokedex.new(206, 30, 276, 364, @viewport)
+    @sprites["pokedex"] = Window_Pokedex.new(103, 15, 138, 182, @viewport)
     @sprites["icon"] = PokemonSprite.new(@viewport)
     @sprites["icon"].setOffset(PictureOrigin::CENTER)
-    @sprites["icon"].x = 112
-    @sprites["icon"].y = 196
+    @sprites["icon"].x = 56
+    @sprites["icon"].y = 98
     @sprites["overlay"] = BitmapSprite.new(Graphics.width, Graphics.height, @viewport)
     pbSetSystemFont(@sprites["overlay"].bitmap)
     @sprites["searchcursor"] = PokedexSearchSelectionSprite.new(@viewport)
@@ -430,17 +430,17 @@ class PokemonPokedex_Scene
       end
     end
     textpos = [
-      [dexname, Graphics.width / 2, 10, :center, Color.new(248, 248, 248), Color.black]
+      [dexname, Graphics.width / 2, 5, :center, Color.new(248, 248, 248), Color.black]
     ]
-    textpos.push([GameData::Species.get(iconspecies).name, 112, 58, :center, base, shadow]) if iconspecies
+    textpos.push([GameData::Species.get(iconspecies).name, 56, 29, :center, base, shadow]) if iconspecies
     if @searchResults
-      textpos.push([_INTL("Search results"), 112, 314, :center, base, shadow])
-      textpos.push([@dexlist.length.to_s, 112, 346, :center, base, shadow])
+      textpos.push([_INTL("Search results"), 56, 157, :center, base, shadow])
+      textpos.push([@dexlist.length.to_s, 56, 173, :center, base, shadow])
     else
-      textpos.push([_INTL("Seen:"), 42, 314, :left, base, shadow])
-      textpos.push([$player.pokedex.seen_count(pbGetPokedexRegion).to_s, 182, 314, :right, base, shadow])
-      textpos.push([_INTL("Owned:"), 42, 346, :left, base, shadow])
-      textpos.push([$player.pokedex.owned_count(pbGetPokedexRegion).to_s, 182, 346, :right, base, shadow])
+      textpos.push([_INTL("Seen:"), 21, 157, :left, base, shadow])
+      textpos.push([$player.pokedex.seen_count(pbGetPokedexRegion).to_s, 91, 157, :right, base, shadow])
+      textpos.push([_INTL("Owned:"), 21, 173, :left, base, shadow])
+      textpos.push([$player.pokedex.owned_count(pbGetPokedexRegion).to_s, 91, 173, :right, base, shadow])
     end
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
@@ -450,29 +450,29 @@ class PokemonPokedex_Scene
     itemlist = @sprites["pokedex"]
     showslider = false
     if itemlist.top_row > 0
-      overlay.blt(468, 48, @sliderbitmap.bitmap, Rect.new(0, 0, 40, 30))
+      overlay.blt(234, 24, @sliderbitmap.bitmap, Rect.new(0, 0, 20, 15))
       showslider = true
     end
     if itemlist.top_item + itemlist.page_item_max < itemlist.itemCount
-      overlay.blt(468, 346, @sliderbitmap.bitmap, Rect.new(0, 30, 40, 30))
+      overlay.blt(234, 173, @sliderbitmap.bitmap, Rect.new(0, 15, 20, 15))
       showslider = true
     end
     # Draw slider box
     if showslider
-      sliderheight = 268
+      sliderheight = 134
       boxheight = (sliderheight * itemlist.page_row_max / itemlist.row_max).floor
       boxheight += [(sliderheight - boxheight) / 2, sliderheight / 6].min
-      boxheight = [boxheight.floor, 40].max
-      y = 78
+      boxheight = [boxheight.floor, 20].max
+      y = 39
       y += ((sliderheight - boxheight) * itemlist.top_row / (itemlist.row_max - itemlist.page_row_max)).floor
-      overlay.blt(468, y, @sliderbitmap.bitmap, Rect.new(40, 0, 40, 8))
+      overlay.blt(234, y, @sliderbitmap.bitmap, Rect.new(20, 0, 20, 4))
       i = 0
-      while i * 16 < boxheight - 8 - 16
-        height = [boxheight - 8 - 16 - (i * 16), 16].min
-        overlay.blt(468, y + 8 + (i * 16), @sliderbitmap.bitmap, Rect.new(40, 8, 40, height))
+      while i * 8 < boxheight - 4 - 8
+        height = [boxheight - 4 - 8 - (i * 8), 8].min
+        overlay.blt(234, y + 4 + (i * 8), @sliderbitmap.bitmap, Rect.new(20, 4, 20, height))
         i += 1
       end
-      overlay.blt(468, y + boxheight - 16, @sliderbitmap.bitmap, Rect.new(40, 24, 40, 16))
+      overlay.blt(234, y + boxheight - 8, @sliderbitmap.bitmap, Rect.new(20, 12, 20, 8))
     end
   end
 
@@ -483,36 +483,36 @@ class PokemonPokedex_Scene
     shadow = Color.new(72, 72, 72)
     # Write various bits of text
     textpos = [
-      [_INTL("Search Mode"), Graphics.width / 2, 10, :center, base, shadow],
-      [_INTL("Order"), 136, 64, :center, base, shadow],
-      [_INTL("Name"), 58, 122, :center, base, shadow],
-      [_INTL("Type"), 58, 174, :center, base, shadow],
-      [_INTL("Height"), 58, 226, :center, base, shadow],
-      [_INTL("Weight"), 58, 278, :center, base, shadow],
-      [_INTL("Color"), 326, 122, :center, base, shadow],
-      [_INTL("Shape"), 454, 174, :center, base, shadow],
-      [_INTL("Reset"), 80, 346, :center, base, shadow, 1],
-      [_INTL("Start"), Graphics.width / 2, 346, :center, base, shadow, :outline],
-      [_INTL("Cancel"), Graphics.width - 80, 346, :center, base, shadow, :outline]
+      [_INTL("Search Mode"), Graphics.width / 2, 5, :center, base, shadow],
+      [_INTL("Order"), 68, 32, :center, base, shadow],
+      [_INTL("Name"), 29, 61, :center, base, shadow],
+      [_INTL("Type"), 29, 87, :center, base, shadow],
+      [_INTL("Height"), 29, 113, :center, base, shadow],
+      [_INTL("Weight"), 29, 139, :center, base, shadow],
+      [_INTL("Color"), 163, 61, :center, base, shadow],
+      [_INTL("Shape"), 227, 87, :center, base, shadow],
+      [_INTL("Reset"), 40, 173, :center, base, shadow, 1],
+      [_INTL("Start"), Graphics.width / 2, 173, :center, base, shadow, :outline],
+      [_INTL("Cancel"), Graphics.width - 40, 173, :center, base, shadow, :outline]
     ]
     # Write order, name and color parameters
-    textpos.push([@orderCommands[params[0]], 344, 66, :center, base, shadow, :outline])
-    textpos.push([(params[1] < 0) ? "----" : @nameCommands[params[1]], 176, 124, :center, base, shadow, :outline])
-    textpos.push([(params[8] < 0) ? "----" : @colorCommands[params[8]].name, 444, 124, :center, base, shadow, :outline])
+    textpos.push([@orderCommands[params[0]], 172, 33, :center, base, shadow, :outline])
+    textpos.push([(params[1] < 0) ? "----" : @nameCommands[params[1]], 88, 62, :center, base, shadow, :outline])
+    textpos.push([(params[8] < 0) ? "----" : @colorCommands[params[8]].name, 222, 62, :center, base, shadow, :outline])
     # Draw type icons
     if params[2] >= 0
       type_number = @typeCommands[params[2]].icon_position
-      typerect = Rect.new(0, type_number * 32, 96, 32)
-      overlay.blt(128, 168, @typebitmap.bitmap, typerect)
+      typerect = Rect.new(0, type_number * 16, 48, 16)
+      overlay.blt(64, 84, @typebitmap.bitmap, typerect)
     else
-      textpos.push(["----", 176, 176, :center, base, shadow, :outline])
+      textpos.push(["----", 88, 88, :center, base, shadow, :outline])
     end
     if params[3] >= 0
       type_number = @typeCommands[params[3]].icon_position
-      typerect = Rect.new(0, type_number * 32, 96, 32)
-      overlay.blt(256, 168, @typebitmap.bitmap, typerect)
+      typerect = Rect.new(0, type_number * 16, 48, 16)
+      overlay.blt(128, 84, @typebitmap.bitmap, typerect)
     else
-      textpos.push(["----", 304, 176, :center, base, shadow, :outline])
+      textpos.push(["----", 152, 88, :center, base, shadow, :outline])
     end
     # Write height and weight limits
     ht1 = (params[4] < 0) ? 0 : (params[4] >= @heightCommands.length) ? 999 : @heightCommands[params[4]]
@@ -525,24 +525,24 @@ class PokemonPokedex_Scene
       ht2 = (params[5] < 0) ? 99 * 12 : (ht2 / 0.254).round
       wt1 = (params[6] >= @weightCommands.length) ? 99_990 : (wt1 / 0.254).round
       wt2 = (params[7] < 0) ? 99_990 : (wt2 / 0.254).round
-      textpos.push([sprintf("%d'%02d''", ht1 / 12, ht1 % 12), 166, 228, :center, base, shadow, :outline])
-      textpos.push([sprintf("%d'%02d''", ht2 / 12, ht2 % 12), 294, 228, :center, base, shadow, :outline])
-      textpos.push([sprintf("%.1f", wt1 / 10.0), 166, 280, :center, base, shadow, :outline])
-      textpos.push([sprintf("%.1f", wt2 / 10.0), 294, 280, :center, base, shadow, :outline])
+      textpos.push([sprintf("%d'%02d''", ht1 / 12, ht1 % 12), 83, 114, :center, base, shadow, :outline])
+      textpos.push([sprintf("%d'%02d''", ht2 / 12, ht2 % 12), 147, 114, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", wt1 / 10.0), 83, 140, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", wt2 / 10.0), 147, 140, :center, base, shadow, :outline])
       hwoffset = true
     else
-      textpos.push([sprintf("%.1f", ht1 / 10.0), 166, 228, :center, base, shadow, :outline])
-      textpos.push([sprintf("%.1f", ht2 / 10.0), 294, 228, :center, base, shadow, :outline])
-      textpos.push([sprintf("%.1f", wt1 / 10.0), 166, 280, :center, base, shadow, :outline])
-      textpos.push([sprintf("%.1f", wt2 / 10.0), 294, 280, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", ht1 / 10.0), 83, 114, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", ht2 / 10.0), 147, 114, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", wt1 / 10.0), 83, 140, :center, base, shadow, :outline])
+      textpos.push([sprintf("%.1f", wt2 / 10.0), 147, 140, :center, base, shadow, :outline])
     end
-    overlay.blt(344, 214, @hwbitmap.bitmap, Rect.new(0, (hwoffset) ? 44 : 0, 32, 44))
-    overlay.blt(344, 266, @hwbitmap.bitmap, Rect.new(32, (hwoffset) ? 44 : 0, 32, 44))
+    overlay.blt(172, 107, @hwbitmap.bitmap, Rect.new(0, (hwoffset) ? 22 : 0, 16, 22))
+    overlay.blt(172, 133, @hwbitmap.bitmap, Rect.new(16, (hwoffset) ? 22 : 0, 16, 22))
     # Draw shape icon
     if params[9] >= 0
       shape_number = @shapeCommands[params[9]].icon_position
-      shaperect = Rect.new(0, shape_number * 60, 60, 60)
-      overlay.blt(424, 218, @shapebitmap.bitmap, shaperect)
+      shaperect = Rect.new(0, shape_number * 30, 30, 30)
+      overlay.blt(212, 109, @shapebitmap.bitmap, shaperect)
     end
     # Draw all text
     pbDrawTextPositions(overlay, textpos)
@@ -555,77 +555,77 @@ class PokemonPokedex_Scene
     shadow = Color.new(72, 72, 72)
     # Write various bits of text
     textpos = [
-      [_INTL("Search Mode"), Graphics.width / 2, 10, :center, base, shadow],
-      [_INTL("OK"), 80, 346, :center, base, shadow, :outline],
-      [_INTL("Cancel"), Graphics.width - 80, 346, :center, base, shadow, :outline]
+      [_INTL("Search Mode"), Graphics.width / 2, 5, :center, base, shadow],
+      [_INTL("OK"), 40, 173, :center, base, shadow, :outline],
+      [_INTL("Cancel"), Graphics.width - 40, 173, :center, base, shadow, :outline]
     ]
     title = [_INTL("Order"), _INTL("Name"), _INTL("Type"), _INTL("Height"),
              _INTL("Weight"), _INTL("Color"), _INTL("Shape")][mode]
-    textpos.push([title, 102, (mode == 6) ? 70 : 64, :left, base, shadow])
+    textpos.push([title, 51, (mode == 6) ? 35 : 32, :left, base, shadow])
     case mode
     when 0   # Order
-      xstart = 46
-      ystart = 128
-      xgap = 236
-      ygap = 64
-      halfwidth = 92
+      xstart = 23
+      ystart = 64
+      xgap = 118
+      ygap = 32
+      halfwidth = 46
       cols = 2
       selbuttony = 0
-      selbuttonheight = 44
+      selbuttonheight = 22
     when 1   # Name
-      xstart = 78
-      ystart = 114
-      xgap = 52
-      ygap = 52
-      halfwidth = 22
+      xstart = 39
+      ystart = 57
+      xgap = 26
+      ygap = 26
+      halfwidth = 11
       cols = 7
-      selbuttony = 156
-      selbuttonheight = 44
+      selbuttony = 78
+      selbuttonheight = 22
     when 2   # Type
-      xstart = 8
-      ystart = 104
-      xgap = 124
-      ygap = 44
-      halfwidth = 62
+      xstart = 4
+      ystart = 52
+      xgap = 62
+      ygap = 22
+      halfwidth = 31
       cols = 4
-      selbuttony = 44
-      selbuttonheight = 44
+      selbuttony = 22
+      selbuttonheight = 22
     when 3, 4   # Height, weight
-      xstart = 44
-      ystart = 110
-      xgap = 304 / (cmds.length + 1)
-      ygap = 112
-      halfwidth = 60
+      xstart = 22
+      ystart = 55
+      xgap = 152 / (cmds.length + 1)
+      ygap = 56
+      halfwidth = 30
       cols = cmds.length + 1
     when 5   # Color
-      xstart = 62
-      ystart = 114
-      xgap = 132
-      ygap = 52
-      halfwidth = 62
+      xstart = 31
+      ystart = 57
+      xgap = 66
+      ygap = 26
+      halfwidth = 31
       cols = 3
-      selbuttony = 44
-      selbuttonheight = 44
+      selbuttony = 22
+      selbuttonheight = 22
     when 6   # Shape
-      xstart = 82
-      ystart = 116
-      xgap = 70
-      ygap = 70
+      xstart = 41
+      ystart = 58
+      xgap = 35
+      ygap = 35
       halfwidth = 0
       cols = 5
-      selbuttony = 88
-      selbuttonheight = 68
+      selbuttony = 44
+      selbuttonheight = 34
     end
     # Draw selected option(s) text in top bar
     case mode
     when 2   # Type icons
       2.times do |i|
         if !sel[i] || sel[i] < 0
-          textpos.push(["----", 298 + (128 * i), 66, :center, base, shadow, :outline])
+          textpos.push(["----", 149 + (64 * i), 33, :center, base, shadow, :outline])
         else
           type_number = @typeCommands[sel[i]].icon_position
-          typerect = Rect.new(0, type_number * 32, 96, 32)
-          overlay.blt(250 + (128 * i), 58, @typebitmap.bitmap, typerect)
+          typerect = Rect.new(0, type_number * 16, 48, 16)
+          overlay.blt(125 + (64 * i), 29, @typebitmap.bitmap, typerect)
         end
       end
     when 3   # Height range
@@ -642,9 +642,9 @@ class PokemonPokedex_Scene
         txt1 = sprintf("%.1f", ht1 / 10.0)
         txt2 = sprintf("%.1f", ht2 / 10.0)
       end
-      textpos.push([txt1, 286, 66, :center, base, shadow, :outline])
-      textpos.push([txt2, 414, 66, :center, base, shadow, :outline])
-      overlay.blt(462, 52, @hwbitmap.bitmap, Rect.new(0, (hwoffset) ? 44 : 0, 32, 44))
+      textpos.push([txt1, 143, 33, :center, base, shadow, :outline])
+      textpos.push([txt2, 207, 33, :center, base, shadow, :outline])
+      overlay.blt(231, 26, @hwbitmap.bitmap, Rect.new(0, (hwoffset) ? 22 : 0, 16, 22))
     when 4   # Weight range
       wt1 = (sel[0] < 0) ? 0 : (sel[0] >= @weightCommands.length) ? 9999 : @weightCommands[sel[0]]
       wt2 = (sel[1] < 0) ? 9999 : (sel[1] >= @weightCommands.length) ? 0 : @weightCommands[sel[1]]
@@ -659,26 +659,26 @@ class PokemonPokedex_Scene
         txt1 = sprintf("%.1f", wt1 / 10.0)
         txt2 = sprintf("%.1f", wt2 / 10.0)
       end
-      textpos.push([txt1, 286, 66, :center, base, shadow, :outline])
-      textpos.push([txt2, 414, 66, :center, base, shadow, :outline])
-      overlay.blt(462, 52, @hwbitmap.bitmap, Rect.new(32, (hwoffset) ? 44 : 0, 32, 44))
+      textpos.push([txt1, 143, 33, :center, base, shadow, :outline])
+      textpos.push([txt2, 207, 33, :center, base, shadow, :outline])
+      overlay.blt(231, 26, @hwbitmap.bitmap, Rect.new(16, (hwoffset) ? 22 : 0, 16, 22))
     when 5   # Color
       if sel[0] < 0
-        textpos.push(["----", 362, 66, :center, base, shadow, :outline])
+        textpos.push(["----", 181, 33, :center, base, shadow, :outline])
       else
-        textpos.push([cmds[sel[0]].name, 362, 66, :center, base, shadow, :outline])
+        textpos.push([cmds[sel[0]].name, 181, 33, :center, base, shadow, :outline])
       end
     when 6   # Shape icon
       if sel[0] >= 0
-        shaperect = Rect.new(0, @shapeCommands[sel[0]].icon_position * 60, 60, 60)
-        overlay.blt(332, 50, @shapebitmap.bitmap, shaperect)
+        shaperect = Rect.new(0, @shapeCommands[sel[0]].icon_position * 30, 30, 30)
+        overlay.blt(166, 25, @shapebitmap.bitmap, shaperect)
       end
     else
       if sel[0] < 0
         text = ["----", "-", "----", "", "", "----", ""][mode]
-        textpos.push([text, 362, 66, :center, base, shadow, :outline])
+        textpos.push([text, 181, 33, :center, base, shadow, :outline])
       else
-        textpos.push([cmds[sel[0]], 362, 66, :center, base, shadow, :outline])
+        textpos.push([cmds[sel[0]], 181, 33, :center, base, shadow, :outline])
       end
     end
     # Draw selected option(s) button graphic
@@ -688,15 +688,15 @@ class PokemonPokedex_Scene
       xpos2 = xstart + ((sel[1] + 1) * xgap)
       xpos2 = xstart + (cols * xgap) if sel[1] < 0
       xpos2 = xstart if sel[1] >= cols - 1
-      ypos1 = ystart + 180
-      ypos2 = ystart + 36
-      overlay.blt(16, 120, @searchsliderbitmap.bitmap, Rect.new(0, 192, 32, 44)) if sel[1] < cols - 1
-      overlay.blt(464, 120, @searchsliderbitmap.bitmap, Rect.new(32, 192, 32, 44)) if sel[1] >= 0
-      overlay.blt(16, 264, @searchsliderbitmap.bitmap, Rect.new(0, 192, 32, 44)) if sel[0] >= 0
-      overlay.blt(464, 264, @searchsliderbitmap.bitmap, Rect.new(32, 192, 32, 44)) if sel[0] < cols - 1
-      hwrect = Rect.new(0, 0, 120, 96)
+      ypos1 = ystart + 90
+      ypos2 = ystart + 18
+      overlay.blt(8, 60, @searchsliderbitmap.bitmap, Rect.new(0, 96, 16, 22)) if sel[1] < cols - 1
+      overlay.blt(232, 60, @searchsliderbitmap.bitmap, Rect.new(16, 96, 16, 22)) if sel[1] >= 0
+      overlay.blt(8, 132, @searchsliderbitmap.bitmap, Rect.new(0, 96, 16, 22)) if sel[0] >= 0
+      overlay.blt(232, 132, @searchsliderbitmap.bitmap, Rect.new(16, 96, 16, 22)) if sel[0] < cols - 1
+      hwrect = Rect.new(0, 0, 60, 48)
       overlay.blt(xpos2, ystart, @searchsliderbitmap.bitmap, hwrect)
-      hwrect.y = 96
+      hwrect.y = 48
       overlay.blt(xpos1, ystart + ygap, @searchsliderbitmap.bitmap, hwrect)
       textpos.push([txt1, xpos1 + halfwidth, ypos1, :center, base])
       textpos.push([txt2, xpos2 + halfwidth, ypos2, :center, base])
@@ -719,43 +719,43 @@ class PokemonPokedex_Scene
     when 0, 1   # Order, name
       cmds.length.times do |i|
         x = xstart + halfwidth + ((i % cols) * xgap)
-        y = ystart + 14 + ((i / cols).floor * ygap)
+        y = ystart + 7 + ((i / cols).floor * ygap)
         textpos.push([cmds[i], x, y, :center, base, shadow, :outline])
       end
       if mode != 0
         textpos.push([(mode == 1) ? "-" : "----",
                       xstart + halfwidth + ((cols - 1) * xgap),
-                      ystart + 14 + ((cmds.length / cols).floor * ygap),
+                      ystart + 7 + ((cmds.length / cols).floor * ygap),
                       :center, base, shadow, :outline])
       end
     when 2   # Type
-      typerect = Rect.new(0, 0, 96, 32)
+      typerect = Rect.new(0, 0, 48, 16)
       cmds.length.times do |i|
-        typerect.y = @typeCommands[i].icon_position * 32
-        overlay.blt(xstart + 14 + ((i % cols) * xgap),
-                    ystart + 6 + ((i / cols).floor * ygap),
+        typerect.y = @typeCommands[i].icon_position * 16
+        overlay.blt(xstart + 7 + ((i % cols) * xgap),
+                    ystart + 3 + ((i / cols).floor * ygap),
                     @typebitmap.bitmap, typerect)
       end
       textpos.push(["----",
                     xstart + halfwidth + ((cols - 1) * xgap),
-                    ystart + 14 + ((cmds.length / cols).floor * ygap),
+                    ystart + 7 + ((cmds.length / cols).floor * ygap),
                     :center, base, shadow, :outline])
     when 5   # Color
       cmds.length.times do |i|
         x = xstart + halfwidth + ((i % cols) * xgap)
-        y = ystart + 14 + ((i / cols).floor * ygap)
+        y = ystart + 7 + ((i / cols).floor * ygap)
         textpos.push([cmds[i].name, x, y, :center, base, shadow, :outline])
       end
       textpos.push(["----",
                     xstart + halfwidth + ((cols - 1) * xgap),
-                    ystart + 14 + ((cmds.length / cols).floor * ygap),
+                    ystart + 7 + ((cmds.length / cols).floor * ygap),
                     :center, base, shadow, :outline])
     when 6   # Shape
-      shaperect = Rect.new(0, 0, 60, 60)
+      shaperect = Rect.new(0, 0, 30, 30)
       cmds.length.times do |i|
-        shaperect.y = @shapeCommands[i].icon_position * 60
-        overlay.blt(xstart + 4 + ((i % cols) * xgap),
-                    ystart + 4 + ((i / cols).floor * ygap),
+        shaperect.y = @shapeCommands[i].icon_position * 30
+        overlay.blt(xstart + 2 + ((i % cols) * xgap),
+                    ystart + 2 + ((i / cols).floor * ygap),
                     @shapebitmap.bitmap, shaperect)
       end
     end

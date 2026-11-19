@@ -147,7 +147,7 @@ class GifBitmap
     rescue
       @bitmap = nil
     end
-    @bitmap = Bitmap.new(32, 32) if @bitmap.nil?
+    @bitmap = Bitmap.new(16, 16) if @bitmap.nil?
     @bitmap.play if @bitmap&.animated?
   end
 

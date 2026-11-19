@@ -168,8 +168,8 @@ class BerryPlantMoistureSprite
     @event          = event
     @map            = map
     @sprite         = IconSprite.new(0, 0, viewport)
-    @sprite.ox      = 16
-    @sprite.oy      = 24
+    @sprite.ox      = 8
+    @sprite.oy      = 12
     @moisture_stage = -1   # -1 = none, 0 = dry, 1 = damp, 2 = wet
     @disposed       = false
     update_graphic

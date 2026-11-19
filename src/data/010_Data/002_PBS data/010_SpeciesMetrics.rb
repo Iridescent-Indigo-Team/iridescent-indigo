@@ -69,15 +69,16 @@ module GameData
     end
 
     def apply_metrics_to_sprite(sprite, index, shadow = false)
+      # Metrics in PBS are in 1x pixels, which is the game's resolution.
       if shadow
-        sprite.x += @shadow_x * 2 if (index & 1) == 1   # Foe Pokémon
+        sprite.x += @shadow_x if (index & 1) == 1   # Foe Pokémon
       elsif (index & 1) == 0   # Player's Pokémon
-        sprite.x += @back_sprite[0] * 2
-        sprite.y += @back_sprite[1] * 2
+        sprite.x += @back_sprite[0]
+        sprite.y += @back_sprite[1]
       else                     # Foe Pokémon
-        sprite.x += @front_sprite[0] * 2
-        sprite.y += @front_sprite[1] * 2
-        sprite.y -= @front_sprite_altitude * 2
+        sprite.x += @front_sprite[0]
+        sprite.y += @front_sprite[1]
+        sprite.y -= @front_sprite_altitude
       end
     end
 

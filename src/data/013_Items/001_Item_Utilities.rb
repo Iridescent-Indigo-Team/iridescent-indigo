@@ -205,7 +205,7 @@ end
 
 def pbTopRightWindow(text, scene = nil)
   window = Window_AdvancedTextPokemon.new(text)
-  window.width = 198
+  window.width = 99
   window.x     = Graphics.width - window.width
   window.y     = 0
   window.z     = 99999

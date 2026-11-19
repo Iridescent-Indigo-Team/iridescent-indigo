@@ -64,11 +64,11 @@ class SelectionSprite < Sprite
       )
       red = Color.new(255, 0, 0)
       @sprite.bitmap.clear
-      @sprite.bitmap.fill_rect(0, 0, @othersprite.bitmap.width, 2, red)
-      @sprite.bitmap.fill_rect(0, @othersprite.bitmap.height - 2,
-                               @othersprite.bitmap.width, 2, red)
-      @sprite.bitmap.fill_rect(0, 0, 2, @othersprite.bitmap.height, red)
-      @sprite.bitmap.fill_rect(@othersprite.bitmap.width - 2, 0, 2,
+      @sprite.bitmap.fill_rect(0, 0, @othersprite.bitmap.width, 1, red)
+      @sprite.bitmap.fill_rect(0, @othersprite.bitmap.height - 1,
+                               @othersprite.bitmap.width, 1, red)
+      @sprite.bitmap.fill_rect(0, 0, 1, @othersprite.bitmap.height, red)
+      @sprite.bitmap.fill_rect(@othersprite.bitmap.width - 1, 0, 1,
                                @othersprite.bitmap.height, red)
     end
   end
@@ -171,8 +171,8 @@ class MapScreenScene
       if conn[0] == id
         b = sprites.any? { |i| i == conn[3] }
         if !b
-          x = ((conn[1] - conn[4]) * 4) + dispx
-          y = ((conn[2] - conn[5]) * 4) + dispy
+          x = ((conn[1] - conn[4]) * 2) + dispx
+          y = ((conn[2] - conn[5]) * 2) + dispy
           setMapSpritePos(conn[3], x, y)
           sprites.push(conn[3])
           putNeighbors(conn[3], sprites)
@@ -180,8 +180,8 @@ class MapScreenScene
       elsif conn[3] == id
         b = sprites.any? { |i| i == conn[0] }
         if !b
-          x = ((conn[4] - conn[1]) * 4) + dispx
-          y = ((conn[5] - conn[2]) * 4) + dispy
+          x = ((conn[4] - conn[1]) * 2) + dispx
+          y = ((conn[5] - conn[2]) * 2) + dispy
           setMapSpritePos(conn[0], x, y)
           sprites.push(conn[3])
           putNeighbors(conn[0], sprites)
@@ -323,7 +323,7 @@ class MapScreenScene
     @sprites["background"] = ColoredPlane.new(Color.new(160, 208, 240), @viewport)
     @sprites["selsprite"] = SelectionSprite.new(@viewport)
     @sprites["title"] = Window_UnformattedTextPokemon.newWithSize(
-      _INTL("D: Help"), 0, Graphics.height - 64, Graphics.width, 64, @viewport
+      _INTL("D: Help"), 0, Graphics.height - 32, Graphics.width, 32, @viewport
     )
     @sprites["title"].z = 2
     @mapinfos = pbLoadMapInfos
@@ -493,22 +493,22 @@ class MapScreenScene
     end
     if Input.press?(Input::UP)
       @mapsprites.each do |i|
-        i[1].y += 4 if i
+        i[1].y += 2 if i
       end
     end
     if Input.press?(Input::DOWN)
       @mapsprites.each do |i|
-        i[1].y -= 4 if i
+        i[1].y -= 2 if i
       end
     end
     if Input.press?(Input::LEFT)
       @mapsprites.each do |i|
-        i[1].x += 4 if i
+        i[1].x += 2 if i
       end
     end
     if Input.press?(Input::RIGHT)
       @mapsprites.each do |i|
-        i[1].x -= 4 if i
+        i[1].x -= 2 if i
       end
     end
     if Input.triggerex?(:A)
@@ -566,7 +566,7 @@ end
 #===============================================================================
 def pbConnectionsEditor
   pbCriticalCode do
-    Graphics.resize_screen(Settings::SCREEN_WIDTH + 288, Settings::SCREEN_HEIGHT + 288)
+    Graphics.resize_screen(Settings::SCREEN_WIDTH + 144, Settings::SCREEN_HEIGHT + 144)
     pbSetResizeFactor(1)
     mapscreen = MapScreenScene.new
     mapscreen.mapScreen

@@ -431,14 +431,17 @@ module Settings
   # Screen size and zoom
   #-----------------------------------------------------------------------------
 
-  # The default screen width (at a scale of 1.0). You should also edit the
-  # property "defScreenW" in mkxp.json to match.
-  SCREEN_WIDTH  = 512
-  # The default screen height (at a scale of 1.0). You should also edit the
-  # property "defScreenH" in mkxp.json to match.
-  SCREEN_HEIGHT = 384
-  # The default screen scale factor. Possible values are 0.5, 1.0, 1.5 and 2.0.
-  SCREEN_SCALE  = 1.0
+  # The game's internal resolution. All graphics are drawn at this size and
+  # the window shows it at a whole-number scale (pixel perfect). Graphics in
+  # src/assets/graphics are halved to fit this resolution when the game is
+  # built (see docs/BUILDING.md).
+  SCREEN_WIDTH  = 256
+  SCREEN_HEIGHT = 192
+  # The default window scale: 1, 2, 3 or 4 (whole numbers only, so pixels stay
+  # square). "defScreenW"/"defScreenH" in src/mkxp.json should be
+  # SCREEN_WIDTH/SCREEN_HEIGHT multiplied by this. Ignored on Android, where the
+  # game is always fullscreen.
+  SCREEN_SCALE  = 3
 
   #-----------------------------------------------------------------------------
   # Messages

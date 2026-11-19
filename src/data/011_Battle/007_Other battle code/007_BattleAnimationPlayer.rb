@@ -120,7 +120,7 @@ def pbConvertRPGAnimation(animation)
   yOffset = 0
   pbAnim.position = animation.position
   yOffset = -64 if animation.position == 0
-  yOffset = 64 if animation.position == 2
+  yOffset = 32 if animation.position == 2
   animation.frames.length.times do |i|
     frame = pbAnim.addFrame
     animFrame = animation.frames[i]
@@ -132,7 +132,7 @@ def pbConvertRPGAnimation(animation)
       end
       if animation.position == 3   # Screen
         point = transformPoint(
-          -160, 80, 160, -80,
+          -80, 40, 80, -40,
           Battle::Scene::FOCUSUSER_X, Battle::Scene::FOCUSUSER_Y,
           Battle::Scene::FOCUSTARGET_X, Battle::Scene::FOCUSTARGET_Y,
           data[j, 1], data[j, 2]
@@ -608,13 +608,13 @@ def pbSpriteSetAnimFrame(sprite, frame, user = nil, target = nil, inEditor = fal
   end
   pattern = frame[AnimFrame::PATTERN]
   if pattern >= 0
-    animwidth = 192
+    animwidth = 96
     sprite.src_rect.set((pattern % 5) * animwidth, (pattern / 5) * animwidth,
                         animwidth, animwidth)
   else
     sprite.src_rect.set(0, 0,
-                        (sprite.bitmap) ? sprite.bitmap.width : 128,
-                        (sprite.bitmap) ? sprite.bitmap.height : 128)
+                        (sprite.bitmap) ? sprite.bitmap.width : 64,
+                        (sprite.bitmap) ? sprite.bitmap.height : 64)
   end
   sprite.zoom_x = frame[AnimFrame::ZOOMX] / 100.0
   sprite.zoom_y = frame[AnimFrame::ZOOMY] / 100.0
@@ -835,8 +835,8 @@ class PBAnimationPlayerX
           sprite.mirror = !sprite.mirror
         end
       end
-      sprite.x += 64 if @inEditor
-      sprite.y += 64 if @inEditor
+      sprite.x += 32 if @inEditor
+      sprite.y += 32 if @inEditor
     end
     # Play timings
     @animation.playTiming(@frame, @bgGraphic, @bgColor, @foGraphic, @foColor, @oldbg, @oldfo, @user)

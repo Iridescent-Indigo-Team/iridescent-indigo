@@ -6,15 +6,15 @@ module BattleAnimationEditor
   #=============================================================================
   class Window_Menu < Window_CommandPokemon
     def initialize(commands, x, y)
-      tempbitmap = Bitmap.new(32, 32)
+      tempbitmap = Bitmap.new(16, 16)
       w = 0
       commands.each do |i|
         width = tempbitmap.text_size(i).width
         w = width if w < width
       end
-      w += 16 + self.borderX
+      w += 8 + self.borderX
       super(commands, w)
-      h = [commands.length * 32, 480].min
+      h = [commands.length * 16, 240].min
       h += self.borderY
       right = [x + w, 640].min
       bottom = [y + h, 480].min
@@ -32,7 +32,7 @@ module BattleAnimationEditor
       return -1 if !mousepos
       toprow = self.top_row
       (toprow...toprow + @item_max).each do |i|
-        rc = Rect.new(0, 32 * (i - toprow), self.contents.width, 32)
+        rc = Rect.new(0, 16 * (i - toprow), self.contents.width, 16)
         rc.x += self.x + self.leftEdge
         rc.y += self.y + self.topEdge
         return i if rc.contains?(mousepos[0], mousepos[1])
@@ -145,19 +145,19 @@ module BattleAnimationEditor
     end
 
     def drawborder(bm, x, y, width, height, color)
-      bm.fill_rect(x, y, width, 2, color)
-      bm.fill_rect(x, y + height - 2, width, 2, color)
-      bm.fill_rect(x, y, 2, height, color)
-      bm.fill_rect(x + width - 2, y, 2, height, color)
+      bm.fill_rect(x, y, width, 1, color)
+      bm.fill_rect(x, y + height - 1, width, 1, color)
+      bm.fill_rect(x, y, 1, height, color)
+      bm.fill_rect(x + width - 1, y, 1, height, color)
     end
 
     def refresh
       arrowwidth = @arrows.bitmap.width / 2
       @contents.clear
       @contents.fill_rect(0, 0, @contents.width, @contents.height, Color.new(180, 180, 180))
-      @contents.blt(0, 0, @arrows.bitmap, Rect.new(0, 0, arrowwidth, 96))
-      @contents.blt(arrowwidth + (NUMFRAMES * 96), 0, @arrows.bitmap,
-                    Rect.new(arrowwidth, 0, arrowwidth, 96))
+      @contents.blt(0, 0, @arrows.bitmap, Rect.new(0, 0, arrowwidth, 48))
+      @contents.blt(arrowwidth + (NUMFRAMES * 48), 0, @arrows.bitmap,
+                    Rect.new(arrowwidth, 0, arrowwidth, 48))
       havebitmap = (self.animbitmap && !self.animbitmap.disposed?)
       if havebitmap
         rect = Rect.new(0, 0, 0, 0)
@@ -165,10 +165,10 @@ module BattleAnimationEditor
         x = arrowwidth
         NUMFRAMES.times do |i|
           j = i + @start
-          rect.set((j % 5) * 192, (j / 5) * 192, 192, 192)
-          rectdst.set(x, 0, 96, 96)
+          rect.set((j % 5) * 96, (j / 5) * 96, 96, 96)
+          rectdst.set(x, 0, 48, 48)
           @contents.stretch_blt(rectdst, self.animbitmap, rect)
-          x += 96
+          x += 48
         end
       end
       NUMFRAMES.times do |i|
@@ -190,9 +190,9 @@ module BattleAnimationEditor
       return if !mousepos
       return if !self.animbitmap
       arrowwidth = @arrows.bitmap.width / 2
-      maxindex = (self.animbitmap.height / 192) * 5
-      left = Rect.new(0, 0, arrowwidth, 96)
-      right = Rect.new(arrowwidth + (NUMFRAMES * 96), 0, arrowwidth, 96)
+      maxindex = (self.animbitmap.height / 96) * 5
+      left = Rect.new(0, 0, arrowwidth, 48)
+      right = Rect.new(arrowwidth + (NUMFRAMES * 96), 0, arrowwidth, 48)
       left.x += self.x
       left.y += self.y
       right.x += self.x
@@ -200,7 +200,7 @@ module BattleAnimationEditor
       swatchrects = []
       repeattime = Input.time?(Input::MOUSELEFT)
       NUMFRAMES.times do |i|
-        swatchrects.push(Rect.new(arrowwidth + (i * 96) + self.x, self.y, 96, 96))
+        swatchrects.push(Rect.new(arrowwidth + (i * 48) + self.x, self.y, 48, 48))
       end
       NUMFRAMES.times do |i|
         next if !swatchrects[i].contains?(mousepos[0], mousepos[1])
@@ -304,7 +304,7 @@ module BattleAnimationEditor
       @selcolor = Color.black
       @unselcolor = Color.new(220, 220, 220)
       @prevcolor = Color.new(64, 128, 192)
-      @contents = Bitmap.new(64, 64)
+      @contents = Bitmap.new(32, 32)
       self.z = (@previous) ? 49 : 50
       @iconbitmap = AnimatedBitmap.new("Graphics/UI/Debug/anim_editor_frame_icons")
       self.bitmap = @contents
@@ -336,18 +336,18 @@ module BattleAnimationEditor
       self.z = (@previous) ? 49 : (@selected) ? 51 : 50
       # Draw frame
       color = (@previous) ? @prevcolor : (@selected) ? @selcolor : @unselcolor
-      @contents.fill_rect(0, 0, 64, 1, color)
-      @contents.fill_rect(0, 63, 64, 1, color)
-      @contents.fill_rect(0, 0, 1, 64, color)
-      @contents.fill_rect(63, 0, 1, 64, color)
+      @contents.fill_rect(0, 0, 32, 1, color)
+      @contents.fill_rect(0, 32, 32, 1, color)
+      @contents.fill_rect(0, 0, 1, 32, color)
+      @contents.fill_rect(32, 0, 1, 32, color)
       # Determine frame number graphic to use from @iconbitmap
       yoffset = (@previous) ? (NUM_ROWS + 1) * 16 : 0   # 1 is for padlock icon
-      bmrect = Rect.new((@id % 10) * 16, yoffset + ((@id / 10) * 16), 16, 16)
+      bmrect = Rect.new((@id % 10) * 8, yoffset + ((@id / 10) * 8), 8, 8)
       @contents.blt(0, 0, @iconbitmap.bitmap, bmrect)
       # Draw padlock if frame is locked
       if @locked && !@previous
-        bmrect = Rect.new(0, NUM_ROWS * 16, 16, 16)
-        @contents.blt(16, 0, @iconbitmap.bitmap, bmrect)
+        bmrect = Rect.new(0, NUM_ROWS * 16, 8, 8)
+        @contents.blt(8, 0, @iconbitmap.bitmap, bmrect)
       end
     end
   end
@@ -364,7 +364,7 @@ module BattleAnimationEditor
     attr_reader :animbitmap # Currently selected animation bitmap
     attr_accessor :pattern  # Currently selected pattern
 
-    BORDERSIZE = 64
+    BORDERSIZE = 32
 
     def initialize(animation, viewport = nil)
       super(viewport)
@@ -532,8 +532,8 @@ module BattleAnimationEditor
 
     def setFrame(i)
       if @celsprites[i]
-        @framesprites[i].ox = 32
-        @framesprites[i].oy = 32
+        @framesprites[i].ox = 16
+        @framesprites[i].oy = 16
         @framesprites[i].selected = (i == @currentcel)
         @framesprites[i].locked = self.locked?(i)
         @framesprites[i].x = @celsprites[i].x
@@ -549,12 +549,12 @@ module BattleAnimationEditor
         if cel.nil?
           @lastframesprites[i].visible = false
         else
-          @lastframesprites[i].ox = 32
-          @lastframesprites[i].oy = 32
+          @lastframesprites[i].ox = 16
+          @lastframesprites[i].oy = 16
           @lastframesprites[i].selected = false
           @lastframesprites[i].locked = false
-          @lastframesprites[i].x = cel[AnimFrame::X] + 64
-          @lastframesprites[i].y = cel[AnimFrame::Y] + 64
+          @lastframesprites[i].x = cel[AnimFrame::X] + 32
+          @lastframesprites[i].y = cel[AnimFrame::Y] + 32
           @lastframesprites[i].visible = true
           @lastframesprites[i].repaint
         end
@@ -737,10 +737,10 @@ module BattleAnimationEditor
         xwidth = 0
         xheight = 0
       else
-        xwidth = width - 64
-        xheight = height - 64
-        width = 64 if width > 64 && !usealpha
-        height = 64 if height > 64 && !usealpha
+        xwidth = width - 32
+        xheight = height - 32
+        width = 32 if width > 64 && !usealpha
+        height = 32 if height > 64 && !usealpha
       end
       width = sprite.bitmap.width if width > sprite.bitmap.width
       height = sprite.bitmap.height if height > sprite.bitmap.height
@@ -770,7 +770,7 @@ module BattleAnimationEditor
         bitmapY = bitmapY.round
         if sprite.mirror
           xmirror = bitmapX - sprite.src_rect.x
-          bitmapX = sprite.src_rect.x + 192 - xmirror
+          bitmapX = sprite.src_rect.x + 96 - xmirror
         end
         color = sprite.bitmap.get_pixel(bitmapX, bitmapY)
         return false if color.alpha == 0
@@ -941,7 +941,7 @@ module BattleAnimationEditor
       super(x, y, width, height)
       @bitmapname = ""
       @hue = 0
-      self.contents = Bitmap.new(width - 32, height - 32)
+      self.contents = Bitmap.new(width - 16, height - 16)
     end
 
     def bitmapname=(value)

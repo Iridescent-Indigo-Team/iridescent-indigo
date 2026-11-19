@@ -41,7 +41,7 @@ class Window_PokemonItemStorage < Window_DrawableCommand
       if GameData::Item.get(item).show_quantity?
         qty     = _ISPRINTF("x{1: 2d}", @bag[index][1])
         sizeQty = self.contents.text_size(qty).width
-        xQty = rect.x + rect.width - sizeQty - 2
+        xQty = rect.x + rect.width - sizeQty - 1
         textpos.push([qty, xQty, rect.y, :left, baseColor, self.shadowColor])
       end
     end
@@ -76,21 +76,21 @@ class ItemStorage_Scene
     @sprites = {}
     @sprites["background"] = IconSprite.new(0, 0, @viewport)
     @sprites["background"].setBitmap("Graphics/UI/itemstorage_bg")
-    @sprites["icon"] = ItemIconSprite.new(50, 334, nil, @viewport)
+    @sprites["icon"] = ItemIconSprite.new(25, 167, nil, @viewport)
     # Item list
-    @sprites["itemwindow"] = Window_PokemonItemStorage.new(@bag, 98, 14, 334, 32 + (ITEMSVISIBLE * 32))
+    @sprites["itemwindow"] = Window_PokemonItemStorage.new(@bag, 49, 7, 167, 16 + (ITEMSVISIBLE * 32))
     @sprites["itemwindow"].viewport    = @viewport
     @sprites["itemwindow"].index       = 0
     @sprites["itemwindow"].baseColor   = ITEMLISTBASECOLOR
     @sprites["itemwindow"].shadowColor = ITEMLISTSHADOWCOLOR
     @sprites["itemwindow"].refresh
     # Title
-    @sprites["pocketwindow"] = BitmapSprite.new(88, 64, @viewport)
-    @sprites["pocketwindow"].x = 14
-    @sprites["pocketwindow"].y = 16
+    @sprites["pocketwindow"] = BitmapSprite.new(44, 32, @viewport)
+    @sprites["pocketwindow"].x = 7
+    @sprites["pocketwindow"].y = 8
     pbSetNarrowFont(@sprites["pocketwindow"].bitmap)
     # Item description
-    @sprites["itemtextwindow"] = Window_UnformattedTextPokemon.newWithSize("", 84, 272, Graphics.width - 84, 128, @viewport)
+    @sprites["itemtextwindow"] = Window_UnformattedTextPokemon.newWithSize("", 42, 136, Graphics.width - 42, 64, @viewport)
     @sprites["itemtextwindow"].baseColor   = ITEMTEXTBASECOLOR
     @sprites["itemtextwindow"].shadowColor = ITEMTEXTSHADOWCOLOR
     @sprites["itemtextwindow"].windowskin  = nil
@@ -132,7 +132,7 @@ class ItemStorage_Scene
   def pbRefresh
     bm = @sprites["pocketwindow"].bitmap
     # Draw title at upper left corner ("Toss Item/Withdraw Item")
-    drawTextEx(bm, 0, 8, bm.width, 2, @title, TITLEBASECOLOR, TITLESHADOWCOLOR)
+    drawTextEx(bm, 0, 4, bm.width, 2, @title, TITLEBASECOLOR, TITLESHADOWCOLOR)
     itemwindow = @sprites["itemwindow"]
     # Draw item icon
     @sprites["icon"].item = itemwindow.item

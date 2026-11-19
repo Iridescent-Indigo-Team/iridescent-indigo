@@ -82,7 +82,7 @@ end
 # Makes a side's party bar and balls appear
 #===============================================================================
 class Battle::Scene::Animation::LineupAppear < Battle::Scene::Animation
-  BAR_DISPLAY_WIDTH = 248
+  BAR_DISPLAY_WIDTH = 124
 
   def initialize(sprites, viewport, side, party, partyStarts, fullAnim)
     @side        = side
@@ -98,17 +98,17 @@ class Battle::Scene::Animation::LineupAppear < Battle::Scene::Animation
     case @side
     when 0   # Player's lineup
       barX  = Graphics.width - BAR_DISPLAY_WIDTH
-      barY  = Graphics.height - 142
-      ballX = barX + 44
-      ballY = barY - 30
+      barY  = Graphics.height - 71
+      ballX = barX + 22
+      ballY = barY - 15
     when 1   # Opposing lineup
       barX  = BAR_DISPLAY_WIDTH
-      barY  = 114
-      ballX = barX - 44 - 30   # 30 is width of ball icon
-      ballY = barY - 30
+      barY  = 57
+      ballX = barX - 22 - 15   # 15 is width of ball icon
+      ballY = barY - 15
       barX -= bar.bitmap.width
     end
-    ballXdiff = 32 * (1 - (2 * @side))
+    ballXdiff = 16 * (1 - (2 * @side))
     bar.x       = barX
     bar.y       = barY
     bar.opacity = 255
@@ -274,7 +274,7 @@ class Battle::Scene::Animation::TrainerAppear < Battle::Scene::Animation
     # Make new trainer sprite move on-screen
     if @sprites["trainer_#{@idxTrainer + 1}"]
       trainerX, trainerY = Battle::Scene.pbTrainerPosition(1)
-      trainerX += 64 + (Graphics.width / 4)
+      trainerX += 32 + (Graphics.width / 4)
       newTrainer = addSprite(@sprites["trainer_#{@idxTrainer + 1}"], PictureOrigin::BOTTOM)
       newTrainer.setVisible(delay, true)
       newTrainer.setXY(delay, trainerX, trainerY)
@@ -413,10 +413,10 @@ class Battle::Scene::Animation::PokeballPlayerSendOut < Battle::Scene::Animation
     battlerEndX = batSprite.x
     battlerEndY = batSprite.y
     # Calculate start and end coordinates for Poké Ball sprite movement
-    ballStartX = -6
-    ballStartY = 202
+    ballStartX = -3
+    ballStartY = 101
     ballMidX = 0   # Unused in trajectory calculation
-    ballMidY = battlerStartY - 144
+    ballMidY = battlerStartY - 72
     # Set up Poké Ball sprite
     ball = addBallSprite(ballStartX, ballStartY, poke_ball)
     ball.setZ(0, 25)
@@ -429,7 +429,7 @@ class Battle::Scene::Animation::PokeballPlayerSendOut < Battle::Scene::Animation
     delay = ball.totalDuration   # 0 or 7
     # Poké Ball trajectory animation
     createBallTrajectory(ball, delay, 12,
-                         ballStartX, ballStartY, ballMidX, ballMidY, battlerStartX, battlerStartY - 18)
+                         ballStartX, ballStartY, ballMidX, ballMidY, battlerStartX, battlerStartY - 9)
     ball.setZ(9, batSprite.z - 1)
     delay = ball.totalDuration + 4
     delay += 10 * @idxOrder   # Stagger appearances if multiple Pokémon are sent out at once
@@ -519,7 +519,7 @@ class Battle::Scene::Animation::PokeballTrainerSendOut < Battle::Scene::Animatio
     # NOTE: In HGSS, there isn't a Poké Ball arc under any circumstance (neither
     #       when throwing out the first Pokémon nor when switching/replacing a
     #       fainted Pokémon). You may choose to change this.
-    ball.setXY(0, destX, destY - 4)
+    ball.setXY(0, destX, destY - 2)
   end
 end
 
@@ -626,8 +626,8 @@ class Battle::Scene::Animation::BattlerFaint < Battle::Scene::Animation
     # Get approx duration depending on sprite's position/size. Min 20 frames.
     battlerTop = batSprite.y - batSprite.height
     cropY = Battle::Scene.pbBattlerPosition(@idxBattler, @battle.pbSideSize(@idxBattler))[1]
-    cropY += 8
-    duration = (cropY - battlerTop) / 8
+    cropY += 4
+    duration = (cropY - battlerTop) / 4
     duration = 10 if duration < 10   # Min 0.5 seconds
     # Animation
     # Play cry
@@ -682,13 +682,13 @@ class Battle::Scene::Animation::PokeballThrowCapture < Battle::Scene::Animation
     ballPos = Battle::Scene.pbBattlerPosition(@battler.index, batSprite.sideSize)
     battlerStartX = batSprite.x
     battlerStartY = batSprite.y
-    ballStartX = -6
-    ballStartY = 246
+    ballStartX = -3
+    ballStartY = 123
     ballMidX   = 0   # Unused in arc calculation
-    ballMidY   = 78
+    ballMidY   = 39
     ballEndX   = ballPos[0]
-    ballEndY   = 112
-    ballGroundY = ballPos[1] - 4
+    ballEndY   = 56
+    ballGroundY = ballPos[1] - 2
     # Set up Poké Ball sprite
     ball = addBallSprite(ballStartX, ballStartY, @poke_ball)
     ball.setZ(0, batSprite.z + 1)
@@ -743,11 +743,11 @@ class Battle::Scene::Animation::PokeballThrowCapture < Battle::Scene::Animation
     delay = ball.totalDuration + 3
     if @critCapture
       ball.setSE(delay, "Battle ball shake")
-      ball.moveXY(delay, 1, ballEndX + 4, ballEndY)
-      ball.moveXY(delay + 1, 2, ballEndX - 4, ballEndY)
-      ball.moveXY(delay + 3, 2, ballEndX + 4, ballEndY)
+      ball.moveXY(delay, 1, ballEndX + 2, ballEndY)
+      ball.moveXY(delay + 1, 2, ballEndX - 2, ballEndY)
+      ball.moveXY(delay + 3, 2, ballEndX + 2, ballEndY)
       ball.setSE(delay + 4, "Battle ball shake")
-      ball.moveXY(delay + 5, 2, ballEndX - 4, ballEndY)
+      ball.moveXY(delay + 5, 2, ballEndX - 2, ballEndY)
       ball.moveXY(delay + 7, 1, ballEndX, ballEndY)
       delay = ball.totalDuration + 3
     end
@@ -827,12 +827,12 @@ class Battle::Scene::Animation::PokeballThrowDeflect < Battle::Scene::Animation
     # Calculate start and end coordinates for battler sprite movement
     batSprite = @sprites["pokemon_#{@battler.index}"]
     ballPos = Battle::Scene.pbBattlerPosition(@battler.index, batSprite.sideSize)
-    ballStartX = -6
-    ballStartY = 246
-    ballMidX   = 190   # Unused in arc calculation
-    ballMidY   = 78
+    ballStartX = -3
+    ballStartY = 123
+    ballMidX   = 95   # Unused in arc calculation
+    ballMidY   = 39
     ballEndX   = ballPos[0]
-    ballEndY   = 112
+    ballEndY   = 56
     # Set up Poké Ball sprite
     ball = addBallSprite(ballStartX, ballStartY, @poke_ball)
     ball.setZ(0, 90)
@@ -843,7 +843,7 @@ class Battle::Scene::Animation::PokeballThrowDeflect < Battle::Scene::Animation
     # Poké Ball knocked back
     delay = ball.totalDuration
     ball.setSE(delay, "Battle ball drop")
-    ball.moveXY(delay, 8, -32, Graphics.height - 96 + 32)   # Back to player's corner
+    ball.moveXY(delay, 8, -16, Graphics.height - 48 + 16)   # Back to player's corner
     createBallTumbling(ball, delay, 8)
   end
 end

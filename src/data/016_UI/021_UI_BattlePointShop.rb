@@ -54,7 +54,7 @@ class BattlePointShopAdapter
 
   # Unused
   def getItemIconRect(_item)
-    return Rect.new(0, 0, 48, 48)
+    return Rect.new(0, 0, 24, 24)
   end
 
   def getQuantity(item)
@@ -115,15 +115,15 @@ class Window_BattlePointShop < Window_DrawableCommand
     rect = drawCursor(index, rect)
     ypos = rect.y
     if index == count - 1
-      textpos.push([_INTL("CANCEL"), rect.x, ypos + 2, :left, self.baseColor, self.shadowColor])
+      textpos.push([_INTL("CANCEL"), rect.x, ypos + 1, :left, self.baseColor, self.shadowColor])
     else
       item = @stock[index]
       itemname = @adapter.getDisplayName(item)
       qty = @adapter.getDisplayPrice(item)
       sizeQty = self.contents.text_size(qty).width
-      xQty = rect.x + rect.width - sizeQty - 2 - 16
-      textpos.push([itemname, rect.x, ypos + 2, :left, self.baseColor, self.shadowColor])
-      textpos.push([qty, xQty, ypos + 2, :left, self.baseColor, self.shadowColor])
+      xQty = rect.x + rect.width - sizeQty - 1 - 8
+      textpos.push([itemname, rect.x, ypos + 1, :left, self.baseColor, self.shadowColor])
+      textpos.push([qty, xQty, ypos + 1, :left, self.baseColor, self.shadowColor])
     end
     pbDrawTextPositions(self.contents, textpos)
   end
@@ -148,7 +148,7 @@ class BattlePointShop_Scene
         (itemwindow.item) ? @adapter.getDescription(itemwindow.item) : _INTL("Quit shopping.")
       @sprites["qtywindow"].visible = !itemwindow.item.nil?
       @sprites["qtywindow"].text    = _INTL("In Bag:<r>{1}", @adapter.getQuantity(itemwindow.item))
-      @sprites["qtywindow"].y       = Graphics.height - 102 - @sprites["qtywindow"].height
+      @sprites["qtywindow"].y       = Graphics.height - 51 - @sprites["qtywindow"].height
       itemwindow.refresh
     end
     @sprites["battlepointwindow"].text = _INTL("Battle Points:\n<r>{1}", @adapter.getBPString)
@@ -164,16 +164,16 @@ class BattlePointShop_Scene
     @sprites = {}
     @sprites["background"] = IconSprite.new(0, 0, @viewport)
     @sprites["background"].setBitmap("Graphics/UI/Mart/bg")
-    @sprites["icon"] = ItemIconSprite.new(36, Graphics.height - 50, nil, @viewport)
+    @sprites["icon"] = ItemIconSprite.new(18, Graphics.height - 25, nil, @viewport)
     winAdapter = BattlePointShopAdapter.new
     @sprites["itemwindow"] = Window_BattlePointShop.new(
-      stock, winAdapter, Graphics.width - 316 - 16, 10, 330 + 16, Graphics.height - 124
+      stock, winAdapter, Graphics.width - 158 - 8, 5, 165 + 8, Graphics.height - 62
     )
     @sprites["itemwindow"].viewport = @viewport
     @sprites["itemwindow"].index = 0
     @sprites["itemwindow"].refresh
     @sprites["itemtextwindow"] = Window_UnformattedTextPokemon.newWithSize(
-      "", 64, Graphics.height - 96 - 16, Graphics.width - 64, 128, @viewport
+      "", 32, Graphics.height - 48 - 8, Graphics.width - 32, 64, @viewport
     )
     pbPrepareWindow(@sprites["itemtextwindow"])
     @sprites["itemtextwindow"].baseColor = Color.new(248, 248, 248)
@@ -191,20 +191,20 @@ class BattlePointShop_Scene
     @sprites["battlepointwindow"].viewport = @viewport
     @sprites["battlepointwindow"].x = 0
     @sprites["battlepointwindow"].y = 0
-    @sprites["battlepointwindow"].width = 190
-    @sprites["battlepointwindow"].height = 96
+    @sprites["battlepointwindow"].width = 95
+    @sprites["battlepointwindow"].height = 48
     @sprites["battlepointwindow"].baseColor = Color.new(88, 88, 80)
     @sprites["battlepointwindow"].shadowColor = Color.new(168, 184, 184)
     @sprites["qtywindow"] = Window_AdvancedTextPokemon.new("")
     pbPrepareWindow(@sprites["qtywindow"])
     @sprites["qtywindow"].setSkin("Graphics/Windowskins/goldskin")
     @sprites["qtywindow"].viewport = @viewport
-    @sprites["qtywindow"].width = 190
-    @sprites["qtywindow"].height = 64
+    @sprites["qtywindow"].width = 95
+    @sprites["qtywindow"].height = 32
     @sprites["qtywindow"].baseColor = Color.new(88, 88, 80)
     @sprites["qtywindow"].shadowColor = Color.new(168, 184, 184)
     @sprites["qtywindow"].text = _INTL("In Bag:<r>{1}", @adapter.getQuantity(@sprites["itemwindow"].item))
-    @sprites["qtywindow"].y = Graphics.height - 102 - @sprites["qtywindow"].height
+    @sprites["qtywindow"].y = Graphics.height - 51 - @sprites["qtywindow"].height
     pbDeactivateWindows(@sprites)
     pbRefresh
     Graphics.frame_reset
@@ -339,8 +339,8 @@ class BattlePointShop_Scene
     using(numwindow = Window_AdvancedTextPokemon.new("")) do   # Showing number of items
       pbPrepareWindow(numwindow)
       numwindow.viewport = @viewport
-      numwindow.width = 224
-      numwindow.height = 64
+      numwindow.width = 112
+      numwindow.height = 32
       numwindow.baseColor = Color.new(88, 88, 80)
       numwindow.shadowColor = Color.new(168, 184, 184)
       numwindow.text = _INTL("x{1}<r>{2} BP", curnumber, (curnumber * itemprice).to_s_formatted)

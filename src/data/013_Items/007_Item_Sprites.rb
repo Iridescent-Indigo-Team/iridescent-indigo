@@ -6,7 +6,7 @@ class ItemIconSprite < Sprite
 
   # Height in pixels the item's icon graphic must be for it to be animated by
   # being a horizontal set of frames.
-  ANIM_ICON_SIZE = 48
+  ANIM_ICON_SIZE = 24
   # Time in seconds for one animation cycle of this item icon.
   ANIMATION_DURATION = 1.0
 
