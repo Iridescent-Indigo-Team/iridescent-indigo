@@ -1,9 +1,0 @@
-{
-  "$schema": "../_schema/map_metadata.entry.schema.json",
-  "id": 45,
-  "real_name": "Route 6",
-  "outdoor_map": true,
-  "announce_location": true,
-  "always_bicycle": true,
-  "town_map_position": {"region": 0, "x": 11, "y": 10}
-}

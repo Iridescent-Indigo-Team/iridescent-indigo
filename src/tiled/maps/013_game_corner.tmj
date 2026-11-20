@@ -1,0 +1,1174 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":32,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    1, 1, 1, 1, 2, 3, 4, 1, 1, 1, 1, 1, 1, 2, 3, 4, 1, 1, 96, 96,
+    9, 9, 9, 9, 10, 11, 12, 9, 9, 9, 9, 9, 9, 10, 11, 12, 9, 9, 96, 96,
+    26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 96, 96,
+    26, 26, 26, 26, 26, 26, 26, 27, 26, 26, 26, 27, 26, 26, 26, 26, 26, 27, 96, 96,
+    26, 42, 34, 34, 34, 34, 34, 35, 42, 34, 34, 35, 42, 34, 34, 34, 34, 35, 96, 96,
+    26, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96,
+    26, 28, 17, 17, 17, 26, 26, 28, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96,
+    26, 27, 17, 17, 17, 26, 26, 27, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96,
+    26, 27, 17, 17, 17, 26, 26, 27, 17, 17, 26, 26, 26, 28, 17, 17, 17, 17, 96, 96,
+    26, 27, 17, 17, 17, 26, 26, 27, 17, 17, 26, 26, 26, 27, 17, 17, 17, 17, 96, 96,
+    26, 27, 17, 17, 17, 26, 26, 27, 17, 17, 26, 26, 26, 27, 17, 17, 17, 17, 96, 96,
+    26, 35, 17, 17, 17, 42, 34, 35, 17, 17, 42, 34, 34, 35, 17, 17, 17, 17, 96, 96,
+    26, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96,
+    26, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    1, 1, 1, 2, 3, 4, 1, 1, 1, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    9, 9, 9, 10, 11, 12, 9, 9, 9, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 26, 26, 26, 26, 26, 26, 26, 26, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 26, 26, 26, 26, 26, 26, 26, 26, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 34, 34, 34, 34, 34, 34, 34, 34, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 26, 28, 17, 17, 17, 17, 26, 26, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 26, 27, 17, 17, 17, 17, 24, 26, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    26, 17, 17, 17, 17, 17, 17, 17, 17, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96,
+    96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96, 96
+   ],
+   "height":32,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 105, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    116, 221, 113, 114, 0, 0, 221, 0, 221, 0, 221, 0, 221, 0, 0, 0, 221, 116, 0, 0,
+    124, 214, 121, 122, 188, 230, 216, 0, 214, 215, 216, 0, 214, 231, 215, 231, 216, 124, 0, 0,
+    0, 222, 240, 194, 196, 238, 224, 0, 222, 223, 224, 0, 222, 239, 223, 239, 224, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    130, 0, 0, 0, 0, 129, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 103, 0, 0,
+    138, 149, 0, 0, 141, 137, 138, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 111, 0, 0,
+    138, 149, 0, 0, 141, 137, 138, 149, 0, 0, 142, 143, 144, 0, 0, 0, 0, 135, 0, 0,
+    138, 149, 0, 0, 141, 137, 138, 149, 0, 0, 150, 151, 152, 0, 0, 0, 0, 103, 0, 0,
+    138, 149, 0, 0, 141, 137, 138, 149, 0, 0, 161, 162, 163, 0, 0, 0, 0, 111, 0, 0,
+    146, 149, 0, 0, 141, 145, 146, 149, 0, 0, 169, 170, 171, 0, 0, 0, 0, 135, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    116, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 126, 0, 0,
+    124, 0, 0, 0, 0, 0, 0, 0, 85, 86, 87, 0, 0, 0, 0, 0, 0, 134, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 93, 94, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 105, 106, 0, 0, 0, 105, 106, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    221, 113, 114, 0, 0, 0, 113, 114, 221, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    214, 121, 122, 231, 215, 231, 121, 122, 216, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    222, 239, 223, 239, 223, 239, 223, 239, 224, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    97, 98, 0, 0, 0, 0, 0, 97, 98, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    113, 114, 0, 0, 0, 0, 0, 113, 114, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    121, 122, 0, 0, 0, 0, 0, 121, 122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 85, 86, 87, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 93, 94, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":32,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 232, 186, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 153, 154, 155, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 231, 215, 0, 0, 0, 215, 231, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":32,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Slot Machine 1",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/001_slot_machine_1.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"Slot Machine 2",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/002_slot_machine_2.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"Slot Machine 3",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/003_slot_machine_3.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Slot Machine 4",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/004_slot_machine_4.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Slot Machine 5",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":320,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/005_slot_machine_5.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"Slot Machine 6",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/006_slot_machine_6.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":7,
+     "name":"Slot Machine 7",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":7
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/007_slot_machine_7.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":8,
+     "name":"Slot Machine 8",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":8
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/008_slot_machine_8.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":9,
+     "name":"Slot Machine 9",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":9
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/009_slot_machine_9.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":10,
+     "name":"Slot Machine 10",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":320,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":10
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/010_slot_machine_10.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":11,
+     "name":"Slot Machine 11",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":11
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/011_slot_machine_11.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":12,
+     "name":"Slot Machine 12",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":12
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/012_slot_machine_12.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":13,
+     "name":"Slot Machine 13",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":13
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/013_slot_machine_13.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":14,
+     "name":"Slot Machine 14",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":14
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/014_slot_machine_14.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":15,
+     "name":"Slot Machine 15",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":320,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":15
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/015_slot_machine_15.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":16,
+     "name":"Voltorb Flip",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":352,
+     "y":320,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":16
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/016_voltorb_flip.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":17,
+     "name":"Lottery",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":17
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 23"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "graphic":"NPC 23"
+       }
+      },
+      {
+       "name":"page_2",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":24,
+        "self_switch":"A",
+        "graphic":"NPC 23",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"page_3",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"B",
+        "graphic":"NPC 23"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/017_lottery.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":18,
+     "name":"Voltorb Flip man",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":352,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":18
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 17"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/018_voltorb_flip_man.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":19,
+     "name":"Coin seller",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":19
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 07"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/019_coin_seller.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":20,
+     "name":"Exit",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":448,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":20
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/020_exit.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":21,
+     "name":"Coin Case giver",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":96,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":21
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 08"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/021_coin_case_giver.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":22,
+     "name":"Triple Triad explainer",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":416,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":22
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 08"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/022_triple_triad_explainer.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":23,
+     "name":"Triple Triad card shop",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":448,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":23
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 19"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/023_triple_triad_card_shop.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":24,
+     "name":"Triple Triad duel",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":160,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":24
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_YOUNGSTER",
+        "direction":"left"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/024_triple_triad_duel.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":25,
+     "name":"Triple Triad duel with rules",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":25
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_LASS",
+        "direction":"left"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/025_triple_triad_duel_with_rules.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":26,
+     "name":"Triple Triad duel with deck",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":26
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_CAMPER",
+        "direction":"left"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/026_triple_triad_duel_with_deck.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":27,
+     "name":"Triple Triad duel with prize",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":27
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_COOLTRAINER_F",
+        "direction":"left"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/027_triple_triad_duel_with_prize.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":28,
+     "name":"Prize vendor left",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":736,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":28
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 07"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/028_prize_vendor_left.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":29,
+     "name":"Prize vendor middle",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":736,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":29
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 07"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/029_prize_vendor_middle.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":30,
+     "name":"Prize vendor right",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":736,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":30
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 07"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/030_prize_vendor_right.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":31,
+     "name":"Shop exit",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":960,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":31
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/013_game_corner/031_shop_exit.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":32,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/game_corner_interior.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Game Corner",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Cedolan City",
+    "town_map_position":{
+     "region":0,
+     "x":14,
+     "y":10
+    }
+   }
+  }
+ ]
+}

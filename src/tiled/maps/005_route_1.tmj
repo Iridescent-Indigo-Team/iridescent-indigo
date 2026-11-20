@@ -1,0 +1,710 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":24,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 428, 162, 163, 163, 164, 427, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 420, 162, 163, 163, 164, 419, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 428, 162, 163, 163, 164, 427, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 418, 417, 420, 435, 436, 435, 436, 435, 436, 435, 436, 162, 163, 163, 164, 435, 436, 435, 436, 435, 436, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 426, 425, 428, 2, 2, 2, 2, 2, 4, 7, 7, 162, 163, 163, 164, 7, 7, 7, 7, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 435, 436, 2, 2, 2, 2, 2, 5, 7, 7, 162, 163, 163, 164, 7, 7, 7, 7, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 5587, 5589, 2, 2, 3, 3, 2, 2, 7, 7, 162, 163, 163, 164, 7, 7, 7, 7, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 5569, 5577, 4, 2, 5, 2, 5595, 2, 7, 7, 162, 163, 163, 173, 155, 155, 155, 156, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 5593, 5591, 5, 3, 4, 2, 5597, 6, 7, 7, 170, 171, 171, 171, 171, 159, 163, 164, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 2, 2, 2, 4, 2, 2, 2, 2, 7, 7, 7, 7, 7, 7, 7, 162, 163, 164, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 427, 428, 2, 2, 4, 2, 7, 7, 7, 7, 7, 427, 428, 427, 428, 162, 163, 164, 427, 428, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 418, 417, 420, 3, 2, 3, 6, 5, 7, 7, 7, 7, 435, 436, 435, 436, 162, 163, 164, 435, 436, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 426, 425, 428, 4, 2, 5, 4, 2, 3, 7, 7, 7, 7, 2, 3, 5, 162, 163, 164, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 435, 436, 5, 3, 4, 3, 3, 5, 6, 3, 4, 3, 2, 4, 2, 162, 163, 164, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 3, 4, 6, 2, 6, 3, 4, 2, 5, 154, 155, 155, 155, 155, 155, 175, 163, 164, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 5, 5, 6, 4, 4, 3, 4, 3, 5, 162, 163, 163, 157, 171, 171, 171, 171, 172, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 3, 2, 3, 6, 5, 2, 6, 2, 4, 162, 163, 163, 164, 2, 5, 4, 2, 5, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 4, 5, 2, 4, 4, 3, 3, 3, 5, 162, 163, 163, 164, 4, 2, 6, 3, 7, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 3, 3, 6, 5, 3, 6, 3, 3, 2, 170, 171, 171, 172, 2, 7, 7, 7, 7, 7, 7, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 5, 4, 2, 3, 4, 2, 3, 2, 4, 2, 3, 2, 7, 7, 7, 7, 7, 7, 7, 7, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 2, 3, 4, 5, 2, 3, 4, 2, 5, 2, 2, 5, 2, 2, 2, 3, 2, 2, 2, 5, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 420, 2, 4, 2, 3, 4, 6, 5, 2, 4, 3, 2, 6, 3, 5, 4, 2, 5, 3, 4, 3, 419, 418, 417, 418, 417, 418, 417, 418,
+    425, 426, 425, 426, 425, 426, 425, 428, 427, 428, 427, 428, 427, 428, 427, 428, 427, 428, 3, 2, 427, 428, 427, 428, 427, 428, 427, 428, 427, 426, 425, 426, 425, 426, 425, 426,
+    417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 420, 4, 5, 419, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418, 417, 418
+   ],
+   "height":24,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":36,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1401, 1402, 1403, 1404, 1405, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1409, 1410, 1411, 1412, 1413, 1273, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1417, 1418, 1419, 1420, 1421, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1425, 1426, 1427, 1428, 1429, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1297, 1298, 1299, 0, 0, 1297, 1298, 1296, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 811, 829, 815, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1279, 1298, 1299, 0, 0, 0, 1297, 1298, 1280, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1282, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 617, 618, 618, 619, 0, 617, 618, 618, 619, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 625, 626, 626, 627, 0, 625, 626, 626, 627, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 617, 618, 618, 619, 0, 617, 618, 618, 619, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 625, 626, 626, 627, 0, 625, 626, 626, 627, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1295, 1298, 1298, 1298, 1298, 1298, 1298, 1298, 1293, 1280, 0, 0, 1279, 1298, 1298, 1298, 1298, 1298, 1298, 1299, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1289, 0, 0, 1290, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":24,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":36,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 421, 422, 0, 0, 0, 0, 0, 0, 0, 0, 0, 421, 422, 421, 422, 0, 0, 0, 421, 422, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1282, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1282, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1282, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 1282, 0, 0, 0, 0, 0, 0, 0, 1281, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 421, 422, 421, 422, 421, 422, 421, 422, 421, 422, 0, 0, 421, 422, 421, 422, 421, 422, 421, 422, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":24,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":36,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Kurt door",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":352,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"doors1",
+        "pattern":3,
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":22,
+        "graphic":"doors1",
+        "pattern":3,
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/001_kurt_door.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":512,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_CHERIBERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/002_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":320,
+     "y":512,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_ORANBERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/003_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":576,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/004_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":320,
+     "y":576,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/005_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":448,
+     "y":512,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_CHESTOBERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/006_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":7,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":480,
+     "y":512,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":7
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_PECHABERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/007_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":8,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":448,
+     "y":576,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":8
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_RAWSTBERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/008_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":9,
+     "name":"BerryPlant",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":480,
+     "y":576,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":9
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"berrytree_ASPEARBERRY",
+        "direction":"up",
+        "walk_anime":false,
+        "step_anime":true,
+        "direction_fix":true
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A",
+        "move_frequency":2,
+        "walk_anime":false,
+        "step_anime":true
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/009_berryplant.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":10,
+     "name":"Apricorn tree",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":320,
+     "y":320,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":10
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"Object tree 2",
+        "hue":300
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/010_apricorn_tree.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":11,
+     "name":"Item",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":832,
+     "y":448,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":11
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"Object ball"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "self_switch":"A"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/005_route_1/011_item.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":12,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/outside.tsj"
+  },
+  {
+   "firstgid":4017,
+   "source":"../tilesets/autotiles/sea.tsj"
+  },
+  {
+   "firstgid":4401,
+   "source":"../tilesets/autotiles/sea_without_shore.tsj"
+  },
+  {
+   "firstgid":4785,
+   "source":"../tilesets/autotiles/sea_deep.tsj"
+  },
+  {
+   "firstgid":5169,
+   "source":"../tilesets/autotiles/sand_shore.tsj"
+  },
+  {
+   "firstgid":5553,
+   "source":"../tilesets/autotiles/flowers1.tsj"
+  },
+  {
+   "firstgid":5793,
+   "source":"../tilesets/autotiles/water_rock.tsj"
+  },
+  {
+   "firstgid":6177,
+   "source":"../tilesets/autotiles/fountain1.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":36,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Route 1",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"encounters",
+   "type":"class",
+   "propertytype":"Encounters",
+   "value":{
+    "Land":{
+     "slots":"40 PIDGEY 11-14; 40 RATTATA 11-14; 9 PIDGEY 11-13; 9 RATTATA 11-13; 1 PIDGEY 14; 1 RATTATA 14",
+     "step_chance":21
+    },
+    "LandNight":{
+     "slots":"39 RATTATA 10-14; 30 HOOTHOOT 10-13; 20 SPINARAK 8-12; 9 HOOTHOOT 10-14; 1 HOOTHOOT 14; 1 RATTATA 15",
+     "step_chance":21
+    },
+    "PokeRadar":{
+     "slots":"100 STARLY 12-15",
+     "step_chance":20
+    }
+   }
+  },
+  {
+   "name":"encounters_v1",
+   "type":"class",
+   "propertytype":"Encounters",
+   "value":{
+    "Land":{
+     "slots":"40 PIDGEY 15-18; 40 RATTATA 14-18; 10 SENTRET 13-17; 5 PIDGEY 14-16; 5 RATTATA 13-16",
+     "step_chance":21
+    },
+    "LandNight":{
+     "slots":"40 RATTATA 14-18; 30 HOOTHOOT 14-17; 20 SPINARAK 12-16; 10 CLEFAIRY 11-15",
+     "step_chance":21
+    }
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Route 1",
+    "outdoor_map":true,
+    "announce_location":true,
+    "town_map_position":{
+     "region":0,
+     "x":13,
+     "y":11
+    },
+    "battle_background":"field"
+   }
+  }
+ ]
+}

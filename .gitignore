@@ -26,8 +26,9 @@ dist
 dist-ssr
 *.local
 
-# Builds
+# Distribution
 dist/
+
 # Game build output (make / game.sh)
 build/
 

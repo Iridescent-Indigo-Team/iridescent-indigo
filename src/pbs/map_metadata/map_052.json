@@ -1,8 +1,0 @@
-{
-  "$schema": "../_schema/map_metadata.entry.schema.json",
-  "id": 52,
-  "real_name": "Battle Frontier",
-  "outdoor_map": true,
-  "announce_location": true,
-  "town_map_position": {"region": 0, "x": 17, "y": 10}
-}

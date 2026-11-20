@@ -1,7 +1,0 @@
-{
-  "$schema": "../_schema/map_metadata.entry.schema.json",
-  "id": 9,
-  "real_name": "Cedolan City",
-  "teleport_destination": {"map_id": 8, "x": 17, "y": 11},
-  "town_map_position": {"region": 0, "x": 14, "y": 10}
-}

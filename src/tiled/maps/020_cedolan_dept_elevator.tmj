@@ -1,0 +1,299 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":15,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    353, 354, 354, 354, 357, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    361, 362, 362, 362, 365, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    369, 370, 370, 370, 373, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    377, 378, 378, 378, 378, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    385, 387, 387, 387, 386, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    385, 386, 386, 386, 386, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+   ],
+   "height":15,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 193, 194, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 201, 202, 203, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Exit",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/020_cedolan_dept_elevator/001_exit.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"Controls",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":0,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/020_cedolan_dept_elevator/002_controls.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"Wall left",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":32,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"elevatorwall"
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Wall middle",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"elevatorwall"
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Wall right",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":96,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"elevatorwall"
+       }
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":6,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/department_store_interior.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Poke Mart",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Cedolan City",
+    "town_map_position":{
+     "region":0,
+     "x":13,
+     "y":10
+    }
+   }
+  }
+ ]
+}

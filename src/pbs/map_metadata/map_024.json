@@ -1,7 +1,0 @@
-{
-  "$schema": "../_schema/map_metadata.entry.schema.json",
-  "id": 24,
-  "real_name": "Lerucean Town",
-  "teleport_destination": {"map_id": 23, "x": 11, "y": 15},
-  "town_map_position": {"region": 0, "x": 15, "y": 8}
-}

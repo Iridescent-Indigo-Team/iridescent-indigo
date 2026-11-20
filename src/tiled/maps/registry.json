@@ -1,0 +1,694 @@
+{
+ "maps":[
+  {
+   "id":1,
+   "file":"001_intro.tmj",
+   "name":"Intro",
+   "parent":0,
+   "order":1,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":2,
+   "file":"002_lappet_town.tmj",
+   "name":"Lappet Town",
+   "parent":0,
+   "order":2,
+   "expanded":true,
+   "scroll_x":330,
+   "scroll_y":336
+  },
+  {
+   "id":3,
+   "file":"003_player_s_house.tmj",
+   "name":"Player's house",
+   "parent":2,
+   "order":3,
+   "expanded":false,
+   "scroll_x":496,
+   "scroll_y":240
+  },
+  {
+   "id":4,
+   "file":"004_pokemon_lab.tmj",
+   "name":"Pokémon Lab",
+   "parent":2,
+   "order":5,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":5,
+   "file":"005_route_1.tmj",
+   "name":"Route 1",
+   "parent":0,
+   "order":6,
+   "expanded":false,
+   "scroll_x":576,
+   "scroll_y":384
+  },
+  {
+   "id":6,
+   "file":"006_kurt_s_house.tmj",
+   "name":"Kurt's house",
+   "parent":5,
+   "order":7,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":7,
+   "file":"007_cedolan_city.tmj",
+   "name":"Cedolan City",
+   "parent":0,
+   "order":8,
+   "expanded":false,
+   "scroll_x":830,
+   "scroll_y":736
+  },
+  {
+   "id":8,
+   "file":"008_daisy_s_house.tmj",
+   "name":"Daisy's house",
+   "parent":2,
+   "order":4,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":9,
+   "file":"009_cedolan_city_poke_center.tmj",
+   "name":"Cedolan City Poké Center",
+   "parent":7,
+   "order":9,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":10,
+   "file":"010_cedolan_gym.tmj",
+   "name":"Cedolan Gym",
+   "parent":7,
+   "order":10,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":11,
+   "file":"011_pokemon_institute.tmj",
+   "name":"Pokémon Institute",
+   "parent":7,
+   "order":11,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":12,
+   "file":"012_cedolan_city_condo.tmj",
+   "name":"Cedolan City Condo",
+   "parent":7,
+   "order":12,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":13,
+   "file":"013_game_corner.tmj",
+   "name":"Game Corner",
+   "parent":7,
+   "order":13,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":468
+  },
+  {
+   "id":14,
+   "file":"014_cedolan_dept_1f.tmj",
+   "name":"Cedolan Dept. 1F",
+   "parent":7,
+   "order":14,
+   "expanded":true,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":15,
+   "file":"015_cedolan_dept_2f.tmj",
+   "name":"Cedolan Dept. 2F",
+   "parent":14,
+   "order":15,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":16,
+   "file":"016_cedolan_dept_3f.tmj",
+   "name":"Cedolan Dept. 3F",
+   "parent":14,
+   "order":16,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":17,
+   "file":"017_cedolan_dept_4f.tmj",
+   "name":"Cedolan Dept. 4F",
+   "parent":14,
+   "order":17,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":18,
+   "file":"018_cedolan_dept_5f.tmj",
+   "name":"Cedolan Dept. 5F",
+   "parent":14,
+   "order":18,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":272
+  },
+  {
+   "id":19,
+   "file":"019_cedolan_dept_rooftop.tmj",
+   "name":"Cedolan Dept. Rooftop",
+   "parent":14,
+   "order":19,
+   "expanded":false,
+   "scroll_x":512,
+   "scroll_y":320
+  },
+  {
+   "id":20,
+   "file":"020_cedolan_dept_elevator.tmj",
+   "name":"Cedolan Dept. Elevator",
+   "parent":14,
+   "order":20,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":21,
+   "file":"021_route_2.tmj",
+   "name":"Route 2",
+   "parent":0,
+   "order":21,
+   "expanded":false,
+   "scroll_x":624,
+   "scroll_y":566
+  },
+  {
+   "id":23,
+   "file":"023_lerucean_town.tmj",
+   "name":"Lerucean Town",
+   "parent":0,
+   "order":22,
+   "expanded":false,
+   "scroll_x":656,
+   "scroll_y":564
+  },
+  {
+   "id":24,
+   "file":"024_lerucean_town_poke_center.tmj",
+   "name":"Lerucean Town Poké Center",
+   "parent":23,
+   "order":23,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":25,
+   "file":"025_lerucean_town_mart.tmj",
+   "name":"Lerucean Town Mart",
+   "parent":23,
+   "order":24,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":26,
+   "file":"026_pokemon_fan_club.tmj",
+   "name":"Pokémon Fan Club",
+   "parent":23,
+   "order":25,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":27,
+   "file":"027_pokemon_day_care.tmj",
+   "name":"Pokémon Day Care",
+   "parent":23,
+   "order":26,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":28,
+   "file":"028_natural_park.tmj",
+   "name":"Natural Park",
+   "parent":0,
+   "order":27,
+   "expanded":false,
+   "scroll_x":800,
+   "scroll_y":468
+  },
+  {
+   "id":29,
+   "file":"029_natural_park_entrance.tmj",
+   "name":"Natural Park Entrance",
+   "parent":28,
+   "order":28,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":30,
+   "file":"030_natural_park_pavillion.tmj",
+   "name":"Natural Park Pavillion",
+   "parent":28,
+   "order":29,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":31,
+   "file":"031_route_3.tmj",
+   "name":"Route 3",
+   "parent":0,
+   "order":30,
+   "expanded":false,
+   "scroll_x":1430,
+   "scroll_y":459
+  },
+  {
+   "id":34,
+   "file":"034_ice_cave.tmj",
+   "name":"Ice Cave",
+   "parent":31,
+   "order":31,
+   "expanded":false,
+   "scroll_x":672,
+   "scroll_y":582
+  },
+  {
+   "id":35,
+   "file":"035_ingido_plateau_outside.tmj",
+   "name":"Ingido Plateau outside",
+   "parent":0,
+   "order":32,
+   "expanded":false,
+   "scroll_x":560,
+   "scroll_y":468
+  },
+  {
+   "id":36,
+   "file":"036_pokemon_league_entrance.tmj",
+   "name":"Pokémon League entrance",
+   "parent":35,
+   "order":33,
+   "expanded":false,
+   "scroll_x":400,
+   "scroll_y":304
+  },
+  {
+   "id":37,
+   "file":"037_pokemon_league_room_1.tmj",
+   "name":"Pokémon League room 1",
+   "parent":35,
+   "order":34,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":38,
+   "file":"038_hall_of_fame.tmj",
+   "name":"Hall of Fame",
+   "parent":35,
+   "order":35,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":39,
+   "file":"039_route_4.tmj",
+   "name":"Route 4",
+   "parent":0,
+   "order":36,
+   "expanded":false,
+   "scroll_x":704,
+   "scroll_y":368
+  },
+  {
+   "id":40,
+   "file":"040_route_4_cycling_road.tmj",
+   "name":"Route 4 Cycling Road",
+   "parent":39,
+   "order":37,
+   "expanded":false,
+   "scroll_x":528,
+   "scroll_y":336
+  },
+  {
+   "id":41,
+   "file":"041_route_5.tmj",
+   "name":"Route 5",
+   "parent":0,
+   "order":39,
+   "expanded":false,
+   "scroll_x":576,
+   "scroll_y":468
+  },
+  {
+   "id":44,
+   "file":"044_route_6.tmj",
+   "name":"Route 6",
+   "parent":0,
+   "order":40,
+   "expanded":false,
+   "scroll_x":720,
+   "scroll_y":468
+  },
+  {
+   "id":45,
+   "file":"045_route_6_cycling_road.tmj",
+   "name":"Route 6 Cycling Road",
+   "parent":44,
+   "order":41,
+   "expanded":false,
+   "scroll_x":624,
+   "scroll_y":384
+  },
+  {
+   "id":46,
+   "file":"046_route_4_cycling_road_gate.tmj",
+   "name":"Route 4 Cycling Road gate",
+   "parent":39,
+   "order":38,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":47,
+   "file":"047_route_7.tmj",
+   "name":"Route 7",
+   "parent":0,
+   "order":43,
+   "expanded":false,
+   "scroll_x":809,
+   "scroll_y":459
+  },
+  {
+   "id":49,
+   "file":"049_rock_cave_1f.tmj",
+   "name":"Rock Cave 1F",
+   "parent":47,
+   "order":44,
+   "expanded":true,
+   "scroll_x":544,
+   "scroll_y":464
+  },
+  {
+   "id":50,
+   "file":"050_rock_cave_b1f.tmj",
+   "name":"Rock Cave B1F",
+   "parent":49,
+   "order":45,
+   "expanded":false,
+   "scroll_x":480,
+   "scroll_y":416
+  },
+  {
+   "id":51,
+   "file":"051_dungeon.tmj",
+   "name":"Dungeon",
+   "parent":49,
+   "order":46,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":52,
+   "file":"052_battle_frontier.tmj",
+   "name":"Battle Frontier",
+   "parent":0,
+   "order":47,
+   "expanded":false,
+   "scroll_x":704,
+   "scroll_y":520
+  },
+  {
+   "id":53,
+   "file":"053_battle_frontier_poke_center.tmj",
+   "name":"Battle Frontier Poké Center",
+   "parent":52,
+   "order":48,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":54,
+   "file":"054_battle_frontier_mart.tmj",
+   "name":"Battle Frontier Mart",
+   "parent":52,
+   "order":49,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":55,
+   "file":"055_battle_tower.tmj",
+   "name":"Battle Tower",
+   "parent":52,
+   "order":50,
+   "expanded":true,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":56,
+   "file":"056_battle_tower_arena.tmj",
+   "name":"Battle Tower arena",
+   "parent":55,
+   "order":52,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":57,
+   "file":"057_stadium_cup_lobby.tmj",
+   "name":"Stadium Cup lobby",
+   "parent":55,
+   "order":51,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":58,
+   "file":"058_battle_palace.tmj",
+   "name":"Battle Palace",
+   "parent":52,
+   "order":53,
+   "expanded":true,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":59,
+   "file":"059_battle_palace_arena.tmj",
+   "name":"Battle Palace arena",
+   "parent":58,
+   "order":54,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":60,
+   "file":"060_battle_arena.tmj",
+   "name":"Battle Arena",
+   "parent":52,
+   "order":55,
+   "expanded":true,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":61,
+   "file":"061_battle_arena_arena.tmj",
+   "name":"Battle Arena arena",
+   "parent":60,
+   "order":56,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":62,
+   "file":"062_battle_factory.tmj",
+   "name":"Battle Factory",
+   "parent":52,
+   "order":57,
+   "expanded":true,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":63,
+   "file":"063_battle_factory_intro_corridor.tmj",
+   "name":"Battle Factory intro corridor",
+   "parent":62,
+   "order":58,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":64,
+   "file":"064_battle_factory_arena.tmj",
+   "name":"Battle Factory arena",
+   "parent":62,
+   "order":59,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":65,
+   "file":"065_battle_factory_corridor.tmj",
+   "name":"Battle Factory corridor",
+   "parent":62,
+   "order":60,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":66,
+   "file":"066_safari_zone_outside.tmj",
+   "name":"Safari Zone outside",
+   "parent":0,
+   "order":61,
+   "expanded":false,
+   "scroll_x":352,
+   "scroll_y":336
+  },
+  {
+   "id":67,
+   "file":"067_safari_zone_gate.tmj",
+   "name":"Safari Zone gate",
+   "parent":66,
+   "order":62,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":68,
+   "file":"068_safari_zone.tmj",
+   "name":"Safari Zone",
+   "parent":66,
+   "order":63,
+   "expanded":false,
+   "scroll_x":816,
+   "scroll_y":547
+  },
+  {
+   "id":69,
+   "file":"069_route_8.tmj",
+   "name":"Route 8",
+   "parent":0,
+   "order":64,
+   "expanded":false,
+   "scroll_x":736,
+   "scroll_y":652
+  },
+  {
+   "id":70,
+   "file":"070_route_8_underwater.tmj",
+   "name":"Route 8 underwater",
+   "parent":69,
+   "order":65,
+   "expanded":false,
+   "scroll_x":736,
+   "scroll_y":468
+  },
+  {
+   "id":71,
+   "file":"071_route_8_harbor.tmj",
+   "name":"Route 8 harbor",
+   "parent":69,
+   "order":66,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":72,
+   "file":"072_berth_island.tmj",
+   "name":"Berth Island",
+   "parent":0,
+   "order":67,
+   "expanded":false,
+   "scroll_x":464,
+   "scroll_y":524
+  },
+  {
+   "id":73,
+   "file":"073_faraday_island.tmj",
+   "name":"Faraday Island",
+   "parent":0,
+   "order":68,
+   "expanded":false,
+   "scroll_x":464,
+   "scroll_y":524
+  },
+  {
+   "id":74,
+   "file":"074_route_6_cycling_road_gate.tmj",
+   "name":"Route 6 Cycling Road gate",
+   "parent":44,
+   "order":42,
+   "expanded":false,
+   "scroll_x":320,
+   "scroll_y":240
+  },
+  {
+   "id":75,
+   "file":"075_tiall_region.tmj",
+   "name":"Tiall Region",
+   "parent":0,
+   "order":69,
+   "expanded":false,
+   "scroll_x":512,
+   "scroll_y":384
+  }
+ ]
+}

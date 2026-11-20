@@ -1,0 +1,425 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":15,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    137, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 138, 140, 159, 159, 159, 159, 159, 159,
+    145, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 146, 148, 159, 159, 159, 159, 159, 159,
+    250, 250, 268, 258, 258, 250, 250, 250, 250, 268, 258, 258, 250, 272, 159, 159, 159, 159, 159, 159,
+    251, 250, 250, 252, 250, 250, 250, 250, 250, 250, 252, 250, 250, 251, 159, 159, 159, 159, 159, 159,
+    251, 266, 258, 259, 266, 258, 248, 250, 268, 258, 259, 266, 258, 259, 159, 159, 159, 159, 159, 159,
+    251, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 159, 159, 159, 159, 159, 159,
+    251, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 241, 159, 159, 159, 159, 159, 159,
+    250, 250, 252, 241, 241, 241, 241, 241, 241, 241, 241, 241, 250, 250, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 252, 241, 241, 241, 241, 241, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159,
+    159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159, 159
+   ],
+   "height":15,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 6, 7, 8, 0, 1401, 1402, 0, 6, 7, 8, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 1585, 14, 15, 16, 1585, 1409, 1410, 1585, 14, 15, 16, 1585, 0, 0, 0, 0, 0, 0, 0,
+    153, 1594, 1580, 0, 1578, 1596, 1417, 1418, 1594, 1580, 0, 1578, 1596, 156, 0, 0, 0, 0, 0, 0,
+    0, 1602, 1604, 0, 1602, 1604, 0, 1342, 1602, 1604, 0, 1602, 1604, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 1350, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    1401, 1402, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1401, 1402, 0, 0, 0, 0, 0, 0,
+    1409, 1410, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1409, 1410, 0, 0, 0, 0, 0, 0,
+    1417, 1418, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1417, 1418, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 862, 863, 863, 864, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 870, 871, 871, 872, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1476, 0, 1310, 1312, 0, 0, 0, 1476, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1484, 0, 1318, 1320, 0, 0, 0, 1484, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 1326, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Exit left",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/001_exit_left.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"Exit right",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":224,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/002_exit_right.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"PC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/003_pc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Single battles NPC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":96,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_SCIENTIST"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":28,
+        "graphic":"trainer_SCIENTIST",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/004_single_battles_npc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Double battles NPC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":320,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"trainer_SCIENTIST"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":28,
+        "graphic":"trainer_SCIENTIST",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/005_double_battles_npc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"Single results",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/006_single_results.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":7,
+     "name":"Double results",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":352,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":7
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/007_double_results.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":8,
+     "name":"Battle recorder",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":224,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":8
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/062_battle_factory/008_battle_recorder.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":9,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/interior_general.tsj"
+  },
+  {
+   "firstgid":2009,
+   "source":"../tilesets/autotiles/fountain2.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Battle Frontier",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Battle Frontier",
+    "town_map_position":{
+     "region":0,
+     "x":17,
+     "y":10
+    }
+   }
+  }
+ ]
+}

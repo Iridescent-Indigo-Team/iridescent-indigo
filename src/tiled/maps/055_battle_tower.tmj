@@ -1,0 +1,620 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":15,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    18, 19, 20, 21, 18, 1, 11, 11, 11, 11, 11, 11, 11, 6, 18, 19, 20, 21, 18, 11,
+    25, 27, 28, 29, 25, 9, 11, 11, 11, 11, 11, 11, 11, 14, 25, 27, 28, 29, 25, 11,
+    84, 74, 74, 74, 74, 9, 11, 11, 11, 11, 11, 11, 11, 14, 84, 74, 74, 74, 74, 11,
+    66, 66, 68, 66, 66, 9, 11, 11, 11, 11, 11, 11, 11, 14, 66, 66, 68, 66, 66, 11,
+    84, 74, 75, 82, 83, 9, 11, 11, 11, 11, 11, 11, 11, 14, 84, 74, 75, 82, 83, 11,
+    67, 57, 57, 57, 57, 17, 18, 18, 18, 18, 18, 18, 18, 22, 67, 57, 57, 57, 57, 11,
+    67, 57, 57, 57, 57, 25, 25, 25, 25, 25, 25, 25, 25, 25, 67, 57, 57, 57, 57, 11,
+    67, 57, 57, 57, 57, 66, 66, 66, 66, 84, 74, 66, 66, 66, 67, 57, 57, 57, 57, 11,
+    67, 46, 47, 48, 57, 66, 66, 66, 66, 66, 66, 66, 66, 66, 67, 46, 47, 48, 57, 11,
+    67, 54, 55, 56, 57, 64, 84, 74, 74, 74, 74, 74, 74, 74, 75, 54, 55, 56, 57, 11,
+    67, 57, 57, 57, 57, 57, 57, 57, 46, 47, 48, 57, 57, 57, 57, 57, 57, 57, 57, 11,
+    67, 57, 57, 57, 57, 57, 57, 57, 54, 55, 56, 57, 57, 57, 57, 57, 57, 57, 57, 11,
+    67, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 11,
+    11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11,
+    11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11
+   ],
+   "height":15,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    91, 123, 0, 121, 91, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 123, 0, 121, 91, 0,
+    115, 131, 0, 129, 115, 0, 0, 0, 0, 0, 0, 0, 0, 0, 115, 131, 0, 129, 115, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 26, 96, 102, 103, 43, 44, 104, 96, 26, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 42, 106, 110, 111, 122, 91, 112, 108, 42, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 50, 114, 115, 115, 130, 115, 115, 116, 50, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 163, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 169, 170, 171, 0,
+    31, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 177, 178, 179, 0,
+    39, 0, 39, 0, 0, 0, 0, 0, 222, 223, 224, 0, 0, 0, 0, 0, 185, 186, 187, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 230, 231, 232, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 119, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 119, 0,
+    0, 0, 0, 0, 127, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 127, 0,
+    0, 0, 0, 0, 135, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 135, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 143, 118, 0, 0, 0, 0, 0, 118, 120, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 151, 126, 0, 0, 0, 0, 0, 126, 128, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 159, 0, 0, 0, 0, 0, 0, 0, 136, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Exit",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":416,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/001_exit.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"PC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/002_pc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"Single battles NPC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 23"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":28,
+        "graphic":"NPC 23",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/003_single_battles_npc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Double battles NPC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 23"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":28,
+        "graphic":"NPC 23",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/004_double_battles_npc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Singles results",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/005_singles_results.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"Doubles results",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":576,
+     "y":96,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/006_doubles_results.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":7,
+     "name":"Battle recorder",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":416,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":7
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/007_battle_recorder.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":8,
+     "name":"Elevator door singles",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":8
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"doors9",
+        "pattern":1
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":9,
+     "name":"Elevator door doubles",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":512,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":9
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"doors9",
+        "pattern":1
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":10,
+     "name":"Healing balls",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":224,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":10
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "move_speed":4,
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":1,
+        "graphic":"Healing balls 1",
+        "direction":"left",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_2",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":2,
+        "graphic":"Healing balls 1",
+        "direction":"right",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_3",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":3,
+        "graphic":"Healing balls 1",
+        "direction":"up",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_4",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":4,
+        "graphic":"Healing balls 2",
+        "direction":"left",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_5",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":5,
+        "graphic":"Healing balls 2",
+        "direction":"right",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_6",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":6,
+        "graphic":"Healing balls 2",
+        "direction":"up",
+        "walk_anime":false
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":11,
+     "name":"Nurse",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":288,
+     "y":224,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":11
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 16"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":1,
+        "graphic":"NPC 16",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/011_nurse.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":12,
+     "name":"Stairs to Stadium Cup",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":544,
+     "y":352,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":13
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/055_battle_tower/013_stairs_to_stadium_cup.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":13,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/trainer_tower_interior.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Battle Frontier",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Battle Frontier",
+    "teleport_destination":{
+     "map_id":52,
+     "x":30,
+     "y":10
+    },
+    "town_map_position":{
+     "region":0,
+     "x":17,
+     "y":10
+    }
+   }
+  }
+ ]
+}

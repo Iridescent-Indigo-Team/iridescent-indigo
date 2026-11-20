@@ -1,0 +1,427 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":15,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4,
+    9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 4, 4, 4, 4, 4,
+    17, 74, 74, 74, 74, 74, 74, 92, 82, 74, 74, 74, 92, 82, 19, 4, 4, 4, 4, 4,
+    74, 65, 65, 65, 74, 74, 74, 74, 74, 74, 74, 75, 65, 65, 89, 4, 4, 4, 4, 4,
+    74, 65, 65, 65, 90, 82, 82, 82, 82, 82, 82, 83, 65, 65, 65, 4, 4, 4, 4, 4,
+    74, 65, 65, 65, 65, 65, 102, 103, 104, 65, 65, 65, 65, 65, 65, 4, 4, 4, 4, 4,
+    74, 65, 65, 65, 68, 65, 110, 111, 112, 65, 65, 65, 65, 68, 65, 4, 4, 4, 4, 4,
+    74, 65, 74, 74, 75, 65, 118, 119, 120, 65, 65, 74, 74, 75, 65, 4, 4, 4, 4, 4,
+    74, 65, 90, 82, 83, 65, 65, 65, 65, 65, 65, 90, 82, 83, 65, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
+   ],
+   "height":15,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 279, 253, 254, 0, 0, 0, 49, 50, 0, 0, 255, 51, 52, 0, 0, 0, 0, 0, 0,
+    0, 287, 261, 262, 185, 198, 199, 57, 58, 200, 185, 263, 59, 60, 0, 0, 0, 0, 0, 0,
+    0, 295, 269, 270, 202, 206, 207, 218, 187, 208, 204, 271, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 210, 211, 211, 226, 211, 211, 212, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 240, 248, 0, 0, 0, 0, 0, 0, 0, 240, 248, 0, 0, 0, 0, 0, 0, 0,
+    240, 0, 238, 239, 0, 0, 0, 0, 0, 0, 0, 238, 239, 0, 240, 0, 0, 0, 0, 0,
+    248, 0, 246, 247, 0, 0, 0, 0, 0, 0, 0, 246, 247, 0, 248, 0, 0, 0, 0, 0,
+    98, 0, 0, 0, 0, 0, 169, 170, 171, 0, 0, 0, 0, 0, 99, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 177, 178, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 223, 0, 0, 0, 0, 0, 223, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 231, 0, 0, 0, 0, 0, 231, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":15,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Exit",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":224,
+     "y":288,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/009_cedolan_city_poke_center/001_exit.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"Nurse",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":224,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 16"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":1,
+        "graphic":"NPC 16",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/009_cedolan_city_poke_center/002_nurse.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"PC",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":352,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/009_cedolan_city_poke_center/003_pc.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Healing balls",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":160,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "move_speed":4,
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":1,
+        "graphic":"Healing balls 1",
+        "direction":"left",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_2",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":2,
+        "graphic":"Healing balls 1",
+        "direction":"right",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_3",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":3,
+        "graphic":"Healing balls 1",
+        "direction":"up",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_4",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":4,
+        "graphic":"Healing balls 2",
+        "direction":"left",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_5",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":5,
+        "graphic":"Healing balls 2",
+        "direction":"right",
+        "walk_anime":false
+       }
+      },
+      {
+       "name":"page_6",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "variable":6,
+        "variable_value":6,
+        "graphic":"Healing balls 2",
+        "direction":"up",
+        "walk_anime":false
+       }
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Bill",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":384,
+     "y":160,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 25",
+        "direction":"left"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/009_cedolan_city_poke_center/005_bill.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"Town Map, size(2,1)",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":384,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/009_cedolan_city_poke_center/006_town_map_size_2_1.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":7,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/poke_centre_interior.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Poke Center",
+    "volume":100,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Cedolan City",
+    "teleport_destination":{
+     "map_id":8,
+     "x":17,
+     "y":11
+    },
+    "town_map_position":{
+     "region":0,
+     "x":14,
+     "y":10
+    }
+   }
+  }
+ ]
+}

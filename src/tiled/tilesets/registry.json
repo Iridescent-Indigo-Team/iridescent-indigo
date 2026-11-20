@@ -1,0 +1,142 @@
+{
+ "tilesets":[
+  {
+   "id":1,
+   "name":"Outside",
+   "tilesets":["outside.tsj"],
+   "autotiles":["autotiles/sea.tsj", "autotiles/sea_without_shore.tsj", "autotiles/sea_deep.tsj", "autotiles/sand_shore.tsj", "autotiles/flowers1.tsj", "autotiles/water_rock.tsj", "autotiles/fountain1.tsj"]
+  },
+  {
+   "id":2,
+   "name":"Outside waterfall",
+   "tilesets":["outside_2.tsj"],
+   "autotiles":["autotiles/sea.tsj", "autotiles/sea_without_shore.tsj", "autotiles/sea_deep.tsj", "autotiles/sand_shore.tsj", "autotiles/waterfall_crest.tsj", "autotiles/waterfall.tsj", "autotiles/waterfall_bottom.tsj"]
+  },
+  {
+   "id":3,
+   "name":"Inside",
+   "tilesets":["interior_general.tsj"],
+   "autotiles":["autotiles/fountain2.tsj"]
+  },
+  {
+   "id":4,
+   "name":"Poké Center",
+   "tilesets":["poke_centre_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":5,
+   "name":"Poké Mart",
+   "tilesets":["mart_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":6,
+   "name":"Caves",
+   "tilesets":["caves.tsj"],
+   "autotiles":["autotiles/sea.tsj", "autotiles/sea_without_shore.tsj", "autotiles/sea_deep.tsj", "autotiles/waterfall_crest.tsj", "autotiles/waterfall.tsj", "autotiles/waterfall_bottom.tsj"]
+  },
+  {
+   "id":7,
+   "name":"Dungeon cave",
+   "tilesets":["dungeon_cave.tsj"],
+   "autotiles":["autotiles/brown_cave_sand.tsj"]
+  },
+  {
+   "id":8,
+   "name":"Bike Shop",
+   "tilesets":["bike_shop_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":9,
+   "name":"Boat",
+   "tilesets":["boat.tsj"],
+   "autotiles":["autotiles/sea.tsj", "autotiles/sea_without_shore.tsj", "autotiles/sea_deep.tsj"]
+  },
+  {
+   "id":10,
+   "name":"Department Store",
+   "tilesets":["department_store_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":11,
+   "name":"Factory",
+   "tilesets":["factory_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":12,
+   "name":"Game Corner",
+   "tilesets":["game_corner_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":13,
+   "name":"Graveyard",
+   "tilesets":["graveyard_tower_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":14,
+   "name":"Gyms",
+   "tilesets":["gyms_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":15,
+   "name":"Harbour",
+   "tilesets":["harbour_interior.tsj"],
+   "autotiles":["autotiles/sea.tsj"]
+  },
+  {
+   "id":16,
+   "name":"Mansion",
+   "tilesets":["mansion_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":17,
+   "name":"Multiplayer rooms",
+   "tilesets":["multiplayer_rooms.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":18,
+   "name":"Museum",
+   "tilesets":["museum_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":19,
+   "name":"Ruins",
+   "tilesets":["ruins_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":20,
+   "name":"Trainer Tower",
+   "tilesets":["trainer_tower_interior.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":21,
+   "name":"Underground Path",
+   "tilesets":["underground_path.tsj"],
+   "autotiles":[]
+  },
+  {
+   "id":22,
+   "name":"Underwater",
+   "tilesets":["underwater.tsj"],
+   "autotiles":["autotiles/underwater_dark.tsj", "autotiles/seaweed_dark.tsj", "autotiles/seaweed_light.tsj"]
+  },
+  {
+   "id":23,
+   "name":"Dungeon forest",
+   "tilesets":["dungeon_forest.tsj"],
+   "autotiles":["autotiles/flowers1.tsj"]
+  }
+ ]
+}

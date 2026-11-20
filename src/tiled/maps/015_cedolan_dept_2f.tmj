@@ -1,0 +1,363 @@
+{
+ "class":"Map",
+ "compressionlevel":-1,
+ "height":17,
+ "infinite":false,
+ "layers":[
+  {
+   "data":[
+    2, 3, 3, 3, 3, 4, 5, 6, 3, 3, 3, 3, 7, 1, 1, 1, 1, 1, 1, 1,
+    10, 11, 11, 11, 11, 12, 13, 14, 11, 11, 90, 91, 15, 1, 1, 1, 1, 1, 1, 1,
+    10, 116, 117, 19, 19, 20, 29, 22, 19, 19, 98, 99, 15, 1, 1, 1, 1, 1, 1, 1,
+    18, 124, 125, 27, 27, 27, 27, 27, 27, 27, 106, 107, 23, 1, 1, 1, 1, 1, 1, 1,
+    0, 0, 0, 28, 28, 28, 28, 28, 28, 28, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+    46, 46, 46, 47, 37, 37, 37, 37, 37, 37, 46, 46, 46, 1, 1, 1, 1, 1, 1, 1,
+    46, 37, 37, 47, 37, 37, 37, 37, 37, 37, 54, 54, 54, 1, 1, 1, 1, 1, 1, 1,
+    46, 37, 37, 47, 37, 37, 37, 37, 37, 37, 37, 37, 37, 1, 1, 1, 1, 1, 1, 1,
+    46, 37, 37, 47, 37, 37, 37, 37, 37, 39, 37, 37, 39, 1, 1, 1, 1, 1, 1, 1,
+    46, 46, 46, 47, 37, 37, 37, 46, 46, 47, 46, 46, 47, 1, 1, 1, 1, 1, 1, 1,
+    46, 54, 54, 55, 37, 37, 37, 46, 46, 47, 46, 46, 47, 1, 1, 1, 1, 1, 1, 1,
+    46, 46, 46, 46, 39, 37, 37, 54, 54, 55, 54, 54, 55, 1, 1, 1, 1, 1, 1, 1,
+    46, 54, 54, 54, 55, 37, 37, 37, 37, 39, 37, 37, 39, 1, 1, 1, 1, 1, 1, 1,
+    46, 37, 37, 37, 39, 37, 37, 46, 46, 47, 46, 46, 47, 1, 1, 1, 1, 1, 1, 1,
+    46, 54, 54, 54, 55, 37, 37, 46, 46, 47, 46, 46, 47, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+   ],
+   "height":17,
+   "id":1,
+   "name":"Layer 1",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 151, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 159, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 59, 60, 126, 0, 0, 0, 0, 0, 105, 58, 59, 0, 0, 0, 0, 0, 0, 0, 0,
+    67, 67, 68, 0, 0, 0, 0, 0, 0, 0, 66, 67, 67, 0, 0, 0, 0, 0, 0, 0,
+    75, 75, 145, 0, 0, 0, 0, 0, 0, 0, 74, 75, 75, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 145, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 145, 0, 0, 0, 0, 191, 192, 0, 191, 192, 0, 0, 0, 0, 0, 0, 0, 0,
+    130, 149, 148, 0, 0, 0, 0, 199, 200, 0, 199, 200, 0, 0, 0, 0, 0, 0, 0, 0,
+    154, 157, 156, 0, 0, 0, 0, 207, 208, 0, 207, 208, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 229, 231, 232, 0, 0, 0, 215, 216, 0, 215, 216, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 237, 239, 240, 0, 0, 0, 191, 192, 0, 191, 192, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 229, 231, 232, 0, 0, 0, 199, 200, 0, 199, 200, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 237, 239, 240, 0, 0, 0, 207, 208, 0, 207, 208, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 215, 216, 0, 215, 216, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":17,
+   "id":2,
+   "name":"Layer 2",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "data":[
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 137, 0, 0, 0, 0, 0, 0, 0, 204, 205, 206, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 133, 0, 0, 0, 0, 0, 0, 0, 212, 213, 214, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+   ],
+   "height":17,
+   "id":3,
+   "name":"Layer 3",
+   "opacity":1,
+   "type":"tilelayer",
+   "visible":true,
+   "width":20,
+   "x":0,
+   "y":0
+  },
+  {
+   "draworder":"topdown",
+   "id":4,
+   "name":"Events",
+   "objects":[
+    {
+     "height":32,
+     "id":1,
+     "name":"Elevator door",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":192,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":1
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"doors9",
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"page_1",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "switch1":22,
+        "graphic":"doors9",
+        "trigger":"autorun"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/001_elevator_door.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":2,
+     "name":"Stairs down",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":64,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":2
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/002_stairs_down.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":3,
+     "name":"Stairs up",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":320,
+     "y":64,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":3
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "trigger":"player_touch"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/003_stairs_up.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":4,
+     "name":"Floor sign",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":128,
+     "y":32,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":4
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{}
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/004_floor_sign.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":5,
+     "name":"Cashier top",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":32,
+     "y":192,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":5
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 19",
+        "direction":"right"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/005_cashier_top.rb"
+      }
+     ]
+    },
+    {
+     "height":32,
+     "id":6,
+     "name":"Cashier bottom",
+     "rotation":0,
+     "type":"Event",
+     "visible":true,
+     "width":32,
+     "x":32,
+     "y":256,
+     "properties":[
+      {
+       "name":"event_id",
+       "type":"int",
+       "value":6
+      },
+      {
+       "name":"page_0",
+       "type":"class",
+       "propertytype":"EventPage",
+       "value":{
+        "graphic":"NPC 19"
+       }
+      },
+      {
+       "name":"script",
+       "type":"file",
+       "value":"../events/015_cedolan_dept_2f/006_cashier_bottom.rb"
+      }
+     ]
+    }
+   ],
+   "opacity":1,
+   "type":"objectgroup",
+   "visible":true,
+   "x":0,
+   "y":0
+  },
+  {
+   "id":5,
+   "layers":[],
+   "name":"Atmosphere",
+   "class":"Atmosphere",
+   "opacity":1,
+   "type":"group",
+   "visible":true,
+   "x":0,
+   "y":0
+  }
+ ],
+ "nextlayerid":6,
+ "nextobjectid":7,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.10.2",
+ "tileheight":32,
+ "tilesets":[
+  {
+   "firstgid":1,
+   "source":"../tilesets/department_store_interior.tsj"
+  }
+ ],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":20,
+ "properties":[
+  {
+   "name":"autoplay_bgm",
+   "type":"bool",
+   "value":true
+  },
+  {
+   "name":"bgm",
+   "type":"class",
+   "propertytype":"Audio",
+   "value":{
+    "name":"Poke Mart",
+    "volume":80,
+    "pitch":100
+   }
+  },
+  {
+   "name":"metadata",
+   "type":"class",
+   "propertytype":"MapMetadata",
+   "value":{
+    "real_name":"Cedolan City",
+    "town_map_position":{
+     "region":0,
+     "x":13,
+     "y":10
+    }
+   }
+  }
+ ]
+}
