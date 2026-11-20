@@ -85,7 +85,9 @@ while IFS=$'\t' read -r src rel; do
     copied=$((copied + 1))
   fi
   mkdir -p "$(dirname "$dst")"
-  cp -p "$src" "$dst"
+  # Plain cp (not -p): the copy gets the current time, so `make` sees it as
+  # newer than its old output in build/ and rebuilds it.
+  cp "$src" "$dst"
   NEW_ENTRIES+=("$rel")
 done < <(
   list_files Graphics graphics

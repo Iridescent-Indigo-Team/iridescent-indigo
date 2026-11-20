@@ -194,6 +194,8 @@ How installed files are tracked:
   `src/assets/.installed_manifest`.
 - Running `install_assets.sh` again updates installed files, but skips any file
   you changed or added yourself. `--force` overwrites them anyway.
+- Files it copies or updates get the current time, so the next `make` rebuilds
+  them (e.g. new art committed to `lib/pokemon-essentials/Graphics`).
 - `uninstall_assets.sh` keeps files you changed, unless you pass `--force`.
 
 Installed files are added to `.git/info/exclude`, so the thousands of Essentials
