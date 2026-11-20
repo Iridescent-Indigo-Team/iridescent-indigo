@@ -226,6 +226,10 @@ class Battle::Scene::Animation::BattlerTitleIcon < Battle::Scene::Animation
     start_y = coords[1] - (batSprite.bitmap ? batSprite.bitmap.height / 2 : 48)
     icon = addNewSprite(coords[0], start_y, RIBBON_ICONS_FILE, PictureOrigin::CENTER)
     icon_sprite = @pictureSprites.last
+    # Hidden until this animation starts playing, which only happens once the
+    # Pokémon has come out of its Poké Ball
+    icon_sprite.visible = false
+    icon_sprite.opacity = 0
     size = icon_sprite.bitmap.width / 8
     pos = ribbon_data.icon_position
     icon.setSrc(0, size * (pos % 8), size * (pos / 8))
@@ -233,6 +237,7 @@ class Battle::Scene::Animation::BattlerTitleIcon < Battle::Scene::Animation
     icon_sprite.src_rect.set(size * (pos % 8), size * (pos / 8), size, size)
     icon.setOrigin(0, PictureOrigin::CENTER)   # Again, now the icon's size is known
     icon.setZ(0, batSprite.z + 1)
+    icon.setVisible(0, true)
     icon.setOpacity(0, 0)
     icon.moveXY(0, 16, coords[0], start_y - RISE_DISTANCE)
     icon.moveOpacity(0, 4, 255)

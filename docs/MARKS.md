@@ -206,14 +206,15 @@ pbStartTrade(pbGet(1), :HAUNTER, "Spooky", "Ricky", 0, title: :DUSKMARK, scale: 
 
 ## Summary screen
 
-The ribbons page shows ribbons and marks in a 3×3 grid sized for the icons in
-`ribbons.png` (`PokemonSummary_Scene::RIBBON_*`). Until `bg_5.png` is redrawn
-with matching slots, the slots are painted over it in code using its own
-colours; set `RIBBON_DRAW_SLOTS = false` once the background has them. The
+The ribbons page shows ribbons and marks in the 3×3 grid of slots drawn in
+`bg_5.png`, with the icons from `ribbons.png` centred in them
+(`PokemonSummary_Scene::RIBBON_*`; change these if you redraw the slots). The
 affixed ribbon has a small red flag.
 
-On the page, press USE to choose ribbons. Selecting one shows its name, whether
-it is a ribbon or a mark (and its rank), and its description. Press USE again
+On the page, press USE to choose ribbons. While choosing, the description box
+covers the bottom row, so the cursor stays in the top two rows
+(`RIBBON_SELECT_ROWS`) and the grid scrolls instead. Selecting a ribbon shows
+its name, whether it is a ribbon or a mark (and its rank), and its description. Press USE again
 for **Set as title** / **Remove title**, **Move** (then choose where it goes)
 and **Cancel**.
 
