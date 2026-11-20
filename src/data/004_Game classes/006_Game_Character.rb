@@ -237,6 +237,20 @@ class Game_Character
   def passable?(x, y, d, strict = false)
     new_x = x + (d == 6 ? 1 : d == 4 ? -1 : 0)
     new_y = y + (d == 2 ? 1 : d == 8 ? -1 : 0)
+    return passable_to?(x, y, new_x, new_y, d, strict)
+  end
+
+  # Whether a step from (x, y) to (new_x, new_y) is allowed. The step leaves
+  # (x, y) in direction d and enters (new_x, new_y) from the opposite side, so
+  # a diagonal stair step only tests the two tiles it touches.
+  # @param x [Integer] the start tile's x
+  # @param y [Integer] the start tile's y
+  # @param new_x [Integer] the destination tile's x
+  # @param new_y [Integer] the destination tile's y
+  # @param d [Integer] direction of the step (2, 4, 6, 8)
+  # @param strict [Boolean] treat one-way tiles as fully blocked
+  # @return [Boolean]
+  def passable_to?(x, y, new_x, new_y, d, strict = false)
     return false unless self.map.valid?(new_x, new_y)
     return true if @through
     if strict
@@ -380,6 +394,8 @@ class Game_Character
     @real_y = @y * Game_Map::REAL_RES_Y
     @prelock_direction = 0
     @moveto_happened = true
+    @last_step_from = nil
+    face_sideways_on_stairs
     calculate_bush_depth
     triggerLeaveTile
   end
@@ -551,15 +567,12 @@ class Game_Character
   end
 
   def move_generic(dir, turn_enabled = true)
+    step = resolve_step(dir)
+    return if step.nil?   # Up/down on sideways stairs does nothing
     turn_generic(dir) if turn_enabled
-    if can_move_in_direction?(dir)
+    if step != :blocked && can_step_to?(step[0], step[1], dir)
       turn_generic(dir)
-      @move_initial_x = @x
-      @move_initial_y = @y
-      @x += (dir == 4) ? -1 : (dir == 6) ? 1 : 0
-      @y += (dir == 8) ? -1 : (dir == 2) ? 1 : 0
-      @move_timer = 0.0
-      increase_steps
+      step_to(step[0], step[1])
     else
       check_event_trigger_touch(dir)
     end
@@ -586,6 +599,7 @@ class Game_Character
       @direction = (@direction == 6 ? 4 : @direction == 2 ? 8 : @direction)
     end
     if can_move_in_direction?(7)
+      record_step_origin
       @move_initial_x = @x
       @move_initial_y = @y
       @x -= 1
@@ -600,6 +614,7 @@ class Game_Character
       @direction = (@direction == 4 ? 6 : @direction == 2 ? 8 : @direction)
     end
     if can_move_in_direction?(9)
+      record_step_origin
       @move_initial_x = @x
       @move_initial_y = @y
       @x += 1
@@ -614,6 +629,7 @@ class Game_Character
       @direction = (@direction == 6 ? 4 : @direction == 8 ? 2 : @direction)
     end
     if can_move_in_direction?(1)
+      record_step_origin
       @move_initial_x = @x
       @move_initial_y = @y
       @x -= 1
@@ -628,6 +644,7 @@ class Game_Character
       @direction = (@direction == 4 ? 6 : @direction == 8 ? 2 : @direction)
     end
     if can_move_in_direction?(3)
+      record_step_origin
       @move_initial_x = @x
       @move_initial_y = @y
       @x += 1
@@ -781,6 +798,7 @@ class Game_Character
       end
       each_occupied_tile { |i, j| return if !passable?(i + x_plus, j + y_plus, 0) }
     end
+    record_step_origin if x_plus != 0 || y_plus != 0
     @jump_initial_x = @x
     @jump_initial_y = @y
     @x += x_plus
@@ -822,6 +840,7 @@ class Game_Character
 
   def turn_generic(dir)
     return if @direction_fix
+    return if [2, 8].include?(dir) && stairs_aware? && on_stairs?   # Face sideways on stairs
     oldDirection = @direction
     @direction = dir
     @stop_count = 0
@@ -893,6 +912,145 @@ class Game_Character
     else
       (sy > 0) ? turn_down : turn_up
     end
+  end
+
+
+  #=============================================================================
+  # Sideways stairs
+  #-----------------------------------------------------------------------------
+  # A flight of sideways stairs is a 45 degree diagonal band of tiles with the
+  # terrain tag StairsLeft (walking left climbs) or StairsRight (walking right
+  # climbs). Stair-aware characters walk it with left/right only: each step
+  # along the flight moves them one tile sideways and one tile up or down, and
+  # they always face left or right while on it. Flights are entered and left
+  # horizontally, from the landings at either end.
+  #
+  # Every character is stair-aware by default. Events can opt out with the
+  # stairs_off move route command (and back in with stairs_on). Characters
+  # bigger than one tile are never stair-aware.
+  #=============================================================================
+
+  # The tile this character's last step or jump started on, as
+  # [map_id, x, y], or nil after being placed with moveto. Followers walk this
+  # trail rather than guessing it from the leader's facing.
+  attr_reader :last_step_from
+
+  # Makes this character use sideways stairs (the default).
+  def stairs_on
+    @stairs_disabled = false
+  end
+
+  # Makes this character ignore sideways stairs: it moves exactly as it would
+  # without them (straight steps, any facing).
+  def stairs_off
+    @stairs_disabled = true
+  end
+
+  # @return [Boolean] whether this character's movement follows sideways stairs
+  def stairs_aware?
+    return !@stairs_disabled && @width == 1 && @height == 1
+  end
+
+  # The sideways stairs at a tile of this character's map, which may be past
+  # the map's edge on a connected map.
+  # @param x [Integer]
+  # @param y [Integer]
+  # @return [Symbol, nil] :left, :right or nil (not a stair tile)
+  def stairs_at(x, y)
+    if self.map.valid?(x, y)
+      tag = self.map.terrain_tag(x, y)
+    elsif $map_factory
+      tag = $map_factory.getTerrainTagFromCoords(self.map.map_id, x, y)
+    else
+      return nil
+    end
+    return tag&.sideways_stairs
+  end
+
+  # @return [Boolean] whether this character is standing on sideways stairs
+  def on_stairs?
+    return !stairs_at(@x, @y).nil?
+  end
+
+  # The step resolver: works out where a step in direction dir really goes,
+  # taking sideways stairs into account.
+  #   * Up/down while standing on stairs does nothing (nil).
+  #   * Up/down into a stair tile is blocked (:blocked): flights are only
+  #     entered from their ends.
+  #   * Left/right on stairs climbs or descends diagonally while the next tile
+  #     of the flight continues; otherwise it steps horizontally off the
+  #     flight onto its landing.
+  #   * Anything else (and every step of a character that isn't stair-aware)
+  #     is the plain one-tile step.
+  # @param dir [Integer] 2, 4, 6 or 8
+  # @return [Array<Integer>, Symbol, nil] [dx, dy], :blocked or nil
+  def resolve_step(dir)
+    dx = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
+    dy = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
+    return [dx, dy] if !stairs_aware? || ![2, 4, 6, 8].include?(dir)
+    here = stairs_at(@x, @y)
+    if dy != 0
+      return nil if here
+      return :blocked if stairs_at(@x, @y + dy)
+      return [dx, dy]
+    end
+    return [dx, 0] if !here
+    climbing = (here == :left) ? (dir == 4) : (dir == 6)
+    diagonal_dy = (climbing) ? -1 : 1
+    return [dx, diagonal_dy] if stairs_at(@x + dx, @y + diagonal_dy) == here
+    return [dx, 0]
+  end
+
+  # The offset of the tile a step in direction dir would reach, which is also
+  # the tile this character is facing when dir is its direction. Up/down on
+  # stairs gives the straight tile, since it leads nowhere.
+  # @param dir [Integer] defaults to this character's direction
+  # @return [Array<Integer>] [dx, dy]
+  def step_offset(dir = @direction)
+    step = resolve_step(dir)
+    return step if step.is_a?(Array)
+    return [(dir == 4) ? -1 : (dir == 6) ? 1 : 0, (dir == 8) ? -1 : (dir == 2) ? 1 : 0]
+  end
+
+  # Whether a resolved step can be taken. Straight steps use the usual checks
+  # (including multi-tile characters); diagonal stair steps test the start and
+  # destination tiles in the horizontal direction dir.
+  # @param dx [Integer]
+  # @param dy [Integer]
+  # @param dir [Integer] the direction pressed/moved (4 or 6 for stair steps)
+  # @return [Boolean]
+  def can_step_to?(dx, dy, dir)
+    return can_move_in_direction?(dir) if dx == 0 || dy == 0
+    return passable_to?(@x, @y, @x + dx, @y + dy, dir)
+  end
+
+  # Starts moving by (dx, dy), with no passability checks. Shared by plain
+  # steps, stair steps and followers walking their leader's trail.
+  # @param dx [Integer] -1, 0 or 1
+  # @param dy [Integer] -1, 0 or 1
+  def step_to(dx, dy)
+    record_step_origin
+    @move_initial_x = @x
+    @move_initial_y = @y
+    @x += dx
+    @y += dy
+    @move_timer = 0.0
+    increase_steps
+  end
+
+  # Remembers the tile the current step starts from (see last_step_from).
+  def record_step_origin
+    @last_step_from = [self.map.map_id, @x, @y]
+  end
+
+  # Turns a character standing on stairs to face along the flight if it was
+  # facing up or down (e.g. after being placed there). It faces down the
+  # flight, the way back off it.
+  def face_sideways_on_stairs
+    return if @direction_fix || ![2, 8].include?(@direction) || !stairs_aware?
+    here = stairs_at(@x, @y)
+    return if !here
+    @direction = (here == :left) ? 6 : 4
   end
 
   #=============================================================================

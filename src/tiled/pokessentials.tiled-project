@@ -49,7 +49,7 @@
    "name":"TerrainTag",
    "storageType":"string",
    "type":"enum",
-   "values":["None", "Ledge", "Grass", "Sand", "Rock", "DeepWater", "StillWater", "Water", "Waterfall", "WaterfallCrest", "TallGrass", "UnderwaterGrass", "Ice", "Neutral", "SootGrass", "Bridge", "Puddle", "NoEffect"],
+   "values":["None", "Ledge", "Grass", "Sand", "Rock", "DeepWater", "StillWater", "Water", "Waterfall", "WaterfallCrest", "TallGrass", "UnderwaterGrass", "Ice", "Neutral", "SootGrass", "Bridge", "Puddle", "NoEffect", "StairsLeft", "StairsRight"],
    "valuesAsFlags":false,
    "id":6
   },

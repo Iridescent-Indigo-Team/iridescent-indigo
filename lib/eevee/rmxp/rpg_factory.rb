@@ -1180,6 +1180,21 @@ class RPGFactory
     return move(45, script)
   end
 
+  # Makes the character follow sideways stairs (the default): left/right moves
+  # it diagonally along a StairsLeft/StairsRight flight. Stored as a Script
+  # move command, so the data stays plain RPG Maker XP.
+  # @return [RPG::MoveCommand]
+  def stairs_on
+    return route_script("stairs_on")
+  end
+
+  # Makes the character ignore sideways stairs and move straight, as it would
+  # without them.
+  # @return [RPG::MoveCommand]
+  def stairs_off
+    return route_script("stairs_off")
+  end
+
   COMMON_EVENT_TRIGGER = {
     0 => :none,
     1 => :autorun,

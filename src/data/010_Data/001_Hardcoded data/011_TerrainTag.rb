@@ -20,6 +20,9 @@ module GameData
     attr_reader :must_walk
     attr_reader :must_walk_or_run
     attr_reader :ignore_passability
+    # Which way a sideways (45 degree) flight of stairs climbs: :left if
+    # walking left goes up the flight, :right if walking right does, or nil.
+    attr_reader :sideways_stairs
 
     DATA = {}
 
@@ -60,12 +63,18 @@ module GameData
       @must_walk              = hash[:must_walk]              || false
       @must_walk_or_run       = hash[:must_walk_or_run]       || false
       @ignore_passability     = hash[:ignore_passability]     || false
+      @sideways_stairs        = hash[:sideways_stairs]
     end
 
     alias name real_name
 
     def can_surf_freely
       return @can_surf && !@waterfall && !@waterfall_crest
+    end
+
+    # @return [Boolean] whether this tag is part of a sideways flight of stairs
+    def stairs?
+      return !@sideways_stairs.nil?
     end
   end
 end
@@ -201,4 +210,19 @@ GameData::TerrainTag.register({
 GameData::TerrainTag.register({
   :id                     => :NoEffect,
   :id_number              => 17
+})
+
+# Sideways stairs: a 45 degree flight walked with Left/Right only. Each step on
+# the flight moves the character diagonally (see Game_Character#resolve_step).
+# StairsLeft climbs when walking left, StairsRight climbs when walking right.
+GameData::TerrainTag.register({
+  :id                     => :StairsLeft,
+  :id_number              => 18,
+  :sideways_stairs        => :left
+})
+
+GameData::TerrainTag.register({
+  :id                     => :StairsRight,
+  :id_number              => 19,
+  :sideways_stairs        => :right
 })

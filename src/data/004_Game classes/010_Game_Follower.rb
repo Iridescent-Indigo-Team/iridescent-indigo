@@ -33,16 +33,27 @@ class Game_Follower < Game_Event
 
   #-----------------------------------------------------------------------------
 
+  # Takes one straight step in direction, ignoring passability. The step is
+  # exactly the one the leader took (not re-resolved for sideways stairs), so
+  # self walks the leader's trail.
+  # @param direction [Integer] 2, 4, 6 or 8
   def move_through(direction)
-    old_through = @through
-    @through = true
-    case direction
-    when 2 then move_down
-    when 4 then move_left
-    when 6 then move_right
-    when 8 then move_up
-    end
-    @through = old_through
+    delta_x = (direction == 6) ? 1 : (direction == 4) ? -1 : 0
+    delta_y = (direction == 2) ? 1 : (direction == 8) ? -1 : 0
+    return if !self.map.valid?(self.x + delta_x, self.y + delta_y)
+    turn_generic(direction)
+    step_to(delta_x, delta_y)
+  end
+
+  # Takes one diagonal step, as the leader does on sideways stairs, facing
+  # sideways along the flight. Like move_through, passability is ignored
+  # because the leader has just walked this way.
+  # @param delta_x [Integer] -1 or 1
+  # @param delta_y [Integer] -1 or 1
+  def move_fancy_diagonal(delta_x, delta_y)
+    return if !self.map.valid?(self.x + delta_x, self.y + delta_y)
+    turn_generic((delta_x < 0) ? 4 : 6)
+    step_to(delta_x, delta_y)
   end
 
   def move_fancy(direction)
@@ -105,6 +116,8 @@ class Game_Follower < Game_Event
       jump_fancy(8, leader)
     elsif self.x == new_x && self.y - new_y == -2
       jump_fancy(2, leader)
+    elsif (self.x - new_x).abs == 1 && (self.y - new_y).abs == 1
+      move_fancy_diagonal(new_x - self.x, new_y - self.y)
     elsif self.x != new_x || self.y != new_y
       moveto(new_x, new_y)
     end
@@ -138,11 +151,16 @@ class Game_Follower < Game_Event
     target = nil
     # Get the target tile that self wants to move to
     if maps_connected
-      behind_direction = 10 - leader.direction
-      target = $map_factory.getFacingTile(behind_direction, leader)
-      if target && $map_factory.getTerrainTag(target[0], target[1], target[2]).ledge
-        # Get the tile above the ledge (where the leader jumped from)
-        target = $map_factory.getFacingTileFromPos(target[0], target[1], target[2], behind_direction)
+      # Walk the leader's trail: the tile its last step started from. If there
+      # is none (e.g. the leader was just placed), use the tile behind it.
+      target = trail_target(leader)
+      if !target
+        behind_direction = 10 - leader.direction
+        target = $map_factory.getFacingTile(behind_direction, leader)
+        if target && $map_factory.getTerrainTag(target[0], target[1], target[2]).ledge
+          # Get the tile above the ledge (where the leader jumped from)
+          target = $map_factory.getFacingTileFromPos(target[0], target[1], target[2], behind_direction)
+        end
       end
       target = [leader.map.map_id, leader.x, leader.y] if !target
     else
@@ -170,6 +188,21 @@ class Game_Follower < Game_Event
   #-----------------------------------------------------------------------------
 
   private
+
+  # The tile the leader's last step or jump started from, if it is close enough
+  # to follow by walking (or jumping, for ledges). This follows the leader's
+  # actual path, e.g. diagonally along sideways stairs, where the tile behind
+  # the leader's facing is wrong.
+  # @param leader [Game_Character]
+  # @return [Array<Integer>, nil] [map_id, x, y], or nil to fall back to the
+  #   tile behind the leader's facing
+  def trail_target(leader)
+    from = leader.last_step_from
+    return nil if !from || !$map_factory.areConnected?(from[0], leader.map.map_id)
+    vector = $map_factory.getRelativePos(from[0], from[1], from[2], leader.map.map_id, leader.x, leader.y)
+    return nil if !vector || vector == [0, 0] || vector[0].abs > 2 || vector[1].abs > 2
+    return from
+  end
 
   def location_passable?(x, y, direction)
     this_map = self.map

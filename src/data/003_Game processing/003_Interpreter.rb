@@ -390,6 +390,10 @@ class Interpreter
     # Apply strict version of passable, which treats tiles that are passable
     # only from certain directions as fully impassible
     return if !event.can_move_in_direction?($game_player.direction, true)
+    # Boulders can't be pushed onto, along or off sideways stairs
+    dest_x = event.x + ($game_player.direction == 6 ? 1 : $game_player.direction == 4 ? -1 : 0)
+    dest_y = event.y + ($game_player.direction == 2 ? 1 : $game_player.direction == 8 ? -1 : 0)
+    return if event.stairs_at(event.x, event.y) || event.stairs_at(dest_x, dest_y)
     $stats.strength_push_count += 1
     case $game_player.direction
     when 2 then event.move_down

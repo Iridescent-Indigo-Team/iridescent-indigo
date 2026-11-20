@@ -12,6 +12,7 @@ Per map:
   3. Tile layers are flattened bottom to top into RMXP's 3 layers.
   4. Events, spawns, metadata, encounters, connections and atmospheres are
      collected.
+  5. Sideways stairs rules are checked (see stairs.py).
 Then the Ruby back end (ruby/rxdata_build.rb) evaluates the event scripts and
 writes the .rxdata files, and the PBS JSON overlay is written for `make pbs`.
 """
@@ -22,7 +23,7 @@ import os
 import subprocess
 import tempfile
 
-from . import atmosphere, config, connections, events, pbsmaps
+from . import atmosphere, config, connections, events, pbsmaps, stairs
 from .config import AUTOTILE_SLOTS, AUTOTILE_TILES, RMXP_LAYERS, TILE
 from .problems import Problems, TiledError
 from .registry import Registry
@@ -63,11 +64,19 @@ class Project:
         self.combined = {}
         ## Template cache.
         self.templates = {}
+        ## (passages, priorities, terrain tags) by combined tileset id.
+        self.tables = {}
 
     def tileset_info(self, path):
         if path not in self.tileset_infos:
             self.tileset_infos[path] = TilesetInfo(path, self.tsj_cache.get(path))
         return self.tileset_infos[path]
+
+    def tile_tables(self, combined):
+        """@return (passages, priorities, terrain tags) of a combined tileset, cached"""
+        if combined.id not in self.tables:
+            self.tables[combined.id] = combined.tables(self.tags)
+        return self.tables[combined.id]
 
     def rel_tileset(self, path):
         return os.path.relpath(path, self.paths.tilesets).replace(os.sep, "/")
@@ -85,6 +94,8 @@ class MapResult:
         self.encounters = []
         self.explicit = []
         self.atmosphere = None
+        ## stairs.StairMap (terrain and passability for the stair rules).
+        self.stair_map = None
 
 
 #===============================================================================
@@ -300,6 +311,11 @@ def compile_map(project, entry, problems):
         event_irs.append({"id": event_id, "name": obj.get("name", ""), "x": x, "y": y, "pages": pages,
                           "script": script, "params": params})
 
+    # Sideways stairs
+    result.stair_map = stairs.StairMap(width, height, tile_data, RMXP_LAYERS, project.tile_tables(combined),
+                                       project.tags)
+    stairs.check_map(result.stair_map, result.spawns, event_irs, problems, rel)
+
     # Map properties
     mp = props(data)
     for name, value in mp.items():
@@ -426,6 +442,7 @@ def compile_project(paths, out_data=None, out_graphics=None, overlay=None, check
             if name.endswith(".rb"):
                 common.append({"path": os.path.join(paths.common_events, name)})
     system = load_json(paths.system) if os.path.isfile(paths.system) else None
+    stairs.check_start(system, ok, problems, paths.rel(paths.system))
 
     spawns = {str(r.entry["id"]): r.spawns for r in ok}
     ir = {

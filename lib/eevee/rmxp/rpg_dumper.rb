@@ -974,7 +974,9 @@ class RPGDumper
     when 42 then return "change_opacity(" + move.parameters[0].inspect + ")"
     when 43 then return "change_blending(" + RPGFactory::BLENDING[move.parameters[0]].inspect + ")"
     when 44 then return "route_play_se(" + audio(move.parameters[0]) + ")"
-    when 45 then return "route_script(" + move.parameters[0].inspect + ")"
+    when 45
+      return move.parameters[0] if ["stairs_on", "stairs_off"].include?(move.parameters[0])
+      return "route_script(" + move.parameters[0].inspect + ")"
     else
       value = "move(" + move.code.inspect
       move.parameters.each do |parameter|

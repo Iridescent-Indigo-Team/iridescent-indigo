@@ -5,9 +5,10 @@
  * the tileset editor; select many tiles to change them together).
  *
  *   - Show Collision Overlay (Map menu): draws a temporary layer over the
- *     map marking blocked tiles (red), one-way tiles (orange), water you can
- *     surf (blue), ledges (yellow), grass (green), counters (purple) and
- *     bushes (teal). Toggle it off again, or save: it's never saved.
+ *     map marking sideways stairs (pink), blocked tiles (red), one-way tiles
+ *     (orange), water you can surf (blue), ledges (yellow), grass (green),
+ *     counters (purple) and bushes (teal). Toggle it off again, or save: it's
+ *     never saved.
  *   - Export Tile Data / Import Tile Data (Tileset menu): to and from .json,
  *     .csv or an RPG Maker XP Tilesets.rxdata, through tiled_compiler.py.
  */
@@ -18,6 +19,8 @@
     var OVERLAY = "~ Collision overlay";
     /** Overlay categories: name, colour, test on the tile data. */
     var CATEGORIES = [
+        // First, so stair tiles with one-way passage still show as stairs.
+        ["Stairs", "#c0f040c0", function (d) { return /^Stairs(Left|Right)$/.test(d.terrain_tag || ""); }],
         ["Blocked", "#c0e02020", function (d) { return d.block_down && d.block_left && d.block_right && d.block_up; }],
         ["One-way", "#c0f08020", function (d) { return d.block_down || d.block_left || d.block_right || d.block_up; }],
         ["Surf", "#a02060f0", function (d) { return /Water|Waterfall/.test(d.terrain_tag || ""); }],

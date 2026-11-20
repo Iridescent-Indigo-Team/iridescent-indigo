@@ -11,6 +11,7 @@ on your computer, so the game reads no JSON at runtime.
 - [Rules](#rules)
 - [Maps](#maps)
 - [Tilesets and tile data](#tilesets-and-tile-data)
+- [Sideways stairs](#sideways-stairs)
 - [Autotiles](#autotiles)
 - [Tile layers](#tile-layers)
 - [Map connections](#map-connections)
@@ -187,7 +188,7 @@ editor. Select several tiles to change them all at once.
 |---|---|
 | `block_down`, `block_left`, `block_right`, `block_up` | The directions the tile can't be passed in. All four means a wall |
 | `priority` | 0 is drawn under the player; 1-5 are drawn over them (roofs, treetops) |
-| `terrain_tag` | Water (surfable), DeepWater, StillWater, Waterfall, Grass, TallGrass, Ledge, Ice, Bridge, Sand... The list comes from `GameData::TerrainTag`, so tags you add to the engine appear after `make tiled-project` |
+| `terrain_tag` | Water (surfable), DeepWater, StillWater, Waterfall, Grass, TallGrass, Ledge, Ice, Bridge, Sand, [StairsLeft, StairsRight](#sideways-stairs)... The list comes from `GameData::TerrainTag`, so tags you add to the engine appear after `make tiled-project` |
 | `bush` | The bottom of characters standing on it is hidden |
 | `counter` | Characters can be talked to across it |
 | `extra_passage` | Any other RPG Maker passage bits (rarely used; kept from imports) |
@@ -198,6 +199,7 @@ property). It applies to all 48 of their tiles.
 **Map > Show Collision Overlay** draws a temporary layer over the map that
 marks:
 
+- sideways stairs (pink)
 - blocked tiles (red)
 - one-way tiles (orange)
 - water you can surf (blue)
@@ -228,6 +230,66 @@ make import-tiledata TILESET=src/tiled/tilesets/outside.tsj FILE=path/to/Tileset
 The dumps are `.json` or `.csv` (one row per tile, easy to edit in a
 spreadsheet). Tiles are matched by their position in the tileset. Every build
 also writes the complete RPG Maker `Tilesets.rxdata` to `build/Data`.
+
+## Sideways stairs
+
+Sideways stairs are flights of steps that run diagonally across the map at
+45°, walked with Left and Right only. Paint the stair tiles of a flight with
+one of two terrain tags:
+
+| Tag | The flight climbs when walking | Tiles of a 3-step flight |
+|---|---|---|
+| `StairsLeft` | left | (5,4), (4,3), (3,2): bottom right to top left |
+| `StairsRight` | right | (3,4), (4,3), (5,2): bottom left to top right |
+
+Each end of a flight needs a **landing**: a flat tile you can walk onto, beside
+the end tile and away from the flight. For the `StairsLeft` example above, the
+landings are (6,4) and (2,2).
+
+How characters move:
+
+- Walking onto the end tile of a flight from its landing is a normal
+  horizontal step.
+- Left or Right on the flight moves one tile across and one tile up or down,
+  as long as the flight continues. At the end tile, the step goes
+  horizontally onto the landing.
+- Up and Down do nothing on stairs: no step, no turn and no bump sound.
+  Flights can't be entered from above or below either.
+- Characters face left or right while on stairs. A character placed on a stair
+  tile (a transfer to a tile, the debug warp) is turned to face down the
+  flight.
+- Walking, running and cycling all work on stairs. Ice sliding, waterfalls and
+  other forced movement end on reaching a flight.
+- Strength boulders can't be pushed onto, along or off stairs.
+- Followers walk the leader's actual trail, so they follow diagonally along a
+  flight.
+- Talking to and touching events uses the tile diagonally ahead when the
+  player is on a flight.
+
+Events follow stairs too, so NPCs that wander or walk move routes go up and
+down flights like the player. To make an event move straight over stair tiles
+instead, use the `stairs_off` move route command. `stairs_on` turns stairs
+back on. Characters bigger than one tile always ignore stairs.
+
+```ruby
+move_route 0, route(stairs_off, move_left, move_left, stairs_on)
+```
+
+Both commands are stored as RPG Maker Script move commands (`stairs_off` /
+`stairs_on`), so the compiled maps are ordinary RPG Maker XP data.
+
+The validator checks every flight:
+
+| Problem | |
+|---|---|
+| A stair tile blocks walking left or right (`block_left`/`block_right`) | error |
+| A Spawn on a stair tile | error |
+| The start position (`system.json`) on a stair tile | error |
+| A Strength boulder event on a stair tile | error |
+| A stair tile with no tile of its flight diagonally next to it (it's walked like flat ground) | warning |
+| A flight end whose landing can't be walked onto (a flight ending at the map's edge isn't checked, since a connected map may continue it) | warning |
+
+Stair tiles show in pink in the [collision overlay](#tilesets-and-tile-data).
 
 ## Autotiles
 
@@ -349,7 +411,8 @@ example:
 - **Variables**: `control_switches`, `control_variables`,
   `control_self_switch`
 - **Map and characters**: `transfer_player`, `transfer`, `event_location`,
-  `move_route` (with `move_down`, `turn_up`, `route_wait`, `through_on`...),
+  `move_route` (with `move_down`, `turn_up`, `route_wait`, `through_on`,
+  `stairs_off`, `stairs_on`...),
   `wait_completion`, `change_transparent_flag`
 - **Screen**: `wait`, `change_tone`, `screen_flash`, `screen_shake`,
   `show_picture`, `move_picture`, `erase_picture`, `weather_effect`,
@@ -530,6 +593,8 @@ See [Android](#android) for the low-end settings.
   spawns that don't exist). It also checks:
   - tilesets, autotiles, graphics, and duplicate event ids;
   - metadata, encounter slots, connections and atmospheres;
+  - [sideways stairs](#sideways-stairs): flights, landings, and spawns,
+    boulders or the start position on stairs;
   - tilesets with no tile data at all.
 - **Every build** runs the same checks. Errors stop the build and nothing is
   written. Warnings don't, unless you build with `STRICT=1`.
