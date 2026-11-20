@@ -54,9 +54,8 @@ class Spriteset_Map
     $scene.map_renderer.add_tileset(@map.tileset_name)
     @map.autotile_names.each { |filename| $scene.map_renderer.add_autotile(filename) }
     $scene.map_renderer.add_extra_autotiles(@map.tileset_id)
-    @panorama = AnimatedPlane.new(@@viewport0)
-    @fog = AnimatedPlane.new(@@viewport1)
-    @fog.z = 3000
+    # Fogs and panoramas are drawn once for all maps by the atmosphere
+    # renderer in Spriteset_Global (012_Overworld/001_Overworld visuals).
     @character_sprites = []
     @map.events.keys.sort.each do |i|
       sprite = Sprite_Character.new(@@viewport1, @map.events[i])
@@ -72,11 +71,7 @@ class Spriteset_Map
       @map.autotile_names.each { |filename| $scene.map_renderer.remove_autotile(filename) }
       $scene.map_renderer.remove_extra_autotiles(@map.tileset_id)
     end
-    @panorama.dispose
-    @fog.dispose
     @character_sprites.each { |sprite| sprite.dispose }
-    @panorama = nil
-    @fog = nil
     @character_sprites.clear
   end
 
@@ -89,37 +84,10 @@ class Spriteset_Map
   end
 
   def update
-    if @panorama_name != @map.panorama_name || @panorama_hue != @map.panorama_hue
-      @panorama_name = @map.panorama_name
-      @panorama_hue  = @map.panorama_hue
-      @panorama.set_panorama(nil) if !@panorama.bitmap.nil?
-      @panorama.set_panorama(@panorama_name, @panorama_hue) if !nil_or_empty?(@panorama_name)
-      Graphics.frame_reset
-    end
-    if @fog_name != @map.fog_name || @fog_hue != @map.fog_hue
-      @fog_name = @map.fog_name
-      @fog_hue = @map.fog_hue
-      @fog.set_fog(nil) if !@fog.bitmap.nil?
-      @fog.set_fog(@fog_name, @fog_hue) if !nil_or_empty?(@fog_name)
-      Graphics.frame_reset
-    end
-    tmox = (@map.display_x / Game_Map::X_SUBPIXELS).round
-    tmoy = (@map.display_y / Game_Map::Y_SUBPIXELS).round
     @@viewport1.rect.set(0, 0, Graphics.width, Graphics.height)
     @@viewport1.ox = 0
     @@viewport1.oy = 0
     @@viewport1.ox += $game_screen.shake
-    @panorama.ox = tmox / 2
-    @panorama.oy = tmoy / 2
-    @fog.ox         = tmox + @map.fog_ox
-    @fog.oy         = tmoy + @map.fog_oy
-    @fog.zoom_x     = @map.fog_zoom / 100.0
-    @fog.zoom_y     = @map.fog_zoom / 100.0
-    @fog.opacity    = @map.fog_opacity
-    @fog.blend_type = @map.fog_blend_type
-    @fog.tone       = @map.fog_tone
-    @panorama.update
-    @fog.update
     @character_sprites.each do |sprite|
       sprite.update
     end

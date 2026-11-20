@@ -72,6 +72,18 @@ module Settings
   TIME_SHADING               = true
   # Whether the reflections of the player/events will ripple horizontally.
   ANIMATE_REFLECTIONS        = true
+  # Atmospheres (fogs, panoramas and other map backdrops/overlays; see
+  # docs/TILED.md). Low quality turns off atmosphere animation frames and
+  # cross-fades between atmosphere groups. It can be turned on everywhere, or
+  # only on Android devices.
+  ATMOSPHERE_LOW_QUALITY            = false
+  ATMOSPHERE_LOW_QUALITY_ON_ANDROID = false
+  # Atmosphere graphics larger than this (in pixels, either side) aren't drawn,
+  # because many Android GPUs can't load bigger textures.
+  ATMOSPHERE_MAX_TEXTURE_SIZE       = 4096
+  # Default number of frames (at 20 per second) for a cross-fade between two
+  # atmosphere groups, when the group doesn't set its own.
+  ATMOSPHERE_FADE_FRAMES            = 20
   # Whether planted berries grow according to Gen 4 mechanics (true) or Gen 3
   # mechanics (false).
   NEW_BERRY_PLANTS           = (MECHANICS_GENERATION >= 4)
