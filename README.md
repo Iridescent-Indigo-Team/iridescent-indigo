@@ -6,3 +6,6 @@ See [docs/TILED.md](docs/TILED.md) to make maps, events and atmospheres in
 Tiled (no RPG Maker XP needed).
 
 See [docs/LOCALIZATION.md](docs/LOCALIZATION.md) to translate the game.
+
+See [docs/FOLLOWING_POKEMON.md](docs/FOLLOWING_POKEMON.md) for the Pokémon that
+follows the player.

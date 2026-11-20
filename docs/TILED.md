@@ -147,7 +147,7 @@ Maps have the class `Map`, so the Properties panel shows these fields:
 
 | Property | What |
 |---|---|
-| `metadata` | The map's `map_metadata.txt` entry. Every field the engine supports is listed: name, outdoor, show area, bicycle, weather, town map position, battle backgrounds and music, flags... Only the fields you change are written. Fields that are themselves groups (town map position, healing spot, weather, town map size) need all their numbers set |
+| `metadata` | The map's `map_metadata.txt` entry. Every field the engine supports is listed: name, outdoor, show area, bicycle, weather, town map position, battle backgrounds and music, flags... Only the fields you change are written. Fields that are themselves groups (town map position, healing spot, weather, town map size) need all their numbers set. The flags `NoFollowingPokemon` and `ShowFollowingPokemon` control the [following Pokémon](FOLLOWING_POKEMON.md) |
 | `encounters` | Wild encounters, one entry per encounter type. `slots` lists the Pokémon as `60 TENTACOOL 14-19; 30 MANTYKE 15-16`: the chance, the species, then a level or a range of levels. `step_chance` is the chance per step; -1 uses the type's default. Add `encounters_v1`, `encounters_v2`... properties (type `Encounters`) for encounter versions |
 | `bgm`, `autoplay_bgm`, `bgs`, `autoplay_bgs` | The map's music and background sound |
 | `atmosphere` | The [atmosphere group](#atmospheres) the map uses |
@@ -413,7 +413,9 @@ example:
 - **Map and characters**: `transfer_player`, `transfer`, `event_location`,
   `move_route` (with `move_down`, `turn_up`, `route_wait`, `through_on`,
   `stairs_off`, `stairs_on`...),
-  `wait_completion`, `change_transparent_flag`
+  `wait_completion`, `change_transparent_flag`. Characters are `player`,
+  `this`, `character(id)`, and `pokemon_follower` for the
+  [following Pokémon](FOLLOWING_POKEMON.md)
 - **Screen**: `wait`, `change_tone`, `screen_flash`, `screen_shake`,
   `show_picture`, `move_picture`, `erase_picture`, `weather_effect`,
   `atmosphere`

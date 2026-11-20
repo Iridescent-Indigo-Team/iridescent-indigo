@@ -71,16 +71,25 @@ class Game_Temp
 end
 
 #===============================================================================
-#
+# Holds the follower objects (Game_Follower) for the current play session and
+# moves them along behind the player. Followers form a chain: the player leads
+# the first follower, which leads the second, and so on. The following Pokémon
+# (Game_FollowingPokemon), if there is one and it is out of its Poké Ball, is
+# always the last link of the chain. It isn't stored in
+# $PokemonGlobal.followers, so it never counts as "someone with you" for Surf,
+# Fly and so on.
 #===============================================================================
 class Game_FollowerFactory
   attr_reader :last_update
+  # @return [Game_FollowingPokemon, nil] the following Pokémon's event
+  attr_reader :pokemon_event
 
   def initialize
     @events = []
     $PokemonGlobal.followers.each do |follower|
       @events.push(create_follower_object(follower))
     end
+    @pokemon_event = nil
     @last_update = -1
   end
 
@@ -136,26 +145,55 @@ class Game_FollowerFactory
     @last_update += 1
   end
 
+  # Sets (or, with nil, removes) the following Pokémon's event. Its sprite is
+  # created or disposed on the next update.
+  # @param event [Game_FollowingPokemon, nil]
+  def pokemon_event=(event)
+    return if @pokemon_event == event
+    @pokemon_event = event
+    @last_update += 1
+  end
+
+  # @return [Boolean] whether the following Pokémon is out and walking in the
+  #   chain (not in its Poké Ball)
+  def pokemon_in_chain?
+    return !@pokemon_event.nil? && $PokemonGlobal.pokemon_follower&.out?
+  end
+
   def get_follower_by_index(index = 0)
     @events.each_with_index { |event, i| return event if i == index }
     return nil
   end
 
+  # @param name [String, Symbol] a follower's name, or :pokemon for the
+  #   following Pokémon
+  # @return [Game_Follower, nil]
   def get_follower_by_name(name)
+    return @pokemon_event if name == :pokemon
     each_follower { |event, follower| return event if follower&.name == name }
     return nil
   end
 
+  # Yields each follower in the chain, front to back, with its saved data. The
+  # following Pokémon is included only while it is out of its Poké Ball.
   def each_follower
-    $PokemonGlobal.followers.each_with_index { |follower, i| yield @events[i], follower }
+    chain.each { |event, follower| yield event, follower }
+  end
+
+  # Every follower event that needs a sprite, including the following Pokémon
+  # while it is in its Poké Ball (so its ball animations can play).
+  # @return [Array<Game_Follower>]
+  def all_events
+    ret = @events.compact
+    ret.push(@pokemon_event) if @pokemon_event
+    return ret
   end
 
   #-----------------------------------------------------------------------------
 
   def turn_followers
     leader = $game_player
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
+    each_follower do |event, follower|
       event.turn_towards_leader(leader)
       follower.direction = event.direction
       leader = event
@@ -164,29 +202,38 @@ class Game_FollowerFactory
 
   def move_followers
     leader = $game_player
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
-      event.follow_leader(leader, false, (i == 0))
-      follower.x              = event.x
-      follower.y              = event.y
-      follower.current_map_id = event.map.map_id
-      follower.direction      = event.direction
+    each_follower do |event, follower|
+      event.follow_leader(leader, false, (leader == $game_player))
+      record_position(event, follower)
       leader = event
     end
   end
 
+  # Places followers after the player is transferred to another map. Each one
+  # is put on the free tile behind the character in front of it, facing the
+  # same way, so they appear in line rather than popping out of the player.
+  # Where there's no room, it is put on the player's tile and stays invisible
+  # until the player starts moving.
   def map_transfer_followers
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
+    FollowingPokemon.on_map_transfer
+    leader = $game_player
+    used_tiles = [[$game_player.x, $game_player.y]]
+    each_follower do |event, follower|
       event.map = $game_map
       event.moveto($game_player.x, $game_player.y)
       event.direction = $game_player.direction
       event.opacity   = 255
-      follower.x                        = event.x
-      follower.y                        = event.y
-      follower.current_map_id           = event.map.map_id
-      follower.direction                = event.direction
-      follower.invisible_after_transfer = true
+      spot = event.spot_beside(leader, 10 - $game_player.direction, used_tiles)
+      if spot
+        event.moveto(spot[0], spot[1])
+        event.direction = $game_player.direction
+        used_tiles.push(spot)
+        follower.invisible_after_transfer = false
+        leader = event
+      else
+        follower.invisible_after_transfer = true
+      end
+      record_position(event, follower)
     end
   end
 
@@ -196,14 +243,13 @@ class Game_FollowerFactory
     # any move routes
     follower_pos = []
     follower_pos.push([$game_player.map.map_id, $game_player.x, $game_player.y])
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
+    each_follower do |event, follower|
       follower_pos.push([event.map.map_id, event.x, event.y])
     end
     # Calculate and set move route from each follower to player
     move_route = []
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
+    chain.each_with_index do |pair, i|
+      event = pair[0]
       leader = follower_pos[i]
       vector = $map_factory.getRelativePos(event.map.map_id, event.x, event.y,
                                            leader[0], leader[1], leader[2])
@@ -218,22 +264,17 @@ class Game_FollowerFactory
 
   # Used when coming out of a door.
   def hide_followers
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
-      event.opacity = 0
-    end
+    each_follower { |event, follower| event.opacity = 0 }
   end
 
   # Used when coming out of a door. Makes all followers invisible until the
   # player starts moving.
   def put_followers_on_player
-    $PokemonGlobal.followers.each_with_index do |follower, i|
-      event = @events[i]
+    each_follower do |event, follower|
       event.moveto($game_player.x, $game_player.y)
       event.opacity = 255
-      follower.x                        = event.x
-      follower.y                        = event.y
       follower.invisible_after_transfer = true
+      record_position(event, follower)
     end
   end
 
@@ -241,36 +282,43 @@ class Game_FollowerFactory
 
   def update
     return if $game_temp.in_menu
-    followers = $PokemonGlobal.followers
-    return if followers.length == 0
-    # Update all followers
-    leader = $game_player
-    player_moving = $game_player.moving? || $game_player.jumping?
-    followers.each_with_index do |follower, i|
-      event = @events[i]
-      next if !@events[i]
-      if follower.invisible_after_transfer && player_moving
-        follower.invisible_after_transfer = false
-        event.turn_towards_leader($game_player)
+    # The following Pokémon decides whether it should be out, and plays its
+    # ball animations, even when there are no other followers
+    FollowingPokemon.update
+    members = chain
+    if !members.empty?
+      # Update all followers
+      leader = $game_player
+      player_moving = $game_player.moving? || $game_player.jumping?
+      members.each do |event, follower|
+        if follower.invisible_after_transfer && player_moving
+          follower.invisible_after_transfer = false
+          event.turn_towards_leader($game_player)
+        end
+        event.move_speed  = leader.move_speed
+        event.transparent = !follower.visible?
+        if $PokemonGlobal.ice_sliding
+          event.straighten
+          event.walk_anime = false
+        else
+          event.walk_anime = true
+        end
+        if event.jumping? || event.moving? || !player_moving
+          event.update
+        elsif !event.starting
+          event.set_starting
+          event.update
+          event.clear_starting
+        end
+        # Never stand in anyone's way
+        record_position(event, follower) if !player_moving && event.resolve_overlap
+        follower.direction = event.direction
+        leader = event
       end
-      event.move_speed  = leader.move_speed
-      event.transparent = !follower.visible?
-      if $PokemonGlobal.ice_sliding
-        event.straighten
-        event.walk_anime = false
-      else
-        event.walk_anime = true
-      end
-      if event.jumping? || event.moving? || !player_moving
-        event.update
-      elsif !event.starting
-        event.set_starting
-        event.update
-        event.clear_starting
-      end
-      follower.direction = event.direction
-      leader = event
     end
+    # The following Pokémon still animates (e.g. its Poké Ball) while it isn't
+    # in the chain
+    @pokemon_event.update if @pokemon_event && !pokemon_in_chain?
     # Check event triggers
     if Input.trigger?(Input::USE) && !$game_temp.in_menu && !$game_temp.in_battle &&
        !$game_player.move_route_forcing && !$game_temp.message_window_showing &&
@@ -284,8 +332,9 @@ class Game_FollowerFactory
       each_follower do |event, follower|
         next if !facing_tile || event.map.map_id != facing_tile[0] ||
                 !event.at_coordinate?(facing_tile[1], facing_tile[2])   # Not on facing tile
-        next if event.jumping?
+        next if event.jumping? || !follower.visible?
         follower.interact(event)
+        break
       end
     end
   end
@@ -296,6 +345,28 @@ class Game_FollowerFactory
 
   def create_follower_object(event_data)
     return Game_Follower.new(event_data)
+  end
+
+  # The followers in the chain, front to back: human followers, then the
+  # following Pokémon if it is out.
+  # @return [Array<Array(Game_Follower, FollowerData)>]
+  def chain
+    ret = []
+    $PokemonGlobal.followers.each_with_index do |follower, i|
+      ret.push([@events[i], follower]) if @events[i]
+    end
+    ret.push([@pokemon_event, $PokemonGlobal.pokemon_follower]) if pokemon_in_chain?
+    return ret
+  end
+
+  # Saves a follower's position into its data (for saving the game).
+  # @param event [Game_Follower]
+  # @param follower [FollowerData]
+  def record_position(event, follower)
+    follower.x              = event.x
+    follower.y              = event.y
+    follower.current_map_id = event.map.map_id
+    follower.direction      = event.direction
   end
 end
 
@@ -324,7 +395,7 @@ class FollowerSprites
   def refresh
     @sprites.each { |sprite| sprite.dispose }
     @sprites.clear
-    $game_temp.followers.each_follower do |event, follower|
+    $game_temp.followers.all_events.each do |event|
       @sprites.push(Sprite_Character.new(@viewport, event))
     end
   end
@@ -372,7 +443,8 @@ module Followers
     pbDeregisterPartner rescue nil
   end
 
-  # @param name [String, nil] name of the follower to get, or nil for the first follower
+  # @param name [String, Symbol, nil] name of the follower to get, :pokemon for
+  #   the following Pokémon, or nil for the first follower
   # @return [Game_Follower, nil] follower object
   def get(name = nil)
     return $game_temp.followers.get_follower_by_name(name) if name

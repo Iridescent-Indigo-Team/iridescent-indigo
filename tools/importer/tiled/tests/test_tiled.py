@@ -549,6 +549,13 @@ class StairsTest(unittest.TestCase):
                               stderr=subprocess.STDOUT)
         self.assertEqual(proc.returncode, 0, proc.stdout.decode("utf-8", "replace"))
 
+    @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
+    def test_followers(self):
+        """Followers walk the leader's step history; following Pokémon rules."""
+        proc = subprocess.run(["ruby", os.path.join(HERE, "following_pokemon_test.rb")], stdout=subprocess.PIPE,
+                              stderr=subprocess.STDOUT)
+        self.assertEqual(proc.returncode, 0, proc.stdout.decode("utf-8", "replace"))
+
 
 @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
 class BuildTest(unittest.TestCase):
