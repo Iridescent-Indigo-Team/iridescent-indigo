@@ -51,6 +51,7 @@ Git LFS is not needed: all assets come with a normal `git clone`.
 - Ruby (any 3.x) for `tools/scripts/halve_data.rb`
 - `unzip` (only to install assets from a `.zip`) and `zip` (only for `make android`)
 - `xvfb-run` (only for `make compile` on a machine without a display)
+- [Tiled](https://www.mapeditor.org) 1.10+ to edit maps (see [TILED.md](TILED.md))
 
 **Building mkxp-z for Linux (`make mkxp`)**
 
@@ -80,7 +81,8 @@ See `lib/mkxp-z/android/README.md`.
 | `src/assets/audio/` | `build/Audio/` | copied |
 | `src/assets/fonts/` | `build/Fonts/` | copied |
 | `src/pbs/` (JSON) | `build/PBS/` | validated and exported as PBS files (see [PBS_JSON.md](PBS_JSON.md)); until `src/pbs/` exists, `src/assets/pbs/` is copied instead |
-| `src/assets/data/` | `build/Data/` | pixel values **halved** (`halve_data.rb`) |
+| `src/tiled/` (Tiled maps) | `build/Data/Map*.rxdata`, `MapInfos`, `Tilesets`, `CommonEvents`, `System`, `atmospheres.dat`; the map datasets of `build/PBS/` | compiled once `src/tiled/maps/registry.json` exists (see [TILED.md](TILED.md)) |
+| `src/assets/data/` | `build/Data/` | pixel values **halved** (`halve_data.rb`); files compiled from `src/tiled` are skipped |
 | `src/assets/plugins/` | `build/Plugins/` | copied |
 | `src/assets/locales/` (CSV) | `build/Data/messages_<lang>_*.dat`, `build/Graphics/Locales/` | translations validated and compiled (see [LOCALIZATION.md](LOCALIZATION.md)) |
 
@@ -102,6 +104,11 @@ mkxp-z normally reads `Data/Scripts.rxdata`. Instead, `mkxp.json` points its
 - restarts the scripts when F12 (reset) is pressed.
 
 To add a script, drop a file with the right number prefix into `src/data/`.
+
+### Editing maps
+
+Maps are made in Tiled: `make import-rxdata` imports RPG Maker XP's maps once,
+then `./tiled.sh` opens the project. See [TILED.md](TILED.md).
 
 ### Editing PBS files with the debug editors
 

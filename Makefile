@@ -13,6 +13,11 @@
 #                                             src/assets/pbs is copied
 #                                             instead until src/pbs exists)
 #   src/assets/data      -> build/Data/      (pixel values halved)
+#   src/tiled/ (Tiled)   -> build/Data/Map*.rxdata, MapInfos, Tilesets,
+#                           CommonEvents, System, atmospheres.dat and the
+#                           map datasets of build/PBS (compiled by
+#                           tools/importer/tiled once src/tiled has a map
+#                           registry; see docs/TILED.md)
 #   src/assets/plugins   -> build/Plugins/
 #   src/assets/locales   -> build/Data/messages_<lang>_*.dat and
 #                           build/Graphics/Locales/<lang>/ (translations,
@@ -43,17 +48,26 @@ LOCALES   := $(PYTHON) -I tools/importer/locales/locales.py
 LANGS     ?=
 STRICT    ?= 0
 LOCALE_ARGS = $(if $(LANGS),--lang $(LANGS))
+# Tiled: src/tiled is in use once it has a map registry.
+TILED     := $(PYTHON) -I tools/importer/tiled/tiled_compiler.py --ruby $(RUBY)
+TILED_SRC := $(SRC)/tiled
+TILED_ON  := $(wildcard $(TILED_SRC)/maps/registry.json)
+TILED_PBS := $(BUILD)/.tiled/pbs
+# Datasets the Tiled maps own (left alone by pull-pbs).
+TILED_DATASETS := map_metadata,encounters,map_connections
 
 .PHONY: all build scripts graphics audio fonts pbs data plugins config \
         run debug release live compile pull-pbs import-pbs validate-pbs \
         pbs-schema test-pbs ground-battlers test-ground-battlers locales update-locales validate-locales test-locales \
+        tiled validate-tiled import-rxdata tiled-assets tiled-project tiled-text \
+        export-events import-events export-tiledata import-tiledata test-tiled \
         mkxp desktop android apk \
         install-assets uninstall-assets clean clean-data distclean help
 
 all: build
 
 ## build: build the whole game folder in build/ (default)
-build: scripts graphics audio fonts pbs data plugins config locales
+build: scripts graphics audio fonts tiled pbs data plugins config locales
 	@echo "Built $(BUILD)/. Run ./game.sh to play."
 
 ## scripts: copy src/data to build/Scripts
@@ -63,7 +77,7 @@ scripts:
 ## graphics: halve src/assets/graphics into build/Graphics (incremental)
 graphics:
 	@$(PYTHON) -I $(SCRIPTS)/resize_graphics.py $(ASSETS)/graphics $(BUILD)/Graphics \
-		--jobs $(JOBS) --report $(BUILD)/resize_report.txt
+		--jobs $(JOBS) --report $(BUILD)/resize_report.txt --keep Tilesets/Tiled
 
 ## audio: copy src/assets/audio to build/Audio
 audio:
@@ -79,8 +93,10 @@ fonts:
 # overwrites a PBS file changed since the last export (pull it first, or use
 # FORCE=1). Until src/pbs exists, src/assets/pbs is copied as before.
 ## pbs: export the JSON in src/pbs to build/PBS (validates it first)
-pbs:
-	@if [ -d $(PBS_SRC) ]; then \
+pbs: $(if $(TILED_ON),tiled)
+	@if [ -n "$(TILED_ON)" ]; then \
+		$(PBS_JSON) --src $(TILED_PBS) export $(BUILD)/PBS $(if $(filter 1,$(FORCE)),--force); \
+	elif [ -d $(PBS_SRC) ]; then \
 		$(PBS_JSON) --src $(PBS_SRC) export $(BUILD)/PBS $(if $(filter 1,$(FORCE)),--force); \
 	else \
 		$(SYNC) --update $(ASSETS)/pbs $(BUILD)/PBS; \
@@ -92,11 +108,11 @@ import-pbs:
 
 ## pull-pbs: import PBS files changed by the debug editors (build/PBS) into src/pbs
 pull-pbs:
-	@$(PBS_JSON) --src $(PBS_SRC) import $(BUILD)/PBS
+	@$(PBS_JSON) --src $(PBS_SRC) import $(BUILD)/PBS $(if $(TILED_ON),--skip $(TILED_DATASETS))
 
 ## validate-pbs: check the JSON in src/pbs
 validate-pbs:
-	@$(PBS_JSON) --src $(PBS_SRC) validate
+	@$(PBS_JSON) --src $(if $(TILED_ON),$(TILED_PBS),$(PBS_SRC)) validate
 
 ## pbs-schema: dump the PBS schemas from the engine into tools/importer/pbs
 pbs-schema: scripts plugins config
@@ -127,11 +143,11 @@ locales: data
 	@$(LOCALES) $(LOCALE_ARGS) build $(BUILD) $(if $(filter 1,$(STRICT)),--strict)
 
 ## update-locales: write the current English text into every language's CSVs
-update-locales:
+update-locales: $(if $(TILED_ON),tiled)
 	@$(LOCALES) $(LOCALE_ARGS) update
 
 ## validate-locales: check the translations (VERBOSE=1 lists every warning)
-validate-locales:
+validate-locales: $(if $(TILED_ON),tiled)
 	@$(LOCALES) $(LOCALE_ARGS) validate $(if $(filter 1,$(STRICT)),--strict) $(if $(filter 1,$(VERBOSE)),--verbose)
 
 ## test-locales: run the localization tools' tests
@@ -141,7 +157,62 @@ test-locales:
 ## data: copy src/assets/data to build/Data, halving pixel values
 data:
 	@mkdir -p $(BUILD)/Data
-	@$(RUBY) $(SCRIPTS)/halve_data.rb $(ASSETS)/data $(BUILD)/Data
+	@$(RUBY) $(SCRIPTS)/halve_data.rb $(ASSETS)/data $(BUILD)/Data \
+		$(if $(TILED_ON),--skip-list $(BUILD)/.tiled/owned.txt)
+
+# Tiled (see docs/TILED.md). Once src/tiled/maps/registry.json exists, maps,
+# tilesets, events, common events, system data, map metadata, encounters,
+# connections and atmospheres are compiled from src/tiled on every build.
+# STRICT=1 makes warnings fail too; FORCE=1 rebuilds everything.
+## tiled: compile src/tiled into build/ (does nothing until a map registry exists)
+tiled:
+	@if [ -n "$(TILED_ON)" ]; then \
+		$(TILED) build --build $(BUILD) $(if $(filter 1,$(FORCE)),--force) $(if $(filter 1,$(STRICT)),--strict); \
+	fi
+
+## validate-tiled: check src/tiled (maps, tilesets, events, scripts) without building
+validate-tiled:
+	@$(TILED) validate $(if $(filter 1,$(STRICT)),--strict)
+
+## import-rxdata: import RPG Maker XP data (src/assets/data, or DATA=dir) into src/tiled
+import-rxdata:
+	@$(TILED) import $(or $(DATA),$(ASSETS)/data) $(if $(filter 1,$(FORCE)),--force)
+	@$(TILED) autotiles
+	@-$(TILED) previews
+
+## tiled-assets: regenerate autotile tilesets, event previews and the Tiled project types
+tiled-assets:
+	@$(TILED) autotiles $(if $(filter 1,$(ALL)),--all)
+	@-$(TILED) previews
+	@$(TILED) project
+
+## tiled-project: regenerate the custom types in src/tiled/pokessentials.tiled-project
+tiled-project:
+	@$(TILED) project
+
+## tiled-text: write every message of the compiled maps to build/tiled_text.csv
+tiled-text: tiled
+	@$(TILED) text --build $(BUILD)
+
+## export-events: write MAP's events as standalone .rb files into OUT (MAP=id/name OUT=dir)
+export-events:
+	@$(TILED) export-events "$(MAP)" "$(or $(OUT),build/events)"
+
+## import-events: add standalone event .rb files (FILES=...) to MAP
+import-events:
+	@$(TILED) import-events "$(MAP)" $(FILES)
+
+## export-tiledata: write TILESET's tile data to OUT (.json or .csv)
+export-tiledata:
+	@$(TILED) export-tiledata "$(TILESET)" "$(OUT)"
+
+## import-tiledata: read tile data into TILESET from FILE (.json/.csv, or Tilesets.rxdata with ID=n)
+import-tiledata:
+	@$(TILED) import-tiledata "$(TILESET)" "$(FILE)" $(if $(ID),--tileset-id $(ID))
+
+## test-tiled: run the Tiled tools' tests
+test-tiled:
+	@$(PYTHON) -I -m unittest discover -s tools/importer/tiled/tests -t tools/importer/tiled
 
 ## plugins: copy src/assets/plugins to build/Plugins
 plugins:

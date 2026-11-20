@@ -205,13 +205,17 @@ def collect(src_root, out_root, force):
             yield (src, dst, rel)
 
 
-def remove_stale(src_root, out_root):
-    """Delete outputs whose source file no longer exists."""
+def remove_stale(src_root, out_root, keep=()):
+    """Delete outputs whose source file no longer exists (except those under
+    a kept folder, such as the tilesets the Tiled compiler generates)."""
     removed = 0
+    keep = [os.path.normpath(k) + os.sep for k in keep]
     for dirpath, _, filenames in os.walk(out_root):
         for name in filenames:
             dst = os.path.join(dirpath, name)
             rel = os.path.relpath(dst, out_root)
+            if any(rel.startswith(k) for k in keep):
+                continue
             if not os.path.exists(os.path.join(src_root, rel)):
                 os.remove(dst)
                 removed += 1
@@ -249,6 +253,8 @@ def main():
     parser.add_argument("--jobs", type=int, default=os.cpu_count() or 1)
     parser.add_argument("--report", default=None)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--keep", action="append", default=[],
+                        help="output folder (relative) whose files are never removed")
     args = parser.parse_args()
 
     if not os.path.isdir(args.src):
@@ -256,7 +262,7 @@ def main():
         os.makedirs(args.out, exist_ok=True)
         return 0
     os.makedirs(args.out, exist_ok=True)
-    removed = remove_stale(args.src, args.out)
+    removed = remove_stale(args.src, args.out, args.keep)
     jobs = list(collect(args.src, args.out, args.force))
     results = []
     if jobs:

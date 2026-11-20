@@ -35,8 +35,12 @@ def cmd_import(config, args):
     if not os.path.isdir(args.pbs_dir):
         raise PbsError("%s is not a folder." % args.pbs_dir)
     all_data = read_pbs_dir(config, args.pbs_dir, _warn)
+    skip = set(filter(None, (args.skip or "").split(",")))
+    if skip:
+        # Datasets owned by another source (the Tiled maps) are left alone.
+        all_data = [d for d in all_data if d.name not in skip]
     changed = write_json_tree(args.src, all_data, _log)
-    remove_missing_datasets(args.src, config, all_data, _log)
+    remove_missing_datasets(args.src, config, all_data, _log, keep=skip)
     write_schemas(config, args.src)
     imported = []
     for data in all_data:
@@ -146,6 +150,8 @@ def main(argv=None):
 
     p = sub.add_parser("import", help="read a PBS folder into the JSON folder")
     p.add_argument("pbs_dir", help="folder of PBS .txt files (subfolders such as backups are ignored)")
+    p.add_argument("--skip", default="", help="comma-separated datasets to leave alone (e.g. the ones "
+                   "the Tiled maps own)")
     p.set_defaults(func=cmd_import)
 
     p = sub.add_parser("export", help="validate the JSON folder and write PBS files")

@@ -2,4 +2,7 @@
 
 See [docs/BUILDING.md](docs/BUILDING.md) to build and run the game.
 
+See [docs/TILED.md](docs/TILED.md) to make maps, events and atmospheres in
+Tiled (no RPG Maker XP needed).
+
 See [docs/LOCALIZATION.md](docs/LOCALIZATION.md) to translate the game.
