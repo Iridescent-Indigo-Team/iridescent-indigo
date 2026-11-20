@@ -146,6 +146,7 @@ EventHandlers.add(:on_step_taken, :pick_up_soot,
 EventHandlers.add(:on_step_taken, :grass_rustling,
   proc { |event|
     next if !$scene.is_a?(Scene_Map)
+    next if event.respond_to?(:rustles_grass?) && !event.rustles_grass?
     event.each_occupied_tile do |x, y|
       next if !$map_factory.getTerrainTagFromCoords(event.map.map_id, x, y, true).shows_grass_rustle
       spriteset = $scene.spriteset(event.map_id)

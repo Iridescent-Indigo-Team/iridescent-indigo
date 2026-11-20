@@ -59,7 +59,7 @@ still.
 | `:cycling` | The player is on a bicycle (if `HIDE_WHEN_CYCLING`) |
 | `:too_big_indoors` | The Pokémon is taller than `MAX_INDOOR_HEIGHT` metres and the map is indoors with no wild encounters. The map flag `ShowFollowingPokemon` allows it |
 | `:pokemon_center` | The nurse is healing the party (Recover All on a Pokémon Center map) |
-| `:player_hidden` | The player is invisible |
+| `:player_hidden` | The player is invisible outside of an event. Door events hide the player for a moment, so this doesn't count while an event is running, and the Pokémon walks through the door with the player |
 
 **Poké Ball animations.** Whenever the Pokémon goes into or comes out of its
 Poké Ball, its Poké Ball animation plays. This includes turning it on or off,
@@ -190,11 +190,13 @@ Big Pokémon are drawn further back so they don't cover the player, but they
 still stand on their own tile. Set a species' category in `SIZE_OVERRIDES` to
 override it. The offsets are in `SIZE_OFFSETS`.
 
-**Airborne Pokémon** are Flying types, Pokémon with Levitate, and Pokémon
-whose battle sprite floats. They:
+**Airborne Pokémon** are Flying types, Pokémon with Levitate, Pokémon
+whose battle sprite floats, and species with one of the flags in
+`AIRBORNE_FLAGS` (`Airborne`, `Floating` or `Levitating`). They:
 - loop their animation while idle
 - bob gently
-- aren't hidden by tall grass
+- aren't hidden by tall grass (bush or deep bush tiles)
+- don't rustle the grass they move over
 - don't kick up dust when they land
 - keep animating while sliding on ice
 
@@ -216,6 +218,11 @@ The game finds them by name. `make follower-animations`
 `src/assets/data/Animations.rxdata` if there is one:
 - It appends them after the existing animations, never overwriting any.
 - Running it again updates them in place.
+
+Emote bubbles use the "Top" position. For the following Pokémon, the game
+moves that position down to the top of the Pokémon itself (the first row of its
+sprite's frames with anything drawn in it), so the bubble sits on its head
+whatever the size of its frames.
 
 The pictures are `Graphics/Animations/Follower_ComeInOut.png`,
 `Follower_Emote1.png` and `Follower_Emote2.png`.

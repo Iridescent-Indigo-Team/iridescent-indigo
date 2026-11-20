@@ -97,6 +97,51 @@ class Sprite_Character
 end
 
 #===============================================================================
+# Emote bubbles (animations shown at the "Top" position) sit on the following
+# Pokémon's head rather than on the top of its sprite's frame, which for most
+# Pokémon has a lot of empty space above them.
+#===============================================================================
+class Sprite_Character
+  # Pixels of empty space at the top of the sprite's current frames, measured
+  # across every frame of the direction it faces (so a bubble doesn't bob as it
+  # walks). SpriteAnimation adds this to "Top" animations. Only the following
+  # Pokémon has any; other characters' animations are where they always were.
+  # @return [Integer]
+  def animation_top_inset
+    return 0 if !@character.is_a?(Game_FollowingPokemon) || @tile_id != 0
+    bmp = self.bitmap
+    return 0 if !bmp || bmp.disposed?
+    rect = self.src_rect
+    return 0 if rect.width <= 0 || rect.height <= 0
+    key = [bmp.object_id, rect.y, rect.height]
+    @animation_top_insets = {} if !@animation_top_insets || @animation_top_inset_bitmap != bmp
+    @animation_top_inset_bitmap = bmp
+    if !@animation_top_insets.has_key?(key)
+      @animation_top_insets[key] = first_opaque_row(bmp, rect.y, rect.height)
+    end
+    return (@animation_top_insets[key] * self.zoom_y).round
+  end
+
+  private
+
+  # @param bmp [Bitmap]
+  # @param top [Integer] y of the row of frames in bmp
+  # @param height [Integer] height of the frames
+  # @return [Integer] how many rows from top are fully transparent in every
+  #   frame of the row (0 if none are opaque at all)
+  def first_opaque_row(bmp, top, height)
+    height.times do |row|
+      y = top + row
+      break if y >= bmp.height
+      bmp.width.times do |x|
+        return row if bmp.get_pixel(x, y).alpha > 0
+      end
+    end
+    return 0
+  end
+end
+
+#===============================================================================
 # Keep the following Pokémon's preloaded sprites in RPG::Cache when it's
 # cleared on a map transfer.
 #===============================================================================

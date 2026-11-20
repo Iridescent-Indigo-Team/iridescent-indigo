@@ -42,6 +42,12 @@ module FollowingPokemon
   FLOAT_HEIGHT   = 2
   FLOAT_DURATION = 1.2
 
+  # Species flags (the "flags" field of a species in PBS) that also make a
+  # Pokémon airborne, for ones that float without being Flying type, having
+  # Levitate or having a floating battle sprite. Airborne Pokémon bob in the
+  # air, aren't hidden by tall grass and don't rustle it.
+  AIRBORNE_FLAGS = ["Airborne", "Floating", "Levitating"]
+
   # Whether the follower is tinted by its status problem.
   APPLY_STATUS_TONES = true
   # Tints for each status problem: [red, green, blue, grey] (Tone values).

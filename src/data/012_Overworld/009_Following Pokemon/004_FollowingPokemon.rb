@@ -85,13 +85,17 @@ module FollowingPokemon
     return path.sub(/\A.*?Graphics\/Characters\//i, "").sub(/\.(png|gif)\z/i, "")
   end
 
-  # Whether a Pokémon flies or floats: it's Flying type, has Levitate, or its
-  # battle sprite is drawn in the air.
+  # Whether a Pokémon flies, levitates or floats: it's Flying type, has
+  # Levitate, its species has one of AIRBORNE_FLAGS, or its battle sprite is
+  # drawn in the air. Airborne Pokémon bob in the air, and tall grass (bush and
+  # deep bush tiles) neither hides them nor rustles under them.
   # @param pkmn [Pokemon, nil]
   # @return [Boolean]
   def airborne?(pkmn)
     return false if !pkmn
     return true if pkmn.hasType?(:FLYING) || pkmn.hasAbility?(:LEVITATE)
+    species_data = GameData::Species.get_species_form(pkmn.species, pkmn.form)
+    return true if AIRBORNE_FLAGS.any? { |flag| species_data.has_flag?(flag) }
     metrics = GameData::SpeciesMetrics.get_species_form(pkmn.species, pkmn.form)
     return (metrics&.front_sprite_altitude || 0) > 0
   end
@@ -152,7 +156,9 @@ module FollowingPokemon
     ret.push(:diving) if $PokemonGlobal&.diving
     ret.push(:cycling) if HIDE_WHEN_CYCLING && $PokemonGlobal&.bicycle
     ret.push(:too_big_indoors) if too_big_indoors?(pkmn)
-    ret.push(:player_hidden) if $game_player&.transparent
+    # Door events hide the player for a moment while everyone walks through the
+    # door, so only an invisible player outside of events counts
+    ret.push(:player_hidden) if $game_player&.transparent && !pbMapInterpreterRunning?
     return ret.uniq
   end
 
@@ -229,6 +235,7 @@ module FollowingPokemon
     ev = event
     return if !ev
     ev.stop_ball_animation
+    ev.reset_appearance
     ev.map = $game_map
     data.out = false if data.out? && !hide_reasons.empty?
     if !data.out?
@@ -244,6 +251,7 @@ module FollowingPokemon
   def send_out(pkmn, anim = true)
     ev = event
     return if !ev || !pkmn
+    ev.reset_appearance
     ev.pokemon = pkmn
     data.personal_id = pkmn.personalID
     data.signature = signature(pkmn)

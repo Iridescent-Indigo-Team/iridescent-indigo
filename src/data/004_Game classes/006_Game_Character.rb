@@ -199,6 +199,18 @@ class Game_Character
     return @bush_depth || 0
   end
 
+  # How many pixels of the bottom of a character standing still in tall grass
+  # (a bush tile) are hidden: 12 of 32 in base Essentials, scaled to the tile
+  # size.
+  BUSH_DEPTH = Game_Map::TILE_HEIGHT * 3 / 8
+
+  # @return [Boolean] whether self plays the grass rustling animation when it
+  #   steps onto a grass tile (see the :grass_rustling step handler). Characters
+  #   that fly over the grass (e.g. an airborne following Pokémon) override this.
+  def rustles_grass?
+    return true
+  end
+
   def calculate_bush_depth
     if @tile_id > 0 || @always_on_top || jumping?
       @bush_depth = 0
@@ -215,7 +227,7 @@ class Game_Character
         @bush_depth = Game_Map::TILE_HEIGHT
       end
     elsif this_map && this_map[0].bush?(this_map[1], this_map[2]) && !moving?
-      @bush_depth = 12
+      @bush_depth = BUSH_DEPTH
     else
       @bush_depth = 0
     end
