@@ -113,7 +113,8 @@ class RibbonSelectionSprite < MoveSelectionSprite
   def update
     @updating = true
     super
-    self.visible = @spriteVisible && @index >= 0 && @index < PokemonSummary_Scene::RIBBONS_PER_PAGE
+    self.visible = @spriteVisible && @index >= 0 &&
+                   @index < PokemonSummary_Scene::RIBBON_COLUMNS * PokemonSummary_Scene::RIBBON_SELECT_ROWS
     @updating = false
     refresh
   end
@@ -125,7 +126,8 @@ end
 class PokemonSummary_Scene
   MARK_WIDTH  = 8
   MARK_HEIGHT = 8
-  # Layout of the ribbons page. Ribbon/mark icons come from
+  # Layout of the ribbons page, matching the slots drawn in
+  # Graphics/UI/Summary/bg_5. Ribbon/mark icons come from
   # Graphics/UI/Summary/ribbons, 8 per row; their size is worked out from that
   # graphic's width, and they are drawn centred in each slot.
   RIBBON_COLUMNS   = 3
@@ -134,14 +136,9 @@ class PokemonSummary_Scene
   RIBBON_SLOT_SIZE = 42
   RIBBON_GRID_X    = 119
   RIBBON_GRID_Y    = 35
-  # Whether the ribbon slots are drawn in code over the background. Set to
-  # false once bg_5 has slots drawn in it that match the layout above.
-  RIBBON_DRAW_SLOTS = true
-  # Area of bg_5 that is repainted when drawing the slots, and the points of
-  # bg_5 whose colours are used for the panel and the slots.
-  RIBBON_PANEL_RECT        = [109, 33, 147, 131]
-  RIBBON_PANEL_COLOR_POINT = [112, 40]
-  RIBBON_SLOT_COLOR_POINT  = [130, 54]
+  # How many rows are fully visible above the description box while choosing
+  # a ribbon. The cursor stays in these rows and the page scrolls instead.
+  RIBBON_SELECT_ROWS = 2
   # Colors used for messages in this scene
   RED_TEXT_BASE     = Color.new(248, 56, 32)
   RED_TEXT_SHADOW   = Color.new(224, 152, 144)
@@ -195,7 +192,7 @@ class PokemonSummary_Scene
     @sprites["uparrow"].visible = false
     @sprites["downarrow"] = AnimatedSprite.new("Graphics/UI/down_arrow", 8, 14, 20, 2, @viewport)
     @sprites["downarrow"].x = RIBBON_GRID_X + (RIBBON_COLUMNS * RIBBON_SLOT_SIZE / 2) - 7
-    @sprites["downarrow"].y = 148
+    @sprites["downarrow"].y = 120   # Just above the ribbon description box
     @sprites["downarrow"].play
     @sprites["downarrow"].visible = false
     @sprites["markingbg"] = IconSprite.new(130, 44, @viewport)
@@ -902,30 +899,10 @@ class PokemonSummary_Scene
     return @ribbon_icon_size
   end
 
-  # Repaints the ribbon panel of bg_5 and draws empty slots in it, using
-  # colours taken from bg_5 (see RIBBON_DRAW_SLOTS).
-  # @param overlay [Bitmap]
-  def drawRibbonSlots(overlay)
-    bg = @sprites["background"].bitmap
-    return if !bg
-    panel_color = bg.get_pixel(*RIBBON_PANEL_COLOR_POINT)
-    slot_color  = bg.get_pixel(*RIBBON_SLOT_COLOR_POINT)
-    overlay.fill_rect(*RIBBON_PANEL_RECT, panel_color)
-    size = RIBBON_SLOT_SIZE - 2
-    RIBBONS_PER_PAGE.times do |i|
-      x, y = PokemonSummary_Scene.ribbon_slot_position(i)
-      # A square with its corners cut off
-      overlay.fill_rect(x + 3, y + 1, size - 4, size, slot_color)
-      overlay.fill_rect(x + 1, y + 3, size, size - 4, slot_color)
-      overlay.fill_rect(x + 2, y + 2, size - 2, size - 2, slot_color)
-    end
-  end
-
   def drawPageFive
     overlay = @sprites["overlay"].bitmap
     @sprites["uparrow"].visible   = false
     @sprites["downarrow"].visible = false
-    drawRibbonSlots(overlay) if RIBBON_DRAW_SLOTS
     # Write various bits of text
     textpos = [
       [_INTL("Ribbons/Marks:"), 117, 169, :left, Color.new(64, 64, 64), Color.new(176, 176, 176)],
@@ -1093,7 +1070,7 @@ class PokemonSummary_Scene
   # title, and move them around.
   def pbRibbonSelection
     cols = RIBBON_COLUMNS
-    rows = RIBBON_ROWS
+    rows = RIBBON_SELECT_ROWS   # The rows not hidden by the description box
     @sprites["ribbonsel"].visible = true
     @sprites["ribbonsel"].index   = 0
     selribbon    = @ribbonOffset * cols
