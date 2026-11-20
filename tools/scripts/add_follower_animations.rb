@@ -124,13 +124,15 @@ module FollowerAnimations
   # An emote bubble that pops up above the Pokémon's head, bounces, alternates
   # between its two cells, then fades out.
   #
-  # The bubble's tail is at the centre of its cell, and the bubble is drawn
-  # BUBBLE_X pixels left of centre. The animation is at the "Top" position,
-  # which the game puts on the top of the Pokémon itself (not of its sprite's
-  # frame, see Sprite_Character#animation_top_inset), so a cell at
-  # (BUBBLE_X, REST_Y) rests the bubble's tail just above its head.
+  # The bubble is drawn 6px left of its cell's centre, with its tail tip 1px
+  # above it. The animation is at the "Top" position, which the game puts on
+  # the top of the Pokémon itself (not of its sprite's frame), so a cell at
+  # (BUBBLE_X, REST_Y) centres the bubble with its tail just above the head.
+  # These match FollowingPokemon::EMOTE_OFFSET (at half scale), and the game
+  # moves the resting cell there anyway (see Sprite_Character#animation_offset),
+  # so only the pop-up motion relative to REST_Y matters.
   BUBBLE_X = 6
-  REST_Y   = -4
+  REST_Y   = -2
 
   def emote(name, sheet, cell_a, cell_b)
     frames = []
