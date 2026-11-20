@@ -1,0 +1,24 @@
+{
+ "object": {
+  "height": 32,
+  "name": "PC",
+  "properties": [
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {}
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/pc.rb"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}

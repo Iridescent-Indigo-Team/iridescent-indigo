@@ -1,0 +1,24 @@
+{
+ "object": {
+  "height": 32,
+  "name": "BerryPlant",
+  "properties": [
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {}
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/berry_plant.rb"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}

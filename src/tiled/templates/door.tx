@@ -1,0 +1,37 @@
+{
+ "object": {
+  "height": 32,
+  "name": "Door",
+  "properties": [
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {
+     "graphic": "doors5",
+     "trigger": "player_touch"
+    }
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/door.rb"
+   },
+   {
+    "name": "spawn",
+    "type": "string",
+    "value": "door"
+   },
+   {
+    "name": "to",
+    "type": "string",
+    "value": "Map name"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}

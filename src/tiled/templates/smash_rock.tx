@@ -1,0 +1,26 @@
+{
+ "object": {
+  "height": 32,
+  "name": "SmashRock",
+  "properties": [
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {
+     "graphic": "Object rock"
+    }
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/smash_rock.rb"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}

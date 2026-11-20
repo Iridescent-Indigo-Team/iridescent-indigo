@@ -1,0 +1,52 @@
+{
+ "object": {
+  "height": 32,
+  "name": "Trainer(3)",
+  "properties": [
+   {
+    "name": "after",
+    "type": "string",
+    "value": "I need to train more."
+   },
+   {
+    "name": "defeated",
+    "type": "string",
+    "value": "You're too strong!"
+   },
+   {
+    "name": "intro",
+    "type": "string",
+    "value": "Hey! Let's battle!"
+   },
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {
+     "graphic": "trainer_YOUNGSTER",
+     "trigger": "event_touch"
+    }
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/trainer.rb"
+   },
+   {
+    "name": "trainer_name",
+    "type": "string",
+    "value": "Ben"
+   },
+   {
+    "name": "trainer_type",
+    "type": "string",
+    "value": "YOUNGSTER"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}

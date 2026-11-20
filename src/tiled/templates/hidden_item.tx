@@ -1,0 +1,45 @@
+{
+ "object": {
+  "height": 32,
+  "name": "HiddenItem",
+  "properties": [
+   {
+    "name": "item",
+    "type": "string",
+    "value": "RARECANDY"
+   },
+   {
+    "name": "page_0",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {
+     "through": true
+    }
+   },
+   {
+    "name": "page_1",
+    "type": "class",
+    "propertytype": "EventPage",
+    "value": {
+     "self_switch": "A",
+     "through": true
+    }
+   },
+   {
+    "name": "quantity",
+    "type": "int",
+    "value": 1
+   },
+   {
+    "name": "script",
+    "type": "file",
+    "value": "events/item_ball.rb"
+   }
+  ],
+  "rotation": 0,
+  "type": "Event",
+  "visible": true,
+  "width": 32
+ },
+ "type": "template"
+}
