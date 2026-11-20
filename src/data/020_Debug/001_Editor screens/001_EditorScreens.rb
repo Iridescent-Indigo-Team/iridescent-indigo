@@ -624,7 +624,9 @@ module TrainerPokemonProperty
                        initsetting[:iv],
                        initsetting[:ev],
                        initsetting[:happiness],
-                       initsetting[:poke_ball]])
+                       initsetting[:poke_ball],
+                       initsetting[:title],
+                       initsetting[:scale]])
     max_level = GameData::GrowthRate.max_level
     pkmn_properties = [
       [_INTL("Species"),       SpeciesProperty,                         _INTL("Species of the Pokémon.")],
@@ -648,7 +650,9 @@ module TrainerPokemonProperty
        [_INTL("IVs"),           IVsProperty.new(Pokemon::IV_STAT_LIMIT), _INTL("Individual values for each of the Pokémon's stats.")],
        [_INTL("EVs"),           EVsProperty.new(Pokemon::EV_STAT_LIMIT), _INTL("Effort values for each of the Pokémon's stats.")],
        [_INTL("Happiness"),     LimitProperty2.new(255),                 _INTL("Happiness of the Pokémon (0-255).")],
-       [_INTL("Poké Ball"),     BallProperty.new(oldsetting),            _INTL("The kind of Poké Ball the Pokémon is kept in.")]]
+       [_INTL("Poké Ball"),     BallProperty.new(oldsetting),            _INTL("The kind of Poké Ball the Pokémon is kept in.")],
+       [_INTL("Title"),         GameDataProperty.new(:Ribbon),           _INTL("Ribbon/mark given to the Pokémon whose title it shows.")],
+       [_INTL("Scale"),         LimitProperty2.new(255),                 _INTL("Size of the Pokémon (0-255, 0=smallest).")]]
     )
     pbPropertyList(settingname, oldsetting, pkmn_properties, false)
     return nil if !oldsetting[0]   # Species is nil
@@ -668,7 +672,9 @@ module TrainerPokemonProperty
       :iv              => oldsetting[12 + Pokemon::MAX_MOVES],
       :ev              => oldsetting[13 + Pokemon::MAX_MOVES],
       :happiness       => oldsetting[14 + Pokemon::MAX_MOVES],
-      :poke_ball       => oldsetting[15 + Pokemon::MAX_MOVES]
+      :poke_ball       => oldsetting[15 + Pokemon::MAX_MOVES],
+      :title           => oldsetting[16 + Pokemon::MAX_MOVES],
+      :scale           => oldsetting[17 + Pokemon::MAX_MOVES]
     }
     moves = []
     Pokemon::MAX_MOVES.times do |i|

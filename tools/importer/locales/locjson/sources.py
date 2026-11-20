@@ -136,6 +136,11 @@ def pbs_strings(pbs_dir=cfg.PBS_DIR):
             noun=e["id"], field="ribbons.name")
         add("ribbons.csv", "%s.description" % e["id"], e.get("real_description"), mt.RIBBON_DESCRIPTIONS,
             "Ribbon description", field="ribbons.description")
+        # Title conferred by the ribbon/mark (PrefixTitle wins over Title, as
+        # in the engine). Tokens such as /Owner/ must be kept as they are.
+        title = e.get("real_prefix_title") or e.get("real_title")
+        add("ribbons.csv", "%s.title" % e["id"], title, mt.RIBBON_TITLES, "Ribbon/mark title",
+            field="ribbons.title")
     for e in entries("trainer_types"):
         add("trainer_types.csv", "%s.name" % e["id"], e.get("real_name"), mt.TRAINER_TYPE_NAMES,
             "Trainer type", noun=e["id"], field="trainer_types.name")

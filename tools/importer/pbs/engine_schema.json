@@ -733,6 +733,26 @@
           "type": "q"
         },
         {
+          "key": "Title",
+          "property": "real_title",
+          "type": "s"
+        },
+        {
+          "key": "PrefixTitle",
+          "property": "real_prefix_title",
+          "type": "s"
+        },
+        {
+          "key": "PreviousRanks",
+          "property": "previous_ranks",
+          "type": "*m"
+        },
+        {
+          "key": "IsMark",
+          "property": "mark",
+          "type": "b"
+        },
+        {
           "key": "Flags",
           "property": "flags",
           "type": "*s"
@@ -1566,6 +1586,21 @@
               "gamedata": "Item"
             }
           ]
+        },
+        {
+          "key": "Title",
+          "property": "title",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Ribbon"
+            }
+          ]
+        },
+        {
+          "key": "Scale",
+          "property": "scale",
+          "type": "u"
         }
       ]
     },
@@ -1806,6 +1841,9 @@
     "Nature": {
       "source": "hardcoded",
       "values": ["HARDY", "LONELY", "BRAVE", "ADAMANT", "NAUGHTY", "BOLD", "DOCILE", "RELAXED", "IMPISH", "LAX", "TIMID", "HASTY", "SERIOUS", "JOLLY", "NAIVE", "MODEST", "MILD", "QUIET", "BASHFUL", "RASH", "CALM", "GENTLE", "SASSY", "CAREFUL", "QUIRKY"]
+    },
+    "Ribbon": {
+      "source": "pbs"
     },
     "Species": {
       "source": "pbs"

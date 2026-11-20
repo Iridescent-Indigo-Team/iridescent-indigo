@@ -700,6 +700,7 @@ def pbItemBall(item, quantity = 1)
     end
     pbMessage(_INTL("You put the {1} in\\nyour Bag's <icon=bagPocket{2}>\\c[1]{3}\\c[0] pocket.",
                     itemname, pocket, PokemonBag.pocket_names[pocket - 1]))
+    pbCheckItemfinderMark
     return true
   end
   # Can't add the item

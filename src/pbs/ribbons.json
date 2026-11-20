@@ -9,481 +9,1485 @@
           "id": "HOENNCOOL",
           "real_name": "Cool Ribbon",
           "icon_position": 0,
-          "real_description": "Hoenn Cool Contest Normal Rank winner!"
+          "real_description": "Hoenn Cool Contest Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCOOLSUPER",
           "real_name": "Cool Ribbon Super",
           "icon_position": 1,
-          "real_description": "Hoenn Cool Contest Super Rank winner!"
+          "real_description": "Hoenn Cool Contest Super Rank winner!",
+          "previous_ranks": ["HOENNCOOL"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCOOLHYPER",
           "real_name": "Cool Ribbon Hyper",
           "icon_position": 2,
-          "real_description": "Hoenn Cool Contest Hyper Rank winner!"
+          "real_description": "Hoenn Cool Contest Hyper Rank winner!",
+          "previous_ranks": ["HOENNCOOL", "HOENNCOOLSUPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCOOLMASTER",
           "real_name": "Cool Ribbon Master",
           "icon_position": 3,
-          "real_description": "Hoenn Cool Contest Master Rank winner!"
+          "real_description": "Hoenn Cool Contest Master Rank winner!",
+          "previous_ranks": ["HOENNCOOL", "HOENNCOOLSUPER", "HOENNCOOLHYPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNBEAUTY",
           "real_name": "Beauty Ribbon",
           "icon_position": 4,
-          "real_description": "Hoenn Beauty Contest Normal Rank winner!"
+          "real_description": "Hoenn Beauty Contest Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNBEAUTYSUPER",
           "real_name": "Beauty Ribbon Super",
           "icon_position": 5,
-          "real_description": "Hoenn Beauty Contest Super Rank winner!"
+          "real_description": "Hoenn Beauty Contest Super Rank winner!",
+          "previous_ranks": ["HOENNBEAUTY"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNBEAUTYHYPER",
           "real_name": "Beauty Ribbon Hyper",
           "icon_position": 6,
-          "real_description": "Hoenn Beauty Contest Hyper Rank winner!"
+          "real_description": "Hoenn Beauty Contest Hyper Rank winner!",
+          "previous_ranks": ["HOENNBEAUTY", "HOENNBEAUTYSUPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNBEAUTYMASTER",
           "real_name": "Beauty Ribbon Master",
           "icon_position": 7,
-          "real_description": "Hoenn Beauty Contest Master Rank winner!"
+          "real_description": "Hoenn Beauty Contest Master Rank winner!",
+          "previous_ranks": ["HOENNBEAUTY", "HOENNBEAUTYSUPER", "HOENNBEAUTYHYPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCUTE",
           "real_name": "Cute Ribbon",
           "icon_position": 8,
-          "real_description": "Hoenn Cute Contest Normal Rank winner!"
+          "real_description": "Hoenn Cute Contest Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCUTESUPER",
           "real_name": "Cute Ribbon Super",
           "icon_position": 9,
-          "real_description": "Hoenn Cute Contest Super Rank winner!"
+          "real_description": "Hoenn Cute Contest Super Rank winner!",
+          "previous_ranks": ["HOENNCUTE"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCUTEHYPER",
           "real_name": "Cute Ribbon Hyper",
           "icon_position": 10,
-          "real_description": "Hoenn Cute Contest Hyper Rank winner!"
+          "real_description": "Hoenn Cute Contest Hyper Rank winner!",
+          "previous_ranks": ["HOENNCUTE", "HOENNCUTESUPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNCUTEMASTER",
           "real_name": "Cute Ribbon Master",
           "icon_position": 11,
-          "real_description": "Hoenn Cute Contest Master Rank winner!"
+          "real_description": "Hoenn Cute Contest Master Rank winner!",
+          "previous_ranks": ["HOENNCUTE", "HOENNCUTESUPER", "HOENNCUTEHYPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNSMART",
           "real_name": "Smart Ribbon",
           "icon_position": 12,
-          "real_description": "Hoenn Smart Contest Normal Rank winner!"
+          "real_description": "Hoenn Smart Contest Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNSMARTSUPER",
           "real_name": "Smart Ribbon Super",
           "icon_position": 13,
-          "real_description": "Hoenn Smart Contest Super Rank winner!"
+          "real_description": "Hoenn Smart Contest Super Rank winner!",
+          "previous_ranks": ["HOENNSMART"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNSMARTHYPER",
           "real_name": "Smart Ribbon Hyper",
           "icon_position": 14,
-          "real_description": "Hoenn Smart Contest Hyper Rank winner!"
+          "real_description": "Hoenn Smart Contest Hyper Rank winner!",
+          "previous_ranks": ["HOENNSMART", "HOENNSMARTSUPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNSMARTMASTER",
           "real_name": "Smart Ribbon Master",
           "icon_position": 15,
-          "real_description": "Hoenn Smart Contest Master Rank winner!"
+          "real_description": "Hoenn Smart Contest Master Rank winner!",
+          "previous_ranks": ["HOENNSMART", "HOENNSMARTSUPER", "HOENNSMARTHYPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNTOUGH",
           "real_name": "Tough Ribbon",
           "icon_position": 16,
-          "real_description": "Hoenn Tough Contest Normal Rank winner!"
+          "real_description": "Hoenn Tough Contest Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNTOUGHSUPER",
           "real_name": "Tough Ribbon Super",
           "icon_position": 17,
-          "real_description": "Hoenn Tough Contest Super Rank winner!"
+          "real_description": "Hoenn Tough Contest Super Rank winner!",
+          "previous_ranks": ["HOENNTOUGH"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNTOUGHHYPER",
           "real_name": "Tough Ribbon Hyper",
           "icon_position": 18,
-          "real_description": "Hoenn Tough Contest Hyper Rank winner!"
+          "real_description": "Hoenn Tough Contest Hyper Rank winner!",
+          "previous_ranks": ["HOENNTOUGH", "HOENNTOUGHSUPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "HOENNTOUGHMASTER",
           "real_name": "Tough Ribbon Master",
           "icon_position": 19,
-          "real_description": "Hoenn Tough Contest Master Rank winner!"
+          "real_description": "Hoenn Tough Contest Master Rank winner!",
+          "previous_ranks": ["HOENNTOUGH", "HOENNTOUGHSUPER", "HOENNTOUGHHYPER"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHCOOL",
           "real_name": "Cool Ribbon",
           "icon_position": 20,
-          "real_description": "Super Contest Cool Category Normal Rank winner!"
+          "real_description": "Super Contest Cool Category Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHCOOLSUPER",
+          "id": "SINNOHCOOLGREAT",
           "real_name": "Cool Ribbon Great",
           "icon_position": 21,
-          "real_description": "Super Contest Cool Category Great Rank winner!"
+          "real_description": "Super Contest Cool Category Great Rank winner!",
+          "previous_ranks": ["SINNOHCOOL"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHCOOLHYPER",
+          "id": "SINNOHCOOLULTRA",
           "real_name": "Cool Ribbon Ultra",
           "icon_position": 22,
-          "real_description": "Super Contest Cool Category Ultra Rank winner!"
+          "real_description": "Super Contest Cool Category Ultra Rank winner!",
+          "previous_ranks": ["SINNOHCOOL", "SINNOHCOOLGREAT"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHCOOLMASTER",
           "real_name": "Cool Ribbon Master",
           "icon_position": 23,
-          "real_description": "Super Contest Cool Category Master Rank winner!"
+          "real_description": "Super Contest Cool Category Master Rank winner!",
+          "previous_ranks": ["SINNOHCOOL", "SINNOHCOOLGREAT", "SINNOHCOOLULTRA"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHBEAUTY",
           "real_name": "Beauty Ribbon",
           "icon_position": 24,
-          "real_description": "Super Contest Beauty Category Normal Rank winner!"
+          "real_description": "Super Contest Beauty Category Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHBEAUTYSUPER",
+          "id": "SINNOHBEAUTYGREAT",
           "real_name": "Beauty Ribbon Great",
           "icon_position": 25,
-          "real_description": "Super Contest Beauty Category Great Rank winner!"
+          "real_description": "Super Contest Beauty Category Great Rank winner!",
+          "previous_ranks": ["SINNOHBEAUTY"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHBEAUTYHYPER",
+          "id": "SINNOHBEAUTYULTRA",
           "real_name": "Beauty Ribbon Ultra",
           "icon_position": 26,
-          "real_description": "Super Contest Beauty Category Ultra Rank winner!"
+          "real_description": "Super Contest Beauty Category Ultra Rank winner!",
+          "previous_ranks": ["SINNOHBEAUTY", "SINNOHBEAUTYGREAT"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHBEAUTYMASTER",
           "real_name": "Beauty Ribbon Master",
           "icon_position": 27,
-          "real_description": "Super Contest Beauty Category Master Rank winner!"
+          "real_description": "Super Contest Beauty Category Master Rank winner!",
+          "previous_ranks": ["SINNOHBEAUTY", "SINNOHBEAUTYGREAT", "SINNOHBEAUTYULTRA"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHCUTE",
           "real_name": "Cute Ribbon",
           "icon_position": 28,
-          "real_description": "Super Contest Cute Category Normal Rank winner!"
+          "real_description": "Super Contest Cute Category Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHCUTESUPER",
+          "id": "SINNOHCUTEGREAT",
           "real_name": "Cute Ribbon Great",
           "icon_position": 29,
-          "real_description": "Super Contest Cute Category Great Rank winner!"
+          "real_description": "Super Contest Cute Category Great Rank winner!",
+          "previous_ranks": ["SINNOHCUTE"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHCUTEHYPER",
+          "id": "SINNOHCUTEULTRA",
           "real_name": "Cute Ribbon Ultra",
           "icon_position": 30,
-          "real_description": "Super Contest Cute Category Ultra Rank winner!"
+          "real_description": "Super Contest Cute Category Ultra Rank winner!",
+          "previous_ranks": ["SINNOHCUTE", "SINNOHCUTEGREAT"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHCUTEMASTER",
           "real_name": "Cute Ribbon Master",
           "icon_position": 31,
-          "real_description": "Super Contest Cute Category Master Rank winner!"
+          "real_description": "Super Contest Cute Category Master Rank winner!",
+          "previous_ranks": ["SINNOHCUTE", "SINNOHCUTEGREAT", "SINNOHCUTEULTRA"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHSMART",
           "real_name": "Smart Ribbon",
           "icon_position": 32,
-          "real_description": "Super Contest Smart Category Normal Rank winner!"
+          "real_description": "Super Contest Smart Category Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHSMARTSUPER",
+          "id": "SINNOHSMARTGREAT",
           "real_name": "Smart Ribbon Great",
           "icon_position": 33,
-          "real_description": "Super Contest Smart Category Great Rank winner!"
+          "real_description": "Super Contest Smart Category Great Rank winner!",
+          "previous_ranks": ["SINNOHSMART"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHSMARTHYPER",
+          "id": "SINNOHSMARTULTRA",
           "real_name": "Smart Ribbon Ultra",
           "icon_position": 34,
-          "real_description": "Super Contest Smart Category Ultra Rank winner!"
+          "real_description": "Super Contest Smart Category Ultra Rank winner!",
+          "previous_ranks": ["SINNOHSMART", "SINNOHSMARTGREAT"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHSMARTMASTER",
           "real_name": "Smart Ribbon Master",
           "icon_position": 35,
-          "real_description": "Super Contest Smart Category Master Rank winner!"
+          "real_description": "Super Contest Smart Category Master Rank winner!",
+          "previous_ranks": ["SINNOHSMART", "SINNOHSMARTGREAT", "SINNOHSMARTULTRA"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHTOUGH",
           "real_name": "Tough Ribbon",
           "icon_position": 36,
-          "real_description": "Super Contest Tough Category Normal Rank winner!"
+          "real_description": "Super Contest Tough Category Normal Rank winner!",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHTOUGHSUPER",
+          "id": "SINNOHTOUGHGREAT",
           "real_name": "Tough Ribbon Great",
           "icon_position": 37,
-          "real_description": "Super Contest Tough Category Great Rank winner!"
+          "real_description": "Super Contest Tough Category Great Rank winner!",
+          "previous_ranks": ["SINNOHTOUGH"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "SINNOHTOUGHHYPER",
+          "id": "SINNOHTOUGHULTRA",
           "real_name": "Tough Ribbon Ultra",
           "icon_position": 38,
-          "real_description": "Super Contest Tough Category Ultra Rank winner!"
+          "real_description": "Super Contest Tough Category Ultra Rank winner!",
+          "previous_ranks": ["SINNOHTOUGH", "SINNOHTOUGHGREAT"],
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "SINNOHTOUGHMASTER",
           "real_name": "Tough Ribbon Master",
           "icon_position": 39,
-          "real_description": "Super Contest Tough Category Master Rank winner!"
+          "real_description": "Super Contest Tough Category Master Rank winner!",
+          "previous_ranks": ["SINNOHTOUGH", "SINNOHTOUGHGREAT", "SINNOHTOUGHULTRA"],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "WINNING",
-          "real_name": "Winning Ribbon",
+          "id": "CONTESTMEMORY",
+          "real_name": "Contest Memory Ribbon",
           "icon_position": 40,
-          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge."
+          "real_description": "A commemorative Ribbon representing all of the Ribbons you collected for contests somewhere long ago.",
+          "real_title": "the Treasured Memory",
+          "previous_ranks": [
+            "HOENNCOOL",
+            "HOENNCOOLSUPER",
+            "HOENNCOOLHYPER",
+            "HOENNCOOLMASTER",
+            "HOENNBEAUTY",
+            "HOENNBEAUTYSUPER",
+            "HOENNBEAUTYHYPER",
+            "HOENNBEAUTYMASTER",
+            "HOENNCUTE",
+            "HOENNCUTESUPER",
+            "HOENNCUTEHYPER",
+            "HOENNCUTEMASTER",
+            "HOENNSMART",
+            "HOENNSMARTSUPER",
+            "HOENNSMARTHYPER",
+            "HOENNSMARTMASTER",
+            "HOENNTOUGH",
+            "HOENNTOUGHSUPER",
+            "HOENNTOUGHHYPER",
+            "HOENNTOUGHMASTER",
+            "SINNOHCOOL",
+            "SINNOHCOOLGREAT",
+            "SINNOHCOOLULTRA",
+            "SINNOHCOOLMASTER",
+            "SINNOHBEAUTY",
+            "SINNOHBEAUTYGREAT",
+            "SINNOHBEAUTYULTRA",
+            "SINNOHBEAUTYMASTER",
+            "SINNOHCUTE",
+            "SINNOHCUTEGREAT",
+            "SINNOHCUTEULTRA",
+            "SINNOHCUTEMASTER",
+            "SINNOHSMART",
+            "SINNOHSMARTGREAT",
+            "SINNOHSMARTULTRA",
+            "SINNOHSMARTMASTER",
+            "SINNOHTOUGH",
+            "SINNOHTOUGHGREAT",
+            "SINNOHTOUGHULTRA",
+            "SINNOHTOUGHMASTER"
+          ],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "VICTORY",
-          "real_name": "Victory Ribbon",
+          "id": "CONTESTMEMORYGOLD",
+          "real_name": "Contest Memory Ribbon",
           "icon_position": 41,
-          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge."
+          "real_description": "A commemorative Ribbon representing all of the Ribbons you collected for contests somewhere long ago.",
+          "real_title": "the Treasured Memory",
+          "previous_ranks": [
+            "HOENNCOOL",
+            "HOENNCOOLSUPER",
+            "HOENNCOOLHYPER",
+            "HOENNCOOLMASTER",
+            "HOENNBEAUTY",
+            "HOENNBEAUTYSUPER",
+            "HOENNBEAUTYHYPER",
+            "HOENNBEAUTYMASTER",
+            "HOENNCUTE",
+            "HOENNCUTESUPER",
+            "HOENNCUTEHYPER",
+            "HOENNCUTEMASTER",
+            "HOENNSMART",
+            "HOENNSMARTSUPER",
+            "HOENNSMARTHYPER",
+            "HOENNSMARTMASTER",
+            "HOENNTOUGH",
+            "HOENNTOUGHSUPER",
+            "HOENNTOUGHHYPER",
+            "HOENNTOUGHMASTER",
+            "SINNOHCOOL",
+            "SINNOHCOOLGREAT",
+            "SINNOHCOOLULTRA",
+            "SINNOHCOOLMASTER",
+            "SINNOHBEAUTY",
+            "SINNOHBEAUTYGREAT",
+            "SINNOHBEAUTYULTRA",
+            "SINNOHBEAUTYMASTER",
+            "SINNOHCUTE",
+            "SINNOHCUTEGREAT",
+            "SINNOHCUTEULTRA",
+            "SINNOHCUTEMASTER",
+            "SINNOHSMART",
+            "SINNOHSMARTGREAT",
+            "SINNOHSMARTULTRA",
+            "SINNOHSMARTMASTER",
+            "SINNOHTOUGH",
+            "SINNOHTOUGHGREAT",
+            "SINNOHTOUGHULTRA",
+            "SINNOHTOUGHMASTER"
+          ],
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "ABILITY",
-          "real_name": "Ability Ribbon",
+          "id": "COOLNESSMASTER",
+          "real_name": "Coolness Master Ribbon",
           "icon_position": 42,
-          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied Coolness in Pokémon Contests.",
+          "real_title": "the Former Star",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "GREATABILITY",
-          "real_name": "Great Ability Ribbon",
+          "id": "BEAUTYMASTER",
+          "real_name": "Beauty Master Ribbon",
           "icon_position": 43,
-          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower."
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied Beauty in Pokémon Contests.",
+          "real_title": "the Vintage Beauty",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "DOUBLEABILITY",
-          "real_name": "Double Ability Ribbon",
+          "id": "CUTENESSMASTER",
+          "real_name": "Cuteness Master Ribbon",
           "icon_position": 44,
-          "real_description": "A Ribbon awarded for completing the Battle Tower Double challenge."
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied Cuteness in Pokémon Contests.",
+          "real_title": "the Former Idol",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "MULTIABILITY",
-          "real_name": "Multi Ability Ribbon",
+          "id": "CLEVERNESSMASTER",
+          "real_name": "Cleverness Master Ribbon",
           "icon_position": 45,
-          "real_description": "A Ribbon awarded for completing the Battle Tower Multi challenge."
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied Cleverness in Pokémon Contests.",
+          "real_title": "the Historic Genius",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "PAIRABILITY",
-          "real_name": "Pair Ability Ribbon",
+          "id": "TOUGHNESSMASTER",
+          "real_name": "Toughness Master Ribbon",
           "icon_position": 46,
-          "real_description": "A Ribbon awarded for completing the Battle Tower Link Multi challenge."
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied Toughness in Pokémon Contests.",
+          "real_title": "the Formerly Buff",
+          "flags": ["ContestRibbon"]
         },
         {
-          "id": "WORLDABILITY",
-          "real_name": "World Ability Ribbon",
+          "id": "CONTESTSTAR",
+          "real_name": "Contest Star Ribbon",
           "icon_position": 47,
-          "real_description": "A Ribbon awarded for completing the Wi-Fi Battle Tower challenge."
+          "real_description": "A Ribbon awarded to a Pokémon that has performed superbly in every kind of contest.",
+          "real_title": "the Shining Star",
+          "previous_ranks": [
+            "COOLNESSMASTER",
+            "BEAUTYMASTER",
+            "CUTENESSMASTER",
+            "CLEVERNESSMASTER",
+            "TOUGHNESSMASTER"
+          ],
+          "flags": ["ContestRibbon"]
+        },
+        {
+          "id": "TWINKLINGSTAR",
+          "real_name": "Twinkling Star Ribbon",
+          "icon_position": 48,
+          "real_description": "A Ribbon awarded to a Pokémon that has perfectly embodied shining brilliance in Super Contest Shows.",
+          "real_title": "the Twinkling Star",
+          "flags": ["ContestRibbon"]
         },
         {
           "id": "CHAMPION",
           "real_name": "Champion Ribbon",
-          "icon_position": 48,
-          "real_description": "Ribbon for clearing the Pokémon League and entering the Hall of Fame in another region."
-        },
-        {
-          "id": "SINNOHCHAMP",
-          "real_name": "Sinnoh Champ Ribbon",
           "icon_position": 49,
-          "real_description": "Ribbon awarded for beating the Sinnoh Champion and entering the Hall of Fame."
+          "real_description": "A Ribbon awarded for clearing the Pokémon League and entering the Hall of Fame somewhere long ago.",
+          "real_title": "the Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "RECORD",
-          "real_name": "Record Ribbon",
+          "id": "HOENNCHAMPION",
+          "real_name": "Hoenn Champion Ribbon",
           "icon_position": 50,
-          "real_description": "A Ribbon awarded for setting an incredible record."
+          "real_description": "A Ribbon awarded for beating the Hoenn Champion and entering the Hoenn Hall of Fame.",
+          "real_title": "the Hoenn Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "EVENT",
-          "real_name": "Event Ribbon",
+          "id": "SINNOHCHAMPION",
+          "real_name": "Sinnoh Champion Ribbon",
           "icon_position": 51,
-          "real_description": "Pokémon Event Participation Ribbon."
+          "real_description": "A Ribbon awarded for beating the Sinnoh Champion and entering the Sinnoh Hall of Fame.",
+          "real_title": "the Sinnoh Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "LEGEND",
-          "real_name": "Legend Ribbon",
+          "id": "KALOSCHAMPION",
+          "real_name": "Kalos Champion Ribbon",
           "icon_position": 52,
-          "real_description": "A Ribbon awarded for setting a legendary record."
+          "real_description": "A Ribbon awarded for beating the Kalos Champion and entering the Kalos Hall of Fame.",
+          "real_title": "the Kalos Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "GORGEOUS",
-          "real_name": "Gorgeous Ribbon",
+          "id": "ALOLACHAMPION",
+          "real_name": "Alola Champion Ribbon",
           "icon_position": 53,
-          "real_description": "An extraordinarily gorgeous and extravagant Ribbon."
+          "real_description": "A Ribbon awarded for beating the Alola Champion and entering the Alola Hall of Fame.",
+          "real_title": "the Alola Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "ROYAL",
-          "real_name": "Royal Ribbon",
+          "id": "GALARCHAMPION",
+          "real_name": "Galar Champion Ribbon",
           "icon_position": 54,
-          "real_description": "An incredibly regal Ribbon with an air of nobility."
+          "real_description": "A Ribbon awarded for beating the Galar Champion and entering the Galar Hall of Fame.",
+          "real_title": "the Galar Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "GORGEOUSROYAL",
-          "real_name": "Gorgeous Royal Ribbon",
+          "id": "PALDEACHAMPION",
+          "real_name": "Paldea Champion Ribbon",
           "icon_position": 55,
-          "real_description": "A gorgeous and regal Ribbon that is the peak of fabulous."
+          "real_description": "A Ribbon awarded for beating the Paldea Champion and entering the Paldea Hall of Fame.",
+          "real_title": "the Paldea Champion",
+          "flags": ["LeagueRibbon"]
         },
         {
-          "id": "ALERT",
-          "real_name": "Alert Ribbon",
+          "id": "WINNING",
+          "real_name": "Winning Ribbon",
           "icon_position": 56,
-          "real_description": "A Ribbon for recalling an invigorating event that created life energy."
+          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 50 challenge.",
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "SHOCK",
-          "real_name": "Shock Ribbon",
+          "id": "VICTORY",
+          "real_name": "Victory Ribbon",
           "icon_position": 57,
-          "real_description": "A Ribbon for recalling a thrilling event that made life more exciting."
+          "real_description": "Ribbon awarded for clearing Hoenn's Battle Tower's Lv. 100 challenge.",
+          "previous_ranks": ["WINNING"],
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "DOWNCAST",
-          "real_name": "Downcast Ribbon",
+          "id": "ABILITY",
+          "real_name": "Ability Ribbon",
           "icon_position": 58,
-          "real_description": "A Ribbon for recalling feelings of sadness that added spice to life."
+          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "CARELESS",
-          "real_name": "Careless Ribbon",
+          "id": "GREATABILITY",
+          "real_name": "Great Ability Ribbon",
           "icon_position": 59,
-          "real_description": "A Ribbon for recalling a careless error that helped steer life decisions."
+          "real_description": "A Ribbon awarded for defeating the Tower Tycoon at the Battle Tower.",
+          "previous_ranks": ["ABILITY"],
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "RELAX",
-          "real_name": "Relax Ribbon",
+          "id": "DOUBLEABILITY",
+          "real_name": "Double Ability Ribbon",
           "icon_position": 60,
-          "real_description": "A Ribbon for recalling a refreshing event that added sparkle to life."
+          "real_description": "A Ribbon awarded for completing the Battle Tower Double challenge.",
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "SNOOZE",
-          "real_name": "Snooze Ribbon",
+          "id": "MULTIABILITY",
+          "real_name": "Multi Ability Ribbon",
           "icon_position": 61,
-          "real_description": "A Ribbon for recalling a deep slumber that made life soothing."
+          "real_description": "A Ribbon awarded for completing the Battle Tower Multi challenge.",
+          "previous_ranks": ["DOUBLEABILITY"],
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "SMILE",
-          "real_name": "Smile Ribbon",
+          "id": "PAIRABILITY",
+          "real_name": "Pair Ability Ribbon",
           "icon_position": 62,
-          "real_description": "A Ribbon for recalling that smiles enrich the quality of life."
+          "real_description": "A Ribbon awarded for completing the Battle Tower Link Multi challenge.",
+          "flags": ["FrontierRibbon"]
         },
         {
-          "id": "FOOTPRINT",
-          "real_name": "Footprint Ribbon",
+          "id": "WORLDABILITY",
+          "real_name": "World Ability Ribbon",
           "icon_position": 63,
-          "real_description": "A Ribbon awarded to a Pokémon deemed to have a top-quality footprint."
+          "real_description": "A Ribbon awarded for completing the Wi-Fi Battle Tower challenge.",
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "BATTLEMEMORY",
+          "real_name": "Battle Memory Ribbon",
+          "icon_position": 64,
+          "real_description": "A commemorative Ribbon representing all of the Ribbons you collected for battling somewhere long ago.",
+          "real_title": "the Exciting Memory",
+          "previous_ranks": [
+            "WINNING",
+            "VICTORY",
+            "ABILITY",
+            "GREATABILITY",
+            "DOUBLEABILITY",
+            "MULTIABILITY",
+            "PAIRABILITY",
+            "WORLDABILITY"
+          ],
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "BATTLEMEMORYGOLD",
+          "real_name": "Battle Memory Ribbon",
+          "icon_position": 65,
+          "real_description": "A commemorative Ribbon representing all of the Ribbons you collected for battling somewhere long ago.",
+          "real_title": "the Exciting Memory",
+          "previous_ranks": [
+            "WINNING",
+            "VICTORY",
+            "ABILITY",
+            "GREATABILITY",
+            "DOUBLEABILITY",
+            "MULTIABILITY",
+            "PAIRABILITY",
+            "WORLDABILITY"
+          ],
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "SKILLFULBATTLER",
+          "real_name": "Skillful Battler Ribbon",
+          "icon_position": 66,
+          "real_description": "A Ribbon that can be given to a Pokémon that has achieved victory in difficult battles.",
+          "real_title": "the Veteran",
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "EXPERTBATTLER",
+          "real_name": "Expert Battler Ribbon",
+          "icon_position": 67,
+          "real_description": "A Ribbon that can be given to a brave Pokémon that has honed its battle skills to an art.",
+          "real_title": "the Master",
+          "previous_ranks": ["SKILLFULBATTLER"],
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "BATTLETREEGREAT",
+          "real_name": "Battle Tree Great Ribbon",
+          "icon_position": 68,
+          "real_description": "A Ribbon awarded for winning against a Battle Legend in the Battle Tree.",
+          "real_title": "the Tree Victor",
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "BATTLETREEMASTER",
+          "real_name": "Battle Tree Master Ribbon",
+          "icon_position": 69,
+          "real_description": "A Ribbon awarded for winning against a Battle Legend in super battles in the Battle Tree.",
+          "real_title": "the Tree Master",
+          "previous_ranks": ["BATTLETREEGREAT"],
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "TOWERMASTER",
+          "real_name": "Tower Master Ribbon",
+          "icon_position": 70,
+          "real_description": "A Ribbon awarded for winning against a champion in the Battle Tower.",
+          "real_title": "the Tower Master",
+          "flags": ["FrontierRibbon"]
         },
         {
           "id": "ARTIST",
           "real_name": "Artist Ribbon",
-          "icon_position": 64,
-          "real_description": "Ribbon awarded for being chosen as a super sketch model in Hoenn."
+          "icon_position": 71,
+          "real_description": "A Ribbon awarded for being chosen as a super sketch model in the Hoenn region.",
+          "real_title": "the Model for Paintings",
+          "flags": ["MemorialRibbon"]
         },
         {
           "id": "EFFORT",
           "real_name": "Effort Ribbon",
-          "icon_position": 65,
-          "real_description": "Ribbon awarded for being an exceptionally hard worker."
+          "icon_position": 72,
+          "real_description": "Ribbon awarded for being an exceptionally hard worker.",
+          "real_title": "the Once Well-Trained",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "ALERT",
+          "real_name": "Alert Ribbon",
+          "icon_position": 73,
+          "real_description": "A Ribbon for recalling an invigorating event that created life energy.",
+          "real_title": "the Once Vigilant",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "SHOCK",
+          "real_name": "Shock Ribbon",
+          "icon_position": 74,
+          "real_description": "A Ribbon for recalling a thrilling event that made life more exciting.",
+          "real_title": "the Once Cowardly",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "DOWNCAST",
+          "real_name": "Downcast Ribbon",
+          "icon_position": 75,
+          "real_description": "A Ribbon for recalling feelings of sadness that added spice to life.",
+          "real_title": "the Once Shaken",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "CARELESS",
+          "real_name": "Careless Ribbon",
+          "icon_position": 76,
+          "real_description": "A Ribbon for recalling a careless error that helped steer life decisions.",
+          "real_title": "the Once Imperfect",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "RELAX",
+          "real_name": "Relax Ribbon",
+          "icon_position": 77,
+          "real_description": "A Ribbon for recalling a refreshing event that added sparkle to life.",
+          "real_title": "the Once Well-Rested",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "SNOOZE",
+          "real_name": "Snooze Ribbon",
+          "icon_position": 78,
+          "real_description": "A Ribbon for recalling a deep slumber that made life soothing.",
+          "real_title": "the Once Sleepy",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "SMILE",
+          "real_name": "Smile Ribbon",
+          "icon_position": 79,
+          "real_description": "A Ribbon for recalling that smiles enrich the quality of life.",
+          "real_title": "the Once Cheery",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "GORGEOUS",
+          "real_name": "Gorgeous Ribbon",
+          "icon_position": 80,
+          "real_description": "An extraordinarily gorgeous and extravagant Ribbon.",
+          "real_title": "the Gorgeous",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "ROYAL",
+          "real_name": "Royal Ribbon",
+          "icon_position": 81,
+          "real_description": "An incredibly regal Ribbon with an air of nobility.",
+          "real_title": "the Royal",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "GORGEOUSROYAL",
+          "real_name": "Gorgeous Royal Ribbon",
+          "icon_position": 82,
+          "real_description": "A gorgeous and regal Ribbon that is the peak of fabulous.",
+          "real_title": "the Gorgeous Royal",
+          "previous_ranks": ["GORGEOUS", "ROYAL"],
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "FOOTPRINT",
+          "real_name": "Footprint Ribbon",
+          "icon_position": 83,
+          "real_description": "A Ribbon awarded to a Pokémon deemed to have a top-quality footprint.",
+          "real_title": "the Strutter",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "RECORD",
+          "real_name": "Record Ribbon",
+          "icon_position": 84,
+          "real_description": "A Ribbon awarded for setting an incredible record.",
+          "real_title": "the Record Holder",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "LEGEND",
+          "real_name": "Legend Ribbon",
+          "icon_position": 85,
+          "real_description": "A Ribbon awarded for setting a legendary record.",
+          "real_title": "the Living Legend",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "BESTFRIENDS",
+          "real_name": "Best Friends Ribbon",
+          "icon_position": 86,
+          "real_description": "A Ribbon that can be given to a Pokémon with which you share a close and meaningful bond.",
+          "real_title": "the Great Friend",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "TRAINING",
+          "real_name": "Training Ribbon",
+          "icon_position": 87,
+          "real_description": "A Ribbon that can be given to a Pokémon that has overcome rigorous trials and training.",
+          "real_title": "the Tried and True",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "BATTLEROYALMASTER",
+          "real_name": "Battle Royal Master Ribbon",
+          "icon_position": 88,
+          "real_description": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
+          "real_title": "the Royal Master",
+          "flags": ["FrontierRibbon"]
+        },
+        {
+          "id": "MASTERRANK",
+          "real_name": "Master Rank Ribbon",
+          "icon_position": 89,
+          "real_description": "A Ribbon awarded for winning against a Trainer in the Master Ball Tier of Ranked Battles.",
+          "real_title": "the Rank Master",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "PIONEER",
+          "real_name": "Hisui Ribbon",
+          "icon_position": 90,
+          "real_description": "A ribbon awarded to a Pokémon that posed for a photograph in Hisui in the distant past.",
+          "real_title": "of the Distant Past",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "LIFETIME",
+          "real_name": "Once-in-a-Lifetime Ribbon",
+          "icon_position": 91,
+          "real_description": "A rare ribbon found extremely infrequently on Pokémon obtained in a Surprise Trade.",
+          "real_title": "the One-in-a-Million",
+          "flags": ["MemorialRibbon"]
+        },
+        {
+          "id": "EVENT",
+          "real_name": "Event Ribbon",
+          "icon_position": 92,
+          "real_description": "A Ribbon awarded for participating in a special Pokémon event.",
+          "real_title": "the Festive",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "BIRTHDAY",
           "real_name": "Birthday Ribbon",
-          "icon_position": 66,
-          "real_description": "A Ribbon to celebrate a birthday."
+          "icon_position": 93,
+          "real_description": "A Ribbon that commemorates a birthday.",
+          "real_title": "the Best Buddy",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "SPECIAL",
           "real_name": "Special Ribbon",
-          "icon_position": 67,
-          "real_description": "A special Ribbon for a special day."
-        },
-        {
-          "id": "CLASSIC",
-          "real_name": "Classic Ribbon",
-          "icon_position": 68,
-          "real_description": "A Ribbon that proclaims love for Pokémon."
-        },
-        {
-          "id": "PREMIER",
-          "real_name": "Premier Ribbon",
-          "icon_position": 69,
-          "real_description": "Special Holiday Ribbon."
+          "icon_position": 94,
+          "real_description": "A special Ribbon for a special day.",
+          "real_title": "the Premium",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "SOUVENIR",
           "real_name": "Souvenir Ribbon",
-          "icon_position": 70,
-          "real_description": "A Ribbon to cherish a special memory."
-        },
-        {
-          "id": "WISHING",
-          "real_name": "Wishing Ribbon",
-          "icon_position": 71,
-          "real_description": "A Ribbon said to make your wish come true."
+          "icon_position": 95,
+          "real_description": "A Ribbon for cherishing a special memory.",
+          "real_title": "the Cherished",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "NATIONAL",
           "real_name": "National Ribbon",
-          "icon_position": 72,
-          "real_description": "A Ribbon awarded for overcoming all difficult challenges."
+          "icon_position": 96,
+          "real_description": "A Ribbon awarded for overcoming all difficult challenges.",
+          "real_title": "the Triumphant",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "COUNTRY",
           "real_name": "Country Ribbon",
-          "icon_position": 73,
-          "real_description": "Pokémon League Champion Ribbon."
+          "icon_position": 97,
+          "real_description": "A Ribbon awarded to a Pokémon League Champion.",
+          "real_title": "the Victor",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "BATTLECHAMPION",
           "real_name": "Battle Champion Ribbon",
-          "icon_position": 74,
-          "real_description": "Battle Competition Champion Ribbon."
+          "icon_position": 98,
+          "real_description": "A Ribbon awarded to a Battle Competition Champion.",
+          "real_title": "the Battle Champion",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "REGIONALCHAMPION",
           "real_name": "Regional Champion Ribbon",
-          "icon_position": 75,
-          "real_description": "Pokémon World Championships Regional Champion Ribbon."
+          "icon_position": 99,
+          "real_description": "A Ribbon awarded to a Regional Champion in the Pokémon World Championships.",
+          "real_title": "the Regional Champion",
+          "previous_ranks": ["BATTLECHAMPION"],
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "EARTH",
           "real_name": "Earth Ribbon",
-          "icon_position": 76,
-          "real_description": "A Ribbon awarded for winning 100 matches in a row."
+          "icon_position": 100,
+          "real_description": "A Ribbon awarded for winning one hundred battles in a row.",
+          "real_title": "the 100x Victorious",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "WORLD",
           "real_name": "World Ribbon",
-          "icon_position": 77,
-          "real_description": "Pokémon League Champion Ribbon."
+          "icon_position": 101,
+          "real_description": "A Ribbon awarded to a Pokémon League Champion.",
+          "real_title": "the World Conqueror",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "NATIONALCHAMPION",
           "real_name": "National Champion Ribbon",
-          "icon_position": 78,
-          "real_description": "Pokémon World Championships National Champion Ribbon."
+          "icon_position": 102,
+          "real_description": "A Ribbon awarded to a National Champion in the Pokémon World Championships.",
+          "real_title": "the National Champion",
+          "flags": ["GiftRibbon"]
         },
         {
           "id": "WORLDCHAMPION",
           "real_name": "World Champion Ribbon",
-          "icon_position": 79,
-          "real_description": "Pokémon World Championships World Champion Ribbon."
+          "icon_position": 103,
+          "real_description": "A Ribbon awarded to a World Champion in the Pokémon World Championships.",
+          "real_title": "the World Champion",
+          "previous_ranks": ["NATIONALCHAMPION"],
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "CLASSIC",
+          "real_name": "Classic Ribbon",
+          "icon_position": 104,
+          "real_description": "A Ribbon that proclaims love for Pokémon.",
+          "real_title": "the Pokémon Fan",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "PREMIER",
+          "real_name": "Premier Ribbon",
+          "icon_position": 105,
+          "real_description": "A Ribbon awarded for a special holiday.",
+          "real_title": "the Celebratory",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "RED",
+          "real_name": "Red Ribbon",
+          "icon_position": 106,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "GREEN",
+          "real_name": "Green Ribbon",
+          "icon_position": 107,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "BLUE",
+          "real_name": "Blue Ribbon",
+          "icon_position": 108,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "MARINE",
+          "real_name": "Marine Ribbon",
+          "icon_position": 109,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "LAND",
+          "real_name": "Land Ribbon",
+          "icon_position": 110,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "SKY",
+          "real_name": "Sky Ribbon",
+          "icon_position": 111,
+          "real_description": "A commemorative Ribbon obtained in a Mystery Zone.",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "WISHING",
+          "real_name": "Wishing Ribbon",
+          "icon_position": 112,
+          "real_description": "A Ribbon said to make your wish come true.",
+          "real_title": "the Wish Granter",
+          "flags": ["GiftRibbon"]
+        },
+        {
+          "id": "LUNCHTIMEMARK",
+          "real_name": "Lunchtime Mark",
+          "icon_position": 113,
+          "real_description": "A mark for a peckish Pokémon.",
+          "real_title": "the Peckish",
+          "mark": true,
+          "flags": ["TimeMark"]
+        },
+        {
+          "id": "SLEEPYTIMEMARK",
+          "real_name": "Sleepy-Time Mark",
+          "icon_position": 114,
+          "real_description": "A mark for a sleepy Pokémon.",
+          "real_title": "the Sleepy",
+          "mark": true,
+          "flags": ["TimeMark"]
+        },
+        {
+          "id": "DUSKMARK",
+          "real_name": "Dusk Mark",
+          "icon_position": 115,
+          "real_description": "A mark for a dozy Pokémon.",
+          "real_title": "the Dozy",
+          "mark": true,
+          "flags": ["TimeMark"]
+        },
+        {
+          "id": "DAWNMARK",
+          "real_name": "Dawn Mark",
+          "icon_position": 116,
+          "real_description": "A mark for an early-riser Pokémon.",
+          "real_title": "the Early Riser",
+          "mark": true,
+          "flags": ["TimeMark"]
+        },
+        {
+          "id": "CLOUDYMARK",
+          "real_name": "Cloudy Mark",
+          "icon_position": 117,
+          "real_description": "A mark for a cloud-watching Pokémon.",
+          "real_title": "the Cloud Watcher",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "RAINYMARK",
+          "real_name": "Rainy Mark",
+          "icon_position": 118,
+          "real_description": "A mark for a sodden Pokémon.",
+          "real_title": "the Sodden",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "STORMYMARK",
+          "real_name": "Stormy Mark",
+          "icon_position": 119,
+          "real_description": "A mark for a thunderstruck Pokémon.",
+          "real_title": "the Thunderstruck",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "SNOWYMARK",
+          "real_name": "Snowy Mark",
+          "icon_position": 120,
+          "real_description": "A mark for a snow-frolicking Pokémon.",
+          "real_title": "the Snow Frolicker",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "BLIZZARDMARK",
+          "real_name": "Blizzard Mark",
+          "icon_position": 121,
+          "real_description": "A mark for a shivering Pokémon.",
+          "real_title": "the Shivering",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "DRYMARK",
+          "real_name": "Dry Mark",
+          "icon_position": 122,
+          "real_description": "A mark for a parched Pokémon.",
+          "real_title": "the Parched",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "SANDSTORMMARK",
+          "real_name": "Sandstorm Mark",
+          "icon_position": 123,
+          "real_description": "A mark for a sandswept Pokémon.",
+          "real_title": "the Sandswept",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "MISTYMARK",
+          "real_name": "Misty Mark",
+          "icon_position": 124,
+          "real_description": "A mark for a mist-drifter Pokémon.",
+          "real_title": "the Mist Drifter",
+          "mark": true,
+          "flags": ["WeatherMark"]
+        },
+        {
+          "id": "DESTINYMARK",
+          "real_name": "Destiny Mark",
+          "icon_position": 125,
+          "real_description": "A mark of a chosen Pokémon.",
+          "real_title": "the Chosen One",
+          "mark": true,
+          "flags": ["EncounterMark"]
+        },
+        {
+          "id": "FISHINGMARK",
+          "real_name": "Fishing Mark",
+          "icon_position": 126,
+          "real_description": "A mark for a catch-of-the-day Pokémon.",
+          "real_title": "the Catch of the Day",
+          "mark": true,
+          "flags": ["EncounterMark"]
+        },
+        {
+          "id": "CURRYMARK",
+          "real_name": "Curry Mark",
+          "icon_position": 127,
+          "real_description": "A mark for a curry-connoisseur Pokémon.",
+          "real_title": "the Curry Connoisseur",
+          "mark": true,
+          "flags": ["EncounterMark"]
+        },
+        {
+          "id": "RAREMARK",
+          "real_name": "Rare Mark",
+          "icon_position": 128,
+          "real_description": "A mark for a reclusive Pokémon.",
+          "real_title": "the Recluse",
+          "mark": true,
+          "flags": ["RarityMark"]
+        },
+        {
+          "id": "UNCOMMONMARK",
+          "real_name": "Uncommon Mark",
+          "icon_position": 129,
+          "real_description": "A mark for a sociable Pokémon.",
+          "real_title": "the Sociable",
+          "mark": true,
+          "flags": ["RarityMark"]
+        },
+        {
+          "id": "ROWDYMARK",
+          "real_name": "Rowdy Mark",
+          "icon_position": 130,
+          "real_description": "A mark for a rowdy Pokémon.",
+          "real_title": "the Rowdy",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "ABSENTMINDEDMARK",
+          "real_name": "Absent-Minded Mark",
+          "icon_position": 131,
+          "real_description": "A mark for a spacey Pokémon.",
+          "real_title": "the Spacey",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "JITTERYMARK",
+          "real_name": "Jittery Mark",
+          "icon_position": 132,
+          "real_description": "A mark for an anxious Pokémon.",
+          "real_title": "the Anxious",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "EXCITEDMARK",
+          "real_name": "Excited Mark",
+          "icon_position": 133,
+          "real_description": "A mark for a giddy Pokémon.",
+          "real_title": "the Giddy",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "CHARISMATICMARK",
+          "real_name": "Charismatic Mark",
+          "icon_position": 134,
+          "real_description": "A mark for a radiant Pokémon.",
+          "real_title": "the Radiant",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "CALMNESSMARK",
+          "real_name": "Calmness Mark",
+          "icon_position": 135,
+          "real_description": "A mark for a serene Pokémon.",
+          "real_title": "the Serene",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "INTENSEMARK",
+          "real_name": "Intense Mark",
+          "icon_position": 136,
+          "real_description": "A mark for a feisty Pokémon.",
+          "real_title": "the Feisty",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "ZONEDOUTMARK",
+          "real_name": "Zoned-Out Mark",
+          "icon_position": 137,
+          "real_description": "A mark for a daydreaming Pokémon.",
+          "real_title": "the Daydreamer",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "JOYFULMARK",
+          "real_name": "Joyful Mark",
+          "icon_position": 138,
+          "real_description": "A mark for a joyful Pokémon.",
+          "real_title": "the Joyful",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "ANGRYMARK",
+          "real_name": "Angry Mark",
+          "icon_position": 139,
+          "real_description": "A mark for a furious Pokémon.",
+          "real_title": "the Furious",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "SMILEYMARK",
+          "real_name": "Smiley Mark",
+          "icon_position": 140,
+          "real_description": "A mark for a beaming Pokémon.",
+          "real_title": "the Beaming",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "TEARYMARK",
+          "real_name": "Teary Mark",
+          "icon_position": 141,
+          "real_description": "A mark for a teary-eyed Pokémon.",
+          "real_title": "the Teary-Eyed",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "UPBEATMARK",
+          "real_name": "Upbeat Mark",
+          "icon_position": 142,
+          "real_description": "A mark for a chipper Pokémon.",
+          "real_title": "the Chipper",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "PEEVEDMARK",
+          "real_name": "Peeved Mark",
+          "icon_position": 143,
+          "real_description": "A mark for a grumpy Pokémon.",
+          "real_title": "the Grumpy",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "INTELLECTUALMARK",
+          "real_name": "Intellectual Mark",
+          "icon_position": 144,
+          "real_description": "A mark for a scholarly Pokémon.",
+          "real_title": "the Scholar",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "FEROCIOUSMARK",
+          "real_name": "Ferocious Mark",
+          "icon_position": 145,
+          "real_description": "A mark for a rampaging Pokémon.",
+          "real_title": "the Rampaging",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "CRAFTYMARK",
+          "real_name": "Crafty Mark",
+          "icon_position": 146,
+          "real_description": "A mark for an opportunistic Pokémon.",
+          "real_title": "the Opportunist",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "SCOWLINGMARK",
+          "real_name": "Scowling Mark",
+          "icon_position": 147,
+          "real_description": "A mark for a stern Pokémon.",
+          "real_title": "the Stern",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "KINDLYMARK",
+          "real_name": "Kindly Mark",
+          "icon_position": 148,
+          "real_description": "A mark for a kindhearted Pokémon.",
+          "real_title": "the Kindhearted",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "FLUSTEREDMARK",
+          "real_name": "Flustered Mark",
+          "icon_position": 149,
+          "real_description": "A mark for an easily flustered Pokémon.",
+          "real_title": "the Easily Flustered",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "PUMPEDUPMARK",
+          "real_name": "Pumped-Up Mark",
+          "icon_position": 150,
+          "real_description": "A mark for a driven Pokémon.",
+          "real_title": "the Driven",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "ZEROENERGYMARK",
+          "real_name": "Zero Energy Mark",
+          "icon_position": 151,
+          "real_description": "A mark for an apathetic Pokémon.",
+          "real_title": "the Apathetic",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "PRIDEFULMARK",
+          "real_name": "Prideful Mark",
+          "icon_position": 152,
+          "real_description": "A mark for an arrogant Pokémon.",
+          "real_title": "the Arrogant",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "UNSUREMARK",
+          "real_name": "Unsure Mark",
+          "icon_position": 153,
+          "real_description": "A mark for an unsure Pokémon.",
+          "real_title": "the Reluctant",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "HUMBLEMARK",
+          "real_name": "Humble Mark",
+          "icon_position": 154,
+          "real_description": "A mark for a humble Pokémon.",
+          "real_title": "the Humble",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "THORNYMARK",
+          "real_name": "Thorny Mark",
+          "icon_position": 155,
+          "real_description": "A mark for a pompous Pokémon.",
+          "real_title": "the Pompous",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "VIGORMARK",
+          "real_name": "Vigor Mark",
+          "icon_position": 156,
+          "real_description": "A mark for a lively Pokémon.",
+          "real_title": "the Lively",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "SLUMPMARK",
+          "real_name": "Slump Mark",
+          "icon_position": 157,
+          "real_description": "A mark for a worn-out Pokémon.",
+          "real_title": "the Worn-Out",
+          "mark": true,
+          "flags": ["PersonalityMark"]
+        },
+        {
+          "id": "JUMBOMARK",
+          "real_name": "Jumbo Mark",
+          "icon_position": 158,
+          "real_description": "A mark for a Pokémon that's the largest it can be.",
+          "real_title": "the Great",
+          "mark": true,
+          "flags": ["SizeMark"]
+        },
+        {
+          "id": "MINIMARK",
+          "real_name": "Mini Mark",
+          "icon_position": 159,
+          "real_description": "A mark for a Pokémon that's the smallest it can be.",
+          "real_title": "the Teeny",
+          "mark": true,
+          "flags": ["SizeMark"]
+        },
+        {
+          "id": "ITEMFINDERMARK",
+          "real_name": "Itemfinder Mark",
+          "icon_position": 160,
+          "real_description": "A mark for a Pokémon that likes to pick things up.",
+          "real_title": "the Treasure Hunter",
+          "mark": true,
+          "flags": ["PartyMark"]
+        },
+        {
+          "id": "PARTNERMARK",
+          "real_name": "Partner Mark",
+          "icon_position": 161,
+          "real_description": "A mark for a friendly Pokémon.",
+          "real_title": "the Reliable Partner",
+          "mark": true,
+          "flags": ["PartyMark"]
+        },
+        {
+          "id": "GOURMANDMARK",
+          "real_name": "Gourmand Mark",
+          "icon_position": 162,
+          "real_description": "A mark for a Pokémon gourmet.",
+          "real_title": "the Gourmet",
+          "mark": true,
+          "flags": ["PartyMark"]
+        },
+        {
+          "id": "ALPHAMARK",
+          "real_name": "Alpha Mark",
+          "icon_position": 163,
+          "real_description": "A mark for a Pokémon that was an alpha.",
+          "real_title": "the Former Alpha",
+          "mark": true,
+          "flags": ["BossMark"]
+        },
+        {
+          "id": "MIGHTIESTMARK",
+          "real_name": "Mightiest Mark",
+          "icon_position": 164,
+          "real_description": "A mark for an especially mighty Pokémon.",
+          "real_title": "the Unrivaled",
+          "mark": true,
+          "flags": ["BossMark"]
+        },
+        {
+          "id": "TITANMARK",
+          "real_name": "Titan Mark",
+          "icon_position": 165,
+          "real_description": "A mark for a Pokémon that was a Titan.",
+          "real_title": "the Former Titan",
+          "mark": true,
+          "flags": ["BossMark"]
+        },
+        {
+          "id": "PARTNER",
+          "real_name": "Partner Ribbon",
+          "icon_position": 166,
+          "real_description": "A special Ribbon awarded to a Pokémon that was once partnered with another great Trainer.",
+          "real_prefix_title": "/Owner/'s",
+          "flags": ["MemorialRibbon"]
         }
       ]
     }

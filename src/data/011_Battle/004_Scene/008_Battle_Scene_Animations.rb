@@ -197,6 +197,50 @@ class Battle::Scene::Animation::DataBoxAppear < Battle::Scene::Animation
 end
 
 #===============================================================================
+# Shows the icon of the ribbon/mark whose title a Pokémon has, rising and fading
+# above it, when it is sent out. Does nothing if the Pokémon has no title.
+#===============================================================================
+class Battle::Scene::Animation::BattlerTitleIcon < Battle::Scene::Animation
+  # The graphic with all ribbon/mark icons, 8 per row.
+  RIBBON_ICONS_FILE = "Graphics/UI/Summary/ribbons"
+  # How far (in pixels) the icon rises.
+  RISE_DISTANCE     = 40
+
+  # @param sprites [Hash] the battle scene's sprites
+  # @param viewport [Viewport]
+  # @param idxBattler [Integer] the index of the battler being sent out
+  # @param pkmn [Pokemon] the Pokémon shown (its Illusion disguise if any)
+  def initialize(sprites, viewport, idxBattler, pkmn)
+    @idxBattler = idxBattler
+    @pkmn       = pkmn
+    super(sprites, viewport)
+  end
+
+  def createProcesses
+    batSprite = @sprites["pokemon_#{@idxBattler}"]
+    return if !batSprite || !@pkmn || !@pkmn.has_title?
+    return if !pbResolveBitmap(RIBBON_ICONS_FILE)
+    ribbon_data = GameData::Ribbon.get(@pkmn.affixed_ribbon)
+    coords = Battle::Scene.pbBattlerPosition(@idxBattler, batSprite.sideSize)
+    # The icon starts just above the middle of the battler's sprite
+    start_y = coords[1] - (batSprite.bitmap ? batSprite.bitmap.height / 2 : 48)
+    icon = addNewSprite(coords[0], start_y, RIBBON_ICONS_FILE, PictureOrigin::CENTER)
+    icon_sprite = @pictureSprites.last
+    size = icon_sprite.bitmap.width / 8
+    pos = ribbon_data.icon_position
+    icon.setSrc(0, size * (pos % 8), size * (pos / 8))
+    icon.setSrcSize(0, size, size)
+    icon_sprite.src_rect.set(size * (pos % 8), size * (pos / 8), size, size)
+    icon.setOrigin(0, PictureOrigin::CENTER)   # Again, now the icon's size is known
+    icon.setZ(0, batSprite.z + 1)
+    icon.setOpacity(0, 0)
+    icon.moveXY(0, 16, coords[0], start_y - RISE_DISTANCE)
+    icon.moveOpacity(0, 4, 255)
+    icon.moveOpacity(10, 6, 0)
+  end
+end
+
+#===============================================================================
 # Makes a Pokémon's data box disappear
 #===============================================================================
 class Battle::Scene::Animation::DataBoxDisappear < Battle::Scene::Animation

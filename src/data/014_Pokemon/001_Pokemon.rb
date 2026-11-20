@@ -30,8 +30,11 @@ class Pokemon
   attr_accessor :moves
   # @return [Array<Symbol>] the IDs of moves known by this Pokémon when it was obtained
   attr_accessor :first_moves
-  # @return [Array<Symbol>] an array of ribbons owned by this Pokémon
-  attr_accessor :ribbons
+  # @param value [Array<Symbol>] the ribbons and marks owned by this Pokémon
+  attr_writer   :ribbons
+  # @return [Symbol, nil] the ID of the ribbon/mark whose title this Pokémon
+  #   has affixed (shown alongside its name), or nil if none
+  attr_reader   :affixed_ribbon
   # @return [Integer] contest stats
   attr_accessor :cool, :beauty, :cute, :smart, :tough, :sheen
   # @return [Integer] the Pokérus strain and infection time
@@ -723,28 +726,79 @@ class Pokemon
   end
 
   #=============================================================================
-  # Ribbons
+  # Ribbons and marks
   #=============================================================================
+  # Ribbons and marks are both GameData::Ribbon entries (marks have IsMark set)
+  # and are stored together in @ribbons.
 
-  # @return [Integer] the number of ribbons this Pokémon has
+  # IDs of the ribbons that sum up a set of lower ribbons, by tier. When a
+  # Pokémon gets a ribbon listed in their PreviousRanks, it gets the first one;
+  # when it has all of them, that one is upgraded to the second one.
+  MEMORY_RIBBONS = [
+    [:CONTESTMEMORY, :CONTESTMEMORYGOLD],
+    [:BATTLEMEMORY,  :BATTLEMEMORYGOLD]
+  ]
+
+  # Ribbon IDs that were renamed, as {old ID => new ID}. Pokémon in older saves
+  # that have an old ID get the new one instead.
+  RENAMED_RIBBONS = {
+    :SINNOHCOOLSUPER   => :SINNOHCOOLGREAT,
+    :SINNOHCOOLHYPER   => :SINNOHCOOLULTRA,
+    :SINNOHBEAUTYSUPER => :SINNOHBEAUTYGREAT,
+    :SINNOHBEAUTYHYPER => :SINNOHBEAUTYULTRA,
+    :SINNOHCUTESUPER   => :SINNOHCUTEGREAT,
+    :SINNOHCUTEHYPER   => :SINNOHCUTEULTRA,
+    :SINNOHSMARTSUPER  => :SINNOHSMARTGREAT,
+    :SINNOHSMARTHYPER  => :SINNOHSMARTULTRA,
+    :SINNOHTOUGHSUPER  => :SINNOHTOUGHGREAT,
+    :SINNOHTOUGHHYPER  => :SINNOHTOUGHULTRA,
+    :SINNOHCHAMP       => :SINNOHCHAMPION
+  }
+
+  # Renamed ribbons (see RENAMED_RIBBONS) are updated, and ribbons that are no
+  # longer defined (e.g. removed from ribbons.txt after a save was made) are
+  # dropped.
+  # @return [Array<Symbol>] the ribbons and marks owned by this Pokémon
+  def ribbons
+    @ribbons ||= []
+    if @ribbons.any? { |r| RENAMED_RIBBONS.key?(r) }
+      @ribbons.map! { |r| RENAMED_RIBBONS[r] || r }
+      @ribbons.uniq!
+    end
+    @ribbons.select! { |r| GameData::Ribbon.exists?(r) }
+    @affixed_ribbon = nil if @affixed_ribbon && !@ribbons.include?(@affixed_ribbon)
+    return @ribbons
+  end
+
+  # @return [Integer] the number of ribbons and marks this Pokémon has
   def numRibbons
-    return @ribbons.length
+    return ribbons.length
   end
 
   # @param ribbon [Symbol, String, GameData::Ribbon] ribbon ID to check for
   # @return [Boolean] whether this Pokémon has the specified ribbon
   def hasRibbon?(ribbon)
     ribbon_data = GameData::Ribbon.try_get(ribbon)
-    return ribbon_data && @ribbons.include?(ribbon_data.id)
+    return ribbon_data && ribbons.include?(ribbon_data.id)
   end
+  alias hasMark? hasRibbon?
 
-  # Gives a ribbon to this Pokémon.
+  # Gives a ribbon (or mark) to this Pokémon. If it has no title affixed and
+  # Settings::AUTO_AFFIX_TITLES is true, the ribbon's title is affixed.
   # @param ribbon [Symbol, String, GameData::Ribbon] ID of the ribbon to give
   def giveRibbon(ribbon)
     ribbon_data = GameData::Ribbon.try_get(ribbon)
-    return if !ribbon_data || @ribbons.include?(ribbon_data.id)
+    return if !ribbon_data || ribbons.include?(ribbon_data.id)
+    MEMORY_RIBBONS.each do |tier|
+      return if tier.include?(ribbon_data.id) && tier.any? { |r| ribbons.include?(r) }
+    end
     @ribbons.push(ribbon_data.id)
+    pbUpdateMemoryRibbons(ribbon_data.id)
+    if Settings::AUTO_AFFIX_TITLES && !@affixed_ribbon && ribbon_data.has_title? && !shadowPokemon?
+      @affixed_ribbon = ribbon_data.id
+    end
   end
+  alias giveMark giveRibbon
 
   # Replaces one ribbon with the next one along, if possible. If none of the
   # given ribbons are owned, give the first one.
@@ -753,11 +807,12 @@ class Pokemon
     args.each_with_index do |ribbon, i|
       this_ribbon_data = GameData::Ribbon.try_get(ribbon)
       next if !this_ribbon_data
-      @ribbons.length.times do |j|
+      ribbons.length.times do |j|
         next if @ribbons[j] != this_ribbon_data.id
         next_ribbon_data = GameData::Ribbon.try_get(args[i + 1])
         next if !next_ribbon_data
         @ribbons[j] = next_ribbon_data.id
+        @affixed_ribbon = next_ribbon_data.id if @affixed_ribbon == this_ribbon_data.id
         return @ribbons[j]
       end
     end
@@ -770,17 +825,179 @@ class Pokemon
     return nil
   end
 
-  # Removes the specified ribbon from this Pokémon.
+  # Removes the specified ribbon from this Pokémon. Its title is removed too
+  # if it was affixed.
   # @param ribbon [Symbol, String, GameData::Ribbon] ID of the ribbon to remove
   def takeRibbon(ribbon)
     ribbon_data = GameData::Ribbon.try_get(ribbon)
-    return if !ribbon_data
-    @ribbons.delete_at(@ribbons.index(ribbon_data.id))
+    return if !ribbon_data || !ribbons.include?(ribbon_data.id)
+    @ribbons.delete(ribbon_data.id)
+    @affixed_ribbon = nil if @affixed_ribbon == ribbon_data.id
+  end
+  alias takeMark takeRibbon
+
+  # Removes all ribbons and marks from this Pokémon (and its title).
+  def clearAllRibbons
+    ribbons.clear
+    @affixed_ribbon = nil
   end
 
-  # Removes all ribbons from this Pokémon.
-  def clearAllRibbons
-    @ribbons.clear
+  # @return [Array<Symbol>] the IDs of the marks this Pokémon has
+  def marks
+    return ribbons.select { |r| GameData::Ribbon.get(r).mark? }
+  end
+
+  # @return [Integer] the number of marks this Pokémon has
+  def numMarks
+    return marks.length
+  end
+
+  # Checks whether this Pokémon has any ribbon/mark of a kind.
+  # @param filter [Symbol] :ribbon, :mark, :ranked, :titled, a category
+  #   (:contest, :league, :frontier, :memorial, :gift, :time, :weather,
+  #   :encounter, :rarity, :personality, :size, :party, :boss) or a ribbon ID
+  # @return [Boolean]
+  def hasRibbonType?(filter)
+    ribbons.each do |r|
+      data = GameData::Ribbon.get(r)
+      ret = case filter
+            when :ribbon      then data.ribbon?
+            when :mark        then data.mark?
+            when :ranked      then data.max_rank > 1
+            when :titled      then data.has_title?
+            when :contest     then data.contest_ribbon?
+            when :league      then data.league_ribbon?
+            when :frontier    then data.frontier_ribbon?
+            when :memorial    then data.memorial_ribbon?
+            when :gift        then data.gift_ribbon?
+            when :time        then data.time_mark?
+            when :weather     then data.weather_mark?
+            when :encounter   then data.encounter_mark?
+            when :rarity      then data.rarity_mark?
+            when :personality then data.personality_mark?
+            when :size        then data.size_mark?
+            when :party       then data.party_mark?
+            when :boss        then data.boss_mark?
+            else                   data.id == filter
+            end
+      return true if ret
+    end
+    return false
+  end
+
+  # The rank this Pokémon has reached for a ranked ribbon: 1 plus the number of
+  # its PreviousRanks that it also has.
+  # @param ribbon [Symbol, String, GameData::Ribbon]
+  # @return [Integer] the rank, or 0 if the ribbon doesn't exist
+  def ribbonRank(ribbon)
+    ribbon_data = GameData::Ribbon.try_get(ribbon)
+    return 0 if !ribbon_data
+    rank = 1 + ribbon_data.previous_ranks.count { |r| ribbons.include?(r) }
+    return [rank, ribbon_data.max_rank].min
+  end
+
+  # @return [Array<Symbol>] this Pokémon's ribbons/marks, leaving out the ones
+  #   that are lower ranks of another ribbon it has
+  def collapsed_ribbons
+    hidden = []
+    ribbons.each { |r| hidden.concat(GameData::Ribbon.get(r).previous_ranks) }
+    return ribbons.reject { |r| hidden.include?(r) }
+  end
+
+  # Gives/upgrades the memory ribbons (see MEMORY_RIBBONS) after ribbon_id was
+  # gained.
+  # @param ribbon_id [Symbol] the ribbon that was just gained
+  def pbUpdateMemoryRibbons(ribbon_id)
+    MEMORY_RIBBONS.each do |tier|
+      next if !tier.all? { |r| GameData::Ribbon.exists?(r) }
+      top = GameData::Ribbon.get(tier.last)
+      next if !top.previous_ranks.include?(ribbon_id) || @ribbons.include?(tier.last)
+      if top.previous_ranks.all? { |r| @ribbons.include?(r) }
+        idx = @ribbons.index(tier.first)
+        if idx
+          @ribbons[idx] = tier.last
+          @affixed_ribbon = tier.last if @affixed_ribbon == tier.first
+        else
+          @ribbons.push(tier.last)
+        end
+      elsif !@ribbons.include?(tier.first)
+        @ribbons.push(tier.first)
+      end
+    end
+  end
+  private :pbUpdateMemoryRibbons
+
+  #=============================================================================
+  # Size (see also 006_Pokemon_Size.rb)
+  #=============================================================================
+
+  # @return [Integer] this Pokémon's size scale, from 0 (smallest) to 255
+  #   (largest). Pokémon from saves made before scales existed get one rolled.
+  def scale
+    @scale = Pokemon.generate_scale if @scale.nil?
+    return @scale
+  end
+
+  # @param value [Integer] the new size scale (clamped to 0-255)
+  def scale=(value)
+    @scale = value.to_i.clamp(0, 255)
+  end
+
+  # Rolls a random size scale, weighted towards the middle the same way as the
+  # main series (the sum of two random numbers).
+  # @return [Integer] a scale from 0 to 255
+  def self.generate_scale
+    return rand(0x81) + rand(0x80)
+  end
+
+  #=============================================================================
+  # Titles
+  #=============================================================================
+
+  # Affixes a ribbon/mark so its title is shown with this Pokémon's name. The
+  # Pokémon is given the ribbon if it doesn't have it. Shadow Pokémon can't
+  # have a title.
+  # @param value [Symbol, String, GameData::Ribbon, nil] the ribbon to affix,
+  #   or nil to remove the title
+  def affixed_ribbon=(value)
+    if value.nil?
+      @affixed_ribbon = nil
+      return
+    end
+    ribbon_data = GameData::Ribbon.try_get(value)
+    return if !ribbon_data || !ribbon_data.has_title? || shadowPokemon?
+    giveRibbon(ribbon_data.id) if !hasRibbon?(ribbon_data.id)
+    @affixed_ribbon = ribbon_data.id if hasRibbon?(ribbon_data.id)
+  end
+
+  # @return [Boolean] whether this Pokémon currently shows a title
+  def has_title?
+    return !title.empty?
+  end
+
+  # @return [String] this Pokémon's title (e.g. "the Peckish"), or "" if none
+  def title
+    return "" if !affixed_ribbon || shadowPokemon? || egg?
+    return GameData::Ribbon.get(@affixed_ribbon).title(self)
+  end
+
+  # This Pokémon's name together with its title, e.g. "Pikachu the Peckish",
+  # or "Red's Pikachu" for a prefix title. Just the name if it has no title.
+  # @param with_color [Boolean] whether to wrap it in Settings::TITLE_TEXT_COLOR
+  # @param name [String] the name to use (e.g. an Illusion disguise's name)
+  # @return [String]
+  def name_with_title(with_color = true, name = self.name)
+    title_text = title
+    return name if title_text.empty?
+    # The two orders are separate messages so that translations can reorder
+    # each of them; {1} is always the name and {2} the title.
+    if GameData::Ribbon.get(@affixed_ribbon).prefix_title?
+      ret = _INTL("{2} {1}", name, title_text)
+    else
+      ret = _INTL("{1} {2}", name, title_text)
+    end
+    ret = Settings::TITLE_TEXT_COLOR + ret + "</c2>" if with_color && Settings::TITLE_TEXT_COLOR
+    return ret
   end
 
   #=============================================================================
@@ -1165,6 +1382,7 @@ class Pokemon
     ret.first_moves = @first_moves.clone
     ret.owner       = @owner.clone
     ret.ribbons     = @ribbons.clone
+    ret.scale       = scale
     return ret
   end
 
@@ -1195,6 +1413,8 @@ class Pokemon
     reset_moves if withMoves
     @first_moves      = []
     @ribbons          = []
+    @affixed_ribbon   = nil
+    @scale            = Pokemon.generate_scale
     @cool             = 0
     @beauty           = 0
     @cute             = 0

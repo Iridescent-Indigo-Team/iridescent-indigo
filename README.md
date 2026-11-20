@@ -9,3 +9,6 @@ See [docs/LOCALIZATION.md](docs/LOCALIZATION.md) to translate the game.
 
 See [docs/FOLLOWING_POKEMON.md](docs/FOLLOWING_POKEMON.md) for the Pokémon that
 follows the player.
+
+See [docs/MARKS.md](docs/MARKS.md) for marks, titles, Pokémon sizes and the
+player's birthday.

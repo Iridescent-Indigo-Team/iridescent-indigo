@@ -382,6 +382,49 @@ module Settings
   OVERWORLD_WEATHER_SETS_BATTLE_TERRAIN    = (MECHANICS_GENERATION >= 8)
 
   #-----------------------------------------------------------------------------
+  # Marks and titles
+  #-----------------------------------------------------------------------------
+
+  # The odds (1 in N) of each kind of mark appearing on a wild Pokémon. Each
+  # roll checks these in order and stops at the first success. A Pokémon gets at
+  # most one mark this way (size marks aside). Weather marks need overworld
+  # weather, the Fishing Mark a fishing encounter, the Curry Mark an encounter
+  # lured by Sweet Scent/Honey, and the Destiny Mark the player's birthday.
+  WILD_MARK_ODDS = {
+    :rare        => 1000,
+    :personality => 100,
+    :uncommon    => 50,
+    :weather     => 50,
+    :time        => 50,
+    :fishing     => 25,
+    :curry       => 25,
+    :destiny     => 25
+  }
+  # How many times the wild mark roll is made (the Mark Charm adds more).
+  WILD_MARK_ROLLS                 = 1
+  # How many extra wild mark rolls the Mark Charm gives.
+  MARK_CHARM_EXTRA_ROLLS          = 2
+  # Whether wild Pokémon of the smallest/largest possible size always have the
+  # Mini/Jumbo Mark.
+  GUARANTEED_WILD_SIZE_MARKS      = true
+  # Whether a wild Pokémon generated with a mark has that mark's title affixed,
+  # so it is introduced with its title in battle (as in the main series).
+  AFFIX_WILD_MARK_TITLES          = true
+  # Whether a Pokémon with no title affixed automatically affixes the title of
+  # the next ribbon/mark it gets.
+  AUTO_AFFIX_TITLES               = false
+  # The odds (1 in N) of a party Pokémon getting a party mark (Partner,
+  # Itemfinder, Gourmand) when its trigger happens. The Mark Charm halves it.
+  PARTY_MARK_ODDS                 = 50
+  # How many steps the player must take between Partner Mark checks.
+  PARTNER_MARK_STEPS              = 1000
+  # The minimum happiness a party Pokémon needs to get the Partner Mark.
+  PARTNER_MARK_HAPPINESS          = 200
+  # The colour of a Pokémon's name and title in battle messages, as an
+  # "<c2=...>" colour code (see MessageConfig); nil for the normal text colour.
+  TITLE_TEXT_COLOR                = nil
+
+  #-----------------------------------------------------------------------------
   # Game Switches
   #-----------------------------------------------------------------------------
 
@@ -399,6 +442,9 @@ module Settings
   # and prevents the player from accessing Pokémon storage via the party screen
   # with it.
   DISABLE_BOX_LINK_SWITCH   = 35
+  # The Game Switch which, while ON, stops wild Pokémon from being generated
+  # with marks (e.g. for scripted encounters).
+  NO_WILD_MARKS_SWITCH      = 38
 
   #-----------------------------------------------------------------------------
   # Overworld animation IDs

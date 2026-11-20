@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/items.entry.schema.json",
+  "id": "MARKCHARM",
+  "real_name": "Mark Charm",
+  "real_name_plural": "Mark Charms",
+  "pocket": 8,
+  "price": 0,
+  "flags": ["KeyItem"],
+  "real_description": "Having one of these mysterious charms makes it more likely you’ll encounter a Pokémon with a mark."
+}

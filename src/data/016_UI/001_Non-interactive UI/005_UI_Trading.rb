@@ -217,7 +217,12 @@ end
 # language is the language ID of the received Pokémon's original trainer (see
 # Pokemon::Owner#language), e.g. 5 for a German Pokémon; nil means the game's
 # language.
-def pbStartTrade(pokemonIndex, newpoke, nickname, trainerName, trainerGender = 0, language = nil)
+# title is the ID of a ribbon/mark the received Pokémon has and shows the title
+# of, e.g. title: :RAREMARK; scale is its size (0-255).
+# @example
+#   pbStartTrade(pbGet(1), :HAUNTER, "Spooky", "Ricky", 0, title: :DUSKMARK, scale: 255)
+def pbStartTrade(pokemonIndex, newpoke, nickname, trainerName, trainerGender = 0, language = nil,
+                 title: nil, scale: nil)
   $stats.trade_count += 1
   myPokemon = $player.party[pokemonIndex]
   yourPokemon = nil
@@ -234,6 +239,11 @@ def pbStartTrade(pokemonIndex, newpoke, nickname, trainerName, trainerGender = 0
   end
   yourPokemon.name          = nickname
   yourPokemon.obtain_method = 2   # traded
+  yourPokemon.scale         = scale if scale
+  if title
+    raise _INTL("Ribbon/mark {1} does not exist.", title) if !GameData::Ribbon.exists?(title)
+    yourPokemon.affixed_ribbon = title
+  end
   yourPokemon.reset_moves if resetmoves
   yourPokemon.record_first_moves
   pbFadeOutInWithMusic do

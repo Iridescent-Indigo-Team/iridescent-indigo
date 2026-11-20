@@ -180,6 +180,17 @@ def pbGetMonthName(month)
           _INTL("December")][month - 1]
 end
 
+# @param month [Integer] 1-12
+# @param year [Integer, nil] the year (for February); a leap year if nil
+# @return [Integer] the number of days in the month
+def pbDaysInMonth(month, year = nil)
+  if month == 2
+    return 29 if year.nil? || (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+    return 28
+  end
+  return [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][month - 1]
+end
+
 def pbGetAbbrevMonthName(month)
   return [_INTL("Jan."),
           _INTL("Feb."),
@@ -306,4 +317,42 @@ end
 # 0 is Aries, 11 is Pisces.
 def zodiacComplements(sign)
   return [(sign + 1) % 12, (sign + 11) % 12]
+end
+
+#===============================================================================
+# Player's birthday
+#===============================================================================
+# Asks the player for the month and day of their birthday and stores it (see
+# Player#set_birthday). Call it from an event, e.g. in the game's intro.
+# @param can_cancel [Boolean] whether the player can back out of it
+# @return [Boolean] whether a birthday was set
+def pbSetPlayerBirthday(can_cancel = false)
+  months = (1..12).map { |m| pbGetMonthName(m) }
+  loop do
+    month = pbMessage(_INTL("Which month is your birthday in?"), months, (can_cancel) ? -1 : 0)
+    return false if month < 0
+    month += 1
+    params = ChooseNumberParams.new
+    params.setRange(1, pbDaysInMonth(month))
+    params.setInitialValue(1)
+    params.setCancelValue((can_cancel) ? 0 : 1)
+    day = pbMessageChooseNumber(_INTL("Which day in {1} is your birthday?", pbGetMonthName(month)), params)
+    return false if day <= 0
+    next if !pbConfirmMessage(_INTL("So your birthday is {1}. Is that right?",
+                                       _ISPRINTF("{1} {2:d}", pbGetMonthName(month), day)))
+    $player.set_birthday(month, day)
+    return true
+  end
+end
+
+# @return [Boolean] whether today is the player's birthday
+def pbPlayerBirthday?
+  return $player&.birthday? || false
+end
+
+# @return [String] the player's birthday as text (e.g. "March 14"), or "" if
+#   it hasn't been set
+def pbPlayerBirthdayText
+  return "" if !$player&.birthday_set?
+  return _ISPRINTF("{1} {2:d}", pbGetMonthName($player.birthday_month), $player.birthday_day)
 end
