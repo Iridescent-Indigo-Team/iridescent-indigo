@@ -13,7 +13,7 @@ import subprocess
 import tempfile
 import unittest
 
-from tiledc import atmosphere, autotiles, config, connections, events, pbsmaps
+from tiledc import atmosphere, autotiles, config, connections, events, pbsmaps, stairs
 from tiledc.compiler import Project, compile_map, compile_project
 from tiledc.config import Paths
 from tiledc.problems import Problems
@@ -434,6 +434,118 @@ class AtmosphereTest(unittest.TestCase):
     @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
     def test_runtime_renderer(self):
         proc = subprocess.run(["ruby", os.path.join(HERE, "renderer_test.rb")], stdout=subprocess.PIPE,
+                              stderr=subprocess.STDOUT)
+        self.assertEqual(proc.returncode, 0, proc.stdout.decode("utf-8", "replace"))
+
+
+class StairsTest(unittest.TestCase):
+    """Validator rules for sideways stairs (tiledc/stairs.py)."""
+
+    ## gids in tileset "a" (local id + 1)
+    WALL, LEFT, RIGHT, LEFT_BLOCKED = 4, 9, 10, 11
+
+    def setUp(self):
+        self.box = Sandbox()
+        wall = {"block_down": True, "block_left": True, "block_right": True, "block_up": True}
+        self.box.tileset("a", 16, {3: wall, 5: {"terrain_tag": "Water"},
+                                   8: {"terrain_tag": "StairsLeft"}, 9: {"terrain_tag": "StairsRight"},
+                                   10: {"terrain_tag": "StairsLeft", "block_left": True}})
+
+    def tearDown(self):
+        self.box.cleanup()
+
+    def flight(self, cells, width=5, height=4, objects=()):
+        """Compiles a map with the given {(x, y): gid} tiles. @return (result, problems)"""
+        layer = [0] * (width * height)
+        for (x, y), gid in cells.items():
+            layer[x + y * width] = gid
+        self.box.map(1, "Town", width, height, [layer], objects=objects)
+        result, problems, _ = self.box.compile(1)
+        return result, problems
+
+    def stair_problems(self, problems, warnings):
+        return [str(p) for p in problems.items if p.warning == warnings and
+                re.search(r"stair|flight|landing|boulder", p.message)]
+
+    def left_flight(self):
+        return {(3, 3): self.LEFT, (2, 2): self.LEFT, (1, 1): self.LEFT}
+
+    def test_valid_flights(self):
+        cells = self.left_flight()
+        result, problems = self.flight(cells)
+        self.assertEqual(self.stair_problems(problems, False) + self.stair_problems(problems, True), [])
+        self.assertEqual(result.stair_map.stairs, {(3, 3): "left", (2, 2): "left", (1, 1): "left"})
+        cells = {(1, 3): self.RIGHT, (2, 2): self.RIGHT, (3, 1): self.RIGHT}
+        _, problems = self.flight(cells)
+        self.assertEqual(self.stair_problems(problems, False) + self.stair_problems(problems, True), [])
+
+    def test_terrain_tags_from_the_engine(self):
+        tags = TerrainTags()
+        self.assertEqual(tags.number("StairsLeft"), 18)
+        self.assertEqual(tags.number("StairsRight"), 19)
+
+    def test_one_tile_flight(self):
+        _, problems = self.flight({(2, 2): self.LEFT})
+        self.assertTrue(any("walked like flat ground" in m for m in self.stair_problems(problems, True)))
+
+    def test_blocked_stair(self):
+        cells = self.left_flight()
+        cells[(2, 2)] = self.LEFT_BLOCKED
+        _, problems = self.flight(cells)
+        self.assertTrue(any("blocks walking left or right" in m for m in self.stair_problems(problems, False)))
+
+    def test_missing_landing(self):
+        cells = self.left_flight()
+        cells[(4, 3)] = self.WALL
+        _, problems = self.flight(cells)
+        warnings = self.stair_problems(problems, True)
+        self.assertTrue(any("bottom end of this flight has no landing" in m for m in warnings), warnings)
+        self.assertFalse(any("top end" in m for m in warnings), warnings)
+
+    def test_flight_end_at_the_map_edge(self):
+        _, problems = self.flight({(4, 3): self.LEFT, (3, 2): self.LEFT})
+        self.assertEqual(self.stair_problems(problems, True), [])
+
+    def test_spawn_on_stairs(self):
+        spawn = {"class": "Spawn", "id": 1, "name": "door", "x": 64, "y": 64, "width": 32, "height": 32}
+        _, problems = self.flight(self.left_flight(), objects=[spawn])
+        self.assertTrue(any("spawn 'door'" in m for m in self.stair_problems(problems, False)))
+
+    def test_boulder_on_stairs(self):
+        shutil.copytree(os.path.join(config.ROOT, "src", "tiled", "templates"), self.box.paths.templates)
+        on = {"id": 1, "template": "../templates/strength_boulder.tx", "x": 64, "y": 64}
+        off = {"id": 2, "template": "../templates/strength_boulder.tx", "x": 0, "y": 96}
+        _, problems = self.flight(self.left_flight(), objects=[on, off])
+        errors = [m for m in self.stair_problems(problems, False) if "boulder" in m]
+        self.assertEqual(len(errors), 1, errors)
+
+    def test_start_position_on_stairs(self):
+        result, _ = self.flight(self.left_flight())
+        problems = Problems()
+        stairs.check_start({"start_map_id": 1, "start_x": 2, "start_y": 2}, [result], problems, "system.json")
+        self.assertTrue(any("start position" in m for m in messages(problems)))
+        problems = Problems()
+        stairs.check_start({"start_map_id": 1, "start_x": 0, "start_y": 3}, [result], problems, "system.json")
+        self.assertEqual(messages(problems), [])
+
+    @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
+    def test_route_commands_round_trip(self):
+        script = ("require '%s'; require '%s'; f = TiledRmxp::Factory.new(lambda { |m, s| [1, 0, 0, 2] }); "
+                  "r = f.route(f.stairs_off, f.move_left, f.stairs_on); "
+                  "puts r.list[0..2].map { |c| [c.code, c.parameters[0]].inspect }; "
+                  "d = RPGDumper.new(name: 'test', maps: {}); puts r.list[0..2].map { |c| d.move(c, 0) }.join(',')"
+                  % (os.path.join(config.RUBY_DIR, "tiled_rmxp.rb"),
+                     os.path.join(config.ROOT, "lib", "eevee", "rmxp", "rpg_dumper.rb")))
+        proc = subprocess.run(["ruby", "-e", script], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        out = proc.stdout.decode("utf-8", "replace")
+        self.assertEqual(proc.returncode, 0, out)
+        self.assertIn('[45, "stairs_off"]', out)
+        self.assertIn('[45, "stairs_on"]', out)
+        self.assertIn("stairs_off,move_left,stairs_on", out)
+
+    @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
+    def test_runtime_resolver(self):
+        proc = subprocess.run(["ruby", os.path.join(HERE, "stairs_test.rb")], stdout=subprocess.PIPE,
                               stderr=subprocess.STDOUT)
         self.assertEqual(proc.returncode, 0, proc.stdout.decode("utf-8", "replace"))
 

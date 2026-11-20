@@ -139,11 +139,26 @@ class Game_Player < Game_Character
   end
 
   def move_generic(dir, turn_enabled = true)
+    step = resolve_step(dir)
+    if step.nil?   # Up/down on sideways stairs does nothing (no turn, no bump)
+      $game_temp.encounter_triggered = false
+      return
+    end
     turn_generic(dir, true) if turn_enabled
     if !$game_temp.encounter_triggered
-      if can_move_in_direction?(dir)
-        x_offset = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
-        y_offset = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
+      if step != :blocked && can_step_to?(step[0], step[1], dir)
+        x_offset, y_offset = step
+        # Diagonal step along a flight of sideways stairs. Walking, running
+        # and cycling all work; ledges, waterfalls and surfing don't apply.
+        if x_offset != 0 && y_offset != 0
+          turn_generic(dir, true)
+          if !$game_temp.encounter_triggered
+            step_to(x_offset, y_offset)
+            add_move_distance_to_stats(1)
+          end
+          $game_temp.encounter_triggered = false
+          return
+        end
         # Jump over ledges
         if pbFacingTerrainTag.ledge
           if jumpForward(2)
@@ -161,13 +176,8 @@ class Game_Player < Game_Character
         # General movement
         turn_generic(dir, true)
         if !$game_temp.encounter_triggered
-          @move_initial_x = @x
-          @move_initial_y = @y
-          @x += x_offset
-          @y += y_offset
-          @move_timer = 0.0
+          step_to(x_offset, y_offset)
           add_move_distance_to_stats(x_offset.abs + y_offset.abs)
-          increase_steps
         end
       elsif !check_event_trigger_touch(dir)
         bump_into_object
@@ -201,9 +211,11 @@ class Game_Player < Game_Character
 
   def pbFacingEvent(ignoreInterpreter = false)
     return nil if $game_system.map_interpreter.running? && !ignoreInterpreter
-    # Check the tile in front of the player for events
-    new_x = @x + (@direction == 6 ? 1 : @direction == 4 ? -1 : 0)
-    new_y = @y + (@direction == 2 ? 1 : @direction == 8 ? -1 : 0)
+    # Check the tile in front of the player for events (diagonally ahead when
+    # on sideways stairs)
+    step_x, step_y = step_offset
+    new_x = @x + step_x
+    new_y = @y + step_y
     return nil if !$game_map.valid?(new_x, new_y)
     $game_map.events.each_value do |event|
       next if !event.at_coordinate?(new_x, new_y)
@@ -212,8 +224,8 @@ class Game_Player < Game_Character
     end
     # If the tile in front is a counter, check one tile beyond that for events
     if $game_map.counter?(new_x, new_y)
-      new_x += (@direction == 6 ? 1 : @direction == 4 ? -1 : 0)
-      new_y += (@direction == 2 ? 1 : @direction == 8 ? -1 : 0)
+      new_x += step_x
+      new_y += step_y
       $game_map.events.each_value do |event|
         next if !event.at_coordinate?(new_x, new_y)
         next if event.jumping? || event.over_trigger?
@@ -230,15 +242,17 @@ class Game_Player < Game_Character
     return $game_map.terrain_tag(facing[1], facing[2])
   end
 
-  # Passable Determinants
-  #     x : x-coordinate
-  #     y : y-coordinate
-  #     d : direction (0, 2, 4, 6, 8)
-  #         * 0 = Determines if all directions are impassable (for jumping)
-  def passable?(x, y, d, strict = false)
-    # Get new coordinates
-    new_x = x + (d == 6 ? 1 : d == 4 ? -1 : 0)
-    new_y = y + (d == 2 ? 1 : d == 8 ? -1 : 0)
+  # Passable Determinants (see Game_Character#passable_to?). The player can
+  # also step past the map's edge onto a connected map.
+  # @param x [Integer] start x-coordinate
+  # @param y [Integer] start y-coordinate
+  # @param new_x [Integer] destination x-coordinate
+  # @param new_y [Integer] destination y-coordinate
+  # @param d [Integer] direction (0, 2, 4, 6, 8); 0 determines if all
+  #   directions are impassable (for jumping)
+  # @param strict [Boolean] treat one-way tiles as fully blocked
+  # @return [Boolean]
+  def passable_to?(x, y, new_x, new_y, d, strict = false)
     # If coordinates are outside of map
     return false if !$game_map.validLax?(new_x, new_y)
     if !$game_map.valid?(new_x, new_y)
@@ -351,9 +365,10 @@ class Game_Player < Game_Character
     result = false
     # If event is running
     return result if $game_system.map_interpreter.running?
-    # Calculate front event coordinates
-    new_x = @x + (@direction == 6 ? 1 : @direction == 4 ? -1 : 0)
-    new_y = @y + (@direction == 2 ? 1 : @direction == 8 ? -1 : 0)
+    # Calculate front event coordinates (diagonally ahead on sideways stairs)
+    step_x, step_y = step_offset
+    new_x = @x + step_x
+    new_y = @y + step_y
     return false if !$game_map.valid?(new_x, new_y)
     # All event loops
     $game_map.events.each_value do |event|
@@ -368,8 +383,8 @@ class Game_Player < Game_Character
     # If fitting event is not found
     if result == false && $game_map.counter?(new_x, new_y)
       # Calculate coordinates of 1 tile further away
-      new_x += (@direction == 6 ? 1 : @direction == 4 ? -1 : 0)
-      new_y += (@direction == 2 ? 1 : @direction == 8 ? -1 : 0)
+      new_x += step_x
+      new_y += step_y
       return false if !$game_map.valid?(new_x, new_y)
       # All event loops
       $game_map.events.each_value do |event|
@@ -390,8 +405,7 @@ class Game_Player < Game_Character
     result = false
     return result if $game_system.map_interpreter.running?
     # All event loops
-    x_offset = (dir == 4) ? -1 : (dir == 6) ? 1 : 0
-    y_offset = (dir == 8) ? -1 : (dir == 2) ? 1 : 0
+    x_offset, y_offset = step_offset(dir)
     $game_map.events.each_value do |event|
       next if ![1, 2].include?(event.trigger)   # Player touch, event touch
       # If event coordinates and triggers are consistent
@@ -431,7 +445,11 @@ class Game_Player < Game_Character
   def update_command_new
     dir = Input.dir4
     if $PokemonGlobal.forced_movement?
-      move_forward
+      if stairs_aware? && on_stairs?
+        pbEndForcedMovement   # Forced movement stops on reaching stairs
+      else
+        move_forward
+      end
     elsif !pbMapInterpreterRunning? && !$game_temp.message_window_showing &&
           !$game_temp.in_mini_update && !$game_temp.in_menu
       # Move player in the direction the directional button is being pressed

@@ -160,7 +160,9 @@ EventHandlers.add(:on_step_taken, :auto_move_player,
     next if !$scene.is_a?(Scene_Map)
     next if event != $game_player
     currentTag = $game_player.pbTerrainTag
-    if currentTag.waterfall_crest || currentTag.waterfall ||
+    if $game_player.stairs_aware? && $game_player.on_stairs?
+      pbEndForcedMovement   # Ice sliding etc. ends upon reaching a flight
+    elsif currentTag.waterfall_crest || currentTag.waterfall ||
        $PokemonGlobal.descending_waterfall || $PokemonGlobal.ascending_waterfall
       pbTraverseWaterfall
     elsif currentTag.ice || $PokemonGlobal.ice_sliding
@@ -539,9 +541,23 @@ end
 #===============================================================================
 # Player/event movement in the field
 #===============================================================================
+# Stops ice sliding and waterfall traversal, e.g. when the player reaches a
+# flight of sideways stairs.
+def pbEndForcedMovement
+  return if !$PokemonGlobal.forced_movement?
+  if $PokemonGlobal.descending_waterfall || $PokemonGlobal.ascending_waterfall
+    $PokemonGlobal.descending_waterfall = false
+    $PokemonGlobal.ascending_waterfall  = false
+    $game_player.through = false
+  end
+  $PokemonGlobal.ice_sliding = false
+  $game_player.walk_anime = true
+end
+
 def pbSlideOnIce
   if !$DEBUG || !Input.press?(Input::CTRL)
-    if $game_player.pbTerrainTag.ice && $game_player.can_move_in_direction?($game_player.direction)
+    if $game_player.pbTerrainTag.ice && !$game_player.on_stairs? &&
+       $game_player.can_move_in_direction?($game_player.direction)
       $PokemonGlobal.ice_sliding = true
       $game_player.straighten
       $game_player.walk_anime = false
@@ -566,7 +582,8 @@ def pbTurnTowardEvent(event, otherEvent)
   sx += (event.width - otherEvent.width) / 2.0
   sy -= (event.height - otherEvent.height) / 2.0
   return if sx == 0 && sy == 0
-  if sx.abs > sy.abs
+  # On sideways stairs, characters only face left or right
+  if sx.abs > sy.abs || (sx != 0 && event.stairs_aware? && event.on_stairs?)
     (sx > 0) ? event.turn_left : event.turn_right
   else
     (sy > 0) ? event.turn_up : event.turn_down

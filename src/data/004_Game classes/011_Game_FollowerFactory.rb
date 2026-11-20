@@ -275,8 +275,11 @@ class Game_FollowerFactory
     if Input.trigger?(Input::USE) && !$game_temp.in_menu && !$game_temp.in_battle &&
        !$game_player.move_route_forcing && !$game_temp.message_window_showing &&
        !pbMapInterpreterRunning?
-      # Get position of tile facing the player
-      facing_tile = $map_factory.getFacingTile
+      # Get position of tile facing the player (diagonally ahead on sideways
+      # stairs)
+      step_x, step_y = $game_player.step_offset
+      facing_tile = $map_factory.getRealTilePos($game_player.map.map_id,
+                                                $game_player.x + step_x, $game_player.y + step_y)
       # Assumes player is 1x1 tile in size
       each_follower do |event, follower|
         next if !facing_tile || event.map.map_id != facing_tile[0] ||

@@ -36,6 +36,7 @@
         ["Trainer Battle", 'script("TrainerBattle.start(:YOUNGSTER, \\"Ben\\")")'],
         ["Give Item", 'script("pbReceiveItem(:POTION)")'],
         ["Move Route (this event)", "*move_route(\n  this,\n  move_down,\n  move_down,\n)"],
+        ["Move Route (ignore sideways stairs)", "*move_route(\n  this,\n  stairs_off,\n  move_left,\n  stairs_on,\n)"],
         ["Wait for Move Completion", "wait_completion"],
         ["Wait", "wait(20)"],
         ["Play SE", 'play_se(audio(name: "Door exit"))'],
