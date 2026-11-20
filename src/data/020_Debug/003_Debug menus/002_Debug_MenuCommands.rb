@@ -1142,6 +1142,23 @@ MenuHandlers.add(:debug_menu, :random_id, {
   }
 })
 
+MenuHandlers.add(:debug_menu, :set_birthday, {
+  "name"        => _INTL("Set player birthday"),
+  "parent"      => :player_menu,
+  "description" => _INTL("Set the month and day of the player's birthday (used for the Destiny Mark)."),
+  "effect"      => proc {
+    if $player.birthday_set? &&
+       pbConfirmMessage(_INTL("The player's birthday is {1}. Clear it?", pbPlayerBirthdayText))
+      $player.clear_birthday
+      pbMessage(_INTL("The player's birthday was cleared."))
+      next
+    end
+    if pbSetPlayerBirthday(true)
+      pbMessage(_INTL("The player's birthday was set to {1}.", pbPlayerBirthdayText))
+    end
+  }
+})
+
 #===============================================================================
 # PBS file editors
 #===============================================================================

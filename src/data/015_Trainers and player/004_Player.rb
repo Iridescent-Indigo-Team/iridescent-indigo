@@ -73,6 +73,67 @@ class Player < Trainer
     return GameData::PlayerMetadata.get(@character_ID || 1).trainer_type
   end
 
+  #=============================================================================
+  # Birthday
+  #=============================================================================
+
+  # @return [Integer, nil] the month of the player's birthday (1-12), or nil
+  #   if it hasn't been set
+  attr_reader :birthday_month
+  # @return [Integer, nil] the day of the player's birthday (1-31), or nil if
+  #   it hasn't been set
+  attr_reader :birthday_day
+
+  # Sets the player's birthday (see pbSetPlayerBirthday to ask the player).
+  # @param month [Integer] 1-12
+  # @param day [Integer] 1-31 (limited to the length of the month)
+  def set_birthday(month, day)
+    validate month => Integer, day => Integer
+    month = month.clamp(1, 12)
+    @birthday_month = month
+    @birthday_day   = day.clamp(1, pbDaysInMonth(month))
+  end
+
+  # Forgets the player's birthday.
+  def clear_birthday
+    @birthday_month = nil
+    @birthday_day   = nil
+  end
+
+  # @return [Boolean] whether the player's birthday has been set
+  def birthday_set?
+    return !@birthday_month.nil? && !@birthday_day.nil?
+  end
+
+  # Whether a date is the player's birthday. A birthday on 29 February counts
+  # on 28 February in years that aren't leap years.
+  # @param time [Time] the date to check (the current date by default)
+  # @return [Boolean]
+  def birthday?(time = nil)
+    return false if !birthday_set?
+    time ||= pbGetTimeNow
+    return false if time.mon != @birthday_month
+    return true if time.day == @birthday_day
+    return @birthday_month == 2 && @birthday_day == 29 && time.day == 28 &&
+           pbDaysInMonth(2, time.year) == 28
+  end
+
+  # @return [Boolean] whether today is the player's birthday and it has already
+  #   been celebrated this year (see #celebrate_birthday)
+  def birthday_celebrated?
+    return birthday? && @birthday_celebrated_year == pbGetTimeNow.year
+  end
+
+  # Marks this year's birthday as celebrated, for events that should only
+  # happen once per birthday (e.g. giving the Birthday Ribbon).
+  # @return [Boolean] true if it is the player's birthday and it hadn't been
+  #   celebrated yet this year, false otherwise
+  def celebrate_birthday
+    return false if !birthday? || birthday_celebrated?
+    @birthday_celebrated_year = pbGetTimeNow.year
+    return true
+  end
+
   # Sets the player's money. It can not exceed {Settings::MAX_MONEY}.
   # @param value [Integer] new money value
   def money=(value)

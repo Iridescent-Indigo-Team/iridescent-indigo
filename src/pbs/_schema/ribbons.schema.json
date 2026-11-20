@@ -28,6 +28,18 @@
                   "pattern": "^[^#]*$",
                   "description": "Text (the rest of the line, written as is)."
                 },
+                "real_title": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "real_prefix_title": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+                "previous_ranks": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^(?![0-9])\\w+$",
+                    "description": "An id: letters, digits and underscores, not starting with a digit."
+                  },
+                  "description": "PBS key: PreviousRanks"
+                },
+                "mark": {"type": "boolean", "description": "PBS key: IsMark"},
                 "flags": {
                   "type": "array",
                   "items": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},

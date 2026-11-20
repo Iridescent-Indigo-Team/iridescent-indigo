@@ -36,6 +36,7 @@ STORAGE_CREATOR_NAME = 27
 ITEM_PORTION_NAMES = 28
 ITEM_PORTION_NAME_PLURALS = 29
 POKEMON_NICKNAMES = 30
+RIBBON_TITLES = 31
 ## Not a text table: the language's grammar and number settings
 ## (MessageTypes::LOCALE_DATA in the engine).
 LOCALE_DATA = 99

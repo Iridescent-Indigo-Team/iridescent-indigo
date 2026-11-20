@@ -14,6 +14,7 @@ than any English name of the same kind, whitespace and format code changes.
 """
 
 import os
+import re
 from collections import Counter, defaultdict
 
 from . import codes
@@ -22,6 +23,8 @@ from .fonts import load_metrics
 
 ## Sound values allowed in the "sound" column.
 SOUNDS = {"", "vowel", "consonant", "special"}
+## Tokens in ribbon/mark titles that the engine replaces (see GameData::Ribbon#title).
+_TITLE_TOKEN_RE = re.compile(r"/(?:Owner|Player|Variable_\d+)/")
 
 
 class Problem:
@@ -109,6 +112,16 @@ class Checker:
                     parts.append("extra " + " ".join(extra))
                 what = "control codes" if strict == codes.REQUIRED else "format codes"
                 report(path, line, key, "%s differ from the English: %s" % (what, "; ".join(parts)))
+        # Title tokens (ribbon/mark titles: /Owner/, /Player/, /Variable_N/)
+        a = Counter(_TITLE_TOKEN_RE.findall(english))
+        b = Counter(_TITLE_TOKEN_RE.findall(text))
+        if a != b:
+            parts = []
+            if a - b:
+                parts.append("missing " + " ".join(sorted((a - b).elements())))
+            if b - a:
+                parts.append("extra " + " ".join(sorted((b - a).elements())))
+            self.error(path, line, key, "title tokens differ from the English: %s" % "; ".join(parts))
         # Placeholders
         src_ph = {}
         for t in src:

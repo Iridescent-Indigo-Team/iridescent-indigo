@@ -716,6 +716,7 @@ module MessageTypes
   ITEM_PORTION_NAMES           = 28
   ITEM_PORTION_NAME_PLURALS    = 29
   POKEMON_NICKNAMES            = 30
+  RIBBON_TITLES                = 31   # Titles conferred by ribbons and marks
   # Not text: the grammar data of the language (see 003_Intl_Grammar.rb),
   # written by tools/importer/locales.
   LOCALE_DATA                  = 99

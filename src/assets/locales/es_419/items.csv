@@ -2236,3 +2236,6 @@ AURORATICKET.description,Item description,A ticket required to board the ship to
 OLDSEAMAP.name,Item name,Old Sea Map,,,,,
 OLDSEAMAP.name_plural,Item name (plural),Old Sea Maps,,,,,
 OLDSEAMAP.description,Item description,A faded sea chart that shows the way to a certain island.,,,,,
+MARKCHARM.name,Item name,Mark Charm,,,,,
+MARKCHARM.name_plural,Item name (plural),Mark Charms,,,,,
+MARKCHARM.description,Item description,Having one of these mysterious charms makes it more likely you’ll encounter a Pokémon with a mark.,,,,,

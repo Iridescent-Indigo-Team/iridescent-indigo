@@ -175,6 +175,16 @@ class Battle::Battler
     return self.pokemon
   end
 
+  # The battler's name together with its title (see Pokemon#name_with_title),
+  # as shown when it is sent out. Takes Illusion into account.
+  # @param with_color [Boolean] whether to use Settings::TITLE_TEXT_COLOR
+  # @return [String]
+  def name_with_title(with_color = true)
+    pkmn = displayPokemon
+    return name if !pkmn
+    return pkmn.name_with_title(with_color, name)
+  end
+
   def displaySpecies
     return @effects[PBEffects::Illusion].species if @effects[PBEffects::Illusion]
     return self.species

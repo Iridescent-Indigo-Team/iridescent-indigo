@@ -126,7 +126,8 @@ You can add your own columns; the tools keep them.
 | --- | --- |
 | `species.csv` | `PIKACHU.name`, `.category`, `.pokedex`, `.form_name`; forms are `VENUSAUR_1.form_name` etc. |
 | `items.csv` | `POTION.name`, `.name_plural`, `.portion_name`, `.portion_name_plural`, `.description` |
-| `moves.csv`, `abilities.csv`, `ribbons.csv` | `ID.name`, `ID.description` |
+| `moves.csv`, `abilities.csv` | `ID.name`, `ID.description` |
+| `ribbons.csv` | `ID.name`, `ID.description`, `ID.title` (ribbons and marks; see below) |
 | `types.csv`, `trainer_types.csv` | `ID.name` |
 | `trainers.csv` | `TYPE.Name[.version].name`, `.lose_text`, `.pokemonN.nickname` |
 | `map_names.csv` | `MAP003.name` |
@@ -137,6 +138,20 @@ You can add your own columns; the tools keep them.
 | `scripts.csv` | `s.` + a hash of the English; `context` lists the script lines |
 | `events/mapNNN.csv` | `evEEE.pP.cCCC` (event, page, command), `.choiceN` for Show Choices options, `.scriptN` for `_I("...")` text in scripts |
 | `events/common_events.csv` | `ceEEE.cCCC` |
+
+### Ribbon and mark titles
+
+`ribbons.csv` has an `ID.title` row for every ribbon or mark that confers a
+title (see [MARKS.md](MARKS.md)). A title is shown next to the Pokémon's name,
+for example "Pikachu the Peckish". The two ways of joining a name and a title
+are separate rows in `scripts.csv`, so each can be reordered: `{1} {2}` (name,
+then a title such as "the Peckish") and `{2} {1}` (a prefix title such as
+"/Owner/'s", then the name). In both, `{1}` is the name and `{2}` the title.
+
+Some titles contain tokens that the game replaces: `/Owner/` (the Pokémon's
+original trainer), `/Player/` (the player's name) and `/Variable_N/` (the value
+of game variable N). Keep them exactly as they are in the translation; the
+validator reports a translation whose tokens differ from the English.
 
 Event keys follow the compiled event commands, including the compiler's own
 fixes (long Show Text commands are split into 4 lines, very short first lines

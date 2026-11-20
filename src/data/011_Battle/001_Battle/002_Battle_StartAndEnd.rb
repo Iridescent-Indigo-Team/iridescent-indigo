@@ -168,18 +168,18 @@ class Battle
   # Send out all battlers at the start of battle
   #=============================================================================
   def pbStartBattleSendOut(sendOuts)
-    # "Want to battle" messages
+    # "Want to battle" messages (Pokémon are named with their titles, if any)
     if wildBattle?
       foeParty = pbParty(1)
       case foeParty.length
       when 1
-        pbDisplayPaused(_INTL("Oh! A wild {1} appeared!", foeParty[0].name))
+        pbDisplayPaused(_INTL("Oh! A wild {1} appeared!", foeParty[0].name_with_title))
       when 2
-        pbDisplayPaused(_INTL("Oh! A wild {1} and {2} appeared!", foeParty[0].name,
-                              foeParty[1].name))
+        pbDisplayPaused(_INTL("Oh! A wild {1} and {2} appeared!", foeParty[0].name_with_title,
+                              foeParty[1].name_with_title))
       when 3
-        pbDisplayPaused(_INTL("Oh! A wild {1}, {2} and {3} appeared!", foeParty[0].name,
-                              foeParty[1].name, foeParty[2].name))
+        pbDisplayPaused(_INTL("Oh! A wild {1}, {2} and {3} appeared!", foeParty[0].name_with_title,
+                              foeParty[1].name_with_title, foeParty[2].name_with_title))
       end
     else   # Trainer battle
       case @opponent.length
@@ -206,13 +206,16 @@ class Battle
         sent = sendOuts[side][i]
         case sent.length
         when 1
-          msg += _INTL("{1} sent out {2}!", t.full_name, @battlers[sent[0]].name)
+          msg += _INTL("{1} sent out {2}!", t.full_name, @battlers[sent[0]].name_with_title)
         when 2
           msg += _INTL("{1} sent out {2} and {3}!", t.full_name,
-                       @battlers[sent[0]].name, @battlers[sent[1]].name)
+                       @battlers[sent[0]].name_with_title,
+                       @battlers[sent[1]].name_with_title)
         when 3
           msg += _INTL("{1} sent out {2}, {3} and {4}!", t.full_name,
-                       @battlers[sent[0]].name, @battlers[sent[1]].name, @battlers[sent[2]].name)
+                       @battlers[sent[0]].name_with_title,
+                       @battlers[sent[1]].name_with_title,
+                       @battlers[sent[2]].name_with_title)
         end
         toSendOut.concat(sent)
       end
@@ -222,12 +225,13 @@ class Battle
         sent = sendOuts[side][0]
         case sent.length
         when 1
-          msg += _INTL("Go! {1}!", @battlers[sent[0]].name)
+          msg += _INTL("Go! {1}!", @battlers[sent[0]].name_with_title)
         when 2
-          msg += _INTL("Go! {1} and {2}!", @battlers[sent[0]].name, @battlers[sent[1]].name)
+          msg += _INTL("Go! {1} and {2}!", @battlers[sent[0]].name_with_title,
+                       @battlers[sent[1]].name_with_title)
         when 3
-          msg += _INTL("Go! {1}, {2} and {3}!", @battlers[sent[0]].name,
-                       @battlers[sent[1]].name, @battlers[sent[2]].name)
+          msg += _INTL("Go! {1}, {2} and {3}!", @battlers[sent[0]].name_with_title,
+                       @battlers[sent[1]].name_with_title, @battlers[sent[2]].name_with_title)
         end
         toSendOut.concat(sent)
       end

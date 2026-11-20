@@ -641,15 +641,22 @@ module Compiler
   end
 
   def validate_all_compiled_ribbons
-    # Get ribbon names/descriptions for translating
+    # Get ribbon names/descriptions/titles for translating
     ribbon_names = []
     ribbon_descriptions = []
+    ribbon_titles = []
     GameData::Ribbon.each do |ribbon|
+      ribbon.previous_ranks.each do |other|
+        next if GameData::Ribbon.exists?(other)
+        raise _INTL("'{1}' is not a defined ribbon ({2}, PreviousRanks).", other.to_s, ribbon.id)
+      end
       ribbon_names.push(ribbon.real_name)
       ribbon_descriptions.push(ribbon.real_description)
+      ribbon_titles.push(ribbon.real_title_text) if ribbon.has_title?
     end
     MessageTypes.setMessagesAsHash(MessageTypes::RIBBON_NAMES, ribbon_names)
     MessageTypes.setMessagesAsHash(MessageTypes::RIBBON_DESCRIPTIONS, ribbon_descriptions)
+    MessageTypes.setMessagesAsHash(MessageTypes::RIBBON_TITLES, ribbon_titles)
   end
 
   #=============================================================================
@@ -924,6 +931,14 @@ module Compiler
         if !GameData::Item.get(pkmn[:poke_ball]).is_poke_ball?
           raise _INTL("Value '{1}' isn't a defined Poké Ball.", pkmn[:poke_ball]) + "\n" + FileLineData.linereport
         end
+      end
+      # Ensure valid size scale
+      if pkmn[:scale] && pkmn[:scale] > 255
+        raise _INTL("Bad scale: {1} (must be 0-255).", pkmn[:scale]) + "\n" + FileLineData.linereport
+      end
+      # Ensure the title comes from a ribbon/mark that has one
+      if pkmn[:title] && !GameData::Ribbon.get(pkmn[:title]).has_title?
+        raise _INTL("Ribbon/mark '{1}' doesn't confer a title.", pkmn[:title]) + "\n" + FileLineData.linereport
       end
     end
   end

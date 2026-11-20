@@ -813,10 +813,14 @@ def pbSweetScent
   viewport.dispose
   pbSEStop(0.5)
   enctype = $PokemonEncounters.encounter_type
-  if !enctype || !$PokemonEncounters.encounter_possible_here? ||
-     !pbEncounter(enctype, false)
-    pbMessage(_INTL("There appears to be nothing here..."))
+  $game_temp.used_sweet_scent = true   # For the Curry Mark
+  begin
+    encountered = enctype && $PokemonEncounters.encounter_possible_here? &&
+                  pbEncounter(enctype, false)
+  ensure
+    $game_temp.used_sweet_scent = false
   end
+  pbMessage(_INTL("There appears to be nothing here...")) if !encountered
 end
 
 HiddenMoveHandlers::CanUseMove.add(:SWEETSCENT, proc { |move, pkmn, showmsg|

@@ -39,7 +39,9 @@ module GameData
       "Shiny"        => [:shininess,       "b"],
       "SuperShiny"   => [:super_shininess, "b"],
       "Shadow"       => [:shadowness,      "b"],
-      "Ball"         => [:poke_ball,       "e", :Item]
+      "Ball"         => [:poke_ball,       "e", :Item],
+      "Title"        => [:title,           "e", :Ribbon],   # Ribbon/mark given and affixed
+      "Scale"        => [:scale,           "u"]             # Size, 0-255
     }
 
     extend ClassMethodsSymbols
@@ -172,6 +174,8 @@ module GameData
           pkmn.shiny = false
         end
         pkmn.poke_ball = pkmn_data[:poke_ball] if pkmn_data[:poke_ball]
+        pkmn.scale = pkmn_data[:scale] if pkmn_data[:scale]
+        pkmn.affixed_ribbon = pkmn_data[:title] if pkmn_data[:title] && !pkmn.shadowPokemon?
         pkmn.calc_stats
       end
       return trainer

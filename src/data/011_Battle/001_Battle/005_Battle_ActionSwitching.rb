@@ -247,10 +247,10 @@ class Battle
   # Only called from def pbRecallAndReplace and Battle Arena's def pbSwitch.
   def pbMessagesOnReplace(idxBattler, idxParty)
     party = pbParty(idxBattler)
-    newPkmnName = party[idxParty].name
+    newPkmnName = party[idxParty].name_with_title
     if party[idxParty].ability == :ILLUSION && !pbCheckGlobalAbility(:NEUTRALIZINGGAS)
       new_index = pbLastInTeam(idxBattler)
-      newPkmnName = party[new_index].name if new_index >= 0 && new_index != idxParty
+      newPkmnName = party[new_index].name_with_title if new_index >= 0 && new_index != idxParty
     end
     if pbOwnedByPlayer?(idxBattler)
       opposing = @battlers[idxBattler].pbDirectOpposing

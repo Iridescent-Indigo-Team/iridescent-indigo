@@ -105,9 +105,9 @@ class Battle::Scene
     else
       fadeAnim = Animation::PlayerFade.new(@sprites, @viewport, startBattle)
     end
-    # For each battler being sent out, set the battler's sprite and create two
-    # animations (the Poké Ball moving and battler appearing from it, and its
-    # data box appearing)
+    # For each battler being sent out, set the battler's sprite and create three
+    # animations (the Poké Ball moving and battler appearing from it, the icon
+    # of the ribbon/mark whose title it has, and its data box appearing)
     sendOutAnims = []
     sendOuts.each_with_index do |b, i|
       pkmn = @battle.battlers[b[0]].effects[PBEffects::Illusion] || b[1]
@@ -124,25 +124,28 @@ class Battle::Scene
           @battle.battlers[b[0]], startBattle, i
         )
       end
+      titleAnim = Animation::BattlerTitleIcon.new(@sprites, @viewport, b[0], pkmn)
       dataBoxAnim = Animation::DataBoxAppear.new(@sprites, @viewport, b[0])
-      sendOutAnims.push([sendOutAnim, dataBoxAnim, false])
+      sendOutAnims.push([sendOutAnim, titleAnim, dataBoxAnim, false])
     end
     # Play all animations
     loop do
       fadeAnim.update
       sendOutAnims.each do |a|
-        next if a[2]
+        next if a[3]
         a[0].update
         a[1].update if a[0].animDone?
-        a[2] = true if a[1].animDone?
+        a[2].update if a[1].animDone?
+        a[3] = true if a[2].animDone?
       end
       pbUpdate
-      break if !inPartyAnimation? && sendOutAnims.none? { |a| !a[2] }
+      break if !inPartyAnimation? && sendOutAnims.none? { |a| !a[3] }
     end
     fadeAnim.dispose
     sendOutAnims.each do |a|
       a[0].dispose
       a[1].dispose
+      a[2].dispose
     end
     # Play shininess animations for shiny Pokémon
     sendOuts.each do |b|

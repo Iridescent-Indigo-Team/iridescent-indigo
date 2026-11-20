@@ -87,7 +87,9 @@ class PokemonMartAdapter
   end
 
   def addItem(item)
-    return $bag.add(item)
+    ret = $bag.add(item)
+    pbCheckGourmandMark if ret && GameData::Item.get(item).is_berry?
+    return ret
   end
 
   def removeItem(item)

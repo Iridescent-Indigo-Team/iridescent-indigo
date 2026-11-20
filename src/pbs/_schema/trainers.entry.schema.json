@@ -102,6 +102,8 @@
           "super_shininess": {"type": "boolean", "description": "PBS key: SuperShiny"},
           "shadowness": {"type": "boolean", "description": "PBS key: Shadow"},
           "poke_ball": {"type": "string", "description": "A Item id from items.txt."},
+          "title": {"type": "string", "description": "A Ribbon id from ribbons.txt."},
+          "scale": {"type": "integer", "minimum": 0, "description": "PBS key: Scale"},
           "species": {"type": "string", "description": "A Species id from pokemon.txt."},
           "level": {"type": "integer", "minimum": 1}
         },

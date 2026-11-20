@@ -868,7 +868,7 @@ MenuHandlers.add(:pokemon_debug_menu, :set_pokeball, {
 })
 
 MenuHandlers.add(:pokemon_debug_menu, :set_ribbons, {
-  "name"   => _INTL("Set ribbons"),
+  "name"   => _INTL("Set ribbons/marks"),
   "parent" => :cosmetic,
   "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
     cmd = 0
@@ -876,13 +876,18 @@ MenuHandlers.add(:pokemon_debug_menu, :set_ribbons, {
       commands = []
       ids = []
       GameData::Ribbon.each do |ribbon_data|
-        commands.push(_INTL("{1} {2}",
-                            (pkmn.hasRibbon?(ribbon_data.id)) ? "[Y]" : "[  ]", ribbon_data.name))
+        if ribbon_data.mark?
+          commands.push(_INTL("{1} {2} (mark)",
+                              (pkmn.hasRibbon?(ribbon_data.id)) ? "[Y]" : "[  ]", ribbon_data.name))
+        else
+          commands.push(_INTL("{1} {2}",
+                              (pkmn.hasRibbon?(ribbon_data.id)) ? "[Y]" : "[  ]", ribbon_data.name))
+        end
         ids.push(ribbon_data.id)
       end
       commands.push(_INTL("Give all"))
       commands.push(_INTL("Clear all"))
-      cmd = screen.pbShowCommands(_INTL("{1} ribbons.", pkmn.numRibbons), commands, cmd)
+      cmd = screen.pbShowCommands(_INTL("{1} ribbons/marks.", pkmn.numRibbons), commands, cmd)
       break if cmd < 0
       if cmd >= 0 && cmd < ids.length   # Toggle ribbon
         if pkmn.hasRibbon?(ids[cmd])
@@ -897,6 +902,59 @@ MenuHandlers.add(:pokemon_debug_menu, :set_ribbons, {
       elsif cmd == commands.length - 1   # Clear all
         pkmn.clearAllRibbons
       end
+    end
+    next false
+  }
+})
+
+MenuHandlers.add(:pokemon_debug_menu, :set_title, {
+  "name"   => _INTL("Set title"),
+  "parent" => :cosmetic,
+  "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
+    cmd = 0
+    loop do
+      commands = []
+      ids = []
+      GameData::Ribbon.each do |ribbon_data|
+        next if !ribbon_data.has_title?
+        commands.push(_INTL("{1} {2}",
+                            (pkmn.affixed_ribbon == ribbon_data.id) ? "[Y]" : "[  ]", ribbon_data.name))
+        ids.push(ribbon_data.id)
+      end
+      commands.push(_INTL("[Remove title]"))
+      title = (pkmn.has_title?) ? pkmn.name_with_title(false) : _INTL("No title.")
+      cmd = screen.pbShowCommands(title, commands, cmd)
+      break if cmd < 0
+      if cmd < ids.length
+        if pkmn.shadowPokemon?
+          screen.pbDisplay(_INTL("Shadow Pokémon can't have a title."))
+        else
+          pkmn.affixed_ribbon = ids[cmd]   # Also gives the ribbon/mark
+        end
+      else
+        pkmn.affixed_ribbon = nil
+      end
+      screen.pbRefreshSingle(pkmnid)
+    end
+    next false
+  }
+})
+
+MenuHandlers.add(:pokemon_debug_menu, :set_size, {
+  "name"   => _INTL("Set size"),
+  "parent" => :cosmetic,
+  "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
+    params = ChooseNumberParams.new
+    params.setRange(0, 255)
+    params.setDefaultValue(pkmn.scale)
+    newval = pbMessageChooseNumber(
+      _INTL("Set the Pokémon's size scale (0-255; now {1}, {2}).", pkmn.scale, pkmn.size_name), params
+    ) { screen.pbUpdate }
+    if newval != pkmn.scale
+      pkmn.scale = newval
+      screen.pbRefreshSingle(pkmnid)
+      screen.pbDisplay(_INTL("{1} is now size {2} ({3} tall).", pkmn.name, pkmn.size_name,
+                             pkmn.scaled_height_text))
     end
     next false
   }

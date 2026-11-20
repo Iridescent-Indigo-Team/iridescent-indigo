@@ -452,6 +452,7 @@ def pbPickBerry(berry, qty = 1)
     $stats.max_yield_berry_plants += 1
   end
   $bag.add(berry, qty)
+  pbCheckGourmandMark
   if qty > 1
     pbMessage("\\me[Berry get]" + _INTL("You picked the {1} \\c[1]{2}\\c[0].", qty, berry_name) + "\\wtnp[30]")
   else
