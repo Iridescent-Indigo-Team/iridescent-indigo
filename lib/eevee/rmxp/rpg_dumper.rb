@@ -1039,6 +1039,7 @@ class RPGDumper
 
   def character(id)
     return "player" if id == -1
+    return "pokemon_follower" if id == -2
     return "this" if id == 0
     return "character(" + id.to_s + ")"
   end

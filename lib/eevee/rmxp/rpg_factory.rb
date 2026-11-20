@@ -609,6 +609,12 @@ class RPGFactory
     return -1
   end
 
+  # The following Pokémon (FollowingPokemon::CHARACTER_ID in the game), e.g.
+  # for move routes and Show Animation.
+  def pokemon_follower
+    return -2
+  end
+
   def this
     return 0
   end

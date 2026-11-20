@@ -144,6 +144,15 @@ class Game_Follower < Game_Event
     pbTurnTowardEvent(self, leader)
   end
 
+  # Moves self along its leader's trail. Called when the leader starts a step
+  # or jump. The follower takes the step its leader just left (from the
+  # leader's step_history), so it copies diagonal stair steps, ledge jumps and
+  # ice slides exactly. If self has fallen too far behind to reach that tile in
+  # one step (e.g. after a forced move route), it first catches up to the
+  # previous tile of the trail.
+  # @param leader [Game_Character] the player or the follower in front
+  # @param instant [Boolean] whether to place self without walking
+  # @param leaderIsTrueLeader [Boolean] whether leader is the player
   def follow_leader(leader, instant = false, leaderIsTrueLeader = true)
     return if @move_route_forcing
     end_movement
@@ -154,30 +163,15 @@ class Game_Follower < Game_Event
       # Walk the leader's trail: the tile its last step started from. If there
       # is none (e.g. the leader was just placed), use the tile behind it.
       target = trail_target(leader)
-      if !target
-        behind_direction = 10 - leader.direction
-        target = $map_factory.getFacingTile(behind_direction, leader)
-        if target && $map_factory.getTerrainTag(target[0], target[1], target[2]).ledge
-          # Get the tile above the ledge (where the leader jumped from)
-          target = $map_factory.getFacingTileFromPos(target[0], target[1], target[2], behind_direction)
-        end
-      end
+      catch_up_along_trail(leader, target) if target && !instant
+      target = fallback_target(leader) if !target
       target = [leader.map.map_id, leader.x, leader.y] if !target
     else
       # Map transfer to an unconnected map
       target = [leader.map.map_id, leader.x, leader.y]
     end
     # Move self to the target
-    if self.map.map_id != target[0]
-      vector = $map_factory.getRelativePos(target[0], 0, 0, self.map.map_id, @x, @y)
-      @map = $map_factory.getMap(target[0])
-      # NOTE: Can't use moveto because vector is outside the boundaries of the
-      #       map, and moveto doesn't allow setting invalid coordinates.
-      @x = vector[0]
-      @y = vector[1]
-      @real_x = @x * Game_Map::REAL_RES_X
-      @real_y = @y * Game_Map::REAL_RES_Y
-    end
+    rehome_to_map(target[0])
     if instant || !maps_connected
       moveto(target[1], target[2])
     else
@@ -185,9 +179,154 @@ class Game_Follower < Game_Event
     end
   end
 
+  # Whether self could reach the tile in one leader step (a step, a diagonal
+  # stair step or a two-tile jump).
+  # @param map_id [Integer]
+  # @param x [Integer]
+  # @param y [Integer]
+  # @return [Boolean]
+  def within_one_step?(map_id, x, y)
+    return false if !$map_factory.areConnected?(map_id, self.map.map_id)
+    vector = $map_factory.getRelativePos(self.map.map_id, self.x, self.y, map_id, x, y)
+    return false if !vector
+    dx = vector[0].abs
+    dy = vector[1].abs
+    return (dx <= 1 && dy <= 1) || (dx == 0 && dy <= 2) || (dy == 0 && dx <= 2)
+  end
+
+  # Moves self out of the way if something else is standing on its tile: an
+  # NPC that walked into it, a boulder pushed onto it, or the player (moved
+  # there by a move route). Self steps to a free neighbouring tile, sideways
+  # first, so it never blocks anyone. Does nothing while self is busy, hidden
+  # or on sideways stairs.
+  # @return [Boolean] whether self moved
+  def resolve_overlap
+    return false if moving? || jumping? || @move_route_forcing || @transparent
+    return false if on_stairs?
+    return false if !tile_occupied?(self.map.map_id, self.x, self.y, true)
+    sidestep_directions.each do |dir|
+      dx = (dir == 6) ? 1 : (dir == 4) ? -1 : 0
+      dy = (dir == 2) ? 1 : (dir == 8) ? -1 : 0
+      new_x = self.x + dx
+      new_y = self.y + dy
+      next if !self.map.valid?(new_x, new_y)
+      next if !location_passable?(new_x, new_y, 10 - dir)
+      next if tile_occupied?(self.map.map_id, new_x, new_y)
+      next if stairs_at(new_x, new_y)
+      move_through(dir)
+      return true
+    end
+    return false
+  end
+
+  # A free tile next to leader, on leader's map, that self could stand on: one
+  # the leader could step to in direction dir, that isn't a ledge or sideways
+  # stairs and that nobody else stands on.
+  # @param leader [Game_Character]
+  # @param dir [Integer] direction from leader to the tile
+  # @param used_tiles [Array<Array<Integer>>] [x, y] tiles that count as taken
+  # @return [Array<Integer>, nil] [x, y], or nil if the tile isn't free
+  def spot_beside(leader, dir, used_tiles = [])
+    map = leader.map
+    dx = (dir == 6) ? 1 : (dir == 4) ? -1 : 0
+    dy = (dir == 2) ? 1 : (dir == 8) ? -1 : 0
+    x = leader.x + dx
+    y = leader.y + dy
+    return nil if !map.valid?(x, y) || used_tiles.include?([x, y])
+    return nil if !map.passable?(leader.x, leader.y, dir) || !map.passable?(x, y, 10 - dir)
+    tag = map.terrain_tag(x, y)
+    return nil if tag.ledge || tag.stairs?
+    return nil if tile_occupied?(map.map_id, x, y)
+    return [x, y]
+  end
+
+  # Whether another character (not self) stands on a tile: the player, or a
+  # visible map event that isn't "through".
+  # @param map_id [Integer]
+  # @param x [Integer]
+  # @param y [Integer]
+  # @param include_player [Boolean] whether the player counts
+  # @return [Boolean]
+  def tile_occupied?(map_id, x, y, include_player = true)
+    if include_player && $game_player.map.map_id == map_id &&
+       $game_player.x == x && $game_player.y == y
+      return true
+    end
+    map = (map_id == self.map.map_id) ? self.map : $map_factory.getMapNoAdd(map_id)
+    return false if !map
+    map.events.each_value do |event|
+      next if event == self || event.through || !event.at_coordinate?(x, y)
+      next if event.character_name == "" && event.tile_id <= 0
+      return true
+    end
+    return false
+  end
+
   #-----------------------------------------------------------------------------
 
   private
+
+  # Moves self onto another (connected) map without changing where it is on
+  # screen. Coordinates may be outside the new map's bounds until the step that
+  # crosses the edge finishes.
+  # @param map_id [Integer]
+  def rehome_to_map(map_id)
+    return if self.map.map_id == map_id
+    vector = $map_factory.getRelativePos(map_id, 0, 0, self.map.map_id, @x, @y)
+    @map = $map_factory.getMap(map_id)
+    # NOTE: Can't use moveto because vector is outside the boundaries of the
+    #       map, and moveto doesn't allow setting invalid coordinates.
+    @x = vector[0]
+    @y = vector[1]
+    @real_x = @x * Game_Map::REAL_RES_X
+    @real_y = @y * Game_Map::REAL_RES_Y
+  end
+
+  # If self can't reach target in one step, puts it on the tile of the
+  # leader's trail just before target, so that it then walks the last step
+  # rather than teleporting all the way.
+  # @param leader [Game_Character]
+  # @param target [Array<Integer>] [map_id, x, y]
+  def catch_up_along_trail(leader, target)
+    return if within_one_step?(*target)
+    previous = leader.step_history[-2]
+    return if !previous
+    return if !$map_factory.areConnected?(previous[:map_id], target[0])
+    rehome_to_map(previous[:map_id])
+    moveto(previous[:x], previous[:y])
+  end
+
+  # The tile behind the leader (or, past a ledge, the tile the leader jumped
+  # from), for when the leader has no trail to follow. Tiles with an NPC on
+  # them are skipped in favour of the leader's other sides.
+  # @param leader [Game_Character]
+  # @return [Array<Integer>, nil] [map_id, x, y]
+  def fallback_target(leader)
+    behind_direction = 10 - leader.direction
+    directions = [behind_direction] + ([2, 4, 6, 8] - [behind_direction, leader.direction])
+    directions.each do |dir|
+      target = $map_factory.getFacingTile(dir, leader)
+      next if !target
+      if $map_factory.getTerrainTag(target[0], target[1], target[2]).ledge
+        # Get the tile above the ledge (where the leader jumped from)
+        target = $map_factory.getFacingTileFromPos(target[0], target[1], target[2], dir)
+        next if !target
+      end
+      next if tile_occupied?(target[0], target[1], target[2], false)
+      return target
+    end
+    return nil
+  end
+
+  # The directions to try when stepping aside: sideways first, then backwards,
+  # then forwards.
+  # @return [Array<Integer>]
+  def sidestep_directions
+    case @direction
+    when 2, 8 then return [4, 6, 10 - @direction, @direction]
+    else           return [2, 8, 10 - @direction, @direction]
+    end
+  end
 
   # The tile the leader's last step or jump started from, if it is close enough
   # to follow by walking (or jumping, for ledges). This follows the leader's

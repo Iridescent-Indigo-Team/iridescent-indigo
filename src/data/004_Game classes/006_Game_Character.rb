@@ -395,6 +395,7 @@ class Game_Character
     @prelock_direction = 0
     @moveto_happened = true
     @last_step_from = nil
+    clear_step_history
     face_sideways_on_stairs
     calculate_bush_depth
     triggerLeaveTile
@@ -599,7 +600,7 @@ class Game_Character
       @direction = (@direction == 6 ? 4 : @direction == 2 ? 8 : @direction)
     end
     if can_move_in_direction?(7)
-      record_step_origin
+      record_step_origin(:diagonal)
       @move_initial_x = @x
       @move_initial_y = @y
       @x -= 1
@@ -614,7 +615,7 @@ class Game_Character
       @direction = (@direction == 4 ? 6 : @direction == 2 ? 8 : @direction)
     end
     if can_move_in_direction?(9)
-      record_step_origin
+      record_step_origin(:diagonal)
       @move_initial_x = @x
       @move_initial_y = @y
       @x += 1
@@ -629,7 +630,7 @@ class Game_Character
       @direction = (@direction == 6 ? 4 : @direction == 8 ? 2 : @direction)
     end
     if can_move_in_direction?(1)
-      record_step_origin
+      record_step_origin(:diagonal)
       @move_initial_x = @x
       @move_initial_y = @y
       @x -= 1
@@ -644,7 +645,7 @@ class Game_Character
       @direction = (@direction == 4 ? 6 : @direction == 8 ? 2 : @direction)
     end
     if can_move_in_direction?(3)
-      record_step_origin
+      record_step_origin(:diagonal)
       @move_initial_x = @x
       @move_initial_y = @y
       @x += 1
@@ -798,7 +799,7 @@ class Game_Character
       end
       each_occupied_tile { |i, j| return if !passable?(i + x_plus, j + y_plus, 0) }
     end
-    record_step_origin if x_plus != 0 || y_plus != 0
+    record_step_origin(:jump) if x_plus != 0 || y_plus != 0
     @jump_initial_x = @x
     @jump_initial_y = @y
     @x += x_plus
@@ -1029,7 +1030,7 @@ class Game_Character
   # @param dx [Integer] -1, 0 or 1
   # @param dy [Integer] -1, 0 or 1
   def step_to(dx, dy)
-    record_step_origin
+    record_step_origin(step_kind_for(dx, dy))
     @move_initial_x = @x
     @move_initial_y = @y
     @x += dx
@@ -1038,9 +1039,43 @@ class Game_Character
     increase_steps
   end
 
-  # Remembers the tile the current step starts from (see last_step_from).
-  def record_step_origin
+  # How many of this character's most recent steps are kept in step_history.
+  STEP_HISTORY_SIZE = 8
+
+  # Remembers the tile the current step starts from (see last_step_from), and
+  # adds the step to step_history.
+  # @param kind [Symbol, nil] what sort of movement the step is: :step,
+  #   :diagonal, :jump or :slide (see step_kind_for), or nil if unknown.
+  def record_step_origin(kind = nil)
     @last_step_from = [self.map.map_id, @x, @y]
+    @step_history ||= []
+    @step_history.push({ map_id: @last_step_from[0], x: @x, y: @y, kind: kind })
+    @step_history.shift while @step_history.length > STEP_HISTORY_SIZE
+  end
+
+  # This character's most recent steps, oldest first. Each is a Hash with the
+  # keys :map_id, :x and :y (the tile the step started from) and :kind (see
+  # record_step_origin). Followers walk this history to trail their leader.
+  # @return [Array<Hash>]
+  def step_history
+    @step_history ||= []
+    return @step_history
+  end
+
+  # Forgets this character's step history (e.g. after being placed somewhere
+  # with moveto).
+  def clear_step_history
+    @step_history&.clear
+  end
+
+  # The kind of movement a step of (dx, dy) is, for step_history.
+  # @param dx [Integer]
+  # @param dy [Integer]
+  # @return [Symbol] :step, :diagonal or :slide
+  def step_kind_for(dx, dy)
+    return :diagonal if dx != 0 && dy != 0
+    return :slide if self == $game_player && $PokemonGlobal&.ice_sliding
+    return :step
   end
 
   # Turns a character standing on stairs to face along the flight if it was

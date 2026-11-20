@@ -1494,3 +1494,146 @@ MenuHandlers.add(:debug_menu, :reload_system_cache, {
     pbMessage(_INTL("Done."))
   }
 })
+
+#===============================================================================
+# Following Pokémon options
+#===============================================================================
+MenuHandlers.add(:debug_menu, :following_pokemon_menu, {
+  "name"        => _INTL("Following Pokémon..."),
+  "parent"      => :field_menu,
+  "description" => _INTL("Inspect and test the Pokémon that follows the player.")
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_info, {
+  "name"        => _INTL("Show state"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Show which Pokémon follows, where it is, and what keeps it in its Poké Ball."),
+  "effect"      => proc {
+    data = FollowingPokemon.data
+    event = FollowingPokemon.event
+    pkmn = FollowingPokemon.pokemon
+    reasons = FollowingPokemon.hide_reasons(pkmn)
+    lines = []
+    lines.push(_INTL("Pokémon: {1}", (pkmn) ? pkmn.name : "-"))
+    lines.push(_INTL("Out: {1}, visible: {2}", data.out?, FollowingPokemon.active?))
+    lines.push(_INTL("Hidden because: {1}", (reasons.empty?) ? "-" : reasons.join(", ")))
+    if event
+      lines.push(_INTL("Sprite: {1}", event.character_name))
+      lines.push(_INTL("Size: {1}, airborne: {2}", event.size_category, event.airborne?))
+      lines.push(_INTL("Map {1}, ({2}, {3}), facing {4}", event.map.map_id, event.x, event.y, event.direction))
+    end
+    trail = $game_player.step_history.map { |step| "#{step[:x]},#{step[:y]}(#{step[:kind]})" }
+    lines.push(_INTL("Player trail: {1}", (trail.empty?) ? "-" : trail.last(4).join(" ")))
+    lines.push(_INTL("Steps: friendship {1}/{2}, item {3}/{4}",
+                     data.friendship_steps, FollowingPokemon::FRIENDSHIP_STEPS,
+                     data.item_steps, FollowingPokemon::ITEM_STEPS))
+    lines.push(_INTL("Found item: {1}", data.found_item || "-"))
+    lines.push(_INTL("Cached sprites: {1}", FollowingPokemon::SpriteCache.loaded.length))
+    lines.each { |line| echoln(line) }
+    lines.each_slice(2) { |pair| pbMessage(pair.join("\n")) }
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_toggle, {
+  "name"        => _INTL("Toggle on/off"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Turn the following Pokémon off or back on, as an event would."),
+  "effect"      => proc {
+    data = FollowingPokemon.data
+    data.toggled_off = !data.toggled_off
+    if data.toggled_off
+      pbMessage(_INTL("The following Pokémon is turned off."))
+    else
+      pbMessage(_INTL("The following Pokémon is turned on."))
+    end
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_refresh, {
+  "name"        => _INTL("Refresh"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Re-check the party and put the Pokémon next to the player."),
+  "effect"      => proc {
+    FollowingPokemon.refresh(false)
+    event = FollowingPokemon.event
+    FollowingPokemon.place_near_player(event) if event && FollowingPokemon.out?
+    pbMessage(_INTL("Refreshed the following Pokémon."))
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_emote, {
+  "name"        => _INTL("Play emote"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Show an emote bubble over the following Pokémon."),
+  "effect"      => proc {
+    emotes = [:exclaim] + FollowingPokemon::EMOTES.keys
+    cmd = pbMessage(_INTL("Show which emote?"), emotes.map { |emote| emote.to_s }, -1)
+    next if cmd < 0
+    if FollowingPokemon.emote(emotes[cmd])
+      pbMessage(_INTL("The emote will play when this menu is closed."))
+    else
+      pbMessage(_INTL("The following Pokémon isn't out, or the animation is missing."))
+    end
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_find_item, {
+  "name"        => _INTL("Find an item now"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Make the following Pokémon find an item to give the player."),
+  "effect"      => proc {
+    FollowingPokemon.data.found_item = FollowingPokemon.random_item
+    pbMessage(_INTL("The following Pokémon found: {1}", FollowingPokemon.data.found_item || "-"))
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_friendship, {
+  "name"        => _INTL("Walking friendship gain"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Give the following Pokémon the friendship it gets from walking."),
+  "effect"      => proc {
+    pkmn = FollowingPokemon.pokemon
+    if pkmn
+      pkmn.changeHappiness("walking")
+      pbMessage(_INTL("{1}'s friendship is now {2}.", pkmn.name, pkmn.happiness))
+    end
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_missing_sprites, {
+  "name"        => _INTL("Find missing sprites"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("List species and forms with no overworld sprite of their own."),
+  "effect"      => proc {
+    missing = []
+    GameData::Species.each do |species_data|
+      [false, true].each do |shiny|
+        path = GameData::Species.check_graphic_file("Graphics/Characters/", species_data.species,
+                                                    species_data.form, 0, shiny, false,
+                                                    FollowingPokemon::SPRITE_FOLDER)
+        next if path && !path[/\/000(\.png)?\z/i]
+        missing.push(sprintf("%s%s%s", species_data.species,
+                             (species_data.form > 0) ? "_#{species_data.form}" : "",
+                             (shiny) ? " (shiny)" : ""))
+      end
+    end
+    if missing.empty?
+      pbMessage(_INTL("Every species and form has an overworld sprite."))
+      next
+    end
+    File.open("following_pokemon_missing_sprites.txt", "wb") { |f| f.write(missing.join("\r\n")) }
+    pbMessage(_INTL("{1} sprites are missing. They are listed in following_pokemon_missing_sprites.txt.",
+                    missing.length))
+  }
+})
+
+MenuHandlers.add(:debug_menu, :following_pokemon_clear_cache, {
+  "name"        => _INTL("Reload sprite cache"),
+  "parent"      => :following_pokemon_menu,
+  "description" => _INTL("Release the preloaded overworld sprites and load the party's again."),
+  "effect"      => proc {
+    FollowingPokemon::SpriteCache.clear
+    FollowingPokemon::SpriteCache.update
+    pbMessage(_INTL("{1} sprites are preloaded.", FollowingPokemon::SpriteCache.loaded.length))
+  }
+})

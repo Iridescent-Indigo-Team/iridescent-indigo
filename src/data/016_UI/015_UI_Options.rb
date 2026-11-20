@@ -15,6 +15,7 @@ class PokemonSystem
   attr_accessor :bgmvolume
   attr_accessor :sevolume
   attr_accessor :textinput
+  attr_writer   :following_pokemon
 
   def initialize
     @textspeed     = 1     # Text speed (0=slow, 1=medium, 2=fast, 3=instant)
@@ -30,6 +31,13 @@ class PokemonSystem
     @bgmvolume     = 80    # Volume of background music and ME
     @sevolume      = 100   # Volume of sound effects
     @textinput     = 0     # Text input mode (0=cursor, 1=keyboard)
+    @following_pokemon = 0 # Following Pokémon (0=on, 1=off)
+  end
+
+  # @return [Integer] 0 if the following Pokémon is on, 1 if off (0 for saves
+  #   made before this setting existed)
+  def following_pokemon
+    return @following_pokemon || 0
   end
 end
 
@@ -487,6 +495,16 @@ MenuHandlers.add(:options_menu, :give_nicknames, {
   "description" => _INTL("Choose whether you can give a nickname to a Pokémon when you obtain it."),
   "get_proc"    => proc { next $PokemonSystem.givenicknames },
   "set_proc"    => proc { |value, _scene| $PokemonSystem.givenicknames = value }
+})
+
+MenuHandlers.add(:options_menu, :following_pokemon, {
+  "name"        => _INTL("Following Pokémon"),
+  "order"       => 85,
+  "type"        => EnumOption,
+  "parameters"  => [_INTL("On"), _INTL("Off")],
+  "description" => _INTL("Choose whether your lead Pokémon walks behind you."),
+  "get_proc"    => proc { next $PokemonSystem.following_pokemon },
+  "set_proc"    => proc { |value, _scene| $PokemonSystem.following_pokemon = value }
 })
 
 MenuHandlers.add(:options_menu, :speech_frame, {

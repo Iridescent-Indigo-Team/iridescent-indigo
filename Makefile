@@ -62,7 +62,8 @@ TILED_DATASETS := map_metadata,encounters,map_connections
         tiled validate-tiled import-rxdata tiled-assets tiled-project tiled-text \
         export-events import-events export-tiledata import-tiledata test-tiled \
         mkxp desktop android apk \
-        install-assets uninstall-assets clean clean-data distclean help
+        install-assets uninstall-assets clean clean-data distclean help \
+        follower-animations
 
 all: build
 
@@ -153,6 +154,10 @@ validate-locales: $(if $(TILED_ON),tiled)
 ## test-locales: run the localization tools' tests
 test-locales:
 	@$(PYTHON) -I -m unittest discover -s tools/importer/locales/tests -t tools/importer/locales
+
+## follower-animations: add the following Pokémon's animations to Animations.rxdata
+follower-animations:
+	@$(RUBY) $(SCRIPTS)/add_follower_animations.rb
 
 ## data: copy src/assets/data to build/Data, halving pixel values
 data:
