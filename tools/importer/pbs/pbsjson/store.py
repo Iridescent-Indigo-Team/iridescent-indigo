@@ -296,12 +296,14 @@ def write_json_tree(src_dir, all_data, log):
     return changed
 
 
-def remove_missing_datasets(src_dir, config, all_data, log):
+def remove_missing_datasets(src_dir, config, all_data, log, keep=()):
     """Removes JSON datasets whose PBS files no longer exist."""
     present = {_dataset_json_path(src_dir, d) for d in all_data}
     datasets = build_datasets(config)
     candidates = []
     for name, dataset in datasets.items():
+        if name in keep:
+            continue
         candidates.append(os.path.join(src_dir, name))
         candidates.append(os.path.join(src_dir, name + ".json"))
     facility = os.path.join(src_dir, BATTLE_FACILITY_DIR)

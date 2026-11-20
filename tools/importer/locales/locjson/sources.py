@@ -233,8 +233,12 @@ def event_data_dir(data_dir=None):
 
     The source maps in src/assets/data are read, and extract_events.rb replays
     the compiler's Show Text fixes, which gives exactly the text of the
-    compiled maps in build/Data.
+    compiled maps in build/Data. When the maps are made in Tiled (src/tiled
+    has a map registry), the maps `make tiled` compiled into build/Data are
+    read instead (they haven't been through the game's compiler either).
     """
+    if not data_dir and os.path.isfile(os.path.join(cfg.ROOT, "src", "tiled", "maps", "registry.json")):
+        data_dir = os.path.join(cfg.ROOT, "build", "Data")
     data_dir = data_dir or cfg.DATA_DIR
     if os.path.isfile(os.path.join(data_dir, "MapInfos.rxdata")):
         return data_dir, False

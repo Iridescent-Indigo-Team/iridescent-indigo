@@ -19,6 +19,11 @@
 # Tile-based values (event positions, move routes, map scrolling) are not
 # pixels and are left alone. Script calls inside events (code 355) can't be
 # converted automatically.
+#
+# --skip-list FILE: skip files whose names match a regular expression listed
+# (one per line) in FILE. The Tiled compiler writes build/.tiled/owned.txt so
+# that maps, tilesets, common events and System from src/tiled aren't
+# overwritten by older copies in src/assets/data.
 #===============================================================================
 require "fileutils"
 
@@ -170,8 +175,16 @@ module HalveData
   end
 
   def main(args)
+    skip = []
+    if (i = args.index("--skip-list"))
+      list = args[i + 1]
+      args = args[0...i] + args[(i + 2)..]
+      if list && File.file?(list)
+        skip = File.readlines(list, chomp: true).reject(&:empty?).map { |l| Regexp.new("\\A#{l}\\z", Regexp::IGNORECASE) }
+      end
+    end
     if args.length != 2
-      warn("Usage: ruby #{File.basename(__FILE__)} SRC_DIR OUT_DIR")
+      warn("Usage: ruby #{File.basename(__FILE__)} SRC_DIR OUT_DIR [--skip-list FILE]")
       return 2
     end
     src_dir, out_dir = args
@@ -184,6 +197,7 @@ module HalveData
     Dir.children(src_dir).sort.each do |name|
       src = File.join(src_dir, name)
       next if name.start_with?(".") || !File.file?(src)
+      next if skip.any? { |re| re.match?(name) }
       dst = File.join(out_dir, name)
       if File.exist?(dst) && File.mtime(dst) >= File.mtime(src) && File.mtime(dst) >= stamp
         next
