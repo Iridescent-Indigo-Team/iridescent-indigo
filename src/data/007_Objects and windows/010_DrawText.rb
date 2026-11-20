@@ -197,7 +197,7 @@ def getFormattedTextFast(bitmap, xDst, yDst, widthDst, heightDst, text, lineheig
       x = 0
       (lastword[0]...characters.length).each do |i|
         characters[i][2] += lineheight
-        charwidth = characters[i][3] - 2
+        charwidth = characters[i][3] - 1
         characters[i][1] = x
         x += charwidth
       end
@@ -822,7 +822,7 @@ def getLineBrokenText(bitmap, value, width, dims)
       next if nil_or_empty?(word)
       textSize = bitmap.text_size(word)
       textwidth = textSize.width
-      if x > 0 && x + textwidth >= width - 2
+      if x > 0 && x + textwidth >= width - 1
         # Zero-length word break
         ret.push(["", x, y, 0, textheight, line, position, column, 0])
         x = 0
@@ -890,7 +890,7 @@ def getLineBrokenChunks(bitmap, value, width, dims, plain = false)
       color = textcols[i] if textcols[i]
     end
   end
-  dims[1] = y + 32 if dims
+  dims[1] = y + 16 if dims
   return ret
 end
 

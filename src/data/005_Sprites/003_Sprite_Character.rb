@@ -27,32 +27,47 @@ class BushBitmap
     return @bitmaps[current]
   end
 
+  # A copy of a charset with the bottom depth pixels of every frame hidden:
+  # the row above them is drawn at 2/3 opacity and the next at 1/3 (1px each at
+  # the half-size resolution, as base Essentials' 2px rows were).
+  # @param bitmap [Bitmap] the charset (4 rows of frames)
+  # @param depth [Integer] pixels of each frame's bottom that are in the bush
+  # @return [Bitmap]
   def pbBushDepthBitmap(bitmap, depth)
     ret = Bitmap.new(bitmap.width, bitmap.height)
     charheight = ret.height / 4
-    cy = charheight - depth - 2
     4.times do |i|
-      y = i * charheight
-      if cy >= 0
-        ret.blt(0, y, bitmap, Rect.new(0, y, ret.width, cy))
-        ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 1), 170)
-      end
-      ret.blt(0, y + cy + 1, bitmap, Rect.new(0, y + cy + 1, ret.width, 1), 85) if cy + 1 >= 0
+      pbBushDepthBlt(ret, bitmap, i * charheight, charheight, depth)
     end
     return ret
   end
 
+  # A copy of a tile graphic (one frame) with its bottom depth pixels hidden.
+  # @param bitmap [Bitmap] the tile graphic
+  # @param depth [Integer] pixels of the bottom that are in the bush
+  # @return [Bitmap]
   def pbBushDepthTile(bitmap, depth)
     ret = Bitmap.new(bitmap.width, bitmap.height)
-    charheight = ret.height
-    cy = charheight - depth - 2
-    y = charheight
+    pbBushDepthBlt(ret, bitmap, 0, ret.height, depth)
+    return ret
+  end
+
+  private
+
+  # Copies one frame row of bitmap into ret, leaving out its bottom depth
+  # pixels and fading the two rows above them.
+  # @param ret [Bitmap] destination
+  # @param bitmap [Bitmap] source
+  # @param y [Integer] top of the frame row in both bitmaps
+  # @param charheight [Integer] height of the frame row
+  # @param depth [Integer] pixels of the frame's bottom that are in the bush
+  def pbBushDepthBlt(ret, bitmap, y, charheight, depth)
+    cy = charheight - depth - 1
     if cy >= 0
       ret.blt(0, y, bitmap, Rect.new(0, y, ret.width, cy))
       ret.blt(0, y + cy, bitmap, Rect.new(0, y + cy, ret.width, 1), 170)
     end
     ret.blt(0, y + cy + 1, bitmap, Rect.new(0, y + cy + 1, ret.width, 1), 85) if cy + 1 >= 0
-    return ret
   end
 end
 

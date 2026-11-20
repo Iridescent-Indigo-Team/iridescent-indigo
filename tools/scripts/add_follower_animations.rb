@@ -123,17 +123,25 @@ module FollowerAnimations
 
   # An emote bubble that pops up above the Pokémon's head, bounces, alternates
   # between its two cells, then fades out.
+  #
+  # The bubble's tail is at the centre of its cell, and the bubble is drawn
+  # BUBBLE_X pixels left of centre. The animation is at the "Top" position,
+  # which the game puts on the top of the Pokémon itself (not of its sprite's
+  # frame, see Sprite_Character#animation_top_inset), so a cell at
+  # (BUBBLE_X, REST_Y) rests the bubble's tail just above its head.
+  BUBBLE_X = 6
+  REST_Y   = -4
+
   def emote(name, sheet, cell_a, cell_b)
-    rest_y = -20
     frames = []
-    # Pop up with a small bounce
-    [[-4, 128], [-14, 200], [-26, 255], [-22, 255], [rest_y, 255]].each do |y, opacity|
-      frames.push([[cell_a, 0, y, opacity]])
+    # Pop up with a small bounce: y offsets from the resting position
+    [[16, 128], [6, 200], [-6, 255], [-2, 255], [0, 255]].each do |dy, opacity|
+      frames.push([[cell_a, BUBBLE_X, REST_Y + dy, opacity]])
     end
     # Alternate between the two cells
-    16.times { |i| frames.push([[((i / 4).even?) ? cell_b : cell_a, 0, rest_y]]) }
+    16.times { |i| frames.push([[((i / 4).even?) ? cell_b : cell_a, BUBBLE_X, REST_Y]]) }
     # Fade out
-    [170, 85].each { |opacity| frames.push([[cell_a, 0, rest_y, opacity]]) }
+    [170, 85].each { |opacity| frames.push([[cell_a, BUBBLE_X, REST_Y, opacity]]) }
     return animation(PREFIX + "emote: " + name, sheet, POSITION_TOP, frames,
                      [timing(0, "Exclaim", 60)])
   end

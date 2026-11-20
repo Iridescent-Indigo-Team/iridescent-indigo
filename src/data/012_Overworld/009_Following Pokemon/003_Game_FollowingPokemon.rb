@@ -123,15 +123,43 @@ class Game_FollowingPokemon < Game_Follower
   # Drawing
   #-----------------------------------------------------------------------------
 
-  # Airborne Pokémon aren't hidden by tall grass.
+  # Airborne Pokémon (flying, levitating or floating, see
+  # FollowingPokemon.airborne?) are drawn above tall grass, so neither bush nor
+  # deep bush tiles hide any of them. This is checked live, so a depth worked out
+  # for a previous Pokémon (or before loading a save) never applies.
+  # @return [Integer]
   def bush_depth
-    return 0 if @airborne
+    return 0 if airborne?
     return super
   end
 
   def calculate_bush_depth
     super
-    @bush_depth = 0 if @airborne
+    @bush_depth = 0 if airborne?
+  end
+
+  # Airborne Pokémon don't rustle the grass they fly over, and nothing rustles
+  # it while the Pokémon is in its Poké Ball.
+  # @return [Boolean]
+  def rustles_grass?
+    return false if airborne? || transparent
+    return super
+  end
+
+  # Undoes anything a door transfer did to how self looks: makes it fully opaque
+  # again and drops any move route it was still forced along (e.g.
+  # Followers.follow_into_door's, which ends by making it invisible). Called
+  # whenever it's placed after a map transfer or sent out of its Poké Ball, so it
+  # never comes out invisible.
+  def reset_appearance
+    @opacity = 255
+    return if !@move_route_forcing
+    @move_route_forcing = false
+    if @original_move_route
+      @move_route          = @original_move_route
+      @move_route_index    = @original_move_route_index
+      @original_move_route = nil
+    end
   end
 
   def screen_x
