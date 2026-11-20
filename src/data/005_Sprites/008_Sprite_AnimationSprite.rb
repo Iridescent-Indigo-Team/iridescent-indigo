@@ -182,11 +182,13 @@ class SpriteAnimation
         sprite_y += self.src_rect.height / 2 if position == 1   # Middle
         sprite_y += self.src_rect.height if position == 2   # Bottom
       end
-      # Top: sprites that know how much empty space is above their graphic
-      # (e.g. the following Pokémon) put the animation on the graphic's top
-      # rather than the frame's
-      if position == 0 && @sprite.respond_to?(:animation_top_inset)
-        sprite_y += @sprite.animation_top_inset
+      # Sprites can move the animation, e.g. the following Pokémon puts "Top"
+      # animations on its head rather than on the top of its sprite's frame
+      if @sprite.respond_to?(:animation_offset)
+        anim = (sprites.equal?(@_loop_animation_sprites)) ? @_loop_animation : @_animation
+        offset = @sprite.animation_offset(anim, position)
+        sprite_x += offset[0]
+        sprite_y += offset[1]
       end
     end
     16.times do |i|

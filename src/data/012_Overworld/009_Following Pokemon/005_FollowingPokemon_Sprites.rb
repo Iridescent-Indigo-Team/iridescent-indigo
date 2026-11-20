@@ -99,13 +99,35 @@ end
 #===============================================================================
 # Emote bubbles (animations shown at the "Top" position) sit on the following
 # Pokémon's head rather than on the top of its sprite's frame, which for most
-# Pokémon has a lot of empty space above them.
+# Pokémon has a lot of empty space above them. Emotes rest at
+# FollowingPokemon::EMOTE_OFFSET from there, whatever cell positions the emote
+# animations in Animations.rxdata have.
 #===============================================================================
 class Sprite_Character
+  # Name prefix of the following Pokémon's emote animations.
+  EMOTE_ANIMATION_PREFIX = "Follower emote: "
+
+  # How far to move an animation shown on this sprite. SpriteAnimation adds it
+  # to the animation's position. Only "Top" animations on the following
+  # Pokémon move; other characters' animations are where they always were.
+  # @param animation [RPG::Animation, nil] the animation being shown
+  # @param position [Integer] the animation's position (0 = Top)
+  # @return [Array<Integer>] [x, y] in pixels
+  def animation_offset(animation, position)
+    return [0, 0] if position != 0 || !@character.is_a?(Game_FollowingPokemon)
+    dx = 0
+    dy = animation_top_inset
+    if animation&.name&.start_with?(EMOTE_ANIMATION_PREFIX)
+      rest = emote_rest_cell(animation)
+      dx += FollowingPokemon::EMOTE_OFFSET[0] - rest[0]
+      dy += FollowingPokemon::EMOTE_OFFSET[1] - rest[1]
+    end
+    return [dx, dy]
+  end
+
   # Pixels of empty space at the top of the sprite's current frames, measured
   # across every frame of the direction it faces (so a bubble doesn't bob as it
-  # walks). SpriteAnimation adds this to "Top" animations. Only the following
-  # Pokémon has any; other characters' animations are where they always were.
+  # walks).
   # @return [Integer]
   def animation_top_inset
     return 0 if !@character.is_a?(Game_FollowingPokemon) || @tile_id != 0
@@ -123,6 +145,25 @@ class Sprite_Character
   end
 
   private
+
+  # The [x, y] of an emote animation's resting cell: the first cell of its last
+  # frame (the bubble pops up and bounces before settling there).
+  # @param animation [RPG::Animation]
+  # @return [Array<Integer>]
+  def emote_rest_cell(animation)
+    @emote_rest_cells ||= {}
+    key = [animation.object_id, animation.frame_max]
+    return @emote_rest_cells[key] if @emote_rest_cells[key]
+    ret = [0, 0]
+    frame = animation.frames[animation.frame_max - 1]
+    cells = frame&.cell_data
+    if cells && cells.xsize > 0
+      # Negative numbers may be stored as unsigned 16-bit values
+      ret = [cells[0, 1], cells[0, 2]].map { |v| (v.to_i >= 0x8000) ? v.to_i - 0x10000 : v.to_i }
+    end
+    @emote_rest_cells[key] = ret
+    return ret
+  end
 
   # @param bmp [Bitmap]
   # @param top [Integer] y of the row of frames in bmp

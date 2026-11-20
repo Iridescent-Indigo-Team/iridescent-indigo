@@ -59,6 +59,14 @@ module FollowingPokemon
     :SLEEP     => [-32, -32, -32, 64]
   }
 
+  # Where an emote bubble rests, in pixels: [x, y] of the emote animation's
+  # resting cell from the top centre of the Pokémon itself (the first row of its
+  # sprite with anything drawn in it, not the top of its sprite's frame). The
+  # bubble is drawn 3px left of its cell's centre with its tail tip 1px above
+  # it, so [3, -1] centres the bubble with its tail just above the head. The
+  # game places emotes here whatever cell positions Animations.rxdata has.
+  EMOTE_OFFSET = [3, -1]
+
   #-----------------------------------------------------------------------------
   # Animations (in Data/Animations.rxdata, added by
   # tools/scripts/add_follower_animations.rb). They are found by name, so their

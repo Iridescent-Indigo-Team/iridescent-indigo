@@ -222,7 +222,14 @@ The game finds them by name. `make follower-animations`
 Emote bubbles use the "Top" position. For the following Pokémon, the game
 moves that position down to the top of the Pokémon itself (the first row of its
 sprite's frames with anything drawn in it), so the bubble sits on its head
-whatever the size of its frames.
+whatever the size of its frames. The bubble rests at `EMOTE_OFFSET` pixels
+from there (`[3, -1]`: centred, with its tail just above the head), whatever
+cell positions the emote animations have in `Animations.rxdata`.
+
+The game reads the installed, halved copy of the animations
+(`src/assets/data/Animations.rxdata`). After the follower animations change,
+run `make follower-animations` (or `tools/scripts/install_assets.sh --force`)
+so that copy is up to date, then rebuild.
 
 The pictures are `Graphics/Animations/Follower_ComeInOut.png`,
 `Follower_Emote1.png` and `Follower_Emote2.png`.
