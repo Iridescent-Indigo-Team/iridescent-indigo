@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#===============================================================================
+# pre-commit: checks the formatting of the Ruby and JSON files being committed
+#-------------------------------------------------------------------------------
+# Enable the hooks in this folder once per clone:
+#   git config core.hooksPath .githooks
+#
+# Runs tools/scripts/check_format.py on the staged changes (the same check CI
+# runs on every push). Fix problems with `make format`, then stage the files
+# again. Skip the check for one commit with `git commit --no-verify`.
+#===============================================================================
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+PYTHON="${PYTHON:-python3}"
+command -v "$PYTHON" >/dev/null 2>&1 || PYTHON=python
+
+exec "$PYTHON" -I "$ROOT/tools/scripts/check_format.py" --staged --allow-missing-rubocop

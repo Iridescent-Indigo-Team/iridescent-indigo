@@ -15,6 +15,7 @@ the game.
 - [Resolution, scaling and fonts](#resolution-scaling-and-fonts)
 - [Android](#android)
 - [Converting scripts and plugins](#converting-scripts-and-plugins)
+- [Automated builds](#automated-builds)
 - [Troubleshooting](#troubleshooting)
 
 ## Quick start
@@ -142,6 +143,8 @@ throw those changes away). See [PBS_JSON.md](PBS_JSON.md).
 | `make update-locales` | Write the current English text into every language's CSVs (keeps translations) |
 | `make validate-locales` | Check the translations (`VERBOSE=1` lists every warning) |
 | `make test-locales` | Run the localization tools' tests |
+| `make check-format` | Check the formatting of the Ruby and JSON changed since `BASE` (default `origin/main`); see [CONTRIBUTING.md](CONTRIBUTING.md#formatting) |
+| `make format` | Fix the formatting of the Ruby and JSON changed since `BASE` |
 | `make clean-data` | Remove compiled data (`build/Data/*.dat`) |
 | `make clean` | Remove `build/`, keeping the built engine |
 | `make distclean` | Remove `build/` and `dist/` |
@@ -373,6 +376,25 @@ ruby tools/scripts/halve_script_coords.rb --odd src/assets/plugins/MyPlugin
 pixel value from a count or an index that happens to sit in the same place.
 `--odd` lists odd values that couldn't be halved exactly, and `--dry-run`
 shows what would change without writing anything.
+
+## Automated builds
+
+`.github/workflows/build.yml` builds the game on GitHub every Monday, so a
+broken platform shows up without anyone building it by hand:
+
+| Job | What it does | Artifact |
+| --- | --- | --- |
+| Linux | `make mkxp`, `install_assets.sh`, `make desktop`, `make android` | `pokessentials-linux` (the desktop package), `pokessentials-android-game` (the zip and `.obb` for the Android app) |
+| Windows | builds mkxp-z with MSYS2 (`lib/mkxp-z/windows`) and packages it with the compiled game folder from the Linux job | `pokessentials-windows` |
+| Android | `make apk` for every ABI (NDK r25c, JDK 17) | `pokessentials-android-apk` |
+
+It also runs for pull requests that change the build (the workflow, the
+Makefile, `game.sh`, the build scripts or `lib/mkxp-z`), and can be started by
+hand from the repository's **Actions** tab (**Build** > **Run workflow**).
+Artifacts are kept for 14 days.
+
+`.github/workflows/format.yml` checks the formatting of every push and pull
+request (see [CONTRIBUTING.md](CONTRIBUTING.md#formatting)).
 
 ## Troubleshooting
 
