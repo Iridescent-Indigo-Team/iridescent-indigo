@@ -1,0 +1,71 @@
+#===============================================================================
+# Formatting check, on every push and pull request
+#-------------------------------------------------------------------------------
+# Runs tools/scripts/check_format.py on the Ruby and JSON files the push or
+# pull request changes (the same check as `make check-format` and the
+# .githooks/pre-commit hook):
+#   - Ruby: RuboCop's Layout cops (.rubocop.yml), on the changed lines only
+#   - JSON: valid, and laid out as tools/importer writes it (src/pbs, src/tiled)
+# Fix problems locally with `make format`.
+#===============================================================================
+name: Format
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: format-${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  format:
+    name: Ruby and JSON
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      # Pull requests: everything the PR changes. Pushes: everything since the
+      # previous tip of the branch; a new branch, or a force push whose old tip
+      # is gone, is compared with the default branch instead.
+      - name: Find the base commit
+        id: base
+        env:
+          EVENT: ${{ github.event_name }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          BEFORE: ${{ github.event.before }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [[ "$EVENT" == pull_request ]]; then
+            base="$PR_BASE"
+          elif [[ -n "$BEFORE" && ! "$BEFORE" =~ ^0+$ ]] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            base="$BEFORE"
+          else
+            base="origin/$DEFAULT_BRANCH"
+          fi
+          echo "Comparing with $base"
+          echo "ref=$base" >> "$GITHUB_OUTPUT"
+
+      - name: Check the formatting
+        env:
+          BASE: ${{ steps.base.outputs.ref }}
+        run: python3 -I tools/scripts/check_format.py --base "$BASE"
+
+      - name: Test the format checker
+        run: python3 -I -m unittest discover -s tools/scripts/tests -t tools/scripts -p 'test_check_format.py'

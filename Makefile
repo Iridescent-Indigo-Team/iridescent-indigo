@@ -63,7 +63,7 @@ TILED_DATASETS := map_metadata,encounters,map_connections
         export-events import-events export-tiledata import-tiledata test-tiled \
         mkxp desktop android apk \
         install-assets uninstall-assets clean clean-data distclean help \
-        follower-animations
+        follower-animations check-format format
 
 all: build
 
@@ -274,6 +274,21 @@ android: compile
 ## apk: build the mkxp-z Android app (needs ANDROID_NDK_HOME and the Android SDK)
 apk:
 	@$(SCRIPTS)/build_apk.sh $(DIST)
+
+# Formatting (see tools/scripts/check_format.py): RuboCop's layout cops on the
+# changed lines of Ruby files, and the JSON layout the repository's tools write.
+# Both look at the changes since BASE (default origin/main), uncommitted ones
+# included. CI runs the same check on every push.
+FORMAT    := $(PYTHON) -I $(SCRIPTS)/check_format.py
+BASE      ?= origin/main
+
+## check-format: check the formatting of the Ruby/JSON changed since BASE (default origin/main)
+check-format:
+	@$(FORMAT) --base $(BASE)
+
+## format: fix the formatting of the Ruby/JSON changed since BASE (default origin/main)
+format:
+	@$(FORMAT) --base $(BASE) --fix
 
 ## install-assets: copy Essentials graphics/audio/PBS/data into src/assets
 install-assets:
