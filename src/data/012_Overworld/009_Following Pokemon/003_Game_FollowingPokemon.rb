@@ -206,6 +206,14 @@ class Game_FollowingPokemon < Game_Follower
     super
   end
 
+  # Works out now whether self is near enough to the screen to be drawn, as its
+  # update does. Sprite_Character doesn't draw an event until this is known, so
+  # this lets self's sprite be drawn before self has been updated (e.g. while
+  # the screen fades in after loading a saved game).
+  def recalculate_should_update
+    @to_update = should_update?(true)
+  end
+
   # Airborne Pokémon don't kick up dust when landing.
   def update_move
     return Game_Character.instance_method(:update_move).bind(self).call if @airborne

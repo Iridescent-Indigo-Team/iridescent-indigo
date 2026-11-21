@@ -226,6 +226,17 @@ module FollowingPokemon
     SpriteCache.update
   end
 
+  # Called just before the map's sprites are created (e.g. when a saved game is
+  # loaded). Creates the following Pokémon's event now if it doesn't exist yet,
+  # rather than on the first update, so that its sprite is created along with
+  # all the others and it's already there as the screen fades in (instead of
+  # appearing only once the fade-in has finished).
+  def prepare_for_spritesets
+    return if !$player || !$PokemonGlobal || !$game_map || !$game_temp
+    ev = ensure_event(pokemon)
+    ev&.recalculate_should_update
+  end
+
   # Called just before followers are placed after the player is transferred
   # to another map. The transfer itself never plays a Poké Ball animation: a
   # Pokémon that was out stays out (on the new map) unless something there

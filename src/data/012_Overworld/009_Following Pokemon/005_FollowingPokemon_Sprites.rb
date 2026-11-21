@@ -184,12 +184,15 @@ end
 
 #===============================================================================
 # Keep the following Pokémon's preloaded sprites in RPG::Cache when it's
-# cleared on a map transfer.
+# cleared on a map transfer. Also create the following Pokémon's event before
+# the map's sprites are, so that after loading a saved game it's visible as the
+# screen fades in rather than popping into view afterwards.
 #===============================================================================
 class Scene_Map
   alias __followingpokemon__createSpritesets createSpritesets unless method_defined?(:__followingpokemon__createSpritesets)
 
   def createSpritesets
+    FollowingPokemon.prepare_for_spritesets
     FollowingPokemon::SpriteCache.restore
     __followingpokemon__createSpritesets
   end
