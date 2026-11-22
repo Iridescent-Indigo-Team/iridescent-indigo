@@ -267,22 +267,19 @@ $(DOWNLOADS)/openal/cmakebuild/Makefile: $(DOWNLOADS)/openal/CMakeLists.txt
 $(DOWNLOADS)/openal/CMakeLists.txt:
 	$(CLONE) $(GITHUB)/kcat/openal-soft -b 1.24.3 $(DOWNLOADS)/openal
 
-# FluidSynth
+# FluidSynth (without OpenMP: MSYS2's gcc has no static libgomp)
 fluidsynth: init_dirs $(LIBDIR)/libfluidsynth.a
 
 $(LIBDIR)/libfluidsynth.a: $(DOWNLOADS)/fluidsynth/cmakebuild/Makefile
 	cd $(DOWNLOADS)/fluidsynth/cmakebuild; \
 	make -j$(NPROC); make install
 
-$(DOWNLOADS)/fluidsynth/cmakebuild/Makefile: $(DOWNLOADS)/fluidsynth/CMakeLists.txt $(LIBDIR)/libgomp.a
+$(DOWNLOADS)/fluidsynth/cmakebuild/Makefile: $(DOWNLOADS)/fluidsynth/CMakeLists.txt
 	cd $(DOWNLOADS)/fluidsynth; mkdir cmakebuild; cd cmakebuild; \
-	$(CMAKE) -DBUILD_SHARED_LIBS=no -Denable-sdl3=no -Denable-readline=no -Dosal=embedded -Denable-libinstpatch=no -Denable-jack=no -Denable-portaudio=no -Denable-libsndfile=no -Denable-systemd=no -Denable-dbus=no
+	$(CMAKE) -DBUILD_SHARED_LIBS=no -Denable-sdl3=no -Denable-readline=no -Dosal=embedded -Denable-libinstpatch=no -Denable-jack=no -Denable-portaudio=no -Denable-libsndfile=no -Denable-systemd=no -Denable-dbus=no -Denable-openmp=no
 
 $(DOWNLOADS)/fluidsynth/CMakeLists.txt:
 	$(CLONE) $(GITHUB)/FluidSynth/fluidsynth -b v2.5.0 --recurse-submodules $(DOWNLOADS)/fluidsynth
-
-$(LIBDIR)/libgomp.a: $(shell $(CC) --print-file-name=libgomp.a) init_dirs
-	cp $< $(LIBDIR)/libgomp.a
 
 # OpenSSL
 openssl: init_dirs $(LIBDIR)/libssl.a

@@ -142,8 +142,14 @@ ifeq ($(shell test $(API) -lt 26; echo $$?),0)
 	CONFIGURE_ARGS += ac_cv_header_pwd_h=no ac_cv_header_langinfo_h=no
 endif
 
+# The host Ruby that Ruby's build runs. Name it explicitly: otherwise configure
+# looks for `ruby` on PATH, which may find another ABI's cross-compiled one in
+# build-<abi>/bin (see build.sh).
+BASERUBY := $(or $(BASERUBY),$(shell command -v ruby))
+
 # Ruby configure arguments
 RUBY_CONFIGURE_ARGS := \
+	--with-baseruby=$(BASERUBY) \
 	--enable-shared \
 	--disable-install-doc \
 	--disable-rubygems \
@@ -299,13 +305,17 @@ $(LIBDIR)/libopenal.so: openal/CMakeLists.txt
 # ---------------------------------------------------------------------------
 # OpenSSL (shared)
 # ---------------------------------------------------------------------------
-$(LIBDIR)/libssl.so: openssl/Makefile
-	cd openssl && $(MAKE) -j$(NPROC) && $(MAKE) install_sw
-
-openssl/Makefile: openssl/Configure
-	cd openssl && CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
+# Like the other dependencies, configure OpenSSL from a clean tree for every
+# ABI: the source tree is shared, and a tree configured for another ABI would
+# build and install that ABI instead.
+# OpenSSL finds the NDK through ANDROID_NDK_ROOT before ANDROID_NDK_HOME, and
+# fails if that isn't the NDK whose clang is on PATH: always point it at $(NDK).
+$(LIBDIR)/libssl.so: openssl/Configure
+	cd openssl && ($(MAKE) distclean 2>/dev/null || true) && \
+	ANDROID_NDK_ROOT="$(NDK)" CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
 		shared -D__ANDROID_API__=$(API) \
-		--prefix="$(BUILD_PREFIX)" --openssldir="$(BUILD_PREFIX)"
+		--prefix="$(BUILD_PREFIX)" --openssldir="$(BUILD_PREFIX)" && \
+	$(MAKE) -j$(NPROC) && $(MAKE) install_sw
 
 # ---------------------------------------------------------------------------
 # Ruby (autotools, shared)
