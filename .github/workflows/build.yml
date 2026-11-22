@@ -132,6 +132,7 @@ jobs:
           update: true
           install: >-
             base-devel
+            bison
             git
             ruby
             vim
