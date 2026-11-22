@@ -247,11 +247,18 @@ jobs:
           ndk-version: r27d
           add-to-path: false
 
+      # The host Ruby that builds the Android Ruby. Not Ubuntu's: its RubyGems
+      # is patched to install default gems into /var/lib/gems, which Ruby's
+      # `make install` can't write to.
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
       - name: Install build tools
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            ruby build-essential cmake meson ninja-build pkg-config git autoconf automake libtool \
+            build-essential cmake meson ninja-build pkg-config git autoconf automake libtool \
             bison nasm xxd gperf
 
       - name: Restore the Android dependencies
