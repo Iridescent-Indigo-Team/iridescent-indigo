@@ -302,8 +302,10 @@ $(LIBDIR)/libopenal.so: openal/CMakeLists.txt
 $(LIBDIR)/libssl.so: openssl/Makefile
 	cd openssl && $(MAKE) -j$(NPROC) && $(MAKE) install_sw
 
+# OpenSSL finds the NDK through ANDROID_NDK_ROOT before ANDROID_NDK_HOME, and
+# fails if that isn't the NDK whose clang is on PATH: always point it at $(NDK).
 openssl/Makefile: openssl/Configure
-	cd openssl && CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
+	cd openssl && ANDROID_NDK_ROOT="$(NDK)" CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
 		shared -D__ANDROID_API__=$(API) \
 		--prefix="$(BUILD_PREFIX)" --openssldir="$(BUILD_PREFIX)"
 

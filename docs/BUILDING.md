@@ -386,7 +386,7 @@ broken platform shows up without anyone building it by hand:
 | --- | --- | --- |
 | Linux | `make mkxp`, `install_assets.sh`, `make desktop`, `make android` | `pokessentials-linux` (the desktop package), `pokessentials-android-game` (the zip and `.obb` for the Android app) |
 | Windows | builds mkxp-z with MSYS2 (`lib/mkxp-z/windows`) and packages it with the compiled game folder from the Linux job | `pokessentials-windows` |
-| Android | `make apk` for every ABI (NDK r25c, JDK 17) | `pokessentials-android-apk` |
+| Android | `make apk` for every ABI (NDK r27d, JDK 17) | `pokessentials-android-apk` |
 
 It also runs for pull requests that change the build (the workflow, the
 Makefile, `game.sh`, the build scripts or `lib/mkxp-z`), and can be started by

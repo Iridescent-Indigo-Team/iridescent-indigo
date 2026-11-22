@@ -150,6 +150,18 @@ jobs:
             lib/mkxp-z/windows/downloads
           key: mkxp-windows-${{ hashFiles('lib/mkxp-z/windows/Makefile', 'lib/mkxp-z/windows/vars.sh') }}
 
+      # Like tools/scripts/build_engine.sh: fetch FluidSynth without its
+      # ~570 MB test-data submodule, which the Makefile's clone would pull.
+      - name: Download FluidSynth
+        run: |
+          dir=lib/mkxp-z/windows/downloads/mingw64/fluidsynth
+          tag="$(grep -o 'FluidSynth/fluidsynth -b [^ ]*' lib/mkxp-z/windows/Makefile | awk '{print $3}')"
+          if [[ -n "$tag" && ! -f "$dir/CMakeLists.txt" ]]; then
+            rm -rf "$dir"
+            git -c advice.detachedHead=false clone -q --depth 1 -b "$tag" https://github.com/FluidSynth/fluidsynth "$dir"
+            git -C "$dir" submodule update -q --init --depth 1 gcem
+          fi
+
       - name: Build the engine's dependencies
         run: |
           cd lib/mkxp-z/windows
@@ -232,7 +244,7 @@ jobs:
       - uses: nttld/setup-ndk@v1
         id: ndk
         with:
-          ndk-version: r25c
+          ndk-version: r27d
           add-to-path: false
 
       - name: Install build tools
@@ -249,8 +261,11 @@ jobs:
           key: mkxp-android-${{ steps.ndk.outputs.ndk-path }}-${{ hashFiles('lib/mkxp-z/android/deps/**', 'lib/mkxp-z/android/meson-*.txt') }}
 
       - name: Build the APK
+        # The runner image presets these to its own NDK; point them all at ours.
         env:
           ANDROID_NDK_HOME: ${{ steps.ndk.outputs.ndk-path }}
+          ANDROID_NDK_ROOT: ${{ steps.ndk.outputs.ndk-path }}
+          ANDROID_NDK: ${{ steps.ndk.outputs.ndk-path }}
         run: make apk
 
       - uses: actions/upload-artifact@v4
