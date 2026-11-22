@@ -305,15 +305,17 @@ $(LIBDIR)/libopenal.so: openal/CMakeLists.txt
 # ---------------------------------------------------------------------------
 # OpenSSL (shared)
 # ---------------------------------------------------------------------------
-$(LIBDIR)/libssl.so: openssl/Makefile
-	cd openssl && $(MAKE) -j$(NPROC) && $(MAKE) install_sw
-
+# Like the other dependencies, configure OpenSSL from a clean tree for every
+# ABI: the source tree is shared, and a tree configured for another ABI would
+# build and install that ABI instead.
 # OpenSSL finds the NDK through ANDROID_NDK_ROOT before ANDROID_NDK_HOME, and
 # fails if that isn't the NDK whose clang is on PATH: always point it at $(NDK).
-openssl/Makefile: openssl/Configure
-	cd openssl && ANDROID_NDK_ROOT="$(NDK)" CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
+$(LIBDIR)/libssl.so: openssl/Configure
+	cd openssl && ($(MAKE) distclean 2>/dev/null || true) && \
+	ANDROID_NDK_ROOT="$(NDK)" CFLAGS="-Wno-macro-redefined" ./Configure $(OPENSSL_TARGET) \
 		shared -D__ANDROID_API__=$(API) \
-		--prefix="$(BUILD_PREFIX)" --openssldir="$(BUILD_PREFIX)"
+		--prefix="$(BUILD_PREFIX)" --openssldir="$(BUILD_PREFIX)" && \
+	$(MAKE) -j$(NPROC) && $(MAKE) install_sw
 
 # ---------------------------------------------------------------------------
 # Ruby (autotools, shared)
