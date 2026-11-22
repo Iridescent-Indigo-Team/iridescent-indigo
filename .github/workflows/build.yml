@@ -188,12 +188,26 @@ jobs:
           unzip -q "game-archive/$GAME_NAME-android.zip" -d "$out"
           deps=lib/mkxp-z/windows/build-mingw64
           cp lib/mkxp-z/build-windows/mkxp-z.exe "$out/"
-          cp /mingw64/bin/zlib1.dll "$out/"
           cp "$deps"/bin/x64-msvcrt-ruby*.dll "$out/"
           stdlib="$(find "$deps/lib/ruby" -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | head -n1)"
           [[ -n "$stdlib" ]] || { echo "::error::Ruby's standard library wasn't built"; exit 1; }
           cp -r "$stdlib" "$out/stdlib"
           cp lib/mkxp-z/assets/LICENSE.mkxp-z-with-https.txt "$out/"
+          # Bundle every MSYS2 DLL the engine and its DLLs load (e.g. zlib, which
+          # MSYS2 now ships as libz-1.dll), until nothing new turns up.
+          for pass in 1 2 3 4 5; do
+            added=0
+            for file in "$out"/*.exe "$out"/*.dll; do
+              while read -r dll; do
+                if [[ ! -e "$out/$(basename "$dll")" ]]; then
+                  cp "$dll" "$out/"
+                  echo "Bundled $(basename "$dll")"
+                  added=1
+                fi
+              done < <(ldd "$file" | awk '$3 ~ "^/mingw64/" {print $3}')
+            done
+            [[ $added -eq 1 ]] || break
+          done
 
       # Every DLL the engine needs must ship with it, not come from MSYS2.
       - name: Check for DLLs missing from the package
