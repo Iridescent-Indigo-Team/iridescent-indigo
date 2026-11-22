@@ -10,3 +10,10 @@ system = 'android'
 cpu_family = 'arm'
 cpu = 'cortex-a7'
 endian = 'little'
+
+[built-in options]
+# Meson always defines _FILE_OFFSET_BITS=64. On 32-bit Android below API 24
+# bionic then hides fseeko/ftello, which libc++'s <fstream> needs. Undefine it:
+# 32-bit file offsets are fine for the game's files.
+c_args = ['-U_FILE_OFFSET_BITS']
+cpp_args = ['-U_FILE_OFFSET_BITS']
