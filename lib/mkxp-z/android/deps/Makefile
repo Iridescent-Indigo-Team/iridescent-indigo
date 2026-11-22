@@ -142,8 +142,14 @@ ifeq ($(shell test $(API) -lt 26; echo $$?),0)
 	CONFIGURE_ARGS += ac_cv_header_pwd_h=no ac_cv_header_langinfo_h=no
 endif
 
+# The host Ruby that Ruby's build runs. Name it explicitly: otherwise configure
+# looks for `ruby` on PATH, which may find another ABI's cross-compiled one in
+# build-<abi>/bin (see build.sh).
+BASERUBY := $(or $(BASERUBY),$(shell command -v ruby))
+
 # Ruby configure arguments
 RUBY_CONFIGURE_ARGS := \
+	--with-baseruby=$(BASERUBY) \
 	--enable-shared \
 	--disable-install-doc \
 	--disable-rubygems \

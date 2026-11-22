@@ -56,7 +56,17 @@ if [[ ! -d "$DEPS_DIR/SDL2" || ! -d "$DEPS_DIR/ruby" ]]; then
     (cd "$DEPS_DIR" && ./get_deps.sh)
 fi
 
+# Ruby's build needs a Ruby that runs on this machine. Find it now: once an ABI
+# is built, its deps/build-<abi>/bin holds a cross-compiled `ruby` that can't.
+export BASERUBY="${BASERUBY:-$(command -v ruby || true)}"
+[[ -n "$BASERUBY" ]] || { echo "build.sh: an installed (host) Ruby is required to build Ruby for Android." >&2; exit 1; }
+
+# vars.sh prepends deps/build-<abi>/bin to PATH; start every ABI from the
+# original PATH so one ABI's binaries never shadow host tools for the next.
+ORIG_PATH="$PATH"
+
 for ABI in $ABIS; do
+    PATH="$ORIG_PATH"
     echo "=================================================================="
     echo "Building ABI: $ABI"
     echo "=================================================================="
