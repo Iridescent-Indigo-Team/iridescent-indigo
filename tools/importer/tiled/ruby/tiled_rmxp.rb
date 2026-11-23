@@ -31,7 +31,6 @@ module TiledRmxp
 end
 
 require File.join(TiledRmxp::ROOT, "lib/eevee/rmxp/rgss")
-require File.join(TiledRmxp::ROOT, "tools/scripts/halve_data")
 
 module TiledRmxp
   ## RMXP event command codes that end a page or block.

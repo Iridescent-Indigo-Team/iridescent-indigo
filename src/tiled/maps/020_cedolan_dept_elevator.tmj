@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":192,
+     "width":16,
+     "x":32,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Controls",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":64,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -154,15 +154,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Wall left",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":32,
-     "y":64,
+     "width":16,
+     "x":16,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -180,15 +180,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Wall middle",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":64,
+     "width":16,
+     "x":32,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -206,15 +206,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Wall right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":64,
+     "width":16,
+     "x":48,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -255,14 +255,14 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
    "source":"../tilesets/department_store_interior.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

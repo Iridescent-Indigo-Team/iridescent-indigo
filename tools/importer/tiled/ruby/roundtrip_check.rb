@@ -9,8 +9,7 @@
 # Compares:
 #   * MapInfos (names, parents, order);
 #   * every map's size, music and events (pages, conditions, graphics,
-#     commands, move routes). Picture coordinates of the original are halved
-#     first, as the build does;
+#     commands, move routes);
 #   * every tile, by what it shows: the graphic (tileset image or autotile
 #     name) and the tile within it, since tile ids are renumbered when
 #     tilesets are combined;
@@ -36,12 +35,6 @@ module RoundtripCheck
   def tile_props(id, tileset)
     return nil if id == 0
     return [tileset.passages[id], tileset.priorities[id], tileset.terrain_tags[id]]
-  end
-
-  def halved(list)
-    copy = Marshal.load(Marshal.dump(list))
-    HalveData.halve_command_list(copy)
-    return copy
   end
 
   def main(args)
@@ -111,8 +104,6 @@ module RoundtripCheck
           diff.call("map #{id}: event #{eid} missing")
           next
         end
-        ev = Marshal.load(Marshal.dump(ev))
-        ev.pages.each { |pg| HalveData.halve_command_list(pg.list) }
         if TiledRmxp.norm(ev) != TiledRmxp.norm(ne)
           diff.call("map #{id}: event #{eid} (#{TiledRmxp.utf8(ev.name)}) differs")
         end
@@ -124,9 +115,7 @@ module RoundtripCheck
     o_ce.each do |ce|
       next unless ce
       other = n_ce[ce.id]
-      copy = Marshal.load(Marshal.dump(ce))
-      HalveData.halve_command_list(copy.list)
-      if !other || TiledRmxp.norm(copy) != TiledRmxp.norm(other)
+      if !other || TiledRmxp.norm(ce) != TiledRmxp.norm(other)
         diff.call("common event #{ce.id} differs")
       end
     end

@@ -8,8 +8,9 @@ Usage: python3 -I tools/scripts/ground_battlers.py [--graphics DIR] [--src DIR]
                                                    [--new-forms] [--keep-hover]
                                                    [--hover-min N] [--verbose]
 
-Each battler sprite is shrunk to the 96x96 frames the game uses (exactly as
-resize_graphics.py does for the build), and its feet are found: the lowest row
+Each battler sprite is measured in the 96x96 frames the game uses (sprites in
+src/assets/graphics already have them; 2x Essentials art is shrunk exactly as
+resize_graphics.py does when installing it), and its feet are found: the lowest row
 with an opaque pixel. Its y metric is then set so the feet stand on its side's
 ground line:
 
@@ -35,8 +36,8 @@ sit higher in its frame would look like a hover. The same rules are used in the 
 Auto-set pokemon_metrics.txts (pbGroundedSpriteY); the offsets are copies of
 Battle::Scene::PLAYER_FEET_OFFSET and FOE_FEET_OFFSET.
 
-Graphics are read from src/assets/graphics (the installed source art), or
-from lib/pokemon-essentials/Graphics if no art is installed. With --new-forms,
+Graphics are read from src/assets/graphics (the installed 1x art), or
+from lib/pokemon-essentials/Graphics (2x) if no art is installed. With --new-forms,
 a form that has its own sprites and a different result from its species, but
 no metrics entry yet, gets a new entry (added to the index next to its
 species). With --check nothing is written, and the exit status is 1 if any
@@ -65,7 +66,7 @@ from pbsjson.store import dumps, read_json, write_if_changed  # noqa: E402
 
 
 def _load_resizer():
-    """Loads resize_graphics.py, so sprites are shrunk exactly as the build does."""
+    """Loads resize_graphics.py, so 2x sprites are shrunk exactly as install_assets.sh does."""
     path = os.path.join(SCRIPT_DIR, "resize_graphics.py")
     spec = importlib.util.spec_from_file_location("resize_graphics", path)
     module = importlib.util.module_from_spec(spec)
@@ -73,7 +74,7 @@ def _load_resizer():
     return module
 
 
-## The build's graphics resizer (resize_graphics.py).
+## The graphics resizer install_assets.sh uses (resize_graphics.py).
 resizer = _load_resizer()
 
 ## Copy of Battle::Scene::PLAYER_FEET_OFFSET (src/data/011_Battle/004_Scene/001_Battle_Scene.rb).
@@ -116,16 +117,20 @@ class Feet:
 def measure(path, rel):
     """Measures the feet of a battler sprite file.
 
-    The sprite is shrunk into 96x96 frames like the build does. For a strip of
-    animation frames the lowest feet of all frames are used, so no frame sinks
-    below the ground.
+    A sprite whose frames are already 96x96 (src/assets/graphics) is measured
+    as it is; a bigger one (2x Essentials art) is first shrunk into 96x96
+    frames like install_assets.sh does. For a strip of animation frames the
+    lowest feet of all frames are used, so no frame sinks below the ground.
     @param path absolute path of the PNG
     @param rel path relative to the graphics folder (for messages)
     @return a Feet, or None if the sprite is fully transparent
     """
     with Image.open(path) as img:
         img.load()
-        frames = resizer.make_battle_sprite(img, rel)
+        if img.height == FRAME and img.width % FRAME == 0:
+            frames = img.convert("RGBA")
+        else:
+            frames = resizer.make_battle_sprite(img, rel)
     lowest = None
     cropped = False
     for i in range(frames.width // FRAME):

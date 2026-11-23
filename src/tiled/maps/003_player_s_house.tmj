@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":288,
+     "width":16,
+     "x":48,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Stairs up",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":64,
+     "width":16,
+     "x":160,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -156,15 +156,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Stairs down",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":896,
-     "y":64,
+     "width":16,
+     "x":448,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -187,15 +187,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"PC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":32,
+     "width":16,
+     "x":320,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -216,15 +216,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Trainer, Visual Editor, Terrain Tags",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":928,
-     "y":32,
+     "width":16,
+     "x":464,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -245,15 +245,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Debug, badges, screenshots",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":960,
-     "y":32,
+     "width":16,
+     "x":480,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -274,15 +274,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Pokédex",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":128,
+     "width":16,
+     "x":80,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -313,15 +313,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Mom",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":128,
+     "width":16,
+     "x":112,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -356,15 +356,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Warp tile 1",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":32,
-     "y":96,
+     "width":16,
+     "x":16,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -388,15 +388,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Warp tile 2",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":96,
+     "width":16,
+     "x":32,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -420,15 +420,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Choices NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":224,
+     "width":16,
+     "x":144,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -452,15 +452,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"Text formatting NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":224,
+     "width":16,
+     "x":160,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -484,15 +484,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":13,
      "name":"Pokémon-checking NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":32,
-     "y":160,
+     "width":16,
+     "x":16,
+     "y":80,
      "properties":[
       {
        "name":"event_id",
@@ -516,15 +516,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":14,
      "name":"Roaming Pokémon",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":32,
+     "width":16,
+     "x":80,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -570,7 +570,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -581,7 +581,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":31,

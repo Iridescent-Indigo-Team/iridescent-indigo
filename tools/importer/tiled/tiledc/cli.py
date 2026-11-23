@@ -105,6 +105,13 @@ def cmd_autotiles(paths, args):
     return 0
 
 
+def cmd_downscale(paths, args):
+    """Converts a src/tiled made for 2x graphics (32px tiles) to 1x (16px)."""
+    from .downscale import downscale
+    downscale(paths, log=_log)
+    return 0
+
+
 def cmd_previews(paths, args):
     from .previews import write_previews
     count = write_previews(paths)
@@ -241,6 +248,9 @@ def main(argv=None):
 
     p = sub.add_parser("previews", help="make the images Tiled shows for event graphics")
     p.set_defaults(func=cmd_previews)
+
+    p = sub.add_parser("downscale", help="one-time: convert a src/tiled with 32px tiles (2x graphics) to 16px")
+    p.set_defaults(func=cmd_downscale)
 
     p = sub.add_parser("new-map", help="register and create an empty map")
     p.add_argument("name")

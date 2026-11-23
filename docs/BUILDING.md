@@ -1,9 +1,10 @@
 # Building and running Pokessentials
 
 Pokessentials runs Pokémon Essentials v21.1 scripts straight from `src/`, at a
-**256×192** resolution with half-size graphics, on desktop and Android. This
-guide covers everything from installing the Essentials assets to packaging
-the game.
+**256×192** resolution with half-size graphics, on desktop and Android. Every
+source in `src/` is at that 1× size, so what you edit and share is exactly what
+the game shows. This guide covers everything from installing the Essentials
+assets to packaging the game.
 
 - [Quick start](#quick-start)
 - [Requirements](#requirements)
@@ -11,7 +12,7 @@ the game.
 - [Make targets](#make-targets)
 - [game.sh](#gamesh)
 - [Asset tools](#asset-tools)
-- [Graphics pipeline](#graphics-pipeline)
+- [Source scale](#source-scale)
 - [Resolution, scaling and fonts](#resolution-scaling-and-fonts)
 - [Android](#android)
 - [Converting scripts and plugins](#converting-scripts-and-plugins)
@@ -33,7 +34,9 @@ make mkxp
 ```
 
 1. `install_assets.sh` copies the graphics, audio, PBS files and map data of the
-   Essentials release in `lib/pokemon-essentials` into `src/assets/`.
+   Essentials release in `lib/pokemon-essentials` into `src/assets/`, halving
+   Essentials' 2× graphics to the game's 1× size on the way (see
+   [Source scale](#source-scale)).
    Game data (PBS) is edited as JSON in `src/pbs/`, which is already in the
    repository (see [PBS_JSON.md](PBS_JSON.md)).
 2. `make mkxp` builds the mkxp-z engine into `build/engine/`. You can skip this
@@ -49,7 +52,7 @@ Git LFS is not needed: all assets come with a normal `git clone`.
 
 - GNU make, bash
 - Python 3 with [Pillow](https://pypi.org/project/Pillow/) (`python3 -m pip install Pillow`)
-- Ruby (any 3.x) for `tools/scripts/halve_data.rb`
+- Ruby (any 3.x) for the Tiled compiler and `tools/scripts/halve_data.rb`
 - `unzip` (only to install assets from a `.zip`) and `zip` (only for `make android`)
 - `xvfb-run` (only for `make compile` on a machine without a display)
 - [Tiled](https://www.mapeditor.org) 1.10+ to edit maps (see [TILED.md](TILED.md))
@@ -78,16 +81,18 @@ See `lib/mkxp-z/android/README.md`.
 | `src/data/` | `build/Scripts/` | copied |
 | `src/loader.rb` | `build/loader.rb` | copied; mkxp-z runs it (`customScript`) |
 | `src/mkxp.json`, `src/Game.ini` | `build/` | copied |
-| `src/assets/graphics/` | `build/Graphics/` | **halved** (see [Graphics pipeline](#graphics-pipeline)) |
+| `src/assets/graphics/` | `build/Graphics/` | copied (already 1×, see [Source scale](#source-scale)) |
 | `src/assets/audio/` | `build/Audio/` | copied |
 | `src/assets/fonts/` | `build/Fonts/` | copied |
 | `src/pbs/` (JSON) | `build/PBS/` | validated and exported as PBS files (see [PBS_JSON.md](PBS_JSON.md)); until `src/pbs/` exists, `src/assets/pbs/` is copied instead |
 | `src/tiled/` (Tiled maps) | `build/Data/Map*.rxdata`, `MapInfos`, `Tilesets`, `CommonEvents`, `System`, `atmospheres.dat`; the map datasets of `build/PBS/` | compiled once `src/tiled/maps/registry.json` exists (see [TILED.md](TILED.md)) |
-| `src/assets/data/` | `build/Data/` | pixel values **halved** (`halve_data.rb`); files compiled from `src/tiled` are skipped |
+| `src/assets/data/` | `build/Data/` | copied; files compiled from `src/tiled` are skipped |
 | `src/assets/plugins/` | `build/Plugins/` | copied |
 | `src/assets/locales/` (CSV) | `build/Data/messages_<lang>_*.dat`, `build/Graphics/Locales/` | translations validated and compiled (see [LOCALIZATION.md](LOCALIZATION.md)) |
 
-Every step is incremental, so a rebuild only touches what changed.
+Every step is incremental, so a rebuild only touches what changed. Nothing is
+resized during the build: if `src/assets` still holds 2× art from an older
+version, the build stops and asks you to run `make downscale-assets` once.
 
 ### The script loader
 
@@ -133,6 +138,7 @@ throw those changes away). See [PBS_JSON.md](PBS_JSON.md).
 | `make android` | Package `build/` as `dist/pokessentials-android.zip` (+ `.obb`) |
 | `make apk` | Build the mkxp-z Android app into `dist/` |
 | `make install-assets` / `make uninstall-assets` | See [Asset tools](#asset-tools) |
+| `make downscale-assets` | One-time conversion of a clone set up by an older version to 1× sources (see [Source scale](#source-scale)) |
 | `make import-pbs` | Import `src/assets/pbs/*.txt` into the JSON in `src/pbs/` |
 | `make pbs` | Validate `src/pbs/` and export it to `build/PBS/` (`FORCE=1` overwrites debug-editor changes) |
 | `make pull-pbs` | Import PBS files changed by the debug editors (`build/PBS/`) into `src/pbs/` |
@@ -181,12 +187,13 @@ All scripts are in `tools/scripts/`.
 | Script | What it does |
 | --- | --- |
 | `extract_assets.sh [SRC]` | Finds an Essentials release in a folder (default `lib/pokemon-essentials`), or unpacks a `.zip` of one into `build/.essentials`. |
-| `install_assets.sh [--force] [SRC]` | Copies `Graphics/` → `src/assets/graphics/`, `Audio/` → `src/assets/audio/`, `soundfont.sf2` → `src/assets/audio/`, `PBS/*.txt` → `src/assets/pbs/`, and `Data/*.rxdata` (except scripts) → `src/assets/data/`. |
+| `install_assets.sh [--force] [SRC]` | Copies `Graphics/` → `src/assets/graphics/` (halved to 1×), `Audio/` → `src/assets/audio/`, `soundfont.sf2` → `src/assets/audio/`, `PBS/*.txt` → `src/assets/pbs/`, and `Data/*.rxdata` (except scripts, pixel values halved) → `src/assets/data/`. |
 | `uninstall_assets.sh [--force]` | Removes exactly the files `install_assets.sh` installed. |
 | `clean_data.sh [--all]` | Removes compiled data and staging (`--all`: the whole `build/`). |
-| `resize_graphics.py` | The graphics halver used by `make`. |
+| `resize_graphics.py` | Halves 2× Essentials graphics to 1× (used by `install_assets.sh` and `downscale_assets.py`). |
 | `ground_battlers.py` | Recalculates the battle sprite metrics so every Pokémon stands on the ground (`make ground-battlers`, see [Battler positions](#battler-positions)). |
-| `halve_data.rb` | The map/animation data converter used by `make`. |
+| `halve_data.rb` | Halves the pixel values in 2× map/animation data (used by `install_assets.sh` and `downscale_assets.py`). |
+| `downscale_assets.py` | One-time conversion of 2× assets and 32px Tiled maps made by older versions (`make downscale-assets`). |
 | `halve_script_coords.rb` | Converts Essentials-style scripts to 256×192 (see [below](#converting-scripts-and-plugins)). |
 | `sync_dir.py` | Incremental folder copy used by `make`. |
 | `build_engine.sh`, `build_apk.sh`, `play.sh` | Engine/APK builds and the packaged-build launcher. |
@@ -194,30 +201,41 @@ All scripts are in `tools/scripts/`.
 How installed files are tracked:
 
 - Every installed file is recorded with its checksum in
-  `src/assets/.installed_manifest`.
+  `src/assets/.installed_manifest`, and `src/assets/.asset_scale` records that
+  they are 1×.
 - Running `install_assets.sh` again updates installed files, but skips any file
   you changed or added yourself. `--force` overwrites them anyway.
 - Files it copies or updates get the current time, so the next `make` rebuilds
   them (e.g. new art committed to `lib/pokemon-essentials/Graphics`).
+- The halved copies are made in `build/.essentials-1x/` first, and only redone
+  for Essentials files that changed.
 - `uninstall_assets.sh` keeps files you changed, unless you pass `--force`.
 
 Installed files are added to `.git/info/exclude`, so the thousands of Essentials
 files are never committed by accident. Your own files in `src/assets/` are
 tracked as usual. To commit an Essentials file you edited, use `git add -f`.
 
-## Graphics pipeline
+## Source scale
 
-Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
-`make` halves them into `build/Graphics/` with
+Pokémon Essentials draws its art at 2× (for a 512×384 screen). Pokessentials
+runs at 256×192, and keeps every source at that **1×** size: the graphics in
+`src/assets/graphics/`, the pixel values in `src/assets/data/`, and the 16px
+maps in `src/tiled/`. Art is drawn, shared and committed at the size the game
+shows it, and `make` copies it into `build/` as it is.
+
+Essentials' art is halved once, when `install_assets.sh` installs it, with
 `tools/scripts/resize_graphics.py`:
 
 - **Nearest-neighbour only.** Every game pixel stays one uniform size (no
   "mixels") and no new colours are invented.
 - **Clean-2× check.** Most Essentials art is a 2× upscale of 1× art, so halving
   it loses nothing. Art that isn't is still halved, but listed in
-  `build/resize_report.txt`. For Essentials 21.1 that's 152 files: mostly
-  battle animation sheets, all tilesets, transitions and fogs. Redraw them at
-  1× in `src/assets/graphics/` to replace the lossy versions.
+  `src/assets/.resize_report.txt`. For the Essentials in `lib/` (with the
+  Generation 9 Pack) that's about 780 files: mostly newer Pokémon sprites and
+  icons, overworld characters, animation sheets, all tilesets, transitions and
+  fogs. Redraw them in
+  `src/assets/graphics/` to replace the lossy versions (`install_assets.sh`
+  never overwrites a file you changed).
 - **96×96 battle sprites.** Every battle sprite frame comes out exactly 96×96:
   - Pokémon front/back sprites (all forms, shiny or not)
   - egg battler sprites and the hatching sheet
@@ -227,7 +245,7 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
   80×80) are padded with transparency at the bottom centre. That matches how
   battlers are anchored (`ox = width / 2`, `oy = height`), so they stand in
   the same place. A sprite that can't fit in 96×96 without losing opaque
-  pixels stops the build with an error.
+  pixels stops the install with an error.
 - **3× back sprites.** The Generation 9 Pack's back sprites are 288×288: 3×
   upscales of 96×96 art, drawn 1.5× larger than the front sprites. Battle
   frames of 288×288 are divided by 3 instead of 2, so they come out as clean
@@ -236,10 +254,9 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
   are worked out from the sprites (see [Battler positions](#battler-positions)).
   A few stock back sprites the pack doesn't replace (`PICHU_2`, `ARCEUS_9`,
   some female and Shadow variants) are still cut off.
-- Files that aren't PNGs are copied unchanged. Outputs whose source was
-  deleted are removed.
+- Files that aren't PNGs are copied unchanged.
 
-`halve_data.rb` does the same for pixel values stored in game data:
+`halve_data.rb` does the same for pixel values stored in Essentials' data:
 
 - Show/Move Picture commands in maps, common events and troops
 - RMXP animation cells (`Animations.rxdata`)
@@ -247,6 +264,44 @@ Source graphics in `src/assets/graphics/` stay at Essentials' original 2× size.
 
 Tile-based values are left alone. Pokémon sprite metrics in PBS are already in
 1× pixels and are used as-is.
+
+When you add art or data made for Essentials' 2× scale (a resource pack, a
+plugin's graphics, another RMXP project's maps), halve it the same way before
+it goes into `src/`:
+
+```sh
+python3 -I tools/scripts/resize_graphics.py path/to/Graphics out/Graphics
+ruby tools/scripts/halve_data.rb path/to/Data out/Data
+```
+
+### Converting a clone set up by an older version
+
+Older versions kept Essentials' 2× art in `src/assets/` and halved it on every
+build. If your clone was set up that way, `make` stops with a message until you
+convert it once:
+
+```sh
+make downscale-assets
+```
+
+`tools/scripts/downscale_assets.py`:
+
+1. halves `src/assets/graphics/` and the pixel values in `src/assets/data/`
+   exactly as a fresh install would, keeping the 2× originals in
+   `build/.downscale-backup/<date>/` until `make clean`. Installed files you
+   haven't changed stay tracked as installed; files you changed (or 2× art you
+   added yourself) are halved too and stay yours;
+2. halves localized graphics in `src/assets/locales/<lang>/graphics/` that are
+   twice the size of the English graphic they replace;
+3. converts `src/tiled/` if its maps still use 32px tiles (tile sizes, object
+   positions, the world file, atmosphere values and Show/Move Picture
+   coordinates in event scripts), then remakes the autotile images and event
+   previews Tiled shows.
+
+Each step is skipped when there's nothing to convert, so running it twice is
+safe. Graphics you added under `src/assets/graphics/` without
+`install_assets.sh` are only halved with `FORCE=1`, since their scale can't be
+told apart.
 
 ## Battler positions
 
@@ -284,8 +339,8 @@ make ground-battlers ARGS="--species PIKACHU,ZUBAT --verbose"
 ```
 
 `tools/scripts/ground_battlers.py` reads the sprites from `src/assets/graphics`
-(or `lib/pokemon-essentials/Graphics` if no art is installed) and shrinks them
-exactly as the build does. It also adds metrics entries for forms that have
+(or `lib/pokemon-essentials/Graphics` if no art is installed, shrinking that 2×
+art exactly as `install_assets.sh` does). It also adds metrics entries for forms that have
 their own sprites but no entry yet, and lists back sprites that are still cut
 off.
 
@@ -434,7 +489,11 @@ request (see [CONTRIBUTING.md](CONTRIBUTING.md#formatting)).
   `--compile`).
 - **Blurry or clipped text**: keep the font sizes in `MessageConfig` at 16/13/16
   and `"fontHeightReporting": 1`. Other sizes are not pixel-aligned.
-- **A graphic looks rough**: check `build/resize_report.txt`. It's probably art
-  that wasn't a clean 2× upscale. Draw a 1× version in `src/assets/graphics/`.
+- **A graphic looks rough**: check `src/assets/.resize_report.txt`. It's
+  probably Essentials art that wasn't a clean 2× upscale. Redraw it in
+  `src/assets/graphics/`.
+- **"src/assets holds graphics and data installed at Essentials' 2x size"**:
+  the clone was set up by an older version; run `make downscale-assets` once
+  (see [Source scale](#source-scale)).
 - **Script calls in events use 512×384 coordinates**: `halve_data.rb` can't
   convert Ruby code inside event script commands. Halve those numbers by hand.

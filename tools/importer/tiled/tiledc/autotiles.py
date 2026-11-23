@@ -1,10 +1,10 @@
 """@package tiledc.autotiles
 Converts RPG Maker XP autotiles into Tiled tilesets.
 
-An RMXP autotile is a 96x128 sheet (3x4 tiles) per animation frame, frames
-side by side; the engine assembles each of its 48 variants from 16x16
+An RMXP autotile is a 48x64 sheet (3x4 16px tiles) per animation frame,
+frames side by side; the engine assembles each of its 48 variants from 8x8
 quarters (TileDrawingHelper::AUTOTILE_PATTERNS). A "small" autotile is a
-single 32x32 tile per frame, used for all 48 variants.
+single 16x16 tile per frame, used for all 48 variants.
 
 The converter writes, for each autotile, a PNG with the 48 variants of every
 frame (8 columns x 6 rows per frame, frames stacked) and a .tsj that:
@@ -40,7 +40,7 @@ PATTERNS = [
     [37, 38, 43, 44], [37, 6, 43, 44], [13, 18, 19, 24], [13, 14, 43, 44],
     [37, 42, 43, 48], [17, 18, 47, 48], [13, 18, 43, 48], [1, 2, 7, 8],
 ]
-## Quarter size in the 32px sources.
+## Quarter size of a tile.
 QUARTER = config.TILE // 2
 ## Width and height of one full autotile frame.
 FRAME_W, FRAME_H = 3 * config.TILE, 4 * config.TILE
@@ -164,7 +164,7 @@ def tileset_json(name, image_file, tsj_path, frames, small, autotile_name, old=N
 def convert(src_png, out_dir, autotile_name=None, slug_name=None):
     """Converts one RMXP autotile into <out_dir>/<slug>.png and .tsj.
 
-    @param src_png the RMXP autotile (Graphics/Autotiles/<name>.png, 32px)
+    @param src_png the RMXP autotile (Graphics/Autotiles/<name>.png, 16px tiles)
     @param autotile_name RMXP graphic name (default: file name without .png)
     @return path of the .tsj
     """

@@ -256,15 +256,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"CutTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":544,
-     "y":448,
+     "width":16,
+     "x":272,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -287,15 +287,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":704,
-     "y":640,
+     "width":16,
+     "x":352,
+     "y":320,
      "properties":[
       {
        "name":"event_id",
@@ -318,15 +318,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":704,
-     "y":672,
+     "width":16,
+     "x":352,
+     "y":336,
      "properties":[
       {
        "name":"event_id",
@@ -349,15 +349,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Trainer(2)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":448,
+     "width":16,
+     "x":80,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -390,15 +390,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Trainer(2)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":448,
+     "width":16,
+     "x":112,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -440,15 +440,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Trainer(2)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":544,
+     "width":16,
+     "x":112,
+     "y":272,
      "properties":[
       {
        "name":"event_id",
@@ -493,15 +493,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Trainer(1)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":416,
+     "width":16,
+     "x":160,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -534,15 +534,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Trainer(1)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":448,
+     "width":16,
+     "x":144,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -577,15 +577,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Trainer(1)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":352,
-     "y":448,
+     "width":16,
+     "x":176,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -620,15 +620,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Trainer(2)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":416,
-     "y":544,
+     "width":16,
+     "x":208,
+     "y":272,
      "properties":[
       {
        "name":"event_id",
@@ -663,15 +663,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Double trainer F",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":416,
+     "width":16,
+     "x":224,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -703,15 +703,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"Double trainer M",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":480,
-     "y":416,
+     "width":16,
+     "x":240,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -743,15 +743,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":13,
      "name":"May initial reflection",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":960,
-     "y":512,
+     "width":16,
+     "x":480,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -791,15 +791,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":14,
      "name":"Rival",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":576,
-     "y":64,
+     "width":16,
+     "x":288,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -830,15 +830,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":15,
      "name":"Rival controller size(2,1)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":704,
-     "y":416,
+     "width":16,
+     "x":352,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -869,15 +869,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":16,
      "name":"Remove follower size(1,4)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":32,
-     "y":544,
+     "width":16,
+     "x":16,
+     "y":272,
      "properties":[
       {
        "name":"event_id",
@@ -900,15 +900,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":17,
      "name":"Cave entrance",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1760,
-     "y":256,
+     "width":16,
+     "x":880,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -942,15 +942,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":18,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1536,
-     "y":192,
+     "width":16,
+     "x":768,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -973,15 +973,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":19,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1536,
-     "y":224,
+     "width":16,
+     "x":768,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -1004,15 +1004,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":20,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1536,
-     "y":256,
+     "width":16,
+     "x":768,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -1035,15 +1035,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":21,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1536,
-     "y":288,
+     "width":16,
+     "x":768,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -1066,15 +1066,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":22,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1632,
-     "y":224,
+     "width":16,
+     "x":816,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -1097,15 +1097,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":23,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1632,
-     "y":256,
+     "width":16,
+     "x":816,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -1128,15 +1128,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":24,
      "name":"CutTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1408,
-     "y":448,
+     "width":16,
+     "x":704,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -1159,15 +1159,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":25,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1536,
-     "y":1952,
+     "width":16,
+     "x":768,
+     "y":976,
      "properties":[
       {
        "name":"event_id",
@@ -1190,15 +1190,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":26,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1568,
-     "y":1952,
+     "width":16,
+     "x":784,
+     "y":976,
      "properties":[
       {
        "name":"event_id",
@@ -1221,15 +1221,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":27,
      "name":"HeadbuttTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1600,
-     "y":1952,
+     "width":16,
+     "x":800,
+     "y":976,
      "properties":[
       {
        "name":"event_id",
@@ -1252,15 +1252,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":28,
      "name":"Invisible Kecleon",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1440,
-     "y":1408,
+     "width":16,
+     "x":720,
+     "y":704,
      "properties":[
       {
        "name":"event_id",
@@ -1290,15 +1290,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":29,
      "name":"CutTree",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1632,
-     "y":992,
+     "width":16,
+     "x":816,
+     "y":496,
      "properties":[
       {
        "name":"event_id",
@@ -1321,15 +1321,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":30,
      "name":"May west reflection",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":480,
+     "width":16,
+     "x":48,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -1382,7 +1382,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -1417,7 +1417,7 @@
    "source":"../tilesets/autotiles/fountain1.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":70,

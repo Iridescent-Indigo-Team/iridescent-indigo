@@ -145,15 +145,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Slot Machine 1",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":192,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -174,15 +174,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Slot Machine 2",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":224,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -203,15 +203,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Slot Machine 3",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":256,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -232,15 +232,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Slot Machine 4",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":288,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -261,15 +261,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Slot Machine 5",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":320,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -290,15 +290,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Slot Machine 6",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":192,
+     "width":16,
+     "x":80,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -319,15 +319,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Slot Machine 7",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":224,
+     "width":16,
+     "x":80,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -348,15 +348,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Slot Machine 8",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":256,
+     "width":16,
+     "x":80,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -377,15 +377,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Slot Machine 9",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":288,
+     "width":16,
+     "x":80,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -406,15 +406,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Slot Machine 10",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":320,
+     "width":16,
+     "x":80,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -435,15 +435,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Slot Machine 11",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":192,
+     "width":16,
+     "x":96,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -464,15 +464,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"Slot Machine 12",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":224,
+     "width":16,
+     "x":96,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -493,15 +493,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":13,
      "name":"Slot Machine 13",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":256,
+     "width":16,
+     "x":96,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -522,15 +522,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":14,
      "name":"Slot Machine 14",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":288,
+     "width":16,
+     "x":96,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -551,15 +551,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":15,
      "name":"Slot Machine 15",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":320,
+     "width":16,
+     "x":96,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -580,15 +580,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":16,
      "name":"Voltorb Flip",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":352,
-     "y":320,
+     "width":16,
+     "x":176,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -609,15 +609,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":17,
      "name":"Lottery",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":64,
+     "width":16,
+     "x":144,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -669,15 +669,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":18,
      "name":"Voltorb Flip man",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":352,
-     "y":256,
+     "width":16,
+     "x":176,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -700,15 +700,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":19,
      "name":"Coin seller",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":64,
+     "width":16,
+     "x":64,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -731,15 +731,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":20,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":448,
+     "width":16,
+     "x":144,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -762,15 +762,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":21,
      "name":"Coin Case giver",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":64,
+     "width":16,
+     "x":48,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -793,15 +793,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":22,
      "name":"Triple Triad explainer",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":416,
-     "y":64,
+     "width":16,
+     "x":208,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -824,15 +824,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":23,
      "name":"Triple Triad card shop",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":64,
+     "width":16,
+     "x":224,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -855,15 +855,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":24,
      "name":"Triple Triad duel",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":160,
+     "width":16,
+     "x":256,
+     "y":80,
      "properties":[
       {
        "name":"event_id",
@@ -887,15 +887,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":25,
      "name":"Triple Triad duel with rules",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":192,
+     "width":16,
+     "x":256,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -919,15 +919,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":26,
      "name":"Triple Triad duel with deck",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":224,
+     "width":16,
+     "x":256,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -951,15 +951,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":27,
      "name":"Triple Triad duel with prize",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":256,
+     "width":16,
+     "x":256,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -983,15 +983,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":28,
      "name":"Prize vendor left",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":736,
+     "width":16,
+     "x":32,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -1014,15 +1014,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":29,
      "name":"Prize vendor middle",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":736,
+     "width":16,
+     "x":64,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -1045,15 +1045,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":30,
      "name":"Prize vendor right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":736,
+     "width":16,
+     "x":96,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -1076,15 +1076,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":31,
      "name":"Shop exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":960,
+     "width":16,
+     "x":64,
+     "y":480,
      "properties":[
       {
        "name":"event_id",
@@ -1130,14 +1130,14 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
    "source":"../tilesets/game_corner_interior.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

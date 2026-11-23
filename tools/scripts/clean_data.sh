@@ -7,6 +7,8 @@
 #                             or the first ./game.sh launch in debug mode)
 #   * build/Data/PluginScripts.rxdata
 #   * build/.essentials       extracted Essentials zip (extract_assets.sh)
+#   * build/.essentials-1x    Essentials' graphics and data halved to 1x
+#                             (install_assets.sh; remade on the next install)
 #
 # --all removes the whole build/ folder instead (including a built engine).
 #===============================================================================
@@ -22,9 +24,9 @@ case "${1:-}" in
     ;;
   "")
     rm -f "$BUILD"/Data/*.dat "$BUILD/Data/PluginScripts.rxdata"
-    rm -rf "$BUILD/.essentials"
-    echo "Removed compiled data from build/Data and the extracted Essentials staging folder."
+    rm -rf "$BUILD/.essentials" "$BUILD/.essentials-1x"
+    echo "Removed compiled data from build/Data and the Essentials staging folders."
     ;;
-  -h|--help) sed -n '2,12p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' ;;
+  -h|--help) sed -n '2,14p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//' ;;
   *) echo "clean_data: unknown argument $1" >&2; exit 1 ;;
 esac

@@ -29,8 +29,8 @@ FONTS_DIR = os.path.join(ROOT, "src", "assets", "fonts")
 EXTRACT_EVENTS = os.path.join(TOOL_DIR, "extract_events.rb")
 ## The message file writer (Ruby).
 WRITE_MESSAGES = os.path.join(TOOL_DIR, "write_messages.rb")
-## The graphics halver used by the main build.
-RESIZE_GRAPHICS = os.path.join(ROOT, "tools", "scripts", "resize_graphics.py")
+## The folder copier used by the main build.
+SYNC_DIR = os.path.join(ROOT, "tools", "scripts", "sync_dir.py")
 
 
 class Language:

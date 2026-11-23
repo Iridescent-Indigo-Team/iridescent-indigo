@@ -9,8 +9,8 @@
 #   System.rxdata and atmospheres.dat
 # into ir["out_dir"]. Files are only rewritten when their bytes change.
 #
-# Show Picture / Move Picture coordinates are halved (HalveData) to match the
-# 256x192 build, exactly like tools/scripts/halve_data.rb does for .rxdata.
+# Show Picture / Move Picture coordinates are written as they are: like the
+# graphics in src/assets, the event scripts use the game's own pixels.
 #
 # With ir["check_only"], nothing is written: the event files are only
 # evaluated, to report errors (used by `tiled_compiler.py validate`).
@@ -76,7 +76,6 @@ module RxdataBuild
   def build(ir)
     out = ir["out_dir"]
     check_only = ir["check_only"]
-    halve = ir.fetch("halve_pictures", true)
     written = []
     errors = []
     map_ids = ir["map_ids"] || {}
@@ -146,7 +145,6 @@ module RxdataBuild
           end
           page(settings[i] || {}, factory.pages[i], factory.routes[i])
         end
-        ev.pages.each { |pg| HalveData.halve_command_list(pg.list) } if halve
         map.events[ev.id] = ev
       end
       save.call(map, format("Map%03d.rxdata", id.to_i))
@@ -184,7 +182,6 @@ module RxdataBuild
           errors << { "file" => c["path"], "message" => "doesn't define a common(...) event" }
           next
         end
-        HalveData.halve_command_list(ce.list) if halve
         list[ce.id] = ce
       end
       # The engine makes a Game_CommonEvent for every id up to the last one,

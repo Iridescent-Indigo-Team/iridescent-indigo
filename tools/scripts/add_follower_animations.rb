@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #===============================================================================
-# add_follower_animations.rb [FILE...]
+# add_follower_animations.rb [--1x] [FILE...]
 #-------------------------------------------------------------------------------
 # Adds the following Pokémon's animations to RMXP animation files
 # (Animations.rxdata):
@@ -19,12 +19,16 @@
 # FILE defaults to lib/pokemon-essentials/Data/Animations.rxdata, plus
 # src/assets/data/Animations.rxdata if it has been installed.
 #
-# Coordinates are at the 2x scale of the source graphics; `make data`
-# (halve_data.rb) halves them for the build.
+# The animations are defined at Essentials' 2x scale, the scale of
+# lib/pokemon-essentials. Files in src/assets are at the game's 1x scale, so
+# the copy written to src/assets/data has its cell positions halved
+# (HalveData, exactly as install_assets.sh halves Essentials' data). --1x
+# halves them for the FILEs given too.
 #===============================================================================
 ROOT = File.expand_path("../..", __dir__)
 require File.join(ROOT, "lib/eevee/rmxp/rgss_internal")
 require File.join(ROOT, "lib/eevee/rmxp/rgss_rpg")
+require File.join(ROOT, "tools/scripts/halve_data")
 
 module FollowerAnimations
   # Every follower animation's name starts with this.
@@ -155,10 +159,13 @@ module FollowerAnimations
 
   # Adds/updates the follower animations in data (an array of animations,
   # indexed by ID, with nil at 0).
+  # @param half [Boolean] true if data is at the game's 1x scale
   # @return [Hash{String => Integer}] each animation's name and ID
-  def merge(data)
+  def merge(data, half = false)
     ret = {}
-    all.each do |anim|
+    anims = all
+    HalveData.halve_rmxp_animations(anims) if half
+    anims.each do |anim|
       id = data.index { |existing| existing&.name == anim.name }
       if !id
         id = data.length
@@ -173,10 +180,11 @@ module FollowerAnimations
 
   # Adds the follower animations to one file.
   # @param path [String]
-  def process(path)
+  # @param half [Boolean] true if the file is at the game's 1x scale
+  def process(path, half = false)
     data = Marshal.load(File.binread(path))
     before = Marshal.dump(data)
-    ids = merge(data)
+    ids = merge(data, half)
     after = Marshal.dump(data)
     if after == before
       puts "#{path}: up to date"
@@ -190,11 +198,13 @@ module FollowerAnimations
 end
 
 if $PROGRAM_NAME == __FILE__
-  files = ARGV.dup
+  args = ARGV.dup
+  half = !args.delete("--1x").nil?
+  files = args.map { |path| [path, half] }
   if files.empty?
-    files.push(File.join(ROOT, "lib/pokemon-essentials/Data/Animations.rxdata"))
+    files.push([File.join(ROOT, "lib/pokemon-essentials/Data/Animations.rxdata"), false])
     installed = File.join(ROOT, "src/assets/data/Animations.rxdata")
-    files.push(installed) if File.exist?(installed)
+    files.push([installed, true]) if File.exist?(installed)
   end
-  files.each { |path| FollowerAnimations.process(path) }
+  files.each { |path, h| FollowerAnimations.process(path, h) }
 end

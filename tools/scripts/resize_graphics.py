@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
-"""Halve Essentials graphics for the 256x192 build.
+"""Halve Essentials graphics to the game's 1x (256x192) size.
 
 Usage: python3 -I tools/scripts/resize_graphics.py SRC_DIR OUT_DIR [--jobs N]
                                                    [--report FILE] [--force]
+                                                   [--keep DIR]...
+
+Pokémon Essentials draws its art at 2x (for a 512x384 screen). Pokessentials
+keeps every source graphic at the game's own 1x size, so this runs when art
+comes in, not on every build:
+  * install_assets.sh halves Essentials' Graphics/ before copying it into
+    src/assets/graphics;
+  * downscale_assets.py (`make downscale-assets`) converts a src/assets/graphics
+    installed by older versions, which stored the 2x art.
 
 Every PNG under SRC_DIR is halved with nearest-neighbour sampling and written
 to the same relative path under OUT_DIR. Nearest-neighbour keeps every pixel
@@ -19,7 +28,7 @@ Battle sprites always come out as 96x96 frames:
 Each square frame (frame size = image height) is halved and then padded with
 transparency at bottom-centre, which matches how Essentials anchors battlers
 (ox = width / 2, oy = height). A frame that would still be bigger than 96x96
-must lose only transparent margin, otherwise the build fails.
+must lose only transparent margin, otherwise the run fails.
 
 Frames of 288x288 are 3x upscales of 96x96 art (the Generation 9 Pack's back
 sprites), so they are divided by 3 instead of 2. Their metrics in PBS are
@@ -238,9 +247,9 @@ def update_report(path, results):
             lossy[rel] = msg
     os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
-        f.write("# Graphics that are not clean 2x upscales.\n")
+        f.write("# Essentials graphics that are not clean 2x upscales.\n")
         f.write("# They were halved with nearest-neighbour and lost detail;\n")
-        f.write("# redraw them at 1x in src/assets/graphics to fix.\n")
+        f.write("# redraw them in src/assets/graphics to fix.\n")
         for rel in sorted(lossy):
             f.write("%s\t%s\n" % (rel, lossy[rel]))
     return len(lossy)
@@ -258,7 +267,7 @@ def main():
     args = parser.parse_args()
 
     if not os.path.isdir(args.src):
-        sys.stderr.write("No graphics found in %s (run tools/scripts/install_assets.sh)\n" % args.src)
+        sys.stderr.write("No graphics found in %s\n" % args.src)
         os.makedirs(args.out, exist_ok=True)
         return 0
     os.makedirs(args.out, exist_ok=True)

@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":288,
+     "width":16,
+     "x":48,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Daisy",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":128,
+     "width":16,
+     "x":80,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -156,15 +156,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Dr Footstep",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":32,
-     "y":128,
+     "width":16,
+     "x":16,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -187,15 +187,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Effort ribbon giver",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":128,
+     "width":16,
+     "x":32,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -218,15 +218,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Contest ribbon giver",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":128,
+     "width":16,
+     "x":48,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -249,15 +249,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Stats judge",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":128,
+     "width":16,
+     "x":128,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -303,7 +303,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -314,7 +314,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

@@ -1,10 +1,20 @@
 #!/usr/bin/env ruby
 #===============================================================================
-# halve_data.rb SRC_DIR OUT_DIR
+# halve_data.rb SRC_DIR OUT_DIR [--skip-list FILE]
 #-------------------------------------------------------------------------------
-# Copies the RMXP data files (src/assets/data/*.rxdata) into the build and
-# halves the pixel values stored in them, to match the 256x192 build whose
-# graphics are half size:
+# Copies RMXP data files (*.rxdata) from SRC_DIR to OUT_DIR and halves the
+# pixel values stored in them, from Essentials' 2x (512x384) scale to the
+# game's 1x (256x192) scale. Pokessentials keeps its sources at 1x, so this
+# runs when data comes in, not on every build:
+#   * install_assets.sh halves Essentials' Data/ before copying it into
+#     src/assets/data;
+#   * downscale_assets.py (`make downscale-assets`) converts a src/assets/data
+#     installed by older versions, which stored the 2x values.
+# Data from another RMXP project made for Essentials' 2x graphics needs the
+# same treatment before it goes into src/assets/data or is imported into
+# Tiled.
+#
+# What is halved:
 #   * Map*.rxdata, CommonEvents.rxdata, Troops.rxdata
 #       Show Picture (231) and Move Picture (232) commands that use constant
 #       coordinates: x and y are halved.
@@ -21,9 +31,7 @@
 # converted automatically.
 #
 # --skip-list FILE: skip files whose names match a regular expression listed
-# (one per line) in FILE. The Tiled compiler writes build/.tiled/owned.txt so
-# that maps, tilesets, common events and System from src/tiled aren't
-# overwritten by older copies in src/assets/data.
+# (one per line) in FILE.
 #===============================================================================
 require "fileutils"
 
@@ -189,7 +197,7 @@ module HalveData
     end
     src_dir, out_dir = args
     unless File.directory?(src_dir)
-      warn("No game data found in #{src_dir} (run tools/scripts/install_assets.sh)")
+      warn("No game data found in #{src_dir}")
       return 0
     end
     stamp = File.mtime(__FILE__)

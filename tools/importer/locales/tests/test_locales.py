@@ -377,16 +377,15 @@ class GraphicsTest(unittest.TestCase):
 
     @unittest.skipIf(not RUBY, "needs Ruby")
     def test_index(self):
-        try:
-            import PIL  # noqa: F401 (resize_graphics.py needs Pillow)
-        except ImportError:
-            self.skipTest("needs Pillow")
         de = cfg.Config().language("de")
-        png(os.path.join(self.locales, "de", "graphics", "UI", "Battle", "cursor_command.png"), 4, 2)
+        src = os.path.join(self.locales, "de", "graphics", "UI", "Battle", "cursor_command.png")
+        png(src, 4, 2)
         build = os.path.join(self.dir, "build")
         self.assertEqual(build_graphics(de, self.locales, build, log=lambda *a: None), 1)
         out = os.path.join(build, "Graphics", "Locales", "de", "UI", "Battle", "cursor_command.png")
-        self.assertTrue(os.path.isfile(out))
+        # Copied as it is: localized graphics are already at the game's size.
+        with open(src, "rb") as a, open(out, "rb") as b:
+            self.assertEqual(a.read(), b.read())
         proc = subprocess.run([RUBY, "-e", "p Marshal.load(File.binread(ARGV[0]))",
                                os.path.join(build, "Data", "graphics_de.dat")], stdout=subprocess.PIPE)
         self.assertIn('"graphics/ui/battle/cursor_command"=>"Graphics/Locales/de/UI/Battle/cursor_command"',

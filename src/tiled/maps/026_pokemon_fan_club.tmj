@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":352,
+     "width":16,
+     "x":80,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Trader - Basic",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":192,
+     "width":16,
+     "x":32,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -165,15 +165,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Pokémon ball - Basic",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":224,
+     "width":16,
+     "x":80,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -204,15 +204,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Gift Pokémon - Advanced",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":192,
+     "width":16,
+     "x":144,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -244,15 +244,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Trade - Advanced",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":192,
+     "width":16,
+     "x":48,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -284,15 +284,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Gift Pokémon - Basic",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":192,
+     "width":16,
+     "x":128,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -324,15 +324,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Gift egg",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":224,
+     "width":16,
+     "x":112,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -364,15 +364,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Pokémon ball - Advanced",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":224,
+     "width":16,
+     "x":96,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -426,7 +426,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -437,7 +437,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

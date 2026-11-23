@@ -1,27 +1,27 @@
 {
- "object": {
-  "height": 32,
-  "name": "StrengthBoulder",
-  "properties": [
+ "object":{
+  "height":16,
+  "name":"StrengthBoulder",
+  "properties":[
    {
-    "name": "page_0",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "graphic": "Object boulder",
-     "trigger": "player_touch"
+    "name":"page_0",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "graphic":"Object boulder",
+     "trigger":"player_touch"
     }
    },
    {
-    "name": "script",
-    "type": "file",
-    "value": "events/strength_boulder.rb"
+    "name":"script",
+    "type":"file",
+    "value":"events/strength_boulder.rb"
    }
   ],
-  "rotation": 0,
-  "type": "Event",
-  "visible": true,
-  "width": 32
+  "rotation":0,
+  "type":"Event",
+  "visible":true,
+  "width":16
  },
- "type": "template"
+ "type":"template"
 }

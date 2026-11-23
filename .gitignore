@@ -32,8 +32,11 @@ dist/
 # Game build output (make / game.sh)
 build/
 
-# Record of Essentials assets copied by tools/scripts/install_assets.sh
+# Record of Essentials assets copied by tools/scripts/install_assets.sh, the
+# scale they were installed at and the graphics that halved with loss
 src/assets/.installed_manifest
+src/assets/.asset_scale
+src/assets/.resize_report*.txt
 
 # Python bytecode
 __pycache__/
