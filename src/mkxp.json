@@ -5,7 +5,7 @@
     // desktop and Android.
 
     "rgssVersion": 1,
-    "windowTitle": "Pokessentials",
+    "windowTitle": "Iridescent Indigo",
 
     // Run the script loader instead of Data/Scripts.rxdata.
     "customScript": "loader.rb",
@@ -47,6 +47,6 @@
     "vsync": true,
     "syncToRefreshrate": true,
 
-    "dataPathOrg": "pokessentials",
-    "dataPathApp": "pokessentials"
+    "dataPathOrg": "iridescentindigo",
+    "dataPathApp": "iridescentindigo"
 }
