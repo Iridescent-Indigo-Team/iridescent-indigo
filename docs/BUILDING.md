@@ -270,6 +270,10 @@ The offsets are constants in `Battle::Scene`
 - **Cut-off back sprites** (a wide run of opaque pixels along the bottom row)
   have their cut edge on the base position instead, behind the message box.
 - **x offsets and shadows** can't be worked out from the sprites and are kept.
+- **Shadows.** Foe shadows are centred on the foe's base, moved by `ShadowX`.
+  Player shadows are centred on the player's ground line (y 140, partly behind
+  the message box), moved by the `BackSprite` x, and scaled by
+  `Battle::Scene::PLAYER_SHADOW_ZOOM` (1.5×) to match the larger back sprites.
 
 To recalculate the metrics after adding or changing sprites:
 

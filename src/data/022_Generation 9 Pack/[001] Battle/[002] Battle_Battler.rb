@@ -422,7 +422,7 @@ class Battle::Battler
       batSprite.visible = true
       if PluginManager.installed?("[DBK] Animated Pokémon System")
         shadowSprite.visible = true if batSprite.shadowVisible
-      elsif commander.opposes?
+      else
         shadowSprite.visible = true if commander.pokemon.species_data.shows_shadow?
       end
     end

@@ -27,6 +27,10 @@ class Battle::Scene
   # tools/scripts/ground_battlers.py has a copy of these values.
   PLAYER_FEET_OFFSET   = -12
   FOE_FEET_OFFSET      = 4
+  # Scale of the player's battlers' shadows. Back sprites are drawn 1.5x larger
+  # than front sprites, so their shadows are scaled up to match. Player-side
+  # shadows are centred on the player's ground line (PLAYER_FEET_OFFSET).
+  PLAYER_SHADOW_ZOOM   = 1.5
   # Default focal points of user and target in animations - do not change!
   # Is the centre middle of each sprite
   FOCUSUSER_X          = 64
@@ -401,8 +405,8 @@ class Battle::Scene
     back = !@battle.opposes?(idxBattler)
     pkmnSprite.setPokemonBitmap(pkmn, back)
     shadowSprite.setPokemonBitmap(pkmn)
-    # Set visibility of battler's shadow
-    shadowSprite.visible = pkmn.species_data.shows_shadow? if shadowSprite && !back
+    # Set visibility of battler's shadow (both sides have shadows)
+    shadowSprite.visible = pkmn.species_data.shows_shadow? if shadowSprite
   end
 
   def pbResetCommandsIndex(idxBattler)

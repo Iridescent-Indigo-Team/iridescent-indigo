@@ -71,7 +71,9 @@ module GameData
     def apply_metrics_to_sprite(sprite, index, shadow = false)
       # Metrics in PBS are in 1x pixels, which is the game's resolution.
       if shadow
-        sprite.x += @shadow_x if (index & 1) == 1   # Foe Pokémon
+        # Shadows stay on the ground, so only their x is moved. A player-side
+        # shadow follows its back sprite's x offset.
+        sprite.x += ((index & 1) == 1) ? @shadow_x : @back_sprite[0]
       elsif (index & 1) == 0   # Player's Pokémon
         sprite.x += @back_sprite[0]
         sprite.y += @back_sprite[1]

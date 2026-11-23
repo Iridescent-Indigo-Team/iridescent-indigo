@@ -111,6 +111,11 @@ class SpritePositioner
     @sprites["messageBox"] = IconSprite.new(0, Graphics.height - 48, @viewport)
     @sprites["messageBox"].setBitmap("Graphics/UI/Debug/battle_message")
     @sprites["messageBox"].z = 2
+    # The player's shadow is drawn behind the message box, as in battle
+    @sprites["shadow_0"] = IconSprite.new(0, 0, @viewport)
+    @sprites["shadow_0"].zoom_x = Battle::Scene::PLAYER_SHADOW_ZOOM
+    @sprites["shadow_0"].zoom_y = Battle::Scene::PLAYER_SHADOW_ZOOM
+    @sprites["shadow_0"].z = 1
     @sprites["shadow_1"] = IconSprite.new(0, 0, @viewport)
     @sprites["shadow_1"].z = 3
     @sprites["pokemon_0"] = PokemonSprite.new(@viewport)
@@ -155,6 +160,7 @@ class SpritePositioner
     if !@species
       @sprites["pokemon_0"].visible = false
       @sprites["pokemon_1"].visible = false
+      @sprites["shadow_0"].visible = false
       @sprites["shadow_1"].visible = false
       return
     end
@@ -165,7 +171,20 @@ class SpritePositioner
       @sprites["pokemon_#{i}"].y = pos[1]
       metrics_data.apply_metrics_to_sprite(@sprites["pokemon_#{i}"], i)
       @sprites["pokemon_#{i}"].visible = true
-      next if i != 1
+      if i == 0
+        # Player's shadow: centred on the player's ground line (see
+        # Battle::Scene::BattlerShadowSprite#pbSetPosition)
+        shadow = @sprites["shadow_0"]
+        if shadow.bitmap
+          shadow.ox = shadow.bitmap.width / 2
+          shadow.oy = shadow.bitmap.height / 2
+        end
+        shadow.x = pos[0]
+        shadow.y = pos[1] + Battle::Scene::PLAYER_FEET_OFFSET
+        metrics_data.apply_metrics_to_sprite(shadow, i, true)
+        shadow.visible = true
+        next
+      end
       @sprites["shadow_1"].x = pos[0]
       @sprites["shadow_1"].y = pos[1]
       if @sprites["shadow_1"].bitmap
@@ -201,6 +220,7 @@ class SpritePositioner
     return if !species_data
     @sprites["pokemon_0"].setSpeciesBitmap(@species, 0, @form, false, false, true)
     @sprites["pokemon_1"].setSpeciesBitmap(@species, 0, @form)
+    @sprites["shadow_0"].setBitmap(GameData::Species.shadow_filename(@species, @form))
     @sprites["shadow_1"].setBitmap(GameData::Species.shadow_filename(@species, @form))
   end
 
