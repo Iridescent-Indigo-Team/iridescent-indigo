@@ -278,11 +278,14 @@ $(LIBDIR)/libfreetype.a: $(DOWNLOADS)/freetype/Makefile
 	cd $(DOWNLOADS)/freetype; \
 	make -j$(NPROC); make install
 
-$(DOWNLOADS)/freetype/Makefile: $(DOWNLOADS)/freetype/configure
+$(DOWNLOADS)/freetype/Makefile: $(DOWNLOADS)/freetype/include/dlg/dlg.h
 	cd $(DOWNLOADS)/freetype; \
 	$(CONFIGURE) --enable-static=true --enable-shared=false
 
-$(DOWNLOADS)/freetype/configure: $(DOWNLOADS)/freetype/autogen.sh
+# FreeType's repository already contains a top-level 'configure', so a rule
+# keyed on it would never run autogen.sh. autogen.sh checks out the dlg
+# submodule and copies it to include/dlg, which configure needs; key on that.
+$(DOWNLOADS)/freetype/include/dlg/dlg.h: $(DOWNLOADS)/freetype/autogen.sh
 	cd $(DOWNLOADS)/freetype; ./autogen.sh
 
 $(DOWNLOADS)/freetype/autogen.sh:
