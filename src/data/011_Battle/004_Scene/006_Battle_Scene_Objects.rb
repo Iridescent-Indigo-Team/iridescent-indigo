@@ -665,6 +665,11 @@ class Battle::Scene::BattlerShadowSprite < RPG::Sprite
     self.oy = @_iconBitmap.height / 2
   end
 
+  # Places the shadow under its battler. Foe shadows are centred on the foe's
+  # base. Player shadows are centred on the player's ground line (where back
+  # sprites' feet stand, above the message box) and scaled up to match the
+  # larger back sprites.
+  # @return [void]
   def pbSetPosition
     return if !@_iconBitmap
     pbSetOrigin
@@ -673,6 +678,14 @@ class Battle::Scene::BattlerShadowSprite < RPG::Sprite
     p = Battle::Scene.pbBattlerPosition(@index, @sideSize)
     self.x = p[0]
     self.y = p[1]
+    if @index.even?   # Player's side
+      self.y += Battle::Scene::PLAYER_FEET_OFFSET
+      self.zoom_x = Battle::Scene::PLAYER_SHADOW_ZOOM
+      self.zoom_y = Battle::Scene::PLAYER_SHADOW_ZOOM
+    else
+      self.zoom_x = 1.0
+      self.zoom_y = 1.0
+    end
     # Apply metrics
     @pkmn.species_data.apply_metrics_to_sprite(self, @index, true)
   end
