@@ -1,5 +1,5 @@
 #================================================================================================
-# Pokémon Fused Fates Utilities/Graphics - 006_RecolorCache.rb
+# Pokémon Iridescent Indigo Graphics/Pokemon Hue Variation - 006_RecolorCache.rb
 #================================================================================================
 
 #==================================================================
@@ -8,7 +8,7 @@
 # @brief Loads recolored copies of graphics, recoloring each graphic/recolor pair only once.
 # Works with any path RPG::Cache can load.
 module RecolorCache
-  @cache = BitmapLRU.new { UtilitySettings::RECOLOR_CACHE_SIZE }
+  @cache = BitmapLRU.new { GraphicsSettings::RECOLOR_CACHE_SIZE }
 
   module_function
 
@@ -21,11 +21,15 @@ module RecolorCache
     return @cache.fetch("#{path}|#{key_for(recolor)}") do
       next DevLog.guard("RecolorCache could not load #{path}") do
         src = RPG::Cache.load_bitmap("", path)
-        bmp = BitmapWrapper.new(src.width, src.height)
-        bmp.blt(0, 0, src, src.rect)
-        src.dispose
-        apply(bmp, recolor)
-        next bmp
+        begin
+          next Recolor.recolored_copy(src, recolor) if recolor.is_a?(ColorAdjust)
+          bmp = BitmapWrapper.new(src.width, src.height)
+          bmp.blt(0, 0, src, src.rect)
+          apply(bmp, recolor)
+          next bmp
+        ensure
+          src.dispose
+        end
       end
     end
   end
@@ -46,6 +50,8 @@ module RecolorCache
   # @return [String]
   def key_for(recolor)
     return recolor.key if recolor.is_a?(ColorAdjust)
+    # Color maps need the PaletteSwap/Hex helpers, which aren't part of this project
+    raise ArgumentError, "color map recolors are not available" if !defined?(Hex) || !defined?(Pixels)
     pairs = PaletteSwap.normalize(recolor).sort.map { |from, to| [from, Pixels.color_key(*to)] }
     return "map:" + Hex.crc32(pairs.flatten.pack("N*")).to_s(16)
   end

@@ -12,3 +12,6 @@ follows the player.
 
 See [docs/MARKS.md](docs/MARKS.md) for marks, titles, Pokémon sizes and the
 player's birthday.
+
+See [docs/HUE_VARIATION.md](docs/HUE_VARIATION.md) for Pokémon color variation
+and how it's inherited.
