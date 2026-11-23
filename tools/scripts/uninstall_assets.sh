@@ -81,7 +81,8 @@ done < "$MANIFEST"
 if [[ -s "$MANIFEST.tmp" ]]; then
   mv "$MANIFEST.tmp" "$MANIFEST"
 else
-  rm -f "$MANIFEST.tmp" "$MANIFEST"
+  # Nothing installed is left: forget the scale and the resize report too.
+  rm -f "$MANIFEST.tmp" "$MANIFEST" "$ASSETS/.asset_scale" "$ASSETS/.resize_report.txt"
 fi
 
 # Remove folders left empty (never the top-level asset folders themselves).

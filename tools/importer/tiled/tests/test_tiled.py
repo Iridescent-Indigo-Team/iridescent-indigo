@@ -1,8 +1,9 @@
 """Tests of the Tiled tools (make test-tiled).
 
 Most tests build a small Tiled project in a temporary folder. The round trip
-test imports the Essentials sample data in lib/pokemon-essentials (when it's
-there), compiles it back and checks nothing the game uses changed.
+test halves the Essentials sample data in lib/pokemon-essentials (when it's
+there) to 1x like install_assets.sh does, imports it, compiles it back and
+checks nothing the game uses changed.
 """
 
 import json
@@ -10,10 +11,11 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
-from tiledc import atmosphere, autotiles, config, connections, events, pbsmaps, stairs
+from tiledc import atmosphere, autotiles, config, connections, downscale, events, pbsmaps, stairs
 from tiledc.compiler import Project, compile_map, compile_project
 from tiledc.config import Paths
 from tiledc.problems import Problems
@@ -31,6 +33,8 @@ except ImportError:
     HAVE_PIL = False
 
 FLIP_H = 0x80000000
+## Tile size (16px).
+T = config.TILE
 
 
 class Sandbox:
@@ -54,14 +58,14 @@ class Sandbox:
         save_json(os.path.join(self.paths.autotiles, "sea.tsj"), sea)
         if HAVE_PIL:
             from PIL import Image
-            Image.new("RGBA", (96, 128), (0, 0, 255, 255)).save(os.path.join(self.graphics, "Autotiles", "Sea.png"))
+            Image.new("RGBA", (3 * T, 4 * T), (0, 0, 255, 255)).save(os.path.join(self.graphics, "Autotiles", "Sea.png"))
         self.registry = Registry(self.paths.registry, [])
 
     def cleanup(self):
         config.GRAPHICS = self.old_graphics
         shutil.rmtree(self.root, ignore_errors=True)
 
-    def tileset(self, name, count, data, columns=8, tile=32):
+    def tileset(self, name, count, data, columns=8, tile=T):
         image = os.path.join(self.graphics, "Tilesets", name + ".png")
         rows = (count + columns - 1) // columns
         if HAVE_PIL:
@@ -86,7 +90,7 @@ class Sandbox:
             gid += counts[t]
         layers = layers if layers is not None else [[0] * (width * height)]
         doc = {"class": "Map", "height": height, "infinite": False, "orientation": "orthogonal",
-               "tileheight": 32, "tilewidth": 32, "tilesets": refs, "type": "map", "width": width,
+               "tileheight": T, "tilewidth": T, "tilesets": refs, "type": "map", "width": width,
                "layers": [tile_layer("L%d" % i, width, height, data, i + 1) for i, data in enumerate(layers)]
                + [{"id": 99, "name": "Events", "type": "objectgroup", "objects": list(objects)}],
                "nextobjectid": 100}
@@ -163,7 +167,7 @@ class TileNumberingTest(unittest.TestCase):
         out = project.combined[result.ir["tileset_id"]].write_image(os.path.join(self.box.root, "out"))
         from PIL import Image
         with Image.open(out) as im:
-            self.assertEqual(im.size, (128, 3 * 16))    # 8 columns x (2 + 1 rows), halved
+            self.assertEqual(im.size, (8 * T, 3 * T))    # 8 columns x (2 + 1 rows)
 
     @unittest.skipUnless(HAVE_PIL, "Pillow isn't installed")
     def test_tilesets_of_any_width_are_reflowed(self):
@@ -226,7 +230,8 @@ class RulesTest(unittest.TestCase):
         self.assertRejected("orthogonal", orientation="hexagonal")
 
     def test_tile_size(self):
-        self.assertRejected("32x32", tilewidth=48, tileheight=48)
+        self.assertRejected("%dx%d" % (T, T), tilewidth=48, tileheight=48)
+        self.assertRejected("make downscale-assets", tilewidth=32, tileheight=32)
 
     def test_tileset_tile_size(self):
         self.box.tileset("big", 4, {}, tile=48)
@@ -235,13 +240,13 @@ class RulesTest(unittest.TestCase):
         doc["tilesets"] = [{"firstgid": 1, "source": "../tilesets/big.tsj"}]
         save_json(self.box.registry.map_path(self.box.registry.by_id(1)), doc)
         _, problems, _ = self.box.compile(1)
-        self.assertTrue(any("32x32" in m for m in messages(problems)))
+        self.assertTrue(any("%dx%d" % (T, T) in m for m in messages(problems)))
 
     def test_embedded_tilesets(self):
         self.box.map(1, "Town", 1, 1)
         path = self.box.registry.map_path(self.box.registry.by_id(1))
         doc = load_json(path)
-        doc["tilesets"] = [{"firstgid": 1, "name": "x", "tilecount": 1, "tilewidth": 32, "tileheight": 32,
+        doc["tilesets"] = [{"firstgid": 1, "name": "x", "tilecount": 1, "tilewidth": T, "tileheight": T,
                             "image": "x.png", "columns": 1}]
         save_json(path, doc)
         _, problems, _ = self.box.compile(1)
@@ -287,10 +292,10 @@ class AutotileTest(unittest.TestCase):
     @unittest.skipUnless(HAVE_PIL, "Pillow isn't installed")
     def test_expand(self):
         from PIL import Image
-        img, frames = autotiles.expand(Image.new("RGBA", (96 * 3, 128)))
-        self.assertEqual((frames, img.size), (3, (256, 192 * 3)))
-        img, frames = autotiles.expand(Image.new("RGBA", (128, 32)))
-        self.assertEqual((frames, img.size), (4, (256, 192 * 4)))
+        img, frames = autotiles.expand(Image.new("RGBA", (3 * T * 3, 4 * T)))
+        self.assertEqual((frames, img.size), (3, (8 * T, 6 * T * 3)))
+        img, frames = autotiles.expand(Image.new("RGBA", (4 * T, T)))
+        self.assertEqual((frames, img.size), (4, (8 * T, 6 * T * 4)))
 
     def test_frame_duration(self):
         self.assertEqual(autotiles.frame_duration("Sea"), config.AUTOTILE_FRAME_DURATION)
@@ -391,9 +396,9 @@ class EventTest(unittest.TestCase):
         self.assertEqual(back, settings)
 
     def test_object_tile(self):
-        self.assertEqual(events.object_tile({"x": 64, "y": 96})[:2], (2, 3))
-        # a 64x64 character standing on tile (3, 5)
-        self.assertEqual(events.object_tile({"gid": 1, "x": 80, "y": 192, "width": 64, "height": 64}), (3, 5, True))
+        self.assertEqual(events.object_tile({"x": 2 * T, "y": 3 * T})[:2], (2, 3))
+        # a 32x32 character standing on tile (3, 5)
+        self.assertEqual(events.object_tile({"gid": 1, "x": 40, "y": 96, "width": 32, "height": 32}), (3, 5, True))
 
     def test_standalone_round_trip(self):
         obj = events.new_event_object(4, 7, "Sign", 3, 2, [{"trigger": "action"}], "../events/x.rb")
@@ -405,11 +410,11 @@ class EventTest(unittest.TestCase):
 
 
 class AtmosphereTest(unittest.TestCase):
-    def test_group_values_are_halved(self):
+    def test_group_values_are_game_pixels(self):
         problems = Problems()
-        layer = atmosphere.compile_layer({"name": "mist", "graphic": "Fogs/Mist", "scroll_x": 20, "offset_y": 8,
+        layer = atmosphere.compile_layer({"name": "mist", "graphic": "Fogs/Mist", "scroll_x": 10, "offset_y": 4,
                                           "blend": "add"}, problems, "x", "", check_graphics=False)
-        self.assertEqual((layer["scroll_x"], layer["offset_y"], layer["blend"]), (10, 4, 1))
+        self.assertEqual((layer["scroll_x"], layer["offset_y"], layer["blend"]), (10.0, 4.0, 1))
         self.assertEqual(messages(problems), [])
 
     def test_bad_layer(self):
@@ -423,7 +428,7 @@ class AtmosphereTest(unittest.TestCase):
                                          "fog_name": "Mist", "fog_hue": 0, "fog_opacity": 64,
                                          "fog_blend_type": 1, "fog_zoom": 200, "fog_sx": 2, "fog_sy": 0})
         self.assertEqual([l["name"] for l in group["layers"]], ["panorama", "fog"])
-        self.assertEqual(group["layers"][1]["scroll_x"], 20)
+        self.assertEqual(group["layers"][1]["scroll_x"], 10)   # fog_sx * 5 pixels per second
 
     @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
     def test_runtime_manager(self):
@@ -507,14 +512,14 @@ class StairsTest(unittest.TestCase):
         self.assertEqual(self.stair_problems(problems, True), [])
 
     def test_spawn_on_stairs(self):
-        spawn = {"class": "Spawn", "id": 1, "name": "door", "x": 64, "y": 64, "width": 32, "height": 32}
+        spawn = {"class": "Spawn", "id": 1, "name": "door", "x": 2 * T, "y": 2 * T, "width": T, "height": T}
         _, problems = self.flight(self.left_flight(), objects=[spawn])
         self.assertTrue(any("spawn 'door'" in m for m in self.stair_problems(problems, False)))
 
     def test_boulder_on_stairs(self):
         shutil.copytree(os.path.join(config.ROOT, "src", "tiled", "templates"), self.box.paths.templates)
-        on = {"id": 1, "template": "../templates/strength_boulder.tx", "x": 64, "y": 64}
-        off = {"id": 2, "template": "../templates/strength_boulder.tx", "x": 0, "y": 96}
+        on = {"id": 1, "template": "../templates/strength_boulder.tx", "x": 2 * T, "y": 2 * T}
+        off = {"id": 2, "template": "../templates/strength_boulder.tx", "x": 0, "y": 3 * T}
         _, problems = self.flight(self.left_flight(), objects=[on, off])
         errors = [m for m in self.stair_problems(problems, False) if "boulder" in m]
         self.assertEqual(len(errors), 1, errors)
@@ -569,13 +574,13 @@ class BuildTest(unittest.TestCase):
         self.box.cleanup()
 
     def placed(self, template, object_id, x, y, params=()):
-        obj = {"id": object_id, "template": "../templates/%s.tx" % template, "x": x * 32, "y": y * 32}
+        obj = {"id": object_id, "template": "../templates/%s.tx" % template, "x": x * T, "y": y * T}
         if params:
             obj["properties"] = [make_prop(k, v) for k, v in params]
         return obj
 
     def test_build(self):
-        spawn = {"class": "Spawn", "id": 1, "name": "door", "x": 32, "y": 64, "width": 32, "height": 32,
+        spawn = {"class": "Spawn", "id": 1, "name": "door", "x": T, "y": 2 * T, "width": T, "height": T,
                  "properties": [make_prop("direction", "up", "string", "SpawnDirection")]}
         self.box.map(2, "House", 4, 4, objects=[spawn])
         objs = [self.placed("door", 1, 1, 1, [("to", "House"), ("spawn", "door")]),
@@ -641,6 +646,70 @@ class BuildTest(unittest.TestCase):
         self.assertFalse(os.path.exists(os.path.join(data, "Map001.rxdata")))
 
 
+class DownscaleTest(unittest.TestCase):
+    """One-time conversion of a 32px src/tiled (2x graphics) to 16px."""
+
+    def setUp(self):
+        self.box = Sandbox()
+
+    def tearDown(self):
+        self.box.cleanup()
+
+    def test_picture_commands(self):
+        text = ("page 0, [\n  show_picture(\n    number: 1,\n    graphic: \"a (x: 3)\",\n    origin: :center,\n"
+                "    x: 256,\n    y: -171,\n    zoom_x: 200,\n    opacity: 0,\n  ),\n"
+                "  move_picture(number: 1, frames: 5, origin: :center, x: 10, y: 4, blending: :normal),\n"
+                "  show_picture_variables(number: 2, graphic: \"b\", origin: :center, x: 7, y: 8),\n"
+                "  script(\"x: 40\"),\n]\n")
+        odd = []
+        out = downscale.halve_picture_commands(text, odd, "e.rb")
+        self.assertIn("x: 128,\n    y: -86,\n    zoom_x: 200,", out)    # halves rounded away from zero
+        self.assertIn('graphic: "a (x: 3)"', out)                       # strings are left alone
+        self.assertIn("x: 5, y: 2, blending", out)
+        self.assertIn("show_picture_variables(number: 2, graphic: \"b\", origin: :center, x: 7, y: 8)", out)
+        self.assertIn('script("x: 40")', out)
+        self.assertEqual(odd, ["e.rb:2: y = -171"])
+
+    def test_project(self):
+        self.box.tileset("a", 16, {}, tile=32)
+        self.box.tileset("b", 8, {}, tile=32)
+        sea = os.path.join(self.box.paths.autotiles, "sea.tsj")
+        doc = load_json(sea)
+        doc.update(tilewidth=32, tileheight=32, imagewidth=256, imageheight=192)
+        save_json(sea, doc)
+        door = {"class": "Event", "id": 1, "name": "door", "x": 64, "y": 64, "width": 32, "height": 32}
+        path = self.box.map(1, "Town", 4, 3, objects=[door], tilewidth=32, tileheight=32)
+        self.box.write_world([connections.Placed(1, 2, 1, 4, 3)])
+        world = load_json(self.box.paths.world)
+        world["maps"][0].update(x=64, y=32, width=128, height=96)
+        save_json(self.box.paths.world, world)
+        os.makedirs(self.box.paths.atmospheres)
+        save_json(os.path.join(self.box.paths.atmospheres, "mist.json"),
+                  {"layers": [{"name": "mist", "graphic": "Fogs/Mist", "scroll_x": 20, "offset_y": -8}]})
+
+        self.assertTrue(downscale.downscale(self.box.paths, log=lambda m: None))
+        m = load_json(path)
+        self.assertEqual((m["tilewidth"], m["tileheight"]), (T, T))
+        obj = m["layers"][-1]["objects"][0]
+        self.assertEqual((obj["x"], obj["y"], obj["width"], obj["height"]), (32, 32, 16, 16))
+        a = load_json(os.path.join(self.box.paths.tilesets, "a.tsj"))
+        self.assertEqual((a["tilewidth"], a["imagewidth"], a["imageheight"]), (T, 8 * T, 2 * T))
+        self.assertEqual(load_json(sea)["imageheight"], 96)
+        self.assertEqual({k: load_json(self.box.paths.world)["maps"][0][k] for k in ("x", "y", "width", "height")},
+                         {"x": 32, "y": 16, "width": 64, "height": 48})
+        mist = load_json(os.path.join(self.box.paths.atmospheres, "mist.json"))["layers"][0]
+        self.assertEqual((mist["scroll_x"], mist["offset_y"]), (10, -4))
+        # It compiles, and running the conversion again changes nothing.
+        self.assertEqual(messages(self.box.compile(1)[1]), [])
+        self.assertFalse(downscale.downscale(self.box.paths, log=lambda m: None))
+
+    def test_mixed_sizes_are_refused(self):
+        self.box.map(1, "Town", tilewidth=32, tileheight=32)
+        from tiledc.problems import TiledError
+        with self.assertRaises(TiledError):
+            downscale.downscale(self.box.paths, log=lambda m: None)
+
+
 @unittest.skipUnless(HAVE_RUBY, "Ruby isn't installed")
 class CommandPaletteTest(unittest.TestCase):
     """Every snippet of the Insert Event Command action is valid event code."""
@@ -664,21 +733,34 @@ class CommandPaletteTest(unittest.TestCase):
 class EssentialsRoundTripTest(unittest.TestCase):
     """Imports the Essentials sample game into Tiled and compiles it back."""
 
+    @unittest.skipUnless(HAVE_PIL, "Pillow isn't installed")
     def test_round_trip(self):
         from tiledc.importer import import_rxdata
         root = tempfile.mkdtemp(prefix="tiled_rt_")
         old = config.GRAPHICS
-        config.GRAPHICS = os.path.join(ESSENTIALS, "Graphics")
+        scripts = os.path.join(config.ROOT, "tools", "scripts")
         try:
+            # Halve the 2x sample data and the graphics the maps use, like
+            # install_assets.sh does.
+            data = os.path.join(root, "Data")
+            subprocess.run(["ruby", os.path.join(scripts, "halve_data.rb"), os.path.join(ESSENTIALS, "Data"), data],
+                           check=True, stdout=subprocess.DEVNULL)
+            config.GRAPHICS = os.path.join(root, "Graphics")
+            for folder in ("Tilesets", "Autotiles", "Fogs", "Panoramas"):
+                if not os.path.isdir(os.path.join(ESSENTIALS, "Graphics", folder)):
+                    continue
+                subprocess.run([sys.executable, "-I", os.path.join(scripts, "resize_graphics.py"),
+                                os.path.join(ESSENTIALS, "Graphics", folder), os.path.join(config.GRAPHICS, folder),
+                                "--report", os.path.join(root, "resize_report.txt")],
+                               check=True, stdout=subprocess.DEVNULL)
             paths = Paths(os.path.join(root, "tiled"))
-            import_rxdata(paths, os.path.join(ESSENTIALS, "Data"), keep_pbs=True, log=lambda m: None,
-                          warn=lambda m: None)
+            import_rxdata(paths, data, keep_pbs=True, log=lambda m: None, warn=lambda m: None)
             build = os.path.join(root, "build")
             problems = compile_project(paths, os.path.join(build, "Data"), os.path.join(build, "Graphics"),
                                        os.path.join(build, ".tiled", "pbs"), log=lambda m: None)
             self.assertEqual(messages(problems), [])
             proc = subprocess.run(["ruby", os.path.join(config.RUBY_DIR, "roundtrip_check.rb"),
-                                   os.path.join(ESSENTIALS, "Data"), os.path.join(build, "Data")],
+                                   data, os.path.join(build, "Data")],
                                   stdout=subprocess.PIPE)
             out = proc.stdout.decode("utf-8", "replace")
             summary = json.loads(out.strip().splitlines()[-1])

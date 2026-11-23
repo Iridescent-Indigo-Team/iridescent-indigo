@@ -294,8 +294,8 @@ src/assets/graphics/UI/Battle/cursor_command.png          English
 src/assets/locales/de/graphics/UI/Battle/cursor_command.png   German
 ```
 
-- Draw it at the same 2× size as the English source; the build halves it like
-  every other graphic into `build/Graphics/Locales/<lang>/`.
+- Draw it at the game's 1× size, like the English graphic; the build copies it
+  into `build/Graphics/Locales/<lang>/`.
 - It must have the same dimensions as the English graphic (the UI code
   expects them). If a different size is intended, add `"de/UI/..."` (or just
   the path, for every language) to `graphics_size_exceptions` in

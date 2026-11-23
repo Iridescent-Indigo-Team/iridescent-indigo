@@ -2,8 +2,8 @@
  * @file Validate.js
  * Checks maps and tilesets as they're saved, so problems show up in Tiled's
  * Issues panel right away (the compiler checks the same rules again):
- *   - maps must be orthogonal, not infinite, with 32x32 tiles;
- *   - tilesets must have 32x32 tiles and be saved as their own .tsj files;
+ *   - maps must be orthogonal, not infinite, with 16x16 tiles;
+ *   - tilesets must have 16x16 tiles and be saved as their own .tsj files;
  *   - tiles can't be flipped or rotated;
  *   - at most 3 tiles can be stacked on one tile (RPG Maker XP's layers);
  *   - at most 7 autotile tilesets per map;
@@ -32,7 +32,7 @@
         if (map.infinite)
             error("infinite maps aren't supported (Map > Map Properties > Infinite).");
         if (map.tileWidth !== P.TILE || map.tileHeight !== P.TILE)
-            error("tiles must be 32x32.");
+            error("tiles must be " + P.TILE + "x" + P.TILE + ".");
         var autotiles = 0;
         map.tilesets.forEach(function (ts) {
             if (ts.className === "CharacterPreview")
@@ -40,7 +40,7 @@
             if (!ts.fileName)
                 error("tileset " + ts.name + " is embedded; export it as a .tsj (Tileset > Export Tileset).");
             if (ts.tileWidth !== P.TILE || ts.tileHeight !== P.TILE)
-                error("tileset " + ts.name + " must have 32x32 tiles.");
+                error("tileset " + ts.name + " must have " + P.TILE + "x" + P.TILE + " tiles.");
             if (ts.className === "Autotile")
                 autotiles++;
         });
@@ -106,7 +106,7 @@
         if (ts.className === "CharacterPreview")
             return 0;
         if (ts.tileWidth !== Pokessentials.TILE || ts.tileHeight !== Pokessentials.TILE) {
-            tiled.error(ts.name + ": tiles must be 32x32.", null);
+            tiled.error(ts.name + ": tiles must be " + Pokessentials.TILE + "x" + Pokessentials.TILE + ".", null);
             return 1;
         }
         return 0;

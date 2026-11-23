@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":416,
+     "width":16,
+     "x":144,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"PC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":256,
+     "width":16,
+     "x":80,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -154,15 +154,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Single battles NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":96,
+     "width":16,
+     "x":32,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -195,15 +195,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Double battles NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":96,
+     "width":16,
+     "x":256,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -236,15 +236,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Singles results",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":96,
+     "width":16,
+     "x":64,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -265,15 +265,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Doubles results",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":576,
-     "y":96,
+     "width":16,
+     "x":288,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -294,15 +294,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Battle recorder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":416,
-     "y":256,
+     "width":16,
+     "x":208,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -323,15 +323,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Elevator door singles",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":32,
+     "width":16,
+     "x":32,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -350,15 +350,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Elevator door doubles",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":32,
+     "width":16,
+     "x":256,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -377,15 +377,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Healing balls",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":224,
+     "width":16,
+     "x":112,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -476,15 +476,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Nurse",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":224,
+     "width":16,
+     "x":144,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -517,15 +517,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"Stairs to Stadium Cup",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":544,
-     "y":352,
+     "width":16,
+     "x":272,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -571,14 +571,14 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
    "source":"../tilesets/trainer_tower_interior.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

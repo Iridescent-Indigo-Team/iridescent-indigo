@@ -39,7 +39,8 @@ def make_sprite(path, size, body):
     """Writes a transparent PNG with an opaque box.
 
     @param path where to write it
-    @param size side of the square image (192 for 2x art, 288 for 3x art)
+    @param size side of the square image (96 for installed 1x art, 192 for 2x art,
+        288 for 3x art)
     @param body (left, top, right, bottom) of the opaque box, in image pixels
     """
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -112,6 +113,17 @@ class GroundBattlersTest(unittest.TestCase):
         self.assertNotIn("front_sprite_altitude", entry)
         # Running again changes nothing.
         self.assertEqual(self.run_tool("--check"), 0)
+
+    def test_installed_1x_sprites_are_measured_as_they_are(self):
+        # src/assets/graphics holds 96x96 frames: body ends at row 85 (gap 11),
+        # the same sprite as 2x art ending at row 170 of 192.
+        self.sprite("Front", "TESTMON", 96, (30, 40, 65, 85))
+        write_entry(self.metrics, "testmon", {
+            "species": "TESTMON", "back_sprite": {"x": 0, "y": 0},
+            "front_sprite": {"x": 0, "y": 0}, "shadow_x": 0, "shadow_size": 2})
+        self.index(["testmon"])
+        self.assertEqual(self.run_tool(), 0)
+        self.assertEqual(self.read("testmon")["front_sprite"], {"x": 0, "y": 11 + gb.FOE_FEET_OFFSET})
 
     def test_old_lift_becomes_altitude(self):
         self.sprite("Back", "FLOATY", 288, (90, 60, 200, 240))

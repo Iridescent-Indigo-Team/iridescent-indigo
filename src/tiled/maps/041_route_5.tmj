@@ -463,15 +463,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":32,
+     "width":16,
+     "x":128,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -487,15 +487,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":192,
+     "width":16,
+     "x":128,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -511,15 +511,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":352,
+     "width":16,
+     "x":128,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -535,15 +535,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":512,
+     "width":16,
+     "x":128,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -559,15 +559,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":672,
+     "width":16,
+     "x":128,
+     "y":336,
      "properties":[
       {
        "name":"event_id",
@@ -583,15 +583,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":832,
+     "width":16,
+     "x":128,
+     "y":416,
      "properties":[
       {
        "name":"event_id",
@@ -607,15 +607,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":992,
+     "width":16,
+     "x":128,
+     "y":496,
      "properties":[
       {
        "name":"event_id",
@@ -631,15 +631,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1152,
+     "width":16,
+     "x":128,
+     "y":576,
      "properties":[
       {
        "name":"event_id",
@@ -655,15 +655,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1312,
+     "width":16,
+     "x":128,
+     "y":656,
      "properties":[
       {
        "name":"event_id",
@@ -679,15 +679,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":32,
+     "width":16,
+     "x":320,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -703,15 +703,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":192,
+     "width":16,
+     "x":320,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -727,15 +727,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":352,
+     "width":16,
+     "x":432,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -751,15 +751,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":13,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":512,
+     "width":16,
+     "x":432,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -775,15 +775,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":14,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":672,
+     "width":16,
+     "x":432,
+     "y":336,
      "properties":[
       {
        "name":"event_id",
@@ -799,15 +799,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":15,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":832,
+     "width":16,
+     "x":432,
+     "y":416,
      "properties":[
       {
        "name":"event_id",
@@ -823,15 +823,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":16,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":992,
+     "width":16,
+     "x":432,
+     "y":496,
      "properties":[
       {
        "name":"event_id",
@@ -847,15 +847,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":17,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1152,
+     "width":16,
+     "x":432,
+     "y":576,
      "properties":[
       {
        "name":"event_id",
@@ -871,15 +871,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":18,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1312,
+     "width":16,
+     "x":432,
+     "y":656,
      "properties":[
       {
        "name":"event_id",
@@ -895,15 +895,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":19,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":96,
+     "width":16,
+     "x":128,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -924,15 +924,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":20,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":256,
+     "width":16,
+     "x":128,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -953,15 +953,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":21,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":416,
+     "width":16,
+     "x":128,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -982,15 +982,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":22,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":576,
+     "width":16,
+     "x":128,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -1011,15 +1011,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":23,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":736,
+     "width":16,
+     "x":128,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -1040,15 +1040,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":24,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":896,
+     "width":16,
+     "x":128,
+     "y":448,
      "properties":[
       {
        "name":"event_id",
@@ -1069,15 +1069,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":25,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1056,
+     "width":16,
+     "x":128,
+     "y":528,
      "properties":[
       {
        "name":"event_id",
@@ -1098,15 +1098,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":26,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1216,
+     "width":16,
+     "x":128,
+     "y":608,
      "properties":[
       {
        "name":"event_id",
@@ -1127,15 +1127,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":27,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":96,
+     "width":16,
+     "x":320,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -1156,15 +1156,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":28,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":256,
+     "width":16,
+     "x":320,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -1185,15 +1185,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":29,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":416,
+     "width":16,
+     "x":432,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -1214,15 +1214,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":30,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":576,
+     "width":16,
+     "x":432,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -1243,15 +1243,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":31,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":736,
+     "width":16,
+     "x":432,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -1272,15 +1272,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":32,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":896,
+     "width":16,
+     "x":432,
+     "y":448,
      "properties":[
       {
        "name":"event_id",
@@ -1301,15 +1301,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":33,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1056,
+     "width":16,
+     "x":432,
+     "y":528,
      "properties":[
       {
        "name":"event_id",
@@ -1330,15 +1330,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":34,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1216,
+     "width":16,
+     "x":432,
+     "y":608,
      "properties":[
       {
        "name":"event_id",
@@ -1359,15 +1359,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":35,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1472,
+     "width":16,
+     "x":128,
+     "y":736,
      "properties":[
       {
        "name":"event_id",
@@ -1383,15 +1383,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":36,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1632,
+     "width":16,
+     "x":128,
+     "y":816,
      "properties":[
       {
        "name":"event_id",
@@ -1407,15 +1407,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":37,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1792,
+     "width":16,
+     "x":128,
+     "y":896,
      "properties":[
       {
        "name":"event_id",
@@ -1431,15 +1431,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":38,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1952,
+     "width":16,
+     "x":128,
+     "y":976,
      "properties":[
       {
        "name":"event_id",
@@ -1455,15 +1455,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":39,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2112,
+     "width":16,
+     "x":128,
+     "y":1056,
      "properties":[
       {
        "name":"event_id",
@@ -1479,15 +1479,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":40,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2272,
+     "width":16,
+     "x":128,
+     "y":1136,
      "properties":[
       {
        "name":"event_id",
@@ -1503,15 +1503,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":41,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2432,
+     "width":16,
+     "x":128,
+     "y":1216,
      "properties":[
       {
        "name":"event_id",
@@ -1527,15 +1527,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":42,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2592,
+     "width":16,
+     "x":128,
+     "y":1296,
      "properties":[
       {
        "name":"event_id",
@@ -1551,15 +1551,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":43,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2752,
+     "width":16,
+     "x":128,
+     "y":1376,
      "properties":[
       {
        "name":"event_id",
@@ -1575,15 +1575,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":44,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1472,
+     "width":16,
+     "x":432,
+     "y":736,
      "properties":[
       {
        "name":"event_id",
@@ -1599,15 +1599,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":45,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1632,
+     "width":16,
+     "x":432,
+     "y":816,
      "properties":[
       {
        "name":"event_id",
@@ -1623,15 +1623,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":46,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1792,
+     "width":16,
+     "x":432,
+     "y":896,
      "properties":[
       {
        "name":"event_id",
@@ -1647,15 +1647,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":47,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1952,
+     "width":16,
+     "x":432,
+     "y":976,
      "properties":[
       {
        "name":"event_id",
@@ -1671,15 +1671,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":48,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2112,
+     "width":16,
+     "x":432,
+     "y":1056,
      "properties":[
       {
        "name":"event_id",
@@ -1695,15 +1695,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":49,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2272,
+     "width":16,
+     "x":432,
+     "y":1136,
      "properties":[
       {
        "name":"event_id",
@@ -1719,15 +1719,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":50,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2432,
+     "width":16,
+     "x":432,
+     "y":1216,
      "properties":[
       {
        "name":"event_id",
@@ -1743,15 +1743,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":51,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2592,
+     "width":16,
+     "x":432,
+     "y":1296,
      "properties":[
       {
        "name":"event_id",
@@ -1767,15 +1767,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":52,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2752,
+     "width":16,
+     "x":432,
+     "y":1376,
      "properties":[
       {
        "name":"event_id",
@@ -1791,15 +1791,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":53,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1376,
+     "width":16,
+     "x":128,
+     "y":688,
      "properties":[
       {
        "name":"event_id",
@@ -1820,15 +1820,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":54,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1536,
+     "width":16,
+     "x":128,
+     "y":768,
      "properties":[
       {
        "name":"event_id",
@@ -1849,15 +1849,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":55,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1696,
+     "width":16,
+     "x":128,
+     "y":848,
      "properties":[
       {
        "name":"event_id",
@@ -1878,15 +1878,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":56,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":1856,
+     "width":16,
+     "x":128,
+     "y":928,
      "properties":[
       {
        "name":"event_id",
@@ -1907,15 +1907,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":57,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2016,
+     "width":16,
+     "x":128,
+     "y":1008,
      "properties":[
       {
        "name":"event_id",
@@ -1936,15 +1936,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":58,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2176,
+     "width":16,
+     "x":128,
+     "y":1088,
      "properties":[
       {
        "name":"event_id",
@@ -1965,15 +1965,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":59,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2336,
+     "width":16,
+     "x":128,
+     "y":1168,
      "properties":[
       {
        "name":"event_id",
@@ -1994,15 +1994,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":60,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2496,
+     "width":16,
+     "x":128,
+     "y":1248,
      "properties":[
       {
        "name":"event_id",
@@ -2023,15 +2023,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":61,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2656,
+     "width":16,
+     "x":128,
+     "y":1328,
      "properties":[
       {
        "name":"event_id",
@@ -2052,15 +2052,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":62,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1376,
+     "width":16,
+     "x":432,
+     "y":688,
      "properties":[
       {
        "name":"event_id",
@@ -2081,15 +2081,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":63,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1536,
+     "width":16,
+     "x":432,
+     "y":768,
      "properties":[
       {
        "name":"event_id",
@@ -2110,15 +2110,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":64,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1696,
+     "width":16,
+     "x":432,
+     "y":848,
      "properties":[
       {
        "name":"event_id",
@@ -2139,15 +2139,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":65,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":1856,
+     "width":16,
+     "x":432,
+     "y":928,
      "properties":[
       {
        "name":"event_id",
@@ -2168,15 +2168,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":66,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2016,
+     "width":16,
+     "x":432,
+     "y":1008,
      "properties":[
       {
        "name":"event_id",
@@ -2197,15 +2197,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":67,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2176,
+     "width":16,
+     "x":432,
+     "y":1088,
      "properties":[
       {
        "name":"event_id",
@@ -2226,15 +2226,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":68,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2336,
+     "width":16,
+     "x":432,
+     "y":1168,
      "properties":[
       {
        "name":"event_id",
@@ -2255,15 +2255,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":69,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2496,
+     "width":16,
+     "x":432,
+     "y":1248,
      "properties":[
       {
        "name":"event_id",
@@ -2284,15 +2284,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":70,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2656,
+     "width":16,
+     "x":432,
+     "y":1328,
      "properties":[
       {
        "name":"event_id",
@@ -2313,15 +2313,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":71,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2912,
+     "width":16,
+     "x":128,
+     "y":1456,
      "properties":[
       {
        "name":"event_id",
@@ -2337,15 +2337,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":72,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3072,
+     "width":16,
+     "x":128,
+     "y":1536,
      "properties":[
       {
        "name":"event_id",
@@ -2361,15 +2361,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":73,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3232,
+     "width":16,
+     "x":128,
+     "y":1616,
      "properties":[
       {
        "name":"event_id",
@@ -2385,15 +2385,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":74,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3392,
+     "width":16,
+     "x":128,
+     "y":1696,
      "properties":[
       {
        "name":"event_id",
@@ -2409,15 +2409,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":75,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3552,
+     "width":16,
+     "x":128,
+     "y":1776,
      "properties":[
       {
        "name":"event_id",
@@ -2433,15 +2433,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":76,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3712,
+     "width":16,
+     "x":128,
+     "y":1856,
      "properties":[
       {
        "name":"event_id",
@@ -2457,15 +2457,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":77,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2912,
+     "width":16,
+     "x":432,
+     "y":1456,
      "properties":[
       {
        "name":"event_id",
@@ -2481,15 +2481,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":78,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3072,
+     "width":16,
+     "x":432,
+     "y":1536,
      "properties":[
       {
        "name":"event_id",
@@ -2505,15 +2505,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":79,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3232,
+     "width":16,
+     "x":432,
+     "y":1616,
      "properties":[
       {
        "name":"event_id",
@@ -2529,15 +2529,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":80,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3392,
+     "width":16,
+     "x":432,
+     "y":1696,
      "properties":[
       {
        "name":"event_id",
@@ -2553,15 +2553,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":81,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3552,
+     "width":16,
+     "x":432,
+     "y":1776,
      "properties":[
       {
        "name":"event_id",
@@ -2577,15 +2577,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":82,
      "name":"OutdoorLight",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3712,
+     "width":16,
+     "x":432,
+     "y":1856,
      "properties":[
       {
        "name":"event_id",
@@ -2601,15 +2601,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":83,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2816,
+     "width":16,
+     "x":128,
+     "y":1408,
      "properties":[
       {
        "name":"event_id",
@@ -2630,15 +2630,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":84,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":2976,
+     "width":16,
+     "x":128,
+     "y":1488,
      "properties":[
       {
        "name":"event_id",
@@ -2659,15 +2659,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":85,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3136,
+     "width":16,
+     "x":128,
+     "y":1568,
      "properties":[
       {
        "name":"event_id",
@@ -2688,15 +2688,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":86,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3296,
+     "width":16,
+     "x":128,
+     "y":1648,
      "properties":[
       {
        "name":"event_id",
@@ -2717,15 +2717,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":87,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3456,
+     "width":16,
+     "x":128,
+     "y":1728,
      "properties":[
       {
        "name":"event_id",
@@ -2746,15 +2746,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":88,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3616,
+     "width":16,
+     "x":128,
+     "y":1808,
      "properties":[
       {
        "name":"event_id",
@@ -2775,15 +2775,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":89,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":3776,
+     "width":16,
+     "x":128,
+     "y":1888,
      "properties":[
       {
        "name":"event_id",
@@ -2804,15 +2804,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":90,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2816,
+     "width":16,
+     "x":432,
+     "y":1408,
      "properties":[
       {
        "name":"event_id",
@@ -2833,15 +2833,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":91,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":2976,
+     "width":16,
+     "x":432,
+     "y":1488,
      "properties":[
       {
        "name":"event_id",
@@ -2862,15 +2862,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":92,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3136,
+     "width":16,
+     "x":432,
+     "y":1568,
      "properties":[
       {
        "name":"event_id",
@@ -2891,15 +2891,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":93,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3296,
+     "width":16,
+     "x":432,
+     "y":1648,
      "properties":[
       {
        "name":"event_id",
@@ -2920,15 +2920,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":94,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3456,
+     "width":16,
+     "x":432,
+     "y":1728,
      "properties":[
       {
        "name":"event_id",
@@ -2949,15 +2949,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":95,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3616,
+     "width":16,
+     "x":432,
+     "y":1808,
      "properties":[
       {
        "name":"event_id",
@@ -2978,15 +2978,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":96,
      "name":"Shadow",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":864,
-     "y":3776,
+     "width":16,
+     "x":432,
+     "y":1888,
      "properties":[
       {
        "name":"event_id",
@@ -3030,7 +3030,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -3065,7 +3065,7 @@
    "source":"../tilesets/autotiles/fountain1.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":36,

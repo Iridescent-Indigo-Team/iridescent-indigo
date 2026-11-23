@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit left",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
+     "width":16,
      "x":0,
-     "y":160,
+     "y":80,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Exit right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":384,
-     "y":160,
+     "width":16,
+     "x":192,
+     "y":80,
      "properties":[
       {
        "name":"event_id",
@@ -156,15 +156,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"PC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":64,
-     "y":32,
+     "width":16,
+     "x":32,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -185,15 +185,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Man",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":64,
+     "width":16,
+     "x":96,
+     "y":32,
      "properties":[
       {
        "name":"event_id",
@@ -249,7 +249,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -260,7 +260,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

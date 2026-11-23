@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit left",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":288,
+     "width":16,
+     "x":96,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -125,15 +125,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Exit right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":288,
+     "width":16,
+     "x":112,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -156,15 +156,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"PC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":96,
+     "width":16,
+     "x":96,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -185,15 +185,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Single battles NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":96,
+     "width":16,
+     "x":48,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -226,15 +226,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Double battles NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":96,
+     "width":16,
+     "x":160,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -267,15 +267,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Single results",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":96,
+     "width":16,
+     "x":64,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -296,15 +296,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Double results",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":352,
-     "y":96,
+     "width":16,
+     "x":176,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -325,15 +325,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Battle recorder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":96,
+     "width":16,
+     "x":112,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -377,7 +377,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -388,7 +388,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

@@ -2,7 +2,7 @@
  * @file CreateRPGMap.js
  * Map actions (Map menu):
  *   - New Pokessentials Map: registers a map id in src/tiled/maps/registry.json,
- *     creates a fixed-size, orthogonal, 32px map with three tile layers, an
+ *     creates a fixed-size, orthogonal, 16px map with three tile layers, an
  *     "Events" layer and an "Atmosphere" group, and adds it to the world so
  *     it can be placed next to other maps (map connections).
  *   - Build Game Data: compiles src/tiled into build/ (same as `make tiled`).

@@ -2,8 +2,9 @@
 Localized graphics: art with text drawn into it, redrawn per language.
 
 src/assets/locales/<lang>/graphics/ mirrors src/assets/graphics/ and holds only
-the files that differ (e.g. de/graphics/UI/Battle/cursor_command.png). The
-build halves them like every other graphic into build/Graphics/Locales/<lang>/
+the files that differ (e.g. de/graphics/UI/Battle/cursor_command.png), at the
+same 1x size as the English ones. The build copies them into
+build/Graphics/Locales/<lang>/
 and writes build/Data/graphics_<lang>.dat, a Marshal'd Hash from the English
 path (lower case, no extension) to the localized one, so the game never scans
 folders (001a_LocalizedGraphics.rb).
@@ -101,20 +102,16 @@ def check_graphics(config, lang, locales_dir, graphics_dir):
 
 
 def build_graphics(lang, locales_dir, build_dir, python=sys.executable, ruby="ruby", jobs=None, log=print):
-    """Halves a language's graphics into build/Graphics/Locales/<code> and writes its index."""
+    """Copies a language's graphics into build/Graphics/Locales/<code> and writes its index."""
     from . import config as cfg
     folder = lang_graphics_dir(locales_dir, lang.code)
     out = os.path.join(build_dir, "Graphics", "Locales", lang.code)
     index_file = os.path.join(build_dir, "Data", "graphics_%s.dat" % lang.code)
     index = {}
     if os.path.isdir(folder):
-        args = [python, "-I", cfg.RESIZE_GRAPHICS, folder, out,
-                "--report", os.path.join(build_dir, "resize_report_%s.txt" % lang.code)]
-        if jobs:
-            args += ["--jobs", str(jobs)]
-        proc = subprocess.run(args)
+        proc = subprocess.run([python, "-I", cfg.SYNC_DIR, folder, out, "--delete", "--quiet"])
         if proc.returncode != 0:
-            raise RuntimeError("resize_graphics.py failed for %s" % lang.code)
+            raise RuntimeError("copying the %s graphics failed" % lang.code)
         for stem, rel in _index_dir(folder).items():
             index["graphics/" + stem] = "Graphics/Locales/%s/%s" % (lang.code, os.path.splitext(rel)[0])
     elif os.path.isdir(out):

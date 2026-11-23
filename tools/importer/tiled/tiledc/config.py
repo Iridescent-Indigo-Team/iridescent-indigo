@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.d
 RUBY_DIR = os.path.join(ROOT, "tools", "importer", "tiled", "ruby")
 ## Default Tiled source folder.
 DEFAULT_SRC = os.path.join(ROOT, "src", "tiled")
-## Source graphics (2x size, 32px tiles). The --graphics option changes it.
+## Source graphics (the game's 1x size, 16px tiles). The --graphics option changes it.
 GRAPHICS = os.path.join(ROOT, "src", "assets", "graphics")
 ## The PBS JSON tree.
 PBS_SRC = os.path.join(ROOT, "src", "pbs")
@@ -23,8 +23,8 @@ SCRIPTS = os.path.join(ROOT, "src", "data")
 ## Engine schema used by the PBS tools.
 ENGINE_SCHEMA = os.path.join(ROOT, "tools", "importer", "pbs", "engine_schema.json")
 
-## Tile size in the sources, in pixels. The build halves it to 16.
-TILE = 32
+## Tile size in the sources and in the game, in pixels.
+TILE = 16
 ## RMXP tile layers per map.
 RMXP_LAYERS = 3
 ## Autotile slots per RMXP tileset.

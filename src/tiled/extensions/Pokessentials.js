@@ -11,7 +11,7 @@ var Pokessentials = (function () {
     "use strict";
 
     /** Tile size of the sources, in pixels (the build halves it). */
-    var TILE = 32;
+    var TILE = 16;
     /** Tile layers an RPG Maker XP map holds per tile. */
     var RMXP_LAYERS = 3;
     /** Autotiles per map. */

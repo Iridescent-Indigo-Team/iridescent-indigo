@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Guide",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":256,
+     "width":16,
+     "x":64,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -150,7 +150,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -161,7 +161,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

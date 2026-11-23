@@ -288,8 +288,8 @@ class Combined:
         return "Tiled/%d" % self.id
 
     def write_image(self, graphics_out, force=False):
-        """Composes the combined image (halved to the build's 16px tiles) into
-        <graphics_out>/Tilesets/Tiled/<id>.png when graphic_name() needs one.
+        """Composes the combined image into <graphics_out>/Tilesets/Tiled/<id>.png
+        when graphic_name() needs one.
 
         @return the path written, or None
         """
@@ -321,9 +321,8 @@ class Combined:
                     dx = (local % TILESET_COLUMNS) * tile
                     dy = (row + local // TILESET_COLUMNS) * tile
                     canvas.paste(piece, (dx, dy))
-        half = canvas.resize((canvas.width // 2, canvas.height // 2), Image.NEAREST)
         os.makedirs(os.path.dirname(out), exist_ok=True)
-        half.save(out)
+        canvas.save(out)
         return out
 
     def ir(self, tags, problems=None):

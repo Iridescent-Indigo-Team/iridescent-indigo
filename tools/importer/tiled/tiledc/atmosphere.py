@@ -16,10 +16,9 @@ A group file:
  ]
 }
 @endcode
-Pixel values (scroll_x/y in pixels per second, offset_x/y) are in the 32px
-source scale, like the graphics, and are halved for the build. "graphic" is a
-path under Graphics/ without extension: any folder, not just Fogs and
-Panoramas.
+Pixel values (scroll_x/y in pixels per second, offset_x/y) are in the game's
+pixels, like the graphics in src/assets/graphics. "graphic" is a path under
+Graphics/ without extension: any folder, not just Fogs and Panoramas.
 
 A map's "atmosphere" property names its group. Maps with the same group share
 its layers, so they continue seamlessly between those maps.
@@ -31,7 +30,7 @@ from . import config
 from .config import BLEND_TYPES, CLASS_ATMOSPHERE_GROUP
 from .tiledio import iter_layers, load_json, props
 
-## Layer settings and their defaults (source scale).
+## Layer settings and their defaults.
 LAYER_DEFAULTS = {
     "graphic": "", "z": "above", "parallax_x": 1.0, "parallax_y": 1.0, "scroll_x": 0.0,
     "scroll_y": 0.0, "offset_x": 0, "offset_y": 0, "opacity": 255, "blend": "normal", "hue": 0,
@@ -40,8 +39,6 @@ LAYER_DEFAULTS = {
 }
 ## Largest atmosphere graphic the game draws (Settings::ATMOSPHERE_MAX_TEXTURE_SIZE).
 MAX_TEXTURE_SIZE = 4096
-## Settings halved for the build.
-HALVED = ("scroll_x", "scroll_y", "offset_x", "offset_y")
 
 
 def load_groups(folder):
@@ -61,18 +58,18 @@ def graphic_exists(graphic):
 
 
 def check_texture_size(graphic, problems, path, where):
-    """Warns about graphics too big for many Android GPUs once halved
+    """Warns about graphics too big for many Android GPUs
     (Settings::ATMOSPHERE_MAX_TEXTURE_SIZE, 4096 pixels)."""
     from .importer import png_size
     size = png_size(os.path.join(config.GRAPHICS, graphic + ".png"))
-    if size and max(size) // 2 > MAX_TEXTURE_SIZE:
-        problems.warning(path, where, "Graphics/%s is %dx%d in the game, larger than %d pixels: the game "
-                         "won't draw it (many Android GPUs can't load it)" % (graphic, size[0] // 2,
-                                                                               size[1] // 2, MAX_TEXTURE_SIZE))
+    if size and max(size) > MAX_TEXTURE_SIZE:
+        problems.warning(path, where, "Graphics/%s is %dx%d, larger than %d pixels: the game "
+                         "won't draw it (many Android GPUs can't load it)" % (graphic, size[0], size[1],
+                                                                             MAX_TEXTURE_SIZE))
 
 
 def compile_layer(raw, problems, path, where, check_graphics=True):
-    """Validates a layer and converts it to the runtime form (build scale)."""
+    """Validates a layer and converts it to the runtime form."""
     layer = dict(LAYER_DEFAULTS)
     unknown = set(raw) - set(LAYER_DEFAULTS) - {"name"}
     for k in sorted(unknown):
@@ -102,8 +99,8 @@ def compile_layer(raw, problems, path, where, check_graphics=True):
         layer["frames"] = 1
     out = {"name": name}
     for k, v in layer.items():
-        if k in HALVED:
-            v = v / 2.0
+        if k in ("scroll_x", "scroll_y", "offset_x", "offset_y"):
+            v = float(v)
         elif k == "blend":
             v = BLEND_TYPES.index(v)
         out[k] = v
@@ -182,13 +179,12 @@ def legacy_group(tileset):
         layers.append({"name": "panorama", "graphic": "Panoramas/" + tileset["panorama_name"], "z": "below",
                        "parallax_x": 0.5, "parallax_y": 0.5, "hue": tileset.get("panorama_hue", 0)})
     if tileset.get("fog_name"):
-        # RMXP: fog_ox -= fog_sx * 5 pixels per second at the build's scale,
-        # which is 10 pixels per second at the 32px source scale.
+        # RMXP: fog_ox -= fog_sx * 5 pixels per second at the game's scale.
         layers.append({"name": "fog", "graphic": "Fogs/" + tileset["fog_name"], "z": "above",
                        "hue": tileset.get("fog_hue", 0), "opacity": tileset.get("fog_opacity", 64),
                        "blend": BLEND_TYPES[tileset.get("fog_blend_type", 0)] if tileset.get("fog_blend_type", 0) < 3 else "normal",
                        "zoom_x": tileset.get("fog_zoom", 100), "zoom_y": tileset.get("fog_zoom", 100),
-                       "scroll_x": tileset.get("fog_sx", 0) * 10, "scroll_y": tileset.get("fog_sy", 0) * 10})
+                       "scroll_x": tileset.get("fog_sx", 0) * 5, "scroll_y": tileset.get("fog_sy", 0) * 5})
     if not layers:
         return None
     return {"name": tileset.get("name", ""), "layers": layers}

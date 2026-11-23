@@ -94,15 +94,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Professor",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":96,
+     "width":16,
+     "x":96,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -134,15 +134,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Turn back, size(3,1)",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":160,
-     "y":256,
+     "width":16,
+     "x":80,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -172,15 +172,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Grass ball",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":256,
-     "y":128,
+     "width":16,
+     "x":128,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -220,15 +220,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Fire ball",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":288,
-     "y":128,
+     "width":16,
+     "x":144,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -268,15 +268,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Water ball",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":128,
+     "width":16,
+     "x":160,
+     "y":64,
      "properties":[
       {
        "name":"event_id",
@@ -316,15 +316,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":416,
+     "width":16,
+     "x":96,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -347,15 +347,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Controlling event",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":96,
+     "width":16,
+     "x":112,
+     "y":48,
      "properties":[
       {
        "name":"event_id",
@@ -404,15 +404,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Wall sign left",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":32,
+     "width":16,
+     "x":96,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -433,15 +433,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Wall sign right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":224,
-     "y":32,
+     "width":16,
+     "x":112,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -462,15 +462,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Pokédex",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":128,
-     "y":32,
+     "width":16,
+     "x":64,
+     "y":16,
      "properties":[
       {
        "name":"event_id",
@@ -501,15 +501,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Dex access",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":96,
-     "y":320,
+     "width":16,
+     "x":48,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -556,7 +556,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -567,7 +567,7 @@
    "source":"../tilesets/autotiles/fountain2.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":20,

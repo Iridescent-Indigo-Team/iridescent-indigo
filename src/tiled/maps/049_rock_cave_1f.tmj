@@ -136,15 +136,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit south",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":384,
-     "y":480,
+     "width":16,
+     "x":192,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -167,15 +167,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Exit right",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":640,
+     "width":16,
+     "x":320,
+     "y":320,
      "properties":[
       {
        "name":"event_id",
@@ -198,15 +198,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Ladder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":384,
+     "width":16,
+     "x":160,
+     "y":192,
      "properties":[
       {
        "name":"event_id",
@@ -229,15 +229,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Hole",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":384,
-     "y":224,
+     "width":16,
+     "x":192,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -261,15 +261,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":544,
-     "y":224,
+     "width":16,
+     "x":272,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -292,15 +292,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"StrengthBoulder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":384,
-     "y":288,
+     "width":16,
+     "x":192,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -333,15 +333,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"StrengthBoulder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":608,
-     "y":224,
+     "width":16,
+     "x":304,
+     "y":112,
      "properties":[
       {
        "name":"event_id",
@@ -376,15 +376,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Boulder position checks",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":192,
-     "y":160,
+     "width":16,
+     "x":96,
+     "y":80,
      "properties":[
       {
        "name":"event_id",
@@ -407,15 +407,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Sign",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":320,
+     "width":16,
+     "x":224,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -436,15 +436,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":480,
+     "width":16,
+     "x":320,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -467,15 +467,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":640,
-     "y":448,
+     "width":16,
+     "x":320,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -498,15 +498,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":288,
+     "width":16,
+     "x":224,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -529,15 +529,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":13,
      "name":"Dungeon ladder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":768,
-     "y":448,
+     "width":16,
+     "x":384,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -560,15 +560,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":14,
      "name":"Dungeon sign",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":768,
-     "y":416,
+     "width":16,
+     "x":384,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -589,15 +589,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":15,
      "name":"Tile puzzles",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":768,
-     "y":256,
+     "width":16,
+     "x":384,
+     "y":128,
      "properties":[
       {
        "name":"event_id",
@@ -618,15 +618,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":16,
      "name":"EV016",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":576,
-     "y":320,
+     "width":16,
+     "x":288,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -670,7 +670,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -701,7 +701,7 @@
    "source":"../tilesets/autotiles/waterfall_bottom.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":34,

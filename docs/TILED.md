@@ -46,7 +46,11 @@ plus [Tiled](https://www.mapeditor.org) 1.10 or newer.
    system data), converts the autotiles and makes the event previews. The map
    metadata, encounters and connections move from `src/pbs` onto the maps;
    the old copies are deleted from `src/pbs` (git still has them). To import
-   another project's data, use `make import-rxdata DATA=path/to/Data`.
+   another project's data, use `make import-rxdata DATA=path/to/Data`. Like
+   everything in `src/`, the data must be at the game's 1× scale: halve data
+   made for Essentials' 2× graphics first with
+   `ruby tools/scripts/halve_data.rb path/to/Data halved/Data` (`src/assets/data`
+   is already halved by `make install-assets`).
 
 3. Open the project in Tiled:
 
@@ -99,8 +103,10 @@ extension reports these when you save, and the build refuses them:
 
 - **Orthogonal maps only**: no isometric, staggered or hexagonal maps.
 - **No infinite maps.** Give every map a fixed size.
-- **32×32 tiles** on maps and every tileset. Graphics are drawn at twice the
-  game's size and halved by the build, like all graphics in `src/assets`.
+- **16×16 tiles** on maps and every tileset: the game's own size, like all
+  graphics in `src/assets` (see [BUILDING.md](BUILDING.md#source-scale)). A
+  `src/tiled` made for the old 2× graphics has 32×32 tiles; `make
+  downscale-assets` converts it once.
 - **No flipped or rotated tiles.**
 - **At most 3 tiles stacked on one tile**, after
   [flattening](#tile-layers).
@@ -155,7 +161,7 @@ Maps have the class `Map`, so the Properties panel shows these fields:
 
 ## Tilesets and tile data
 
-A tileset is an ordinary Tiled tileset with 32px tiles. A map can use several
+A tileset is an ordinary Tiled tileset with 16px tiles. A map can use several
 tilesets.
 
 ### Tile numbering across tilesets
@@ -293,7 +299,7 @@ Stair tiles show in pink in the [collision overlay](#tilesets-and-tile-data).
 
 ## Autotiles
 
-An RPG Maker autotile is a 96×128 sheet that the engine cuts into 48 variants.
+An RPG Maker autotile is a 48×64 sheet that the engine cuts into 48 variants.
 `make tiled-assets`, which `make import-rxdata` also runs, converts each one
 from `src/assets/graphics/Autotiles` into a Tiled tileset in
 `src/tiled/tilesets/autotiles/`. That tileset has:
@@ -428,8 +434,8 @@ Two things to know:
 
 - A few commands can't be written in the readable form. They are kept exactly
   as `raw(code, indent, parameters...)`.
-- Show/Move Picture coordinates are at the 512×384 source scale. The build
-  halves them, like `halve_data.rb` does.
+- Show/Move Picture coordinates are in the game's 256×192 pixels, and are
+  compiled as they are.
 
 **Parameters**: `param(:item)` is the value of the event's `item` property.
 `param(:item, "POTION")` gives a default when the property isn't set. One
@@ -507,7 +513,7 @@ defined in `src/tiled/atmospheres/<id>.json` and chosen with a map's
  "fade_frames": 30,
  "layers": [
   {"name": "sky", "graphic": "Panoramas/Clouds", "z": "below", "parallax_x": 0.25, "parallax_y": 0.1},
-  {"name": "mist", "graphic": "Fogs/Mist", "z": "above", "opacity": 64, "scroll_x": 20, "blend": "add"},
+  {"name": "mist", "graphic": "Fogs/Mist", "z": "above", "opacity": 64, "scroll_x": 10, "blend": "add"},
   {"name": "leaves", "graphic": "Fogs/Leaves", "frames": 4, "frame_duration": 4, "repeat_y": false}
  ]
 }
@@ -525,7 +531,8 @@ defined in `src/tiled/atmospheres/<id>.json` and chosen with a map's
 | `frames`, `frame_duration` | Animation: frames side by side in the graphic, and the time per frame in 1/20ths of a second (1, 5) |
 | `repeat_x`, `repeat_y` | Tile the graphic in each direction (true) |
 
-Pixel values are at the source graphics' scale (2×) and halved by the build.
+Pixel values are in the game's pixels, the scale of the graphics in
+`src/assets/graphics`.
 
 **Map layers.** A map can also add its own layers as image layers inside its
 `Atmosphere` group, with the class `AtmosphereLayer`:

@@ -172,15 +172,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Exit",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":736,
-     "y":576,
+     "width":16,
+     "x":368,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -203,15 +203,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Cracked ice",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":832,
-     "y":512,
+     "width":16,
+     "x":416,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -247,15 +247,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Cracked ice sign",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":800,
-     "y":480,
+     "width":16,
+     "x":400,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -276,15 +276,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Sliding ice sign",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1056,
-     "y":288,
+     "width":16,
+     "x":528,
+     "y":144,
      "properties":[
       {
        "name":"event_id",
@@ -305,15 +305,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"StrengthBoulder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":672,
-     "y":448,
+     "width":16,
+     "x":336,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -346,15 +346,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Hole",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":704,
-     "y":448,
+     "width":16,
+     "x":352,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -378,15 +378,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Ladder down",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":512,
+     "width":16,
+     "x":256,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -409,15 +409,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Ladder up",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":320,
-     "y":1024,
+     "width":16,
+     "x":160,
+     "y":512,
      "properties":[
       {
        "name":"event_id",
@@ -440,15 +440,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Holed boulder",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":544,
-     "y":960,
+     "width":16,
+     "x":272,
+     "y":480,
      "properties":[
       {
        "name":"event_id",
@@ -473,15 +473,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"Boulder position checks",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":736,
-     "y":416,
+     "width":16,
+     "x":368,
+     "y":208,
      "properties":[
       {
        "name":"event_id",
@@ -504,15 +504,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"Sliding ice sign",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":672,
-     "y":928,
+     "width":16,
+     "x":336,
+     "y":464,
      "properties":[
       {
        "name":"event_id",
@@ -556,7 +556,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -587,7 +587,7 @@
    "source":"../tilesets/autotiles/waterfall_bottom.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":42,

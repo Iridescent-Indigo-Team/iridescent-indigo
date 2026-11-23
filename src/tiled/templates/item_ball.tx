@@ -1,44 +1,44 @@
 {
- "object": {
-  "height": 32,
-  "name": "Item",
-  "properties": [
+ "object":{
+  "height":16,
+  "name":"Item",
+  "properties":[
    {
-    "name": "item",
-    "type": "string",
-    "value": "POTION"
+    "name":"item",
+    "type":"string",
+    "value":"POTION"
    },
    {
-    "name": "page_0",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "graphic": "Object ball"
+    "name":"page_0",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "graphic":"Object ball"
     }
    },
    {
-    "name": "page_1",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "self_switch": "A"
+    "name":"page_1",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "self_switch":"A"
     }
    },
    {
-    "name": "quantity",
-    "type": "int",
-    "value": 1
+    "name":"quantity",
+    "type":"int",
+    "value":1
    },
    {
-    "name": "script",
-    "type": "file",
-    "value": "events/item_ball.rb"
+    "name":"script",
+    "type":"file",
+    "value":"events/item_ball.rb"
    }
   ],
-  "rotation": 0,
-  "type": "Event",
-  "visible": true,
-  "width": 32
+  "rotation":0,
+  "type":"Event",
+  "visible":true,
+  "width":16
  },
- "type": "template"
+ "type":"template"
 }

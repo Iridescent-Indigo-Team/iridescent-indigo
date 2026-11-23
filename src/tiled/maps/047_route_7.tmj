@@ -178,15 +178,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Cave entrance",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1472,
-     "y":352,
+     "width":16,
+     "x":736,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -220,15 +220,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Cave entrance",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1760,
-     "y":512,
+     "width":16,
+     "x":880,
+     "y":256,
      "properties":[
       {
        "name":"event_id",
@@ -262,15 +262,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1376,
-     "y":480,
+     "width":16,
+     "x":688,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -293,15 +293,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Duel NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1088,
-     "y":448,
+     "width":16,
+     "x":544,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -324,15 +324,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Shadow trainer - basic",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":576,
+     "width":16,
+     "x":224,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -366,15 +366,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Shadow trainer - repeat",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":448,
-     "y":608,
+     "width":16,
+     "x":224,
+     "y":304,
      "properties":[
       {
        "name":"event_id",
@@ -408,15 +408,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Purify expert",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":576,
-     "y":704,
+     "width":16,
+     "x":288,
+     "y":352,
      "properties":[
       {
        "name":"event_id",
@@ -440,15 +440,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"Relic Stone",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":480,
-     "y":736,
+     "width":16,
+     "x":240,
+     "y":368,
      "properties":[
       {
        "name":"event_id",
@@ -469,15 +469,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Time-dependent NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":576,
-     "y":192,
+     "width":16,
+     "x":288,
+     "y":96,
      "properties":[
       {
        "name":"event_id",
@@ -509,15 +509,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":10,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1408,
-     "y":480,
+     "width":16,
+     "x":704,
+     "y":240,
      "properties":[
       {
        "name":"event_id",
@@ -540,15 +540,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":11,
      "name":"SmashRock",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1856,
-     "y":448,
+     "width":16,
+     "x":928,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -571,15 +571,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":12,
      "name":"Weather controller",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1568,
-     "y":640,
+     "width":16,
+     "x":784,
+     "y":320,
      "properties":[
       {
        "name":"event_id",
@@ -625,7 +625,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -660,7 +660,7 @@
    "source":"../tilesets/autotiles/fountain1.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":70,

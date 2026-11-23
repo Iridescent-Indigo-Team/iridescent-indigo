@@ -6,13 +6,13 @@
 #   src/loader.rb        -> build/loader.rb
 #   src/mkxp.json        -> build/mkxp.json
 #   src/Game.ini         -> build/Game.ini
-#   src/assets/graphics  -> build/Graphics/  (halved to 256x192 scale)
+#   src/assets/graphics  -> build/Graphics/
 #   src/assets/audio     -> build/Audio/
 #   src/assets/fonts     -> build/Fonts/
 #   src/pbs/ (JSON)      -> build/PBS/       (exported by tools/importer/pbs;
 #                                             src/assets/pbs is copied
 #                                             instead until src/pbs exists)
-#   src/assets/data      -> build/Data/      (pixel values halved)
+#   src/assets/data      -> build/Data/
 #   src/tiled/ (Tiled)   -> build/Data/Map*.rxdata, MapInfos, Tilesets,
 #                           CommonEvents, System, atmospheres.dat and the
 #                           map datasets of build/PBS (compiled by
@@ -22,6 +22,10 @@
 #   src/assets/locales   -> build/Data/messages_<lang>_*.dat and
 #                           build/Graphics/Locales/<lang>/ (translations,
 #                           validated and compiled by tools/importer/locales)
+#
+# Everything in src/ is at the game's own 1x (256x192) scale, so the build
+# copies it as it is: Essentials' 2x art is halved once, when
+# `make install-assets` copies it into src/assets (see docs/BUILDING.md#source-scale).
 #
 # See docs/BUILDING.md for the full guide. Run `make help` for the targets.
 #===============================================================================
@@ -62,7 +66,7 @@ TILED_DATASETS := map_metadata,encounters,map_connections
         tiled validate-tiled import-rxdata tiled-assets tiled-project tiled-text \
         export-events import-events export-tiledata import-tiledata test-tiled \
         mkxp desktop android apk \
-        install-assets uninstall-assets clean clean-data distclean help \
+        install-assets uninstall-assets downscale-assets check-scale clean clean-data distclean help \
         follower-animations check-format format
 
 all: build
@@ -75,10 +79,9 @@ build: scripts graphics audio fonts tiled pbs data plugins config locales
 scripts:
 	@$(SYNC) --delete $(SRC)/data $(BUILD)/Scripts
 
-## graphics: halve src/assets/graphics into build/Graphics (incremental)
-graphics:
-	@$(PYTHON) -I $(SCRIPTS)/resize_graphics.py $(ASSETS)/graphics $(BUILD)/Graphics \
-		--jobs $(JOBS) --report $(BUILD)/resize_report.txt --keep Tilesets/Tiled
+## graphics: copy src/assets/graphics to build/Graphics
+graphics: check-scale
+	@$(SYNC) --delete $(ASSETS)/graphics $(BUILD)/Graphics --keep Tilesets/Tiled --keep Locales
 
 ## audio: copy src/assets/audio to build/Audio
 audio:
@@ -159,10 +162,9 @@ test-locales:
 follower-animations:
 	@$(RUBY) $(SCRIPTS)/add_follower_animations.rb
 
-## data: copy src/assets/data to build/Data, halving pixel values
-data:
-	@mkdir -p $(BUILD)/Data
-	@$(RUBY) $(SCRIPTS)/halve_data.rb $(ASSETS)/data $(BUILD)/Data \
+## data: copy src/assets/data to build/Data (files compiled from src/tiled win)
+data: check-scale
+	@$(SYNC) --update $(ASSETS)/data $(BUILD)/Data \
 		$(if $(TILED_ON),--skip-list $(BUILD)/.tiled/owned.txt)
 
 # Tiled (see docs/TILED.md). Once src/tiled/maps/registry.json exists, maps,
@@ -170,7 +172,7 @@ data:
 # connections and atmospheres are compiled from src/tiled on every build.
 # STRICT=1 makes warnings fail too; FORCE=1 rebuilds everything.
 ## tiled: compile src/tiled into build/ (does nothing until a map registry exists)
-tiled:
+tiled: check-scale
 	@if [ -n "$(TILED_ON)" ]; then \
 		$(TILED) build --build $(BUILD) $(if $(filter 1,$(FORCE)),--force) $(if $(filter 1,$(STRICT)),--strict); \
 	fi
@@ -180,13 +182,13 @@ validate-tiled:
 	@$(TILED) validate $(if $(filter 1,$(STRICT)),--strict)
 
 ## import-rxdata: import RPG Maker XP data (src/assets/data, or DATA=dir) into src/tiled
-import-rxdata:
+import-rxdata: check-scale
 	@$(TILED) import $(or $(DATA),$(ASSETS)/data) $(if $(filter 1,$(FORCE)),--force)
 	@$(TILED) autotiles
 	@-$(TILED) previews
 
 ## tiled-assets: regenerate autotile tilesets, event previews and the Tiled project types
-tiled-assets:
+tiled-assets: check-scale
 	@$(TILED) autotiles $(if $(filter 1,$(ALL)),--all)
 	@-$(TILED) previews
 	@$(TILED) project
@@ -256,7 +258,8 @@ desktop: compile
 	@test -x $(BUILD)/engine/mkxp-z || { echo "No engine in $(BUILD)/engine; run 'make mkxp' first."; exit 1; }
 	@mkdir -p $(DIST)
 	@cp $(SCRIPTS)/play.sh $(BUILD)/play.sh
-	@tar -czf $(DIST)/$(GAME_NAME)-linux.tar.gz --exclude=.essentials --exclude=.engine-build \
+	@tar -czf $(DIST)/$(GAME_NAME)-linux.tar.gz --exclude=.essentials --exclude=.essentials-1x \
+		--exclude=.downscale --exclude=.downscale-backup --exclude=.engine-build \
 		--exclude=resize_report.txt --exclude=errorlog.txt \
 		--transform 's|^$(BUILD)|$(GAME_NAME)|' $(BUILD)
 	@echo "Wrote $(DIST)/$(GAME_NAME)-linux.tar.gz"
@@ -266,7 +269,8 @@ android: compile
 	@mkdir -p $(DIST)
 	@rm -f $(DIST)/$(GAME_NAME)-android.zip
 	@cd $(BUILD) && zip -qr -X ../$(DIST)/$(GAME_NAME)-android.zip . \
-		-x 'engine/*' -x '.engine-build/*' -x '.essentials/*' -x 'resize_report.txt' \
+		-x 'engine/*' -x '.engine-build/*' -x '.essentials/*' -x '.essentials-1x/*' \
+		-x '.downscale/*' -x '.downscale-backup/*' -x 'resize_report.txt' \
 		-x 'errorlog.txt' -x '.compile_ok' -x 'play.sh'
 	@cp $(DIST)/$(GAME_NAME)-android.zip $(DIST)/main.1.$(ANDROID_PACKAGE).obb
 	@echo "Wrote $(DIST)/$(GAME_NAME)-android.zip and $(DIST)/main.1.$(ANDROID_PACKAGE).obb"
@@ -290,9 +294,21 @@ check-format:
 format:
 	@$(FORMAT) --base $(BASE) --fix
 
-## install-assets: copy Essentials graphics/audio/PBS/data into src/assets
+## install-assets: copy Essentials graphics/audio/PBS/data into src/assets (halved to 1x)
 install-assets:
-	@$(SCRIPTS)/install_assets.sh
+	@PYTHON="$(PYTHON)" RUBY="$(RUBY)" $(SCRIPTS)/install_assets.sh
+
+# Older versions kept 2x graphics in src/assets and halved them on every
+# build; `make downscale-assets` converts such a clone once (see
+# tools/scripts/downscale_assets.py). FORCE=1 also converts graphics that
+# install-assets didn't install.
+## downscale-assets: one-time: convert 2x graphics/data in src/assets and 32px src/tiled maps to 1x
+downscale-assets:
+	@$(PYTHON) -I $(SCRIPTS)/downscale_assets.py --jobs $(JOBS) --ruby $(RUBY) $(if $(filter 1,$(FORCE)),--force)
+
+## check-scale: fail if src/assets still holds 2x assets (see downscale-assets)
+check-scale:
+	@$(PYTHON) -I $(SCRIPTS)/downscale_assets.py --check
 
 ## uninstall-assets: remove the files install-assets copied
 uninstall-assets:

@@ -33,7 +33,9 @@ from .tiles import Combined, TerrainTags, TilesetInfo, TilesetRegistry
 
 ## Most problems reported per layer for repeated tile errors.
 MAX_TILE_PROBLEMS = 5
-## Files in build/Data the compiler writes (halve_data.rb skips them).
+## Added to tile size errors: maps made for the old 2x graphics have 32px tiles.
+OLD_SCALE_HINT = " (32px tiles were for 2x graphics: run `make downscale-assets` to convert them)"
+## Files in build/Data the compiler writes (`make data` skips them).
 OWNED_PATTERNS = [r"Map\d+\.rxdata", r"MapInfos\.rxdata", r"Tilesets\.rxdata"]
 
 
@@ -123,8 +125,8 @@ def compile_map(project, entry, problems):
         problems.error(rel, "", "infinite maps aren't supported (Map > Map Properties > Infinite)")
         fatal = True
     if data.get("tilewidth") != TILE or data.get("tileheight") != TILE:
-        problems.error(rel, "", "tiles must be %dx%d (they're %sx%s)" % (TILE, TILE, data.get("tilewidth"),
-                                                                       data.get("tileheight")))
+        problems.error(rel, "", "tiles must be %dx%d (they're %sx%s)%s" % (
+            TILE, TILE, data.get("tilewidth"), data.get("tileheight"), OLD_SCALE_HINT))
         fatal = True
     width, height = data.get("width", 0), data.get("height", 0)
     if width <= 0 or height <= 0:
@@ -149,7 +151,7 @@ def compile_map(project, entry, problems):
         info = project.tileset_info(ts.source)
         trel = project.paths.rel(ts.source)
         if info.kind != "preview" and (ts.data.get("tilewidth") != TILE or ts.data.get("tileheight") != TILE):
-            problems.error(trel, "", "tiles must be %dx%d" % (TILE, TILE))
+            problems.error(trel, "", "tiles must be %dx%d%s" % (TILE, TILE, OLD_SCALE_HINT))
             fatal = True
         if info.kind == "preview":
             kinds[ts.firstgid] = ("preview", None, info)
@@ -446,7 +448,7 @@ def compile_project(paths, out_data=None, out_graphics=None, overlay=None, check
 
     spawns = {str(r.entry["id"]): r.spawns for r in ok}
     ir = {
-        "out_dir": out_data or "", "check_only": check_only or not out_data, "halve_pictures": True,
+        "out_dir": out_data or "", "check_only": check_only or not out_data,
         "mapinfos": project.registry.mapinfos(),
         "maps": {str(r.entry["id"]): r.ir for r in ok},
         "map_ids": project.registry.name_to_id(), "spawns": spawns,

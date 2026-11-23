@@ -1,33 +1,33 @@
 {
- "object": {
-  "height": 32,
-  "name": "NPC",
-  "properties": [
+ "object":{
+  "height":16,
+  "name":"NPC",
+  "properties":[
    {
-    "name": "page_0",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "graphic": "NPC 01",
-     "move_type": "random",
-     "move_frequency": 3
+    "name":"page_0",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "graphic":"NPC 01",
+     "move_type":"random",
+     "move_frequency":3
     }
    },
    {
-    "name": "script",
-    "type": "file",
-    "value": "events/npc.rb"
+    "name":"script",
+    "type":"file",
+    "value":"events/npc.rb"
    },
    {
-    "name": "text",
-    "type": "string",
-    "value": "Hello!"
+    "name":"text",
+    "type":"string",
+    "value":"Hello!"
    }
   ],
-  "rotation": 0,
-  "type": "Event",
-  "visible": true,
-  "width": 32
+  "rotation":0,
+  "type":"Event",
+  "visible":true,
+  "width":16
  },
- "type": "template"
+ "type":"template"
 }

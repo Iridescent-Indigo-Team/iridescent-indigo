@@ -1,37 +1,37 @@
 {
- "object": {
-  "height": 32,
-  "name": "Warp",
-  "properties": [
+ "object":{
+  "height":16,
+  "name":"Warp",
+  "properties":[
    {
-    "name": "page_0",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "trigger": "player_touch",
-     "through": true
+    "name":"page_0",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "trigger":"player_touch",
+     "through":true
     }
    },
    {
-    "name": "script",
-    "type": "file",
-    "value": "events/warp_tile.rb"
+    "name":"script",
+    "type":"file",
+    "value":"events/warp_tile.rb"
    },
    {
-    "name": "spawn",
-    "type": "string",
-    "value": "arrival"
+    "name":"spawn",
+    "type":"string",
+    "value":"arrival"
    },
    {
-    "name": "to",
-    "type": "string",
-    "value": "Map name"
+    "name":"to",
+    "type":"string",
+    "value":"Map name"
    }
   ],
-  "rotation": 0,
-  "type": "Event",
-  "visible": true,
-  "width": 32
+  "rotation":0,
+  "type":"Event",
+  "visible":true,
+  "width":16
  },
- "type": "template"
+ "type":"template"
 }

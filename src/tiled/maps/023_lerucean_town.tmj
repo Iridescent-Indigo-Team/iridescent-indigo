@@ -172,15 +172,15 @@
    "name":"Events",
    "objects":[
     {
-     "height":32,
+     "height":16,
      "id":1,
      "name":"Poké Center door",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":352,
-     "y":448,
+     "width":16,
+     "x":176,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -216,15 +216,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":2,
      "name":"Mart door",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":512,
-     "y":448,
+     "width":16,
+     "x":256,
+     "y":224,
      "properties":[
       {
        "name":"event_id",
@@ -260,15 +260,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":3,
      "name":"Fan club door",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":768,
-     "y":576,
+     "width":16,
+     "x":384,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -304,15 +304,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":4,
      "name":"Day Care door",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":896,
-     "y":320,
+     "width":16,
+     "x":448,
+     "y":160,
      "properties":[
       {
        "name":"event_id",
@@ -346,15 +346,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":5,
      "name":"Natural Park door",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":1056,
-     "y":672,
+     "width":16,
+     "x":528,
+     "y":336,
      "properties":[
       {
        "name":"event_id",
@@ -377,15 +377,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":6,
      "name":"Day Care Man",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":832,
-     "y":352,
+     "width":16,
+     "x":416,
+     "y":176,
      "properties":[
       {
        "name":"event_id",
@@ -408,15 +408,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":7,
      "name":"Vendor",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":384,
-     "y":672,
+     "width":16,
+     "x":192,
+     "y":336,
      "properties":[
       {
        "name":"event_id",
@@ -439,15 +439,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":8,
      "name":"EV008",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":704,
-     "y":576,
+     "width":16,
+     "x":352,
+     "y":288,
      "properties":[
       {
        "name":"event_id",
@@ -468,15 +468,15 @@
      ]
     },
     {
-     "height":32,
+     "height":16,
      "id":9,
      "name":"Bicycle NPC",
      "rotation":0,
      "type":"Event",
      "visible":true,
-     "width":32,
-     "x":416,
-     "y":864,
+     "width":16,
+     "x":208,
+     "y":432,
      "properties":[
       {
        "name":"event_id",
@@ -530,7 +530,7 @@
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.2",
- "tileheight":32,
+ "tileheight":16,
  "tilesets":[
   {
    "firstgid":1,
@@ -565,7 +565,7 @@
    "source":"../tilesets/autotiles/fountain1.tsj"
   }
  ],
- "tilewidth":32,
+ "tilewidth":16,
  "type":"map",
  "version":"1.10",
  "width":41,

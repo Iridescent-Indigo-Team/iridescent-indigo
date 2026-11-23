@@ -1,26 +1,26 @@
 {
- "object": {
-  "height": 32,
-  "name": "SmashRock",
-  "properties": [
+ "object":{
+  "height":16,
+  "name":"SmashRock",
+  "properties":[
    {
-    "name": "page_0",
-    "type": "class",
-    "propertytype": "EventPage",
-    "value": {
-     "graphic": "Object rock"
+    "name":"page_0",
+    "type":"class",
+    "propertytype":"EventPage",
+    "value":{
+     "graphic":"Object rock"
     }
    },
    {
-    "name": "script",
-    "type": "file",
-    "value": "events/smash_rock.rb"
+    "name":"script",
+    "type":"file",
+    "value":"events/smash_rock.rb"
    }
   ],
-  "rotation": 0,
-  "type": "Event",
-  "visible": true,
-  "width": 32
+  "rotation":0,
+  "type":"Event",
+  "visible":true,
+  "width":16
  },
- "type": "template"
+ "type":"template"
 }

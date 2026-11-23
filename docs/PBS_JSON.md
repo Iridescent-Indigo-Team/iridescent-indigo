@@ -146,9 +146,8 @@ written out in full instead of named.
 - **Evolution parameters** are integers when the evolution method takes an
   integer (`"parameter": 16` for `Level`), and text otherwise.
 - **Pokémon sprite metrics** (`pokemon_metrics`) need no special handling.
-  Their values are already in the game's 1× pixels, so unlike the `.rxdata`
-  pixel values that `halve_data.rb` halves, they are copied exactly as
-  written.
+  Their values are in the game's 1× pixels, like every source, and are
+  copied exactly as written.
 - **Comments** aren't kept. The compiler ignores them, and the engine's PBS
   writer drops them too, so files the debug editors write lose them anyway.
 
