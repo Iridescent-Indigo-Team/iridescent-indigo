@@ -14,6 +14,7 @@
     "Metadata": "metadata",
     "Move": "moves",
     "PhoneMessage": "phone",
+    "PokemonPattern": "pokemon_patterns",
     "RegionalDex": "regional_dexes",
     "Ribbon": "ribbons",
     "ShadowPokemon": "shadow_pokemon",
@@ -704,6 +705,38 @@
           "key": "End",
           "property": "end",
           "type": "^q"
+        }
+      ]
+    },
+    "PokemonPattern": {
+      "pbs_base_filename": "pokemon_patterns",
+      "data_filename": "pokemon_patterns.dat",
+      "optional": true,
+      "schema": [
+        {
+          "key": "SectionName",
+          "property": "id",
+          "type": "e",
+          "enums": [
+            {
+              "gamedata": "Species"
+            }
+          ]
+        },
+        {
+          "key": "NoPatternWeight",
+          "property": "no_pattern_weight",
+          "type": "u"
+        },
+        {
+          "key": "NoPatternDominance",
+          "property": "no_pattern_dominance",
+          "type": "u"
+        },
+        {
+          "key": "Pattern",
+          "property": "patterns",
+          "type": "^msvU"
         }
       ]
     },
@@ -1616,6 +1649,11 @@
           "key": "BrightnessAlleles",
           "property": "brightness_alleles",
           "type": "*i"
+        },
+        {
+          "key": "Pattern",
+          "property": "pattern",
+          "type": "m"
         }
       ]
     },

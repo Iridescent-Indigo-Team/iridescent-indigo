@@ -221,6 +221,47 @@ class Validator:
                     self._ids["Species"].add("%s_%s" % (entry["species"], entry.get("form")))
         self._facility_files = {d.name + ".txt" for d in all_data if d.subdir == BATTLE_FACILITY_DIR}
 
+    def _dataset_entries(self, cls):
+        """The entries of the dataset for a GameData class (e.g. "Species")."""
+        base = self.config.engine["pbs_files"].get(cls)
+        data = next((d for d in self.all_data if d.name == base and not d.subdir), None)
+        return [] if data is None else [e for e in data.entries() if isinstance(e, dict)]
+
+    def line_root(self, species):
+        """The first species of a species' evolution line, as
+        GameData::Species#get_baby_species(false) works it out.
+
+        @return the species id, or None if it isn't a species in pokemon.txt
+        """
+        if not hasattr(self, "_prevolutions"):
+            self._species = set()
+            self._prevolutions = {}
+            for entry in self._dataset_entries("Species"):
+                self._species.add(entry.get("id"))
+                for evo in entry.get("evolutions", []) or []:
+                    if isinstance(evo, dict) and evo.get("species") is not None:
+                        self._prevolutions.setdefault(evo["species"], entry.get("id"))
+        if species not in self._species:
+            return None
+        seen = set()
+        while species in self._prevolutions and species not in seen:
+            seen.add(species)
+            species = self._prevolutions[species]
+        return species
+
+    def line_patterns(self, species):
+        """The pattern ids of a species' evolution line, from pokemon_patterns.
+
+        @return list of ids, or None if the line has no patterns
+        """
+        if not hasattr(self, "_line_patterns"):
+            self._line_patterns = {}
+            for entry in self._dataset_entries("PokemonPattern"):
+                self._line_patterns[entry.get("id")] = [p.get("id") for p in entry.get("patterns", []) or []
+                                                        if isinstance(p, dict)]
+        root = self.line_root(species)
+        return self._line_patterns.get(root if root is not None else species)
+
     def ids_for(self, gamedata):
         """The ids defined for a GameData class, or None if unknown."""
         info = self.config.enums.get(gamedata)

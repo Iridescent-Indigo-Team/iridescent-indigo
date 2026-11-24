@@ -108,4 +108,28 @@ module GraphicsSettings
 
   # @brief Most recolored graphics RecolorCache keeps once nothing else uses them.
   RECOLOR_CACHE_SIZE = 64
+
+  #----------------------------------------------------------------
+  # Patterns (see docs/POKEMON_PATTERNS.md)
+  #----------------------------------------------------------------
+
+  # @brief Master switch. When false every Pokémon is drawn with its normal sprites (its
+  # pattern is still kept, inherited and recorded in the Pokédex).
+  PATTERNS_ENABLED = true
+
+  # @brief The weight of "no pattern" when a line in pokemon_patterns.txt has no
+  # NoPatternWeight. 0 means Pokémon of that line always roll one of its patterns.
+  DEFAULT_NO_PATTERN_WEIGHT = 0
+
+  # @brief The dominance of a pattern (or of "no pattern") that doesn't set one. When
+  # breeding, a parent's pattern is chosen with odds in proportion to its dominance.
+  DEFAULT_PATTERN_DOMINANCE = 1
+
+  # @brief Chance (in percent) that an egg ignores its parents' patterns and rolls a fresh
+  # one from its line, the way a wild Pokémon would.
+  PATTERN_MUTATION_CHANCE = 5
+
+  # @brief Whether a parent holding an Everstone always passes its pattern on (if that
+  # pattern exists in the egg's line), with no chance of mutation.
+  PATTERN_EVERSTONE_LOCK = true
 end

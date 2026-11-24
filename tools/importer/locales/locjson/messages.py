@@ -37,6 +37,8 @@ ITEM_PORTION_NAMES = 28
 ITEM_PORTION_NAME_PLURALS = 29
 POKEMON_NICKNAMES = 30
 RIBBON_TITLES = 31
+## Pattern names (pokemon_patterns); defined by the Graphics plugin, not the engine.
+POKEMON_PATTERN_NAMES = 32
 ## Not a text table: the language's grammar and number settings
 ## (MessageTypes::LOCALE_DATA in the engine).
 LOCALE_DATA = 99

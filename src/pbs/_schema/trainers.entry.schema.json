@@ -119,6 +119,11 @@
             "items": {"type": "integer"},
             "description": "PBS key: BrightnessAlleles"
           },
+          "pattern": {
+            "type": "string",
+            "pattern": "^(?![0-9])\\w+$",
+            "description": "An id: letters, digits and underscores, not starting with a digit."
+          },
           "species": {"type": "string", "description": "A Species id from pokemon.txt."},
           "level": {"type": "integer", "minimum": 1}
         },

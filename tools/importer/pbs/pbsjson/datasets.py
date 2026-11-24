@@ -249,6 +249,43 @@ class SpeciesDataset(GenericDataset):
                 check.reference(param_type, value, where + ".parameter")
 
 
+class PokemonPatternDataset(GenericDataset):
+    """pokemon_patterns.txt: the patterns of each evolution line (see docs/POKEMON_PATTERNS.md).
+
+    Mirrors Compiler.validate_compiled_pokemon_pattern in the Graphics plugin: a line is named
+    after its first species, its pattern ids are unique, and NONE (which means "no pattern")
+    can't be a pattern id.
+    """
+
+    def validate_entry(self, entry, check):
+        super().validate_entry(entry, check)
+        species = entry.get("id")
+        if isinstance(species, str):
+            root = check.validator.line_root(species)
+            if root is not None and root != species:
+                check.error("id", "patterns must be defined on the first species of an evolution "
+                                  "line ([%s], not [%s])" % (root, species))
+        patterns = entry.get("patterns")
+        if not isinstance(patterns, list) or not patterns:
+            check.error("patterns", "a line needs at least one pattern")
+            return
+        seen = set()
+        for i, pattern in enumerate(patterns):
+            if not isinstance(pattern, dict):
+                continue
+            pid = pattern.get("id")
+            where = "patterns[%d].id" % i
+            if pid == PATTERN_NONE:
+                check.error(where, "%s can't be used as a pattern id (it means \"no pattern\")" % PATTERN_NONE)
+            elif pid in seen:
+                check.error(where, "pattern %s is defined twice" % pid)
+            seen.add(pid)
+
+
+## The pattern id that means "no pattern" (GameData::PokemonPattern::NONE).
+PATTERN_NONE = "NONE"
+
+
 class MetadataDataset(GenericDataset):
     """metadata.txt: section 0 is global metadata, the others are players."""
 
@@ -385,6 +422,7 @@ class TrainerDataset(Dataset):
                 check.error(where + ".level", "level %d is above the maximum of %d" % (pkmn["level"], max_level))
             check.group(self.name, self.sub_group, pkmn, where=where, skip=list(self.pokemon_field.names))
             self.validate_color_alleles(pkmn, where, check)
+            self.validate_pattern(pkmn, where, check)
 
     # Color allele properties of trainers' Pokémon (see docs/HUE_VARIATION.md), and the range
     # of each allele. Mirrors HueGenetics in the Graphics plugin.
@@ -403,6 +441,20 @@ class TrainerDataset(Dataset):
                 check.error(path, "must be two whole numbers, e.g. [-40, 60]")
             elif not all(self.ALLELE_MIN <= v <= self.ALLELE_MAX for v in value):
                 check.error(path, "values must be %d to %d" % (self.ALLELE_MIN, self.ALLELE_MAX))
+
+
+    def validate_pattern(self, pkmn, where, check):
+        """Checks that a Pokémon's pattern exists in its evolution line (or is NONE)."""
+        pattern = pkmn.get("pattern")
+        species = pkmn.get("species")
+        if pattern is None or not isinstance(species, str):
+            return
+        patterns = check.validator.line_patterns(species)
+        if patterns is None:
+            check.error(where + ".pattern", "%s's evolution line has no patterns (see pokemon_patterns)" % species)
+        elif pattern != PATTERN_NONE and pattern not in patterns:
+            check.error(where + ".pattern", "pattern %s isn't defined for %s's line (its patterns are: %s, or %s)"
+                        % (pattern, species, ", ".join(patterns), PATTERN_NONE))
 
 
 class EncounterDataset(Dataset):
@@ -982,6 +1034,8 @@ def build_datasets(config):
             add(RegionalDexDataset(config, name))
         elif key == "BattleFacility":
             add(BattleFacilityListDataset(config, name))
+        elif key == "PokemonPattern":
+            add(PokemonPatternDataset(config, name, classes[key]["schema"], split=name in split))
         else:
             info = classes.get(key)
             if not info or not info.get("schema"):

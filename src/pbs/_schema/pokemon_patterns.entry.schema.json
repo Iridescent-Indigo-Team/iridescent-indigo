@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pokemon_patterns.txt entry",
+  "type": "object",
+  "properties": {
+    "$schema": {"type": "string"},
+    "id": {"type": "string", "description": "A Species id from pokemon.txt."},
+    "no_pattern_weight": {"type": "integer", "minimum": 0, "description": "PBS key: NoPatternWeight"},
+    "no_pattern_dominance": {"type": "integer", "minimum": 0, "description": "PBS key: NoPatternDominance"},
+    "patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(?![0-9])\\w+$",
+            "description": "An id: letters, digits and underscores, not starting with a digit."
+          },
+          "real_name": {"type": "string", "pattern": "^[^#]*$", "description": "Text."},
+          "weight": {"type": "integer", "minimum": 1},
+          "dominance": {"type": "integer", "minimum": 0}
+        },
+        "required": ["id", "real_name", "weight"],
+        "additionalProperties": false
+      },
+      "description": "PBS key: Pattern"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

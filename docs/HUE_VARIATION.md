@@ -235,6 +235,7 @@ All in `GraphicsSettings` (`000_Settings.rb`):
 | `HueGenetics.trainer_seed(trainer_type, real_name, slot)` | The seed a trainer's Pokémon's alleles come from |
 | `$PokemonSystem.color_variation` | The player's option (0 Full, 1 Hue Only, 2 Off) |
 | `RecolorCache.load(path, ColorAdjust.new(hue, sat, value))` | A recolored copy of any graphic |
+| `GameData::Species.sprite_filename_from_pokemon(pkmn, back, species)` | The file a Pokémon's front/back sprite is loaded from (hooked by [patterns](POKEMON_PATTERNS.md)) |
 
 For example, a gift Pokémon with a special color:
 
