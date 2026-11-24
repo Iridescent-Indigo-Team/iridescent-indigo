@@ -37,7 +37,8 @@
         "special_defense": 20
       },
       "shininess": true,
-      "poke_ball": "HEAVYBALL"
+      "poke_ball": "HEAVYBALL",
+      "hue_alleles": [60, 80]
     }
   ]
 }

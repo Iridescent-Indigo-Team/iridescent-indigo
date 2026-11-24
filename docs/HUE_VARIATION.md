@@ -20,6 +20,7 @@ settings are in its `000_Settings.rb` (`GraphicsSettings`).
 - [Saturation and brightness](#saturation-and-brightness)
 - [Comfort limits](#comfort-limits)
 - [Player option](#player-option)
+- [Trainers' Pokémon](#trainers-pokémon)
 - [Where it shows](#where-it-shows)
 - [Settings](#settings)
 - [Script reference](#script-reference)
@@ -35,9 +36,11 @@ settings are in its `000_Settings.rb` (`GraphicsSettings`).
 - **Wild, gift and traded-in Pokémon** get their alleles from their personal
   ID. They are worked out the first time they're needed, so a Pokémon's color
   never changes, and Pokémon from saves made before this feature get a color
-  too. The personal ID is scrambled first (differently for each gene), so color has nothing to do with
-  gender, nature or ability. `HUE_ALLELE_SPREAD` makes extreme alleles rarer
-  than subtle ones.
+  too. The personal ID is scrambled first (differently for each gene), so
+  color has nothing to do with gender, nature or ability. `HUE_ALLELE_SPREAD`
+  makes extreme alleles rarer than subtle ones.
+- **Trainers' Pokémon** get the same colors in every battle (see
+  [Trainers' Pokémon](#trainers-pokémon)).
 - **Blending.** Both alleles are shown: the Pokémon's **gene** is their
   average.
 - **IVs.** The hue gene is pushed by up to `HUE_IV_INFLUENCE` (8 by default):
@@ -127,6 +130,47 @@ further.
 The choice only changes how Pokémon are drawn. Their genes are kept and still
 passed on. `DEFAULT_PLAYER_SETTING` sets the choice for new games.
 
+## Trainers' Pokémon
+
+A trainer's Pokémon look the same every time you battle them, including
+rematches. Their alleles are worked out from the trainer's type, the trainer's
+name in the PBS data and the Pokémon's place in the party. The trainer's
+version (rematch tier) and the Pokémon's species aren't used, so:
+
+- a rematch has the same colors as the first battle;
+- a Pokémon that evolved between rematches keeps its colors;
+- a rival the player names is still seeded from their PBS name, so their
+  colors don't depend on the name chosen.
+
+Any gene can be set in the trainer PBS data instead (`src/pbs/trainers`,
+`trainers.txt`). Genes that aren't set still come from the seed.
+
+| PBS key | JSON property | Meaning |
+| --- | --- | --- |
+| `HueAlleles` | `hue_alleles` | The Pokémon's two hue alleles, each -100 to 100. |
+| `SaturationAlleles` | `saturation_alleles` | Its two saturation alleles, each -100 to 100. |
+| `BrightnessAlleles` | `brightness_alleles` | Its two brightness alleles, each -100 to 100. |
+
+```
+Pokemon = ONIX,14
+    Name = Rocky
+    HueAlleles = 60,80
+```
+
+```json
+{"species": "ONIX", "level": 14, "real_name": "Rocky", "hue_alleles": [60, 80]}
+```
+
+The alleles go through the species' ranges and the comfort limits like any
+other Pokémon's, so `[100, 100]` means "as far as this species can go", not a
+fixed number of degrees. Both `make validate-pbs` and compiling the game check
+that each value is two whole numbers from -100 to 100.
+
+Editing a trainer's Pokémon in the Debug menu's trainer editor keeps these
+values, but they can't be changed there; edit the JSON (or PBS) instead.
+Battle Frontier teams are generated randomly each time, so their colors are
+random too.
+
 ## Where it shows
 
 - Battle sprites (front and back), the summary screen and anywhere else that
@@ -188,6 +232,7 @@ All in `GraphicsSettings` (`000_Settings.rb`):
 | `pkmn.hue_varied?` | Whether it looks different from normal |
 | `HueGenetics.inherit(mother, father, trait)` | Alleles for a child of two Pokémon |
 | `HueGenetics.range_for(species, form, trait)` | A species' (or form's) range for a gene |
+| `HueGenetics.trainer_seed(trainer_type, real_name, slot)` | The seed a trainer's Pokémon's alleles come from |
 | `$PokemonSystem.color_variation` | The player's option (0 Full, 1 Hue Only, 2 Off) |
 | `RecolorCache.load(path, ColorAdjust.new(hue, sat, value))` | A recolored copy of any graphic |
 

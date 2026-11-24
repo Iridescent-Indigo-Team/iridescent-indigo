@@ -104,6 +104,21 @@
           "poke_ball": {"type": "string", "description": "A Item id from items.txt."},
           "title": {"type": "string", "description": "A Ribbon id from ribbons.txt."},
           "scale": {"type": "integer", "minimum": 0, "description": "PBS key: Scale"},
+          "hue_alleles": {
+            "type": "array",
+            "items": {"type": "integer"},
+            "description": "PBS key: HueAlleles"
+          },
+          "saturation_alleles": {
+            "type": "array",
+            "items": {"type": "integer"},
+            "description": "PBS key: SaturationAlleles"
+          },
+          "brightness_alleles": {
+            "type": "array",
+            "items": {"type": "integer"},
+            "description": "PBS key: BrightnessAlleles"
+          },
           "species": {"type": "string", "description": "A Species id from pokemon.txt."},
           "level": {"type": "integer", "minimum": 1}
         },
