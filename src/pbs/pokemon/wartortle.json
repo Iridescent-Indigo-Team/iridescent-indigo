@@ -26,6 +26,7 @@
     {"level": 20, "move": "PROTECT"},
     {"level": 25, "move": "RAINDANCE"},
     {"level": 30, "move": "AQUATAIL"},
+    {"level": 33, "move": "ROCKSMASH"},
     {"level": 35, "move": "SHELLSMASH"},
     {"level": 40, "move": "IRONDEFENSE"},
     {"level": 45, "move": "HYDROPUMP"},
@@ -110,6 +111,6 @@
   "real_pokedex_entry": "Its large tail is covered with rich, thick fur that deepens in color with age. The scratches on its shell are evidence of this Pokémon's toughness in battle.",
   "generation": 1,
   "evolutions": [
-    {"species": "BLASTOISE", "method": "Level", "parameter": 36}
+    {"species": "BLASTOISE", "method": "Happiness"}
   ]
 }

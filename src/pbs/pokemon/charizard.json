@@ -22,7 +22,8 @@
   "abilities": ["BLAZE"],
   "hidden_abilities": ["SOLARPOWER"],
   "moves": [
-    {"level": 0, "move": "AIRSLASH"},
+    {"level": 0, "move": "WILDFIRE"},
+    {"level": 1, "move": "AIRSLASH"},
     {"level": 1, "move": "DRAGONCLAW"},
     {"level": 1, "move": "HEATWAVE"},
     {"level": 1, "move": "SCRATCH"},

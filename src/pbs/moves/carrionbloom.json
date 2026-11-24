@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "CARRIONBLOOM",
+  "real_name": "Carrion Bloom",
+  "type": "GRASS",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 10,
+  "target": "NearOther",
+  "function_code": "DoublePowerIfTargetStatusProblem",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "real_description": "This malodorous attack does double damage to a target affected by status conditions."
+}

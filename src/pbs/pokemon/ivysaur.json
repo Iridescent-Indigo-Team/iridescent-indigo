@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon.entry.schema.json",
   "id": "IVYSAUR",
   "real_name": "Ivysaur",
-  "types": ["GRASS", "POISON"],
+  "types": ["GRASS"],
   "base_stats": {"hp": 60, "attack": 62, "defense": 63, "speed": 60, "special_attack": 80, "special_defense": 80},
   "gender_ratio": "FemaleOneEighth",
   "growth_rate": "Parabolic",
@@ -24,8 +24,10 @@
     {"level": 12, "move": "RAZORLEAF"},
     {"level": 15, "move": "POISONPOWDER"},
     {"level": 15, "move": "SLEEPPOWDER"},
+    {"level": 18, "move": "ASTONISH"},
     {"level": 20, "move": "SEEDBOMB"},
     {"level": 25, "move": "TAKEDOWN"},
+    {"level": 27, "move": "LICK"},
     {"level": 30, "move": "SWEETSCENT"},
     {"level": 35, "move": "SYNTHESIS"},
     {"level": 40, "move": "WORRYSEED"},
@@ -106,6 +108,6 @@
   "real_pokedex_entry": "To support its bulb, Ivysaur's legs grow sturdy. If it spends more time lying in the sunlight, the bud will soon bloom into a large flower.",
   "generation": 1,
   "evolutions": [
-    {"species": "VENUSAUR", "method": "Level", "parameter": 32}
+    {"species": "VENUSAUR", "method": "Happiness"}
   ]
 }

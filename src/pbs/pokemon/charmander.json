@@ -130,6 +130,6 @@
   "real_pokedex_entry": "The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is happy, and blazes when it is enraged.",
   "generation": 1,
   "evolutions": [
-    {"species": "CHARMELEON", "method": "Level", "parameter": 16}
+    {"species": "CHARMELEON", "method": "Level", "parameter": 17}
   ]
 }

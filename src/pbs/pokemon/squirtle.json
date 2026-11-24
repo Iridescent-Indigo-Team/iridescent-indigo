@@ -123,6 +123,6 @@
   "real_pokedex_entry": "Its shell is not just for protection. Its rounded shape and the grooves on its surface minimize resistance in water, enabling Squirtle to swim at high speeds.",
   "generation": 1,
   "evolutions": [
-    {"species": "WARTORTLE", "method": "Level", "parameter": 16}
+    {"species": "WARTORTLE", "method": "Level", "parameter": 17}
   ]
 }

@@ -115,6 +115,6 @@
   "real_pokedex_entry": "Without pity, its sharp claws destroy foes. If it encounters a strong enemy, it becomes agitated, and the flame on its tail flares with a bluish white color.",
   "generation": 1,
   "evolutions": [
-    {"species": "CHARIZARD", "method": "Level", "parameter": 36}
+    {"species": "CHARIZARD", "method": "Happiness"}
   ]
 }

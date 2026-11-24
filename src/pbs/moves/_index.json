@@ -242,6 +242,7 @@
         "heatcrash",
         "sunnyday",
         "willowisp",
+        "wildfire",
         "skyattack",
         "bravebird",
         "dragonascent",
@@ -340,6 +341,7 @@
         "stunspore",
         "synthesis",
         "worryseed",
+        "carrionbloom",
         "precipiceblades",
         "earthquake",
         "highhorsepower",
@@ -745,7 +747,8 @@
         "raindance",
         "soak",
         "watersport",
-        "withdraw"
+        "withdraw",
+        "beachcharge"
       ]
     },
     {

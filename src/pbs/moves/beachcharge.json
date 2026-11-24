@@ -1,0 +1,14 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "BEACHCHARGE",
+  "real_name": "Beach Charge",
+  "type": "WATER",
+  "category": "Physical",
+  "power": 75,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "RemoveScreens",
+  "flags": ["Contact", "CanProtect", "CanMirrorMove"],
+  "real_description": "The user attacks with its full might, breaking barriers like Reflect and Light Screen."
+}

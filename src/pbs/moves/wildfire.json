@@ -1,0 +1,15 @@
+{
+  "$schema": "../_schema/moves.entry.schema.json",
+  "id": "WILDFIRE",
+  "real_name": "Wildfire",
+  "type": "FIRE",
+  "category": "Special",
+  "power": 70,
+  "accuracy": 100,
+  "total_pp": 15,
+  "target": "NearOther",
+  "function_code": "DamageBurnTargetAlly",
+  "flags": ["CanProtect", "CanMirrorMove"],
+  "effect_chance": 10,
+  "real_description": "The user attacks the foe with volatile flames. It damages Pokémon next to the target and may burn."
+}

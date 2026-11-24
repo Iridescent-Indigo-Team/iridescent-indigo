@@ -2,13 +2,13 @@
   "$schema": "../_schema/pokemon.entry.schema.json",
   "id": "VENUSAUR",
   "real_name": "Venusaur",
-  "types": ["GRASS", "POISON"],
+  "types": ["GRASS", "GHOST"],
   "base_stats": {
-    "hp": 80,
+    "hp": 85,
     "attack": 82,
-    "defense": 83,
+    "defense": 85,
     "speed": 80,
-    "special_attack": 100,
+    "special_attack": 102,
     "special_defense": 100
   },
   "gender_ratio": "FemaleOneEighth",
@@ -23,12 +23,15 @@
   "abilities": ["OVERGROW"],
   "hidden_abilities": ["CHLOROPHYLL"],
   "moves": [
-    {"level": 0, "move": "PETALBLIZZARD"},
+    {"level": 0, "move": "CARRIONBLOOM"},
     {"level": 1, "move": "PETALDANCE"},
     {"level": 1, "move": "TACKLE"},
     {"level": 1, "move": "GROWL"},
     {"level": 1, "move": "VINEWHIP"},
     {"level": 1, "move": "GROWTH"},
+    {"level": 1, "move": "ASTONISH"},
+    {"level": 1, "move": "SPITE"},
+    {"level": 1, "move": "LICK"},
     {"level": 9, "move": "LEECHSEED"},
     {"level": 12, "move": "RAZORLEAF"},
     {"level": 15, "move": "POISONPOWDER"},
@@ -39,6 +42,7 @@
     {"level": 37, "move": "SYNTHESIS"},
     {"level": 44, "move": "WORRYSEED"},
     {"level": 51, "move": "DOUBLEEDGE"},
+    {"level": 55, "move": "SHADOWBALL"},
     {"level": 58, "move": "SOLARBEAM"}
   ],
   "tutor_moves": [
