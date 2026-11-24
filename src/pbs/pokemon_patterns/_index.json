@@ -1,0 +1,12 @@
+{
+  "$schema": "../_schema/index.schema.json",
+  "files": [
+    {
+      "suffix": "",
+      "bom": true,
+      "entries": [
+        "bulbasaur"
+      ]
+    }
+  ]
+}

@@ -141,6 +141,11 @@ def pbs_strings(pbs_dir=cfg.PBS_DIR):
         title = e.get("real_prefix_title") or e.get("real_title")
         add("ribbons.csv", "%s.title" % e["id"], title, mt.RIBBON_TITLES, "Ribbon/mark title",
             field="ribbons.title")
+    for e in entries("pokemon_patterns"):
+        for pattern in e.get("patterns", []) or []:
+            if isinstance(pattern, dict):
+                add("pokemon_patterns.csv", "%s.%s.name" % (e["id"], pattern.get("id")), pattern.get("real_name"),
+                    mt.POKEMON_PATTERN_NAMES, "Pokémon pattern name", noun="%s_%s" % (e["id"], pattern.get("id")))
     for e in entries("trainer_types"):
         add("trainer_types.csv", "%s.name" % e["id"], e.get("real_name"), mt.TRAINER_TYPE_NAMES,
             "Trainer type", noun=e["id"], field="trainer_types.name")

@@ -279,5 +279,33 @@ class SmallTreeTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(os.path.join(out, "moves_extra.txt")))
 
 
+    def test_pokemon_patterns(self):
+        self.write("pokemon.txt", "[BULBA]\nName = Bulba\nTypes = NORMAL\nEvolution = IVY,Level,16\n"
+                                  "[IVY]\nName = Ivy\nTypes = NORMAL\n")
+        self.write("pokemon_patterns.txt", "[IVY]\nPattern = NONE,Nothing,1\n"
+                                           "[BULBA]\nNoPatternWeight = 50\nPattern = SPOTTED,Spotted,10,2\n"
+                                           "Pattern = SPOTTED,Again,1\n")
+        self.write("trainers.txt", "[YOUNGSTER,Ben]\nPokemon = IVY,5\n    Pattern = STRIPED\n"
+                                   "Pokemon = IVY,5\n    Pattern = SPOTTED\nPokemon = BULBA,5\n    Pattern = NONE\n")
+        loaded = self.import_tree()
+        patterns = {d.name: d for d in loaded}["pokemon_patterns"]
+        bulba = next(e for e in patterns.entries() if e["id"] == "BULBA")
+        self.assertEqual(bulba["patterns"], [
+            {"id": "SPOTTED", "real_name": "Spotted", "weight": 10, "dominance": 2},
+            {"id": "SPOTTED", "real_name": "Again", "weight": 1}])
+        text = "\n".join(str(p) for p in validate(self.config, loaded, self.src))
+        self.assertIn("first species of an evolution line ([BULBA], not [IVY])", text)
+        self.assertIn("NONE can't be used as a pattern id", text)
+        self.assertIn("pattern SPOTTED is defined twice", text)
+        self.assertIn("(pokemon[0].pattern): pattern STRIPED isn't defined for IVY's line", text)
+        self.assertNotIn("pokemon[1].pattern", text)
+        self.assertNotIn("pokemon[2].pattern", text)
+        out = os.path.join(self.tmp, "out")
+        export_pbs(render_pbs(loaded), out, True, quiet)
+        lines = normalized_lines(os.path.join(out, "pokemon_patterns.txt"))
+        self.assertIn("Pattern = SPOTTED,Spotted,10,2", lines)
+        self.assertIn("Pattern = SPOTTED,Again,1", lines)
+        self.assertIn("    Pattern = STRIPED", normalized_lines(os.path.join(out, "trainers.txt")))
+
 if __name__ == "__main__":
     unittest.main()

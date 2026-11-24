@@ -1,0 +1,10 @@
+{
+  "$schema": "../_schema/pokemon_patterns.entry.schema.json",
+  "id": "BULBASAUR",
+  "no_pattern_weight": 80,
+  "no_pattern_dominance": 2,
+  "patterns": [
+    {"id": "SPOTTED", "real_name": "Spotted", "weight": 15, "dominance": 1},
+    {"id": "STRIPED", "real_name": "Striped", "weight": 5, "dominance": 3}
+  ]
+}

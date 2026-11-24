@@ -15,3 +15,6 @@ player's birthday.
 
 See [docs/HUE_VARIATION.md](docs/HUE_VARIATION.md) for Pokémon color variation
 and how it's inherited.
+
+See [docs/POKEMON_PATTERNS.md](docs/POKEMON_PATTERNS.md) for Pokémon patterns
+(alternate sprites per evolution line) and how they're inherited.

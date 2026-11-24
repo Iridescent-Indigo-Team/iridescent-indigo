@@ -192,6 +192,9 @@ changes:
   - trainers' Pokémon, items and moves
   - encounter species (forms included, e.g. `VULPIX_1`)
   - regional Dex species
+  - Pokémon patterns: each line is named after its first species, and
+    trainers' Pokémon only use patterns of their own line (see
+    [POKEMON_PATTERNS.md](POKEMON_PATTERNS.md))
   - metadata trainer types
   - the files named in `battle_facility_lists`
 - **Evolution parameters** must match what the method takes: an integer, an

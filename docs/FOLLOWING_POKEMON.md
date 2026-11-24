@@ -178,6 +178,10 @@ While the Pokémon is out:
 Pokémon sprites: `SPECIES`, `SPECIES_form`, `SPECIES_female`. Missing sprites
 fall back to `000`.
 
+A Pokémon with a [pattern](POKEMON_PATTERNS.md) uses
+`Graphics/Characters/Patterns/<PATTERN>/Followers[ shiny]/` instead, if its
+sprite is there.
+
 **Sizes.** A sprite's size category comes from the width of one frame:
 
 | Frame width | Category | Drawn back from the player by |

@@ -108,11 +108,7 @@ module GameData
       species = pkmn.species if !species
       species = GameData::Species.get(species).species   # Just to be sure it's a symbol
       return self.egg_sprite_bitmap(species, pkmn.form) if pkmn.egg?
-      if back
-        filename = self.back_sprite_filename(species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?)
-      else
-        filename = self.front_sprite_filename(species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?)
-      end
+      filename = self.sprite_filename_from_pokemon(pkmn, back, species)
       ret = HueVariation.animated_bitmap(filename, HueVariation.adjust_for(pkmn))
       alter_bitmap_function = MultipleForms.getFunction(species, "alterBitmap")
       if ret && alter_bitmap_function
@@ -122,6 +118,20 @@ module GameData
         ret = new_ret
       end
       return ret
+    end
+
+    # @brief The file a Pokémon's front or back sprite is loaded from (not for eggs).
+    # Other scripts (e.g. Pokemon Patterns) alias this to draw an individual differently.
+    # @param pkmn [Pokemon]
+    # @param back [Boolean]
+    # @param species [Symbol, nil] Draw as this species instead (e.g. during evolution).
+    # @return [String, nil]
+    def self.sprite_filename_from_pokemon(pkmn, back = false, species = nil)
+      species = GameData::Species.get(species || pkmn.species).species
+      if back
+        return self.back_sprite_filename(species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?)
+      end
+      return self.front_sprite_filename(species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?)
     end
 
     # @brief A Pokémon's icon, recolored by its genes.

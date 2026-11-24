@@ -21,6 +21,7 @@
     "BackSprite": ["x", "y"],
     "FrontSprite": ["x", "y"],
     "shadow_pokemon.SectionName": ["species", "form"],
+    "pokemon_patterns.Pattern": ["id", "real_name", "weight", "dominance"],
     "Yield": ["min", "max"],
     "Point": ["x", "y", "name", "point_name", "fly_map", "fly_x", "fly_y", "switch"],
     "trainers.SectionName": ["trainer_type", "name", "version"],
