@@ -20,20 +20,21 @@ module HueGenetics
     return clamp_allele(allele + ((rand(2) == 0) ? -amount : amount))
   end
 
-  # @brief The alleles of a child of two parents: one random allele from each, each of
-  # which may drift a little.
+  # @brief The alleles of a child of two parents for one trait: one random allele from
+  # each, each of which may drift a little.
   # @param mother [Pokemon]
   # @param father [Pokemon]
+  # @param trait [Symbol] :hue, :saturation or :brightness.
   # @return [Array<Integer>] Two alleles.
-  def inherit(mother, father)
-    return [drift(mother.hue_alleles.sample), drift(father.hue_alleles.sample)]
+  def inherit(mother, father, trait = :hue)
+    return [drift(mother.color_alleles(trait).sample), drift(father.color_alleles(trait).sample)]
   end
 end
 
 #==================================================================
 # module DayCare::EggGenerator
 #==================================================================
-# @brief Gives Day Care eggs alleles inherited from their parents.
+# @brief Gives Day Care eggs color alleles inherited from their parents.
 # Wraps generate itself (rather than one of its inherit_ steps) so this works with any
 # version of it, including the Generation 9 Pack's.
 class DayCare
@@ -41,13 +42,18 @@ class DayCare
     class << self
       alias __hue_generate generate unless method_defined?(:__hue_generate)
 
-      # @brief Generates an egg from two parents, then sets its hue alleles.
+      # @brief Generates an egg from two parents, then sets its color alleles (each trait
+      # is inherited separately).
       # @param mother [Pokemon]
       # @param father [Pokemon]
       # @return [Pokemon] The egg.
       def generate(mother, father)
         egg = __hue_generate(mother, father)
-        egg.hue_alleles = HueGenetics.inherit(mother, father) if egg
+        if egg
+          HueGenetics::TRAITS.each_key do |trait|
+            egg.set_color_alleles(trait, HueGenetics.inherit(mother, father, trait))
+          end
+        end
         return egg
       end
     end

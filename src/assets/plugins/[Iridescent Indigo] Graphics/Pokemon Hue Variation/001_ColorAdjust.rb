@@ -74,7 +74,7 @@ module Recolor
   # @brief Applies an adjustment to a bitmap in place.
   # Hue-only adjustments use the engine's GPU Bitmap#hue_change, which is fast enough to
   # run whenever a sprite is loaded. Saturation/value changes need the per-pixel path
-  # (Pixels.map_colors!), which isn't part of this project; without it only the hue is applied.
+  # (Pixels.map_colors!, see 001_Core.rb), which also applies the comfort limits.
   # Animated (GIF) bitmaps can't be changed in place; use recolored_copy for those.
   # @param bitmap [Bitmap] The layer to recolor.
   # @param adjust [ColorAdjust] The adjustment to apply.
@@ -154,12 +154,19 @@ module Recolor
   end
 
   # @brief Transforms a single RGB color.
+  # Applies the comfort limits in GraphicsSettings: outlines are left alone, and saturation
+  # and brightness are kept within COMFORT_MAX_SATURATION, COMFORT_MIN_BRIGHTNESS and
+  # COMFORT_MAX_BRIGHTNESS (never pushing a color further out than the original art had it).
   # @return [Array<Integer>] The new [r, g, b].
   def transform(r, g, b, adjust)
-    h, s, v = ColorMath.rgb_to_hsv(r, g, b)
-    h = (h + adjust.hue) % 360
-    s = ColorMath.shift(s, adjust.saturation / 100.0)
-    v = ColorMath.shift(v, adjust.value / 100.0)
+    h0, s0, v0 = ColorMath.rgb_to_hsv(r, g, b)
+    return [r, g, b] if v0 < GraphicsSettings::OUTLINE_BRIGHTNESS
+    h = (h0 + adjust.hue) % 360
+    s = ColorMath.shift(s0, adjust.saturation / 100.0)
+    v = ColorMath.shift(v0, adjust.value / 100.0)
+    s = [s, [GraphicsSettings::COMFORT_MAX_SATURATION, s0].max].min
+    v = v.clamp([GraphicsSettings::COMFORT_MIN_BRIGHTNESS, v0].min,
+                [GraphicsSettings::COMFORT_MAX_BRIGHTNESS, v0].max)
     return ColorMath.hsv_to_rgb(h, s, v)
   end
 
