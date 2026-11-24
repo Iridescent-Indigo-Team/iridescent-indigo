@@ -8,7 +8,13 @@ class Battle::Move::ChangeUserClefableForm < Battle::Move
     return if user.fainted? || user.effects[PBEffects::Transform]
     return if !user.isSpecies?(:CLEFABLE)
     return if user.hasActiveAbility?(:SHEERFORCE) && @addlEffect > 0
-    newForm = (user.form + 2) % 3
-    user.pbChangeForm(newForm, _INTL("{1} transformed!", user.pbThis))
+    return if user.form == 2
+    user.pbChangeForm(2, _INTL("{1} transformed!", user.pbThis))
   end
 end
+
+MultipleForms.register(:CLEFABLE, {
+  "getFormOnLeavingBattle" => proc { |pkmn, battle, usedInBattle, endBattle|
+    next 0
+  }
+})
