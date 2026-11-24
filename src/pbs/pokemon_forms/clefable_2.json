@@ -2,7 +2,7 @@
     "$schema": "../_schema/pokemon_forms.entry.schema.json",
     "species": "CLEFABLE",
     "form": 2,
-    "real_form_name": "Full Moon",
+    "real_form_name": "Full Moon Form",
     "types": ["FAIRY", "DARK"],
     "base_stats": {
         "hp": 95,
