@@ -384,6 +384,25 @@ class TrainerDataset(Dataset):
             if max_level and isinstance(pkmn.get("level"), int) and pkmn["level"] > max_level:
                 check.error(where + ".level", "level %d is above the maximum of %d" % (pkmn["level"], max_level))
             check.group(self.name, self.sub_group, pkmn, where=where, skip=list(self.pokemon_field.names))
+            self.validate_color_alleles(pkmn, where, check)
+
+    # Color allele properties of trainers' Pokémon (see docs/HUE_VARIATION.md), and the range
+    # of each allele. Mirrors HueGenetics in the Graphics plugin.
+    COLOR_ALLELE_PROPERTIES = ("hue_alleles", "saturation_alleles", "brightness_alleles")
+    ALLELE_MIN, ALLELE_MAX = -100, 100
+
+    def validate_color_alleles(self, pkmn, where, check):
+        """Checks that each color allele property is exactly two whole numbers in range."""
+        for prop in self.COLOR_ALLELE_PROPERTIES:
+            value = pkmn.get(prop)
+            if value is None:
+                continue
+            path = "%s.%s" % (where, prop)
+            if (not isinstance(value, list) or len(value) != 2
+                    or not all(isinstance(v, int) and not isinstance(v, bool) for v in value)):
+                check.error(path, "must be two whole numbers, e.g. [-40, 60]")
+            elif not all(self.ALLELE_MIN <= v <= self.ALLELE_MAX for v in value):
+                check.error(path, "values must be %d to %d" % (self.ALLELE_MIN, self.ALLELE_MAX))
 
 
 class EncounterDataset(Dataset):

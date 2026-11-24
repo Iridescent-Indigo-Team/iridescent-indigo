@@ -1601,6 +1601,21 @@
           "key": "Scale",
           "property": "scale",
           "type": "u"
+        },
+        {
+          "key": "HueAlleles",
+          "property": "hue_alleles",
+          "type": "*i"
+        },
+        {
+          "key": "SaturationAlleles",
+          "property": "saturation_alleles",
+          "type": "*i"
+        },
+        {
+          "key": "BrightnessAlleles",
+          "property": "brightness_alleles",
+          "type": "*i"
         }
       ]
     },
