@@ -2,7 +2,7 @@
   "$schema": "../_schema/pokemon.entry.schema.json",
   "id": "CLEFABLE",
   "real_name": "Clefable",
-  "types": ["FAIRY"],
+  "types": ["FAIRY", "FLYING"],
   "base_stats": {"hp": 95, "attack": 70, "defense": 73, "speed": 60, "special_attack": 95, "special_defense": 90},
   "gender_ratio": "Female75Percent",
   "growth_rate": "Fast",
@@ -15,6 +15,7 @@
   "abilities": ["CUTECHARM", "MAGICGUARD"],
   "hidden_abilities": ["UNAWARE"],
   "moves": [
+    {"level": 1, "move": "MOONSHIFT"},
     {"level": 1, "move": "SING"},
     {"level": 1, "move": "SWEETKISS"},
     {"level": 1, "move": "DISARMINGVOICE"},
@@ -36,7 +37,11 @@
     {"level": 1, "move": "POUND"},
     {"level": 1, "move": "COPYCAT"},
     {"level": 1, "move": "GROWL"},
-    {"level": 1, "move": "DEFENSECURL"}
+    {"level": 1, "move": "DEFENSECURL"},
+    {"level": 1, "move": "ASSURANCE"},
+    {"level": 1, "move": "FLING"},
+    {"level": 1, "move": "FLATTER"},
+    {"level": 1, "move": "SUCKERPUNCH"}
   ],
   "tutor_moves": [
     "AFTERYOU",

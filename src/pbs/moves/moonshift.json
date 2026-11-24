@@ -1,0 +1,14 @@
+{
+    "$schema": "../_schema/moves.entry.schema.json",
+    "id": "MOONSHIFT",
+    "real_name": "Moon Shift",
+    "type": "FAIRY",
+    "category": "Special",
+    "power": 60,
+    "accuracy": 100,
+    "total_pp": 10,
+    "target": "NearOther",
+    "function_code": "ChangeUserClefableForm",
+    "flags": ["CanProtect", "CanMirrorMove", "Sound", "CannotMetronome"],
+    "real_description": "The user sings a faint song which invokes a dormant lunar power."
+}

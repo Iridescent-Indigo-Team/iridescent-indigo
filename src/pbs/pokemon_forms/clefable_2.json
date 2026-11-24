@@ -1,0 +1,18 @@
+{
+    "$schema": "../_schema/pokemon_forms.entry.schema.json",
+    "species": "CLEFABLE",
+    "form": 2,
+    "real_form_name": "Full Moon",
+    "types": ["FAIRY", "DARK"],
+    "base_stats": {
+        "hp": 95,
+        "attack": 95,
+        "defense": 90,
+        "speed": 60,
+        "special_attack": 70,
+        "special_defense": 73
+    },
+    "weight": 42.3,
+    "color": "Black",
+    "real_pokedex_entry": "Since it now harnesses moonlight to attack, this form of Clefable is incapable of flight. Only on the night of a full moon will Clefable descend from its mountain home."
+}
