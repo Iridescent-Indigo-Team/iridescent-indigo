@@ -42,7 +42,10 @@
     {"level": 1, "move": "ASSURANCE"},
     {"level": 1, "move": "FLING"},
     {"level": 1, "move": "FLATTER"},
-    {"level": 1, "move": "SUCKERPUNCH"}
+    {"level": 1, "move": "SUCKERPUNCH"},
+    {"level": 1, "move": "AIRSLASH"},
+    {"level": 1, "move": "BOUNCE"},
+    {"level": 1, "move": "DUALWINGBEAT"}
   ],
   "tutor_moves": [
     "AFTERYOU",
