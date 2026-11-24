@@ -5,18 +5,33 @@
 #==================================================================
 # module HueDebug
 #==================================================================
-# @brief Text helpers for the "Set hue variation" debug option.
+# @brief Text helpers for the "Set color variation" debug option.
 module HueDebug
   module_function
 
-  # @brief Describes a Pokémon's hue genetics in one line.
-  # @param pkmn [Pokemon]
+  # @brief The display name of a color trait.
+  # @param trait [Symbol] :hue, :saturation or :brightness.
   # @return [String]
-  def summary(pkmn)
-    a, b = pkmn.hue_alleles
-    range = HueGenetics.range_for(pkmn.species, pkmn.form)
-    return _INTL("Alleles {1}/{2}, gene {3}, shift {4}° (range {5} to {6}).",
-                 a, b, pkmn.hue_gene.round, HueGenetics.signed_degrees_for(pkmn), range[0], range[1])
+  def trait_name(trait)
+    case trait
+    when :saturation then return _INTL("Saturation")
+    when :brightness then return _INTL("Brightness")
+    end
+    return _INTL("Hue")
+  end
+
+  # @brief Describes one of a Pokémon's color genes in one line.
+  # @param pkmn [Pokemon]
+  # @param trait [Symbol]
+  # @return [String]
+  def summary(pkmn, trait = :hue)
+    a, b = pkmn.color_alleles(trait)
+    range = HueGenetics.range_for(pkmn.species, pkmn.form, trait)
+    amount = (trait == :hue) ? HueGenetics.signed_degrees_for(pkmn) : HueGenetics.amount_for(pkmn, trait)
+    unit = (trait == :hue) ? "°" : "%"
+    return _INTL("{1}: alleles {2}/{3}, gene {4}, change {5}{6} (range {7} to {8}).",
+                 trait_name(trait), a, b, HueGenetics.gene_for(pkmn, trait).round, amount, unit,
+                 range[0], range[1])
   end
 
   # @brief Asks for a new allele value.
@@ -33,29 +48,45 @@ module HueDebug
       params
     ) { screen.pbUpdate }
   end
-end
 
-MenuHandlers.add(:pokemon_debug_menu, :set_hue, {
-  "name"   => _INTL("Set hue variation"),
-  "parent" => :cosmetic,
-  "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
+  # @brief Lets the debug user edit one color gene of a Pokémon.
+  # @param pkmn [Pokemon]
+  # @param pkmnid [Object] The Pokémon's position, for refreshing the screen.
+  # @param screen [Object] The party/storage debug screen.
+  # @param trait [Symbol]
+  def edit_trait(pkmn, pkmnid, screen, trait)
     cmd = 0
     loop do
-      cmd = screen.pbShowCommands(HueDebug.summary(pkmn),
+      cmd = screen.pbShowCommands(summary(pkmn, trait),
                                   [_INTL("Set allele 1"), _INTL("Set allele 2"),
                                    _INTL("Randomize alleles"), _INTL("Reset to personal ID")], cmd)
       break if cmd < 0
-      alleles = pkmn.hue_alleles.clone
+      alleles = pkmn.color_alleles(trait).clone
       case cmd
       when 0, 1   # Set allele
-        alleles[cmd] = HueDebug.choose_allele(screen, alleles[cmd])
-        pkmn.hue_alleles = alleles
+        alleles[cmd] = choose_allele(screen, alleles[cmd])
+        pkmn.set_color_alleles(trait, alleles)
       when 2   # Randomize
-        pkmn.hue_alleles = [HueGenetics.random_allele, HueGenetics.random_allele]
+        pkmn.set_color_alleles(trait, [HueGenetics.random_allele, HueGenetics.random_allele])
       when 3   # Reset
-        pkmn.hue_alleles = nil
+        pkmn.set_color_alleles(trait, nil)
       end
       screen.pbRefreshSingle(pkmnid)
+    end
+  end
+end
+
+MenuHandlers.add(:pokemon_debug_menu, :set_hue, {
+  "name"   => _INTL("Set color variation"),
+  "parent" => :cosmetic,
+  "effect" => proc { |pkmn, pkmnid, heldpoke, settingUpBattle, screen|
+    traits = HueGenetics::TRAITS.keys
+    cmd = 0
+    loop do
+      cmd = screen.pbShowCommands(_INTL("Which color gene?"),
+                                  traits.map { |trait| HueDebug.trait_name(trait) }, cmd)
+      break if cmd < 0
+      HueDebug.edit_trait(pkmn, pkmnid, screen, traits[cmd])
     end
     next false
   }

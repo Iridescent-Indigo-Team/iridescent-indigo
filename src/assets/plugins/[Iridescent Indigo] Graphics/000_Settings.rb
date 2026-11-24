@@ -52,6 +52,60 @@ module GraphicsSettings
   # @brief Largest drift of a mutated allele, in allele units (alleles are -100 to 100).
   HUE_MUTATION_SIZE = 24
 
+  #----------------------------------------------------------------
+  # Saturation and brightness variation
+  #----------------------------------------------------------------
+
+  # @brief Saturation range in percent [most negative, most positive] for species without
+  # an entry in SPECIES_SATURATION_RANGES. Works like DEFAULT_HUE_RANGE. Kept smaller on
+  # the positive side, because vivid colors are harder on the eyes than muted ones.
+  DEFAULT_SATURATION_RANGE = [-15, 10]
+
+  # @brief Brightness range in percent [most negative, most positive] for species without
+  # an entry in SPECIES_BRIGHTNESS_RANGES. Kept smaller on the positive side for players
+  # sensitive to bright light.
+  DEFAULT_BRIGHTNESS_RANGE = [-10, 8]
+
+  # @brief Per-species/form saturation ranges, keyed like SPECIES_HUE_RANGES.
+  SPECIES_SATURATION_RANGES = {}
+
+  # @brief Per-species/form brightness ranges, keyed like SPECIES_HUE_RANGES.
+  SPECIES_BRIGHTNESS_RANGES = {}
+
+  # @brief Saturation changes are rounded to a multiple of this many percent.
+  SATURATION_STEP = 2
+
+  # @brief Brightness changes are rounded to a multiple of this many percent.
+  BRIGHTNESS_STEP = 2
+
+  #----------------------------------------------------------------
+  # Comfort limits (accessibility)
+  #----------------------------------------------------------------
+  # Variation never pushes a color past these limits. A color that was already past a
+  # limit in the original art is never pushed further out, but is left as drawn.
+
+  # @brief Highest saturation (0.0-1.0) variation can raise a color to.
+  COMFORT_MAX_SATURATION = 0.85
+
+  # @brief Highest brightness (0.0-1.0) variation can raise a color to.
+  COMFORT_MAX_BRIGHTNESS = 0.92
+
+  # @brief Lowest brightness (0.0-1.0) variation can lower a color to, so dark Pokémon
+  # don't disappear into their outlines.
+  COMFORT_MIN_BRIGHTNESS = 0.18
+
+  # @brief Colors darker than this (0.0-1.0) are outlines and are never changed, so the
+  # shape of a Pokémon stays as readable as in the original art.
+  OUTLINE_BRIGHTNESS = 0.16
+
+  #----------------------------------------------------------------
+  # Player option
+  #----------------------------------------------------------------
+
+  # @brief The "Color variation" option's value in a new game: 0 = Full,
+  # 1 = Hue only, 2 = Off.
+  DEFAULT_PLAYER_SETTING = 0
+
   # @brief Most recolored graphics RecolorCache keeps once nothing else uses them.
   RECOLOR_CACHE_SIZE = 64
 end
